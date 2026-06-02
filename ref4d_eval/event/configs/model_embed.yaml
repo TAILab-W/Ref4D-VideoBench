@@ -1,0 +1,24 @@
+paths:
+  data_root: outputs/event/cache
+
+embed:
+  model: checkpoints/e5-large-v2
+  local_files_only: true
+  device: auto
+  dtype: fp16
+  batch_size: 64
+  max_length: 128
+  text_prefix: "query: "
+  normalize: true
+
+  microevent:
+    delims: ["|", "。", ";", "."]
+    strip_punct: true
+    max_parts: 8
+    split_export: true
+
+  export:
+    out_dir: ${paths.data_root}/embeds
+    fname_ref: "ref/{sample_id}.emb.json"
+    fname_gen: "gen/{sample_id}.emb.json"
+    parts_dir: "{side}/{sample_id}.parts"

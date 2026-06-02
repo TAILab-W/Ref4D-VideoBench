@@ -1,0 +1,207 @@
+{
+  "summary": {
+    "items": 10,
+    "enter_bank": 10,
+    "clip_range_sec": [
+      0.0,
+      8.47
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does the gymnast maintain balance during her jump?",
+      "signals": [
+        "continuity(gymnast)",
+        "balance(gymnast)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(gymnast)": 36.6667,
+        "balance(gymnast)": 7.1667
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Does the gymnast's trajectory show a continuous path without sudden changes?",
+      "signals": [
+        "trajectory_dir(gymnast,axis)",
+        "accel_sign(gymnast,axis)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(gymnast,axis)": 38.3333,
+        "accel_sign(gymnast,axis)": 7.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Are the blue and red mats present for landing support?",
+      "signals": [
+        "support(mat,gymnast)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 35.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "support(mat,gymnast)": 35.0
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Are the gym equipment in the background properly supported?",
+      "signals": [
+        "support(equipment,ground)",
+        "falling_hazard(equipment)"
+      ],
+      "content_score_60": 45,
+      "signal_score_40": 40.0,
+      "total_score_100": 85.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "support(equipment,ground)": 35.0,
+        "falling_hazard(equipment)": 6.3333
+      },
+      "content_score_raw": "45"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Is the mat on the ground stable?",
+      "signals": [
+        "placeable(mat,ground)",
+        "supportable(mat,ground)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 31.83,
+      "total_score_100": 86.83,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "supportable(mat,ground)": 26.6667,
+        "placeable(mat,ground)": 5.1667
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "The gymnast maintains balance and a continuous trajectory during her jump.",
+      "signals": [
+        "continuity(gymnast)",
+        "balance(gymnast)",
+        "trajectory_dir(gymnast,axis)",
+        "accel_sign(gymnast,axis)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(gymnast,axis)": 38.3333,
+        "continuity(gymnast)": 7.3333,
+        "balance(gymnast)": 7.1667,
+        "accel_sign(gymnast,axis)": 7.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "Blue and red mats provide support for landing on the ground surface.",
+      "signals": [
+        "support(mat,gymnast)",
+        "placeable(mat,ground)",
+        "supportable(mat,ground)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "support(mat,gymnast)": 35.0,
+        "supportable(mat,ground)": 5.3333,
+        "placeable(mat,ground)": 5.1667
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "Gym equipment in the background is properly supported and stable.",
+      "signals": [
+        "support(equipment,ground)",
+        "falling_hazard(equipment)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "support(equipment,ground)": 35.0,
+        "falling_hazard(equipment)": 6.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "The gymnast lands on the mat with proper form.",
+      "signals": [
+        "center_of_mass_over_base(gymnast)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 32.5,
+      "total_score_100": 82.5,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "center_of_mass_over_base(gymnast)": 32.5
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "The trajectory direction of the gymnast's arms aligns with their intended motion.",
+      "signals": [
+        "trajectory_dir(arm,axis)",
+        "accel_sign(arm,axis)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(arm,axis)": 38.3333,
+        "accel_sign(arm,axis)": 7.0
+      },
+      "content_score_raw": "50"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "v5",
+    "a1",
+    "a2",
+    "a3",
+    "a4",
+    "a5"
+  ]
+}

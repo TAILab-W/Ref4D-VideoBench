@@ -1,0 +1,229 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0421.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "decord",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "person",
+        "attributes": {
+          "color": [
+            "black",
+            "green"
+          ],
+          "pattern": [
+            "solid"
+          ],
+          "texture": [
+            "smooth"
+          ],
+          "material": [
+            "fabric",
+            "plastic"
+          ],
+          "size": [
+            "adult"
+          ],
+          "sex": [
+            "male"
+          ],
+          "state": [
+            "moving",
+            "standing"
+          ],
+          "pose": [
+            "arm-raised",
+            "partial-body"
+          ],
+          "action": [
+            "dancing",
+            "gesturing",
+            "walking"
+          ],
+          "orientation": [
+            "facing-forward"
+          ],
+          "facing-direction": [
+            "towards-camera"
+          ],
+          "position": [
+            "foreground-center",
+            "foreground-left"
+          ],
+          "signature": [
+            "green-cap-black-shirt-tattooed-arm-necklace"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            0.7
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "dog",
+        "attributes": {
+          "color": [
+            "black"
+          ],
+          "pattern": [
+            "solid"
+          ],
+          "texture": [
+            "furry"
+          ],
+          "material": [
+            "animal"
+          ],
+          "size": [
+            "small"
+          ],
+          "species-or-breed": [
+            "domestic-dog"
+          ],
+          "action": [
+            "running",
+            "walking"
+          ],
+          "pose": [
+            "walking"
+          ],
+          "position": [
+            "background",
+            "floor"
+          ],
+          "signature": [
+            "small-black-furry"
+          ]
+        },
+        "spans": [
+          [
+            0.3,
+            0.4
+          ]
+        ]
+      },
+      {
+        "id": "o3",
+        "name": "person",
+        "attributes": {
+          "color": [
+            "blonde",
+            "brown",
+            "white"
+          ],
+          "pattern": [
+            "solid"
+          ],
+          "texture": [
+            "smooth"
+          ],
+          "material": [
+            "fabric"
+          ],
+          "size": [
+            "adult"
+          ],
+          "sex": [
+            "female"
+          ],
+          "state": [
+            "moving",
+            "standing"
+          ],
+          "pose": [
+            "arm-raised",
+            "partial-body"
+          ],
+          "action": [
+            "dancing",
+            "swinging-hair"
+          ],
+          "orientation": [
+            "facing-forward"
+          ],
+          "facing-direction": [
+            "towards-camera"
+          ],
+          "position": [
+            "foreground-right"
+          ],
+          "signature": [
+            "blonde-hair-white-tank-top-brown-skirt"
+          ]
+        },
+        "spans": [
+          [
+            0.6,
+            0.8
+          ]
+        ]
+      }
+    ],
+    "relations": [
+      {
+        "subject": "o1",
+        "predicate": "left-of",
+        "object": "o2",
+        "spans": [
+          [
+            0.3,
+            0.4
+          ]
+        ],
+        "confidence": 0.8
+      },
+      {
+        "subject": "o1",
+        "predicate": "left-of",
+        "object": "o3",
+        "spans": [
+          [
+            0.5,
+            0.7
+          ]
+        ],
+        "confidence": 0.8
+      },
+      {
+        "subject": "o1",
+        "predicate": "looking-at",
+        "object": "o3",
+        "spans": [
+          [
+            0.5,
+            0.7
+          ]
+        ],
+        "confidence": 0.9
+      },
+      {
+        "subject": "o1",
+        "predicate": "dancing-with",
+        "object": "o3",
+        "spans": [
+          [
+            0.6,
+            0.8
+          ]
+        ],
+        "confidence": 0.9
+      }
+    ]
+  },
+  "views": {
+    "objects_count_display": {
+      "person": 2,
+      "dog": 1
+    }
+  }
+}

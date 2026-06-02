@@ -1,0 +1,191 @@
+{
+  "summary": {
+    "items": 10,
+    "enter_bank": 10,
+    "clip_range_sec": [
+      0.0,
+      7.9
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does the toy train stay supported by the hand without floating, in front of the approaching real train?",
+      "signals": [
+        "support(person_2, toy_train)",
+        "grasp_stability(person_2, toy_train)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "support(person_2, toy_train)": 35.0,
+        "grasp_stability(person_2, toy_train)": 5.6667
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Does the real train remain on the tracks and move towards the camera as expected?",
+      "signals": [
+        "trajectory_dir(train, forward)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 38.33,
+      "total_score_100": 93.33,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(train, forward)": 38.3333
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Do people walk normally along the platform edge near the track?",
+      "signals": [
+        "biological_motion(person_2)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 38.33,
+      "total_score_100": 93.33,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "biological_motion(person_2)": 38.3333
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Does the shadow of the hand holding the toy train match the light source direction continuously?",
+      "signals": [
+        "shadow_consistency(oX)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 36.67,
+      "total_score_100": 91.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "shadow_consistency(oX)": 36.6667
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Is the gap between the platform and tracks large enough to prevent the toy train from falling?",
+      "signals": [
+        "falling_hazard(oObj)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 31.67,
+      "total_score_100": 86.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "falling_hazard(oObj)": 31.6667
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "A hand holds a toy train in front of the approaching real train on the tracks.",
+      "signals": [
+        "support(person_2, toy_train)",
+        "trajectory_dir(train, forward)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(train, forward)": 38.3333,
+        "support(person_2, toy_train)": 7.0
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "People walk along the platform edge, away from the train tracks.",
+      "signals": [
+        "biological_motion(person_2)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 38.33,
+      "total_score_100": 93.33,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "biological_motion(person_2)": 38.3333
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "The shadow of the hand holding the toy train is visible and continuous.",
+      "signals": [
+        "trajectory_dir(train, forward)",
+        "shadow_consistency(oX)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(train, forward)": 38.3333,
+        "shadow_consistency(oX)": 7.3333
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "Comparing the small toy train to the large moving real train.",
+      "signals": [
+        "grasp_stability(person_2, toy_train)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 28.33,
+      "total_score_100": 83.33,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "grasp_stability(person_2, toy_train)": 28.3333
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "The real train moves steadily on the tracks towards the camera.",
+      "signals": [
+        "trajectory_dir(train, forward)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 38.33,
+      "total_score_100": 93.33,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(train, forward)": 38.3333
+      },
+      "content_score_raw": "55"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "v5",
+    "a1",
+    "a2",
+    "a3",
+    "a4",
+    "a5"
+  ]
+}

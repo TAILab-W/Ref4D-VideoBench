@@ -1,0 +1,217 @@
+{
+  "summary": {
+    "items": 10,
+    "enter_bank": 10,
+    "clip_range_sec": [
+      0.0,
+      8.5
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does the tennis ball follow a continuous trajectory under gravity without sudden changes in direction or speed?",
+      "signals": [
+        "trajectory_dir(tennis_ball,axis)",
+        "accel_sign(tennis_ball,axis)",
+        "continuity(tennis_ball)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(tennis_ball,axis)": 38.3333,
+        "continuity(tennis_ball)": 7.3333,
+        "accel_sign(tennis_ball,axis)": 7.0
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Does the player's movement show consistent and safe actions for playing tennis?",
+      "signals": [
+        "biological_motion(player)",
+        "friction_sliding(player,ground)",
+        "falling_hazard(player)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "biological_motion(player)": 38.3333,
+        "falling_hazard(player)": 6.3333,
+        "friction_sliding(player,ground)": 6.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Does the bird on the net remain stationary relative to the wall, not interpenetrating with other objects?",
+      "signals": [
+        "containment(bird,net)",
+        "interpenetration(bird,net)",
+        "support(wall,net)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "interpenetration(bird,net)": 35.8333,
+        "support(wall,net)": 7.0,
+        "containment(bird,net)": 5.8333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Does the shadow of the player match the position and shape of the player consistently across the court floor?",
+      "signals": [
+        "shadow_consistency(player)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 36.67,
+      "total_score_100": 86.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "shadow_consistency(player)": 36.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Does the tennis net divide the court into two distinct playing areas?",
+      "signals": [
+        "support(net,playing_area)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 35.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "support(net,playing_area)": 35.0
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "The tennis ball follows a continuous trajectory and maintains its size and shape.",
+      "signals": [
+        "continuity(ball)",
+        "size_inconsistency(ball)",
+        "deformation(ball)",
+        "trajectory_dir(tennis_ball,axis)",
+        "accel_sign(tennis_ball,axis)",
+        "continuity(tennis_ball)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "deformation(ball)": 40.0,
+        "trajectory_dir(tennis_ball,axis)": 7.6667,
+        "size_inconsistency(ball)": 7.5,
+        "continuity(ball)": 7.3333,
+        "continuity(tennis_ball)": 7.3333,
+        "accel_sign(tennis_ball,axis)": 7.0
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "The player's movements are consistent with playing tennis, without sudden actions.",
+      "signals": [
+        "biological_motion(player)",
+        "friction_sliding(player,ground)",
+        "falling_hazard(player)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "biological_motion(player)": 38.3333,
+        "falling_hazard(player)": 6.3333,
+        "friction_sliding(player,ground)": 6.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "The bird on the net remains stationary relative to the wall.",
+      "signals": [
+        "containment(bird,net)",
+        "interpenetration(bird,net)",
+        "support(wall,net)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "interpenetration(bird,net)": 35.8333,
+        "support(wall,net)": 7.0,
+        "containment(bird,net)": 5.8333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "The JP Morgan logo is visible on the blue wall behind the court.",
+      "signals": [
+        "fracture(wall)",
+        "falling_hazard(wall)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 38.0,
+      "total_score_100": 98.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "fracture(wall)": 31.6667,
+        "falling_hazard(wall)": 6.3333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "The shadow of the player matches the position and shape of the player on the court floor.",
+      "signals": [
+        "shadow_consistency(player)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 36.67,
+      "total_score_100": 86.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "shadow_consistency(player)": 36.6667
+      },
+      "content_score_raw": "50"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "v5",
+    "a1",
+    "a2",
+    "a3",
+    "a4",
+    "a5"
+  ]
+}

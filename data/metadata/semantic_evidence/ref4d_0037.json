@@ -1,0 +1,159 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0037.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "cv2",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "goat",
+        "attributes": {
+          "color": [
+            "brown",
+            "white"
+          ],
+          "pattern": [
+            "solid"
+          ],
+          "texture": [
+            "long",
+            "wooly"
+          ],
+          "size": [
+            "large"
+          ],
+          "age": [
+            "adult"
+          ],
+          "sex": [
+            "male"
+          ],
+          "state": [
+            "grazing"
+          ],
+          "pose": [
+            "standing"
+          ],
+          "action": [
+            "eating"
+          ],
+          "orientation": [
+            "facing-right"
+          ],
+          "position": [
+            "foreground",
+            "left-to-center"
+          ],
+          "signature": [
+            "white-brown-face-long-wool-front-goat"
+          ]
+        },
+        "spans": [
+          [
+            0.2,
+            9.7
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "goat",
+        "attributes": {
+          "color": [
+            "brown"
+          ],
+          "pattern": [
+            "solid"
+          ],
+          "texture": [
+            "long",
+            "wooly"
+          ],
+          "size": [
+            "large"
+          ],
+          "age": [
+            "adult"
+          ],
+          "sex": [
+            "male"
+          ],
+          "state": [
+            "grazing"
+          ],
+          "pose": [
+            "standing"
+          ],
+          "action": [
+            "eating"
+          ],
+          "orientation": [
+            "facing-left"
+          ],
+          "position": [
+            "background",
+            "left"
+          ],
+          "signature": [
+            "brown-back-long-wool-background-goat"
+          ]
+        },
+        "spans": [
+          [
+            0.1,
+            7.5
+          ]
+        ]
+      }
+    ],
+    "relations": [
+      {
+        "subject": "o1",
+        "predicate": "feeding",
+        "object": "o1",
+        "spans": [
+          [
+            0.2,
+            9.7
+          ]
+        ],
+        "confidence": 0.8
+      },
+      {
+        "subject": "o2",
+        "predicate": "feeding",
+        "object": "o2",
+        "spans": [
+          [
+            0.1,
+            7.5
+          ]
+        ],
+        "confidence": 0.8
+      },
+      {
+        "subject": "o1",
+        "predicate": "left-of",
+        "object": "o2",
+        "spans": [
+          [
+            0.1,
+            9.7
+          ]
+        ],
+        "confidence": 0.8
+      }
+    ]
+  },
+  "views": {
+    "objects_count_display": {
+      "goat": 2
+    }
+  }
+}

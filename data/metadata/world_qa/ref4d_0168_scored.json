@@ -1,0 +1,207 @@
+{
+  "summary": {
+    "items": 10,
+    "enter_bank": 6,
+    "clip_range_sec": [
+      0.0,
+      8.37
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does the person's hand interpenetrate with the gun while holding it?",
+      "signals": [
+        "support(person,gun)",
+        "grasp_stability(person,gun)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "support(person,gun)": 35.0,
+        "grasp_stability(person,gun)": 5.6667
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Across the clip, does the position of the hands show sudden discontinuity or direction changes in their grip on the gun?",
+      "signals": [
+        "continuity(person)",
+        "frame_discontinuity(t)",
+        "trajectory_dir(arm,axis)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "frame_discontinuity(t)": 40.0,
+        "trajectory_dir(arm,axis)": 7.6667,
+        "continuity(person)": 7.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Is the black gun pointed directly at another object during the entire duration?",
+      "signals": [
+        "prohibited_intersection(gun,other_object)",
+        "flame_proximity(gun,dist)"
+      ],
+      "content_score_60": 30,
+      "signal_score_40": 40.0,
+      "total_score_100": 70.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "prohibited_intersection(gun,other_object)": 36.6667,
+        "flame_proximity(gun,dist)": 6.8333
+      },
+      "content_score_raw": "30"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Are the fingers placed away from the trigger when handling the firearm?",
+      "signals": [
+        "blade_orientation_away"
+      ],
+      "content_score_60": 40,
+      "signal_score_40": 29.17,
+      "total_score_100": 69.17,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "blade_orientation_away": 29.1667
+      },
+      "content_score_raw": "40"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Is the firearm held securely to prevent accidental discharge throughout the demonstration?",
+      "signals": [
+        "grasp_stability"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 28.33,
+      "total_score_100": 78.33,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "grasp_stability": 28.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "The person's hands hold the gun without interpenetration or sudden frame discontinuity.",
+      "signals": [
+        "support(person,gun)",
+        "grasp_stability(person,gun)",
+        "continuity(person)",
+        "frame_discontinuity(t)",
+        "trajectory_dir(arm,axis)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "frame_discontinuity(t)": 40.0,
+        "trajectory_dir(arm,axis)": 7.6667,
+        "continuity(person)": 7.3333,
+        "support(person,gun)": 7.0,
+        "grasp_stability(person,gun)": 5.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "The black gun with a red tip is not pointed directly at another object.",
+      "signals": [
+        "prohibited_intersection(gun,other_object)",
+        "flame_proximity(gun,dist)"
+      ],
+      "content_score_60": 30,
+      "signal_score_40": 40.0,
+      "total_score_100": 70.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "prohibited_intersection(gun,other_object)": 36.6667,
+        "flame_proximity(gun,dist)": 6.8333
+      },
+      "content_score_raw": "30"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "The firearm is held securely, and fingers are away from the trigger.",
+      "signals": [
+        "grasp_stability",
+        "blade_orientation_away"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 34.83,
+      "total_score_100": 84.83,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "blade_orientation_away": 29.1667,
+        "grasp_stability": 5.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "The person's hands show continuity in holding the gun without trajectory direction changes.",
+      "signals": [
+        "continuity(person)",
+        "frame_discontinuity(t)",
+        "trajectory_dir(arm,axis)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "frame_discontinuity(t)": 40.0,
+        "trajectory_dir(arm,axis)": 7.6667,
+        "continuity(person)": 7.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "The firearm follows natural physical laws while being manipulated by the hand.",
+      "signals": [
+        "trajectory_dir",
+        "balance"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir": 38.3333,
+        "balance": 7.1667
+      },
+      "content_score_raw": "50"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "a1",
+    "a3",
+    "a4",
+    "a5"
+  ]
+}

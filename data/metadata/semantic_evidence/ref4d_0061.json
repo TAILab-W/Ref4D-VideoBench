@@ -1,0 +1,168 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0061.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "cv2",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "dolphin",
+        "attributes": {
+          "color": [
+            "white"
+          ],
+          "texture": [
+            "furry"
+          ],
+          "material": [
+            "skin"
+          ],
+          "size": [
+            "large"
+          ],
+          "state": [
+            "active",
+            "swimming"
+          ],
+          "pose": [
+            "emerging",
+            "submerging"
+          ],
+          "action": [
+            "approaching",
+            "moving",
+            "reaching",
+            "swimming"
+          ],
+          "orientation": [
+            "facing-left"
+          ],
+          "position": [
+            "near-orange-ball",
+            "right-side-of-platform"
+          ],
+          "signature": [
+            "white-furry-head-and-snout"
+          ]
+        },
+        "spans": [
+          [
+            0.2,
+            3.5
+          ],
+          [
+            4.6,
+            7.2
+          ],
+          [
+            8.9,
+            9.3
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "orange",
+        "attributes": {
+          "color": [
+            "yellow-orange"
+          ],
+          "shape": [
+            "spherical"
+          ],
+          "material": [
+            "fruit"
+          ],
+          "size": [
+            "small"
+          ],
+          "state": [
+            "stationary"
+          ],
+          "position": [
+            "left-side-of-platform"
+          ],
+          "signature": [
+            "yellow-orange-spherical"
+          ]
+        },
+        "spans": [
+          [
+            0.4,
+            6.8
+          ],
+          [
+            8.9,
+            9.3
+          ]
+        ]
+      }
+    ],
+    "relations": [
+      {
+        "subject": "o1",
+        "predicate": "right-of",
+        "object": "o2",
+        "spans": [
+          [
+            0.4,
+            6.8
+          ]
+        ],
+        "confidence": 0.9
+      },
+      {
+        "subject": "o1",
+        "predicate": "looking-at",
+        "object": "o2",
+        "spans": [
+          [
+            0.5,
+            3.7
+          ],
+          [
+            4.6,
+            6.2
+          ]
+        ],
+        "confidence": 0.9
+      },
+      {
+        "subject": "o1",
+        "predicate": "approaching",
+        "object": "o2",
+        "spans": [
+          [
+            0.2,
+            3.5
+          ]
+        ],
+        "confidence": 0.8
+      },
+      {
+        "subject": "o1",
+        "predicate": "reaching",
+        "object": "o2",
+        "spans": [
+          [
+            0.2,
+            3.5
+          ]
+        ],
+        "confidence": 0.8
+      }
+    ]
+  },
+  "views": {
+    "objects_count_display": {
+      "dolphin": 1,
+      "orange": 1
+    }
+  }
+}

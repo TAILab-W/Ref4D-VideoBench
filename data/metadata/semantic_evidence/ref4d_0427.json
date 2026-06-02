@@ -1,0 +1,96 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0427.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "decord",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "person-1",
+        "attributes": {
+          "color": [
+            "black",
+            "white"
+          ],
+          "pattern": [
+            "polka-dot"
+          ],
+          "action": [
+            "carrying-backpack",
+            "holding-umbrella"
+          ],
+          "signature": [
+            "black-dress-white-backpack-polka-dot-umbrella"
+          ]
+        },
+        "spans": [
+          [
+            0.2,
+            9.0
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "person-2",
+        "attributes": {
+          "color": [
+            "beige",
+            "pink"
+          ],
+          "action": [
+            "carrying-backpack",
+            "holding-umbrella"
+          ],
+          "signature": [
+            "pink-backpack-beige-umbrella"
+          ]
+        },
+        "spans": [
+          [
+            0.4,
+            9.0
+          ]
+        ]
+      }
+    ],
+    "relations": [
+      {
+        "subject": "o1",
+        "predicate": "left_of",
+        "object": "o2",
+        "spans": [
+          [
+            0.2,
+            5.8
+          ]
+        ],
+        "confidence": 0.9
+      },
+      {
+        "subject": "o2",
+        "predicate": "right_of",
+        "object": "o1",
+        "spans": [
+          [
+            0.4,
+            5.8
+          ]
+        ],
+        "confidence": 0.9
+      }
+    ]
+  },
+  "views": {
+    "objects_count_display": {
+      "person-1": 1,
+      "person-2": 1
+    }
+  }
+}

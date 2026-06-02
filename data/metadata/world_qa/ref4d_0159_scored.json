@@ -1,0 +1,213 @@
+{
+  "summary": {
+    "items": 10,
+    "enter_bank": 10,
+    "clip_range_sec": [
+      0.0,
+      6.6
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does the large historic mosque with four minarets and dome remain structurally stable throughout the video?",
+      "signals": [
+        "balance(building)",
+        "continuity(building)",
+        "balance(oX)",
+        "tilt_angle_threshold(oX,deg)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(building)": 36.6667,
+        "balance(building)": 7.1667,
+        "balance(oX)": 7.1667,
+        "tilt_angle_threshold(oX,deg)": 7.1667
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Do shadows cast by birds align consistently with their position relative to the light source, matching those of the building's structures?",
+      "signals": [
+        "trajectory_dir(oX,axis)",
+        "shadow_consistency(oX)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(oX,axis)": 38.3333,
+        "shadow_consistency(oX)": 7.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Do seagulls flying near power lines (if present) show signs of collision or entanglement in this clip?",
+      "signals": [
+        "collision(bird,power_line)",
+        "interpenetration(bird,power_line)",
+        "collision(bird,building)",
+        "friction_sliding(bird,on:building)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "interpenetration(bird,power_line)": 35.8333,
+        "collision(bird,power_line)": 6.3333,
+        "collision(bird,building)": 6.3333,
+        "friction_sliding(bird,on:building)": 6.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Do seagulls fly in a natural trajectory without sudden changes in direction or speed during the entire observation period?",
+      "signals": [
+        "trajectory_dir(bird,axis)",
+        "accel_sign(bird,axis)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(bird,axis)": 38.3333,
+        "accel_sign(bird,axis)": 7.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Do flying birds near tall structures like the mosque pose falling hazards to themselves or others?",
+      "signals": [
+        "falling_hazard(oObj)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 31.67,
+      "total_score_100": 81.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "falling_hazard(oObj)": 31.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "The large historic mosque with four minarets and dome remains structurally stable.",
+      "signals": [
+        "balance(building)",
+        "continuity(building)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(building)": 36.6667,
+        "balance(building)": 7.1667
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "Domes and towers on the building do not exhibit unexpected deformations or tilts.",
+      "signals": [
+        "balance(oX)",
+        "tilt_angle_threshold(oX,deg)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "balance(oX)": 35.8333,
+        "tilt_angle_threshold(oX,deg)": 7.1667
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "Birds fly near the tall mosque without erratic behavior indicating danger or collision risk.",
+      "signals": [
+        "collision(bird,building)",
+        "friction_sliding(bird,on:building)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 37.67,
+      "total_score_100": 97.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "collision(bird,building)": 31.6667,
+        "friction_sliding(bird,on:building)": 6.0
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "Seagulls fly in a natural trajectory without sudden changes in direction or speed.",
+      "signals": [
+        "trajectory_dir(bird,axis)",
+        "accel_sign(bird,axis)",
+        "trajectory_dir(oX,axis)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(bird,axis)": 38.3333,
+        "trajectory_dir(oX,axis)": 7.6667,
+        "accel_sign(bird,axis)": 7.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "Shadows cast by birds align with the light source, consistent with their position.",
+      "signals": [
+        "shadow_consistency(bird)",
+        "shadow_consistency(oX)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "shadow_consistency(bird)": 36.6667,
+        "shadow_consistency(oX)": 7.3333
+      },
+      "content_score_raw": "50"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "v5",
+    "a1",
+    "a2",
+    "a3",
+    "a4",
+    "a5"
+  ]
+}

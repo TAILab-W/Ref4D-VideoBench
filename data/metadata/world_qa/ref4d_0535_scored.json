@@ -1,0 +1,194 @@
+{
+  "summary": {
+    "items": 10,
+    "enter_bank": 9,
+    "clip_range_sec": [
+      0.0,
+      8.23
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does the tram move smoothly along the tracks without abrupt changes in speed?",
+      "signals": [
+        "trajectory_dir(tram,axis)",
+        "accel_sign(tram,axis)"
+      ],
+      "content_score_60": 45,
+      "signal_score_40": 40.0,
+      "total_score_100": 85.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(tram,axis)": 38.3333,
+        "accel_sign(tram,axis)": 7.0
+      },
+      "content_score_raw": "45"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Is the shadow of the tram continuous and aligned with its position, consistent with sunlight direction?",
+      "signals": [
+        "shadow_consistency(tram)",
+        "shadow_consistency"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "shadow_consistency(tram)": 36.6667,
+        "shadow_consistency": 7.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Are people near the platform edge maintaining a safe distance from the moving tram?",
+      "signals": [
+        "friction_sliding(person,on:platform)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 30.0,
+      "total_score_100": 85.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "friction_sliding(person,on:platform)": 30.0
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Does the tram remain stationary on the track throughout the clip?",
+      "signals": [
+        "rigid_transform(tram)"
+      ],
+      "content_score_60": 30,
+      "signal_score_40": 37.5,
+      "total_score_100": 67.5,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "rigid_transform(tram)": 37.5
+      },
+      "content_score_raw": "30"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Is the text on the side of the train carriage legible and not distorted by motion?",
+      "signals": [
+        "continuity"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 36.67,
+      "total_score_100": 86.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity": 36.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "The tram moves smoothly along the tracks with consistent motion.",
+      "signals": [
+        "trajectory_dir(tram,axis)",
+        "accel_sign(tram,axis)",
+        "accel_sign"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(tram,axis)": 38.3333,
+        "accel_sign(tram,axis)": 7.0,
+        "accel_sign": 7.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "The shadow of the tram on the ground is continuous and aligned with its position.",
+      "signals": [
+        "shadow_consistency(tram)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 36.67,
+      "total_score_100": 86.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "shadow_consistency(tram)": 36.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "People near the tram stop stand at a safe distance from the platform edge.",
+      "signals": [
+        "friction_sliding(person,on:platform)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 30.0,
+      "total_score_100": 80.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "friction_sliding(person,on:platform)": 30.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "The text on the tram's side maintains consistency in size and appearance without sudden changes.",
+      "signals": [
+        "size_inconsistency(text)",
+        "material_optics(tram)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "size_inconsistency(text)": 37.5,
+        "material_optics(tram)": 7.5
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "The text on the train carriage remains legible and not distorted due to motion.",
+      "signals": [
+        "continuity"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 36.67,
+      "total_score_100": 86.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity": 36.6667
+      },
+      "content_score_raw": "50"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v5",
+    "a1",
+    "a2",
+    "a3",
+    "a4",
+    "a5"
+  ]
+}

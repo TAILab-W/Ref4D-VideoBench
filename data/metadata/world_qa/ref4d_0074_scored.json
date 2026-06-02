@@ -1,0 +1,190 @@
+{
+  "summary": {
+    "items": 10,
+    "enter_bank": 7,
+    "clip_range_sec": [
+      0.0,
+      7.23
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does the gorilla maintain a natural sitting posture with its arm crossed throughout the clip?",
+      "signals": [
+        "biological_motion(gorilla)",
+        "continuity(gorilla)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "biological_motion(gorilla)": 38.3333,
+        "continuity(gorilla)": 7.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Is the vegetation in the background stable and not moving unexpectedly?",
+      "signals": [
+        "continuity(gorilla)",
+        "continuity(vegetation)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(gorilla)": 36.6667,
+        "continuity(vegetation)": 7.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Does the gorilla's movement show consistent biological motion without signs of injury?",
+      "signals": [
+        "biological_motion(gorilla)"
+      ],
+      "content_score_60": 40,
+      "signal_score_40": 38.33,
+      "total_score_100": 78.33,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "biological_motion(gorilla)": 38.3333
+      },
+      "content_score_raw": "40"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Does the gorilla’s position remain unchanged, showing no sudden or unnatural changes?",
+      "signals": [
+        "continuity(gorilla)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 36.67,
+      "total_score_100": 86.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(gorilla)": 36.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Does the camera viewpoint stay fixed, providing a stable view of the gorilla?",
+      "signals": [
+        "biological_motion(gorilla)",
+        "continuity(vegetation)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "biological_motion(gorilla)": 38.3333,
+        "continuity(vegetation)": 7.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "The gorilla sits with its arm crossed, showing consistent biological motion.",
+      "signals": [
+        "biological_motion(gorilla)",
+        "continuity(gorilla)"
+      ],
+      "content_score_60": 40,
+      "signal_score_40": 40.0,
+      "total_score_100": 80.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "biological_motion(gorilla)": 38.3333,
+        "continuity(gorilla)": 7.3333
+      },
+      "content_score_raw": "40"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "The gorilla's posture and movement maintain physical consistency without sudden changes.",
+      "signals": [
+        "continuity(gorilla)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 36.67,
+      "total_score_100": 86.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(gorilla)": 36.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "The green vegetation in the background remains stable.",
+      "signals": [
+        "continuity(vegetation)"
+      ],
+      "content_score_60": 30,
+      "signal_score_40": 36.67,
+      "total_score_100": 66.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(vegetation)": 36.6667
+      },
+      "content_score_raw": "30"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "The gorilla's actions are natural and safe, showing no signs of injury.",
+      "signals": [
+        "biological_motion(gorilla)"
+      ],
+      "content_score_60": 40,
+      "signal_score_40": 38.33,
+      "total_score_100": 78.33,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "biological_motion(gorilla)": 38.3333
+      },
+      "content_score_raw": "40"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "The gorilla's posture remains consistent with its natural sitting behavior.",
+      "signals": [
+        "continuity(gorilla)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 36.67,
+      "total_score_100": 86.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(gorilla)": 36.6667
+      },
+      "content_score_raw": "50"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v4",
+    "v5",
+    "a1",
+    "a2",
+    "a5"
+  ]
+}

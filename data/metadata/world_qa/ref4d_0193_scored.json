@@ -1,0 +1,202 @@
+{
+  "summary": {
+    "items": 10,
+    "enter_bank": 9,
+    "clip_range_sec": [
+      0.0,
+      8.83
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Do the bean sprouts and other ingredients stay within the wok without interpenetration or sudden disappearance?",
+      "signals": [
+        "containment(oA,oB)",
+        "interpenetration(oA,oB)",
+        "continuity(bean_sprouts)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(bean_sprouts)": 36.6667,
+        "interpenetration(oA,oB)": 7.1667,
+        "containment(oA,oB)": 5.8333
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Does the soy sauce pour from the ladle into the wok in a controlled manner, avoiding splashing?",
+      "signals": [
+        "pour_direction(soy_sauce,axis)",
+        "leakage(soy_sauce,from:ladle)",
+        "pour_direction(oV,axis)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "leakage(soy_sauce,from:ladle)": 29.1667,
+        "pour_direction(soy_sauce,axis)": 5.6667,
+        "pour_direction(oV,axis)": 5.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Is there any direct contact between hot oil and skin visible?",
+      "signals": [
+        "flame_proximity(wok,dist)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 34.17,
+      "total_score_100": 89.17,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "flame_proximity(wok,dist)": 34.1667
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Does the movement of ingredients maintain continuity as they are stirred in the wok?",
+      "signals": [
+        "continuity(oX)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 36.67,
+      "total_score_100": 86.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(oX)": 36.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Does the behavior of the hot oil show expected viscosity effects?",
+      "signals": [
+        "viscosity_effect(oV)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 34.17,
+      "total_score_100": 84.17,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "viscosity_effect(oV)": 34.1667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "Bean sprouts and other ingredients stay in the wok without sudden disappearance.",
+      "signals": [
+        "containment(oA,oB)",
+        "interpenetration(oA,oB)",
+        "continuity(bean_sprouts)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(bean_sprouts)": 36.6667,
+        "interpenetration(oA,oB)": 7.1667,
+        "containment(oA,oB)": 5.8333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "Soy sauce flows from the ladle into the wok consistently, no spillage visible.",
+      "signals": [
+        "pour_direction(soy_sauce,axis)",
+        "leakage(soy_sauce,from:ladle)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 34.83,
+      "total_score_100": 84.83,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "leakage(soy_sauce,from:ladle)": 29.1667,
+        "pour_direction(soy_sauce,axis)": 5.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "Ingredients and oil move continuously within the wok.",
+      "signals": [
+        "continuity(oX)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 36.67,
+      "total_score_100": 86.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(oX)": 36.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "Bean sprouts and other ingredients remain within the wok without interpenetration.",
+      "signals": [
+        "containment(oA,oB)",
+        "interpenetration(oA,oB)",
+        "continuity(bean_sprouts)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(bean_sprouts)": 36.6667,
+        "interpenetration(oA,oB)": 7.1667,
+        "containment(oA,oB)": 5.8333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "Oil is poured in a controlled manner, avoiding visible splashing.",
+      "signals": [
+        "pour_direction(oV,axis)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 28.33,
+      "total_score_100": 78.33,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "pour_direction(oV,axis)": 28.3333
+      },
+      "content_score_raw": "50"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "v5",
+    "a1",
+    "a2",
+    "a3",
+    "a4"
+  ]
+}

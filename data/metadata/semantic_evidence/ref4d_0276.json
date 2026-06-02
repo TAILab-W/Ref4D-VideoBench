@@ -1,0 +1,137 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0276.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "cv2",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "machine",
+        "attributes": {
+          "color": [
+            "metallic",
+            "red"
+          ],
+          "material": [
+            "metal"
+          ],
+          "size": [
+            "large"
+          ],
+          "state": [
+            "operational"
+          ],
+          "action": [
+            "processing"
+          ],
+          "signature": [
+            "red-metallic-with-cylindrical-parts-and-control-panel"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            2.3
+          ],
+          [
+            4.5,
+            6.8
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "cigarette",
+        "attributes": {
+          "color": [
+            "brown",
+            "white"
+          ],
+          "material": [
+            "paper",
+            "tobacco"
+          ],
+          "size": [
+            "small"
+          ],
+          "state": [
+            "processed"
+          ],
+          "signature": [
+            "white-paper-with-brown-tobacco-inside"
+          ]
+        },
+        "spans": [
+          [
+            2.7,
+            3.9
+          ],
+          [
+            4.5,
+            6.8
+          ]
+        ]
+      },
+      {
+        "id": "o3",
+        "name": "person",
+        "attributes": {
+          "sex": [
+            "male"
+          ],
+          "state": [
+            "holding"
+          ],
+          "signature": [
+            "hand-with-fingers-visible"
+          ]
+        },
+        "spans": [
+          [
+            4.5,
+            6.8
+          ]
+        ]
+      }
+    ],
+    "relations": [
+      {
+        "subject": "o3",
+        "predicate": "holding",
+        "object": "o2",
+        "spans": [
+          [
+            4.5,
+            6.8
+          ]
+        ],
+        "confidence": 0.9
+      },
+      {
+        "subject": "o1",
+        "predicate": "feeding",
+        "object": "o2",
+        "spans": [
+          [
+            0.0,
+            2.3
+          ]
+        ],
+        "confidence": 0.8
+      }
+    ]
+  },
+  "views": {
+    "objects_count_display": {
+      "machine": 1,
+      "cigarette": 1,
+      "person": 1
+    }
+  }
+}

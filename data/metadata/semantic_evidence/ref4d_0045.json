@@ -1,0 +1,66 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0045.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "cv2",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "monkey",
+        "attributes": {
+          "color": [
+            "brown",
+            "gray"
+          ],
+          "size": [
+            "medium",
+            "small"
+          ],
+          "age": [
+            "young"
+          ],
+          "pose": [
+            "standing",
+            "walking"
+          ],
+          "action": [
+            "looking-around",
+            "moving"
+          ],
+          "orientation": [
+            "facing-forward"
+          ],
+          "position": [
+            "background",
+            "foreground"
+          ],
+          "signature": [
+            "gray-brown-fur-long-tail"
+          ]
+        },
+        "spans": [
+          [
+            0.2,
+            11.2
+          ],
+          [
+            14.3,
+            16.5
+          ]
+        ]
+      }
+    ],
+    "relations": []
+  },
+  "views": {
+    "objects_count_display": {
+      "monkey": 1
+    }
+  }
+}

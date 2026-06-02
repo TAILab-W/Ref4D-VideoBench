@@ -1,0 +1,108 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0359.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "cv2",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "road",
+        "attributes": {
+          "color": [
+            "gray"
+          ],
+          "material": [
+            "paved"
+          ],
+          "signature": [
+            "white-dashed-lines-left-side"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            1.0
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "guardrail",
+        "attributes": {
+          "color": [
+            "silver"
+          ],
+          "material": [
+            "metal"
+          ],
+          "signature": [
+            "metal-barrier-right-side"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            1.0
+          ]
+        ]
+      },
+      {
+        "id": "o3",
+        "name": "field",
+        "attributes": {
+          "color": [
+            "green"
+          ],
+          "texture": [
+            "grass"
+          ],
+          "signature": [
+            "green-grass-with-cattle"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            1.0
+          ]
+        ]
+      },
+      {
+        "id": "o4",
+        "name": "mountain",
+        "attributes": {
+          "color": [
+            "green"
+          ],
+          "texture": [
+            "vegetation"
+          ],
+          "signature": [
+            "large-green-slope"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            1.0
+          ]
+        ]
+      }
+    ],
+    "relations": []
+  },
+  "views": {
+    "objects_count_display": {
+      "road": 1,
+      "guardrail": 1,
+      "field": 1,
+      "mountain": 1
+    }
+  }
+}

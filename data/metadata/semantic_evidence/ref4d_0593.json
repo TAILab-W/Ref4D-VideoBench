@@ -1,0 +1,81 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0593.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "cv2",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "car",
+        "attributes": {
+          "signature": [
+            "white-car"
+          ]
+        },
+        "spans": [
+          [
+            0.2,
+            1.6
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "van",
+        "attributes": {
+          "signature": [
+            "white-van"
+          ]
+        },
+        "spans": [
+          [
+            0.7,
+            0.8
+          ],
+          [
+            1.5,
+            1.6
+          ]
+        ]
+      }
+    ],
+    "relations": [
+      {
+        "subject": "o1",
+        "predicate": "left-of",
+        "object": "o2",
+        "spans": [
+          [
+            0.3,
+            0.4
+          ]
+        ],
+        "confidence": 0.8
+      },
+      {
+        "subject": "o1",
+        "predicate": "left-of",
+        "object": "o2",
+        "spans": [
+          [
+            0.7,
+            0.8
+          ]
+        ],
+        "confidence": 0.8
+      }
+    ]
+  },
+  "views": {
+    "objects_count_display": {
+      "car": 1,
+      "van": 1
+    }
+  }
+}

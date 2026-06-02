@@ -1,0 +1,13 @@
+# Prompt generation pipeline dependencies
+
+# Core prompt generation
+numpy
+Pillow
+torch
+transformers
+sentencepiece
+
+# Video IO / shot detection
+scenedetect
+opencv-python
+decord

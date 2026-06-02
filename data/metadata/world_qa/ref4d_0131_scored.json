@@ -1,0 +1,199 @@
+{
+  "summary": {
+    "items": 10,
+    "enter_bank": 10,
+    "clip_range_sec": [
+      0.0,
+      8.0
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Do the boats float on the water?",
+      "signals": [
+        "buoyancy_float(boat,in:water)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 34.17,
+      "total_score_100": 89.17,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "buoyancy_float(boat,in:water)": 34.1667
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Do the shadows of the lighthouse and boats match their positions relative to the light source?",
+      "signals": [
+        "shadow_consistency(lighthouse)",
+        "buoyancy_float(oA,in:oV)",
+        "shadow_consistency(oX)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "shadow_consistency(lighthouse)": 36.6667,
+        "shadow_consistency(oX)": 7.3333,
+        "buoyancy_float(oA,in:oV)": 6.8333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Is the lighthouse structure stable with its base supporting it?",
+      "signals": [
+        "support(oA,oB)",
+        "center_of_mass_over_base(oX)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "support(oA,oB)": 35.0,
+        "center_of_mass_over_base(oX)": 6.5
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Does the water in the canal show continuous sloshing motion?",
+      "signals": [
+        "continuity(oX)",
+        "slosh_response(oV,amp)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(oX)": 36.6667,
+        "slosh_response(oV,amp)": 6.8333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Are the trees green?",
+      "signals": [
+        "placeable(oObj,at:oTarget)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 25.83,
+      "total_score_100": 80.83,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "placeable(oObj,at:oTarget)": 25.8333
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "Boats float on the water, not in mid-air.",
+      "signals": [
+        "buoyancy_float(boat,in:water)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 34.17,
+      "total_score_100": 94.17,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "buoyancy_float(boat,in:water)": 34.1667
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "Shadows of boats and lighthouse match their positions relative to the water.",
+      "signals": [
+        "shadow_consistency(lighthouse)",
+        "buoyancy_float(oA,in:oV)",
+        "shadow_consistency(oX)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "shadow_consistency(lighthouse)": 36.6667,
+        "shadow_consistency(oX)": 7.3333,
+        "buoyancy_float(oA,in:oV)": 6.8333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "The lighthouse stands upright with its base supporting it for stability.",
+      "signals": [
+        "support(oA,oB)",
+        "center_of_mass_over_base(oX)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "support(oA,oB)": 35.0,
+        "center_of_mass_over_base(oX)": 6.5
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "Trees are green throughout the video.",
+      "signals": [
+        "hue_histogram_jump(tree)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 33.33,
+      "total_score_100": 93.33,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "hue_histogram_jump(tree)": 33.3333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "Greenery surrounds the area, indicating a natural environment.",
+      "signals": [
+        "placeable(oObj,at:oTarget)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 25.83,
+      "total_score_100": 85.83,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "placeable(oObj,at:oTarget)": 25.8333
+      },
+      "content_score_raw": "60"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "v5",
+    "a1",
+    "a2",
+    "a3",
+    "a4",
+    "a5"
+  ]
+}

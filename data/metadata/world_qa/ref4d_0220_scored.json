@@ -1,0 +1,213 @@
+{
+  "summary": {
+    "items": 10,
+    "enter_bank": 8,
+    "clip_range_sec": [
+      0.0,
+      9.7
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does the knife make a continuous cut through the steak without sudden changes in position or trajectory?",
+      "signals": [
+        "cuttable_progress(steak)",
+        "tool_contact(knife,steak)",
+        "continuity(knife)",
+        "cuttable_progress(meat)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(knife)": 36.6667,
+        "tool_contact(knife,steak)": 5.6667,
+        "cuttable_progress(steak)": 4.6667,
+        "cuttable_progress(meat)": 4.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Do the tongs hold the uncut portion of the steak steadily during slicing, with no interpenetration or collision?",
+      "signals": [
+        "support(tongs,steak)",
+        "containment(tongs,steak)",
+        "rigid_transform(tongs)",
+        "cuttable_progress(steak-slices)",
+        "tool_contact(knife,steak-slices)",
+        "tool_contact(tongs,steak)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "rigid_transform(tongs)": 37.5,
+        "support(tongs,steak)": 7.0,
+        "containment(tongs,steak)": 5.8333,
+        "tool_contact(knife,steak-slices)": 5.6667,
+        "tool_contact(tongs,steak)": 5.6667,
+        "cuttable_progress(steak-slices)": 4.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Is the blade of the knife oriented away from any hands to prevent accidental injury?",
+      "signals": [
+        "blade_orientation_away(knife,hands)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 29.17,
+      "total_score_100": 79.17,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "blade_orientation_away(knife,hands)": 29.1667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Does the cutting board provide support for the steak slices, ensuring they remain stable during the slicing process?",
+      "signals": [
+        "support(cutting-board,steak-slices)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 35.0,
+      "total_score_100": 85.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "support(cutting-board,steak-slices)": 35.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Is the text overlay visible and legible throughout the video?",
+      "signals": [
+        "continuity(text)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 36.67,
+      "total_score_100": 86.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(text)": 36.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "The knife makes a continuous cut through the steak.",
+      "signals": [
+        "cuttable_progress(steak)",
+        "tool_contact(knife,steak)",
+        "continuity(knife)",
+        "cuttable_progress(meat)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(knife)": 36.6667,
+        "tool_contact(knife,steak)": 5.6667,
+        "cuttable_progress(steak)": 4.6667,
+        "cuttable_progress(meat)": 4.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "The tongs hold the uncut portion of the steak steadily without interpenetration.",
+      "signals": [
+        "support(tongs,steak)",
+        "containment(tongs,steak)",
+        "rigid_transform(tongs)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "rigid_transform(tongs)": 37.5,
+        "support(tongs,steak)": 7.0,
+        "containment(tongs,steak)": 5.8333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "The muscle fibers in the cold steak are visible and tough.",
+      "signals": [
+        "cuttable_progress(steak-slices)",
+        "tool_contact(knife,steak-slices)",
+        "tool_contact(tongs,steak)"
+      ],
+      "content_score_60": 30,
+      "signal_score_40": 38.67,
+      "total_score_100": 68.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "tool_contact(knife,steak-slices)": 28.3333,
+        "tool_contact(tongs,steak)": 5.6667,
+        "cuttable_progress(steak-slices)": 4.6667
+      },
+      "content_score_raw": "30"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "The cutting board supports the sliced steak, keeping them stable.",
+      "signals": [
+        "support(cutting-board,steak-slices)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 35.0,
+      "total_score_100": 85.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "support(cutting-board,steak-slices)": 35.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "Text overlay \"IF YOU LET YOUR STEAK REST WILL TENSE\" is legible throughout.",
+      "signals": [
+        "continuity(text)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 36.67,
+      "total_score_100": 86.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(text)": 36.6667
+      },
+      "content_score_raw": "50"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v4",
+    "v5",
+    "a1",
+    "a2",
+    "a4",
+    "a5"
+  ]
+}

@@ -1,0 +1,129 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0448.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "decord",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "person",
+        "attributes": {
+          "color": [
+            "black",
+            "white",
+            "yellow"
+          ],
+          "pattern": [
+            "goofy",
+            "spongebob",
+            "text"
+          ],
+          "sex": [
+            "female",
+            "male"
+          ],
+          "age": [
+            "adult",
+            "child"
+          ],
+          "pose": [
+            "sitting",
+            "standing"
+          ],
+          "action": [
+            "eating",
+            "offering",
+            "receiving"
+          ],
+          "facing-direction": [
+            "left",
+            "right"
+          ],
+          "position": [
+            "left-center",
+            "right-center"
+          ],
+          "signature": [
+            "black-shirt-china-text-white-shirt-spongebob-shirt-yellow-shorts-girl-goofy-shirt"
+          ]
+        },
+        "spans": [
+          [
+            0.2,
+            0.9
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "lollipop",
+        "attributes": {
+          "color": [
+            "green",
+            "orange",
+            "purple",
+            "red",
+            "yellow"
+          ],
+          "size": [
+            "small"
+          ],
+          "state": [
+            "unwrapped",
+            "wrapped"
+          ],
+          "material": [
+            "candy"
+          ],
+          "signature": [
+            "orange-yellow-red-purple-green"
+          ]
+        },
+        "spans": [
+          [
+            0.1,
+            1.0
+          ]
+        ]
+      }
+    ],
+    "relations": [
+      {
+        "subject": "o1",
+        "predicate": "looking-at",
+        "object": "o2",
+        "spans": [
+          [
+            0.3,
+            0.4
+          ]
+        ],
+        "confidence": 0.8
+      },
+      {
+        "subject": "o1",
+        "predicate": "receiving",
+        "object": "o2",
+        "spans": [
+          [
+            0.7,
+            0.8
+          ]
+        ],
+        "confidence": 0.8
+      }
+    ]
+  },
+  "views": {
+    "objects_count_display": {
+      "person": 1,
+      "lollipop": 1
+    }
+  }
+}

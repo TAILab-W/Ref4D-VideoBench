@@ -1,0 +1,201 @@
+{
+  "summary": {
+    "items": 10,
+    "enter_bank": 10,
+    "clip_range_sec": [
+      0.0,
+      11.8
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does the castle structure maintain its shape without any parts disappearing or interpenetrating?",
+      "signals": [
+        "interpenetration(oA,oB)",
+        "frame_discontinuity(t)",
+        "continuity(oX)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "frame_discontinuity(t)": 40.0,
+        "continuity(oX)": 7.3333,
+        "interpenetration(oA,oB)": 7.1667
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Do the shadows of the towers and walls align with their positions under consistent lighting?",
+      "signals": [
+        "shadow_consistency(oX)"
+      ],
+      "content_score_60": 58,
+      "signal_score_40": 36.67,
+      "total_score_100": 94.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "shadow_consistency(oX)": 36.6667
+      },
+      "content_score_raw": "58"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Is the pathway to the castle entrance free of loose stones that could cause a hazard?",
+      "signals": [
+        "falling_hazard(oObj)",
+        "falling_hazard(pathway)"
+      ],
+      "content_score_60": 59,
+      "signal_score_40": 38.0,
+      "total_score_100": 97.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "falling_hazard(oObj)": 31.6667,
+        "falling_hazard(pathway)": 6.3333
+      },
+      "content_score_raw": "59"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Does the shadow of the castle match the position and orientation expected from the sun's light?",
+      "signals": [
+        "shadow_consistency(castle)"
+      ],
+      "content_score_60": 57,
+      "signal_score_40": 36.67,
+      "total_score_100": 93.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "shadow_consistency(castle)": 36.6667
+      },
+      "content_score_raw": "57"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Are the words 'TRAVELING MOMENTS' superimposed on the image, not affecting physical consistency?",
+      "signals": [
+        "size_inconsistency(text)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 37.5,
+      "total_score_100": 97.5,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "size_inconsistency(text)": 37.5
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "The castle structure maintains physical consistency with no interpenetration or frame discontinuity.",
+      "signals": [
+        "interpenetration(oA,oB)",
+        "frame_discontinuity(t)",
+        "continuity(oX)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "frame_discontinuity(t)": 40.0,
+        "continuity(oX)": 7.3333,
+        "interpenetration(oA,oB)": 7.1667
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "Shadows cast by objects align consistently with their positions and light sources.",
+      "signals": [
+        "size_inconsistency(oX)",
+        "interpenetration(oA,oB)",
+        "shadow_consistency(oX)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "size_inconsistency(oX)": 37.5,
+        "shadow_consistency(oX)": 7.3333,
+        "interpenetration(oA,oB)": 7.1667
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "The shadow of the castle is consistent with the position and orientation of the sun.",
+      "signals": [
+        "shadow_consistency(castle)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 36.67,
+      "total_score_100": 96.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "shadow_consistency(castle)": 36.6667
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "The pathway leading to the castle entrance does not show any signs of falling hazards.",
+      "signals": [
+        "falling_hazard(oObj)",
+        "falling_hazard(pathway)"
+      ],
+      "content_score_60": 58,
+      "signal_score_40": 38.0,
+      "total_score_100": 96.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "falling_hazard(oObj)": 31.6667,
+        "falling_hazard(pathway)": 6.3333
+      },
+      "content_score_raw": "58"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "The text 'TRAVELING MOMENTS' is a superimposed graphic.",
+      "signals": [
+        "size_inconsistency(text)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 37.5,
+      "total_score_100": 97.5,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "size_inconsistency(text)": 37.5
+      },
+      "content_score_raw": "60"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "v5",
+    "a1",
+    "a2",
+    "a3",
+    "a4",
+    "a5"
+  ]
+}

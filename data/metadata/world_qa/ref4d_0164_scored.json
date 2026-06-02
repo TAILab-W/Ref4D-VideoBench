@@ -1,0 +1,219 @@
+{
+  "summary": {
+    "items": 10,
+    "enter_bank": 10,
+    "clip_range_sec": [
+      0.0,
+      7.9
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does the award stay in the person's hand without suddenly disappearing?",
+      "signals": [
+        "size_inconsistency(text-overlay)",
+        "collision(text-overlay,logo)",
+        "continuity(person)",
+        "interpenetration(person,award)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "size_inconsistency(text-overlay)": 37.5,
+        "continuity(person)": 7.3333,
+        "interpenetration(person,award)": 7.1667,
+        "collision(text-overlay,logo)": 6.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Across the clip, does the shadow of the object on the purple background remain continuous?",
+      "signals": [
+        "size_inconsistency(oX)",
+        "frame_discontinuity(t)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "frame_discontinuity(t)": 40.0,
+        "size_inconsistency(oX)": 7.5
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Does the person hold the award consistently without interpenetration or frame discontinuity?",
+      "signals": [
+        "interpenetration(person,award)",
+        "frame_discontinuity(t)",
+        "grasp_stability(hand,award)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "frame_discontinuity(t)": 40.0,
+        "interpenetration(person,award)": 7.1667,
+        "grasp_stability(hand,award)": 5.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Is the text-overlay and logo stable with proper finger clearance for holding the award?",
+      "signals": [
+        "frame_discontinuity(text-overlay)",
+        "size_inconsistency(logo)",
+        "finger_clearance(oHand,oTool)",
+        "blade_orientation_away(oTool,oHand)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "frame_discontinuity(text-overlay)": 40.0,
+        "size_inconsistency(logo)": 7.5,
+        "finger_clearance(oHand,oTool)": 6.8333,
+        "blade_orientation_away(oTool,oHand)": 5.8333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Does the size of the text-overlay relative to the '24m CONTENT 2024' logo remain consistent?",
+      "signals": [
+        "size_inconsistency(text-overlay)",
+        "collision(text-overlay,logo)",
+        "size_inconsistency(oX)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "size_inconsistency(text-overlay)": 37.5,
+        "size_inconsistency(oX)": 7.5,
+        "collision(text-overlay,logo)": 6.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "The text-overlay and logo remain stable with no size inconsistency or collision.",
+      "signals": [
+        "frame_discontinuity(text-overlay)",
+        "size_inconsistency(logo)",
+        "size_inconsistency(text-overlay)",
+        "collision(text-overlay,logo)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "frame_discontinuity(text-overlay)": 40.0,
+        "size_inconsistency(logo)": 7.5,
+        "size_inconsistency(text-overlay)": 7.5,
+        "collision(text-overlay,logo)": 6.3333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "The person holds the award consistently without interpenetration or frame discontinuity.",
+      "signals": [
+        "interpenetration(person,award)",
+        "frame_discontinuity(t)",
+        "continuity(person)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "frame_discontinuity(t)": 40.0,
+        "continuity(person)": 7.3333,
+        "interpenetration(person,award)": 7.1667
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "The person's hand and award maintain consistent size and position.",
+      "signals": [
+        "size_inconsistency(oX)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 37.5,
+      "total_score_100": 97.5,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "size_inconsistency(oX)": 37.5
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "The shadow of the object in front of the purple background is continuous.",
+      "signals": [
+        "frame_discontinuity(t)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "frame_discontinuity(t)": 40.0
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "A finger holds the award, showing proper clearance and orientation.",
+      "signals": [
+        "finger_clearance(oHand,oTool)",
+        "blade_orientation_away(oTool,oHand)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "finger_clearance(oHand,oTool)": 34.1667,
+        "blade_orientation_away(oTool,oHand)": 5.8333
+      },
+      "content_score_raw": "60"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "v5",
+    "a1",
+    "a2",
+    "a3",
+    "a4",
+    "a5"
+  ]
+}

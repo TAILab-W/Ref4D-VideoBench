@@ -1,0 +1,211 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0218.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "cv2",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "person",
+        "attributes": {
+          "signature": [
+            "person-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            9.4
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "spinach-leaf",
+        "attributes": {
+          "signature": [
+            "spinach-leaf-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            9.4
+          ]
+        ]
+      },
+      {
+        "id": "o3",
+        "name": "cheese",
+        "attributes": {
+          "signature": [
+            "cheese-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            9.4
+          ]
+        ]
+      },
+      {
+        "id": "o4",
+        "name": "spoon",
+        "attributes": {
+          "signature": [
+            "spoon-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            9.4
+          ]
+        ]
+      },
+      {
+        "id": "o5",
+        "name": "garlic",
+        "attributes": {
+          "signature": [
+            "garlic-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            9.4
+          ]
+        ]
+      },
+      {
+        "id": "o6",
+        "name": "oil",
+        "attributes": {
+          "signature": [
+            "oil-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            9.4
+          ]
+        ]
+      },
+      {
+        "id": "o7",
+        "name": "salt",
+        "attributes": {
+          "signature": [
+            "salt-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            9.4
+          ]
+        ]
+      },
+      {
+        "id": "o8",
+        "name": "brush",
+        "attributes": {
+          "signature": [
+            "brush-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            9.4
+          ]
+        ]
+      },
+      {
+        "id": "o9",
+        "name": "cheese",
+        "attributes": {
+          "signature": [
+            "cheese-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            9.4
+          ]
+        ]
+      },
+      {
+        "id": "o10",
+        "name": "oven",
+        "attributes": {
+          "signature": [
+            "oven-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            9.4
+          ]
+        ]
+      },
+      {
+        "id": "o11",
+        "name": "towel",
+        "attributes": {
+          "signature": [
+            "towel-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            9.4
+          ]
+        ]
+      },
+      {
+        "id": "o12",
+        "name": "plate",
+        "attributes": {
+          "signature": [
+            "plate-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            9.4
+          ]
+        ]
+      }
+    ],
+    "relations": []
+  },
+  "views": {
+    "objects_count_display": {
+      "person": 1,
+      "spinach-leaf": 1,
+      "cheese": 2,
+      "spoon": 1,
+      "garlic": 1,
+      "oil": 1,
+      "salt": 1,
+      "brush": 1,
+      "oven": 1,
+      "towel": 1,
+      "plate": 1
+    }
+  }
+}

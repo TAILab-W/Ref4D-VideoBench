@@ -1,0 +1,225 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0417.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "decord",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "person",
+        "attributes": {
+          "color": [
+            "brown",
+            "gray",
+            "white"
+          ],
+          "sex": [
+            "male"
+          ],
+          "action": [
+            "gesturing",
+            "talking"
+          ],
+          "pose": [
+            "sitting"
+          ],
+          "facing-direction": [
+            "forward"
+          ],
+          "signature": [
+            "long-beard-gray-brown-robe-white-pants"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            8.6
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "mug",
+        "attributes": {
+          "color": [
+            "white"
+          ],
+          "material": [
+            "ceramic"
+          ],
+          "object-part": [
+            "handle"
+          ],
+          "printed-text": [
+            "circular-logo"
+          ],
+          "signature": [
+            "white-circular-logo"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            8.6
+          ]
+        ]
+      },
+      {
+        "id": "o3",
+        "name": "couch",
+        "attributes": {
+          "color": [
+            "beige"
+          ],
+          "material": [
+            "fabric"
+          ],
+          "signature": [
+            "beige-cushion"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            8.6
+          ]
+        ]
+      },
+      {
+        "id": "o4",
+        "name": "wall",
+        "attributes": {
+          "color": [
+            "red"
+          ],
+          "signature": [
+            "red-wall"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            8.6
+          ]
+        ]
+      },
+      {
+        "id": "o5",
+        "name": "lamp",
+        "attributes": {
+          "position": [
+            "right"
+          ],
+          "signature": [
+            "floor-lamp"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            8.6
+          ]
+        ]
+      },
+      {
+        "id": "o6",
+        "name": "pottery",
+        "attributes": {
+          "color": [
+            "silver"
+          ],
+          "material": [
+            "metal"
+          ],
+          "signature": [
+            "silver-pot"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            8.6
+          ]
+        ]
+      }
+    ],
+    "relations": [
+      {
+        "subject": "o1",
+        "predicate": "holding",
+        "object": "o2",
+        "spans": [
+          [
+            1.0,
+            6.3
+          ]
+        ],
+        "confidence": 0.9
+      },
+      {
+        "subject": "o1",
+        "predicate": "sitting-on",
+        "object": "o3",
+        "spans": [
+          [
+            0.0,
+            8.6
+          ]
+        ],
+        "confidence": 0.8
+      },
+      {
+        "subject": "o3",
+        "predicate": "attached-to",
+        "object": "o4",
+        "spans": [
+          [
+            0.0,
+            8.6
+          ]
+        ],
+        "confidence": 0.7
+      },
+      {
+        "subject": "o5",
+        "predicate": "attached-to",
+        "object": "o4",
+        "spans": [
+          [
+            0.0,
+            8.6
+          ]
+        ],
+        "confidence": 0.7
+      },
+      {
+        "subject": "o6",
+        "predicate": "attached-to",
+        "object": "o4",
+        "spans": [
+          [
+            0.0,
+            8.6
+          ]
+        ],
+        "confidence": 0.7
+      }
+    ]
+  },
+  "views": {
+    "objects_count_display": {
+      "person": 1,
+      "mug": 1,
+      "couch": 1,
+      "wall": 1,
+      "lamp": 1,
+      "pottery": 1
+    }
+  }
+}

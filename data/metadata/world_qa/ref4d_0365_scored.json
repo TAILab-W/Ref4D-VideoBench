@@ -1,0 +1,203 @@
+{
+  "summary": {
+    "items": 10,
+    "enter_bank": 10,
+    "clip_range_sec": [
+      0.0,
+      5.23
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Do the boats stay afloat on the water?",
+      "signals": [
+        "buoyancy_float(boat,in:water)",
+        "buoyancy_float"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "buoyancy_float(boat,in:water)": 34.1667,
+        "buoyancy_float": 6.8333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Do the people near the edge of the pier maintain balance and have finger clearance from any potential hazards?",
+      "signals": [
+        "balance(person)",
+        "falling_hazard(person)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "balance(person)": 35.8333,
+        "falling_hazard(person)": 6.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Does the water exhibit slosh response when the boat moves?",
+      "signals": [
+        "slosh_response"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 34.17,
+      "total_score_100": 84.17,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "slosh_response": 34.1667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Do the objects in the scene, such as flags and boats, maintain consistent size and shape without sudden changes?",
+      "signals": [
+        "continuity(bridge)",
+        "continuity(flag)",
+        "continuity(boat)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(bridge)": 36.6667,
+        "continuity(flag)": 7.3333,
+        "continuity(boat)": 7.3333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Are the people sitting near the edge of the pier not in a falling hazard?",
+      "signals": [
+        "falling_hazard"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 31.67,
+      "total_score_100": 81.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "falling_hazard": 31.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "Boats float on the water, maintaining buoyancy.",
+      "signals": [
+        "buoyancy_float(boat,in:water)",
+        "buoyancy_float"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "buoyancy_float(boat,in:water)": 34.1667,
+        "buoyancy_float": 6.8333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "People sit near the pier edge with finger clearance from hazards.",
+      "signals": [
+        "balance(person)",
+        "falling_hazard(person)",
+        "finger_clearance"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "balance(person)": 35.8333,
+        "finger_clearance": 6.8333,
+        "falling_hazard(person)": 6.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "The bridge and boats have consistent size and shape throughout the video.",
+      "signals": [
+        "continuity(bridge)",
+        "continuity(flag)",
+        "continuity(boat)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(bridge)": 36.6667,
+        "continuity(flag)": 7.3333,
+        "continuity(boat)": 7.3333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "A boat's movement causes a slight slosh in the water.",
+      "signals": [
+        "slosh_response"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 34.17,
+      "total_score_100": 84.17,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "slosh_response": 34.1667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "Individuals sitting near the pier edge are not in falling hazard.",
+      "signals": [
+        "falling_hazard"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 31.67,
+      "total_score_100": 81.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "falling_hazard": 31.6667
+      },
+      "content_score_raw": "50"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "v5",
+    "a1",
+    "a2",
+    "a3",
+    "a4",
+    "a5"
+  ]
+}

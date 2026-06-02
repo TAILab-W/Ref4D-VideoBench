@@ -1,0 +1,211 @@
+{
+  "summary": {
+    "items": 10,
+    "enter_bank": 10,
+    "clip_range_sec": [
+      0.0,
+      8.43
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Do the large rocks in the stream remain stationary relative to each other?",
+      "signals": [
+        "continuity(water)",
+        "support(rock,rock)",
+        "interpenetration(rock,rock)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(water)": 36.6667,
+        "interpenetration(rock,rock)": 7.1667,
+        "support(rock,rock)": 7.0
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Do the tall trees surrounding the stream sway gently?",
+      "signals": [
+        "biological_motion(tree)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 38.33,
+      "total_score_100": 88.33,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "biological_motion(tree)": 38.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Does the water flow around the big boulders, creating natural pathways?",
+      "signals": [
+        "trajectory_dir(water,axis)",
+        "slosh_response(water,amp)"
+      ],
+      "content_score_60": 58,
+      "signal_score_40": 40.0,
+      "total_score_100": 98.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(water,axis)": 38.3333,
+        "slosh_response(water,amp)": 6.8333
+      },
+      "content_score_raw": "58"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Do the shadows on the vegetation stay consistent with the light direction?",
+      "signals": [
+        "shadow_consistency(trees)",
+        "shadow_consistency(bushes)"
+      ],
+      "content_score_60": 52,
+      "signal_score_40": 40.0,
+      "total_score_100": 92.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "shadow_consistency(trees)": 36.6667,
+        "shadow_consistency(bushes)": 7.3333
+      },
+      "content_score_raw": "52"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Is the flowing water visually consistent with a natural river?",
+      "signals": [
+        "material_optics(water)",
+        "hue_histogram_jump(water)"
+      ],
+      "content_score_60": 59,
+      "signal_score_40": 40.0,
+      "total_score_100": 99.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "material_optics(water)": 37.5,
+        "hue_histogram_jump(water)": 6.6667
+      },
+      "content_score_raw": "59"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "Water flows continuously over rocks and through the streambed.",
+      "signals": [
+        "continuity(water)",
+        "support(rock,rock)",
+        "interpenetration(rock,rock)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(water)": 36.6667,
+        "interpenetration(rock,rock)": 7.1667,
+        "support(rock,rock)": 7.0
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "Large boulders in the stream remain stable without significant deformation.",
+      "signals": [
+        "support(rock,water)",
+        "balance(rock)",
+        "friction_sliding(rock,on:water)",
+        "deformation(boulder)",
+        "buoyancy_float(boulder,in:water)"
+      ],
+      "content_score_60": 57,
+      "signal_score_40": 40.0,
+      "total_score_100": 97.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "deformation(boulder)": 40.0,
+        "balance(rock)": 7.1667,
+        "support(rock,water)": 7.0,
+        "buoyancy_float(boulder,in:water)": 6.8333,
+        "friction_sliding(rock,on:water)": 6.0
+      },
+      "content_score_raw": "57"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "Water creates natural pathways around large rocks, guiding its movement.",
+      "signals": [
+        "trajectory_dir(water,axis)",
+        "slosh_response(water,amp)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(water,axis)": 38.3333,
+        "slosh_response(water,amp)": 6.8333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "Fast-flowing water stays within the rocky streambed and surrounding vegetation boundaries.",
+      "signals": [
+        "falling_hazard(water)",
+        "containment(water,streambed)"
+      ],
+      "content_score_60": 53,
+      "signal_score_40": 37.5,
+      "total_score_100": 90.5,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "falling_hazard(water)": 31.6667,
+        "containment(water,streambed)": 5.8333
+      },
+      "content_score_raw": "53"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "Tall trees gently sway as they surround the stream.",
+      "signals": [
+        "biological_motion(tree)"
+      ],
+      "content_score_60": 51,
+      "signal_score_40": 38.33,
+      "total_score_100": 89.33,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "biological_motion(tree)": 38.3333
+      },
+      "content_score_raw": "51"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "v5",
+    "a1",
+    "a2",
+    "a3",
+    "a4",
+    "a5"
+  ]
+}

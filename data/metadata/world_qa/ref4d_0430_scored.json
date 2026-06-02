@@ -1,0 +1,194 @@
+{
+  "summary": {
+    "items": 10,
+    "enter_bank": 7,
+    "clip_range_sec": [
+      0.0,
+      7.27
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does the escalator remain stationary and not move unexpectedly?",
+      "signals": [
+        "rigid_transform(escalator)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 37.5,
+      "total_score_100": 87.5,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "rigid_transform(escalator)": 37.5
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Is the woman walking on the ground away from the platform edge to avoid falling?",
+      "signals": [
+        "falling_hazard(person)"
+      ],
+      "content_score_60": 40,
+      "signal_score_40": 31.67,
+      "total_score_100": 71.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "falling_hazard(person)": 31.6667
+      },
+      "content_score_raw": "40"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Do the shadows of the building and people align consistently with the light source direction throughout the clip?",
+      "signals": [
+        "shadow_consistency(building)",
+        "shadow_consistency(sign)",
+        "shadow_consistency"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "shadow_consistency(building)": 36.6667,
+        "shadow_consistency(sign)": 7.3333,
+        "shadow_consistency": 7.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Does the glass canopy structure maintain its shape without collapsing or deforming?",
+      "signals": [
+        "rigid_transform"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 37.5,
+      "total_score_100": 87.5,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "rigid_transform": 37.5
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Is the pedestrian walkway under the canopy free from tripping hazards like uneven surfaces?",
+      "signals": [
+        "friction_sliding"
+      ],
+      "content_score_60": 40,
+      "signal_score_40": 30.0,
+      "total_score_100": 70.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "friction_sliding": 30.0
+      },
+      "content_score_raw": "40"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "The escalator remains stationary and does not move or deform.",
+      "signals": [
+        "rigid_transform(escalator)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 37.5,
+      "total_score_100": 87.5,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "rigid_transform(escalator)": 37.5
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "The woman walks on the ground with continuous foot placement, avoiding abrupt changes in trajectory.",
+      "signals": [
+        "falling_hazard(person)",
+        "continuity",
+        "trajectory_dir"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir": 38.3333,
+        "continuity": 7.3333,
+        "falling_hazard(person)": 6.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "Shadows from the building and people align consistently with the light source direction.",
+      "signals": [
+        "shadow_consistency(building)",
+        "shadow_consistency(sign)",
+        "shadow_consistency"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "shadow_consistency(building)": 36.6667,
+        "shadow_consistency(sign)": 7.3333,
+        "shadow_consistency": 7.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "The glass canopy structure maintains structural integrity without unexpected deformation or collapse.",
+      "signals": [
+        "rigid_transform"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 37.5,
+      "total_score_100": 87.5,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "rigid_transform": 37.5
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "The pedestrian walkway under the canopy is free from tripping hazards.",
+      "signals": [
+        "friction_sliding"
+      ],
+      "content_score_60": 40,
+      "signal_score_40": 30.0,
+      "total_score_100": 70.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "friction_sliding": 30.0
+      },
+      "content_score_raw": "40"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v3",
+    "v4",
+    "a1",
+    "a2",
+    "a3",
+    "a4"
+  ]
+}

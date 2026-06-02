@@ -1,0 +1,102 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0271.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "cv2",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "worker",
+        "attributes": {
+          "color": [
+            "black",
+            "blue"
+          ],
+          "sex": [
+            "female"
+          ],
+          "action": [
+            "packaging"
+          ],
+          "pose": [
+            "sitting"
+          ],
+          "facing-direction": [
+            "left"
+          ],
+          "clothing-detail": [
+            "yellow-smiley-on-black-shirt"
+          ],
+          "signature": [
+            "blue-jacket-black-shirt-yellow-smiley"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            0.2
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "worker",
+        "attributes": {
+          "color": [
+            "blue",
+            "red"
+          ],
+          "sex": [
+            "female"
+          ],
+          "action": [
+            "packaging"
+          ],
+          "pose": [
+            "sitting"
+          ],
+          "facing-direction": [
+            "left"
+          ],
+          "clothing-detail": [
+            "red-sweater"
+          ],
+          "signature": [
+            "red-sweater-blue-jacket"
+          ]
+        },
+        "spans": [
+          [
+            0.3,
+            0.4
+          ]
+        ]
+      }
+    ],
+    "relations": [
+      {
+        "subject": "o1",
+        "predicate": "left-of",
+        "object": "o2",
+        "spans": [
+          [
+            0.0,
+            0.3
+          ]
+        ],
+        "confidence": 0.8
+      }
+    ]
+  },
+  "views": {
+    "objects_count_display": {
+      "worker": 2
+    }
+  }
+}

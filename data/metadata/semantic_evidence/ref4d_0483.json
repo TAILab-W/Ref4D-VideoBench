@@ -1,0 +1,194 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0483.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "decord",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "female-skater",
+        "attributes": {
+          "color": [
+            "black",
+            "white"
+          ],
+          "pattern": [
+            "solid"
+          ],
+          "texture": [
+            "smooth"
+          ],
+          "material": [
+            "fabric",
+            "plastic"
+          ],
+          "size": [
+            "small"
+          ],
+          "age": [
+            "young"
+          ],
+          "sex": [
+            "female"
+          ],
+          "state": [
+            "in-air",
+            "performing"
+          ],
+          "pose": [
+            "bent-knees",
+            "extended-arms",
+            "horizontal"
+          ],
+          "action": [
+            "being-lifted",
+            "skating"
+          ],
+          "orientation": [
+            "left-facing"
+          ],
+          "facing-direction": [
+            "left"
+          ],
+          "position": [
+            "above-male-skater",
+            "mid-air"
+          ],
+          "object-part": [
+            "arms",
+            "legs",
+            "skates"
+          ],
+          "equipment": [
+            "figure-skates"
+          ],
+          "signature": [
+            "white-dress,-black-hair,-white-skates,-left-facing,-in-air"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            5.0
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "male-skater",
+        "attributes": {
+          "color": [
+            "black"
+          ],
+          "pattern": [
+            "solid"
+          ],
+          "texture": [
+            "smooth"
+          ],
+          "material": [
+            "fabric"
+          ],
+          "size": [
+            "small"
+          ],
+          "age": [
+            "young"
+          ],
+          "sex": [
+            "male"
+          ],
+          "state": [
+            "performing",
+            "supporting"
+          ],
+          "pose": [
+            "holding",
+            "standing"
+          ],
+          "action": [
+            "lifting",
+            "skating"
+          ],
+          "orientation": [
+            "right-facing"
+          ],
+          "facing-direction": [
+            "right"
+          ],
+          "position": [
+            "below-female-skater",
+            "on-ice"
+          ],
+          "object-part": [
+            "arms",
+            "legs",
+            "skates"
+          ],
+          "equipment": [
+            "figure-skates"
+          ],
+          "signature": [
+            "black-outfit,-right-facing,-holding-female-skater"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            5.0
+          ]
+        ]
+      }
+    ],
+    "relations": [
+      {
+        "subject": "o1",
+        "predicate": "above",
+        "object": "o2",
+        "spans": [
+          [
+            0.0,
+            5.0
+          ]
+        ],
+        "confidence": 0.8
+      },
+      {
+        "subject": "o1",
+        "predicate": "holding",
+        "object": "o2",
+        "spans": [
+          [
+            0.0,
+            5.0
+          ]
+        ],
+        "confidence": 0.8
+      },
+      {
+        "subject": "o2",
+        "predicate": "holding",
+        "object": "o1",
+        "spans": [
+          [
+            0.0,
+            5.0
+          ]
+        ],
+        "confidence": 0.8
+      }
+    ]
+  },
+  "views": {
+    "objects_count_display": {
+      "female-skater": 1,
+      "male-skater": 1
+    }
+  }
+}

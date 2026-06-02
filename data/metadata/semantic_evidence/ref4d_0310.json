@@ -1,0 +1,175 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0310.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "decord",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "mountain-peak",
+        "attributes": {
+          "color": [
+            "brown",
+            "white"
+          ],
+          "pattern": [
+            "snow-dappled"
+          ],
+          "texture": [
+            "rough"
+          ],
+          "material": [
+            "rock",
+            "snow"
+          ],
+          "size": [
+            "large"
+          ],
+          "state": [
+            "snow-covered"
+          ],
+          "orientation": [
+            "central"
+          ],
+          "facing-direction": [
+            "north"
+          ],
+          "signature": [
+            "central,-large,-snow-covered,-brown-and-white,-rough-texture,-rock-and-snow-material,-facing-north"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            6.7
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "snow-patches",
+        "attributes": {
+          "color": [
+            "white"
+          ],
+          "pattern": [
+            "irregular"
+          ],
+          "texture": [
+            "smooth"
+          ],
+          "material": [
+            "snow"
+          ],
+          "size": [
+            "varied"
+          ],
+          "state": [
+            "frozen"
+          ],
+          "position": [
+            "scattered"
+          ],
+          "signature": [
+            "scattered,-irregular,-smooth-texture,-frozen-state,-varied-size"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            6.7
+          ]
+        ]
+      },
+      {
+        "id": "o3",
+        "name": "distant-mountains",
+        "attributes": {
+          "color": [
+            "blue",
+            "white"
+          ],
+          "pattern": [
+            "snow-capped"
+          ],
+          "texture": [
+            "smooth"
+          ],
+          "material": [
+            "rock",
+            "snow"
+          ],
+          "size": [
+            "large"
+          ],
+          "state": [
+            "snow-covered"
+          ],
+          "position": [
+            "background"
+          ],
+          "signature": [
+            "multiple,-snow-capped,-background,-blue-and-white-color"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            6.7
+          ]
+        ]
+      },
+      {
+        "id": "o4",
+        "name": "sky",
+        "attributes": {
+          "color": [
+            "blue"
+          ],
+          "pattern": [
+            "clear"
+          ],
+          "texture": [
+            "smooth"
+          ],
+          "material": [
+            "air"
+          ],
+          "size": [
+            "vast"
+          ],
+          "state": [
+            "cloudless"
+          ],
+          "position": [
+            "above"
+          ],
+          "signature": [
+            "clear,-vast,-cloudless,-above"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            6.7
+          ]
+        ]
+      }
+    ],
+    "relations": []
+  },
+  "views": {
+    "objects_count_display": {
+      "mountain-peak": 1,
+      "snow-patches": 1,
+      "distant-mountains": 1,
+      "sky": 1
+    }
+  }
+}

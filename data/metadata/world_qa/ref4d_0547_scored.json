@@ -1,0 +1,183 @@
+{
+  "summary": {
+    "items": 10,
+    "enter_bank": 8,
+    "clip_range_sec": [
+      0.0,
+      8.0
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does the helicopter remain on the ship's deck during its landing and takeoff?",
+      "signals": [
+        "support(ship,helicopter)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 35.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "support(ship,helicopter)": 35.0
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Does the naval ship provide a stable support surface for the helicopter to operate on its deck?",
+      "signals": [
+        "support(ship,helicopter)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 35.0,
+      "total_score_100": 85.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "support(ship,helicopter)": 35.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "During takeoff, do the main rotor blades generate lift to enable vertical ascent?",
+      "signals": [
+        "support(helicopter,rotor)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 35.0,
+      "total_score_100": 85.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "support(helicopter,rotor)": 35.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Does the helicopter avoid collision with other objects or personnel on the flight deck?",
+      "signals": [
+        "collision-free(helicopter,deck)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 23.33,
+      "total_score_100": 73.33,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "collision-free(helicopter,deck)": 23.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Does the shadow cast by the helicopter match its position relative to the light source?",
+      "signals": [
+        "shadow_consistency(helicopter)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 36.67,
+      "total_score_100": 86.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "shadow_consistency(helicopter)": 36.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "The helicopter is on the ship's deck during takeoff and landing.",
+      "signals": [
+        "support(ship,helicopter)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 35.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "support(ship,helicopter)": 35.0
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "The naval ship provides a stable support surface for the helicopter.",
+      "signals": [
+        "support(ship,helicopter)"
+      ],
+      "content_score_60": 20,
+      "signal_score_40": 35.0,
+      "total_score_100": 55.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "support(ship,helicopter)": 35.0
+      },
+      "content_score_raw": "20"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "The main rotor blades generate lift to enable vertical ascent.",
+      "signals": [
+        "support(helicopter,rotor)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 35.0,
+      "total_score_100": 85.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "support(helicopter,rotor)": 35.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "The helicopter maintains balance with a low center of mass over its base.",
+      "signals": [
+        "balance(helicopter)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 35.83,
+      "total_score_100": 85.83,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "balance(helicopter)": 35.8333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "The shadow cast by the helicopter matches its position relative to the light source.",
+      "signals": [
+        "shadow_consistency(helicopter)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 36.67,
+      "total_score_100": 86.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "shadow_consistency(helicopter)": 36.6667
+      },
+      "content_score_raw": "50"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v5",
+    "a1",
+    "a3",
+    "a4",
+    "a5"
+  ]
+}

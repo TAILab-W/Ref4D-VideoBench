@@ -1,0 +1,195 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0297.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "decord",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "person_1",
+        "attributes": {
+          "color": [
+            "black"
+          ],
+          "sex": [
+            "male"
+          ],
+          "state": [
+            "wet"
+          ],
+          "action": [
+            "controlling",
+            "riding"
+          ],
+          "pose": [
+            "sitting"
+          ],
+          "facing-direction": [
+            "forward"
+          ],
+          "signature": [
+            "long-blonde-hair-black-shirt-sunglasses"
+          ]
+        },
+        "spans": [
+          [
+            0.2,
+            0.6
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "person_2",
+        "attributes": {
+          "color": [
+            "blue",
+            "white"
+          ],
+          "sex": [
+            "female"
+          ],
+          "state": [
+            "wet"
+          ],
+          "action": [
+            "holding",
+            "riding"
+          ],
+          "pose": [
+            "leaning",
+            "sitting"
+          ],
+          "facing-direction": [
+            "forward"
+          ],
+          "signature": [
+            "long-blonde-hair-white-shirt-blue-shirt"
+          ]
+        },
+        "spans": [
+          [
+            0.4,
+            0.8
+          ]
+        ]
+      },
+      {
+        "id": "o3",
+        "name": "jet_ski",
+        "attributes": {
+          "color": [
+            "blue",
+            "red"
+          ],
+          "size": [
+            "large"
+          ],
+          "material": [
+            "metal",
+            "plastic"
+          ],
+          "equipment": [
+            "watercraft"
+          ],
+          "signature": [
+            "red-and-blue-watercraft"
+          ]
+        },
+        "spans": [
+          [
+            0.1,
+            1.5
+          ]
+        ]
+      }
+    ],
+    "relations": [
+      {
+        "subject": "o1",
+        "predicate": "riding",
+        "object": "o3",
+        "spans": [
+          [
+            0.2,
+            0.6
+          ]
+        ],
+        "confidence": 0.9
+      },
+      {
+        "subject": "o2",
+        "predicate": "riding",
+        "object": "o3",
+        "spans": [
+          [
+            0.4,
+            0.7
+          ]
+        ],
+        "confidence": 0.9
+      },
+      {
+        "subject": "o1",
+        "predicate": "controlling",
+        "object": "o3",
+        "spans": [
+          [
+            0.2,
+            0.5
+          ]
+        ],
+        "confidence": 0.8
+      },
+      {
+        "subject": "o2",
+        "predicate": "holding",
+        "object": "o1",
+        "spans": [
+          [
+            0.5,
+            0.7
+          ]
+        ],
+        "confidence": 0.8
+      },
+      {
+        "subject": "o1",
+        "predicate": "looking-at",
+        "object": "o2",
+        "spans": [
+          [
+            0.2,
+            0.6
+          ]
+        ],
+        "confidence": 0.7
+      },
+      {
+        "subject": "o2",
+        "predicate": "looking-at",
+        "object": "o1",
+        "spans": [
+          [
+            0.4,
+            0.7
+          ]
+        ],
+        "confidence": 0.7
+      }
+    ]
+  },
+  "views": {
+    "objects_count_display": {
+      "person_1": 1,
+      "person_2": 1,
+      "jet_ski": 1
+    }
+  }
+}

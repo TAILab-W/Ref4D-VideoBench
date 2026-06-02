@@ -1,0 +1,190 @@
+{
+  "summary": {
+    "items": 10,
+    "enter_bank": 7,
+    "clip_range_sec": [
+      0.0,
+      10.9
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does the ship stay docked at the port without moving away?",
+      "signals": [
+        "buoyancy_float(ship,in:water)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 34.17,
+      "total_score_100": 89.17,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "buoyancy_float(ship,in:water)": 34.1667
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Does the water in the harbor show a natural slosh response consistent with wind conditions?",
+      "signals": [
+        "slosh_response(water,amp)"
+      ],
+      "content_score_60": 45,
+      "signal_score_40": 34.17,
+      "total_score_100": 79.17,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "slosh_response(water,amp)": 34.1667
+      },
+      "content_score_raw": "45"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Does the bus remain stationary on land, supported by its wheels and not levitating?",
+      "signals": [
+        "support(bus,road), balance(bus), friction_sliding(bus,on:road)",
+        "friction_sliding(bus,on:road)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "support(bus,road), balance(bus), friction_sliding(bus,on:road)": 35.0,
+        "friction_sliding(bus,on:road)": 6.0
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Is the person near the fuel pump maintaining a safe distance from potential hazards?",
+      "signals": [
+        "prohibited_intersection(person,vehicle)"
+      ],
+      "content_score_60": 30,
+      "signal_score_40": 36.67,
+      "total_score_100": 66.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "prohibited_intersection(person,vehicle)": 36.6667
+      },
+      "content_score_raw": "30"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Does the text overlay appear consistently as subtitles throughout the clip?",
+      "signals": [
+        "continuity(text-overlay)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 36.67,
+      "total_score_100": 86.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(text-overlay)": 36.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "The ship is docked at the port, not moving unexpectedly.",
+      "signals": [
+        "buoyancy_float(ship,in:water)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 34.17,
+      "total_score_100": 94.17,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "buoyancy_float(ship,in:water)": 34.1667
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "The water in the harbor shows a natural slosh response consistent with wind conditions.",
+      "signals": [
+        "slosh_response(water,amp)"
+      ],
+      "content_score_60": 27,
+      "signal_score_40": 34.17,
+      "total_score_100": 61.17,
+      "duplicate_penalized": true,
+      "signal_detail": {
+        "slosh_response(water,amp)": 34.1667
+      },
+      "content_score_raw": "45"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "The bus is stationary on land, supported by its wheels on the road surface.",
+      "signals": [
+        "support(bus,road), balance(bus), friction_sliding(bus,on:road)",
+        "friction_sliding(bus,on:road)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "support(bus,road), balance(bus), friction_sliding(bus,on:road)": 35.0,
+        "friction_sliding(bus,on:road)": 6.0
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "The bus remains stationary on the ground with its wheels in contact, maintaining balance and continuity.",
+      "signals": [
+        "balance(bus)",
+        "continuity(bus)",
+        "center_of_mass_over_base(bus)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(bus)": 36.6667,
+        "balance(bus)": 7.1667,
+        "center_of_mass_over_base(bus)": 6.5
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "The text overlay at the bottom of the frame reads \"...at a type of vehicle which is enjoying a chance to become a common sight on Scotland's roads.\"",
+      "signals": [
+        "continuity(text-overlay)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 36.67,
+      "total_score_100": 86.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(text-overlay)": 36.6667
+      },
+      "content_score_raw": "50"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v3",
+    "v5",
+    "a1",
+    "a3",
+    "a4",
+    "a5"
+  ]
+}

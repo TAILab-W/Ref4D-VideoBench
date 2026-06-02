@@ -1,0 +1,197 @@
+{
+  "summary": {
+    "items": 10,
+    "enter_bank": 10,
+    "clip_range_sec": [
+      0.0,
+      10.37
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Do the rollerbladers use their skates for propulsion at the start?",
+      "signals": [
+        "accel_sign(rollerblader,axis)",
+        "tool_usage_correct(rollerblades,for:skating)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "accel_sign(rollerblader,axis)": 35.0,
+        "tool_usage_correct(rollerblades,for:skating)": 5.8333
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Do the wheels roll smoothly on the floor without interpenetration?",
+      "signals": [
+        "wheel_rolling(rollerblader)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 30.0,
+      "total_score_100": 80.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "wheel_rolling(rollerblader)": 30.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Do the rollerbladers maintain a forward trajectory and avoid colliding with each other?",
+      "signals": [
+        "trajectory_dir(rollerblader,axis)",
+        "balance(rollerblader)",
+        "interpenetration(rollerblader,rollerblader)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(rollerblader,axis)": 38.3333,
+        "balance(rollerblader)": 7.1667,
+        "interpenetration(rollerblader,rollerblader)": 7.1667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Does the center of mass of any rollerblader stay over their base to prevent falling?",
+      "signals": [
+        "center_of_mass_over_base(rollerblader)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 32.5,
+      "total_score_100": 82.5,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "center_of_mass_over_base(rollerblader)": 32.5
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Are the rollerbladers following a straight path during the race?",
+      "signals": [
+        "trajectory_dir(rollerblader,axis)",
+        "balance(rollerblader)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(rollerblader,axis)": 38.3333,
+        "balance(rollerblader)": 7.1667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "Rollerbladers' wheels roll smoothly on the polished wooden floor.",
+      "signals": [
+        "wheel_rolling(rollerblader)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 30.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "wheel_rolling(rollerblader)": 30.0
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "Rollerbladers use their skates for propulsion during the start of the race.",
+      "signals": [
+        "accel_sign(rollerblader,axis)",
+        "tool_usage_correct(rollerblades,for:skating)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "accel_sign(rollerblader,axis)": 35.0,
+        "tool_usage_correct(rollerblades,for:skating)": 5.8333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "The rollerbladers maintain a forward trajectory without interpenetration between them.",
+      "signals": [
+        "interpenetration(rollerblader,rollerblader)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 35.83,
+      "total_score_100": 85.83,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "interpenetration(rollerblader,rollerblader)": 35.8333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "All participants keep their center of mass over their base to avoid falling.",
+      "signals": [
+        "center_of_mass_over_base(rollerblader)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 32.5,
+      "total_score_100": 82.5,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "center_of_mass_over_base(rollerblader)": 32.5
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "During the race, all visible rollerbladers follow a forward trajectory.",
+      "signals": [
+        "trajectory_dir(rollerblader,axis)",
+        "balance(rollerblader)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(rollerblader,axis)": 38.3333,
+        "balance(rollerblader)": 7.1667
+      },
+      "content_score_raw": "50"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "v5",
+    "a1",
+    "a2",
+    "a3",
+    "a4",
+    "a5"
+  ]
+}

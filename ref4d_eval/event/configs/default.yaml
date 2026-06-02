@@ -1,0 +1,65 @@
+# Event evaluation shared config
+# Used by event merge / gating / EGA / ERel / aggregate.
+
+seed: 42
+deterministic: true
+
+paths:
+  data_root: outputs/event/cache
+  models_root: checkpoints
+  e5_dir: checkpoints/e5-large-v2
+  vlm_dir: checkpoints/videollama3-7b
+  ddm_ckpt: checkpoints/ddmnet/checkpoint.pth.tar
+  transnetv2_weights: checkpoints/transnetv2/transnetv2-pytorch-weights.pth
+
+device:
+  compute: auto
+  dtype: bf16
+  attn_impl: flash_attention_2
+
+time_norm:
+  mode: linear_01
+  eps: 1.0e-9
+
+merge:
+  tau_sem: 0.96
+  gap_abs_sec: 1.01
+  gap_norm_fallback: 0.1
+  min_duration_norm: 0.0
+
+gating:
+  s0: 0.10
+  u0: 0.160
+  semantic_floor: 0.88
+  rtiou:
+    delta: 1.0e-6
+
+ega:
+  w1: 0.575
+  w2: 0.425
+  rho: 1.20
+
+matching:
+  null_ref: 0.3
+  null_gen: 0.9
+
+ERel:
+  allen_eps:
+    eq: 1.0e-3
+  affinity: default_v1
+
+aggregate:
+  event_regressor:
+    valid_branch:
+      features: [EGA, ERel, ECR]
+      intercept: -1.401241
+      coef: [1.108856, 0.012090, 0.974034]
+    omitted_branch:
+      features: [EGA, ECR]
+      intercept: -0.796922
+      coef: [0.554288, 0.982663]
+
+io:
+  local_files_only: true
+  text_encoding: utf-8
+  float_precision: 6

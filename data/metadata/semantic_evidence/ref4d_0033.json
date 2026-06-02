@@ -1,0 +1,129 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0033.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "cv2",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "bee",
+        "attributes": {
+          "color": [
+            "black",
+            "yellow"
+          ],
+          "action": [
+            "crawling",
+            "hovering"
+          ],
+          "signature": [
+            "small-body-yellow-black-striped"
+          ]
+        },
+        "spans": [
+          [
+            0.2,
+            3.4
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "honeycomb",
+        "attributes": {
+          "signature": [
+            "hexagonal-cells-black-wax"
+          ]
+        },
+        "spans": [
+          [
+            0.2,
+            3.4
+          ]
+        ]
+      },
+      {
+        "id": "o3",
+        "name": "beekeeper",
+        "attributes": {
+          "signature": [
+            "white-coat-gloves-legs"
+          ]
+        },
+        "spans": [
+          [
+            0.5,
+            3.4
+          ]
+        ]
+      },
+      {
+        "id": "o4",
+        "name": "bee-hive-box",
+        "attributes": {
+          "signature": [
+            "wooden-box-with-slats"
+          ]
+        },
+        "spans": [
+          [
+            0.6,
+            3.4
+          ]
+        ]
+      }
+    ],
+    "relations": [
+      {
+        "subject": "o1",
+        "predicate": "crawling-on",
+        "object": "o2",
+        "spans": [
+          [
+            0.3,
+            3.4
+          ]
+        ],
+        "confidence": 0.9
+      },
+      {
+        "subject": "o3",
+        "predicate": "looking-at",
+        "object": "o2",
+        "spans": [
+          [
+            0.5,
+            3.4
+          ]
+        ],
+        "confidence": 0.8
+      },
+      {
+        "subject": "o3",
+        "predicate": "standing-in-front-of",
+        "object": "o4",
+        "spans": [
+          [
+            0.5,
+            3.4
+          ]
+        ],
+        "confidence": 0.7
+      }
+    ]
+  },
+  "views": {
+    "objects_count_display": {
+      "bee": 1,
+      "honeycomb": 1,
+      "beekeeper": 1,
+      "bee-hive-box": 1
+    }
+  }
+}

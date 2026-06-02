@@ -1,0 +1,52 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0305.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "decord",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "bush",
+        "attributes": {
+          "signature": [
+            "green-vegetation"
+          ]
+        },
+        "spans": [
+          [
+            0.1,
+            2.0
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "rock",
+        "attributes": {
+          "signature": [
+            "gray-stone"
+          ]
+        },
+        "spans": [
+          [
+            0.1,
+            2.0
+          ]
+        ]
+      }
+    ],
+    "relations": []
+  },
+  "views": {
+    "objects_count_display": {
+      "bush": 1,
+      "rock": 1
+    }
+  }
+}

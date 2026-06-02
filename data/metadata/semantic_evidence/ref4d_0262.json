@@ -1,0 +1,60 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0262.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "cv2",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "machine",
+        "attributes": {
+          "color": [
+            "black",
+            "white",
+            "yellow"
+          ],
+          "material": [
+            "metal"
+          ],
+          "state": [
+            "operational"
+          ],
+          "action": [
+            "processing"
+          ],
+          "object-part": [
+            "base",
+            "grill",
+            "light",
+            "spindle",
+            "table"
+          ],
+          "logo": [
+            "black-cross-on-white-panel"
+          ],
+          "signature": [
+            "yellow-wall-mounted-with-black-spot-and-white-panel-top-left"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            6.4
+          ]
+        ]
+      }
+    ],
+    "relations": []
+  },
+  "views": {
+    "objects_count_display": {
+      "machine": 1
+    }
+  }
+}

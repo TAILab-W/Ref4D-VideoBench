@@ -1,0 +1,155 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0512.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "decord",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "person",
+        "attributes": {
+          "color": [
+            "white"
+          ],
+          "pattern": [
+            "solid"
+          ],
+          "texture": [
+            "smooth"
+          ],
+          "material": [
+            "cloth"
+          ],
+          "size": [
+            "medium"
+          ],
+          "age": [
+            "young"
+          ],
+          "sex": [
+            "female"
+          ],
+          "state": [
+            "performing",
+            "standing"
+          ],
+          "pose": [
+            "arm-outstretched",
+            "arm-raised",
+            "bent-knee",
+            "hand-on-hip"
+          ],
+          "action": [
+            "dancing",
+            "martial-arts",
+            "traditional-dance"
+          ],
+          "orientation": [
+            "facing-front"
+          ],
+          "facing-direction": [
+            "forward"
+          ],
+          "position": [
+            "center",
+            "outdoor"
+          ],
+          "object-part": [
+            "bare-feet",
+            "long-sleeved-top",
+            "wide-leg-pants"
+          ],
+          "signature": [
+            "white-clothes-barefoot-woman"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            8.9
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "building",
+        "attributes": {
+          "color": [
+            "black",
+            "brown",
+            "gray"
+          ],
+          "pattern": [
+            "symmetrical"
+          ],
+          "texture": [
+            "brick"
+          ],
+          "material": [
+            "stone",
+            "wood"
+          ],
+          "size": [
+            "large"
+          ],
+          "facing-direction": [
+            "front"
+          ],
+          "signature": [
+            "traditional-chinese-architecture-tiled-roof"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            8.9
+          ]
+        ]
+      },
+      {
+        "id": "o3",
+        "name": "tree",
+        "attributes": {
+          "color": [
+            "green"
+          ],
+          "pattern": [
+            "foliage"
+          ],
+          "texture": [
+            "natural"
+          ],
+          "size": [
+            "medium"
+          ],
+          "facing-direction": [
+            "left"
+          ],
+          "signature": [
+            "green-leaves-in-background"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            8.9
+          ]
+        ]
+      }
+    ],
+    "relations": []
+  },
+  "views": {
+    "objects_count_display": {
+      "person": 1,
+      "building": 1,
+      "tree": 1
+    }
+  }
+}

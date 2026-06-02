@@ -1,0 +1,196 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0059.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "cv2",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "bird",
+        "attributes": {
+          "color": [
+            "black",
+            "red",
+            "white",
+            "yellow"
+          ],
+          "pattern": [
+            "dotted",
+            "striped"
+          ],
+          "texture": [
+            "feathery"
+          ],
+          "size": [
+            "small"
+          ],
+          "age": [
+            "adult"
+          ],
+          "sex": [
+            "male"
+          ],
+          "state": [
+            "alert",
+            "perched"
+          ],
+          "pose": [
+            "facing-forward",
+            "standing"
+          ],
+          "action": [
+            "looking-around",
+            "pecking"
+          ],
+          "orientation": [
+            "left-facing",
+            "right-facing"
+          ],
+          "position": [
+            "left-side",
+            "right-side"
+          ],
+          "signature": [
+            "red-black-white-yellow-shoulder"
+          ]
+        },
+        "spans": [
+          [
+            0.2,
+            4.5
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "bird",
+        "attributes": {
+          "color": [
+            "black",
+            "red",
+            "white",
+            "yellow"
+          ],
+          "pattern": [
+            "dotted",
+            "striped"
+          ],
+          "texture": [
+            "feathery"
+          ],
+          "size": [
+            "small"
+          ],
+          "age": [
+            "adult"
+          ],
+          "sex": [
+            "male"
+          ],
+          "state": [
+            "alert",
+            "perched"
+          ],
+          "pose": [
+            "facing-forward",
+            "standing"
+          ],
+          "action": [
+            "looking-around",
+            "pecking"
+          ],
+          "orientation": [
+            "left-facing",
+            "right-facing"
+          ],
+          "position": [
+            "left-side",
+            "right-side"
+          ],
+          "signature": [
+            "red-black-white-yellow-shoulder"
+          ]
+        },
+        "spans": [
+          [
+            0.7,
+            5.7
+          ]
+        ]
+      }
+    ],
+    "relations": [
+      {
+        "subject": "o1",
+        "predicate": "left-of",
+        "object": "o2",
+        "spans": [
+          [
+            0.3,
+            0.5
+          ],
+          [
+            1.7,
+            1.9
+          ]
+        ],
+        "confidence": 0.8
+      },
+      {
+        "subject": "o1",
+        "predicate": "right-of",
+        "object": "o2",
+        "spans": [
+          [
+            4.6,
+            4.8
+          ]
+        ],
+        "confidence": 0.8
+      },
+      {
+        "subject": "o1",
+        "predicate": "feeding",
+        "object": "o2",
+        "spans": [
+          [
+            0.6,
+            0.8
+          ],
+          [
+            1.4,
+            1.6
+          ]
+        ],
+        "confidence": 0.8
+      },
+      {
+        "subject": "o2",
+        "predicate": "feeding",
+        "object": "o1",
+        "spans": [
+          [
+            0.6,
+            0.8
+          ],
+          [
+            1.4,
+            1.6
+          ]
+        ],
+        "confidence": 0.8
+      }
+    ]
+  },
+  "views": {
+    "objects_count_display": {
+      "bird": 2
+    }
+  }
+}

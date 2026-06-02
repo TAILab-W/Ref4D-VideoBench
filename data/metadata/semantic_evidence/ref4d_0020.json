@@ -1,0 +1,119 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0020.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "cv2",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "duck",
+        "attributes": {
+          "color": [
+            "black",
+            "brown",
+            "green",
+            "yellow"
+          ],
+          "pattern": [
+            "iridescent",
+            "striped"
+          ],
+          "pose": [
+            "dabbling",
+            "swimming"
+          ],
+          "action": [
+            "floating",
+            "foraging"
+          ],
+          "orientation": [
+            "left-facing"
+          ],
+          "facing-direction": [
+            "left"
+          ],
+          "signature": [
+            "green-head-yellow-beak-brown-body-black-tail-left-facing"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            1.0
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "bird",
+        "attributes": {
+          "color": [
+            "blue",
+            "gray"
+          ],
+          "pose": [
+            "perched",
+            "standing"
+          ],
+          "action": [
+            "looking",
+            "resting"
+          ],
+          "position": [
+            "right"
+          ],
+          "orientation": [
+            "right-facing"
+          ],
+          "signature": [
+            "gray-blue-feathers-long-neck-legs-perched-on-log"
+          ]
+        },
+        "spans": [
+          [
+            0.7,
+            1.0
+          ]
+        ]
+      }
+    ],
+    "relations": [
+      {
+        "subject": "o1",
+        "predicate": "left-of",
+        "object": "o2",
+        "spans": [
+          [
+            0.3,
+            0.7
+          ]
+        ],
+        "confidence": 0.8
+      },
+      {
+        "subject": "o2",
+        "predicate": "right-of",
+        "object": "o1",
+        "spans": [
+          [
+            0.3,
+            0.7
+          ]
+        ],
+        "confidence": 0.8
+      }
+    ]
+  },
+  "views": {
+    "objects_count_display": {
+      "duck": 1,
+      "bird": 1
+    }
+  }
+}

@@ -1,0 +1,209 @@
+{
+  "summary": {
+    "items": 10,
+    "enter_bank": 10,
+    "clip_range_sec": [
+      0.0,
+      9.0
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does the sauce go on top of the cheese and lettuce?",
+      "signals": [
+        "tool_contact(hand,sauce)",
+        "placeable(sauce,on:sandwich)",
+        "action_phase(assembly,phase:placing)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 38.83,
+      "total_score_100": 93.83,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "tool_contact(hand,sauce)": 28.3333,
+        "action_phase(assembly,phase:placing)": 5.3333,
+        "placeable(sauce,on:sandwich)": 5.1667
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Does the patty stay supported by the bottom bun without floating?",
+      "signals": [
+        "interpenetration(oA,oB)",
+        "collision(oA,oB)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "interpenetration(oA,oB)": 35.8333,
+        "collision(oA,oB)": 6.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Are hands in contact with hot surfaces during food handling?",
+      "signals": [
+        "hot_surface_contact(hand,hot_surface)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 34.17,
+      "total_score_100": 84.17,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "hot_surface_contact(hand,hot_surface)": 34.1667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Does the sauce interpenetrate the burger components?",
+      "signals": [
+        "tool_contact(burger_spatula,sauce)",
+        "interpenetration(sauce,patty)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "interpenetration(sauce,patty)": 35.8333,
+        "tool_contact(burger_spatula,sauce)": 5.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Does the sandwich maintain balance after adding ingredients?",
+      "signals": [
+        "support(bottom_bun,board)",
+        "balance(patty_on_bun)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "balance(patty_on_bun)": 35.8333,
+        "support(bottom_bun,board)": 7.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "A hand places sauce on top of the cheese and lettuce.",
+      "signals": [
+        "tool_contact(hand,sauce)",
+        "placeable(sauce,on:sandwich)",
+        "action_phase(assembly,phase:placing)",
+        "interpenetration(oA,oB)",
+        "collision(oA,oB)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "interpenetration(oA,oB)": 35.8333,
+        "collision(oA,oB)": 6.3333,
+        "tool_contact(hand,sauce)": 5.6667,
+        "action_phase(assembly,phase:placing)": 5.3333,
+        "placeable(sauce,on:sandwich)": 5.1667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "The burger components maintain support and balance during placement.",
+      "signals": [
+        "support(bottom_bun,board)",
+        "balance(patty_on_bun)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "balance(patty_on_bun)": 35.8333,
+        "support(bottom_bun,board)": 7.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "No hot surface contact occurs between hands and food.",
+      "signals": [
+        "hot_surface_contact(hand,hot_surface)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 34.17,
+      "total_score_100": 84.17,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "hot_surface_contact(hand,hot_surface)": 34.1667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "The ingredients are placed without interpenetration or collision.",
+      "signals": [
+        "interpenetration(oA,oB)",
+        "collision(oA,oB)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "interpenetration(oA,oB)": 35.8333,
+        "collision(oA,oB)": 6.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "The sauce is on the patty.",
+      "signals": [
+        "tool_contact(burger_spatula,sauce)",
+        "interpenetration(sauce,patty)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "interpenetration(sauce,patty)": 35.8333,
+        "tool_contact(burger_spatula,sauce)": 5.6667
+      },
+      "content_score_raw": "50"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "v5",
+    "a1",
+    "a2",
+    "a3",
+    "a4",
+    "a5"
+  ]
+}

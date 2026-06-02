@@ -1,0 +1,222 @@
+{
+  "summary": {
+    "items": 10,
+    "enter_bank": 9,
+    "clip_range_sec": [
+      0.0,
+      10.23
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does the kangaroo move forward naturally without defying gravity?",
+      "signals": [
+        "continuity(kangaroo)",
+        "frame_discontinuity(t)",
+        "accel_sign(kangaroo,axis)",
+        "biological_motion(kangaroo)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "frame_discontinuity(t)": 40.0,
+        "biological_motion(kangaroo)": 7.6667,
+        "continuity(kangaroo)": 7.3333,
+        "accel_sign(kangaroo,axis)": 7.0
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Is the shadow of the tree trunk continuous on the ground throughout the clip?",
+      "signals": [
+        "shadow_consistency(tree_trunk)",
+        "continuity(shadow)",
+        "frame_discontinuity(t)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "frame_discontinuity(t)": 40.0,
+        "shadow_consistency(tree_trunk)": 7.3333,
+        "continuity(shadow)": 7.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Does the kangaroo's tail direction match its body movement as it runs?",
+      "signals": [
+        "biological_motion(kangaroo)",
+        "trajectory_dir(kangaroo.tail,axis)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "biological_motion(kangaroo)": 38.3333,
+        "trajectory_dir(kangaroo.tail,axis)": 7.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Does the kangaroo maintain a consistent body posture while moving forward?",
+      "signals": [
+        "continuity(kangaroo)",
+        "frame_discontinuity(t)",
+        "accel_sign(kangaroo,axis)",
+        "biological_motion(kangaroo)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "frame_discontinuity(t)": 40.0,
+        "biological_motion(kangaroo)": 7.6667,
+        "continuity(kangaroo)": 7.3333,
+        "accel_sign(kangaroo,axis)": 7.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Is the shadow of the tree trunk on the ground aligned with its actual position?",
+      "signals": [
+        "shadow_consistency(tree_trunk)",
+        "biological_motion(kangaroo)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "biological_motion(kangaroo)": 38.3333,
+        "shadow_consistency(tree_trunk)": 7.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "The kangaroo moves forward on the ground, maintaining natural motion.",
+      "signals": [
+        "continuity(kangaroo)",
+        "frame_discontinuity(t)",
+        "accel_sign(kangaroo,axis)",
+        "biological_motion(kangaroo)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "frame_discontinuity(t)": 40.0,
+        "biological_motion(kangaroo)": 7.6667,
+        "continuity(kangaroo)": 7.3333,
+        "accel_sign(kangaroo,axis)": 7.0
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "The shadow of the tree trunk is continuous and matches its position.",
+      "signals": [
+        "shadow_consistency(tree_trunk)",
+        "continuity(shadow)",
+        "frame_discontinuity(t)"
+      ],
+      "content_score_60": 40,
+      "signal_score_40": 40.0,
+      "total_score_100": 80.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "frame_discontinuity(t)": 40.0,
+        "shadow_consistency(tree_trunk)": 7.3333,
+        "continuity(shadow)": 7.3333
+      },
+      "content_score_raw": "40"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "The kangaroo's tail points backward as it jumps.",
+      "signals": [
+        "biological_motion(kangaroo)",
+        "trajectory_dir(kangaroo.tail,axis)"
+      ],
+      "content_score_60": 30,
+      "signal_score_40": 40.0,
+      "total_score_100": 70.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "biological_motion(kangaroo)": 38.3333,
+        "trajectory_dir(kangaroo.tail,axis)": 7.6667
+      },
+      "content_score_raw": "30"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "The kangaroo's legs are extended in a natural running posture.",
+      "signals": [
+        "continuity(kangaroo)",
+        "frame_discontinuity(t)",
+        "accel_sign(kangaroo,axis)",
+        "biological_motion(kangaroo)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "frame_discontinuity(t)": 40.0,
+        "biological_motion(kangaroo)": 7.6667,
+        "continuity(kangaroo)": 7.3333,
+        "accel_sign(kangaroo,axis)": 7.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "The tree trunk casts a shadow on the ground, consistent with its orientation.",
+      "signals": [
+        "shadow_consistency(tree_trunk)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 36.67,
+      "total_score_100": 86.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "shadow_consistency(tree_trunk)": 36.6667
+      },
+      "content_score_raw": "50"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "v5",
+    "a1",
+    "a2",
+    "a4",
+    "a5"
+  ]
+}

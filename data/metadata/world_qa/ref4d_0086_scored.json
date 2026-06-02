@@ -1,0 +1,229 @@
+{
+  "summary": {
+    "items": 10,
+    "enter_bank": 10,
+    "clip_range_sec": [
+      0.0,
+      5.5
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does the monkey's grasp on the apple maintain continuity and stability without slipping or abrupt release?",
+      "signals": [
+        "grasp_stability(oHand,oObj)",
+        "slip(oA,on:oB)",
+        "continuity(oX)",
+        "biological_motion",
+        "grasp_stability"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "biological_motion": 38.3333,
+        "continuity(oX)": 7.3333,
+        "grasp_stability(oHand,oObj)": 5.6667,
+        "grasp_stability": 5.6667,
+        "slip(oA,on:oB)": 5.5
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Does the apple stay supported by hands during transfer without sudden disappearance or interpenetration?",
+      "signals": [
+        "handoff_between_hands",
+        "continuity",
+        "containment(oA,oB)",
+        "support(oA,oB)",
+        "continuity(oX)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity": 36.6667,
+        "continuity(oX)": 7.3333,
+        "support(oA,oB)": 7.0,
+        "containment(oA,oB)": 5.8333,
+        "handoff_between_hands": 5.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Is the biological motion of the monkeys natural and consistent with typical primate behavior?",
+      "signals": [
+        "biological_motion(oA)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 38.33,
+      "total_score_100": 88.33,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "biological_motion(oA)": 38.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Do the monkeys' actions pose any falling hazard to each other?",
+      "signals": [
+        "falling_hazard"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 31.67,
+      "total_score_100": 81.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "falling_hazard": 31.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Across the clip, does the apple keep a consistent size relative to the monkeys?",
+      "signals": [
+        "containment(oA,oB)",
+        "post_collision_change(oX)",
+        "size_inconsistency(oX)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "size_inconsistency(oX)": 37.5,
+        "post_collision_change(oX)": 6.8333,
+        "containment(oA,oB)": 5.8333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "The apple is transferred from the left monkey to the right monkey without sudden disappearance.",
+      "signals": [
+        "containment(oA,oB)",
+        "post_collision_change(oX)",
+        "size_inconsistency(oX)",
+        "grasp_stability(oHand,oObj)",
+        "slip(oA,on:oB)",
+        "continuity(oX)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "size_inconsistency(oX)": 37.5,
+        "continuity(oX)": 7.3333,
+        "post_collision_change(oX)": 6.8333,
+        "containment(oA,oB)": 5.8333,
+        "grasp_stability(oHand,oObj)": 5.6667,
+        "slip(oA,on:oB)": 5.5
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "The left monkey holds the apple with both hands, demonstrating grasp stability.",
+      "signals": [
+        "handoff_between_hands",
+        "continuity",
+        "biological_motion",
+        "grasp_stability"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "biological_motion": 38.3333,
+        "continuity": 7.3333,
+        "grasp_stability": 5.6667,
+        "handoff_between_hands": 5.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "The monkeys' biological motion and behavior are natural and consistent with typical primate actions.",
+      "signals": [
+        "biological_motion(oA)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 38.33,
+      "total_score_100": 88.33,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "biological_motion(oA)": 38.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "The interaction between the monkeys does not pose any falling hazard.",
+      "signals": [
+        "falling_hazard"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 31.67,
+      "total_score_100": 81.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "falling_hazard": 31.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "The apple is held and transferred between the monkeys without interpenetration.",
+      "signals": [
+        "containment(oA,oB)",
+        "support(oA,oB)",
+        "continuity(oX)",
+        "handoff_between_hands",
+        "continuity"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(oX)": 36.6667,
+        "continuity": 7.3333,
+        "support(oA,oB)": 7.0,
+        "containment(oA,oB)": 5.8333,
+        "handoff_between_hands": 5.3333
+      },
+      "content_score_raw": "50"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "v5",
+    "a1",
+    "a2",
+    "a3",
+    "a4",
+    "a5"
+  ]
+}

@@ -1,0 +1,110 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0449.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "decord",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "person-on-swing",
+        "attributes": {
+          "color": [
+            "black",
+            "pink"
+          ],
+          "action": [
+            "sitting",
+            "swinging"
+          ],
+          "facing-direction": [
+            "back",
+            "forward"
+          ],
+          "position": [
+            "center"
+          ],
+          "signature": [
+            "pink-shirt-black-pants-short-hair"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            1.0
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "person-in-white-shirt",
+        "attributes": {
+          "color": [
+            "black",
+            "white"
+          ],
+          "action": [
+            "posing"
+          ],
+          "facing-direction": [
+            "forward"
+          ],
+          "position": [
+            "right"
+          ],
+          "signature": [
+            "white-shirt-black-cap-backpack"
+          ]
+        },
+        "spans": [
+          [
+            0.5,
+            1.0
+          ]
+        ]
+      },
+      {
+        "id": "o3",
+        "name": "person-in-pink-shirt-with-cap",
+        "attributes": {
+          "color": [
+            "blue",
+            "pink",
+            "white"
+          ],
+          "action": [
+            "posing"
+          ],
+          "facing-direction": [
+            "forward"
+          ],
+          "position": [
+            "left"
+          ],
+          "signature": [
+            "pink-shirt-white-cap-blue-lettering"
+          ]
+        },
+        "spans": [
+          [
+            0.5,
+            1.0
+          ]
+        ]
+      }
+    ],
+    "relations": []
+  },
+  "views": {
+    "objects_count_display": {
+      "person-on-swing": 1,
+      "person-in-white-shirt": 1,
+      "person-in-pink-shirt-with-cap": 1
+    }
+  }
+}

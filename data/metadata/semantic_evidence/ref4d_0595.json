@@ -1,0 +1,105 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0595.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "cv2",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "car",
+        "attributes": {
+          "signature": [
+            "red-sports-car-with-ferrari-logo,-black-and-yellow-wheels"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            9.0
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "pavement",
+        "attributes": {
+          "signature": [
+            "cobblestone-pavement"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            9.0
+          ]
+        ]
+      },
+      {
+        "id": "o3",
+        "name": "shop",
+        "attributes": {
+          "signature": [
+            "meridien-modena-dealership"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            9.0
+          ]
+        ]
+      }
+    ],
+    "relations": [
+      {
+        "subject": "o1",
+        "predicate": "parked_on",
+        "object": "o2",
+        "spans": [
+          [
+            0.0,
+            9.0
+          ]
+        ],
+        "confidence": 0.9
+      },
+      {
+        "subject": "o1",
+        "predicate": "in_front_of",
+        "object": "o3",
+        "spans": [
+          [
+            0.0,
+            9.0
+          ]
+        ],
+        "confidence": 0.8
+      },
+      {
+        "subject": "o3",
+        "predicate": "displaying",
+        "object": "o1",
+        "spans": [
+          [
+            0.0,
+            9.0
+          ]
+        ],
+        "confidence": 0.7
+      }
+    ]
+  },
+  "views": {
+    "objects_count_display": {
+      "car": 1,
+      "pavement": 1,
+      "shop": 1
+    }
+  }
+}

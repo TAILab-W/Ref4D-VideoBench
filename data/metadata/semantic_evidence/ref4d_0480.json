@@ -1,0 +1,156 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0480.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "decord",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "person",
+        "attributes": {
+          "color": [
+            "purple",
+            "shirtless"
+          ],
+          "pattern": [
+            "short-sleeved",
+            "swim-trunks"
+          ],
+          "sex": [
+            "male"
+          ],
+          "action": [
+            "crouching",
+            "raising-arms",
+            "standing",
+            "surfing"
+          ],
+          "pose": [
+            "balanced",
+            "dynamic"
+          ],
+          "equipment": [
+            "surfboard"
+          ],
+          "signature": [
+            "shirtless-male-short-sleeved-purple-patterned-swim-trunks"
+          ]
+        },
+        "spans": [
+          [
+            0.3,
+            8.7
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "surfboard",
+        "attributes": {
+          "color": [
+            "black",
+            "white"
+          ],
+          "material": [
+            "plastic"
+          ],
+          "size": [
+            "medium"
+          ],
+          "position": [
+            "under-foot"
+          ],
+          "signature": [
+            "white-surfboard-with-black-bottom"
+          ]
+        },
+        "spans": [
+          [
+            0.4,
+            8.7
+          ]
+        ]
+      },
+      {
+        "id": "o3",
+        "name": "wave",
+        "attributes": {
+          "color": [
+            "deep-blue",
+            "white"
+          ],
+          "state": [
+            "breaking",
+            "forming"
+          ],
+          "orientation": [
+            "vertical"
+          ],
+          "facing-direction": [
+            "front-facing"
+          ],
+          "signature": [
+            "large-deep-blue-wave-with-white-caps"
+          ]
+        },
+        "spans": [
+          [
+            0.1,
+            8.7
+          ]
+        ]
+      }
+    ],
+    "relations": [
+      {
+        "subject": "o1",
+        "predicate": "riding",
+        "object": "o2",
+        "spans": [
+          [
+            0.3,
+            8.7
+          ]
+        ],
+        "confidence": 0.9
+      },
+      {
+        "subject": "o1",
+        "predicate": "left-of",
+        "object": "o3",
+        "spans": [
+          [
+            0.4,
+            8.7
+          ]
+        ],
+        "confidence": 0.8
+      },
+      {
+        "subject": "o1",
+        "predicate": "looking-at",
+        "object": "o3",
+        "spans": [
+          [
+            0.3,
+            8.7
+          ]
+        ],
+        "confidence": 0.8
+      }
+    ]
+  },
+  "views": {
+    "objects_count_display": {
+      "person": 1,
+      "surfboard": 1,
+      "wave": 1
+    }
+  }
+}

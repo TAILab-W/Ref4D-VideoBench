@@ -1,0 +1,215 @@
+{
+  "summary": {
+    "items": 10,
+    "enter_bank": 10,
+    "clip_range_sec": [
+      0.0,
+      17.63
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does the hyena's head stay above the zebra carcass while feeding?",
+      "signals": [
+        "biological_motion(hyena)",
+        "action_phase(hyena,phase:predation)",
+        "friction_sliding(zebra,on:grass)",
+        "friction_sliding(hyena,on:grass)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "biological_motion(hyena)": 38.3333,
+        "friction_sliding(zebra,on:grass)": 6.0,
+        "friction_sliding(hyena,on:grass)": 6.0,
+        "action_phase(hyena,phase:predation)": 5.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Is the interaction between the hyena and the zebra carcass safe and natural?",
+      "signals": [
+        "biological_motion(hyena)",
+        "friction_sliding(zebra,on:grass)",
+        "friction_sliding(hyena,on:grass)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "biological_motion(hyena)": 38.3333,
+        "friction_sliding(zebra,on:grass)": 6.0,
+        "friction_sliding(hyena,on:grass)": 6.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Are the hyenas interacting with a dead zebra in a grassland environment?",
+      "signals": [
+        "biological_motion(hyena)",
+        "state_change(zebra,from:alive,to:dead)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "biological_motion(hyena)": 38.3333,
+        "state_change(zebra,from:alive,to:dead)": 7.5
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Does the hyena maintain a consistent position relative to the zebra body during feeding?",
+      "signals": [
+        "trajectory_dir(hyena.head,vertical_axis)",
+        "biological_motion(hyena)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(hyena.head,vertical_axis)": 38.3333,
+        "biological_motion(hyena)": 7.6667
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Is the behavior of the hyena biologically plausible as it feeds on the zebra?",
+      "signals": [
+        "biological_motion(hyena)",
+        "action_phase(hyena,feeding_phase)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "biological_motion(hyena)": 38.3333,
+        "action_phase(hyena,feeding_phase)": 5.3333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "The hyena is feeding on the zebra carcass in a grassland environment.",
+      "signals": [
+        "biological_motion(hyena)",
+        "action_phase(hyena,phase:predation)",
+        "friction_sliding(zebra,on:grass)",
+        "friction_sliding(hyena,on:grass)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "biological_motion(hyena)": 38.3333,
+        "friction_sliding(zebra,on:grass)": 6.0,
+        "friction_sliding(hyena,on:grass)": 6.0,
+        "action_phase(hyena,phase:predation)": 5.3333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "A dead zebra lies on the ground, and two hyenas are present nearby.",
+      "signals": [
+        "biological_motion(hyena)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 38.33,
+      "total_score_100": 98.33,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "biological_motion(hyena)": 38.3333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "Hyenas interact with the zebra carcass as expected for scavengers.",
+      "signals": [
+        "state_change(zebra,from:alive,to:dead)",
+        "biological_motion(hyena)",
+        "action_phase(hyena,feeding_phase)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "biological_motion(hyena)": 38.3333,
+        "state_change(zebra,from:alive,to:dead)": 7.5,
+        "action_phase(hyena,feeding_phase)": 5.3333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "The hyena's head is above the zebra body, showing natural feeding posture.",
+      "signals": [
+        "trajectory_dir(hyena.head,vertical_axis)",
+        "biological_motion(hyena)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(hyena.head,vertical_axis)": 38.3333,
+        "biological_motion(hyena)": 7.6667
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "No unexpected interactions occur between the animals or their surroundings.",
+      "signals": [
+        "friction_sliding(zebra,on:grass)",
+        "friction_sliding(hyena,on:grass)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 36.0,
+      "total_score_100": 96.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "friction_sliding(zebra,on:grass)": 30.0,
+        "friction_sliding(hyena,on:grass)": 6.0
+      },
+      "content_score_raw": "60"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "v5",
+    "a1",
+    "a2",
+    "a3",
+    "a4",
+    "a5"
+  ]
+}

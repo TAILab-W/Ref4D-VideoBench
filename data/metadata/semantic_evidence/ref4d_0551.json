@@ -1,0 +1,77 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0551.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "cv2",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "truck",
+        "attributes": {
+          "signature": [
+            "white-truck"
+          ]
+        },
+        "spans": [
+          [
+            0.4,
+            0.6
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "suv",
+        "attributes": {
+          "signature": [
+            "gray-suv"
+          ]
+        },
+        "spans": [
+          [
+            0.7,
+            1.0
+          ]
+        ]
+      }
+    ],
+    "relations": [
+      {
+        "subject": "o1",
+        "predicate": "left-of",
+        "object": "o1",
+        "spans": [
+          [
+            0.0,
+            0.6
+          ]
+        ],
+        "confidence": 0.8
+      },
+      {
+        "subject": "o1",
+        "predicate": "left-of",
+        "object": "o2",
+        "spans": [
+          [
+            0.4,
+            0.8
+          ]
+        ],
+        "confidence": 0.8
+      }
+    ]
+  },
+  "views": {
+    "objects_count_display": {
+      "truck": 1,
+      "suv": 1
+    }
+  }
+}

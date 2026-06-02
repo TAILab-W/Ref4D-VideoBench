@@ -1,0 +1,235 @@
+{
+  "summary": {
+    "items": 10,
+    "enter_bank": 10,
+    "clip_range_sec": [
+      0.0,
+      12.3
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does the polar bear stay on the ice floe without falling into the water?",
+      "signals": [
+        "balance(oX)",
+        "support(oA,oB)",
+        "buoyancy_float(polar-bear,in:water)",
+        "trajectory_dir(polar-bear,axis)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(polar-bear,axis)": 38.3333,
+        "balance(oX)": 7.1667,
+        "support(oA,oB)": 7.0,
+        "buoyancy_float(polar-bear,in:water)": 6.8333
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Is the polar bear moving towards something in the water to hunt?",
+      "signals": [
+        "biological_motion(oA)",
+        "action_phase(oAct,phase)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "biological_motion(oA)": 38.3333,
+        "action_phase(oAct,phase)": 5.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Does the polar bear's movement direction change suddenly or abruptly across the clip?",
+      "signals": [
+        "continuity(polar-bear)",
+        "containment(polar-bear,ice-floe)",
+        "buoyancy_float(polar-bear,in:water)",
+        "trajectory_dir(oX,axis)",
+        "accel_sign(oX,axis)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(oX,axis)": 38.3333,
+        "continuity(polar-bear)": 7.3333,
+        "accel_sign(oX,axis)": 7.0,
+        "buoyancy_float(polar-bear,in:water)": 6.8333,
+        "containment(polar-bear,ice-floe)": 5.8333
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Are the reflection and shadow of the polar bear consistent with its position on the ice surface throughout the video?",
+      "signals": [
+        "reflection_consistency(oX)",
+        "cast_shadow_contact(oX,shadow)",
+        "support(oA,oB)",
+        "friction_sliding(oA,on:oB)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "cast_shadow_contact(oX,shadow)": 37.5,
+        "reflection_consistency(oX)": 7.0,
+        "support(oA,oB)": 7.0,
+        "friction_sliding(oA,on:oB)": 6.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Does the polar bear walk smoothly on the ice, showing no sudden acceleration?",
+      "signals": [
+        "support(ice-floe,water)",
+        "buoyancy_float(polar-bear,in:water)",
+        "biological_motion(polar-bear)",
+        "trajectory_dir(oX,axis)",
+        "accel_sign(oX,axis)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "biological_motion(polar-bear)": 38.3333,
+        "trajectory_dir(oX,axis)": 7.6667,
+        "support(ice-floe,water)": 7.0,
+        "accel_sign(oX,axis)": 7.0,
+        "buoyancy_float(polar-bear,in:water)": 6.8333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "The polar bear stands on the ice floe, maintaining balance.",
+      "signals": [
+        "balance(oX)",
+        "support(oA,oB)",
+        "continuity(polar-bear)",
+        "containment(polar-bear,ice-floe)",
+        "buoyancy_float(polar-bear,in:water)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(polar-bear)": 36.6667,
+        "balance(oX)": 7.1667,
+        "support(oA,oB)": 7.0,
+        "buoyancy_float(polar-bear,in:water)": 6.8333,
+        "containment(polar-bear,ice-floe)": 5.8333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "The polar bear moves towards potential prey in the water for hunting.",
+      "signals": [
+        "biological_motion(oA)",
+        "action_phase(oAct,phase)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "biological_motion(oA)": 38.3333,
+        "action_phase(oAct,phase)": 5.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "The polar bear remains on the ice and its movement is consistent with buoyancy.",
+      "signals": [
+        "buoyancy_float(polar-bear,in:water)",
+        "trajectory_dir(polar-bear,axis)",
+        "trajectory_dir(oX,axis)",
+        "accel_sign(oX,axis)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(polar-bear,axis)": 38.3333,
+        "trajectory_dir(oX,axis)": 7.6667,
+        "accel_sign(oX,axis)": 7.0,
+        "buoyancy_float(polar-bear,in:water)": 6.8333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "The reflection of the polar bear matches its position on the icy surface.",
+      "signals": [
+        "reflection_consistency(oX)",
+        "cast_shadow_contact(oX,shadow)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "cast_shadow_contact(oX,shadow)": 37.5,
+        "reflection_consistency(oX)": 7.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "The environment shows no signs of collapse or hazardous conditions.",
+      "signals": [
+        "support(oA,oB)",
+        "friction_sliding(oA,on:oB)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "support(oA,oB)": 35.0,
+        "friction_sliding(oA,on:oB)": 6.0
+      },
+      "content_score_raw": "50"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "v5",
+    "a1",
+    "a2",
+    "a3",
+    "a4",
+    "a5"
+  ]
+}

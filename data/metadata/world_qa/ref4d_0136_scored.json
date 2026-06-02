@@ -1,0 +1,227 @@
+{
+  "summary": {
+    "items": 10,
+    "enter_bank": 8,
+    "clip_range_sec": [
+      0.0,
+      12.97
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does the person maintain a safe distance from the open flames?",
+      "signals": [
+        "flame_proximity(oObj,dist)",
+        "hot_surface_contact(oObj,oSurface)",
+        "prohibited_intersection(oA,oB)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "prohibited_intersection(oA,oB)": 36.6667,
+        "flame_proximity(oObj,dist)": 6.8333,
+        "hot_surface_contact(oObj,oSurface)": 6.8333
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Do the red candles burn steadily with consistent flame height and direction?",
+      "signals": [
+        "continuity(candle)",
+        "friction_sliding(candle,base)",
+        "balance(candle)",
+        "flame_proximity(oObj,dist)",
+        "friction_sliding(oA,on:oB)",
+        "balance(oX)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(candle)": 36.6667,
+        "balance(candle)": 7.1667,
+        "balance(oX)": 7.1667,
+        "flame_proximity(oObj,dist)": 6.8333,
+        "friction_sliding(candle,base)": 6.0,
+        "friction_sliding(oA,on:oB)": 6.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Does the statue remain stationary throughout the scene?",
+      "signals": [
+        "support(oA,oB)",
+        "balance(oX)",
+        "containment(oA,oB)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "balance(oX)": 35.8333,
+        "support(oA,oB)": 7.0,
+        "containment(oA,oB)": 5.8333
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "During candle lighting, does the person's hand avoid prohibited intersection with flammable objects?",
+      "signals": [
+        "flame_proximity(hand,dist)",
+        "prohibited_intersection(hand,candle)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "prohibited_intersection(hand,candle)": 36.6667,
+        "flame_proximity(hand,dist)": 6.8333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Are the red incense sticks used for burning as part of the ritual?",
+      "signals": [
+        "tool_usage_correct(oTool,for:oTask)",
+        "action_phase(oAct,phase)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 34.5,
+      "total_score_100": 89.5,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "tool_usage_correct(oTool,for:oTask)": 29.1667,
+        "action_phase(oAct,phase)": 5.3333
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "The red candles burn steadily with consistent flame height and direction.",
+      "signals": [
+        "continuity(candle)",
+        "friction_sliding(candle,base)",
+        "balance(candle)",
+        "flame_proximity(oObj,dist)",
+        "friction_sliding(oA,on:oB)",
+        "balance(oX)"
+      ],
+      "content_score_60": 30,
+      "signal_score_40": 40.0,
+      "total_score_100": 70.0,
+      "duplicate_penalized": true,
+      "signal_detail": {
+        "continuity(candle)": 36.6667,
+        "balance(candle)": 7.1667,
+        "balance(oX)": 7.1667,
+        "flame_proximity(oObj,dist)": 6.8333,
+        "friction_sliding(candle,base)": 6.0,
+        "friction_sliding(oA,on:oB)": 6.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "During the candle lighting process, the person's hand does not intersect with any flammable objects.",
+      "signals": [
+        "flame_proximity(hand,dist)",
+        "prohibited_intersection(hand,candle)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "prohibited_intersection(hand,candle)": 36.6667,
+        "flame_proximity(hand,dist)": 6.8333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "The red incense sticks are used for burning as part of the ritual.",
+      "signals": [
+        "tool_usage_correct(oTool,for:oTask)",
+        "action_phase(oAct,phase)"
+      ],
+      "content_score_60": 33,
+      "signal_score_40": 34.5,
+      "total_score_100": 67.5,
+      "duplicate_penalized": true,
+      "signal_detail": {
+        "tool_usage_correct(oTool,for:oTask)": 29.1667,
+        "action_phase(oAct,phase)": 5.3333
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "The statue remains stationary throughout the scene, supported by its base.",
+      "signals": [
+        "support(oA,oB)",
+        "balance(oX)",
+        "containment(oA,oB)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "balance(oX)": 35.8333,
+        "support(oA,oB)": 7.0,
+        "containment(oA,oB)": 5.8333
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "The person maintains a safe distance from the open flames.",
+      "signals": [
+        "flame_proximity(oObj,dist)",
+        "hot_surface_contact(oObj,oSurface)",
+        "prohibited_intersection(oA,oB)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "prohibited_intersection(oA,oB)": 36.6667,
+        "flame_proximity(oObj,dist)": 6.8333,
+        "hot_surface_contact(oObj,oSurface)": 6.8333
+      },
+      "content_score_raw": "55"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "v5",
+    "a2",
+    "a4",
+    "a5"
+  ]
+}

@@ -1,0 +1,81 @@
+{
+  "events": [
+    {
+      "id": "m0001",
+      "s": 0.0,
+      "e": 0.11904761904761904,
+      "dur": 0.11904761904761904,
+      "members": [
+        "e0001#2"
+      ],
+      "text": "man sit",
+      "s_abs": 0.0,
+      "e_abs": 1.1666666666666667,
+      "dur_abs": 1.1666666666666667
+    },
+    {
+      "id": "m0002",
+      "s": 0.0,
+      "e": 0.5306122448979592,
+      "dur": 0.5306122448979592,
+      "members": [
+        "e0001#1",
+        "e0002#1",
+        "e0003#1",
+        "e0004#1"
+      ],
+      "text": "man hold glass",
+      "s_abs": 0.0,
+      "e_abs": 5.2,
+      "dur_abs": 5.2
+    },
+    {
+      "id": "m0003",
+      "s": 0.11904761904761904,
+      "e": 0.5306122448979592,
+      "dur": 0.41156462585034015,
+      "members": [
+        "e0002#2",
+        "e0003#2",
+        "e0004#2"
+      ],
+      "text": "man look forward",
+      "s_abs": 1.1666666666666667,
+      "e_abs": 5.2,
+      "dur_abs": 4.033333333333333
+    },
+    {
+      "id": "m0004",
+      "s": 0.5306122448979592,
+      "e": 1.0,
+      "dur": 0.4693877551020408,
+      "members": [
+        "e0005#1",
+        "e0005#2"
+      ],
+      "text": "beer bottle remain still",
+      "s_abs": 5.2,
+      "e_abs": 9.8,
+      "dur_abs": 4.6000000000000005
+    }
+  ],
+  "meta": {
+    "lane": "ref",
+    "key": "ref4d_0186",
+    "mode": "micro",
+    "merge_config": {
+      "tau_sem": 0.96,
+      "gap_abs_sec": 1.01,
+      "gap_norm_fallback": 0.1,
+      "min_duration_norm": 0.0
+    },
+    "stats": {
+      "num_input_items": 10,
+      "num_kept_items": 10,
+      "num_clusters": 4
+    },
+    "provenance": {
+      "source_hash": "06e4dfd232db"
+    }
+  }
+}

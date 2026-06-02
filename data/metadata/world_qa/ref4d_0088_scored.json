@@ -1,0 +1,197 @@
+{
+  "summary": {
+    "items": 10,
+    "enter_bank": 10,
+    "clip_range_sec": [
+      0.0,
+      8.93
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does the wolf's body maintain a natural posture without sudden frame discontinuity?",
+      "signals": [
+        "continuity(wolf)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 36.67,
+      "total_score_100": 86.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(wolf)": 36.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Are the woman's fingers clear of interpenetration when she pets the wolf?",
+      "signals": [
+        "finger_clearance(hand,wolf)",
+        "grasp_stability(hand,dog)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 39.83,
+      "total_score_100": 89.83,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "finger_clearance(hand,wolf)": 34.1667,
+        "grasp_stability(hand,dog)": 5.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Do the shadows on the snow match the positions of the woman and the wolf above them?",
+      "signals": [
+        "shadow_consistency(person,snow)",
+        "shadow_consistency(wolf,snow)",
+        "shadow_consistency(snow)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "shadow_consistency(person,snow)": 36.6667,
+        "shadow_consistency(wolf,snow)": 7.3333,
+        "shadow_consistency(snow)": 7.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Is the wolf in a resting state, showing no signs of distress or injury?",
+      "signals": [
+        "biological_motion(dog)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 38.33,
+      "total_score_100": 88.33,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "biological_motion(dog)": 38.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Does the interaction between the woman and the wolf show safe, biological motion?",
+      "signals": [
+        "biological_motion(wolf)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 38.33,
+      "total_score_100": 98.33,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "biological_motion(wolf)": 38.3333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "The wolf lies on the snow, showing a natural resting posture without unnatural deformation.",
+      "signals": [
+        "continuity(wolf)",
+        "biological_motion(dog)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "biological_motion(dog)": 38.3333,
+        "continuity(wolf)": 7.3333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "The woman's hand has proper finger clearance when petting the wolf; no interpenetration occurs.",
+      "signals": [
+        "finger_clearance(hand,wolf)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 34.17,
+      "total_score_100": 94.17,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "finger_clearance(hand,wolf)": 34.1667
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "Shadows of the woman and the wolf are visible on the snow, consistent with their positions.",
+      "signals": [
+        "shadow_consistency(person,snow)",
+        "shadow_consistency(wolf,snow)",
+        "shadow_consistency(snow)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "shadow_consistency(person,snow)": 36.6667,
+        "shadow_consistency(wolf,snow)": 7.3333,
+        "shadow_consistency(snow)": 7.3333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "The wolf's body language indicates a calm and safe interaction with the woman.",
+      "signals": [
+        "biological_motion(wolf)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 38.33,
+      "total_score_100": 98.33,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "biological_motion(wolf)": 38.3333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "The woman gently pets the wolf, showing grasp stability in her hand position.",
+      "signals": [
+        "grasp_stability(hand,dog)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 28.33,
+      "total_score_100": 88.33,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "grasp_stability(hand,dog)": 28.3333
+      },
+      "content_score_raw": "60"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "v5",
+    "a1",
+    "a2",
+    "a3",
+    "a4",
+    "a5"
+  ]
+}

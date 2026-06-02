@@ -1,0 +1,223 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0026.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "cv2",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "spider",
+        "attributes": {
+          "color": [
+            "black",
+            "brown"
+          ],
+          "pattern": [
+            "striped"
+          ],
+          "texture": [
+            "hairy"
+          ],
+          "size": [
+            "large"
+          ],
+          "state": [
+            "resting"
+          ],
+          "pose": [
+            "spread-out"
+          ],
+          "action": [
+            "sitting"
+          ],
+          "position": [
+            "center-bottom"
+          ],
+          "signature": [
+            "large-black-brown-striped-body-legs-on-rock"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            9.0
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "rock",
+        "attributes": {
+          "color": [
+            "gray"
+          ],
+          "material": [
+            "stone"
+          ],
+          "size": [
+            "large"
+          ],
+          "position": [
+            "underneath-spider"
+          ],
+          "signature": [
+            "large-round-gray-rock-under-spider"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            9.0
+          ]
+        ]
+      },
+      {
+        "id": "o3",
+        "name": "water_bowl",
+        "attributes": {
+          "color": [
+            "white"
+          ],
+          "material": [
+            "plastic"
+          ],
+          "size": [
+            "small"
+          ],
+          "position": [
+            "bottom-center"
+          ],
+          "signature": [
+            "small-white-circular-bowl-at-bottom-center"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            9.0
+          ]
+        ]
+      },
+      {
+        "id": "o4",
+        "name": "brick_wall",
+        "attributes": {
+          "color": [
+            "brown",
+            "orange"
+          ],
+          "pattern": [
+            "brick"
+          ],
+          "texture": [
+            "rough"
+          ],
+          "material": [
+            "synthetic"
+          ],
+          "position": [
+            "background"
+          ],
+          "signature": [
+            "orange-brown-brick-pattern-backdrop"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            9.0
+          ]
+        ]
+      },
+      {
+        "id": "o5",
+        "name": "metal_door",
+        "attributes": {
+          "color": [
+            "silver"
+          ],
+          "material": [
+            "metal"
+          ],
+          "position": [
+            "right-side"
+          ],
+          "signature": [
+            "circular-metal-door-on-right-side"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            9.0
+          ]
+        ]
+      }
+    ],
+    "relations": [
+      {
+        "subject": "o1",
+        "predicate": "sitting_on",
+        "object": "o2",
+        "spans": [
+          [
+            0.0,
+            9.0
+          ]
+        ],
+        "confidence": 0.9
+      },
+      {
+        "subject": "o3",
+        "predicate": "below",
+        "object": "o1",
+        "spans": [
+          [
+            0.0,
+            9.0
+          ]
+        ],
+        "confidence": 0.8
+      },
+      {
+        "subject": "o1",
+        "predicate": "in_front_of",
+        "object": "o4",
+        "spans": [
+          [
+            0.0,
+            9.0
+          ]
+        ],
+        "confidence": 0.8
+      },
+      {
+        "subject": "o5",
+        "predicate": "on_right_side_of",
+        "object": "o1",
+        "spans": [
+          [
+            0.0,
+            9.0
+          ]
+        ],
+        "confidence": 0.7
+      }
+    ]
+  },
+  "views": {
+    "objects_count_display": {
+      "spider": 1,
+      "rock": 1,
+      "water_bowl": 1,
+      "brick_wall": 1,
+      "metal_door": 1
+    }
+  }
+}

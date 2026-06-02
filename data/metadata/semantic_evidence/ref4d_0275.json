@@ -1,0 +1,36 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0275.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "cv2",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "conveyor-belt",
+        "attributes": {
+          "signature": [
+            "conveyor-belt-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            10.5
+          ]
+        ]
+      }
+    ],
+    "relations": []
+  },
+  "views": {
+    "objects_count_display": {
+      "conveyor-belt": 1
+    }
+  }
+}

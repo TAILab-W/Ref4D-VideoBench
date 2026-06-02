@@ -1,0 +1,54 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0485.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "decord",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "skier",
+        "attributes": {
+          "color": [
+            "black",
+            "white",
+            "yellow"
+          ],
+          "action": [
+            "jumping",
+            "skiing"
+          ],
+          "pose": [
+            "bending",
+            "mid-air"
+          ],
+          "equipment": [
+            "helmet",
+            "ski-poles",
+            "skis"
+          ],
+          "signature": [
+            "white-jacket-black-pants-black-helmet-yellow-skis"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            6.7
+          ]
+        ]
+      }
+    ],
+    "relations": []
+  },
+  "views": {
+    "objects_count_display": {
+      "skier": 1
+    }
+  }
+}

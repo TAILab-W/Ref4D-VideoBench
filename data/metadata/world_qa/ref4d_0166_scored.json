@@ -1,0 +1,182 @@
+{
+  "summary": {
+    "items": 10,
+    "enter_bank": 7,
+    "clip_range_sec": [
+      0.0,
+      7.13
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does the box change its position smoothly without sudden jumps?",
+      "signals": [
+        "continuity(box)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 36.67,
+      "total_score_100": 86.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(box)": 36.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Does the hand maintain grasp stability on the box while opening it?",
+      "signals": [
+        "grasp_stability"
+      ],
+      "content_score_60": 40,
+      "signal_score_40": 28.33,
+      "total_score_100": 68.33,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "grasp_stability": 28.3333
+      },
+      "content_score_raw": "40"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Is the size of the hand and fingers relative to the box consistent throughout?",
+      "signals": [
+        "size_inconsistency"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 37.5,
+      "total_score_100": 87.5,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "size_inconsistency": 37.5
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Does the shadow cast by the box show continuity?",
+      "signals": [
+        "cast_shadow_contact"
+      ],
+      "content_score_60": 40,
+      "signal_score_40": 37.5,
+      "total_score_100": 77.5,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "cast_shadow_contact": 37.5
+      },
+      "content_score_raw": "40"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Does the box rotate smoothly without abrupt changes in orientation?",
+      "signals": [
+        "continuity(box)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 36.67,
+      "total_score_100": 86.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(box)": 36.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "The hand and fingers are consistently smaller than the white box.",
+      "signals": [
+        "size_inconsistency"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 37.5,
+      "total_score_100": 87.5,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "size_inconsistency": 37.5
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "The box's position and orientation change smoothly as it is handled.",
+      "signals": [
+        "continuity(box)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 36.67,
+      "total_score_100": 86.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(box)": 36.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "Both hands maintain grasp stability on the box while opening it.",
+      "signals": [
+        "grasp_stability"
+      ],
+      "content_score_60": 30,
+      "signal_score_40": 28.33,
+      "total_score_100": 58.33,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "grasp_stability": 28.3333
+      },
+      "content_score_raw": "30"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "The shadow of the box on the white surface shows continuity.",
+      "signals": [
+        "cast_shadow_contact"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 37.5,
+      "total_score_100": 87.5,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "cast_shadow_contact": 37.5
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "The relative size of the hand to the box remains consistent throughout the video.",
+      "signals": [
+        "size_inconsistency"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 37.5,
+      "total_score_100": 87.5,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "size_inconsistency": 37.5
+      },
+      "content_score_raw": "50"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v3",
+    "v5",
+    "a1",
+    "a2",
+    "a4",
+    "a5"
+  ]
+}

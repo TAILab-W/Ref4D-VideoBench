@@ -1,0 +1,197 @@
+{
+  "summary": {
+    "items": 10,
+    "enter_bank": 8,
+    "clip_range_sec": [
+      0.0,
+      5.43
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does the female crew member use a tool to adjust the male crew member's epaulet?",
+      "signals": [
+        "tool_contact"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 28.33,
+      "total_score_100": 83.33,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "tool_contact": 28.3333
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Do both individuals maintain appropriate posture and balance during their task?",
+      "signals": [
+        "support",
+        "balance",
+        "friction_sliding"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "balance": 35.8333,
+        "support": 7.0,
+        "friction_sliding": 6.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Does the cabin environment maintain structural integrity throughout the interaction?",
+      "signals": [
+        "balance",
+        "shadow_consistency"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "shadow_consistency": 36.6667,
+        "balance": 7.1667
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Does the lighting in the aircraft cabin remain consistent, with no change in shadow direction?",
+      "signals": [
+        "shadow_consistency",
+        "reflection_consistency"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "shadow_consistency": 36.6667,
+        "reflection_consistency": 7.0
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Is the female crew member adjusting or pinning a uniform accessory on the male crew member?",
+      "signals": [
+        "handoff_between_hands"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 26.67,
+      "total_score_100": 76.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "handoff_between_hands": 26.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "A female crew member uses a tool to adjust the male crew member's epaulet.",
+      "signals": [
+        "tool_contact"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 28.33,
+      "total_score_100": 88.33,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "tool_contact": 28.3333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "The cabin environment maintains structural integrity and safety standards during interactions.",
+      "signals": [
+        "support",
+        "balance"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "balance": 35.8333,
+        "support": 7.0
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "Both individuals maintain appropriate posture and balance, showing no signs of instability.",
+      "signals": [
+        "balance",
+        "friction_sliding"
+      ],
+      "content_score_60": 35,
+      "signal_score_40": 40.0,
+      "total_score_100": 75.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "balance": 35.8333,
+        "friction_sliding": 6.0
+      },
+      "content_score_raw": "35"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "The lighting within the aircraft cabin remains consistent, with no changes in shadow or reflection.",
+      "signals": [
+        "shadow_consistency",
+        "reflection_consistency"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "shadow_consistency": 36.6667,
+        "reflection_consistency": 7.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "Shadows and reflections are consistent with natural light sources.",
+      "signals": [
+        "shadow_consistency"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 36.67,
+      "total_score_100": 91.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "shadow_consistency": 36.6667
+      },
+      "content_score_raw": "55"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "a1",
+    "a2",
+    "a4",
+    "a5"
+  ]
+}

@@ -1,0 +1,217 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0391.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "decord",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "person",
+        "attributes": {
+          "color": [
+            "pink"
+          ],
+          "sex": [
+            "female"
+          ],
+          "age": [
+            "child"
+          ],
+          "action": [
+            "hugging",
+            "running",
+            "walking"
+          ],
+          "pose": [
+            "arms-around",
+            "arms-outstretched"
+          ],
+          "facing-direction": [
+            "forward",
+            "towards-adult",
+            "towards-camera"
+          ],
+          "position": [
+            "center",
+            "foreground"
+          ],
+          "signature": [
+            "pink-dress-short-hair"
+          ]
+        },
+        "spans": [
+          [
+            0.2,
+            1.0
+          ],
+          [
+            3.4,
+            5.0
+          ],
+          [
+            6.8,
+            7.8
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "adult",
+        "attributes": {
+          "color": [
+            "black",
+            "blue"
+          ],
+          "sex": [
+            "male"
+          ],
+          "action": [
+            "hugging",
+            "standing"
+          ],
+          "pose": [
+            "holding-girl"
+          ],
+          "facing-direction": [
+            "towards-girl"
+          ],
+          "position": [
+            "background"
+          ],
+          "signature": [
+            "blue-shirt-black-shorts"
+          ]
+        },
+        "spans": [
+          [
+            3.4,
+            5.0
+          ],
+          [
+            6.8,
+            7.8
+          ]
+        ]
+      },
+      {
+        "id": "o3",
+        "name": "receptionist",
+        "attributes": {
+          "color": [
+            "white",
+            "yellow"
+          ],
+          "action": [
+            "behind-counter",
+            "sitting"
+          ],
+          "pose": [
+            "sitting"
+          ],
+          "facing-direction": [
+            "towards-counter"
+          ],
+          "position": [
+            "background"
+          ],
+          "signature": [
+            "behind-counter"
+          ]
+        },
+        "spans": [
+          [
+            2.0,
+            2.1
+          ]
+        ]
+      }
+    ],
+    "relations": [
+      {
+        "subject": "o1",
+        "predicate": "running",
+        "object": "o2",
+        "spans": [
+          [
+            0.3,
+            4.5
+          ]
+        ],
+        "confidence": 0.8
+      },
+      {
+        "subject": "o1",
+        "predicate": "hugging",
+        "object": "o2",
+        "spans": [
+          [
+            3.6,
+            4.7
+          ]
+        ],
+        "confidence": 0.9
+      },
+      {
+        "subject": "o1",
+        "predicate": "letting-go",
+        "object": "o2",
+        "spans": [
+          [
+            4.6,
+            5.0
+          ]
+        ],
+        "confidence": 0.8
+      },
+      {
+        "subject": "o1",
+        "predicate": "walking",
+        "object": "o3",
+        "spans": [
+          [
+            5.1,
+            6.5
+          ]
+        ],
+        "confidence": 0.8
+      },
+      {
+        "subject": "o1",
+        "predicate": "looking-at",
+        "object": "o3",
+        "spans": [
+          [
+            5.1,
+            6.5
+          ]
+        ],
+        "confidence": 0.8
+      },
+      {
+        "subject": "o2",
+        "predicate": "hugging",
+        "object": "o1",
+        "spans": [
+          [
+            3.6,
+            4.7
+          ]
+        ],
+        "confidence": 0.9
+      }
+    ]
+  },
+  "views": {
+    "objects_count_display": {
+      "person": 1,
+      "adult": 1,
+      "receptionist": 1
+    }
+  }
+}

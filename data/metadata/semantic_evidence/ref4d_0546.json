@@ -1,0 +1,56 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0546.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "cv2",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "cable_car",
+        "attributes": {
+          "signature": [
+            "red-and-black-gondola"
+          ]
+        },
+        "spans": [
+          [
+            0.2,
+            5.7
+          ],
+          [
+            6.2,
+            8.1
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "mountain",
+        "attributes": {
+          "signature": [
+            "green-hill-with-buildings-on-top"
+          ]
+        },
+        "spans": [
+          [
+            0.1,
+            8.3
+          ]
+        ]
+      }
+    ],
+    "relations": []
+  },
+  "views": {
+    "objects_count_display": {
+      "cable_car": 1,
+      "mountain": 1
+    }
+  }
+}

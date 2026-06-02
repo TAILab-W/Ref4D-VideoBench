@@ -1,0 +1,188 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0083.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "cv2",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "gorilla",
+        "attributes": {
+          "color": [
+            "dark-gray"
+          ],
+          "sex": [
+            "female"
+          ],
+          "state": [
+            "attentive",
+            "calm"
+          ],
+          "pose": [
+            "sitting"
+          ],
+          "action": [
+            "holding-baby-gorilla",
+            "looking-down"
+          ],
+          "orientation": [
+            "left-facing"
+          ],
+          "facing-direction": [
+            "left"
+          ],
+          "position": [
+            "left-side-of-frame"
+          ],
+          "signature": [
+            "dark-gray-fur-left-facing-sitting"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            5.9
+          ],
+          [
+            6.2,
+            8.1
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "gorilla",
+        "attributes": {
+          "color": [
+            "dark-gray"
+          ],
+          "sex": [
+            "male"
+          ],
+          "state": [
+            "alert",
+            "vocalizing"
+          ],
+          "pose": [
+            "standing"
+          ],
+          "action": [
+            "opening-mouth",
+            "possibly-roaring-or-communicating"
+          ],
+          "orientation": [
+            "right-facing"
+          ],
+          "facing-direction": [
+            "right"
+          ],
+          "position": [
+            "right-side-of-frame"
+          ],
+          "signature": [
+            "dark-gray-fur-right-facing-standing"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            4.3
+          ],
+          [
+            4.7,
+            8.1
+          ]
+        ]
+      },
+      {
+        "id": "o3",
+        "name": "baby_gorilla",
+        "attributes": {
+          "color": [
+            "dark-gray"
+          ],
+          "size": [
+            "small"
+          ],
+          "state": [
+            "resting"
+          ],
+          "object-part": [
+            "body"
+          ],
+          "signature": [
+            "small-dark-gray-fur-being-held-by-mother"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            8.1
+          ]
+        ]
+      }
+    ],
+    "relations": [
+      {
+        "subject": "o1",
+        "predicate": "holding",
+        "object": "o3",
+        "spans": [
+          [
+            0.0,
+            5.9
+          ],
+          [
+            6.2,
+            8.1
+          ]
+        ],
+        "confidence": 0.8
+      },
+      {
+        "subject": "o2",
+        "predicate": "looking_at",
+        "object": "o1",
+        "spans": [
+          [
+            0.0,
+            4.3
+          ],
+          [
+            4.7,
+            8.1
+          ]
+        ],
+        "confidence": 0.8
+      },
+      {
+        "subject": "o1",
+        "predicate": "looking_at",
+        "object": "o2",
+        "spans": [
+          [
+            0.0,
+            5.9
+          ],
+          [
+            6.2,
+            8.1
+          ]
+        ],
+        "confidence": 0.8
+      }
+    ]
+  },
+  "views": {
+    "objects_count_display": {
+      "gorilla": 2,
+      "baby_gorilla": 1
+    }
+  }
+}

@@ -1,0 +1,199 @@
+{
+  "summary": {
+    "items": 10,
+    "enter_bank": 10,
+    "clip_range_sec": [
+      0.0,
+      5.8
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does the cable car in the center follow a consistent upward trajectory along the cables?",
+      "signals": [
+        "trajectory_dir(cable_car,axis)",
+        "balance(cable_car)",
+        "trajectory_dir(oX,axis)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(cable_car,axis)": 38.3333,
+        "trajectory_dir(oX,axis)": 7.6667,
+        "balance(cable_car)": 7.1667
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Do the leftmost and middle cable cars move steadily without sudden changes in speed or direction on their respective lines?",
+      "signals": [
+        "trajectory_dir(oX,axis)",
+        "accel_sign(oX,axis)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(oX,axis)": 38.3333,
+        "accel_sign(oX,axis)": 7.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Is the shadow of the right window frame continuous throughout the scene, matching the light source direction?",
+      "signals": [
+        "size_inconsistency(oX)",
+        "shadow_consistency(oX)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "size_inconsistency(oX)": 37.5,
+        "shadow_consistency(oX)": 7.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Do multiple cable cars on different lines show expected motion patterns with no abrupt acceleration or deceleration?",
+      "signals": [
+        "accel_sign(oX,axis)"
+      ],
+      "content_score_60": 58,
+      "signal_score_40": 35.0,
+      "total_score_100": 93.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "accel_sign(oX,axis)": 35.0
+      },
+      "content_score_raw": "58"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Does the foreground window frame's shadow remain stable across the clip?",
+      "signals": [
+        "shadow_consistency(oX)"
+      ],
+      "content_score_60": 58,
+      "signal_score_40": 36.67,
+      "total_score_100": 94.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "shadow_consistency(oX)": 36.6667
+      },
+      "content_score_raw": "58"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "Cable cars follow consistent trajectories along cables, maintaining proper balance and direction.",
+      "signals": [
+        "trajectory_dir(cable_car,axis)",
+        "balance(cable_car)",
+        "trajectory_dir(oX,axis)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(cable_car,axis)": 38.3333,
+        "trajectory_dir(oX,axis)": 7.6667,
+        "balance(cable_car)": 7.1667
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "Left side cable cars move upward on supporting cables with expected trajectory consistency.",
+      "signals": [
+        "trajectory_dir(oX,axis)",
+        "accel_sign(oX,axis)"
+      ],
+      "content_score_60": 58,
+      "signal_score_40": 40.0,
+      "total_score_100": 98.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(oX,axis)": 38.3333,
+        "accel_sign(oX,axis)": 7.0
+      },
+      "content_score_raw": "58"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "Relative sizes of cable cars to surroundings remain consistent throughout the scene.",
+      "signals": [
+        "size_inconsistency(oX)"
+      ],
+      "content_score_60": 58,
+      "signal_score_40": 37.5,
+      "total_score_100": 95.5,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "size_inconsistency(oX)": 37.5
+      },
+      "content_score_raw": "58"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "Shadow of the right window frame in the foreground is continuous and unchanging.",
+      "signals": [
+        "shadow_consistency(oX)"
+      ],
+      "content_score_60": 58,
+      "signal_score_40": 36.67,
+      "total_score_100": 94.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "shadow_consistency(oX)": 36.6667
+      },
+      "content_score_raw": "58"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "Shadows cast by objects match the light source direction consistently.",
+      "signals": [
+        "shadow_consistency(oX)"
+      ],
+      "content_score_60": 58,
+      "signal_score_40": 36.67,
+      "total_score_100": 94.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "shadow_consistency(oX)": 36.6667
+      },
+      "content_score_raw": "58"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "v5",
+    "a1",
+    "a2",
+    "a3",
+    "a4",
+    "a5"
+  ]
+}

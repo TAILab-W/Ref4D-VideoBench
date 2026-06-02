@@ -1,0 +1,223 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0544.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "cv2",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "train",
+        "attributes": {
+          "color": [
+            "red",
+            "white"
+          ],
+          "facing-direction": [
+            "left"
+          ],
+          "printed-text": [
+            "512-st-clair-west",
+            "do-not-pass-open-doors"
+          ],
+          "signature": [
+            "red-white,-512,-4469,-do-not-pass-open-doors,-left-facing"
+          ]
+        },
+        "spans": [
+          [
+            0.2,
+            1.3
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "person",
+        "attributes": {
+          "color": [
+            "blue"
+          ],
+          "action": [
+            "standing"
+          ],
+          "position": [
+            "platform"
+          ],
+          "signature": [
+            "blue-jacket,-standing-on-platform"
+          ]
+        },
+        "spans": [
+          [
+            0.8,
+            1.2
+          ]
+        ]
+      },
+      {
+        "id": "o3",
+        "name": "car",
+        "attributes": {
+          "color": [
+            "white"
+          ],
+          "size": [
+            "medium"
+          ],
+          "position": [
+            "parked"
+          ],
+          "signature": [
+            "white-suv,-parked-on-street"
+          ]
+        },
+        "spans": [
+          [
+            1.7,
+            2.2
+          ]
+        ]
+      },
+      {
+        "id": "o4",
+        "name": "taco-truck",
+        "attributes": {
+          "color": [
+            "green",
+            "red"
+          ],
+          "brand-or-logo": [
+            "taco"
+          ],
+          "signature": [
+            "green-and-red,-taco-sign"
+          ]
+        },
+        "spans": [
+          [
+            2.8,
+            3.1
+          ]
+        ]
+      },
+      {
+        "id": "o5",
+        "name": "shop-sign",
+        "attributes": {
+          "color": [
+            "black",
+            "gold"
+          ],
+          "brand-or-logo": [
+            "rahi"
+          ],
+          "signature": [
+            "black-with-gold-letters,-'rahi'"
+          ]
+        },
+        "spans": [
+          [
+            0.3,
+            1.1
+          ]
+        ]
+      },
+      {
+        "id": "o6",
+        "name": "snow",
+        "attributes": {
+          "state": [
+            "present"
+          ],
+          "signature": [
+            "on-ground"
+          ]
+        },
+        "spans": [
+          [
+            0.1,
+            3.2
+          ]
+        ]
+      }
+    ],
+    "relations": [
+      {
+        "subject": "o1",
+        "predicate": "left-of",
+        "object": "o2",
+        "spans": [
+          [
+            0.8,
+            1.2
+          ]
+        ],
+        "confidence": 0.0
+      },
+      {
+        "subject": "o1",
+        "predicate": "left-of",
+        "object": "o3",
+        "spans": [
+          [
+            1.7,
+            2.2
+          ]
+        ],
+        "confidence": 0.0
+      },
+      {
+        "subject": "o1",
+        "predicate": "left-of",
+        "object": "o4",
+        "spans": [
+          [
+            2.8,
+            3.1
+          ]
+        ],
+        "confidence": 0.0
+      },
+      {
+        "subject": "o5",
+        "predicate": "right-of",
+        "object": "o1",
+        "spans": [
+          [
+            0.3,
+            1.1
+          ]
+        ],
+        "confidence": 0.0
+      },
+      {
+        "subject": "o6",
+        "predicate": "under",
+        "object": "o1",
+        "spans": [
+          [
+            0.1,
+            3.2
+          ]
+        ],
+        "confidence": 0.0
+      }
+    ]
+  },
+  "views": {
+    "objects_count_display": {
+      "train": 1,
+      "person": 1,
+      "car": 1,
+      "taco-truck": 1,
+      "shop-sign": 1,
+      "snow": 1
+    }
+  }
+}

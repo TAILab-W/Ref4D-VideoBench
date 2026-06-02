@@ -1,0 +1,159 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0522.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "cv2",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "ship",
+        "attributes": {
+          "color": [
+            "black",
+            "yellow"
+          ],
+          "size": [
+            "large"
+          ],
+          "state": [
+            "docked"
+          ],
+          "position": [
+            "left",
+            "right"
+          ],
+          "signature": [
+            "yellow-roofed,-docked-at-port"
+          ]
+        },
+        "spans": [
+          [
+            0.2,
+            5.8
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "bus",
+        "attributes": {
+          "color": [
+            "black",
+            "teal"
+          ],
+          "pattern": [
+            "solid"
+          ],
+          "size": [
+            "large"
+          ],
+          "brand-or-logo": [
+            "ember"
+          ],
+          "vehicle-type": [
+            "double-decker-coach"
+          ],
+          "facing-direction": [
+            "right-facing"
+          ],
+          "position": [
+            "parked"
+          ],
+          "door-status": [
+            "open"
+          ],
+          "wheelchair-accessibility": [
+            "wheelchair-symbol"
+          ],
+          "emergency-exit": [
+            "emergency-exit-sign"
+          ],
+          "signature": [
+            "black-and-teal,-ember-brand,-double-decker"
+          ]
+        },
+        "spans": [
+          [
+            6.1,
+            10.5
+          ]
+        ]
+      },
+      {
+        "id": "o3",
+        "name": "person",
+        "attributes": {
+          "color": [
+            "yellow"
+          ],
+          "action": [
+            "standing"
+          ],
+          "position": [
+            "right"
+          ],
+          "signature": [
+            "yellow-vest,-near-fuel-pump"
+          ]
+        },
+        "spans": [
+          [
+            9.1,
+            10.1
+          ]
+        ]
+      }
+    ],
+    "relations": [
+      {
+        "subject": "o1",
+        "predicate": "left-of",
+        "object": "o2",
+        "spans": [
+          [
+            0.3,
+            4.0
+          ]
+        ],
+        "confidence": 0.9
+      },
+      {
+        "subject": "o2",
+        "predicate": "parked-at",
+        "object": "o3",
+        "spans": [
+          [
+            6.5,
+            8.7
+          ]
+        ],
+        "confidence": 0.8
+      },
+      {
+        "subject": "o2",
+        "predicate": "near",
+        "object": "o3",
+        "spans": [
+          [
+            7.2,
+            9.0
+          ]
+        ],
+        "confidence": 0.7
+      }
+    ]
+  },
+  "views": {
+    "objects_count_display": {
+      "ship": 1,
+      "bus": 1,
+      "person": 1
+    }
+  }
+}

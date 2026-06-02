@@ -1,0 +1,213 @@
+{
+  "summary": {
+    "items": 10,
+    "enter_bank": 10,
+    "clip_range_sec": [
+      0.0,
+      7.53
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does the fawn stay under the mother without disappearing?",
+      "signals": [
+        "continuity(deer)",
+        "continuity(fawn)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(deer)": 36.6667,
+        "continuity(fawn)": 7.3333
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Does the deer's antler direction remain right throughout?",
+      "signals": [
+        "size_inconsistency(fawn)",
+        "interpenetration(deer,fawn)",
+        "frame_discontinuity(t)",
+        "trajectory_dir(fawn,axis)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "frame_discontinuity(t)": 40.0,
+        "trajectory_dir(fawn,axis)": 7.6667,
+        "size_inconsistency(fawn)": 7.5,
+        "interpenetration(deer,fawn)": 7.1667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Are there no unseen objects intersecting the field where the deer are?",
+      "signals": [
+        "falling_hazard(deer)",
+        "prohibited_intersection(deer,field)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "prohibited_intersection(deer,field)": 36.6667,
+        "falling_hazard(deer)": 6.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Does the deer move smoothly, not suddenly accelerating?",
+      "signals": [
+        "accel_sign"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 35.0,
+      "total_score_100": 85.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "accel_sign": 35.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Is the small fawn in a safe position on the ground?",
+      "signals": [
+        "falling_hazard"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 31.67,
+      "total_score_100": 86.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "falling_hazard": 31.6667
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "The deer and fawn maintain consistent positions without interpenetration.",
+      "signals": [
+        "continuity(deer)",
+        "continuity(fawn)",
+        "interpenetration(deer,fawn)",
+        "biological_motion(deer)",
+        "biological_motion(fawn)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "biological_motion(deer)": 38.3333,
+        "biological_motion(fawn)": 7.6667,
+        "continuity(deer)": 7.3333,
+        "continuity(fawn)": 7.3333,
+        "interpenetration(deer,fawn)": 7.1667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "The animals stay in a natural field environment with no falling hazards.",
+      "signals": [
+        "size_inconsistency(fawn)",
+        "interpenetration(deer,fawn)",
+        "falling_hazard(deer)",
+        "prohibited_intersection(deer,field)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "size_inconsistency(fawn)": 37.5,
+        "prohibited_intersection(deer,field)": 7.3333,
+        "interpenetration(deer,fawn)": 7.1667,
+        "falling_hazard(deer)": 6.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "The deer moves naturally, showing appropriate biological motion for its species.",
+      "signals": [
+        "accel_sign",
+        "biological_motion"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "biological_motion": 38.3333,
+        "accel_sign": 7.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "The fawn lies under the mother safely as expected in a protective behavior.",
+      "signals": [
+        "support(fawn,deer)",
+        "falling_hazard"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "support(fawn,deer)": 35.0,
+        "falling_hazard": 6.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "Shadows of the flowers and animals are visible and match their actual positions.",
+      "signals": [
+        "shadow_consistency"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 36.67,
+      "total_score_100": 86.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "shadow_consistency": 36.6667
+      },
+      "content_score_raw": "50"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "v5",
+    "a1",
+    "a2",
+    "a3",
+    "a4",
+    "a5"
+  ]
+}

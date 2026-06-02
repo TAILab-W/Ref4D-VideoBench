@@ -1,0 +1,196 @@
+{
+  "summary": {
+    "items": 10,
+    "enter_bank": 7,
+    "clip_range_sec": [
+      0.0,
+      9.53
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Do the tram wheels maintain contact with the tracks during movement?",
+      "signals": [
+        "wheel_rolling(oX)",
+        "shadow_consistency(oX)",
+        "interpenetration(oA,oB)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "shadow_consistency(oX)": 36.6667,
+        "interpenetration(oA,oB)": 7.1667,
+        "wheel_rolling(oX)": 6.0
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Are the tram doors open when stationary and closed when in motion?",
+      "signals": [
+        "state_change(oObj,from:closed,to:open)",
+        "state_change(oObj,from:open,to:closed)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "state_change(oObj,from:closed,to:open)": 37.5,
+        "state_change(oObj,from:open,to:closed)": 7.5
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Is the number '14' visible on the front display of the tram?",
+      "signals": [
+        "containment(oA,oB)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 29.17,
+      "total_score_100": 89.17,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "containment(oA,oB)": 29.1667
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Does the tram follow a straight path along the tracks without sudden direction changes?",
+      "signals": [
+        "trajectory_dir(tram,track_axis)",
+        "support(oA,oB)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(tram,track_axis)": 38.3333,
+        "support(oA,oB)": 7.0
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Do the shadows cast by the tram align with the light source direction?",
+      "signals": [
+        "shadow_consistency(tram)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 36.67,
+      "total_score_100": 96.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "shadow_consistency(tram)": 36.6667
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "The tram's wheels maintain contact with the tracks during movement.",
+      "signals": [
+        "wheel_rolling(oX)",
+        "shadow_consistency(oX)",
+        "interpenetration(oA,oB)"
+      ],
+      "content_score_60": 36,
+      "signal_score_40": 40.0,
+      "total_score_100": 76.0,
+      "duplicate_penalized": true,
+      "signal_detail": {
+        "shadow_consistency(oX)": 36.6667,
+        "interpenetration(oA,oB)": 7.1667,
+        "wheel_rolling(oX)": 6.0
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "The tram doors are open at the platform and closed during operation.",
+      "signals": [
+        "state_change(oObj,from:closed,to:open)",
+        "state_change(oObj,from:open,to:closed)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "state_change(oObj,from:closed,to:open)": 37.5,
+        "state_change(oObj,from:open,to:closed)": 7.5
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "The number '14' is visible on the front display of the tram.",
+      "signals": [
+        "containment(oA,oB)"
+      ],
+      "content_score_60": 36,
+      "signal_score_40": 29.17,
+      "total_score_100": 65.17,
+      "duplicate_penalized": true,
+      "signal_detail": {
+        "containment(oA,oB)": 29.1667
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "Shadows cast by the tram align with the light source direction.",
+      "signals": [
+        "shadow_consistency(tram)"
+      ],
+      "content_score_60": 36,
+      "signal_score_40": 36.67,
+      "total_score_100": 72.67,
+      "duplicate_penalized": true,
+      "signal_detail": {
+        "shadow_consistency(tram)": 36.6667
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "The tram travels along designated tracks, supported by track structures.",
+      "signals": [
+        "support(oA,oB)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 35.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "support(oA,oB)": 35.0
+      },
+      "content_score_raw": "60"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "v5",
+    "a2",
+    "a5"
+  ]
+}

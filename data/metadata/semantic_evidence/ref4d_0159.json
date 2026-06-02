@@ -1,0 +1,94 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0159.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "cv2",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "bird",
+        "attributes": {
+          "color": [
+            "gray",
+            "white"
+          ],
+          "species-or-breed": [
+            "seagull"
+          ],
+          "action": [
+            "flying"
+          ],
+          "pose": [
+            "gliding"
+          ],
+          "signature": [
+            "seagull"
+          ]
+        },
+        "spans": [
+          [
+            0.1,
+            0.9
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "building",
+        "attributes": {
+          "color": [
+            "beige",
+            "brown"
+          ],
+          "material": [
+            "stone"
+          ],
+          "size": [
+            "large"
+          ],
+          "age": [
+            "ancient"
+          ],
+          "architecture-style": [
+            "ottoman"
+          ],
+          "signature": [
+            "large-historic-mosque-with-four-minarets-and-dome"
+          ]
+        },
+        "spans": [
+          [
+            0.1,
+            6.6
+          ]
+        ]
+      }
+    ],
+    "relations": [
+      {
+        "subject": "o1",
+        "predicate": "flying-over",
+        "object": "o2",
+        "spans": [
+          [
+            0.3,
+            1.0
+          ]
+        ],
+        "confidence": 0.9
+      }
+    ]
+  },
+  "views": {
+    "objects_count_display": {
+      "bird": 1,
+      "building": 1
+    }
+  }
+}

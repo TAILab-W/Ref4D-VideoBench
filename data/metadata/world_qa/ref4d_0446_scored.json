@@ -1,0 +1,189 @@
+{
+  "summary": {
+    "items": 10,
+    "enter_bank": 6,
+    "clip_range_sec": [
+      0.0,
+      5.53
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does the child in the orange shirt and blue shorts move continuously without sudden position changes?",
+      "signals": [
+        "continuity(child-in-orange-shirt-and-blue-shorts)",
+        "frame_discontinuity(child-in-orange-shirt-and-blue-shorts)",
+        "frame_discontinuity(t)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "frame_discontinuity(child-in-orange-shirt-and-blue-shorts)": 40.0,
+        "frame_discontinuity(t)": 8.0,
+        "continuity(child-in-orange-shirt-and-blue-shorts)": 7.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Does the adult's foot interpenetrate the ground surface when standing still?",
+      "signals": [
+        "prohibited_intersection(oA,oB)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 36.67,
+      "total_score_100": 96.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "prohibited_intersection(oA,oB)": 36.6667
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Is the motion of walking or running performed by any person visible in the video?",
+      "signals": [
+        "biological_motion(oA)"
+      ],
+      "content_score_60": 40,
+      "signal_score_40": 38.33,
+      "total_score_100": 78.33,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "biological_motion(oA)": 38.3333
+      },
+      "content_score_raw": "40"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Does the children's movement on the soil show appropriate sliding friction with the ground?",
+      "signals": [
+        "friction_sliding(oA,on:oB)"
+      ],
+      "content_score_60": 40,
+      "signal_score_40": 30.0,
+      "total_score_100": 70.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "friction_sliding(oA,on:oB)": 30.0
+      },
+      "content_score_raw": "40"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Are there prohibited intersections between people and their immediate surroundings?",
+      "signals": [
+        "_default"
+      ],
+      "content_score_60": 30,
+      "signal_score_40": 23.33,
+      "total_score_100": 53.33,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "_default": 23.3333
+      },
+      "content_score_raw": "30"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "A child in an orange shirt and blue shorts stands next to a woman.",
+      "signals": [
+        "continuity(child-in-orange-shirt-and-blue-shorts)",
+        "frame_discontinuity(child-in-orange-shirt-and-blue-shorts)",
+        "frame_discontinuity(t)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "frame_discontinuity(child-in-orange-shirt-and-blue-shorts)": 40.0,
+        "frame_discontinuity(t)": 8.0,
+        "continuity(child-in-orange-shirt-and-blue-shorts)": 7.3333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "The children do not intersect with the ground or each other.",
+      "signals": [
+        "prohibited_intersection(oA,oB)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 36.67,
+      "total_score_100": 96.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "prohibited_intersection(oA,oB)": 36.6667
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "A child performs walking motion.",
+      "signals": [
+        "biological_motion(oA)"
+      ],
+      "content_score_60": 30,
+      "signal_score_40": 38.33,
+      "total_score_100": 68.33,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "biological_motion(oA)": 38.3333
+      },
+      "content_score_raw": "30"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "The children maintain consistent positions relative to the woman.",
+      "signals": [
+        "frame_discontinuity(t)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "frame_discontinuity(t)": 40.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "A child in a white shirt and red skirt stands next to the woman.",
+      "signals": [
+        "prohibited_intersection(oA,oB)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 36.67,
+      "total_score_100": 86.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "prohibited_intersection(oA,oB)": 36.6667
+      },
+      "content_score_raw": "50"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "a1",
+    "a2",
+    "a4",
+    "a5"
+  ]
+}

@@ -1,0 +1,204 @@
+{
+  "summary": {
+    "items": 10,
+    "enter_bank": 7,
+    "clip_range_sec": [
+      0.0,
+      5.23
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does the hand hold the bun without touching the plastic container or its lid?",
+      "signals": [
+        "interpenetration(bun,hand)",
+        "collision(bun,container)",
+        "support(container,table)",
+        "containment(label,lid)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "interpenetration(bun,hand)": 35.8333,
+        "support(container,table)": 7.0,
+        "collision(bun,container)": 6.3333,
+        "containment(label,lid)": 5.8333
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Is the cream filling inside the bun consistent in size and shape throughout the clip?",
+      "signals": [
+        "continuity(cream)",
+        "grasp_stability(hand,pastry)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(cream)": 36.6667,
+        "grasp_stability(hand,pastry)": 5.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Is the clear plastic container on the table undamaged with no visible deformation?",
+      "signals": [
+        "material_optics(container)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 37.5,
+      "total_score_100": 87.5,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "material_optics(container)": 37.5
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Does the pastry remain intact, showing no signs of spillage while being held?",
+      "signals": [
+        "grasp_stability(hand,bun)",
+        "grasp_stability(hand,pastry)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 34.0,
+      "total_score_100": 84.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "grasp_stability(hand,bun)": 28.3333,
+        "grasp_stability(hand,pastry)": 5.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Are the label and contents under the closed part of the transparent box stationary?",
+      "signals": [
+        "support(container,table)",
+        "containment(label,lid)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "support(container,table)": 35.0,
+        "containment(label,lid)": 5.8333
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "The hand holds the bun without interpenetration with other objects.",
+      "signals": [
+        "interpenetration(bun,hand)",
+        "collision(bun,container)",
+        "support(container,table)",
+        "containment(label,lid)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "interpenetration(bun,hand)": 35.8333,
+        "support(container,table)": 7.0,
+        "collision(bun,container)": 6.3333,
+        "containment(label,lid)": 5.8333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "The plastic container and its lid rest stationary on the table.",
+      "signals": [
+        "support(container,table)",
+        "containment(label,lid)",
+        "material_optics(container)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "material_optics(container)": 37.5,
+        "support(container,table)": 7.0,
+        "containment(label,lid)": 5.8333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "The cream filling in the bun remains consistent in size and shape.",
+      "signals": [
+        "continuity(cream)"
+      ],
+      "content_score_60": 35,
+      "signal_score_40": 36.67,
+      "total_score_100": 71.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(cream)": 36.6667
+      },
+      "content_score_raw": "35"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "The food item is handled to prevent spillage or contamination.",
+      "signals": [
+        "grasp_stability(hand,bun)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 28.33,
+      "total_score_100": 78.33,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "grasp_stability(hand,bun)": 28.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "The hand maintains grasp stability while holding the pastry.",
+      "signals": [
+        "grasp_stability(hand,pastry)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 28.33,
+      "total_score_100": 78.33,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "grasp_stability(hand,pastry)": 28.3333
+      },
+      "content_score_raw": "50"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "v5",
+    "a1",
+    "a2"
+  ]
+}

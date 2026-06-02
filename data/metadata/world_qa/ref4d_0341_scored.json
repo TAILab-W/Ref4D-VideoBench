@@ -1,0 +1,214 @@
+{
+  "summary": {
+    "items": 10,
+    "enter_bank": 9,
+    "clip_range_sec": [
+      0.0,
+      13.17
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Do the people in white cloaks and the person in black hoodie move up the hill with a natural trajectory?",
+      "signals": [
+        "continuity(group)",
+        "interpenetration(person,group)",
+        "trajectory_dir(group,axis)",
+        "accel_sign(group,axis)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(group,axis)": 38.3333,
+        "continuity(group)": 7.3333,
+        "interpenetration(person,group)": 7.1667,
+        "accel_sign(group,axis)": 7.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Does the person in black hoodie maintain balance on the uneven terrain without falling hazard?",
+      "signals": [
+        "balance(person)",
+        "falling_hazard(person)"
+      ],
+      "content_score_60": 40,
+      "signal_score_40": 40.0,
+      "total_score_100": 80.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "balance(person)": 35.8333,
+        "falling_hazard(person)": 6.3333
+      },
+      "content_score_raw": "40"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Are the shadows of all individuals consistent with the direction of the sunset light?",
+      "signals": [
+        "shadow_consistency(group)",
+        "shadow_consistency(person)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "shadow_consistency(group)": 36.6667,
+        "shadow_consistency(person)": 7.3333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Is the sun low in the sky, creating warm hues during this scene?",
+      "signals": [
+        "continuity(sun)",
+        "hue_histogram_jump(sunlight)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(sun)": 36.6667,
+        "hue_histogram_jump(sunlight)": 6.6667
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Are the people near the edge of the hill maintaining safe distances from steep drop-offs?",
+      "signals": [
+        "falling_hazard(person)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 31.67,
+      "total_score_100": 81.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "falling_hazard(person)": 31.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "The group of people in white cloaks and the person in black hoodie remain on the hillside.",
+      "signals": [
+        "continuity(group)",
+        "continuity(person)",
+        "interpenetration(group,person)",
+        "interpenetration(person,group)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(group)": 36.6667,
+        "continuity(person)": 7.3333,
+        "interpenetration(group,person)": 7.1667,
+        "interpenetration(person,group)": 7.1667
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "Individuals near the edge of the hill maintain safe distances from steep drop-offs.",
+      "signals": [
+        "trajectory_dir(group,axis)",
+        "accel_sign(group,axis)",
+        "falling_hazard(person)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(group,axis)": 38.3333,
+        "accel_sign(group,axis)": 7.0,
+        "falling_hazard(person)": 6.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "The sun's position indicates a consistent time of day during sunset.",
+      "signals": [
+        "shadow_consistency(group)",
+        "shadow_consistency(person)",
+        "continuity(sun)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "shadow_consistency(group)": 36.6667,
+        "shadow_consistency(person)": 7.3333,
+        "continuity(sun)": 7.3333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "The person in black hoodie maintains balance on uneven terrain without falling hazard.",
+      "signals": [
+        "balance(person)",
+        "falling_hazard(person)",
+        "shadow_consistency(person)"
+      ],
+      "content_score_60": 24,
+      "signal_score_40": 40.0,
+      "total_score_100": 64.0,
+      "duplicate_penalized": true,
+      "signal_detail": {
+        "shadow_consistency(person)": 36.6667,
+        "balance(person)": 7.1667,
+        "falling_hazard(person)": 6.3333
+      },
+      "content_score_raw": "40"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "The sun is low, creating warm hues and natural shadows.",
+      "signals": [
+        "hue_histogram_jump(sunlight)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 33.33,
+      "total_score_100": 93.33,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "hue_histogram_jump(sunlight)": 33.3333
+      },
+      "content_score_raw": "60"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "v5",
+    "a1",
+    "a2",
+    "a3",
+    "a5"
+  ]
+}

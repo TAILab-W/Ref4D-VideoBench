@@ -1,0 +1,235 @@
+{
+  "summary": {
+    "items": 10,
+    "enter_bank": 8,
+    "clip_range_sec": [
+      0.0,
+      6.03
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does the excavator bucket pour rocks into the train car without spillage or interpenetration?",
+      "signals": [
+        "containment(oA,oB)",
+        "pour_direction(oV,axis)",
+        "friction_sliding(oA,on:oB)",
+        "interpenetration(excavator-bucket,train-car)",
+        "pour_direction(rock,vertical)",
+        "friction_sliding(rock,on:train-car)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "interpenetration(excavator-bucket,train-car)": 35.8333,
+        "friction_sliding(oA,on:oB)": 6.0,
+        "friction_sliding(rock,on:train-car)": 6.0,
+        "containment(oA,oB)": 5.8333,
+        "pour_direction(oV,axis)": 5.6667,
+        "pour_direction(rock,vertical)": 5.6667
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Does the excavator arm maintain a continuous trajectory and balance on the ground during operation?",
+      "signals": [
+        "trajectory_dir(oX,axis)",
+        "balance(oX)",
+        "support(oA,oB)",
+        "center_of_mass_over_base(oX)",
+        "collision(oA,oB)",
+        "falling_hazard(oObj)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(oX,axis)": 38.3333,
+        "balance(oX)": 7.1667,
+        "support(oA,oB)": 7.0,
+        "center_of_mass_over_base(oX)": 6.5,
+        "collision(oA,oB)": 6.3333,
+        "falling_hazard(oObj)": 6.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Does the material from the excavator’s bucket follow a natural pouring direction consistent with gravity while depositing into the train car?",
+      "signals": [
+        "trajectory_dir(oX,axis)",
+        "balance(oX)",
+        "support(oA,oB)",
+        "pour_direction(oV,axis)",
+        "friction_sliding(oA,on:oB)",
+        "continuity(oX)"
+      ],
+      "content_score_60": 58,
+      "signal_score_40": 40.0,
+      "total_score_100": 98.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(oX,axis)": 38.3333,
+        "continuity(oX)": 7.3333,
+        "balance(oX)": 7.1667,
+        "support(oA,oB)": 7.0,
+        "friction_sliding(oA,on:oB)": 6.0,
+        "pour_direction(oV,axis)": 5.6667
+      },
+      "content_score_raw": "58"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Are there unexpected obstacles or personnel in close proximity to the excavator operations?",
+      "signals": [
+        "prohibited_intersection(oA,oB)"
+      ],
+      "content_score_60": 52,
+      "signal_score_40": 36.67,
+      "total_score_100": 88.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "prohibited_intersection(oA,oB)": 36.6667
+      },
+      "content_score_raw": "52"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "“Does <object> stay supported by <surface> without floating or sinking?",
+      "signals": [
+        "_default"
+      ],
+      "content_score_60": 53,
+      "signal_score_40": 23.33,
+      "total_score_100": 76.33,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "_default": 23.3333
+      },
+      "content_score_raw": "53"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "The excavator bucket holds and pours rocks into the train car without spillage.",
+      "signals": [
+        "containment(oA,oB)",
+        "pour_direction(oV,axis)",
+        "friction_sliding(oA,on:oB)",
+        "interpenetration(excavator-bucket,train-car)",
+        "pour_direction(rock,vertical)",
+        "friction_sliding(rock,on:train-car)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "interpenetration(excavator-bucket,train-car)": 35.8333,
+        "friction_sliding(oA,on:oB)": 6.0,
+        "friction_sliding(rock,on:train-car)": 6.0,
+        "containment(oA,oB)": 5.8333,
+        "pour_direction(oV,axis)": 5.6667,
+        "pour_direction(rock,vertical)": 5.6667
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "The excavator's bucket maintains a stable trajectory while depositing material into the train car.",
+      "signals": [
+        "trajectory_dir(oX,axis)",
+        "balance(oX)",
+        "support(oA,oB)"
+      ],
+      "content_score_60": 59,
+      "signal_score_40": 40.0,
+      "total_score_100": 99.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(oX,axis)": 38.3333,
+        "balance(oX)": 7.1667,
+        "support(oA,oB)": 7.0
+      },
+      "content_score_raw": "59"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "Rocks are dumped from the excavator’s bucket following a natural pouring direction consistent with gravity.",
+      "signals": [
+        "pour_direction(oV,axis)",
+        "friction_sliding(oA,on:oB)",
+        "continuity(oX)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(oX)": 36.6667,
+        "friction_sliding(oA,on:oB)": 6.0,
+        "pour_direction(oV,axis)": 5.6667
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "The excavator operates within its operational limits, preventing tipping or collision hazards.",
+      "signals": [
+        "center_of_mass_over_base(oX)",
+        "collision(oA,oB)",
+        "falling_hazard(oObj)"
+      ],
+      "content_score_60": 58,
+      "signal_score_40": 40.0,
+      "total_score_100": 98.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "center_of_mass_over_base(oX)": 32.5,
+        "collision(oA,oB)": 6.3333,
+        "falling_hazard(oObj)": 6.3333
+      },
+      "content_score_raw": "58"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "No unexpected obstacles or personnel are visible in close proximity to the excavator operations.",
+      "signals": [
+        "prohibited_intersection(oA,oB)"
+      ],
+      "content_score_60": 34,
+      "signal_score_40": 36.67,
+      "total_score_100": 70.67,
+      "duplicate_penalized": true,
+      "signal_detail": {
+        "prohibited_intersection(oA,oB)": 36.6667
+      },
+      "content_score_raw": "57"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "a1",
+    "a2",
+    "a3",
+    "a4"
+  ]
+}

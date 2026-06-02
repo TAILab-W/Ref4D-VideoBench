@@ -1,0 +1,157 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0084.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "cv2",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "whale",
+        "attributes": {
+          "color": [
+            "gray"
+          ],
+          "pattern": [
+            "rough-textured"
+          ],
+          "size": [
+            "large"
+          ],
+          "pose": [
+            "swimming"
+          ],
+          "action": [
+            "moving"
+          ],
+          "orientation": [
+            "facing-downward"
+          ],
+          "position": [
+            "side-by-side"
+          ],
+          "signature": [
+            "large-gray-body,-rough-textured-skin,-facing-downward,-swimming"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            7.8
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "whale",
+        "attributes": {
+          "color": [
+            "gray"
+          ],
+          "pattern": [
+            "rough-textured"
+          ],
+          "size": [
+            "small"
+          ],
+          "age": [
+            "juvenile"
+          ],
+          "pose": [
+            "attached"
+          ],
+          "action": [
+            "remaining-still"
+          ],
+          "orientation": [
+            "facing-downward"
+          ],
+          "position": [
+            "attached-to-back"
+          ],
+          "signature": [
+            "smaller-gray-body,-attached-to-larger-whale,-remaining-still"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            7.8
+          ]
+        ]
+      }
+    ],
+    "relations": [
+      {
+        "subject": "o1",
+        "predicate": "touching",
+        "object": "o2",
+        "spans": [
+          [
+            0.0,
+            7.8
+          ]
+        ],
+        "confidence": 0.9
+      },
+      {
+        "subject": "o1",
+        "predicate": "above",
+        "object": "o2",
+        "spans": [
+          [
+            0.0,
+            7.8
+          ]
+        ],
+        "confidence": 0.8
+      },
+      {
+        "subject": "o1",
+        "predicate": "left-of",
+        "object": "o2",
+        "spans": [
+          [
+            0.0,
+            7.8
+          ]
+        ],
+        "confidence": 0.7
+      },
+      {
+        "subject": "o1",
+        "predicate": "in-water",
+        "object": "o2",
+        "spans": [
+          [
+            0.0,
+            7.8
+          ]
+        ],
+        "confidence": 0.6
+      },
+      {
+        "subject": "o1",
+        "predicate": "swimming-with",
+        "object": "o2",
+        "spans": [
+          [
+            0.0,
+            7.8
+          ]
+        ],
+        "confidence": 0.5
+      }
+    ]
+  },
+  "views": {
+    "objects_count_display": {
+      "whale": 2
+    }
+  }
+}

@@ -1,0 +1,70 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0521.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "cv2",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "bus",
+        "attributes": {
+          "color": [
+            "blue",
+            "green",
+            "red",
+            "white"
+          ],
+          "pattern": [
+            "striped"
+          ],
+          "size": [
+            "large"
+          ],
+          "vehicle-type": [
+            "city-bus"
+          ],
+          "brand-or-logo": [
+            "mrt",
+            "rapidkl"
+          ],
+          "printed-text": [
+            "connecting-us-all",
+            "menghubungkan-kita-semua",
+            "mrt",
+            "rapidkl"
+          ],
+          "feature": [
+            "door",
+            "handrails",
+            "light",
+            "seats",
+            "symbol",
+            "wheel",
+            "window"
+          ],
+          "signature": [
+            "rapidkl-white-blue-red,-mrt-blue-green-red"
+          ]
+        },
+        "spans": [
+          [
+            0.2,
+            7.3
+          ]
+        ]
+      }
+    ],
+    "relations": []
+  },
+  "views": {
+    "objects_count_display": {
+      "bus": 1
+    }
+  }
+}

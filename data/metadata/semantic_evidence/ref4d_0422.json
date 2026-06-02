@@ -1,0 +1,104 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0422.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "decord",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "person",
+        "attributes": {
+          "color": [
+            "beige",
+            "white"
+          ],
+          "pose": [
+            "holding-hands",
+            "raising-arm",
+            "swinging-hair"
+          ],
+          "signature": [
+            "long-brown-hair-white-shirt-beige-pants"
+          ]
+        },
+        "spans": [
+          [
+            0.2,
+            0.6
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "person",
+        "attributes": {
+          "color": [
+            "beige"
+          ],
+          "pose": [
+            "holding-hands",
+            "raising-arm"
+          ],
+          "signature": [
+            "short-dark-hair-beige-shirt-beige-pants"
+          ]
+        },
+        "spans": [
+          [
+            0.5,
+            0.6
+          ]
+        ]
+      }
+    ],
+    "relations": [
+      {
+        "subject": "o1",
+        "predicate": "holding",
+        "object": "o2",
+        "spans": [
+          [
+            0.3,
+            0.6
+          ]
+        ],
+        "confidence": 0.9
+      },
+      {
+        "subject": "o1",
+        "predicate": "looking-at",
+        "object": "o2",
+        "spans": [
+          [
+            0.4,
+            0.6
+          ]
+        ],
+        "confidence": 0.8
+      },
+      {
+        "subject": "o2",
+        "predicate": "looking-at",
+        "object": "o1",
+        "spans": [
+          [
+            0.5,
+            0.6
+          ]
+        ],
+        "confidence": 0.8
+      }
+    ]
+  },
+  "views": {
+    "objects_count_display": {
+      "person": 2
+    }
+  }
+}

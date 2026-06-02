@@ -1,0 +1,52 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0534.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "cv2",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "bus",
+        "attributes": {
+          "signature": [
+            "bus-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            12.9
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "traffic-light",
+        "attributes": {
+          "signature": [
+            "traffic-light-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            12.9
+          ]
+        ]
+      }
+    ],
+    "relations": []
+  },
+  "views": {
+    "objects_count_display": {
+      "bus": 1,
+      "traffic-light": 1
+    }
+  }
+}

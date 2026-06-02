@@ -1,0 +1,164 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0328.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "decord",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "person",
+        "attributes": {
+          "color": [
+            "black",
+            "brown"
+          ],
+          "action": [
+            "adjusting",
+            "pulling"
+          ],
+          "pose": [
+            "bending",
+            "standing"
+          ],
+          "signature": [
+            "black-shirt-brown-pants-left-facing"
+          ]
+        },
+        "spans": [
+          [
+            0.4,
+            5.0
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "person",
+        "attributes": {
+          "color": [
+            "black",
+            "blue"
+          ],
+          "action": [
+            "adjusting",
+            "pulling"
+          ],
+          "pose": [
+            "bending",
+            "standing"
+          ],
+          "signature": [
+            "blue-shirt-black-shorts-right-facing"
+          ]
+        },
+        "spans": [
+          [
+            1.6,
+            3.8
+          ]
+        ]
+      },
+      {
+        "id": "o3",
+        "name": "tent",
+        "attributes": {
+          "signature": [
+            "large-beige-tent"
+          ]
+        },
+        "spans": [
+          [
+            0.2,
+            3.8
+          ]
+        ]
+      }
+    ],
+    "relations": [
+      {
+        "subject": "o1",
+        "predicate": "pulling",
+        "object": "o3",
+        "spans": [
+          [
+            0.4,
+            5.0
+          ]
+        ],
+        "confidence": 0.8
+      },
+      {
+        "subject": "o2",
+        "predicate": "pulling",
+        "object": "o3",
+        "spans": [
+          [
+            1.6,
+            3.8
+          ]
+        ],
+        "confidence": 0.8
+      },
+      {
+        "subject": "o1",
+        "predicate": "left-of",
+        "object": "o2",
+        "spans": [
+          [
+            0.4,
+            5.0
+          ]
+        ],
+        "confidence": 0.8
+      },
+      {
+        "subject": "o2",
+        "predicate": "right-of",
+        "object": "o1",
+        "spans": [
+          [
+            0.4,
+            5.0
+          ]
+        ],
+        "confidence": 0.8
+      },
+      {
+        "subject": "o1",
+        "predicate": "standing-on",
+        "object": "o3",
+        "spans": [
+          [
+            0.4,
+            5.0
+          ]
+        ],
+        "confidence": 0.7
+      },
+      {
+        "subject": "o2",
+        "predicate": "standing-on",
+        "object": "o3",
+        "spans": [
+          [
+            1.6,
+            3.8
+          ]
+        ],
+        "confidence": 0.7
+      }
+    ]
+  },
+  "views": {
+    "objects_count_display": {
+      "person": 2,
+      "tent": 1
+    }
+  }
+}

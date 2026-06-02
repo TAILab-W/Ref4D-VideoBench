@@ -1,0 +1,200 @@
+{
+  "summary": {
+    "items": 10,
+    "enter_bank": 9,
+    "clip_range_sec": [
+      0.0,
+      8.57
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does the can remain stationary on the countertop?",
+      "signals": [
+        "support(can,countertop)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 35.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "support(can,countertop)": 35.0
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Is the bottle upright and supported by the hand while being held?",
+      "signals": [
+        "support(oA,oB)",
+        "continuity(oX)",
+        "support(bottle,hand)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(oX)": 36.6667,
+        "support(oA,oB)": 7.0,
+        "support(bottle,hand)": 7.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Does the person's arm move in a natural trajectory without sudden changes?",
+      "signals": [
+        "trajectory_dir(arm,axis)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 38.33,
+      "total_score_100": 88.33,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(arm,axis)": 38.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Are the lighting and shadows of the objects consistent with their positions?",
+      "signals": [
+        "shadow_consistency(bottle), shadow_consistency(can), specular_highlight_consistency(bottle), specular_highlight_consistency(can)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 36.67,
+      "total_score_100": 86.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "shadow_consistency(bottle), shadow_consistency(can), specular_highlight_consistency(bottle), specular_highlight_consistency(can)": 36.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Does the person's hand maintain a stable grasp position when holding the bottle?",
+      "signals": [
+        "grasp_stability(oHand,oObj)",
+        "handoff_between_hands(oObj)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 33.67,
+      "total_score_100": 83.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "grasp_stability(oHand,oObj)": 28.3333,
+        "handoff_between_hands(oObj)": 5.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "The bottle and can remain stationary on the countertop.",
+      "signals": [
+        "support(oA,oB)",
+        "continuity(oX)",
+        "support(can,countertop)"
+      ],
+      "content_score_60": 0,
+      "signal_score_40": 40.0,
+      "total_score_100": 40.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(oX)": 36.6667,
+        "support(oA,oB)": 7.0,
+        "support(can,countertop)": 7.0
+      },
+      "content_score_raw": "0"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "The person's hand is in a stable grasp position while holding the bottle upright.",
+      "signals": [
+        "grasp_stability(oHand,oObj)",
+        "handoff_between_hands(oObj)",
+        "support(bottle,hand)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "support(bottle,hand)": 35.0,
+        "grasp_stability(oHand,oObj)": 5.6667,
+        "handoff_between_hands(oObj)": 5.3333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "The person's arm movement follows a natural trajectory without sudden changes.",
+      "signals": [
+        "trajectory_dir(arm,axis)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 38.33,
+      "total_score_100": 88.33,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(arm,axis)": 38.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "The lighting and shadows of the bottle and can are consistent with their positions.",
+      "signals": [
+        "shadow_consistency(bottle), shadow_consistency(can), specular_highlight_consistency(bottle), specular_highlight_consistency(can)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 36.67,
+      "total_score_100": 86.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "shadow_consistency(bottle), shadow_consistency(can), specular_highlight_consistency(bottle), specular_highlight_consistency(can)": 36.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "The can remains stationary on the countertop throughout the video.",
+      "signals": [
+        "support(oA,oB)",
+        "continuity(oX)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(oX)": 36.6667,
+        "support(oA,oB)": 7.0
+      },
+      "content_score_raw": "60"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "v5",
+    "a2",
+    "a3",
+    "a4",
+    "a5"
+  ]
+}

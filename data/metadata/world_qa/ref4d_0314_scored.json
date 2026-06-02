@@ -1,0 +1,215 @@
+{
+  "summary": {
+    "items": 10,
+    "enter_bank": 10,
+    "clip_range_sec": [
+      0.0,
+      7.57
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does the horse and rider stay on the dirt path without veering off?",
+      "signals": [
+        "continuity(horse)",
+        "balance(horse)",
+        "center_of_mass_over_base(horse)",
+        "center_of_mass_over_base(person)",
+        "falling_hazard(horse)",
+        "falling_hazard(person)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(horse)": 36.6667,
+        "balance(horse)": 7.1667,
+        "center_of_mass_over_base(horse)": 6.5,
+        "center_of_mass_over_base(person)": 6.5,
+        "falling_hazard(horse)": 6.3333,
+        "falling_hazard(person)": 6.3333
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Is the direction of their movement consistent with the slope of the terrain?",
+      "signals": [
+        "trajectory_dir(oX,axis)",
+        "center_of_mass_over_base(oX)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(oX,axis)": 38.3333,
+        "center_of_mass_over_base(oX)": 6.5
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Is there a person walking alongside while another rides?",
+      "signals": [
+        "biological_motion(oA)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 38.33,
+      "total_score_100": 98.33,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "biological_motion(oA)": 38.3333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Do the shadows of the riders match their positions on the ground, given the support of the dirt path?",
+      "signals": [
+        "shadow_consistency(horse)",
+        "shadow_consistency(person)",
+        "supportable(oObj,by:oSurface)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "shadow_consistency(horse)": 36.6667,
+        "shadow_consistency(person)": 7.3333,
+        "supportable(oObj,by:oSurface)": 5.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Does the dirt path provide a suitable surface for supporting the horse and rider?",
+      "signals": [
+        "supportable(oObj,by:oSurface)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 26.67,
+      "total_score_100": 86.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "supportable(oObj,by:oSurface)": 26.6667
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "A person rides a horse on a dirt path, staying within the road's bounds.",
+      "signals": [
+        "continuity(horse)",
+        "balance(horse)",
+        "center_of_mass_over_base(horse)",
+        "center_of_mass_over_base(person)",
+        "falling_hazard(horse)",
+        "falling_hazard(person)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(horse)": 36.6667,
+        "balance(horse)": 7.1667,
+        "center_of_mass_over_base(horse)": 6.5,
+        "center_of_mass_over_base(person)": 6.5,
+        "falling_hazard(horse)": 6.3333,
+        "falling_hazard(person)": 6.3333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "The rider and horse move along the slope of the terrain without falling.",
+      "signals": [
+        "trajectory_dir(oX,axis)",
+        "center_of_mass_over_base(oX)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(oX,axis)": 38.3333,
+        "center_of_mass_over_base(oX)": 6.5
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "Another person walks alongside while one individual rides.",
+      "signals": [
+        "biological_motion(oA)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 38.33,
+      "total_score_100": 98.33,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "biological_motion(oA)": 38.3333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "The shadow of the rider and horse aligns with their position on the ground.",
+      "signals": [
+        "shadow_consistency(horse)",
+        "shadow_consistency(person)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "shadow_consistency(horse)": 36.6667,
+        "shadow_consistency(person)": 7.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "The dirt path provides a suitable surface for riding horses.",
+      "signals": [
+        "supportable(oObj,by:oSurface)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 26.67,
+      "total_score_100": 86.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "supportable(oObj,by:oSurface)": 26.6667
+      },
+      "content_score_raw": "60"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "v5",
+    "a1",
+    "a2",
+    "a3",
+    "a4",
+    "a5"
+  ]
+}

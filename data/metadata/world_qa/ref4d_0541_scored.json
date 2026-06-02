@@ -1,0 +1,233 @@
+{
+  "summary": {
+    "items": 10,
+    "enter_bank": 10,
+    "clip_range_sec": [
+      0.0,
+      10.3
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does the yellow and black structure maintain a consistent size relative to the snow-covered terrain?",
+      "signals": [
+        "continuity(oX)",
+        "shadow_consistency(oX)",
+        "size_inconsistency(oX)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "size_inconsistency(oX)": 37.5,
+        "continuity(oX)": 7.3333,
+        "shadow_consistency(oX)": 7.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Is the wooden platform on the left side of the frame properly supported by the snow without sinking or collapsing?",
+      "signals": [
+        "support(oA,oB)",
+        "balance(oX)",
+        "prohibited_intersection(oA,oB)",
+        "interpenetration(oA,oB)"
+      ],
+      "content_score_60": 40,
+      "signal_score_40": 40.0,
+      "total_score_100": 80.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "prohibited_intersection(oA,oB)": 36.6667,
+        "balance(oX)": 7.1667,
+        "interpenetration(oA,oB)": 7.1667,
+        "support(oA,oB)": 7.0
+      },
+      "content_score_raw": "40"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Does the shadow of the moving yellow and black structure align with its position, following it continuously across the clip?",
+      "signals": [
+        "trajectory_dir(oX,axis)",
+        "continuity(oX)",
+        "shadow_consistency(oX)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(oX,axis)": 38.3333,
+        "continuity(oX)": 7.3333,
+        "shadow_consistency(oX)": 7.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Does the snow surface show no unexpected deformations under the weight of objects placed on it in this scene?",
+      "signals": [
+        "deformation(oX)",
+        "interpenetration(oA,oB)",
+        "collision(oA,oB)",
+        "falling_hazard(oObj)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "deformation(oX)": 40.0,
+        "interpenetration(oA,oB)": 7.1667,
+        "collision(oA,oB)": 6.3333,
+        "falling_hazard(oObj)": 6.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Does the trajectory of the path leading towards the distant structures follow expected physical behavior for movement on snowy terrain?",
+      "signals": [
+        "continuity(oX)",
+        "frame_discontinuity(t)",
+        "trajectory_dir(oX,axis)",
+        "accel_sign(oX,axis)",
+        "interpenetration(oA,oB)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "frame_discontinuity(t)": 40.0,
+        "trajectory_dir(oX,axis)": 7.6667,
+        "continuity(oX)": 7.3333,
+        "interpenetration(oA,oB)": 7.1667,
+        "accel_sign(oX,axis)": 7.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "The yellow and black structure maintains a consistent size and position relative to the snowy terrain.",
+      "signals": [
+        "continuity(oX)",
+        "shadow_consistency(oX)",
+        "size_inconsistency(oX)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "size_inconsistency(oX)": 37.5,
+        "continuity(oX)": 7.3333,
+        "shadow_consistency(oX)": 7.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "All structures on the snowy terrain are stable and free of falling hazards.",
+      "signals": [
+        "support(oA,oB)",
+        "balance(oX)",
+        "prohibited_intersection(oA,oB)",
+        "falling_hazard(oObj)"
+      ],
+      "content_score_60": 40,
+      "signal_score_40": 40.0,
+      "total_score_100": 80.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "prohibited_intersection(oA,oB)": 36.6667,
+        "balance(oX)": 7.1667,
+        "support(oA,oB)": 7.0,
+        "falling_hazard(oObj)": 6.3333
+      },
+      "content_score_raw": "40"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "The snow surface supports the weight of the moving structure without deformation or interpenetration.",
+      "signals": [
+        "support(oA,oB)",
+        "interpenetration(oA,oB)",
+        "deformation(oX)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "deformation(oX)": 40.0,
+        "interpenetration(oA,oB)": 7.1667,
+        "support(oA,oB)": 7.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "The trajectory of the yellow and black structure follows expected physical behavior, with no abrupt changes.",
+      "signals": [
+        "trajectory_dir(oX,axis)",
+        "continuity(oX)",
+        "accel_sign(oX,axis)",
+        "interpenetration(oA,oB)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(oX,axis)": 38.3333,
+        "continuity(oX)": 7.3333,
+        "interpenetration(oA,oB)": 7.1667,
+        "accel_sign(oX,axis)": 7.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "The shadow of the structure aligns consistently with its position and orientation.",
+      "signals": [
+        "shadow_consistency(oX)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 36.67,
+      "total_score_100": 86.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "shadow_consistency(oX)": 36.6667
+      },
+      "content_score_raw": "50"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "v5",
+    "a1",
+    "a2",
+    "a3",
+    "a4",
+    "a5"
+  ]
+}

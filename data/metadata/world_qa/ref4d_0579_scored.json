@@ -1,0 +1,233 @@
+{
+  "summary": {
+    "items": 10,
+    "enter_bank": 10,
+    "clip_range_sec": [
+      0.0,
+      9.93
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does the bicycle maintain balance on the dirt path while moving forward?",
+      "signals": [
+        "balance(oX)",
+        "trajectory_dir(oX,axis)",
+        "wheel_rolling(oX)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(oX,axis)": 38.3333,
+        "balance(oX)": 7.1667,
+        "wheel_rolling(oX)": 6.0
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Does the bike's trajectory along the trail remain consistent without sudden changes in direction or speed?",
+      "signals": [
+        "trajectory_dir(bicycle,path)",
+        "accel_sign(bicycle,path)",
+        "trajectory_dir(bicycle,axis)",
+        "accel_sign(bicycle,axis)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(bicycle,path)": 38.3333,
+        "trajectory_dir(bicycle,axis)": 7.6667,
+        "accel_sign(bicycle,path)": 7.0,
+        "accel_sign(bicycle,axis)": 7.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Are there no unexpected obstacles appearing suddenly on the forested GreenTrail during the ride?",
+      "signals": [
+        "continuity(path)",
+        "friction_sliding(bicycle,path)",
+        "friction_sliding(bicycle,on:path)",
+        "collision(bicycle,forest)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(path)": 36.6667,
+        "collision(bicycle,forest)": 6.3333,
+        "friction_sliding(bicycle,path)": 6.0,
+        "friction_sliding(bicycle,on:path)": 6.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Does the rider keep a safe distance from trees and uneven terrain, using the handlebars for steering control?",
+      "signals": [
+        "friction_sliding(oA,on:oB)",
+        "collision(oA,oB)",
+        "grasp_stability(bicycle,handlebars)",
+        "tool_contact(bicycle,handlebars)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "collision(oA,oB)": 31.6667,
+        "friction_sliding(oA,on:oB)": 6.0,
+        "grasp_stability(bicycle,handlebars)": 5.6667,
+        "tool_contact(bicycle,handlebars)": 5.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Does the Pivot Shuttle Fazua e-MTB allow navigation through the green trail as shown?",
+      "signals": [
+        "tool_usage_correct(oTool,for:oTask)",
+        "tool_contact(handlebars,bike)",
+        "tool_usage_correct(handlebars,for:steering)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "tool_usage_correct(oTool,for:oTask)": 29.1667,
+        "tool_usage_correct(handlebars,for:steering)": 5.8333,
+        "tool_contact(handlebars,bike)": 5.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "The bicycle's handlebars and front wheel move forward along the dirt path.",
+      "signals": [
+        "trajectory_dir(oX,axis)",
+        "wheel_rolling(oX)",
+        "trajectory_dir(bicycle,path)",
+        "accel_sign(bicycle,path)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(oX,axis)": 38.3333,
+        "trajectory_dir(bicycle,path)": 7.6667,
+        "accel_sign(bicycle,path)": 7.0,
+        "wheel_rolling(oX)": 6.0
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "Trees line both sides of the narrow forest trail without sudden obstacles on the path.",
+      "signals": [
+        "continuity(path)",
+        "friction_sliding(bicycle,path)",
+        "friction_sliding(bicycle,on:path)",
+        "collision(bicycle,forest)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(path)": 36.6667,
+        "collision(bicycle,forest)": 6.3333,
+        "friction_sliding(bicycle,path)": 6.0,
+        "friction_sliding(bicycle,on:path)": 6.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "The Pivot Shuttle Fazua maintains balance while moving straight on the green trail.",
+      "signals": [
+        "balance(oX)",
+        "trajectory_dir(bicycle,axis)",
+        "accel_sign(bicycle,axis)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(bicycle,axis)": 38.3333,
+        "balance(oX)": 7.1667,
+        "accel_sign(bicycle,axis)": 7.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "The e-MTB navigates through the forest, with handlebars providing steering control.",
+      "signals": [
+        "tool_usage_correct(oTool,for:oTask)",
+        "grasp_stability(bicycle,handlebars)",
+        "tool_contact(bicycle,handlebars)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "tool_usage_correct(oTool,for:oTask)": 29.1667,
+        "grasp_stability(bicycle,handlebars)": 5.6667,
+        "tool_contact(bicycle,handlebars)": 5.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "The rider keeps a safe distance from trees and uneven terrain visible ahead.",
+      "signals": [
+        "friction_sliding(oA,on:oB)",
+        "collision(oA,oB)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 37.67,
+      "total_score_100": 87.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "collision(oA,oB)": 31.6667,
+        "friction_sliding(oA,on:oB)": 6.0
+      },
+      "content_score_raw": "50"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "v5",
+    "a1",
+    "a2",
+    "a3",
+    "a4",
+    "a5"
+  ]
+}

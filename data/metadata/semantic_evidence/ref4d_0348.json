@@ -1,0 +1,158 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0348.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "decord",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "path",
+        "attributes": {
+          "color": [
+            "brown",
+            "green",
+            "yellow"
+          ],
+          "material": [
+            "dirt",
+            "flowers",
+            "grass"
+          ],
+          "texture": [
+            "rough",
+            "soft"
+          ],
+          "signature": [
+            "dirt-trail-with-yellow-flowers-and-green-grass"
+          ]
+        },
+        "spans": [
+          [
+            0.2,
+            5.7
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "tree",
+        "attributes": {
+          "color": [
+            "brown",
+            "green"
+          ],
+          "size": [
+            "large"
+          ],
+          "texture": [
+            "mossy",
+            "rough"
+          ],
+          "signature": [
+            "large-bark-covered-trunk-with-moss"
+          ]
+        },
+        "spans": [
+          [
+            0.3,
+            4.9
+          ]
+        ]
+      },
+      {
+        "id": "o3",
+        "name": "flower",
+        "attributes": {
+          "color": [
+            "yellow"
+          ],
+          "size": [
+            "small"
+          ],
+          "signature": [
+            "small-yellow-flower"
+          ]
+        },
+        "spans": [
+          [
+            0.1,
+            5.7
+          ]
+        ]
+      },
+      {
+        "id": "o4",
+        "name": "grass",
+        "attributes": {
+          "color": [
+            "green"
+          ],
+          "state": [
+            "lush"
+          ],
+          "signature": [
+            "green-lush-grass"
+          ]
+        },
+        "spans": [
+          [
+            0.1,
+            5.7
+          ]
+        ]
+      }
+    ],
+    "relations": [
+      {
+        "subject": "o1",
+        "predicate": "left-of",
+        "object": "o2",
+        "spans": [
+          [
+            0.3,
+            4.8
+          ]
+        ],
+        "confidence": 0.9
+      },
+      {
+        "subject": "o1",
+        "predicate": "covered-by",
+        "object": "o3",
+        "spans": [
+          [
+            0.1,
+            5.7
+          ]
+        ],
+        "confidence": 0.9
+      },
+      {
+        "subject": "o1",
+        "predicate": "surrounded-by",
+        "object": "o4",
+        "spans": [
+          [
+            0.1,
+            5.7
+          ]
+        ],
+        "confidence": 0.9
+      }
+    ]
+  },
+  "views": {
+    "objects_count_display": {
+      "path": 1,
+      "tree": 1,
+      "flower": 1,
+      "grass": 1
+    }
+  }
+}

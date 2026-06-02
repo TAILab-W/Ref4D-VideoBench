@@ -1,0 +1,209 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0459.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "decord",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "runner",
+        "attributes": {
+          "color": [
+            "black",
+            "white"
+          ],
+          "action": [
+            "running",
+            "walking"
+          ],
+          "pose": [
+            "standing"
+          ],
+          "facing-direction": [
+            "right-facing"
+          ],
+          "signature": [
+            "black-shirt-black-pants-white-shoes"
+          ]
+        },
+        "spans": [
+          [
+            0.2,
+            1.4
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "person",
+        "attributes": {
+          "color": [
+            "orange"
+          ],
+          "action": [
+            "standing"
+          ],
+          "pose": [
+            "standing"
+          ],
+          "facing-direction": [
+            "right-facing"
+          ],
+          "signature": [
+            "orange-shorts"
+          ]
+        },
+        "spans": [
+          [
+            0.8,
+            1.4
+          ]
+        ]
+      },
+      {
+        "id": "o3",
+        "name": "person",
+        "attributes": {
+          "color": [
+            "black",
+            "brown"
+          ],
+          "action": [
+            "standing"
+          ],
+          "pose": [
+            "standing"
+          ],
+          "facing-direction": [
+            "right-facing"
+          ],
+          "signature": [
+            "black-shirt-brown-shorts"
+          ]
+        },
+        "spans": [
+          [
+            0.8,
+            1.4
+          ]
+        ]
+      },
+      {
+        "id": "o4",
+        "name": "person",
+        "attributes": {
+          "color": [
+            "black"
+          ],
+          "action": [
+            "kneeling"
+          ],
+          "pose": [
+            "kneeling"
+          ],
+          "facing-direction": [
+            "left-facing"
+          ],
+          "signature": [
+            "black-shirt-kneeling"
+          ]
+        },
+        "spans": [
+          [
+            0.2,
+            1.3
+          ]
+        ]
+      },
+      {
+        "id": "o5",
+        "name": "person",
+        "attributes": {
+          "color": [
+            "black"
+          ],
+          "action": [
+            "sitting"
+          ],
+          "pose": [
+            "sitting"
+          ],
+          "facing-direction": [
+            "left-facing"
+          ],
+          "signature": [
+            "black-shirt-sitting"
+          ]
+        },
+        "spans": [
+          [
+            0.2,
+            1.3
+          ]
+        ]
+      }
+    ],
+    "relations": [
+      {
+        "subject": "o1",
+        "predicate": "left-of",
+        "object": "o2",
+        "spans": [
+          [
+            0.8,
+            1.4
+          ]
+        ],
+        "confidence": 0.8
+      },
+      {
+        "subject": "o1",
+        "predicate": "left-of",
+        "object": "o3",
+        "spans": [
+          [
+            0.8,
+            1.4
+          ]
+        ],
+        "confidence": 0.8
+      },
+      {
+        "subject": "o1",
+        "predicate": "left-of",
+        "object": "o4",
+        "spans": [
+          [
+            0.2,
+            1.3
+          ]
+        ],
+        "confidence": 0.8
+      },
+      {
+        "subject": "o1",
+        "predicate": "left-of",
+        "object": "o5",
+        "spans": [
+          [
+            0.2,
+            1.3
+          ]
+        ],
+        "confidence": 0.8
+      }
+    ]
+  },
+  "views": {
+    "objects_count_display": {
+      "runner": 1,
+      "person": 4
+    }
+  }
+}

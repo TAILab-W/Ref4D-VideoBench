@@ -1,0 +1,226 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0194.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "cv2",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "plate",
+        "attributes": {
+          "signature": [
+            "plate-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            6.3
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "rice",
+        "attributes": {
+          "signature": [
+            "rice-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            6.3
+          ]
+        ]
+      },
+      {
+        "id": "o3",
+        "name": "meat",
+        "attributes": {
+          "signature": [
+            "meat-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            6.3
+          ]
+        ]
+      },
+      {
+        "id": "o4",
+        "name": "bowl",
+        "attributes": {
+          "signature": [
+            "bowl-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            6.3
+          ]
+        ]
+      },
+      {
+        "id": "o5",
+        "name": "bowl",
+        "attributes": {
+          "signature": [
+            "bowl-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            6.3
+          ]
+        ]
+      },
+      {
+        "id": "o6",
+        "name": "spoon",
+        "attributes": {
+          "signature": [
+            "spoon-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            6.3
+          ]
+        ]
+      },
+      {
+        "id": "o7",
+        "name": "cup",
+        "attributes": {
+          "signature": [
+            "cup-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            6.3
+          ]
+        ]
+      },
+      {
+        "id": "o8",
+        "name": "ice",
+        "attributes": {
+          "signature": [
+            "ice-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            6.3
+          ]
+        ]
+      },
+      {
+        "id": "o9",
+        "name": "straw",
+        "attributes": {
+          "signature": [
+            "straw-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            6.3
+          ]
+        ]
+      },
+      {
+        "id": "o10",
+        "name": "container",
+        "attributes": {
+          "signature": [
+            "container-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            6.3
+          ]
+        ]
+      },
+      {
+        "id": "o11",
+        "name": "container",
+        "attributes": {
+          "signature": [
+            "container-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            6.3
+          ]
+        ]
+      },
+      {
+        "id": "o12",
+        "name": "chili",
+        "attributes": {
+          "signature": [
+            "chili-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            6.3
+          ]
+        ]
+      },
+      {
+        "id": "o13",
+        "name": "liquid",
+        "attributes": {
+          "signature": [
+            "liquid-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            6.3
+          ]
+        ]
+      }
+    ],
+    "relations": []
+  },
+  "views": {
+    "objects_count_display": {
+      "plate": 1,
+      "rice": 1,
+      "meat": 1,
+      "bowl": 2,
+      "spoon": 1,
+      "cup": 1,
+      "ice": 1,
+      "straw": 1,
+      "container": 2,
+      "chili": 1,
+      "liquid": 1
+    }
+  }
+}

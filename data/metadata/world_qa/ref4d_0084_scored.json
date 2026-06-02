@@ -1,0 +1,195 @@
+{
+  "summary": {
+    "items": 10,
+    "enter_bank": 10,
+    "clip_range_sec": [
+      0.0,
+      7.83
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does a smaller whale remain attached to a larger whale throughout the video?",
+      "signals": [
+        "continuity(whale)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 36.67,
+      "total_score_100": 96.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(whale)": 36.6667
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Does the relative size and position of the two whales stay consistent without sudden changes or interpenetration?",
+      "signals": [
+        "continuity(whale)",
+        "size_inconsistency(whale)",
+        "trajectory_dir(whale,axis)"
+      ],
+      "content_score_60": 58,
+      "signal_score_40": 40.0,
+      "total_score_100": 98.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(whale,axis)": 38.3333,
+        "size_inconsistency(whale)": 7.5,
+        "continuity(whale)": 7.3333
+      },
+      "content_score_raw": "58"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Do the whales maintain stable buoyancy in clear water with natural underwater motion?",
+      "signals": [
+        "buoyancy_float(whale,in:water)"
+      ],
+      "content_score_60": 59,
+      "signal_score_40": 34.17,
+      "total_score_100": 93.17,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "buoyancy_float(whale,in:water)": 34.1667
+      },
+      "content_score_raw": "59"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Is the behavior of the whales biologically plausible without unnatural actions?",
+      "signals": [
+        "biological_motion(whale)"
+      ],
+      "content_score_60": 56,
+      "signal_score_40": 38.33,
+      "total_score_100": 94.33,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "biological_motion(whale)": 38.3333
+      },
+      "content_score_raw": "56"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Do the whales move in a way that avoids collisions or deformations consistent with marine mammal motion?",
+      "signals": [
+        "biological_motion(whale)"
+      ],
+      "content_score_60": 57,
+      "signal_score_40": 38.33,
+      "total_score_100": 95.33,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "biological_motion(whale)": 38.3333
+      },
+      "content_score_raw": "57"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "A smaller whale remains attached to a larger whale in clear water.",
+      "signals": [
+        "continuity(whale)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 36.67,
+      "total_score_100": 96.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(whale)": 36.6667
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "The relative positions and sizes of the two whales maintain continuity without sudden changes.",
+      "signals": [
+        "buoyancy_float(whale,in:water)",
+        "continuity(whale)",
+        "size_inconsistency(whale)"
+      ],
+      "content_score_60": 59,
+      "signal_score_40": 40.0,
+      "total_score_100": 99.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "size_inconsistency(whale)": 37.5,
+        "continuity(whale)": 7.3333,
+        "buoyancy_float(whale,in:water)": 6.8333
+      },
+      "content_score_raw": "59"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "The marine animals exhibit biologically plausible behavior, with no unnatural actions.",
+      "signals": [
+        "biological_motion(whale)"
+      ],
+      "content_score_60": 58,
+      "signal_score_40": 38.33,
+      "total_score_100": 96.33,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "biological_motion(whale)": 38.3333
+      },
+      "content_score_raw": "58"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "The larger whale maintains stable buoyancy in water with natural underwater motion.",
+      "signals": [
+        "buoyancy_float(whale,in:water)"
+      ],
+      "content_score_60": 57,
+      "signal_score_40": 34.17,
+      "total_score_100": 91.17,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "buoyancy_float(whale,in:water)": 34.1667
+      },
+      "content_score_raw": "57"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "The smaller whale consistently follows the larger whale's trajectory without abrupt changes.",
+      "signals": [
+        "trajectory_dir(whale,axis)",
+        "continuity(whale)"
+      ],
+      "content_score_60": 56,
+      "signal_score_40": 40.0,
+      "total_score_100": 96.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(whale,axis)": 38.3333,
+        "continuity(whale)": 7.3333
+      },
+      "content_score_raw": "56"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "v5",
+    "a1",
+    "a2",
+    "a3",
+    "a4",
+    "a5"
+  ]
+}

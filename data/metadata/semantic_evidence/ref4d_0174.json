@@ -1,0 +1,64 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0174.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "decord",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "gun",
+        "attributes": {
+          "color": [
+            "black",
+            "red"
+          ],
+          "brand-or-logo": [
+            "disney",
+            "hammer"
+          ],
+          "signature": [
+            "red-black-color-hammer-disney-logo"
+          ]
+        },
+        "spans": [
+          [
+            0.2,
+            0.8
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "person",
+        "attributes": {
+          "color": [
+            "white",
+            "yellow"
+          ],
+          "signature": [
+            "white-yellow-shirt"
+          ]
+        },
+        "spans": [
+          [
+            0.3,
+            0.7
+          ]
+        ]
+      }
+    ],
+    "relations": []
+  },
+  "views": {
+    "objects_count_display": {
+      "gun": 1,
+      "person": 1
+    }
+  }
+}

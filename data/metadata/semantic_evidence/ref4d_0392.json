@@ -1,0 +1,177 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0392.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "decord",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "person",
+        "attributes": {
+          "color": [
+            "blonde"
+          ],
+          "pattern": [
+            "solid"
+          ],
+          "texture": [
+            "soft"
+          ],
+          "material": [
+            "fabric"
+          ],
+          "size": [
+            "large"
+          ],
+          "age": [
+            "young"
+          ],
+          "sex": [
+            "female"
+          ],
+          "state": [
+            "standing"
+          ],
+          "pose": [
+            "front-facing"
+          ],
+          "action": [
+            "being-hugged",
+            "holding-phone"
+          ],
+          "orientation": [
+            "facing-forward"
+          ],
+          "facing-direction": [
+            "forward"
+          ],
+          "position": [
+            "front-center"
+          ],
+          "object-part": [
+            "arms",
+            "ears",
+            "fingers",
+            "hair",
+            "hands",
+            "nails",
+            "ring",
+            "sweatshirt"
+          ],
+          "tool-or-instrument": [
+            "cell-phone"
+          ],
+          "signature": [
+            "long-blonde-hair-white-pom-pom-earring-beige-sweatshirt-ring-on-left-hand"
+          ]
+        },
+        "spans": [
+          [
+            0.2,
+            6.9
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "person",
+        "attributes": {
+          "color": [
+            "green",
+            "light-blue"
+          ],
+          "pattern": [
+            "solid"
+          ],
+          "texture": [
+            "soft"
+          ],
+          "material": [
+            "fabric"
+          ],
+          "size": [
+            "large"
+          ],
+          "age": [
+            "young"
+          ],
+          "sex": [
+            "male"
+          ],
+          "state": [
+            "standing"
+          ],
+          "pose": [
+            "back-facing",
+            "hugging"
+          ],
+          "action": [
+            "hugging-woman"
+          ],
+          "orientation": [
+            "facing-backward"
+          ],
+          "facing-direction": [
+            "backward"
+          ],
+          "position": [
+            "behind-woman"
+          ],
+          "object-part": [
+            "arms",
+            "cap",
+            "hands",
+            "shirt",
+            "tattoo"
+          ],
+          "signature": [
+            "green-cap-light-blue-shirt-tattoo-on-left-hand"
+          ]
+        },
+        "spans": [
+          [
+            0.4,
+            6.8
+          ]
+        ]
+      }
+    ],
+    "relations": [
+      {
+        "subject": "o1",
+        "predicate": "holding",
+        "object": "o1",
+        "spans": [
+          [
+            2.0,
+            6.9
+          ]
+        ],
+        "confidence": 0.9
+      },
+      {
+        "subject": "o2",
+        "predicate": "hugging",
+        "object": "o1",
+        "spans": [
+          [
+            0.4,
+            6.8
+          ]
+        ],
+        "confidence": 0.9
+      }
+    ]
+  },
+  "views": {
+    "objects_count_display": {
+      "person": 2
+    }
+  }
+}

@@ -1,0 +1,219 @@
+{
+  "summary": {
+    "items": 10,
+    "enter_bank": 8,
+    "clip_range_sec": [
+      0.0,
+      11.83
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does one person chop herbs on a wooden board while another stirs food in a pot over an open fire?",
+      "signals": [
+        "tool_usage_correct(chopstick,for:chopping)",
+        "tool_contact(spoon,pot)",
+        "cuttable_progress(herb)",
+        "hot_surface_contact(wooden_board,on:fire)",
+        "tool_usage_correct(spoon,bowl)",
+        "hot_surface_contact(bowl,fire)",
+        "action_phase(cooking,phase)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "hot_surface_contact(wooden_board,on:fire)": 34.1667,
+        "hot_surface_contact(bowl,fire)": 6.8333,
+        "tool_usage_correct(chopstick,for:chopping)": 5.8333,
+        "tool_usage_correct(spoon,bowl)": 5.8333,
+        "tool_contact(spoon,pot)": 5.6667,
+        "action_phase(cooking,phase)": 5.3333,
+        "cuttable_progress(herb)": 4.6667
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Is the flame under the bowl providing consistent heat, causing steam and smoke to emit from the shellfish as someone uses a spoon near the flames?",
+      "signals": [
+        "hot_surface_contact(oObj,oSurface)",
+        "smoke_direction_consistency(scene)",
+        "flame_proximity(oObj,dist)",
+        "tool_usage_correct(oTool,for:oTask)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "smoke_direction_consistency(scene)": 36.6667,
+        "hot_surface_contact(oObj,oSurface)": 6.8333,
+        "flame_proximity(oObj,dist)": 6.8333,
+        "tool_usage_correct(oTool,for:oTask)": 5.8333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Does the wok sit balanced on stones that support it directly above the fire?",
+      "signals": [
+        "support(oA,oB)",
+        "balance(oX)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "balance(oX)": 35.8333,
+        "support(oA,oB)": 7.0
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "During cooking, does smoke rise consistently from the hot surface of the pan without excessive contact with direct flames?",
+      "signals": [
+        "smoke_direction_consistency(scene)",
+        "flame_proximity(oObj,dist)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "smoke_direction_consistency(scene)": 36.6667,
+        "flame_proximity(oObj,dist)": 6.8333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Is the woman using a spatula for stirring inside the pot?",
+      "signals": [
+        "tool_usage_correct(oTool,for:oTask)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 29.17,
+      "total_score_100": 79.17,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "tool_usage_correct(oTool,for:oTask)": 29.1667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "One person chops herbs on a wooden board while another stirs food in a pot over an open fire.",
+      "signals": [
+        "tool_usage_correct(chopstick,for:chopping)",
+        "tool_contact(spoon,pot)",
+        "cuttable_progress(herb)",
+        "hot_surface_contact(wooden_board,on:fire)"
+      ],
+      "content_score_60": 36,
+      "signal_score_40": 40.0,
+      "total_score_100": 76.0,
+      "duplicate_penalized": true,
+      "signal_detail": {
+        "hot_surface_contact(wooden_board,on:fire)": 34.1667,
+        "tool_usage_correct(chopstick,for:chopping)": 5.8333,
+        "tool_contact(spoon,pot)": 5.6667,
+        "cuttable_progress(herb)": 4.6667
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "The wok sits directly on the hot surface of the fire, supported by stones for balance.",
+      "signals": [
+        "hot_surface_contact(oObj,oSurface)",
+        "smoke_direction_consistency(scene)",
+        "support(oA,oB)",
+        "balance(oX)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "smoke_direction_consistency(scene)": 36.6667,
+        "balance(oX)": 7.1667,
+        "support(oA,oB)": 7.0,
+        "hot_surface_contact(oObj,oSurface)": 6.8333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "A spoon is used to stir or add ingredients in the bowl over the open flame at a safe distance.",
+      "signals": [
+        "flame_proximity(oObj,dist)",
+        "tool_usage_correct(oTool,for:oTask)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "flame_proximity(oObj,dist)": 34.1667,
+        "tool_usage_correct(oTool,for:oTask)": 5.8333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "Stones support the base of the pan under the cooking area.",
+      "signals": [
+        "support(oA,oB)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 35.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "support(oA,oB)": 35.0
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "Smoke consistently rises from the hot surface of the pan during cooking.",
+      "signals": [
+        "smoke_direction_consistency(scene)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 36.67,
+      "total_score_100": 86.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "smoke_direction_consistency(scene)": 36.6667
+      },
+      "content_score_raw": "50"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "a2",
+    "a3",
+    "a4",
+    "a5"
+  ]
+}

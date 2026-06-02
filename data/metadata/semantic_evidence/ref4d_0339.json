@@ -1,0 +1,112 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0339.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "decord",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "water",
+        "attributes": {
+          "color": [
+            "blue",
+            "white"
+          ],
+          "state": [
+            "flowing",
+            "foamy"
+          ],
+          "texture": [
+            "choppy",
+            "rough"
+          ],
+          "signature": [
+            "flowing-river-with-white-foam"
+          ]
+        },
+        "spans": [
+          [
+            0.2,
+            0.9
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "rock",
+        "attributes": {
+          "signature": [
+            "large-stone-in-the-water"
+          ]
+        },
+        "spans": [
+          [
+            0.1,
+            0.9
+          ]
+        ]
+      },
+      {
+        "id": "o3",
+        "name": "tree",
+        "attributes": {
+          "signature": [
+            "green-tree-on-the-bank"
+          ]
+        },
+        "spans": [
+          [
+            0.1,
+            0.8
+          ]
+        ]
+      },
+      {
+        "id": "o4",
+        "name": "fence",
+        "attributes": {
+          "signature": [
+            "black-fence-on-the-hill"
+          ]
+        },
+        "spans": [
+          [
+            0.6,
+            0.8
+          ]
+        ]
+      },
+      {
+        "id": "o5",
+        "name": "sky",
+        "attributes": {
+          "signature": [
+            "blue-white-sky-with-clouds"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            0.9
+          ]
+        ]
+      }
+    ],
+    "relations": []
+  },
+  "views": {
+    "objects_count_display": {
+      "water": 1,
+      "rock": 1,
+      "tree": 1,
+      "fence": 1,
+      "sky": 1
+    }
+  }
+}

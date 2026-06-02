@@ -1,0 +1,229 @@
+{
+  "summary": {
+    "items": 10,
+    "enter_bank": 10,
+    "clip_range_sec": [
+      0.0,
+      5.87
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does the airplane engine stay in a stable position relative to the background?",
+      "signals": [
+        "rigid_transform(oX)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 37.5,
+      "total_score_100": 92.5,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "rigid_transform(oX)": 37.5
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Do the snow-covered mountains and clouds below show natural continuity without abrupt changes or interpenetration?",
+      "signals": [
+        "continuity(oX)",
+        "frame_discontinuity(t)",
+        "support(mountains,clouds)",
+        "continuity(mountains)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "frame_discontinuity(t)": 40.0,
+        "continuity(oX)": 7.3333,
+        "continuity(mountains)": 7.3333,
+        "support(mountains,clouds)": 7.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Does the sky's color gradient from deep blue to lighter near the horizon appear consistent with typical atmospheric optics?",
+      "signals": [
+        "hue_histogram_jump(oX)",
+        "reflection_consistency(oX)",
+        "hue_histogram_jump(sky)",
+        "reflection_consistency(sky)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "reflection_consistency(oX)": 35.0,
+        "reflection_consistency(sky)": 7.0,
+        "hue_histogram_jump(oX)": 6.6667,
+        "hue_histogram_jump(sky)": 6.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Does the airplane engine maintain a consistent size relative to the snowy mountain landscape?",
+      "signals": [
+        "continuity(airplane_engine)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 36.67,
+      "total_score_100": 86.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(airplane_engine)": 36.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Is the transition from blue sky to white clouds smooth and consistent?",
+      "signals": [
+        "hue_histogram_jump(oX)",
+        "reflection_consistency(oX)",
+        "hue_histogram_jump(sky)",
+        "reflection_consistency(sky)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "reflection_consistency(oX)": 35.0,
+        "reflection_consistency(sky)": 7.0,
+        "hue_histogram_jump(oX)": 6.6667,
+        "hue_histogram_jump(sky)": 6.6667
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "Snow-covered mountains and clouds below show natural continuity without abrupt frame discontinuities.",
+      "signals": [
+        "continuity(oX)",
+        "frame_discontinuity(t)",
+        "support(mountains,clouds)",
+        "continuity(mountains)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "frame_discontinuity(t)": 40.0,
+        "continuity(oX)": 7.3333,
+        "continuity(mountains)": 7.3333,
+        "support(mountains,clouds)": 7.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "Sky exhibits a smooth gradient from deep blue to lighter near the horizon with correct hue histogram.",
+      "signals": [
+        "hue_histogram_jump(oX)",
+        "reflection_consistency(oX)",
+        "hue_histogram_jump(sky)",
+        "reflection_consistency(sky)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "reflection_consistency(oX)": 35.0,
+        "reflection_consistency(sky)": 7.0,
+        "hue_histogram_jump(oX)": 6.6667,
+        "hue_histogram_jump(sky)": 6.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "Airplane engine remains in a stable position relative to the snowy mountain landscape.",
+      "signals": [
+        "rigid_transform(oX)",
+        "continuity(airplane_engine)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "rigid_transform(oX)": 37.5,
+        "continuity(airplane_engine)": 7.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "Snow-covered mountains below exhibit natural support with no signs of interpenetration.",
+      "signals": [
+        "continuity(oX)",
+        "frame_discontinuity(t)",
+        "support(mountains,clouds)",
+        "continuity(mountains)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "frame_discontinuity(t)": 40.0,
+        "continuity(oX)": 7.3333,
+        "continuity(mountains)": 7.3333,
+        "support(mountains,clouds)": 7.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "Sky shows smooth gradient transitions from blue to white clouds, indicating proper hue histogram consistency.",
+      "signals": [
+        "hue_histogram_jump(oX)",
+        "reflection_consistency(oX)",
+        "hue_histogram_jump(sky)",
+        "reflection_consistency(sky)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "reflection_consistency(oX)": 35.0,
+        "reflection_consistency(sky)": 7.0,
+        "hue_histogram_jump(oX)": 6.6667,
+        "hue_histogram_jump(sky)": 6.6667
+      },
+      "content_score_raw": "50"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "v5",
+    "a1",
+    "a2",
+    "a3",
+    "a4",
+    "a5"
+  ]
+}

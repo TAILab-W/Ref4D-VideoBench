@@ -1,0 +1,144 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0062.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "cv2",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "bear",
+        "attributes": {
+          "color": [
+            "gray"
+          ],
+          "texture": [
+            "dense"
+          ],
+          "size": [
+            "large"
+          ],
+          "age": [
+            "young-adult"
+          ],
+          "state": [
+            "active",
+            "curious"
+          ],
+          "pose": [
+            "leaning",
+            "sitting",
+            "standing"
+          ],
+          "action": [
+            "exploring",
+            "investigating",
+            "touching"
+          ],
+          "orientation": [
+            "facing-camera",
+            "facing-car"
+          ],
+          "facing-direction": [
+            "towards-camera",
+            "towards-car"
+          ],
+          "signature": [
+            "gray-fur-young-adult"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            8.8
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "car",
+        "attributes": {
+          "color": [
+            "red"
+          ],
+          "texture": [
+            "smooth"
+          ],
+          "material": [
+            "metal"
+          ],
+          "size": [
+            "medium"
+          ],
+          "state": [
+            "parked"
+          ],
+          "orientation": [
+            "facing-bear"
+          ],
+          "facing-direction": [
+            "towards-bear"
+          ],
+          "signature": [
+            "red-suv"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            8.8
+          ]
+        ]
+      }
+    ],
+    "relations": [
+      {
+        "subject": "o1",
+        "predicate": "touching",
+        "object": "o2",
+        "spans": [
+          [
+            0.0,
+            8.8
+          ]
+        ],
+        "confidence": 0.9
+      },
+      {
+        "subject": "o1",
+        "predicate": "looking-at",
+        "object": "o2",
+        "spans": [
+          [
+            0.0,
+            8.8
+          ]
+        ],
+        "confidence": 0.8
+      },
+      {
+        "subject": "o1",
+        "predicate": "standing-on",
+        "object": "o2",
+        "spans": [
+          [
+            0.0,
+            8.8
+          ]
+        ],
+        "confidence": 0.7
+      }
+    ]
+  },
+  "views": {
+    "objects_count_display": {
+      "bear": 1,
+      "car": 1
+    }
+  }
+}

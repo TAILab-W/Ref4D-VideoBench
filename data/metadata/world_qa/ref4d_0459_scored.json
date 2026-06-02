@@ -1,0 +1,218 @@
+{
+  "summary": {
+    "items": 10,
+    "enter_bank": 9,
+    "clip_range_sec": [
+      0.0,
+      9.43
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does the runner's trajectory show continuous movement along the track without crossing boundaries?",
+      "signals": [
+        "trajectory_dir(runner,axis)",
+        "continuity(runner)",
+        "prohibited_intersection(runner,other_objects)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(runner,axis)": 38.3333,
+        "continuity(runner)": 7.3333,
+        "prohibited_intersection(runner,other_objects)": 7.3333
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Is the person sitting near the banner stationary and maintaining balance on the ground?",
+      "signals": [
+        "balance(person)",
+        "support(person,ground)",
+        "trajectory_dir(runner,axis)",
+        "action_phase(run,phase)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(runner,axis)": 38.3333,
+        "balance(person)": 7.1667,
+        "support(person,ground)": 7.0,
+        "action_phase(run,phase)": 5.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Do the shadows of the runner and other objects match their positions under the same light source direction?",
+      "signals": [
+        "shadow_consistency(runner)",
+        "shadow_consistency(person_in_black)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "shadow_consistency(runner)": 36.6667,
+        "shadow_consistency(person_in_black)": 7.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Is running on the track an appropriate task for the scene shown?",
+      "signals": [
+        "trajectory_dir(runner,axis)",
+        "action_phase(run,phase)",
+        "prohibited_intersection(runner,other_objects)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(runner,axis)": 38.3333,
+        "prohibited_intersection(runner,other_objects)": 7.3333,
+        "action_phase(run,phase)": 5.3333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Across the clip, does the runner’s path remain consistent with a typical race track layout?",
+      "signals": [
+        "trajectory_dir(runner,axis)",
+        "continuity(runner)",
+        "balance(person)",
+        "support(person,ground)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(runner,axis)": 38.3333,
+        "continuity(runner)": 7.3333,
+        "balance(person)": 7.1667,
+        "support(person,ground)": 7.0
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "The runner moves along the red track, performing a running task.",
+      "signals": [
+        "trajectory_dir(runner,axis)",
+        "continuity(runner)",
+        "action_phase(run,phase)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(runner,axis)": 38.3333,
+        "continuity(runner)": 7.3333,
+        "action_phase(run,phase)": 5.3333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "A person sits on the ground near the 'PENN RELAYS' banner and maintains balance.",
+      "signals": [
+        "balance(person)",
+        "support(person,ground)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "balance(person)": 35.8333,
+        "support(person,ground)": 7.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "The runner stays within the designated race track area without crossing boundaries.",
+      "signals": [
+        "prohibited_intersection(runner,other_objects)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 36.67,
+      "total_score_100": 86.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "prohibited_intersection(runner,other_objects)": 36.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "Shadows of the runner and other objects match their positions and light source direction.",
+      "signals": [
+        "shadow_consistency(runner)",
+        "shadow_consistency(person_in_black)"
+      ],
+      "content_score_60": 30,
+      "signal_score_40": 40.0,
+      "total_score_100": 70.0,
+      "duplicate_penalized": true,
+      "signal_detail": {
+        "shadow_consistency(runner)": 36.6667,
+        "shadow_consistency(person_in_black)": 7.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "The runner's trajectory is continuous and consistent with running on the track.",
+      "signals": [
+        "trajectory_dir(runner,axis)",
+        "continuity(runner)",
+        "action_phase(run,phase)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(runner,axis)": 38.3333,
+        "continuity(runner)": 7.3333,
+        "action_phase(run,phase)": 5.3333
+      },
+      "content_score_raw": "60"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "v5",
+    "a1",
+    "a2",
+    "a3",
+    "a5"
+  ]
+}

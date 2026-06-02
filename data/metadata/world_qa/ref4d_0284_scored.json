@@ -1,0 +1,211 @@
+{
+  "summary": {
+    "items": 10,
+    "enter_bank": 10,
+    "clip_range_sec": [
+      0.0,
+      6.57
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does the rotating arm of the machine continuously move to position each green bag for filling and sealing while remaining stable on the table?",
+      "signals": [
+        "trajectory_dir(oX,axis)",
+        "rigid_transform(oX)",
+        "balance(oX)",
+        "support(oA,oB)"
+      ],
+      "content_score_60": 58,
+      "signal_score_40": 40.0,
+      "total_score_100": 98.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(oX,axis)": 38.3333,
+        "rigid_transform(oX)": 7.5,
+        "balance(oX)": 7.1667,
+        "support(oA,oB)": 7.0
+      },
+      "content_score_raw": "58"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Do the green bags get filled and sealed by the machine without spillage or leakage during operation?",
+      "signals": [
+        "pour_direction(oV,axis)",
+        "leakage(oV,from:oContainer)",
+        "pourable(oContainer)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "leakage(oV,from:oContainer)": 29.1667,
+        "pour_direction(oV,axis)": 5.6667,
+        "pourable(oContainer)": 5.1667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Are the green bags designed to hang from the machine's mechanism, allowing automated processing with balanced components?",
+      "signals": [
+        "containment(oA,oB)",
+        "tool_contact(oTool,oObj)",
+        "balance(oX)"
+      ],
+      "content_score_60": 52,
+      "signal_score_40": 40.0,
+      "total_score_100": 92.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "balance(oX)": 35.8333,
+        "containment(oA,oB)": 5.8333,
+        "tool_contact(oTool,oObj)": 5.6667
+      },
+      "content_score_raw": "52"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Does the movement of the objects in the scene follow a continuous trajectory throughout the clip?",
+      "signals": [
+        "continuity(oX)"
+      ],
+      "content_score_60": 54,
+      "signal_score_40": 36.67,
+      "total_score_100": 90.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(oX)": 36.6667
+      },
+      "content_score_raw": "54"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Is the shadow cast by the machinery consistent with its position and shape?",
+      "signals": [
+        "shadow_consistency(oX)"
+      ],
+      "content_score_60": 56,
+      "signal_score_40": 36.67,
+      "total_score_100": 92.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "shadow_consistency(oX)": 36.6667
+      },
+      "content_score_raw": "56"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "The machine's rotating arm positions green bags for filling and sealing.",
+      "signals": [
+        "trajectory_dir(oX,axis)",
+        "rigid_transform(oX)",
+        "containment(oA,oB)",
+        "tool_contact(oTool,oObj)"
+      ],
+      "content_score_60": 59,
+      "signal_score_40": 40.0,
+      "total_score_100": 99.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(oX,axis)": 38.3333,
+        "rigid_transform(oX)": 7.5,
+        "containment(oA,oB)": 5.8333,
+        "tool_contact(oTool,oObj)": 5.6667
+      },
+      "content_score_raw": "59"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "The metallic structure of the machine remains stable on the table during its rotation.",
+      "signals": [
+        "balance(oX)",
+        "support(oA,oB)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "balance(oX)": 35.8333,
+        "support(oA,oB)": 7.0
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "Green bags are filled and sealed by the machine without spillage or leakage.",
+      "signals": [
+        "pour_direction(oV,axis)",
+        "leakage(oV,from:oContainer)",
+        "pourable(oContainer)"
+      ],
+      "content_score_60": 49,
+      "signal_score_40": 40.0,
+      "total_score_100": 89.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "leakage(oV,from:oContainer)": 29.1667,
+        "pour_direction(oV,axis)": 5.6667,
+        "pourable(oContainer)": 5.1667
+      },
+      "content_score_raw": "49"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "Objects in the scene move along continuous trajectories.",
+      "signals": [
+        "continuity(oX)"
+      ],
+      "content_score_60": 54,
+      "signal_score_40": 36.67,
+      "total_score_100": 90.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(oX)": 36.6667
+      },
+      "content_score_raw": "54"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "Shadows cast by the machinery match its position and shape.",
+      "signals": [
+        "shadow_consistency(oX)"
+      ],
+      "content_score_60": 56,
+      "signal_score_40": 36.67,
+      "total_score_100": 92.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "shadow_consistency(oX)": 36.6667
+      },
+      "content_score_raw": "56"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "v5",
+    "a1",
+    "a2",
+    "a3",
+    "a4",
+    "a5"
+  ]
+}

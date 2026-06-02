@@ -1,0 +1,178 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0039.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "cv2",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "kangaroo",
+        "attributes": {
+          "color": [
+            "gray"
+          ],
+          "pattern": [
+            "white-spotted"
+          ],
+          "action": [
+            "jumping"
+          ],
+          "pose": [
+            "bent-legs"
+          ],
+          "orientation": [
+            "facing-right"
+          ],
+          "position": [
+            "background",
+            "foreground",
+            "midground"
+          ],
+          "signature": [
+            "gray-spotted-jumping"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            1.3
+          ],
+          [
+            1.6,
+            2.0
+          ],
+          [
+            2.9,
+            6.8
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "kangaroo",
+        "attributes": {
+          "color": [
+            "gray"
+          ],
+          "action": [
+            "sitting"
+          ],
+          "pose": [
+            "sitting"
+          ],
+          "orientation": [
+            "facing-left"
+          ],
+          "position": [
+            "background"
+          ],
+          "signature": [
+            "gray-sitting"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            0.2
+          ],
+          [
+            3.4,
+            6.8
+          ]
+        ]
+      },
+      {
+        "id": "o3",
+        "name": "kangaroo",
+        "attributes": {
+          "signature": [
+            "kangaroo-coarse"
+          ]
+        },
+        "spans": [
+          [
+            8.7,
+            10.2
+          ]
+        ]
+      },
+      {
+        "id": "o4",
+        "name": "tree",
+        "attributes": {
+          "signature": [
+            "tree-coarse"
+          ]
+        },
+        "spans": [
+          [
+            8.7,
+            10.2
+          ]
+        ]
+      }
+    ],
+    "relations": [
+      {
+        "subject": "o1",
+        "predicate": "left-of",
+        "object": "o2",
+        "spans": [
+          [
+            0.0,
+            0.2
+          ]
+        ],
+        "confidence": 0.8
+      },
+      {
+        "subject": "o1",
+        "predicate": "approaching",
+        "object": "o2",
+        "spans": [
+          [
+            0.5,
+            0.7
+          ]
+        ],
+        "confidence": 0.8
+      },
+      {
+        "subject": "o1",
+        "predicate": "passing",
+        "object": "o2",
+        "spans": [
+          [
+            3.4,
+            6.8
+          ]
+        ],
+        "confidence": 0.8
+      },
+      {
+        "subject": "o1",
+        "predicate": "looking-at",
+        "object": "o2",
+        "spans": [
+          [
+            3.4,
+            6.8
+          ]
+        ],
+        "confidence": 0.8
+      }
+    ]
+  },
+  "views": {
+    "objects_count_display": {
+      "kangaroo": 3,
+      "tree": 1
+    }
+  }
+}

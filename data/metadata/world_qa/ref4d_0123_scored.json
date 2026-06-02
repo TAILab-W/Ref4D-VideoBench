@@ -1,0 +1,204 @@
+{
+  "summary": {
+    "items": 10,
+    "enter_bank": 9,
+    "clip_range_sec": [
+      0.0,
+      8.33
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does the statue remain a single cohesive object without interpenetration or collision with other objects?",
+      "signals": [
+        "center_of_mass_over_base(hus-monument)",
+        "interpenetration(statue,hus-monument)",
+        "collision(statue,hus-monument)",
+        "continuity(statue)",
+        "interpenetration(statue,other)",
+        "collision(statue,other)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(statue)": 36.6667,
+        "interpenetration(statue,hus-monument)": 7.1667,
+        "interpenetration(statue,other)": 7.1667,
+        "center_of_mass_over_base(hus-monument)": 6.5,
+        "collision(statue,hus-monument)": 6.3333,
+        "collision(statue,other)": 6.3333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Does the text overlay stay in its initial position and size throughout the video?",
+      "signals": [
+        "frame_discontinuity(t)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "frame_discontinuity(t)": 40.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Are the birds present consistently, matching real-world expectations for their size relative to the buildings?",
+      "signals": [
+        "size_inconsistency(bird)"
+      ],
+      "content_score_60": 30,
+      "signal_score_40": 37.5,
+      "total_score_100": 67.5,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "size_inconsistency(bird)": 37.5
+      },
+      "content_score_raw": "30"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Do the shadows on the background buildings' surfaces align correctly with the light source direction?",
+      "signals": [
+        "cast_shadow_contact(building,shadow)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 37.5,
+      "total_score_100": 87.5,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "cast_shadow_contact(building,shadow)": 37.5
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Does the statue maintain structural integrity without any parts appearing to penetrate each other?",
+      "signals": [
+        "continuity(statue)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 36.67,
+      "total_score_100": 96.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(statue)": 36.6667
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "The text \"THE MONUMENT IN THE CATHOLICS\" remains at the bottom of the frame.",
+      "signals": [
+        "frame_discontinuity(t)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "frame_discontinuity(t)": 40.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "The statue stands on its base without interpenetration or collision.",
+      "signals": [
+        "center_of_mass_over_base(hus-monument)",
+        "interpenetration(statue,hus-monument)",
+        "collision(statue,hus-monument)",
+        "continuity(statue)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(statue)": 36.6667,
+        "interpenetration(statue,hus-monument)": 7.1667,
+        "center_of_mass_over_base(hus-monument)": 6.5,
+        "collision(statue,hus-monument)": 6.3333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "The statue is a single cohesive object with no parts colliding or penetrating each other.",
+      "signals": [
+        "continuity(statue)",
+        "interpenetration(statue,other)",
+        "collision(statue,other)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(statue)": 36.6667,
+        "interpenetration(statue,other)": 7.1667,
+        "collision(statue,other)": 6.3333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "Shadows from buildings are visible on their surfaces in the background.",
+      "signals": [
+        "cast_shadow_contact(building,shadow)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 37.5,
+      "total_score_100": 87.5,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "cast_shadow_contact(building,shadow)": 37.5
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "No falling hazards, such as loose parts or unstable structures, are present.",
+      "signals": [
+        "falling_hazard(statue)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 31.67,
+      "total_score_100": 91.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "falling_hazard(statue)": 31.6667
+      },
+      "content_score_raw": "60"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v4",
+    "v5",
+    "a1",
+    "a2",
+    "a3",
+    "a4",
+    "a5"
+  ]
+}

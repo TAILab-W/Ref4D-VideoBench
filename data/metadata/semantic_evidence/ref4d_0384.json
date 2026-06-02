@@ -1,0 +1,86 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0384.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "decord",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "soccer-player",
+        "attributes": {
+          "color": [
+            "black",
+            "yellow"
+          ],
+          "pattern": [
+            "solid"
+          ],
+          "size": [
+            "adult"
+          ],
+          "sex": [
+            "male"
+          ],
+          "state": [
+            "active"
+          ],
+          "pose": [
+            "celebrating",
+            "running"
+          ],
+          "action": [
+            "celebrating",
+            "kicking-ball",
+            "running"
+          ],
+          "orientation": [
+            "facing-forward"
+          ],
+          "facing-direction": [
+            "towards-camera"
+          ],
+          "position": [
+            "field",
+            "midground"
+          ],
+          "object-part": [
+            "arms",
+            "feet",
+            "head",
+            "legs"
+          ],
+          "equipment": [
+            "soccer-shoes",
+            "soccer-uniform"
+          ],
+          "printed-text": [
+            "krex",
+            "renewi-waste-no-more-renew-de-watertoren",
+            "voetbalshop.nl"
+          ],
+          "signature": [
+            "yellow-black-shirt-number-30"
+          ]
+        },
+        "spans": [
+          [
+            0.2,
+            9.8
+          ]
+        ]
+      }
+    ],
+    "relations": []
+  },
+  "views": {
+    "objects_count_display": {
+      "soccer-player": 1
+    }
+  }
+}

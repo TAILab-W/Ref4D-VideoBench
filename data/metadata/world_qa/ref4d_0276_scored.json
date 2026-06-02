@@ -1,0 +1,196 @@
+{
+  "summary": {
+    "items": 10,
+    "enter_bank": 7,
+    "clip_range_sec": [
+      0.0,
+      7.23
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Do cigarettes continuously appear and align in the machine's cylindrical part without sudden gaps or collisions?",
+      "signals": [
+        "continuity(cigarette)",
+        "interpenetration(oA,oB)",
+        "collision(oA,oB)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(cigarette)": 36.6667,
+        "interpenetration(oA,oB)": 7.1667,
+        "collision(oA,oB)": 6.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Does the hand avoid contact with hot surfaces while holding a cigarette pack from the machine?",
+      "signals": [
+        "hot_surface_contact(hand,machine)",
+        "grasp_stability(oHand,oObj)"
+      ],
+      "content_score_60": 40,
+      "signal_score_40": 39.83,
+      "total_score_100": 79.83,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "hot_surface_contact(hand,machine)": 34.1667,
+        "grasp_stability(oHand,oObj)": 5.6667
+      },
+      "content_score_raw": "40"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Are green lights visible on the red machine, indicating operational status during stable feeding of cigarettes?",
+      "signals": [
+        "tool_contact(oTool,oObj)",
+        "grasp_stability"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 34.0,
+      "total_score_100": 84.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "tool_contact(oTool,oObj)": 28.3333,
+        "grasp_stability": 5.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Does the hand maintain a stable grasp on the red machine while receiving cigarettes?",
+      "signals": [
+        "grasp_stability(hand,machine)",
+        "grasp_stability(oHand,oObj)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 34.0,
+      "total_score_100": 84.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "grasp_stability(hand,machine)": 28.3333,
+        "grasp_stability(oHand,oObj)": 5.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Is cigarette paper continuously fed into the machine without interruptions?",
+      "signals": [
+        "continuity"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 36.67,
+      "total_score_100": 86.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity": 36.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "Cigarettes are produced and dispensed continuously without interpenetration or collision.",
+      "signals": [
+        "continuity(cigarette)",
+        "interpenetration(oA,oB)",
+        "collision(oA,oB)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(cigarette)": 36.6667,
+        "interpenetration(oA,oB)": 7.1667,
+        "collision(oA,oB)": 6.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "The hand holding the red machine maintains grasp stability throughout the process.",
+      "signals": [
+        "grasp_stability(hand,machine)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 28.33,
+      "total_score_100": 78.33,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "grasp_stability(hand,machine)": 28.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "The person's hand is positioned away from any hot surfaces or moving parts of the machine.",
+      "signals": [
+        "hot_surface_contact(hand,machine)"
+      ],
+      "content_score_60": 30,
+      "signal_score_40": 34.17,
+      "total_score_100": 64.17,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "hot_surface_contact(hand,machine)": 34.1667
+      },
+      "content_score_raw": "30"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "Cigarette paper feeds into the machine in a continuous manner.",
+      "signals": [
+        "continuity"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 36.67,
+      "total_score_100": 86.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity": 36.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "Shadows cast by objects on the surface below remain consistent with their position and shape.",
+      "signals": [
+        "shadow_consistency"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 36.67,
+      "total_score_100": 86.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "shadow_consistency": 36.6667
+      },
+      "content_score_raw": "50"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v3",
+    "v4",
+    "v5",
+    "a1",
+    "a4",
+    "a5"
+  ]
+}

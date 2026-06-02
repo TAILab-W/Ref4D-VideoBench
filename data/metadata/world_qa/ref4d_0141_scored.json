@@ -1,0 +1,196 @@
+{
+  "summary": {
+    "items": 10,
+    "enter_bank": 9,
+    "clip_range_sec": [
+      0.0,
+      6.2
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does the water surface reflect the buildings and sky consistently without sudden changes?",
+      "signals": [
+        "reflection_consistency(oX)",
+        "continuity(oX)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(oX)": 36.6667,
+        "reflection_consistency(oX)": 7.0
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Is the crane positioned safely away from any immediate falling hazards into the water below?",
+      "signals": [
+        "falling_hazard(oObj)",
+        "prohibited_intersection(oA,oB)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "prohibited_intersection(oA,oB)": 36.6667,
+        "falling_hazard(oObj)": 6.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Do the trees along the riverbank show signs of instability or fall into the water?",
+      "signals": [
+        "balance(oX)",
+        "friction_sliding(oA,on:oB)"
+      ],
+      "content_score_60": 58,
+      "signal_score_40": 40.0,
+      "total_score_100": 98.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "balance(oX)": 35.8333,
+        "friction_sliding(oA,on:oB)": 6.0
+      },
+      "content_score_raw": "58"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Are shadows between objects and their shadows consistent across the clip?",
+      "signals": [
+        "shadow_consistency"
+      ],
+      "content_score_60": 52,
+      "signal_score_40": 36.67,
+      "total_score_100": 88.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "shadow_consistency": 36.6667
+      },
+      "content_score_raw": "52"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Does the water surface exhibit slosh response to wind?",
+      "signals": [
+        "slosh_response"
+      ],
+      "content_score_60": 59,
+      "signal_score_40": 34.17,
+      "total_score_100": 93.17,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "slosh_response": 34.1667
+      },
+      "content_score_raw": "59"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "The water surface reflects the sky and buildings consistently.",
+      "signals": [
+        "reflection_consistency(oX)",
+        "continuity(oX)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(oX)": 36.6667,
+        "reflection_consistency(oX)": 7.0
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "The crane is positioned safely away from immediate falling hazards into the water.",
+      "signals": [
+        "falling_hazard(oObj)",
+        "prohibited_intersection(oA,oB)"
+      ],
+      "content_score_60": 36,
+      "signal_score_40": 40.0,
+      "total_score_100": 76.0,
+      "duplicate_penalized": true,
+      "signal_detail": {
+        "prohibited_intersection(oA,oB)": 36.6667,
+        "falling_hazard(oObj)": 6.3333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "Trees along the riverbank are stable and do not fall into the water.",
+      "signals": [
+        "balance(oX)",
+        "friction_sliding(oA,on:oB)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "balance(oX)": 35.8333,
+        "friction_sliding(oA,on:oB)": 6.0
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "Reflections of buildings on the water surface are consistent.",
+      "signals": [
+        "reflection_consistency"
+      ],
+      "content_score_60": 57,
+      "signal_score_40": 35.0,
+      "total_score_100": 92.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "reflection_consistency": 35.0
+      },
+      "content_score_raw": "57"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "Shadows under objects maintain consistency with their respective objects.",
+      "signals": [
+        "shadow_consistency"
+      ],
+      "content_score_60": 53,
+      "signal_score_40": 36.67,
+      "total_score_100": 89.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "shadow_consistency": 36.6667
+      },
+      "content_score_raw": "53"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "v5",
+    "a1",
+    "a3",
+    "a4",
+    "a5"
+  ]
+}

@@ -1,0 +1,139 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0234.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "cv2",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "hands",
+        "attributes": {
+          "color": [
+            "pink"
+          ],
+          "action": [
+            "pressing",
+            "shaping"
+          ],
+          "position": [
+            "center"
+          ],
+          "signature": [
+            "floured-fingers"
+          ]
+        },
+        "spans": [
+          [
+            0.1,
+            5.6
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "dough",
+        "attributes": {
+          "color": [
+            "white"
+          ],
+          "material": [
+            "flour"
+          ],
+          "state": [
+            "soft"
+          ],
+          "signature": [
+            "round-floured"
+          ]
+        },
+        "spans": [
+          [
+            0.1,
+            5.6
+          ]
+        ]
+      },
+      {
+        "id": "o3",
+        "name": "flour",
+        "attributes": {
+          "color": [
+            "yellow"
+          ],
+          "signature": [
+            "powdered-around-dough"
+          ]
+        },
+        "spans": [
+          [
+            0.1,
+            5.6
+          ]
+        ]
+      },
+      {
+        "id": "o4",
+        "name": "text",
+        "attributes": {
+          "content": [
+            "...then,-around",
+            "first,-across..."
+          ],
+          "signature": [
+            "instructional-text"
+          ]
+        },
+        "spans": [
+          [
+            0.5,
+            1.7
+          ],
+          [
+            5.1,
+            5.6
+          ]
+        ]
+      }
+    ],
+    "relations": [
+      {
+        "subject": "o1",
+        "predicate": "interacting-with",
+        "object": "o2",
+        "spans": [
+          [
+            0.1,
+            5.6
+          ]
+        ],
+        "confidence": 1.0
+      },
+      {
+        "subject": "o1",
+        "predicate": "on",
+        "object": "o3",
+        "spans": [
+          [
+            0.1,
+            5.6
+          ]
+        ],
+        "confidence": 1.0
+      }
+    ]
+  },
+  "views": {
+    "objects_count_display": {
+      "hands": 1,
+      "dough": 1,
+      "flour": 1,
+      "text": 1
+    }
+  }
+}

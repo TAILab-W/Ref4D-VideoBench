@@ -1,0 +1,131 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0002.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "cv2",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "gorilla",
+        "attributes": {
+          "signature": [
+            "gorilla-coarse"
+          ]
+        },
+        "spans": [
+          [
+            7.7,
+            15.4
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "gorilla",
+        "attributes": {
+          "signature": [
+            "gorilla-coarse"
+          ]
+        },
+        "spans": [
+          [
+            7.7,
+            15.4
+          ]
+        ]
+      },
+      {
+        "id": "o3",
+        "name": "window",
+        "attributes": {
+          "signature": [
+            "window-coarse"
+          ]
+        },
+        "spans": [
+          [
+            7.7,
+            15.4
+          ]
+        ]
+      },
+      {
+        "id": "o4",
+        "name": "sand",
+        "attributes": {
+          "signature": [
+            "sand-coarse"
+          ]
+        },
+        "spans": [
+          [
+            7.7,
+            15.4
+          ]
+        ]
+      },
+      {
+        "id": "o5",
+        "name": "bucket",
+        "attributes": {
+          "signature": [
+            "bucket-coarse"
+          ]
+        },
+        "spans": [
+          [
+            7.7,
+            15.4
+          ]
+        ]
+      },
+      {
+        "id": "o6",
+        "name": "rope",
+        "attributes": {
+          "signature": [
+            "rope-coarse"
+          ]
+        },
+        "spans": [
+          [
+            7.7,
+            15.4
+          ]
+        ]
+      },
+      {
+        "id": "o7",
+        "name": "hanging_object",
+        "attributes": {
+          "signature": [
+            "hanging_object-coarse"
+          ]
+        },
+        "spans": [
+          [
+            7.7,
+            15.4
+          ]
+        ]
+      }
+    ],
+    "relations": []
+  },
+  "views": {
+    "objects_count_display": {
+      "gorilla": 2,
+      "window": 1,
+      "sand": 1,
+      "bucket": 1,
+      "rope": 1,
+      "hanging_object": 1
+    }
+  }
+}

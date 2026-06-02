@@ -1,0 +1,221 @@
+{
+  "summary": {
+    "items": 10,
+    "enter_bank": 10,
+    "clip_range_sec": [
+      0.0,
+      9.2
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Are passengers on the platform behind safety barriers?",
+      "signals": [
+        "trajectory_dir(train,axis)",
+        "center_of_mass_over_base(train)",
+        "containment(person,platform)",
+        "collision(person,train)",
+        "friction_sliding(person,on:platform)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(train,axis)": 38.3333,
+        "center_of_mass_over_base(train)": 6.5,
+        "collision(person,train)": 6.3333,
+        "friction_sliding(person,on:platform)": 6.0,
+        "containment(person,platform)": 5.8333
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Does the train follow the track alignment without abrupt deviation?",
+      "signals": [
+        "trajectory_dir(train,axis)",
+        "continuity(train)",
+        "support(train,track)",
+        "wheel_rolling(train)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(train,axis)": 38.3333,
+        "continuity(train)": 7.3333,
+        "support(train,track)": 7.0,
+        "wheel_rolling(train)": 6.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Does the train's shadow move in the same direction as the train along the elevated tracks?",
+      "signals": [
+        "shadow_consistency(oX)",
+        "support(oA,oB)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "shadow_consistency(oX)": 36.6667,
+        "support(oA,oB)": 7.0
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Do the train wheels roll smoothly on the tracks with no sudden size change?",
+      "signals": [
+        "wheel_rolling(oX)",
+        "continuity(oX)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(oX)": 36.6667,
+        "wheel_rolling(oX)": 6.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Is the platform edge clearly visible to prevent falls?",
+      "signals": [
+        "friction_sliding(person,on:platform)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 30.0,
+      "total_score_100": 80.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "friction_sliding(person,on:platform)": 30.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "Passengers on the platform stand behind blue safety barriers.",
+      "signals": [
+        "trajectory_dir(train,axis)",
+        "center_of_mass_over_base(train)",
+        "containment(person,platform)",
+        "collision(person,train)",
+        "friction_sliding(person,on:platform)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(train,axis)": 38.3333,
+        "center_of_mass_over_base(train)": 6.5,
+        "collision(person,train)": 6.3333,
+        "friction_sliding(person,on:platform)": 6.0,
+        "containment(person,platform)": 5.8333
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "The train moves along elevated tracks, following a straight path.",
+      "signals": [
+        "trajectory_dir(train,axis)",
+        "continuity(train)",
+        "support(train,track)",
+        "wheel_rolling(train)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(train,axis)": 38.3333,
+        "continuity(train)": 7.3333,
+        "support(train,track)": 7.0,
+        "wheel_rolling(train)": 6.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "Platform edge is visible and separated from moving trains by ceiling structure.",
+      "signals": [
+        "friction_sliding(person,on:platform)",
+        "support(ceiling,platform)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "support(ceiling,platform)": 35.0,
+        "friction_sliding(person,on:platform)": 6.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "Train wheels roll smoothly on tracks without size changes.",
+      "signals": [
+        "wheel_rolling(oX)",
+        "continuity(oX)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(oX)": 36.6667,
+        "wheel_rolling(oX)": 6.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "Elevated tracks support safe transit for passengers.",
+      "signals": [
+        "support(oA,oB)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 35.0,
+      "total_score_100": 85.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "support(oA,oB)": 35.0
+      },
+      "content_score_raw": "50"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "v5",
+    "a1",
+    "a2",
+    "a3",
+    "a4",
+    "a5"
+  ]
+}

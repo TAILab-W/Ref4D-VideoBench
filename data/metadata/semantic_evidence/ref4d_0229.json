@@ -1,0 +1,229 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0229.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "cv2",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "meat",
+        "attributes": {
+          "color": [
+            "brown",
+            "red"
+          ],
+          "texture": [
+            "charred",
+            "grilled"
+          ],
+          "material": [
+            "meat"
+          ],
+          "size": [
+            "large"
+          ],
+          "state": [
+            "cooked"
+          ],
+          "action": [
+            "grilling"
+          ],
+          "orientation": [
+            "horizontal"
+          ],
+          "facing-direction": [
+            "left-facing"
+          ],
+          "signature": [
+            "large-bone-red-brown-grilled"
+          ]
+        },
+        "spans": [
+          [
+            0.2,
+            1.0
+          ],
+          [
+            1.3,
+            4.8
+          ],
+          [
+            5.6,
+            6.1
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "charcoal",
+        "attributes": {
+          "color": [
+            "gray",
+            "orange",
+            "white"
+          ],
+          "state": [
+            "hot"
+          ],
+          "material": [
+            "charcoal"
+          ],
+          "action": [
+            "burning"
+          ],
+          "position": [
+            "underneath"
+          ],
+          "signature": [
+            "white-gray-hot-orange"
+          ]
+        },
+        "spans": [
+          [
+            0.2,
+            1.0
+          ],
+          [
+            1.3,
+            4.8
+          ],
+          [
+            5.6,
+            6.1
+          ]
+        ]
+      },
+      {
+        "id": "o3",
+        "name": "glove",
+        "attributes": {
+          "color": [
+            "black"
+          ],
+          "material": [
+            "glove"
+          ],
+          "action": [
+            "holding",
+            "turning"
+          ],
+          "object-part": [
+            "hand"
+          ],
+          "signature": [
+            "black-glove-hand"
+          ]
+        },
+        "spans": [
+          [
+            0.2,
+            1.0
+          ],
+          [
+            1.3,
+            4.8
+          ],
+          [
+            5.6,
+            6.1
+          ]
+        ]
+      }
+    ],
+    "relations": [
+      {
+        "subject": "o3",
+        "predicate": "holding",
+        "object": "o1",
+        "spans": [
+          [
+            0.2,
+            1.0
+          ],
+          [
+            1.3,
+            4.8
+          ],
+          [
+            5.6,
+            6.1
+          ]
+        ],
+        "confidence": 0.9
+      },
+      {
+        "subject": "o3",
+        "predicate": "turning",
+        "object": "o1",
+        "spans": [
+          [
+            0.2,
+            1.0
+          ],
+          [
+            1.3,
+            4.8
+          ],
+          [
+            5.6,
+            6.1
+          ]
+        ],
+        "confidence": 0.9
+      },
+      {
+        "subject": "o1",
+        "predicate": "overlapping",
+        "object": "o2",
+        "spans": [
+          [
+            0.2,
+            1.0
+          ],
+          [
+            1.3,
+            4.8
+          ],
+          [
+            5.6,
+            6.1
+          ]
+        ],
+        "confidence": 0.9
+      },
+      {
+        "subject": "o1",
+        "predicate": "above",
+        "object": "o2",
+        "spans": [
+          [
+            0.2,
+            1.0
+          ],
+          [
+            1.3,
+            4.8
+          ],
+          [
+            5.6,
+            6.1
+          ]
+        ],
+        "confidence": 0.9
+      }
+    ]
+  },
+  "views": {
+    "objects_count_display": {
+      "meat": 1,
+      "charcoal": 1,
+      "glove": 1
+    }
+  }
+}

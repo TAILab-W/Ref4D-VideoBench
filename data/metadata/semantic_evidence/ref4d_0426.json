@@ -1,0 +1,172 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0426.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "decord",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "person",
+        "attributes": {
+          "color": [
+            "beige",
+            "gold",
+            "maroon",
+            "white"
+          ],
+          "pattern": [
+            "embroidered"
+          ],
+          "sex": [
+            "male"
+          ],
+          "action": [
+            "adjusting",
+            "embracing",
+            "lifting"
+          ],
+          "pose": [
+            "standing"
+          ],
+          "facing-direction": [
+            "right-facing"
+          ],
+          "position": [
+            "center-left"
+          ],
+          "signature": [
+            "white-shirt-maroon-vest-gold-embroidery-beige-cap"
+          ]
+        },
+        "spans": [
+          [
+            0.2,
+            0.5
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "woman-in-black-dress",
+        "attributes": {
+          "color": [
+            "black",
+            "gold",
+            "silver"
+          ],
+          "sex": [
+            "female"
+          ],
+          "action": [
+            "embracing",
+            "standing"
+          ],
+          "pose": [
+            "standing"
+          ],
+          "facing-direction": [
+            "left-facing"
+          ],
+          "position": [
+            "center-right"
+          ],
+          "signature": [
+            "black-dress-gold-trim-silver-crown-long-hair"
+          ]
+        },
+        "spans": [
+          [
+            0.6,
+            0.9
+          ]
+        ]
+      },
+      {
+        "id": "o3",
+        "name": "woman-in-red-veil",
+        "attributes": {
+          "color": [
+            "gold",
+            "red",
+            "white"
+          ],
+          "sex": [
+            "female"
+          ],
+          "action": [
+            "standing"
+          ],
+          "pose": [
+            "standing"
+          ],
+          "facing-direction": [
+            "left-facing"
+          ],
+          "position": [
+            "background"
+          ],
+          "signature": [
+            "red-veil-white-dress-gold-trim"
+          ]
+        },
+        "spans": [
+          [
+            0.2,
+            0.5
+          ]
+        ]
+      }
+    ],
+    "relations": [
+      {
+        "subject": "o1",
+        "predicate": "holding",
+        "object": "o2",
+        "spans": [
+          [
+            0.3,
+            0.6
+          ]
+        ],
+        "confidence": 0.9
+      },
+      {
+        "subject": "o1",
+        "predicate": "embracing",
+        "object": "o2",
+        "spans": [
+          [
+            0.7,
+            1.0
+          ]
+        ],
+        "confidence": 0.9
+      },
+      {
+        "subject": "o1",
+        "predicate": "adjusting",
+        "object": "o2",
+        "spans": [
+          [
+            0.4,
+            0.7
+          ]
+        ],
+        "confidence": 0.8
+      }
+    ]
+  },
+  "views": {
+    "objects_count_display": {
+      "person": 1,
+      "woman-in-black-dress": 1,
+      "woman-in-red-veil": 1
+    }
+  }
+}

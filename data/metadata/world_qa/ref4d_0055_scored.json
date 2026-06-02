@@ -1,0 +1,185 @@
+{
+  "summary": {
+    "items": 10,
+    "enter_bank": 8,
+    "clip_range_sec": [
+      0.0,
+      10.77
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does the cat remain in a stable resting position on the wooden floor without any movement?",
+      "signals": [
+        "continuity(cat)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 36.67,
+      "total_score_100": 86.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(cat)": 36.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Does the cat's posture maintain continuity throughout the clip?",
+      "signals": [
+        "continuity(cat)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 36.67,
+      "total_score_100": 86.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(cat)": 36.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Is the shadow of the cat consistent with its body shape and light source direction?",
+      "signals": [
+        "shadow_consistency(cats_shadow)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 36.67,
+      "total_score_100": 86.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "shadow_consistency(cats_shadow)": 36.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Are there no falling hazards or unsafe conditions around the cat?",
+      "signals": [
+        "falling_hazard(cat)"
+      ],
+      "content_score_60": 40,
+      "signal_score_40": 31.67,
+      "total_score_100": 71.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "falling_hazard(cat)": 31.6667
+      },
+      "content_score_raw": "40"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Is the cat's position on the wooden floor stable and supported?",
+      "signals": [
+        "continuity(cat)",
+        "falling_hazard(cat)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(cat)": 36.6667,
+        "falling_hazard(cat)": 6.3333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "The cat remains in a stable resting position on the wooden floor.",
+      "signals": [
+        "continuity(cat)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 36.67,
+      "total_score_100": 96.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(cat)": 36.6667
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "The cat's posture and position maintain continuity without sudden changes.",
+      "signals": [
+        "continuity(cat)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 36.67,
+      "total_score_100": 96.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(cat)": 36.6667
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "The shadow cast by the cat is consistent with its body shape and light source direction.",
+      "signals": [
+        "shadow_consistency(cats_shadow)"
+      ],
+      "content_score_60": 36,
+      "signal_score_40": 36.67,
+      "total_score_100": 72.67,
+      "duplicate_penalized": true,
+      "signal_detail": {
+        "shadow_consistency(cats_shadow)": 36.6667
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "The environment around the cat appears stable.",
+      "signals": [
+        "falling_hazard(cat)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 31.67,
+      "total_score_100": 91.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "falling_hazard(cat)": 31.6667
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "No falling hazards or unsafe conditions for the cat are visible.",
+      "signals": [
+        "falling_hazard(cat)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 31.67,
+      "total_score_100": 91.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "falling_hazard(cat)": 31.6667
+      },
+      "content_score_raw": "60"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v5",
+    "a1",
+    "a2",
+    "a4",
+    "a5"
+  ]
+}

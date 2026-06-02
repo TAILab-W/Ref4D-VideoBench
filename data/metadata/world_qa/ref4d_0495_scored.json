@@ -1,0 +1,195 @@
+{
+  "summary": {
+    "items": 10,
+    "enter_bank": 8,
+    "clip_range_sec": [
+      0.0,
+      9.73
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does the player in front maintain continuous movement without sudden frame discontinuity?",
+      "signals": [
+        "continuity(oX)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 36.67,
+      "total_score_100": 86.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(oX)": 36.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Do the players' arms and bodies show natural biological motion during dance actions?",
+      "signals": [
+        "biological_motion(team-member-with-'c'-on-jersey)",
+        "continuity"
+      ],
+      "content_score_60": 40,
+      "signal_score_40": 40.0,
+      "total_score_100": 80.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "biological_motion(team-member-with-'c'-on-jersey)": 38.3333,
+        "continuity": 7.3333
+      },
+      "content_score_raw": "40"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Are the players' shadows on the ground consistent with their postures throughout the clip?",
+      "signals": [
+        "shadow_consistency(oX)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 36.67,
+      "total_score_100": 96.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "shadow_consistency(oX)": 36.6667
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Are the athletes standing on a solid court surface for support during dynamic activities?",
+      "signals": [
+        "support(court,team-member-with-'wa'-on-front)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 35.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "support(court,team-member-with-'wa'-on-front)": 35.0
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Do the yellow uniforms have 'JAMAICA' text, indicating team identity?",
+      "signals": [
+        "supportable"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 26.67,
+      "total_score_100": 76.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "supportable": 26.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "The player in the foreground moves her arms and body continuously without frame discontinuity.",
+      "signals": [
+        "continuity(oX)",
+        "balance(oX)",
+        "trajectory_dir(oX,axis)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(oX,axis)": 38.3333,
+        "continuity(oX)": 7.3333,
+        "balance(oX)": 7.1667
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "The players perform natural dance motions with their arms raised, consistent with human anatomy.",
+      "signals": [
+        "biological_motion(oA)",
+        "biological_motion(team-member-with-'c'-on-jersey)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "biological_motion(oA)": 38.3333,
+        "biological_motion(team-member-with-'c'-on-jersey)": 7.6667
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "The athletes stand on a solid court surface wearing yellow netball uniforms and sports shoes.",
+      "signals": [
+        "support(court,team-member-with-'wa'-on-front)",
+        "supportable"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "support(court,team-member-with-'wa'-on-front)": 35.0,
+        "supportable": 5.3333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "Shadows of the players match their positions and movements under the light source.",
+      "signals": [
+        "shadow_consistency(oX)",
+        "shadow_consistency"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "shadow_consistency(oX)": 36.6667,
+        "shadow_consistency": 7.3333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "'JAMAICA' text is visible on the front of the players' yellow jerseys.",
+      "signals": [
+        "goal_placement"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 26.67,
+      "total_score_100": 76.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "goal_placement": 26.6667
+      },
+      "content_score_raw": "50"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "a1",
+    "a2",
+    "a3",
+    "a4"
+  ]
+}

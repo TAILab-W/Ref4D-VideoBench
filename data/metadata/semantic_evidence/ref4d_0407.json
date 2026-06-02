@@ -1,0 +1,144 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0407.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "decord",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "person",
+        "attributes": {
+          "signature": [
+            "person-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            7.7
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "person",
+        "attributes": {
+          "signature": [
+            "person-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            7.7
+          ]
+        ]
+      },
+      {
+        "id": "o3",
+        "name": "tree",
+        "attributes": {
+          "signature": [
+            "tree-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            7.7
+          ]
+        ]
+      },
+      {
+        "id": "o4",
+        "name": "tree",
+        "attributes": {
+          "signature": [
+            "tree-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            7.7
+          ]
+        ]
+      },
+      {
+        "id": "o5",
+        "name": "building",
+        "attributes": {
+          "signature": [
+            "building-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            7.7
+          ]
+        ]
+      },
+      {
+        "id": "o6",
+        "name": "building",
+        "attributes": {
+          "signature": [
+            "building-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            7.7
+          ]
+        ]
+      },
+      {
+        "id": "o7",
+        "name": "building",
+        "attributes": {
+          "signature": [
+            "building-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            7.7
+          ]
+        ]
+      },
+      {
+        "id": "o8",
+        "name": "bicycle",
+        "attributes": {
+          "signature": [
+            "bicycle-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            7.7
+          ]
+        ]
+      }
+    ],
+    "relations": []
+  },
+  "views": {
+    "objects_count_display": {
+      "person": 2,
+      "tree": 2,
+      "building": 3,
+      "bicycle": 1
+    }
+  }
+}

@@ -1,0 +1,217 @@
+{
+  "summary": {
+    "items": 10,
+    "enter_bank": 10,
+    "clip_range_sec": [
+      0.0,
+      12.4
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Do the cows and baby cow stay on the road without sudden disappearance?",
+      "signals": [
+        "collision(oA,oB)",
+        "continuity(cow)",
+        "continuity(baby-cow)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(cow)": 36.6667,
+        "continuity(baby-cow)": 7.3333,
+        "collision(oA,oB)": 6.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Are animals crossing a curved road near traffic signs, indicating potential collision risk with vehicles?",
+      "signals": [
+        "trajectory_dir(cow,axis)",
+        "accel_sign(cow,axis)",
+        "falling_hazard(cow)",
+        "collision(oA,oB)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(cow,axis)": 38.3333,
+        "accel_sign(cow,axis)": 7.0,
+        "falling_hazard(cow)": 6.3333,
+        "collision(oA,oB)": 6.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Does the motorcycle travel continuously along clear lane markings at realistic speed?",
+      "signals": [
+        "trajectory_dir(motorcycle,axis)",
+        "accel_sign(motorcycle,axis)",
+        "wheel_rolling(motorcycle)",
+        "continuity(motorcycle_trajectory)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(motorcycle,axis)": 38.3333,
+        "continuity(motorcycle_trajectory)": 7.3333,
+        "accel_sign(motorcycle,axis)": 7.0,
+        "wheel_rolling(motorcycle)": 6.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Across the clip, do the cows maintain consistent size relative to their environment?",
+      "signals": [
+        "size_inconsistency(oX)",
+        "biological_motion(cows)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "biological_motion(cows)": 38.3333,
+        "size_inconsistency(oX)": 7.5
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Does the shadow of the cow consistently contact its body?",
+      "signals": [
+        "cast_shadow_contact(cow_shadow,cow)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 37.5,
+      "total_score_100": 87.5,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "cast_shadow_contact(cow_shadow,cow)": 37.5
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "A motorcycle travels on a road with clear lane markings and guardrails.",
+      "signals": [
+        "trajectory_dir(motorcycle,axis)",
+        "accel_sign(motorcycle,axis)",
+        "wheel_rolling(motorcycle)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(motorcycle,axis)": 38.3333,
+        "accel_sign(motorcycle,axis)": 7.0,
+        "wheel_rolling(motorcycle)": 6.0
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "Cows cross a curved road near traffic signs, indicating potential collision risk with vehicles.",
+      "signals": [
+        "trajectory_dir(cow,axis)",
+        "accel_sign(cow,axis)",
+        "falling_hazard(cow)",
+        "collision(oA,oB)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(cow,axis)": 38.3333,
+        "accel_sign(cow,axis)": 7.0,
+        "falling_hazard(cow)": 6.3333,
+        "collision(oA,oB)": 6.3333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "Animals are visible on the road without sudden disappearance or merging during the scene.",
+      "signals": [
+        "collision(oA,oB)",
+        "continuity(cow)",
+        "continuity(baby-cow)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(cow)": 36.6667,
+        "continuity(baby-cow)": 7.3333,
+        "collision(oA,oB)": 6.3333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "The cows move in a natural manner consistent with their biological motion.",
+      "signals": [
+        "biological_motion(cows)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 38.33,
+      "total_score_100": 98.33,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "biological_motion(cows)": 38.3333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "The motorcycle's wheels roll continuously along the road.",
+      "signals": [
+        "continuity(motorcycle_trajectory)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 36.67,
+      "total_score_100": 96.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(motorcycle_trajectory)": 36.6667
+      },
+      "content_score_raw": "60"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "v5",
+    "a1",
+    "a2",
+    "a3",
+    "a4",
+    "a5"
+  ]
+}

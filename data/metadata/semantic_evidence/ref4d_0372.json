@@ -1,0 +1,116 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0372.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "decord",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "wave",
+        "attributes": {
+          "color": [
+            "blue-green"
+          ],
+          "pattern": [
+            "foamy-crest"
+          ],
+          "texture": [
+            "rough"
+          ],
+          "material": [
+            "water"
+          ],
+          "size": [
+            "large"
+          ],
+          "state": [
+            "breaking"
+          ],
+          "action": [
+            "advancing"
+          ],
+          "orientation": [
+            "horizontal"
+          ],
+          "facing-direction": [
+            "left"
+          ],
+          "position": [
+            "center"
+          ],
+          "signature": [
+            "large,-blue-green,-foamy-crest,-rough,-water,-breaking,-advancing,-horizontal,-facing-left,-center"
+          ]
+        },
+        "spans": [
+          [
+            0.1,
+            6.0
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "person",
+        "attributes": {
+          "color": [
+            "dark"
+          ],
+          "size": [
+            "small"
+          ],
+          "state": [
+            "submerged"
+          ],
+          "action": [
+            "swimming"
+          ],
+          "orientation": [
+            "horizontal"
+          ],
+          "facing-direction": [
+            "right"
+          ],
+          "position": [
+            "top-center"
+          ],
+          "signature": [
+            "small,-dark,-submerged,-swimming,-horizontal,-facing-right,-top-center"
+          ]
+        },
+        "spans": [
+          [
+            2.5,
+            3.5
+          ]
+        ]
+      }
+    ],
+    "relations": [
+      {
+        "subject": "o2",
+        "predicate": "riding",
+        "object": "o1",
+        "spans": [
+          [
+            0.3,
+            0.4
+          ]
+        ],
+        "confidence": 0.8
+      }
+    ]
+  },
+  "views": {
+    "objects_count_display": {
+      "wave": 1,
+      "person": 1
+    }
+  }
+}

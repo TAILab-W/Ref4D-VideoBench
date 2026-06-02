@@ -1,0 +1,68 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0368.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "decord",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "waterfall",
+        "attributes": {
+          "signature": [
+            "water-flow"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            6.9
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "rock",
+        "attributes": {
+          "signature": [
+            "brown,-gray-stone"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            6.9
+          ]
+        ]
+      },
+      {
+        "id": "o3",
+        "name": "grass",
+        "attributes": {
+          "signature": [
+            "green-vegetation"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            6.9
+          ]
+        ]
+      }
+    ],
+    "relations": []
+  },
+  "views": {
+    "objects_count_display": {
+      "waterfall": 1,
+      "rock": 1,
+      "grass": 1
+    }
+  }
+}

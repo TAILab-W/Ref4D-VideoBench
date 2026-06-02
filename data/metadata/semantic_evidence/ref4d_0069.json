@@ -1,0 +1,179 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0069.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "cv2",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "dolphin",
+        "attributes": {
+          "color": [
+            "light-gray",
+            "silver"
+          ],
+          "action": [
+            "playing",
+            "swimming"
+          ],
+          "pose": [
+            "vertical"
+          ],
+          "orientation": [
+            "facing-right"
+          ],
+          "position": [
+            "upper-middle"
+          ],
+          "signature": [
+            "light-gray-silver-back,-facing-right,-swimming-above-water-surface"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            9.1
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "dolphin",
+        "attributes": {
+          "color": [
+            "dark-gray"
+          ],
+          "action": [
+            "interacting",
+            "swimming"
+          ],
+          "pose": [
+            "horizontal"
+          ],
+          "orientation": [
+            "facing-d1"
+          ],
+          "position": [
+            "lower-middle"
+          ],
+          "signature": [
+            "dark-gray-belly,-more-submerged,-tail-upward,-interacting-with-d1"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            9.1
+          ]
+        ]
+      },
+      {
+        "id": "o3",
+        "name": "dolphin",
+        "attributes": {
+          "color": [
+            "dark"
+          ],
+          "action": [
+            "swimming"
+          ],
+          "pose": [
+            "horizontal"
+          ],
+          "position": [
+            "top-right"
+          ],
+          "signature": [
+            "dark-back,-partially-visible,-near-top-right-corner"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            9.1
+          ]
+        ]
+      },
+      {
+        "id": "o4",
+        "name": "text",
+        "attributes": {
+          "printed-text": [
+            "coub-by-@gabichannel"
+          ],
+          "signature": [
+            "white-text-at-bottom-right"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            9.1
+          ]
+        ]
+      }
+    ],
+    "relations": [
+      {
+        "subject": "o1",
+        "predicate": "above",
+        "object": "o2",
+        "spans": [
+          [
+            0.0,
+            9.1
+          ]
+        ],
+        "confidence": 0.9
+      },
+      {
+        "subject": "o1",
+        "predicate": "looking_at",
+        "object": "o2",
+        "spans": [
+          [
+            0.0,
+            9.1
+          ]
+        ],
+        "confidence": 0.8
+      },
+      {
+        "subject": "o2",
+        "predicate": "touching",
+        "object": "o1",
+        "spans": [
+          [
+            0.0,
+            9.1
+          ]
+        ],
+        "confidence": 0.9
+      },
+      {
+        "subject": "o2",
+        "predicate": "interacting_with",
+        "object": "o1",
+        "spans": [
+          [
+            0.0,
+            9.1
+          ]
+        ],
+        "confidence": 0.9
+      }
+    ]
+  },
+  "views": {
+    "objects_count_display": {
+      "dolphin": 3,
+      "text": 1
+    }
+  }
+}

@@ -1,0 +1,242 @@
+{
+  "summary": {
+    "items": 10,
+    "enter_bank": 9,
+    "clip_range_sec": [
+      0.0,
+      9.13
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does the rock maintain its triangular shape without changing size or position?",
+      "signals": [
+        "continuity(rock)",
+        "continuity(water)",
+        "buoyancy_float(water,in:oOcean)",
+        "continuity(oX)",
+        "balance(oX)",
+        "center_of_mass_over_base(oX)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(rock)": 36.6667,
+        "continuity(water)": 7.3333,
+        "continuity(oX)": 7.3333,
+        "balance(oX)": 7.1667,
+        "buoyancy_float(water,in:oOcean)": 6.8333,
+        "center_of_mass_over_base(oX)": 6.5
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Are the plants and palm tree stationary near the cliff edge?",
+      "signals": [
+        "support(safety_railing,cliff)",
+        "friction_sliding(person,on:safety_railing)",
+        "support(plant,foreground)",
+        "support(palm_tree,right_side)"
+      ],
+      "content_score_60": 40,
+      "signal_score_40": 40.0,
+      "total_score_100": 80.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "support(safety_railing,cliff)": 35.0,
+        "support(plant,foreground)": 7.0,
+        "support(palm_tree,right_side)": 7.0,
+        "friction_sliding(person,on:safety_railing)": 6.0
+      },
+      "content_score_raw": "40"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Does the water reflect light consistently throughout the scene?",
+      "signals": [
+        "material_optics(oA)",
+        "hue_histogram_jump(oX)",
+        "specular_highlight_consistency(oX)"
+      ],
+      "content_score_60": 45,
+      "signal_score_40": 40.0,
+      "total_score_100": 85.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "material_optics(oA)": 37.5,
+        "specular_highlight_consistency(oX)": 7.3333,
+        "hue_histogram_jump(oX)": 6.6667
+      },
+      "content_score_raw": "45"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Is the green vegetation on the top of the rock stable and not at risk of falling?",
+      "signals": [
+        "continuity(rock)",
+        "buoyancy_float(water,in:oOcean)",
+        "material_optics(rock)",
+        "support(oA,oB)",
+        "friction_sliding(oA,on:oB)"
+      ],
+      "content_score_60": 35,
+      "signal_score_40": 40.0,
+      "total_score_100": 75.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "material_optics(rock)": 37.5,
+        "continuity(rock)": 7.3333,
+        "support(oA,oB)": 7.0,
+        "buoyancy_float(water,in:oOcean)": 6.8333,
+        "friction_sliding(oA,on:oB)": 6.0
+      },
+      "content_score_raw": "35"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Are the safety railings present along the cliff edge?",
+      "signals": [
+        "support(plant,foreground)",
+        "support(palm_tree,right_side)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "support(plant,foreground)": 35.0,
+        "support(palm_tree,right_side)": 7.0
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "The rock maintains its triangular shape with green vegetation on top.",
+      "signals": [
+        "continuity(rock)",
+        "buoyancy_float(water,in:oOcean)",
+        "material_optics(rock)",
+        "continuity(water)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "material_optics(rock)": 37.5,
+        "continuity(rock)": 7.3333,
+        "continuity(water)": 7.3333,
+        "buoyancy_float(water,in:oOcean)": 6.8333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "A person wearing a brown hat stands behind safety railings near the cliff edge.",
+      "signals": [
+        "support(safety_railing,cliff)",
+        "friction_sliding(person,on:safety_railing)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "support(safety_railing,cliff)": 35.0,
+        "friction_sliding(person,on:safety_railing)": 6.0
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "Water continuously crashes against the base of the rocky island formation.",
+      "signals": [
+        "support(plant,foreground)",
+        "support(palm_tree,right_side)",
+        "continuity(oX)",
+        "balance(oX)",
+        "center_of_mass_over_base(oX)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(oX)": 36.6667,
+        "balance(oX)": 7.1667,
+        "support(plant,foreground)": 7.0,
+        "support(palm_tree,right_side)": 7.0,
+        "center_of_mass_over_base(oX)": 6.5
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "Light reflects off the water, showing consistent material properties.",
+      "signals": [
+        "material_optics(oA)",
+        "hue_histogram_jump(oX)",
+        "specular_highlight_consistency(oX)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "material_optics(oA)": 37.5,
+        "specular_highlight_consistency(oX)": 7.3333,
+        "hue_histogram_jump(oX)": 6.6667
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "The rock formation remains stable and does not move or deform.",
+      "signals": [
+        "support(plant,foreground)",
+        "support(palm_tree,right_side)",
+        "continuity(oX)",
+        "balance(oX)",
+        "center_of_mass_over_base(oX)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(oX)": 36.6667,
+        "balance(oX)": 7.1667,
+        "support(plant,foreground)": 7.0,
+        "support(palm_tree,right_side)": 7.0,
+        "center_of_mass_over_base(oX)": 6.5
+      },
+      "content_score_raw": "60"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v5",
+    "a1",
+    "a2",
+    "a3",
+    "a4",
+    "a5"
+  ]
+}

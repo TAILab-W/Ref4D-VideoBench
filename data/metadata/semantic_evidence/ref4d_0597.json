@@ -1,0 +1,126 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0597.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "cv2",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "car",
+        "attributes": {
+          "color": [
+            "blue"
+          ],
+          "size": [
+            "small"
+          ],
+          "position": [
+            "front",
+            "left"
+          ],
+          "make": [
+            "sedan"
+          ],
+          "state": [
+            "stopped"
+          ],
+          "signature": [
+            "blue-front-left-side"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            5.8
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "car",
+        "attributes": {
+          "color": [
+            "white"
+          ],
+          "size": [
+            "small"
+          ],
+          "position": [
+            "front"
+          ],
+          "state": [
+            "stopped"
+          ],
+          "signature": [
+            "white-front-left-side"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            6.9
+          ]
+        ]
+      },
+      {
+        "id": "o3",
+        "name": "traffic-light",
+        "attributes": {
+          "color": [
+            "orange"
+          ],
+          "state": [
+            "red"
+          ],
+          "signature": [
+            "orange-light"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            6.9
+          ]
+        ]
+      }
+    ],
+    "relations": [
+      {
+        "subject": "o1",
+        "predicate": "left-of",
+        "object": "o2",
+        "spans": [
+          [
+            0.3,
+            5.8
+          ]
+        ],
+        "confidence": 0.9
+      },
+      {
+        "subject": "o2",
+        "predicate": "at",
+        "object": "o3",
+        "spans": [
+          [
+            0.0,
+            6.9
+          ]
+        ],
+        "confidence": 0.9
+      }
+    ]
+  },
+  "views": {
+    "objects_count_display": {
+      "car": 2,
+      "traffic-light": 1
+    }
+  }
+}

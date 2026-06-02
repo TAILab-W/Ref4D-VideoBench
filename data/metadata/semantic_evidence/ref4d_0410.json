@@ -1,0 +1,238 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0410.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "decord",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "person",
+        "attributes": {
+          "color": [
+            "black",
+            "pink",
+            "red"
+          ],
+          "texture": [
+            "wet"
+          ],
+          "state": [
+            "kneeling",
+            "standing"
+          ],
+          "pose": [
+            "holding-mouth",
+            "looking-around"
+          ],
+          "action": [
+            "walking"
+          ],
+          "signature": [
+            "red-shirt-black-pants-wet-hair-pink-sandals"
+          ]
+        },
+        "spans": [
+          [
+            0.2,
+            3.5
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "adult-hand",
+        "attributes": {
+          "color": [
+            "skin-tone"
+          ],
+          "action": [
+            "reaching-out"
+          ],
+          "signature": [
+            "skin-tone"
+          ]
+        },
+        "spans": [
+          [
+            0.4,
+            2.7
+          ]
+        ]
+      },
+      {
+        "id": "o3",
+        "name": "lollipop",
+        "attributes": {
+          "color": [
+            "red"
+          ],
+          "object-part": [
+            "stick"
+          ],
+          "signature": [
+            "red-tip"
+          ]
+        },
+        "spans": [
+          [
+            0.6,
+            3.4
+          ]
+        ]
+      },
+      {
+        "id": "o4",
+        "name": "door",
+        "attributes": {
+          "color": [
+            "blue"
+          ],
+          "signature": [
+            "number-113-blue-frame"
+          ]
+        },
+        "spans": [
+          [
+            0.8,
+            3.5
+          ]
+        ]
+      },
+      {
+        "id": "o5",
+        "name": "window",
+        "attributes": {
+          "size": [
+            "large"
+          ],
+          "material": [
+            "glass"
+          ],
+          "signature": [
+            "large-glass-with-reflection"
+          ]
+        },
+        "spans": [
+          [
+            0.1,
+            3.5
+          ]
+        ]
+      },
+      {
+        "id": "o6",
+        "name": "text-on-window",
+        "attributes": {
+          "printed-text": [
+            "after-school-care",
+            "early-preschool",
+            "extended-hours",
+            "mothers-night-out",
+            "pre-kindergarten",
+            "preschool",
+            "summer-programs"
+          ],
+          "signature": [
+            "list-of-programs"
+          ]
+        },
+        "spans": [
+          [
+            1.2,
+            3.3
+          ]
+        ]
+      }
+    ],
+    "relations": [
+      {
+        "subject": "o1",
+        "predicate": "holding",
+        "object": "o3",
+        "spans": [
+          [
+            0.6,
+            3.4
+          ]
+        ],
+        "confidence": 0.9
+      },
+      {
+        "subject": "o2",
+        "predicate": "reaching-out-to",
+        "object": "o1",
+        "spans": [
+          [
+            0.4,
+            2.7
+          ]
+        ],
+        "confidence": 0.8
+      },
+      {
+        "subject": "o1",
+        "predicate": "looking-at",
+        "object": "o5",
+        "spans": [
+          [
+            0.2,
+            3.5
+          ]
+        ],
+        "confidence": 0.9
+      },
+      {
+        "subject": "o1",
+        "predicate": "walking-on",
+        "object": "o5",
+        "spans": [
+          [
+            0.2,
+            3.5
+          ]
+        ],
+        "confidence": 0.9
+      },
+      {
+        "subject": "o1",
+        "predicate": "standing-in-front-of",
+        "object": "o4",
+        "spans": [
+          [
+            0.8,
+            3.5
+          ]
+        ],
+        "confidence": 0.9
+      },
+      {
+        "subject": "o1",
+        "predicate": "looking-at",
+        "object": "o6",
+        "spans": [
+          [
+            1.2,
+            3.3
+          ]
+        ],
+        "confidence": 0.8
+      }
+    ]
+  },
+  "views": {
+    "objects_count_display": {
+      "person": 1,
+      "adult-hand": 1,
+      "lollipop": 1,
+      "door": 1,
+      "window": 1,
+      "text-on-window": 1
+    }
+  }
+}

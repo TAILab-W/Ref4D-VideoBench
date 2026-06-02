@@ -1,0 +1,62 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0558.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "cv2",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "person",
+        "attributes": {
+          "color": [
+            "blue",
+            "red"
+          ],
+          "pattern": [
+            "striped"
+          ],
+          "pose": [
+            "standing"
+          ],
+          "action": [
+            "walking"
+          ],
+          "signature": [
+            "red-blue-jacket-black-hat-backpack"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            5.8
+          ]
+        ]
+      }
+    ],
+    "relations": [
+      {
+        "subject": "o1",
+        "predicate": "wearing",
+        "object": "o1",
+        "spans": [
+          [
+            0.0,
+            5.8
+          ]
+        ],
+        "confidence": 0.9
+      }
+    ]
+  },
+  "views": {
+    "objects_count_display": {
+      "person": 1
+    }
+  }
+}

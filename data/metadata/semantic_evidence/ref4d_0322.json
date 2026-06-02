@@ -1,0 +1,146 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0322.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "decord",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "mountain",
+        "attributes": {
+          "color": [
+            "brown",
+            "white"
+          ],
+          "pattern": [
+            "snow-patches"
+          ],
+          "texture": [
+            "rocky"
+          ],
+          "material": [
+            "rock"
+          ],
+          "signature": [
+            "snow-patches,-rocky,-white-brown,-large"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            8.3
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "snow",
+        "attributes": {
+          "color": [
+            "white"
+          ],
+          "pattern": [
+            "patches"
+          ],
+          "state": [
+            "melting"
+          ],
+          "signature": [
+            "white,-patches,-melting"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            8.3
+          ]
+        ]
+      },
+      {
+        "id": "o3",
+        "name": "tree",
+        "attributes": {
+          "color": [
+            "green"
+          ],
+          "size": [
+            "small-to-medium"
+          ],
+          "facing-direction": [
+            "various"
+          ],
+          "position": [
+            "scattered"
+          ],
+          "signature": [
+            "green,-small-to-medium,-scattered"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            8.3
+          ]
+        ]
+      },
+      {
+        "id": "o4",
+        "name": "grass",
+        "attributes": {
+          "color": [
+            "green"
+          ],
+          "texture": [
+            "lush"
+          ],
+          "signature": [
+            "green,-lush"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            8.3
+          ]
+        ]
+      },
+      {
+        "id": "o5",
+        "name": "sky",
+        "attributes": {
+          "color": [
+            "blue"
+          ],
+          "pattern": [
+            "clear-with-clouds"
+          ],
+          "signature": [
+            "blue,-clear-with-clouds"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            8.3
+          ]
+        ]
+      }
+    ],
+    "relations": []
+  },
+  "views": {
+    "objects_count_display": {
+      "mountain": 1,
+      "snow": 1,
+      "tree": 1,
+      "grass": 1,
+      "sky": 1
+    }
+  }
+}

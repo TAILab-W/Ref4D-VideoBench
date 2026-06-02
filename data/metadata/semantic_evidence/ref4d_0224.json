@@ -1,0 +1,180 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0224.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "cv2",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "pan",
+        "attributes": {
+          "signature": [
+            "pan-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            7.4
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "meat",
+        "attributes": {
+          "signature": [
+            "meat-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            7.4
+          ]
+        ]
+      },
+      {
+        "id": "o3",
+        "name": "spatula",
+        "attributes": {
+          "signature": [
+            "spatula-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            7.4
+          ]
+        ]
+      },
+      {
+        "id": "o4",
+        "name": "hand",
+        "attributes": {
+          "signature": [
+            "hand-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            7.4
+          ]
+        ]
+      },
+      {
+        "id": "o5",
+        "name": "digital-thermometer",
+        "attributes": {
+          "signature": [
+            "digital-thermometer-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            7.4
+          ]
+        ]
+      },
+      {
+        "id": "o6",
+        "name": "oil",
+        "attributes": {
+          "signature": [
+            "oil-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            7.4
+          ]
+        ]
+      },
+      {
+        "id": "o7",
+        "name": "metal-rack",
+        "attributes": {
+          "signature": [
+            "metal-rack-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            7.4
+          ]
+        ]
+      },
+      {
+        "id": "o8",
+        "name": "spoon",
+        "attributes": {
+          "signature": [
+            "spoon-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            7.4
+          ]
+        ]
+      },
+      {
+        "id": "o9",
+        "name": "bun",
+        "attributes": {
+          "signature": [
+            "bun-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            7.4
+          ]
+        ]
+      },
+      {
+        "id": "o10",
+        "name": "lettuce",
+        "attributes": {
+          "signature": [
+            "lettuce-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            7.4
+          ]
+        ]
+      }
+    ],
+    "relations": []
+  },
+  "views": {
+    "objects_count_display": {
+      "pan": 1,
+      "meat": 1,
+      "spatula": 1,
+      "hand": 1,
+      "digital-thermometer": 1,
+      "oil": 1,
+      "metal-rack": 1,
+      "spoon": 1,
+      "bun": 1,
+      "lettuce": 1
+    }
+  }
+}

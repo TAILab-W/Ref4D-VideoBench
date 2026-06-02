@@ -1,0 +1,209 @@
+{
+  "summary": {
+    "items": 10,
+    "enter_bank": 10,
+    "clip_range_sec": [
+      0.0,
+      9.17
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does the basketball follow a continuous trajectory without sudden changes in position?",
+      "signals": [
+        "continuity(ball)",
+        "size_inconsistency(ball)",
+        "trajectory_dir(ball,axis)",
+        "accel_sign(ball,axis)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(ball,axis)": 38.3333,
+        "size_inconsistency(ball)": 7.5,
+        "continuity(ball)": 7.3333,
+        "accel_sign(ball,axis)": 7.0
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Does the player's jump exhibit natural biological motion with smooth landing?",
+      "signals": [
+        "biological_motion(player)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 38.33,
+      "total_score_100": 88.33,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "biological_motion(player)": 38.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Is there any player or object positioned to create a falling hazard for others?",
+      "signals": [
+        "falling_hazard(player)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 31.67,
+      "total_score_100": 86.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "falling_hazard(player)": 31.6667
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Does the ball maintain a consistent size relative to the court lines?",
+      "signals": [
+        "continuity(ball)",
+        "size_inconsistency(ball)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "size_inconsistency(ball)": 37.5,
+        "continuity(ball)": 7.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Does the player's movement follow a continuous and natural path without abrupt stops?",
+      "signals": [
+        "continuity(ball)",
+        "trajectory_dir(ball,axis)",
+        "accel_sign(ball,axis)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(ball,axis)": 38.3333,
+        "continuity(ball)": 7.3333,
+        "accel_sign(ball,axis)": 7.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "The basketball follows a continuous trajectory and maintains its size.",
+      "signals": [
+        "continuity(ball)",
+        "size_inconsistency(ball)",
+        "trajectory_dir(ball,axis)",
+        "accel_sign(ball,axis)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(ball,axis)": 38.3333,
+        "size_inconsistency(ball)": 7.5,
+        "continuity(ball)": 7.3333,
+        "accel_sign(ball,axis)": 7.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "A player in white runs towards the basket with natural motion.",
+      "signals": [
+        "biological_motion(player)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 38.33,
+      "total_score_100": 88.33,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "biological_motion(player)": 38.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "Another player jumps to catch the ball, following physical consistency.",
+      "signals": [
+        "continuity(ball)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 36.67,
+      "total_score_100": 86.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(ball)": 36.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "No player is positioned under the hoop that would create a falling hazard.",
+      "signals": [
+        "falling_hazard(player)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 31.67,
+      "total_score_100": 81.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "falling_hazard(player)": 31.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "The ball maintains its shape and does not exhibit sudden changes in position.",
+      "signals": [
+        "continuity(ball)",
+        "size_inconsistency(ball)",
+        "trajectory_dir(ball,axis)",
+        "accel_sign(ball,axis)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(ball,axis)": 38.3333,
+        "size_inconsistency(ball)": 7.5,
+        "continuity(ball)": 7.3333,
+        "accel_sign(ball,axis)": 7.0
+      },
+      "content_score_raw": "50"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "v5",
+    "a1",
+    "a2",
+    "a3",
+    "a4",
+    "a5"
+  ]
+}

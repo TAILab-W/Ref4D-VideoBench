@@ -1,0 +1,231 @@
+{
+  "summary": {
+    "items": 10,
+    "enter_bank": 10,
+    "clip_range_sec": [
+      0.0,
+      14.57
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Do the footprints follow a continuous trajectory in the sand?",
+      "signals": [
+        "continuity(footprint)",
+        "trajectory_dir(footprint,axis)",
+        "accel_sign(footprint,axis)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(footprint,axis)": 38.3333,
+        "continuity(footprint)": 7.3333,
+        "accel_sign(footprint,axis)": 7.0
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Does the smooth surface of the sand maintain its undulating shape throughout?",
+      "signals": [
+        "material_optics(sand)",
+        "hue_histogram_jump(sand)",
+        "continuity(sand)",
+        "continuity(footprint)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "material_optics(sand)": 37.5,
+        "continuity(sand)": 7.3333,
+        "continuity(footprint)": 7.3333,
+        "hue_histogram_jump(sand)": 6.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Are there no objects moving or colliding unexpectedly in the desert environment?",
+      "signals": [
+        "falling_hazard(sand)",
+        "prohibited_intersection(footprint,sand)",
+        "collision(oA,oB)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "prohibited_intersection(footprint,sand)": 36.6667,
+        "falling_hazard(sand)": 6.3333,
+        "collision(oA,oB)": 6.3333
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Do the trees and rocks remain stable without deformation or interpenetration?",
+      "signals": [
+        "deformation(tree)",
+        "fracture(tree)",
+        "biological_motion(tree)",
+        "material_optics(rock)",
+        "interpenetration(rock, sand)",
+        "interpenetration(rock, tree)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "deformation(tree)": 40.0,
+        "biological_motion(tree)": 7.6667,
+        "material_optics(rock)": 7.5,
+        "interpenetration(rock, sand)": 7.1667,
+        "interpenetration(rock, tree)": 7.1667,
+        "fracture(tree)": 6.3333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Do the shadows cast by vegetation align with the light source direction?",
+      "signals": [
+        "shadow_consistency(vegetation)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 36.67,
+      "total_score_100": 86.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "shadow_consistency(vegetation)": 36.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "Footprints in the sand maintain continuity and follow a logical trajectory direction.",
+      "signals": [
+        "continuity(footprint)",
+        "continuity(sand)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(footprint)": 36.6667,
+        "continuity(sand)": 7.3333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "Trees on the red-brown terrain remain stable with no unexpected movement.",
+      "signals": [
+        "material_optics(sand)",
+        "hue_histogram_jump(sand)",
+        "deformation(tree)",
+        "fracture(tree)",
+        "biological_motion(tree)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "deformation(tree)": 40.0,
+        "biological_motion(tree)": 7.6667,
+        "material_optics(sand)": 7.5,
+        "hue_histogram_jump(sand)": 6.6667,
+        "fracture(tree)": 6.3333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "Shadows cast by vegetation are consistent with light source direction and gravity.",
+      "signals": [
+        "trajectory_dir(footprint,axis)",
+        "accel_sign(footprint,axis)",
+        "shadow_consistency(vegetation)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(footprint,axis)": 38.3333,
+        "shadow_consistency(vegetation)": 7.3333,
+        "accel_sign(footprint,axis)": 7.0
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "The desert environment is open and stable, with no falling hazards or prohibited intersections.",
+      "signals": [
+        "falling_hazard(sand)",
+        "prohibited_intersection(footprint,sand)",
+        "collision(oA,oB)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "prohibited_intersection(footprint,sand)": 36.6667,
+        "falling_hazard(sand)": 6.3333,
+        "collision(oA,oB)": 6.3333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "Rocks forming part of the red-brown terrain show consistent material optics without interpenetration.",
+      "signals": [
+        "material_optics(rock)",
+        "interpenetration(rock, sand)",
+        "interpenetration(rock, tree)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "material_optics(rock)": 37.5,
+        "interpenetration(rock, sand)": 7.1667,
+        "interpenetration(rock, tree)": 7.1667
+      },
+      "content_score_raw": "60"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "v5",
+    "a1",
+    "a2",
+    "a3",
+    "a4",
+    "a5"
+  ]
+}

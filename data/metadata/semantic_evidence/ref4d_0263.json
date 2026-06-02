@@ -1,0 +1,100 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0263.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "cv2",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "wooden-block",
+        "attributes": {
+          "signature": [
+            "a-piece-of-wood-being-carved-into-a-bowl-shape"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            18.0
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "cnc-machine",
+        "attributes": {
+          "signature": [
+            "the-large-white-machine-performing-the-carving"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            18.0
+          ]
+        ]
+      },
+      {
+        "id": "o3",
+        "name": "wood-shavings",
+        "attributes": {
+          "signature": [
+            "small-pieces-of-wood-scattered-around-the-work-area"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            18.0
+          ]
+        ]
+      },
+      {
+        "id": "o4",
+        "name": "screws",
+        "attributes": {
+          "signature": [
+            "metal-fasteners-holding-the-wooden-block-in-place"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            18.0
+          ]
+        ]
+      },
+      {
+        "id": "o5",
+        "name": "workshop",
+        "attributes": {
+          "signature": [
+            "the-environment-where-the-cnc-machine-operates"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            18.0
+          ]
+        ]
+      }
+    ],
+    "relations": []
+  },
+  "views": {
+    "objects_count_display": {
+      "wooden-block": 1,
+      "cnc-machine": 1,
+      "wood-shavings": 1,
+      "screws": 1,
+      "workshop": 1
+    }
+  }
+}

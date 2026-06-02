@@ -1,0 +1,241 @@
+{
+  "summary": {
+    "items": 10,
+    "enter_bank": 10,
+    "clip_range_sec": [
+      0.0,
+      5.93
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does the white van stay on the road without falling off the cliff?",
+      "signals": [
+        "trajectory_dir(white_van,on:road,axis)",
+        "balance(white_van)",
+        "falling_hazard(cliff)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(white_van,on:road,axis)": 38.3333,
+        "balance(white_van)": 7.1667,
+        "falling_hazard(cliff)": 6.3333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Do the shadows of the cliffs align with the light source direction in the video?",
+      "signals": [
+        "shadow_consistency(cliff,shadow)",
+        "shadow_consistency(people,shadow)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "shadow_consistency(cliff,shadow)": 36.6667,
+        "shadow_consistency(people,shadow)": 7.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Are pedestrians standing at a safe distance from the edge of the canyon road and away from vehicle paths?",
+      "signals": [
+        "prohibited_intersection(people,cliff)",
+        "friction_sliding(people,on:road)",
+        "placeable(white_van,at:road_lane)",
+        "supportable(road,by:cliffs)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "prohibited_intersection(people,cliff)": 36.6667,
+        "friction_sliding(people,on:road)": 6.0,
+        "supportable(road,by:cliffs)": 5.3333,
+        "placeable(white_van,at:road_lane)": 5.1667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Does the person walking near the red sign move along a natural path parallel to the road?",
+      "signals": [
+        "trajectory_dir(white_van,axis)",
+        "trajectory_dir(people,axis)",
+        "continuity(white_van)",
+        "continuity(people)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(white_van,axis)": 38.3333,
+        "trajectory_dir(people,axis)": 7.6667,
+        "continuity(white_van)": 7.3333,
+        "continuity(people)": 7.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Is the sunlight casting consistent shadows for all objects, including the people and vehicles?",
+      "signals": [
+        "trajectory_dir(white_van,on:road,axis)",
+        "balance(white_van)",
+        "shadow_consistency(cliff,shadow)",
+        "shadow_consistency(people,shadow)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(white_van,on:road,axis)": 38.3333,
+        "shadow_consistency(cliff,shadow)": 7.3333,
+        "shadow_consistency(people,shadow)": 7.3333,
+        "balance(white_van)": 7.1667
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "A white van drives on the road near a steep cliff.",
+      "signals": [
+        "trajectory_dir(white_van,on:road,axis)",
+        "balance(white_van)",
+        "falling_hazard(cliff)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(white_van,on:road,axis)": 38.3333,
+        "balance(white_van)": 7.1667,
+        "falling_hazard(cliff)": 6.3333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "Shadows of cliffs and people align with sunlight direction.",
+      "signals": [
+        "trajectory_dir(white_van,axis)",
+        "trajectory_dir(people,axis)",
+        "continuity(white_van)",
+        "continuity(people)",
+        "shadow_consistency(cliff,shadow)",
+        "shadow_consistency(people,shadow)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(white_van,axis)": 38.3333,
+        "trajectory_dir(people,axis)": 7.6667,
+        "continuity(white_van)": 7.3333,
+        "continuity(people)": 7.3333,
+        "shadow_consistency(cliff,shadow)": 7.3333,
+        "shadow_consistency(people,shadow)": 7.3333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "Pedestrians stand at a safe distance from the vehicle path.",
+      "signals": [
+        "prohibited_intersection(people,cliff)",
+        "friction_sliding(people,on:road)",
+        "placeable(white_van,at:road_lane)",
+        "supportable(road,by:cliffs)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "prohibited_intersection(people,cliff)": 36.6667,
+        "friction_sliding(people,on:road)": 6.0,
+        "supportable(road,by:cliffs)": 5.3333,
+        "placeable(white_van,at:road_lane)": 5.1667
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "The van's shadow falls on the road surface.",
+      "signals": [
+        "trajectory_dir(white_van,on:road,axis)",
+        "balance(white_van)",
+        "trajectory_dir(white_van,axis)",
+        "trajectory_dir(people,axis)",
+        "continuity(white_van)",
+        "continuity(people)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(white_van,on:road,axis)": 38.3333,
+        "trajectory_dir(white_van,axis)": 7.6667,
+        "trajectory_dir(people,axis)": 7.6667,
+        "continuity(white_van)": 7.3333,
+        "continuity(people)": 7.3333,
+        "balance(white_van)": 7.1667
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "Pedestrians walk along the side of the canyon road.",
+      "signals": [
+        "prohibited_intersection(people,cliff)",
+        "friction_sliding(people,on:road)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "prohibited_intersection(people,cliff)": 36.6667,
+        "friction_sliding(people,on:road)": 6.0
+      },
+      "content_score_raw": "60"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "v5",
+    "a1",
+    "a2",
+    "a3",
+    "a4",
+    "a5"
+  ]
+}

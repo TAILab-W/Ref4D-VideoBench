@@ -1,0 +1,179 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0547.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "cv2",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "helicopter",
+        "attributes": {
+          "color": [
+            "green"
+          ],
+          "pattern": [
+            "military"
+          ],
+          "action": [
+            "hovering",
+            "preparing-to-land"
+          ],
+          "state": [
+            "in-air"
+          ],
+          "pose": [
+            "hover"
+          ],
+          "orientation": [
+            "facing-forward"
+          ],
+          "facing-direction": [
+            "forward"
+          ],
+          "position": [
+            "center-of-deck",
+            "hovering-above-deck"
+          ],
+          "object-part": [
+            "cockpit",
+            "landing-gear",
+            "rotor-blades",
+            "side-doors"
+          ],
+          "tool-or-instrument": [
+            "rotor-blades"
+          ],
+          "signature": [
+            "green-military-rotor-blades-spinning"
+          ]
+        },
+        "spans": [
+          [
+            0.2,
+            0.8
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "ship",
+        "attributes": {
+          "color": [
+            "navy-gray",
+            "white"
+          ],
+          "action": [
+            "stationary"
+          ],
+          "state": [
+            "at-sea"
+          ],
+          "pose": [
+            "stationary"
+          ],
+          "orientation": [
+            "facing-forward"
+          ],
+          "facing-direction": [
+            "forward"
+          ],
+          "position": [
+            "background",
+            "right-side-of-frame"
+          ],
+          "object-part": [
+            "deck",
+            "radar-dome",
+            "superstructure"
+          ],
+          "signature": [
+            "navy-gray-with-white-stripes"
+          ]
+        },
+        "spans": [
+          [
+            0.7,
+            1.0
+          ]
+        ]
+      },
+      {
+        "id": "o3",
+        "name": "person",
+        "attributes": {
+          "color": [
+            "unknown"
+          ],
+          "action": [
+            "sitting",
+            "standing"
+          ],
+          "state": [
+            "visible-as-small-figure"
+          ],
+          "pose": [
+            "unknown"
+          ],
+          "orientation": [
+            "unknown"
+          ],
+          "facing-direction": [
+            "unknown"
+          ],
+          "position": [
+            "background",
+            "left-side-of-deck"
+          ],
+          "signature": [
+            "small-figure-in-distance"
+          ]
+        },
+        "spans": [
+          [
+            0.4,
+            0.7
+          ]
+        ]
+      }
+    ],
+    "relations": [
+      {
+        "subject": "o1",
+        "predicate": "hovering-above",
+        "object": "o2",
+        "spans": [
+          [
+            0.2,
+            0.8
+          ]
+        ],
+        "confidence": 0.9
+      },
+      {
+        "subject": "o3",
+        "predicate": "standing-on",
+        "object": "o2",
+        "spans": [
+          [
+            0.4,
+            0.7
+          ]
+        ],
+        "confidence": 0.8
+      }
+    ]
+  },
+  "views": {
+    "objects_count_display": {
+      "helicopter": 1,
+      "ship": 1,
+      "person": 1
+    }
+  }
+}

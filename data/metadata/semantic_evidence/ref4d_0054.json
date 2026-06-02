@@ -1,0 +1,68 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0054.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "cv2",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "gorilla",
+        "attributes": {
+          "color": [
+            "black"
+          ],
+          "pattern": [
+            "fuzzy"
+          ],
+          "age": [
+            "young"
+          ],
+          "sex": [
+            "male"
+          ],
+          "state": [
+            "active"
+          ],
+          "pose": [
+            "sitting",
+            "standing"
+          ],
+          "action": [
+            "biting",
+            "grabbing",
+            "pawing",
+            "playing"
+          ],
+          "orientation": [
+            "facing-each-other"
+          ],
+          "position": [
+            "center-left",
+            "center-right"
+          ],
+          "signature": [
+            "black-fuzzy-young"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            8.8
+          ]
+        ]
+      }
+    ],
+    "relations": []
+  },
+  "views": {
+    "objects_count_display": {
+      "gorilla": 1
+    }
+  }
+}

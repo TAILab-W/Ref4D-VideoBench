@@ -1,0 +1,81 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0370.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "decord",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "person",
+        "attributes": {
+          "signature": [
+            "people-standing-and-walking-on-the-side-of-the-road"
+          ]
+        },
+        "spans": [
+          [
+            0.6,
+            0.8
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "rock",
+        "attributes": {
+          "signature": [
+            "large-brown-rock-formations"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            0.4
+          ]
+        ]
+      },
+      {
+        "id": "o3",
+        "name": "text",
+        "attributes": {
+          "signature": [
+            "text-on-fabric-banners-hanging-on-left-side-of-the-cliff"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            0.2
+          ]
+        ]
+      }
+    ],
+    "relations": [
+      {
+        "subject": "o1",
+        "predicate": "left-of",
+        "object": "o2",
+        "spans": [
+          [
+            0.3,
+            0.6
+          ]
+        ],
+        "confidence": 0.8
+      }
+    ]
+  },
+  "views": {
+    "objects_count_display": {
+      "person": 1,
+      "rock": 1,
+      "text": 1
+    }
+  }
+}

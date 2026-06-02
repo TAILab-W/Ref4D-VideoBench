@@ -1,0 +1,69 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0211.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "cv2",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "steak",
+        "attributes": {
+          "color": [
+            "red",
+            "yellow"
+          ],
+          "pattern": [
+            "striped-grill-marks"
+          ],
+          "state": [
+            "grilling",
+            "raw-to-cooked"
+          ],
+          "action": [
+            "being-flipped"
+          ],
+          "signature": [
+            "yellow-fat-grill-marked"
+          ]
+        },
+        "spans": [
+          [
+            0.2,
+            0.7
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "text",
+        "attributes": {
+          "content": [
+            "grass-fed-beef-fat-is-not-white"
+          ],
+          "signature": [
+            "white-printed-text"
+          ]
+        },
+        "spans": [
+          [
+            0.1,
+            0.3
+          ]
+        ]
+      }
+    ],
+    "relations": []
+  },
+  "views": {
+    "objects_count_display": {
+      "steak": 1,
+      "text": 1
+    }
+  }
+}

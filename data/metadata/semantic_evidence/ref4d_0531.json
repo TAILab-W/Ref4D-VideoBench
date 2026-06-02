@@ -1,0 +1,96 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0531.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "cv2",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "car",
+        "attributes": {
+          "signature": [
+            "white-car-with-black-stripes"
+          ]
+        },
+        "spans": [
+          [
+            0.2,
+            7.1
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "person",
+        "attributes": {
+          "signature": [
+            "driver-in-white-car"
+          ]
+        },
+        "spans": [
+          [
+            4.5,
+            6.8
+          ]
+        ]
+      },
+      {
+        "id": "o3",
+        "name": "person",
+        "attributes": {
+          "signature": [
+            "passenger-in-white-car"
+          ]
+        },
+        "spans": [
+          [
+            4.5,
+            6.8
+          ]
+        ]
+      },
+      {
+        "id": "o4",
+        "name": "building",
+        "attributes": {
+          "signature": [
+            "brick-building-with-'mchoto'-sign"
+          ]
+        },
+        "spans": [
+          [
+            0.1,
+            7.1
+          ]
+        ]
+      }
+    ],
+    "relations": [
+      {
+        "subject": "o1",
+        "predicate": "parked-in-front-of",
+        "object": "o4",
+        "spans": [
+          [
+            0.0,
+            7.1
+          ]
+        ],
+        "confidence": 0.9
+      }
+    ]
+  },
+  "views": {
+    "objects_count_display": {
+      "car": 1,
+      "person": 2,
+      "building": 1
+    }
+  }
+}

@@ -1,0 +1,157 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0172.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "cv2",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "person",
+        "attributes": {
+          "color": [
+            "black",
+            "white"
+          ],
+          "sex": [
+            "male"
+          ],
+          "state": [
+            "standing"
+          ],
+          "pose": [
+            "holding-gun"
+          ],
+          "action": [
+            "displaying-gun"
+          ],
+          "signature": [
+            "black-shirt-white-cap"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            8.1
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "gun",
+        "attributes": {
+          "color": [
+            "black"
+          ],
+          "material": [
+            "plastic"
+          ],
+          "tool-or-instrument": [
+            "airsoft-gun"
+          ],
+          "object-part": [
+            "barrel",
+            "grip",
+            "stock"
+          ],
+          "signature": [
+            "black-gun-with-large-barrel"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            8.1
+          ]
+        ]
+      },
+      {
+        "id": "o3",
+        "name": "text",
+        "attributes": {
+          "printed-text": [
+            "potongan-600-rb",
+            "promo"
+          ],
+          "signature": [
+            "yellow-text-on-blue-wall"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            8.1
+          ]
+        ]
+      },
+      {
+        "id": "o4",
+        "name": "text",
+        "attributes": {
+          "printed-text": [
+            "contact-information-adm-1"
+          ],
+          "signature": [
+            "green-text-with-whatsapp-icon"
+          ]
+        },
+        "spans": [
+          [
+            8.0,
+            8.1
+          ]
+        ]
+      }
+    ],
+    "relations": [
+      {
+        "subject": "o1",
+        "predicate": "holding",
+        "object": "o2",
+        "spans": [
+          [
+            0.0,
+            8.1
+          ]
+        ],
+        "confidence": 0.9
+      },
+      {
+        "subject": "o3",
+        "predicate": "above",
+        "object": "o1",
+        "spans": [
+          [
+            0.0,
+            8.1
+          ]
+        ],
+        "confidence": 0.8
+      },
+      {
+        "subject": "o4",
+        "predicate": "above",
+        "object": "o1",
+        "spans": [
+          [
+            8.0,
+            8.1
+          ]
+        ],
+        "confidence": 0.7
+      }
+    ]
+  },
+  "views": {
+    "objects_count_display": {
+      "person": 1,
+      "gun": 1,
+      "text": 2
+    }
+  }
+}

@@ -1,0 +1,99 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0073.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "cv2",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "flamingo",
+        "attributes": {
+          "color": [
+            "pink",
+            "white"
+          ],
+          "pattern": [
+            "solid"
+          ],
+          "pose": [
+            "standing"
+          ],
+          "action": [
+            "displaying-wings"
+          ],
+          "orientation": [
+            "facing-forward"
+          ],
+          "facing-direction": [
+            "towards-camera"
+          ],
+          "signature": [
+            "pink-legs-long-neck-front-center"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            6.8
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "flamingo",
+        "attributes": {
+          "color": [
+            "orange",
+            "pink"
+          ],
+          "pattern": [
+            "solid"
+          ],
+          "pose": [
+            "standing"
+          ],
+          "action": [
+            "resting"
+          ],
+          "orientation": [
+            "facing-left"
+          ],
+          "signature": [
+            "pink-and-orange-feathers-back-ground-left"
+          ]
+        },
+        "spans": [
+          [
+            3.0,
+            5.0
+          ]
+        ]
+      }
+    ],
+    "relations": [
+      {
+        "subject": "o1",
+        "predicate": "left-of",
+        "object": "o2",
+        "spans": [
+          [
+            0.0,
+            3.0
+          ]
+        ],
+        "confidence": 0.8
+      }
+    ]
+  },
+  "views": {
+    "objects_count_display": {
+      "flamingo": 2
+    }
+  }
+}

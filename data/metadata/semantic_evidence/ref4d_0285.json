@@ -1,0 +1,114 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0285.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "cv2",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "person",
+        "attributes": {
+          "signature": [
+            "person-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            6.0
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "person",
+        "attributes": {
+          "signature": [
+            "person-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            6.0
+          ]
+        ]
+      },
+      {
+        "id": "o3",
+        "name": "person",
+        "attributes": {
+          "signature": [
+            "person-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            6.0
+          ]
+        ]
+      },
+      {
+        "id": "o4",
+        "name": "excavator",
+        "attributes": {
+          "signature": [
+            "excavator-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            6.0
+          ]
+        ]
+      },
+      {
+        "id": "o5",
+        "name": "concrete-mixer",
+        "attributes": {
+          "signature": [
+            "concrete-mixer-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            6.0
+          ]
+        ]
+      },
+      {
+        "id": "o6",
+        "name": "trench",
+        "attributes": {
+          "signature": [
+            "trench-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            6.0
+          ]
+        ]
+      }
+    ],
+    "relations": []
+  },
+  "views": {
+    "objects_count_display": {
+      "person": 3,
+      "excavator": 1,
+      "concrete-mixer": 1,
+      "trench": 1
+    }
+  }
+}

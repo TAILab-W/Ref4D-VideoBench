@@ -1,0 +1,202 @@
+{
+  "summary": {
+    "items": 10,
+    "enter_bank": 7,
+    "clip_range_sec": [
+      0.0,
+      10.1
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does the traffic light change from red to green?",
+      "signals": [
+        "state_change"
+      ],
+      "content_score_60": 5,
+      "signal_score_40": 37.5,
+      "total_score_100": 42.5,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "state_change": 37.5
+      },
+      "content_score_raw": "5"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Are vehicles stopped at the red light and construction barriers properly positioned?",
+      "signals": [
+        "trajectory_dir",
+        "accel_sign",
+        "friction_sliding",
+        "support",
+        "containment",
+        "continuity"
+      ],
+      "content_score_60": 40,
+      "signal_score_40": 40.0,
+      "total_score_100": 80.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir": 38.3333,
+        "continuity": 7.3333,
+        "accel_sign": 7.0,
+        "support": 7.0,
+        "friction_sliding": 6.0,
+        "containment": 5.8333
+      },
+      "content_score_raw": "40"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Do shadows of the building and people align with the direction of sunlight?",
+      "signals": [
+        "shadow_consistency"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 36.67,
+      "total_score_100": 86.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "shadow_consistency": 36.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Are there police officers near the station entrance for public order?",
+      "signals": [
+        "goal_placement"
+      ],
+      "content_score_60": 30,
+      "signal_score_40": 26.67,
+      "total_score_100": 56.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "goal_placement": 26.6667
+      },
+      "content_score_raw": "30"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Is the pedestrian signal consistent with the state of the traffic light?",
+      "signals": [
+        "state_change"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 37.5,
+      "total_score_100": 87.5,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "state_change": 37.5
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "The traffic light shows a red signal, and the pedestrian signal is green.",
+      "signals": [
+        "state_change"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 37.5,
+      "total_score_100": 87.5,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "state_change": 37.5
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "Pedestrians walk on the sidewalk near the police station entrance.",
+      "signals": [
+        "trajectory_dir",
+        "accel_sign",
+        "friction_sliding"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir": 38.3333,
+        "accel_sign": 7.0,
+        "friction_sliding": 6.0
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "Orange construction barriers surround the building under renovation to prevent access.",
+      "signals": [
+        "support",
+        "containment",
+        "continuity",
+        "prohibited_intersection"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity": 36.6667,
+        "prohibited_intersection": 7.3333,
+        "support": 7.0,
+        "containment": 5.8333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "A person in uniform stands at the main entrance of the police station.",
+      "signals": [
+        "goal_placement"
+      ],
+      "content_score_60": 30,
+      "signal_score_40": 26.67,
+      "total_score_100": 56.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "goal_placement": 26.6667
+      },
+      "content_score_raw": "30"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "Shadows of the building and pedestrians align with the direction of sunlight.",
+      "signals": [
+        "shadow_consistency"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 36.67,
+      "total_score_100": 86.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "shadow_consistency": 36.6667
+      },
+      "content_score_raw": "50"
+    }
+  ],
+  "bank_ids": [
+    "v2",
+    "v3",
+    "v5",
+    "a1",
+    "a2",
+    "a3",
+    "a5"
+  ]
+}

@@ -1,0 +1,193 @@
+{
+  "summary": {
+    "items": 10,
+    "enter_bank": 8,
+    "clip_range_sec": [
+      0.0,
+      9.9
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Do the two people avoid colliding with each other while on the slope?",
+      "signals": [
+        "support(person-in-blue-snowsuit,person-in-black-jacket)",
+        "collision(person-in-blue-snowsuit,person-in-black-jacket)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "support(person-in-blue-snowsuit,person-in-black-jacket)": 35.0,
+        "collision(person-in-blue-snowsuit,person-in-black-jacket)": 6.3333
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Does the person in the black jacket support the kneeling individual without sudden loss of balance?",
+      "signals": [
+        "support(oA,oB)",
+        "balance(oX), collision(oA,oB)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "balance(oX), collision(oA,oB)": 35.8333,
+        "support(oA,oB)": 7.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Is the center of mass of the blue snowsuit wearer over their snowboard to prevent falling during movement?",
+      "signals": [
+        "center_of_mass_over_base(person-in-blue-snowsuit)",
+        "center_of_mass_over_base(oX)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 39.0,
+      "total_score_100": 89.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "center_of_mass_over_base(person-in-blue-snowsuit)": 32.5,
+        "center_of_mass_over_base(oX)": 6.5
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Does the lying-down person remain stationary on the snow throughout the clip?",
+      "signals": [
+        "continuity(oX)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 36.67,
+      "total_score_100": 86.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(oX)": 36.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Does the standing skier use their hands for stability or communication?",
+      "signals": [
+        "tool_contact(oTool,oObj)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 28.33,
+      "total_score_100": 78.33,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "tool_contact(oTool,oObj)": 28.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "The person in the blue snowsuit maintains balance while being supported by the other person.",
+      "signals": [
+        "support(person-in-blue-snowsuit,person-in-black-jacket)",
+        "collision(person-in-blue-snowsuit,person-in-black-jacket)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "support(person-in-blue-snowsuit,person-in-black-jacket)": 35.0,
+        "collision(person-in-blue-snowsuit,person-in-black-jacket)": 6.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "The individual in the black jacket supports the kneeling person on the snow.",
+      "signals": [
+        "support(oA,oB)",
+        "balance(oX), collision(oA,oB)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "balance(oX), collision(oA,oB)": 35.8333,
+        "support(oA,oB)": 7.0
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "The person lying down remains stationary on the snow without unexpected movement.",
+      "signals": [
+        "continuity(oX)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 36.67,
+      "total_score_100": 86.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(oX)": 36.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "The center of mass of the person in the blue snowsuit is over their snowboard.",
+      "signals": [
+        "center_of_mass_over_base(person-in-blue-snowsuit)"
+      ],
+      "content_score_60": 40,
+      "signal_score_40": 32.5,
+      "total_score_100": 72.5,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "center_of_mass_over_base(person-in-blue-snowsuit)": 32.5
+      },
+      "content_score_raw": "40"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "Both individuals maintain their center of mass over their base to prevent falling.",
+      "signals": [
+        "center_of_mass_over_base(oX)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 32.5,
+      "total_score_100": 82.5,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "center_of_mass_over_base(oX)": 32.5
+      },
+      "content_score_raw": "50"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "a1",
+    "a2",
+    "a3",
+    "a5"
+  ]
+}

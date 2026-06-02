@@ -1,0 +1,213 @@
+{
+  "summary": {
+    "items": 10,
+    "enter_bank": 10,
+    "clip_range_sec": [
+      0.0,
+      7.6
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does the skier's trajectory show upward acceleration and a natural arc during takeoff?",
+      "signals": [
+        "trajectory_dir(snowboard,axis:vertical)",
+        "trajectory_dir(oX,axis)",
+        "accel_sign(oX,axis)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(snowboard,axis:vertical)": 38.3333,
+        "trajectory_dir(oX,axis)": 7.6667,
+        "accel_sign(oX,axis)": 7.0
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Is the skier maintaining control of their body over the snowboard in mid-air?",
+      "signals": [
+        "center_of_mass_over_base(snowboard)",
+        "balance(oX)",
+        "friction_sliding(oA,on:oB)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "balance(oX)": 35.8333,
+        "center_of_mass_over_base(snowboard)": 6.5,
+        "friction_sliding(oA,on:oB)": 6.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Are there designated safe zones for performing jumps on the ski slope?",
+      "signals": [
+        "prohibited_intersection(spectator,snowboard)",
+        "falling_hazard(snowboard)",
+        "support(oA,oB)"
+      ],
+      "content_score_60": 45,
+      "signal_score_40": 40.0,
+      "total_score_100": 85.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "prohibited_intersection(spectator,snowboard)": 36.6667,
+        "support(oA,oB)": 7.0,
+        "falling_hazard(snowboard)": 6.3333
+      },
+      "content_score_raw": "45"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Is the green banner with 'intermountain-healthcare' visible, indicating an organized event at Deer Valley?",
+      "signals": [
+        "containment(banner,scene)",
+        "support(banner,pole)",
+        "biological_motion(skier)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "biological_motion(skier)": 38.3333,
+        "support(banner,pole)": 7.0,
+        "containment(banner,scene)": 5.8333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Does the skier perform aerial tricks within areas free of spectators or obstacles?",
+      "signals": [
+        "trajectory_dir(snowboard,axis)",
+        "accel_sign(snowboard,axis)",
+        "continuity(snowboard)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(snowboard,axis)": 38.3333,
+        "continuity(snowboard)": 7.3333,
+        "accel_sign(snowboard,axis)": 7.0
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "The green banner with 'intermountain-healthcare' and 'deer-valley' text is visible in the background.",
+      "signals": [
+        "containment(banner,scene)",
+        "support(banner,pole)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "support(banner,pole)": 35.0,
+        "containment(banner,scene)": 5.8333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "The skier's trajectory follows a natural arc consistent with gravity during the jump.",
+      "signals": [
+        "trajectory_dir(snowboard,axis:vertical)",
+        "trajectory_dir(oX,axis)",
+        "accel_sign(oX,axis)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(snowboard,axis:vertical)": 38.3333,
+        "trajectory_dir(oX,axis)": 7.6667,
+        "accel_sign(oX,axis)": 7.0
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "The skier maintains a stable center of mass over the snowboard while airborne.",
+      "signals": [
+        "center_of_mass_over_base(snowboard)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 32.5,
+      "total_score_100": 82.5,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "center_of_mass_over_base(snowboard)": 32.5
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "The skier controls their body position to prevent falling after takeoff.",
+      "signals": [
+        "balance(oX)",
+        "friction_sliding(oA,on:oB)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "balance(oX)": 35.8333,
+        "friction_sliding(oA,on:oB)": 6.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "The ski slope allows the skier to launch into the air for aerial maneuvers.",
+      "signals": [
+        "support(oA,oB)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 35.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "support(oA,oB)": 35.0
+      },
+      "content_score_raw": "55"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "v5",
+    "a1",
+    "a2",
+    "a3",
+    "a4",
+    "a5"
+  ]
+}

@@ -1,0 +1,161 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0479.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "decord",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "person",
+        "attributes": {
+          "signature": [
+            "person-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            8.7
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "leggings",
+        "attributes": {
+          "signature": [
+            "leggings-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            8.7
+          ]
+        ]
+      },
+      {
+        "id": "o3",
+        "name": "shoes",
+        "attributes": {
+          "signature": [
+            "shoes-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            8.7
+          ]
+        ]
+      },
+      {
+        "id": "o4",
+        "name": "shoes",
+        "attributes": {
+          "signature": [
+            "shoes-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            8.7
+          ]
+        ]
+      },
+      {
+        "id": "o5",
+        "name": "socks",
+        "attributes": {
+          "signature": [
+            "socks-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            8.7
+          ]
+        ]
+      },
+      {
+        "id": "o6",
+        "name": "socks",
+        "attributes": {
+          "signature": [
+            "socks-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            8.7
+          ]
+        ]
+      },
+      {
+        "id": "o7",
+        "name": "bench",
+        "attributes": {
+          "signature": [
+            "bench-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            8.7
+          ]
+        ]
+      },
+      {
+        "id": "o8",
+        "name": "weights",
+        "attributes": {
+          "signature": [
+            "weights-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            8.7
+          ]
+        ]
+      },
+      {
+        "id": "o9",
+        "name": "weights",
+        "attributes": {
+          "signature": [
+            "weights-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            8.7
+          ]
+        ]
+      }
+    ],
+    "relations": []
+  },
+  "views": {
+    "objects_count_display": {
+      "person": 1,
+      "leggings": 1,
+      "shoes": 2,
+      "socks": 2,
+      "bench": 1,
+      "weights": 2
+    }
+  }
+}

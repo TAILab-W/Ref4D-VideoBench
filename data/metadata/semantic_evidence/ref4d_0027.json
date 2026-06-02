@@ -1,0 +1,88 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0027.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "cv2",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "antelope",
+        "attributes": {
+          "signature": [
+            "large-antelope-with-long,-curved-horns"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            0.8
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "antelope",
+        "attributes": {
+          "signature": [
+            "smaller-antelope-with-shorter-horns"
+          ]
+        },
+        "spans": [
+          [
+            0.1,
+            0.7
+          ]
+        ]
+      }
+    ],
+    "relations": [
+      {
+        "subject": "o1",
+        "predicate": "looking-at",
+        "object": "o2",
+        "spans": [
+          [
+            0.0,
+            0.3
+          ]
+        ],
+        "confidence": 0.8
+      },
+      {
+        "subject": "o1",
+        "predicate": "chasing",
+        "object": "o2",
+        "spans": [
+          [
+            0.4,
+            0.7
+          ]
+        ],
+        "confidence": 0.9
+      },
+      {
+        "subject": "o1",
+        "predicate": "following",
+        "object": "o2",
+        "spans": [
+          [
+            0.7,
+            0.8
+          ]
+        ],
+        "confidence": 0.8
+      }
+    ]
+  },
+  "views": {
+    "objects_count_display": {
+      "antelope": 2
+    }
+  }
+}

@@ -1,0 +1,231 @@
+{
+  "summary": {
+    "items": 10,
+    "enter_bank": 8,
+    "clip_range_sec": [
+      0.0,
+      5.17
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does the athlete maintain balance and continuity in her motion without frame discontinuity?",
+      "signals": [
+        "continuity(athlete)",
+        "frame_discontinuity(t)",
+        "balance(athlete)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "frame_discontinuity(t)": 40.0,
+        "continuity(athlete)": 7.3333,
+        "balance(athlete)": 7.1667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Do the hurdles on the track keep a consistent size relative to the athlete's movement trajectory, with no sudden change or interpenetration?",
+      "signals": [
+        "rigid_transform(hurdle)",
+        "deformation(hurdle)",
+        "interpenetration(hurdle,hurdle)",
+        "trajectory_dir(hurdle,on:athlete)",
+        "accel_sign(athlete,axis)",
+        "size_inconsistency(hurdle)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "deformation(hurdle)": 40.0,
+        "trajectory_dir(hurdle,on:athlete)": 7.6667,
+        "rigid_transform(hurdle)": 7.5,
+        "size_inconsistency(hurdle)": 7.5,
+        "interpenetration(hurdle,hurdle)": 7.1667,
+        "accel_sign(athlete,axis)": 7.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Is the blue running surface designed to support the athletes' movement without causing slipping during their run?",
+      "signals": [
+        "friction_sliding(athlete,on:track)"
+      ],
+      "content_score_60": 40,
+      "signal_score_40": 30.0,
+      "total_score_100": 70.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "friction_sliding(athlete,on:track)": 30.0
+      },
+      "content_score_raw": "40"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Does the athlete use proper hurdling technique, clearing each hurdle with a clear trajectory over it?",
+      "signals": [
+        "trajectory_dir(athlete,axis)",
+        "step_order(prev:task,next:task)"
+      ],
+      "content_score_60": 40,
+      "signal_score_40": 40.0,
+      "total_score_100": 80.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(athlete,axis)": 38.3333,
+        "step_order(prev:task,next:task)": 5.3333
+      },
+      "content_score_raw": "40"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Are there any falling hazards or prohibited intersections for the athlete within the stadium environment?",
+      "signals": [
+        "falling_hazard(athlete)",
+        "prohibited_intersection(athlete,other_objects)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "prohibited_intersection(athlete,other_objects)": 36.6667,
+        "falling_hazard(athlete)": 6.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "The athlete's body maintains balance and continuity without frame discontinuity.",
+      "signals": [
+        "continuity(athlete)",
+        "frame_discontinuity(t)",
+        "balance(athlete)",
+        "rigid_transform(hurdle)",
+        "deformation(hurdle)",
+        "interpenetration(hurdle,hurdle)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "frame_discontinuity(t)": 40.0,
+        "deformation(hurdle)": 8.0,
+        "rigid_transform(hurdle)": 7.5,
+        "continuity(athlete)": 7.3333,
+        "balance(athlete)": 7.1667,
+        "interpenetration(hurdle,hurdle)": 7.1667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "The athlete uses proper hurdling technique with a clear trajectory over each hurdle.",
+      "signals": [
+        "trajectory_dir(athlete,axis)",
+        "step_order(prev:task,next:task)"
+      ],
+      "content_score_60": 40,
+      "signal_score_40": 40.0,
+      "total_score_100": 80.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(athlete,axis)": 38.3333,
+        "step_order(prev:task,next:task)": 5.3333
+      },
+      "content_score_raw": "40"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "The hurdles align with the athlete's movement, maintaining consistent acceleration.",
+      "signals": [
+        "trajectory_dir(hurdle,on:athlete)",
+        "accel_sign(athlete,axis)",
+        "size_inconsistency(hurdle)"
+      ],
+      "content_score_60": 30,
+      "signal_score_40": 40.0,
+      "total_score_100": 70.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(hurdle,on:athlete)": 38.3333,
+        "size_inconsistency(hurdle)": 7.5,
+        "accel_sign(athlete,axis)": 7.0
+      },
+      "content_score_raw": "30"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "The stadium environment ensures safe jumping for athletes.",
+      "signals": [
+        "falling_hazard(athlete)",
+        "prohibited_intersection(athlete,other_objects)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "prohibited_intersection(athlete,other_objects)": 36.6667,
+        "falling_hazard(athlete)": 6.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "The hurdles are rigid and do not deform or interpenetrate during the event.",
+      "signals": [
+        "rigid_transform(hurdle)",
+        "deformation(hurdle)",
+        "interpenetration(hurdle,hurdle)",
+        "continuity(athlete)",
+        "balance(athlete)",
+        "deformation(athlete)",
+        "interpenetration(athlete,hurdles)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "deformation(hurdle)": 40.0,
+        "deformation(athlete)": 8.0,
+        "rigid_transform(hurdle)": 7.5,
+        "continuity(athlete)": 7.3333,
+        "interpenetration(hurdle,hurdle)": 7.1667,
+        "balance(athlete)": 7.1667,
+        "interpenetration(athlete,hurdles)": 7.1667
+      },
+      "content_score_raw": "50"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v4",
+    "v5",
+    "a1",
+    "a2",
+    "a4",
+    "a5"
+  ]
+}

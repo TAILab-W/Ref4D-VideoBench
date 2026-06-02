@@ -1,0 +1,201 @@
+{
+  "summary": {
+    "items": 10,
+    "enter_bank": 8,
+    "clip_range_sec": [
+      0.0,
+      8.0
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does the scoreboard show both players' names and scores?",
+      "signals": [
+        "material_optics(scoreboard)",
+        "state_change(scoreboard,from:initial,to:updated)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "material_optics(scoreboard)": 37.5,
+        "state_change(scoreboard,from:initial,to:updated)": 7.5
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Is the player's movement smooth when hitting the ball?",
+      "signals": [
+        "biological_motion(player)",
+        "friction_sliding(player,table)",
+        "accel_sign(player,vertical)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "biological_motion(player)": 38.3333,
+        "accel_sign(player,vertical)": 7.0,
+        "friction_sliding(player,table)": 6.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Does the ping-pong table provide a stable surface for bouncing the ball?",
+      "signals": [
+        "elastic_bounce(ball,table)",
+        "support(table,ground)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 39.67,
+      "total_score_100": 94.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "support(table,ground)": 35.0,
+        "elastic_bounce(ball,table)": 4.6667
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Is the potted plant on the left side of the court not falling over during the game?",
+      "signals": [
+        "falling_hazard(plant)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 31.67,
+      "total_score_100": 81.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "falling_hazard(plant)": 31.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Does the red floor match the action of running towards the net?",
+      "signals": [
+        "trajectory_dir(player,vertical)",
+        "accel_sign(player,vertical)"
+      ],
+      "content_score_60": 30,
+      "signal_score_40": 40.0,
+      "total_score_100": 70.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(player,vertical)": 38.3333,
+        "accel_sign(player,vertical)": 7.0
+      },
+      "content_score_raw": "30"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "The ping pong table provides a stable surface for bouncing the ball.",
+      "signals": [
+        "elastic_bounce(ball,table)",
+        "support(table,ground)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 39.67,
+      "total_score_100": 94.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "support(table,ground)": 35.0,
+        "elastic_bounce(ball,table)": 4.6667
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "The player's action of hitting the ball with the paddle is smooth and consistent.",
+      "signals": [
+        "biological_motion(player)",
+        "friction_sliding(player,table)",
+        "accel_sign(player,vertical)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "biological_motion(player)": 38.3333,
+        "accel_sign(player,vertical)": 7.0,
+        "friction_sliding(player,table)": 6.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "The scoreboard displays real-time scores for both players: Alfonso Olave 7, Martin Koblizek 5.",
+      "signals": [
+        "material_optics(scoreboard)",
+        "state_change(scoreboard,from:initial,to:updated)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "material_optics(scoreboard)": 37.5,
+        "state_change(scoreboard,from:initial,to:updated)": 7.5
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "The potted plant on the left side of the court does not pose any falling hazard.",
+      "signals": [
+        "falling_hazard(plant)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 31.67,
+      "total_score_100": 81.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "falling_hazard(plant)": 31.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "Barriers enclose the playing area to prevent objects or people from falling off.",
+      "signals": [
+        "falling_hazard(table)"
+      ],
+      "content_score_60": 40,
+      "signal_score_40": 31.67,
+      "total_score_100": 71.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "falling_hazard(table)": 31.6667
+      },
+      "content_score_raw": "40"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "a1",
+    "a2",
+    "a3",
+    "a4"
+  ]
+}

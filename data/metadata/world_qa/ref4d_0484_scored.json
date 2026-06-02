@@ -1,0 +1,212 @@
+{
+  "summary": {
+    "items": 10,
+    "enter_bank": 9,
+    "clip_range_sec": [
+      0.0,
+      14.17
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does the yellow ball stay supported by the gymnast's hand without suddenly disappearing or interpenetrating with her body?",
+      "signals": [
+        "continuity(ball)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 36.67,
+      "total_score_100": 91.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(ball)": 36.6667
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Across the clip, does the ball follow a continuous trajectory controlled by the gymnast's movements?",
+      "signals": [
+        "trajectory_dir(ball,axis)",
+        "continuity(ball)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(ball,axis)": 38.3333,
+        "continuity(ball)": 7.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Does the gymnast perform balanced movements on the flat surface to avoid falling hazards while holding the ball?",
+      "signals": [
+        "center_of_mass_over_base(person)",
+        "falling_hazard(ball)",
+        "balance(gymnast)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "balance(gymnast)": 35.8333,
+        "center_of_mass_over_base(person)": 6.5,
+        "falling_hazard(ball)": 6.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Does the yellow ball maintain its size and shape throughout the sequence when thrown under gravity?",
+      "signals": [
+        "size_inconsistency(ball)",
+        "material_optics(ball)",
+        "trajectory_dir(oX,axis)",
+        "accel_sign(oX,axis)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(oX,axis)": 38.3333,
+        "size_inconsistency(ball)": 7.5,
+        "material_optics(ball)": 7.5,
+        "accel_sign(oX,axis)": 7.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Does the gymnast's movement maintain balance during the routine?",
+      "signals": [
+        "balance(gymnast)",
+        "balance(oX)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "balance(gymnast)": 35.8333,
+        "balance(oX)": 7.1667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "The yellow ball is held and manipulated by the gymnast without sudden disappearance or interpenetration.",
+      "signals": [
+        "continuity(ball)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 36.67,
+      "total_score_100": 96.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(ball)": 36.6667
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "The ball follows a continuous trajectory controlled by the gymnast's movements.",
+      "signals": [
+        "trajectory_dir(ball,axis)",
+        "continuity(ball)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(ball,axis)": 38.3333,
+        "continuity(ball)": 7.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "The gymnast performs balanced movements, maintaining control over the ball at all times.",
+      "signals": [
+        "center_of_mass_over_base(person)",
+        "falling_hazard(ball)",
+        "balance(gymnast)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "balance(gymnast)": 35.8333,
+        "center_of_mass_over_base(person)": 6.5,
+        "falling_hazard(ball)": 6.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "The yellow ball maintains its size and shape throughout the sequence under gravity when thrown.",
+      "signals": [
+        "size_inconsistency(ball)",
+        "material_optics(ball)",
+        "trajectory_dir(oX,axis)",
+        "accel_sign(oX,axis)"
+      ],
+      "content_score_60": 30,
+      "signal_score_40": 40.0,
+      "total_score_100": 70.0,
+      "duplicate_penalized": true,
+      "signal_detail": {
+        "trajectory_dir(oX,axis)": 38.3333,
+        "size_inconsistency(ball)": 7.5,
+        "material_optics(ball)": 7.5,
+        "accel_sign(oX,axis)": 7.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "The gymnast's movements maintain balance to prevent falls or injuries during the routine.",
+      "signals": [
+        "balance(gymnast)",
+        "balance(oX)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "balance(gymnast)": 35.8333,
+        "balance(oX)": 7.1667
+      },
+      "content_score_raw": "60"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "v5",
+    "a1",
+    "a2",
+    "a3",
+    "a5"
+  ]
+}

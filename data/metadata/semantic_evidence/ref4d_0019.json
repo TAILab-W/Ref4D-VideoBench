@@ -1,0 +1,152 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0019.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "cv2",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "kangaroo",
+        "attributes": {
+          "color": [
+            "brown",
+            "tan"
+          ],
+          "size": [
+            "large",
+            "small"
+          ],
+          "age": [
+            "adult",
+            "juvenile"
+          ],
+          "sex": [
+            "female"
+          ],
+          "state": [
+            "resting"
+          ],
+          "pose": [
+            "standing"
+          ],
+          "action": [
+            "carrying"
+          ],
+          "orientation": [
+            "facing-left"
+          ],
+          "position": [
+            "center"
+          ],
+          "object-part": [
+            "ears",
+            "paws",
+            "tail"
+          ],
+          "signature": [
+            "brown-fur-mother-young"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            5.6
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "kangaroo",
+        "attributes": {
+          "color": [
+            "brown"
+          ],
+          "size": [
+            "small"
+          ],
+          "age": [
+            "juvenile"
+          ],
+          "state": [
+            "resting"
+          ],
+          "pose": [
+            "standing"
+          ],
+          "action": [
+            "carrying"
+          ],
+          "orientation": [
+            "facing-right"
+          ],
+          "position": [
+            "center"
+          ],
+          "object-part": [
+            "ears",
+            "paws",
+            "tail"
+          ],
+          "signature": [
+            "brown-fur-young"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            5.6
+          ]
+        ]
+      }
+    ],
+    "relations": [
+      {
+        "subject": "o1",
+        "predicate": "carrying",
+        "object": "o2",
+        "spans": [
+          [
+            0.0,
+            5.6
+          ]
+        ],
+        "confidence": 0.9
+      },
+      {
+        "subject": "o1",
+        "predicate": "holding",
+        "object": "o2",
+        "spans": [
+          [
+            0.0,
+            5.6
+          ]
+        ],
+        "confidence": 0.9
+      },
+      {
+        "subject": "o1",
+        "predicate": "touching",
+        "object": "o2",
+        "spans": [
+          [
+            0.0,
+            5.6
+          ]
+        ],
+        "confidence": 0.9
+      }
+    ]
+  },
+  "views": {
+    "objects_count_display": {
+      "kangaroo": 2
+    }
+  }
+}

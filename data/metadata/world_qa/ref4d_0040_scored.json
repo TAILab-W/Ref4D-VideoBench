@@ -1,0 +1,208 @@
+{
+  "summary": {
+    "items": 10,
+    "enter_bank": 9,
+    "clip_range_sec": [
+      0.0,
+      6.47
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Do the penguins' shadows on the snow match their actual positions and directions?",
+      "signals": [
+        "shadow_consistency(oX)",
+        "center_of_mass_over_base(oX)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "shadow_consistency(oX)": 36.6667,
+        "center_of_mass_over_base(oX)": 6.5
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Does each penguin's leg movement during walking appear continuous and smooth?",
+      "signals": [
+        "biological_motion(penguin)",
+        "continuity(penguin)",
+        "continuity(oX)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "biological_motion(penguin)": 38.3333,
+        "continuity(penguin)": 7.3333,
+        "continuity(oX)": 7.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Are the penguins walking steadily on the snowy surface without any falling hazards present?",
+      "signals": [
+        "shadow_consistency(penguin)",
+        "reflection_consistency(penguin)",
+        "falling_hazard(penguin)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "shadow_consistency(penguin)": 36.6667,
+        "reflection_consistency(penguin)": 7.0,
+        "falling_hazard(penguin)": 6.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Is the motion of the penguins consistent with typical behavior for Antarctic species in a cold environment?",
+      "signals": [
+        "biological_motion(oA)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 38.33,
+      "total_score_100": 88.33,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "biological_motion(oA)": 38.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Does the center of mass of each penguin remain over its feet while it walks?",
+      "signals": [
+        "_default"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 23.33,
+      "total_score_100": 73.33,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "_default": 23.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "Two penguins walk on snow, their legs move in a continuous and smooth trajectory.",
+      "signals": [
+        "biological_motion(penguin)",
+        "continuity(penguin)",
+        "continuity(oX)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "biological_motion(penguin)": 38.3333,
+        "continuity(penguin)": 7.3333,
+        "continuity(oX)": 7.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "Shadows of the penguins follow their actual positions and directions on the snow.",
+      "signals": [
+        "shadow_consistency(penguin)",
+        "reflection_consistency(penguin)",
+        "shadow_consistency(oX)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "shadow_consistency(penguin)": 36.6667,
+        "shadow_consistency(oX)": 7.3333,
+        "reflection_consistency(penguin)": 7.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "The center of mass of each penguin remains over its feet while walking.",
+      "signals": [
+        "center_of_mass_over_base(oX)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 32.5,
+      "total_score_100": 82.5,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "center_of_mass_over_base(oX)": 32.5
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "The penguins exhibit natural biological motion consistent with typical Antarctic species behavior.",
+      "signals": [
+        "biological_motion(penguin)",
+        "continuity(penguin)",
+        "biological_motion(oA)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "biological_motion(penguin)": 38.3333,
+        "biological_motion(oA)": 7.6667,
+        "continuity(penguin)": 7.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "Penguins walk on snow, maintaining a consistent shadow and reflection throughout.",
+      "signals": [
+        "shadow_consistency(penguin)",
+        "reflection_consistency(penguin)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "shadow_consistency(penguin)": 36.6667,
+        "reflection_consistency(penguin)": 7.0
+      },
+      "content_score_raw": "50"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "a1",
+    "a2",
+    "a3",
+    "a4",
+    "a5"
+  ]
+}

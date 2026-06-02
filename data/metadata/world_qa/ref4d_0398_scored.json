@@ -1,0 +1,200 @@
+{
+  "summary": {
+    "items": 10,
+    "enter_bank": 9,
+    "clip_range_sec": [
+      0.0,
+      9.57
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does the person remain seated on the stool without falling off?",
+      "signals": [
+        "balance(oX)",
+        "center_of_mass_over_base(person)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "balance(oX)": 35.8333,
+        "center_of_mass_over_base(person)": 6.5
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Does the stool stay stable and not move unexpectedly while supporting the person?",
+      "signals": [
+        "balance(stool)",
+        "support(stool,person)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "balance(stool)": 35.8333,
+        "support(stool,person)": 7.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Does the wooden stool provide continuous support for the person throughout the scene, with the curtain staying in place as a background?",
+      "signals": [
+        "support(oA,oB)",
+        "continuity(curtain)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(curtain)": 36.6667,
+        "support(oA,oB)": 7.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Do the person's hands maintain proper contact with each other while talking across the clip?",
+      "signals": [
+        "continuity(hands)",
+        "grasp_stability(person's_hands)"
+      ],
+      "content_score_60": 40,
+      "signal_score_40": 40.0,
+      "total_score_100": 80.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(hands)": 36.6667,
+        "grasp_stability(person's_hands)": 5.6667
+      },
+      "content_score_raw": "40"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Does the black curtain serve as a static background that does not move or change shape?",
+      "signals": [
+        "continuity(oX)",
+        "frame_discontinuity(t)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "frame_discontinuity(t)": 40.0,
+        "continuity(oX)": 7.3333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "The black curtain in the background is static and does not move.",
+      "signals": [
+        "frame_discontinuity(t)",
+        "continuity(curtain)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "frame_discontinuity(t)": 40.0,
+        "continuity(curtain)": 7.3333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "The person's hands are clasped together continuously while talking.",
+      "signals": [
+        "continuity(hands)",
+        "grasp_stability(person's_hands)"
+      ],
+      "content_score_60": 0,
+      "signal_score_40": 40.0,
+      "total_score_100": 40.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(hands)": 36.6667,
+        "grasp_stability(person's_hands)": 5.6667
+      },
+      "content_score_raw": "0"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "The wooden stool remains stable and provides support for the person.",
+      "signals": [
+        "balance(stool)",
+        "support(oA,oB)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "balance(stool)": 35.8333,
+        "support(oA,oB)": 7.0
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "The person stays seated on the stool throughout the video.",
+      "signals": [
+        "support(stool,person)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 35.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "support(stool,person)": 35.0
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "The person maintains balance without falling off the stool.",
+      "signals": [
+        "center_of_mass_over_base(person)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 32.5,
+      "total_score_100": 92.5,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "center_of_mass_over_base(person)": 32.5
+      },
+      "content_score_raw": "60"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "v5",
+    "a1",
+    "a3",
+    "a4",
+    "a5"
+  ]
+}

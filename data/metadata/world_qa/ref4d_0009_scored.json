@@ -1,0 +1,193 @@
+{
+  "summary": {
+    "items": 10,
+    "enter_bank": 10,
+    "clip_range_sec": [
+      0.0,
+      8.87
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does the koala's head move smoothly without abrupt changes?",
+      "signals": [
+        "continuity(koala)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 36.67,
+      "total_score_100": 91.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(koala)": 36.6667
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Is the koala grasping eucalyptus leaves with its mouth for eating?",
+      "signals": [
+        "biological_motion(koala)",
+        "grasp_stability(koala,eucalyptus-leaves)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "biological_motion(koala)": 38.3333,
+        "grasp_stability(koala,eucalyptus-leaves)": 5.6667
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Does the koala maintain a consistent size relative to the tree trunk and leaves throughout the clip?",
+      "signals": [
+        "continuity(koala)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 36.67,
+      "total_score_100": 91.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(koala)": 36.6667
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Do the eucalyptus leaves in the koala's mouth match the appearance of those on the tree?",
+      "signals": [
+        "material_optics(eucalyptus-leaves)",
+        "size_inconsistency(eucalyptus-leaves)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "material_optics(eucalyptus-leaves)": 37.5,
+        "size_inconsistency(eucalyptus-leaves)": 7.5
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Does the koala's body position stay natural and continuous without sudden shifts?",
+      "signals": [
+        "continuity(koala)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 36.67,
+      "total_score_100": 91.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(koala)": 36.6667
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "The koala's head and body show natural motion without abrupt changes.",
+      "signals": [
+        "continuity(koala)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 36.67,
+      "total_score_100": 96.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(koala)": 36.6667
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "The koala grasps eucalyptus leaves for eating, showing biological feeding behavior.",
+      "signals": [
+        "biological_motion(koala)",
+        "grasp_stability(koala,eucalyptus-leaves)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "biological_motion(koala)": 38.3333,
+        "grasp_stability(koala,eucalyptus-leaves)": 5.6667
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "The koala's mouth interacts with eucalyptus leaves in a biologically plausible manner.",
+      "signals": [
+        "biological_motion(koala)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 38.33,
+      "total_score_100": 98.33,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "biological_motion(koala)": 38.3333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "Eucalyptus leaves in the koala's mouth have consistent material optics as on the tree.",
+      "signals": [
+        "material_optics(eucalyptus-leaves)",
+        "size_inconsistency(eucalyptus-leaves)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "material_optics(eucalyptus-leaves)": 37.5,
+        "size_inconsistency(eucalyptus-leaves)": 7.5
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "The koala maintains consistent size and position relative to its surroundings.",
+      "signals": [
+        "continuity(koala)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 36.67,
+      "total_score_100": 96.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(koala)": 36.6667
+      },
+      "content_score_raw": "60"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "v5",
+    "a1",
+    "a2",
+    "a3",
+    "a4",
+    "a5"
+  ]
+}

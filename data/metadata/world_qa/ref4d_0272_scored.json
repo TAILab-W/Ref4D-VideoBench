@@ -1,0 +1,182 @@
+{
+  "summary": {
+    "items": 10,
+    "enter_bank": 1,
+    "clip_range_sec": [
+      0.0,
+      5.93
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does the screw rotate in the direction indicated by the text 'THREAD IT'?",
+      "signals": [
+        "trajectory_dir(screw,axis)",
+        "accel_sign(screw,axis)"
+      ],
+      "content_score_60": 30,
+      "signal_score_40": 40.0,
+      "total_score_100": 70.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(screw,axis)": 38.3333,
+        "accel_sign(screw,axis)": 7.0
+      },
+      "content_score_raw": "30"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Does the threaded rod align with the brass nut for proper engagement during threading?",
+      "signals": [
+        "tool_contact"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 28.33,
+      "total_score_100": 78.33,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "tool_contact": 28.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Is the screw maintained on the metal rod, keeping its alignment and structural integrity?",
+      "signals": [
+        "tool_contact"
+      ],
+      "content_score_60": 40,
+      "signal_score_40": 28.33,
+      "total_score_100": 68.33,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "tool_contact": 28.3333
+      },
+      "content_score_raw": "40"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Does the brass nut exhibit expected material optics under consistent lighting?",
+      "signals": [
+        "material_optics"
+      ],
+      "content_score_60": 20,
+      "signal_score_40": 37.5,
+      "total_score_100": 57.5,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "material_optics": 37.5
+      },
+      "content_score_raw": "20"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Does the threaded rod maintain proper alignment with the brass nut throughout the threading process?",
+      "signals": [
+        "tool_contact"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 28.33,
+      "total_score_100": 78.33,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "tool_contact": 28.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "The threaded rod aligns with the brass nut for proper engagement.",
+      "signals": [
+        "tool_contact"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 28.33,
+      "total_score_100": 78.33,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "tool_contact": 28.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "The metallic screw and brass nut show expected material optics under consistent lighting.",
+      "signals": [
+        "material_optics"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 37.5,
+      "total_score_100": 87.5,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "material_optics": 37.5
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "The text 'THREAD IT' indicates a direction of rotation for the screw.",
+      "signals": [
+        "trajectory_dir(screw,axis)",
+        "accel_sign(screw,axis)"
+      ],
+      "content_score_60": 30,
+      "signal_score_40": 40.0,
+      "total_score_100": 70.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(screw,axis)": 38.3333,
+        "accel_sign(screw,axis)": 7.0
+      },
+      "content_score_raw": "30"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "The screw is threaded onto the metal rod, maintaining its alignment.",
+      "signals": [
+        "tool_contact"
+      ],
+      "content_score_60": 40,
+      "signal_score_40": 28.33,
+      "total_score_100": 68.33,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "tool_contact": 28.3333
+      },
+      "content_score_raw": "40"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "The screw maintains continuity in its motion as indicated by the text 'THREAD IT'.",
+      "signals": [
+        "trajectory_dir(screw,axis)",
+        "accel_sign(screw,axis)"
+      ],
+      "content_score_60": 30,
+      "signal_score_40": 40.0,
+      "total_score_100": 70.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(screw,axis)": 38.3333,
+        "accel_sign(screw,axis)": 7.0
+      },
+      "content_score_raw": "30"
+    }
+  ],
+  "bank_ids": [
+    "a2"
+  ]
+}

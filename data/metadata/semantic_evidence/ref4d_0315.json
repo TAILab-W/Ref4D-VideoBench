@@ -1,0 +1,184 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0315.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "decord",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "sun",
+        "attributes": {
+          "color": [
+            "orange",
+            "yellow"
+          ],
+          "state": [
+            "setting"
+          ],
+          "signature": [
+            "yellow-orange-disk-in-sky"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            13.2
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "cloud",
+        "attributes": {
+          "color": [
+            "blue",
+            "white"
+          ],
+          "signature": [
+            "white-and-blue-striped-pattern"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            13.2
+          ]
+        ]
+      },
+      {
+        "id": "o3",
+        "name": "tree",
+        "attributes": {
+          "signature": [
+            "dark-green-forest-on-horizon"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            13.2
+          ]
+        ]
+      },
+      {
+        "id": "o4",
+        "name": "river",
+        "attributes": {
+          "signature": [
+            "light-blue-water-with-waves"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            13.2
+          ]
+        ]
+      },
+      {
+        "id": "o5",
+        "name": "plant",
+        "attributes": {
+          "signature": [
+            "green-leaves-with-purple-flowers"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            13.2
+          ]
+        ]
+      }
+    ],
+    "relations": [
+      {
+        "subject": "o1",
+        "predicate": "left-of",
+        "object": "o2",
+        "spans": [
+          [
+            0.0,
+            13.2
+          ]
+        ],
+        "confidence": 0.8
+      },
+      {
+        "subject": "o3",
+        "predicate": "left-of",
+        "object": "o4",
+        "spans": [
+          [
+            0.0,
+            13.2
+          ]
+        ],
+        "confidence": 0.9
+      },
+      {
+        "subject": "o5",
+        "predicate": "in-front-of",
+        "object": "o4",
+        "spans": [
+          [
+            0.0,
+            13.2
+          ]
+        ],
+        "confidence": 0.9
+      },
+      {
+        "subject": "o4",
+        "predicate": "below",
+        "object": "o1",
+        "spans": [
+          [
+            0.0,
+            13.2
+          ]
+        ],
+        "confidence": 0.9
+      },
+      {
+        "subject": "o4",
+        "predicate": "below",
+        "object": "o2",
+        "spans": [
+          [
+            0.0,
+            13.2
+          ]
+        ],
+        "confidence": 0.9
+      },
+      {
+        "subject": "o4",
+        "predicate": "below",
+        "object": "o3",
+        "spans": [
+          [
+            0.0,
+            13.2
+          ]
+        ],
+        "confidence": 0.9
+      }
+    ]
+  },
+  "views": {
+    "objects_count_display": {
+      "sun": 1,
+      "cloud": 1,
+      "tree": 1,
+      "river": 1,
+      "plant": 1
+    }
+  }
+}

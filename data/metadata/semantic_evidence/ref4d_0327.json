@@ -1,0 +1,65 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0327.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "decord",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "boat",
+        "attributes": {
+          "signature": [
+            "small-red-boat"
+          ]
+        },
+        "spans": [
+          [
+            0.4,
+            0.9
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "bird",
+        "attributes": {
+          "signature": [
+            "flying-bird"
+          ]
+        },
+        "spans": [
+          [
+            0.1,
+            0.4
+          ]
+        ]
+      }
+    ],
+    "relations": [
+      {
+        "subject": "o1",
+        "predicate": "left-of",
+        "object": "o1",
+        "spans": [
+          [
+            0.3,
+            0.4
+          ]
+        ],
+        "confidence": 0.8
+      }
+    ]
+  },
+  "views": {
+    "objects_count_display": {
+      "boat": 1,
+      "bird": 1
+    }
+  }
+}

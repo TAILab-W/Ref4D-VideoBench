@@ -1,0 +1,211 @@
+{
+  "summary": {
+    "items": 10,
+    "enter_bank": 8,
+    "clip_range_sec": [
+      0.0,
+      6.17
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does the wooden bridge remain stable on its supports without signs of collapse or deformation?",
+      "signals": [
+        "continuity(bridge)",
+        "support(oA,oB)",
+        "balance(oX)",
+        "deformation(oX)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "deformation(oX)": 40.0,
+        "continuity(bridge)": 7.3333,
+        "balance(oX)": 7.1667,
+        "support(oA,oB)": 7.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Is the water under the bridge flowing naturally in a consistent direction from upstream to downstream?",
+      "signals": [
+        "continuity(water)",
+        "trajectory_dir(water,axis)",
+        "trajectory_dir(oX,axis)",
+        "continuity(oX)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(water,axis)": 38.3333,
+        "trajectory_dir(oX,axis)": 7.6667,
+        "continuity(water)": 7.3333,
+        "continuity(oX)": 7.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Is the text 'listen to the forest:' present as white text on the screen throughout the clip?",
+      "signals": [
+        "result_appearance(text)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 28.33,
+      "total_score_100": 78.33,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "result_appearance(text)": 28.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Do the trees and vegetation exhibit natural growth patterns with no sudden changes in size or position?",
+      "signals": [
+        "size_inconsistency(oX)",
+        "rigid_transform(oX)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "size_inconsistency(oX)": 37.5,
+        "rigid_transform(oX)": 7.5
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Are there no falling hazards visible near the elevated position of the bridge?",
+      "signals": [
+        "falling_hazard(bridge)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 31.67,
+      "total_score_100": 81.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "falling_hazard(bridge)": 31.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "The wooden bridge is stable and does not show any signs of collapse or deformation.",
+      "signals": [
+        "continuity(bridge)",
+        "support(oA,oB)",
+        "balance(oX)",
+        "deformation(oX)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "deformation(oX)": 40.0,
+        "continuity(bridge)": 7.3333,
+        "balance(oX)": 7.1667,
+        "support(oA,oB)": 7.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "Water flows naturally under the bridge from upstream to downstream without size inconsistency.",
+      "signals": [
+        "continuity(water)",
+        "trajectory_dir(water,axis)",
+        "trajectory_dir(oX,axis)",
+        "continuity(oX)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(water,axis)": 38.3333,
+        "trajectory_dir(oX,axis)": 7.6667,
+        "continuity(water)": 7.3333,
+        "continuity(oX)": 7.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "White text 'listen to the forest:' appears on the screen, providing an auditory affordance.",
+      "signals": [
+        "result_appearance(text)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 28.33,
+      "total_score_100": 78.33,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "result_appearance(text)": 28.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "Trees and vegetation maintain natural growth patterns with no sudden changes in size or position.",
+      "signals": [
+        "size_inconsistency(oX)",
+        "rigid_transform(oX)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "size_inconsistency(oX)": 37.5,
+        "rigid_transform(oX)": 7.5
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "The forest environment remains calm with no immediate falling hazards or unstable elements.",
+      "signals": [
+        "falling_hazard(oObj)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 31.67,
+      "total_score_100": 81.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "falling_hazard(oObj)": 31.6667
+      },
+      "content_score_raw": "50"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v4",
+    "v5",
+    "a1",
+    "a2",
+    "a4",
+    "a5"
+  ]
+}

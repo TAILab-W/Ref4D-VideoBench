@@ -1,0 +1,231 @@
+{
+  "summary": {
+    "items": 10,
+    "enter_bank": 10,
+    "clip_range_sec": [
+      0.0,
+      7.6
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Do the bears move naturally in the water without violating gravity or buoyancy?",
+      "signals": [
+        "buoyancy_float(bear,in:river)",
+        "continuity(bear)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(bear)": 36.6667,
+        "buoyancy_float(bear,in:river)": 6.8333
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Are the bears' actions near the flowing river biologically plausible and safe?",
+      "signals": [
+        "biological_motion(bear)",
+        "falling_hazard(river)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "biological_motion(bear)": 38.3333,
+        "falling_hazard(river)": 6.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Does the bear's body maintain continuity and natural deformation during movement in the water?",
+      "signals": [
+        "continuity(bear)",
+        "deformation(bear)",
+        "frame_discontinuity(t)",
+        "interpenetration(bear,water)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "deformation(bear)": 40.0,
+        "frame_discontinuity(t)": 8.0,
+        "continuity(bear)": 7.3333,
+        "interpenetration(bear,water)": 7.1667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Do the bears follow a consistent trajectory direction on the river surface across the clip?",
+      "signals": [
+        "trajectory_dir(bear,axis)",
+        "accel_sign(bear,axis)",
+        "friction_sliding(bear,on:river)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(bear,axis)": 38.3333,
+        "accel_sign(bear,axis)": 7.0,
+        "friction_sliding(bear,on:river)": 6.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Do the bears' movements in the river pose any unrealistic safety risks?",
+      "signals": [
+        "biological_motion(bear)",
+        "falling_hazard(river)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "biological_motion(bear)": 38.3333,
+        "falling_hazard(river)": 6.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "Three bears move naturally in the river, following its flow.",
+      "signals": [
+        "buoyancy_float(bear,in:river)",
+        "biological_motion(bear)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "biological_motion(bear)": 38.3333,
+        "buoyancy_float(bear,in:river)": 6.8333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "The bear on the left maintains body continuity while moving through the water.",
+      "signals": [
+        "continuity(bear)",
+        "deformation(bear)",
+        "frame_discontinuity(t)",
+        "interpenetration(bear,water)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "deformation(bear)": 40.0,
+        "frame_discontinuity(t)": 8.0,
+        "continuity(bear)": 7.3333,
+        "interpenetration(bear,water)": 7.1667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "Bears are near flowing water, showing biologically plausible behavior.",
+      "signals": [
+        "trajectory_dir(bear,axis)",
+        "accel_sign(bear,axis)",
+        "friction_sliding(bear,on:river)",
+        "biological_motion(bear)",
+        "falling_hazard(river)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(bear,axis)": 38.3333,
+        "biological_motion(bear)": 7.6667,
+        "accel_sign(bear,axis)": 7.0,
+        "falling_hazard(river)": 6.3333,
+        "friction_sliding(bear,on:river)": 6.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "The bears' movements in the water do not violate physical laws like gravity or buoyancy.",
+      "signals": [
+        "biological_motion(bear)",
+        "continuity(bear)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "biological_motion(bear)": 38.3333,
+        "continuity(bear)": 7.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "Bears follow a consistent trajectory direction and acceleration on the river surface.",
+      "signals": [
+        "continuity(bear)",
+        "deformation(bear)",
+        "frame_discontinuity(t)",
+        "interpenetration(bear,water)",
+        "trajectory_dir(bear,axis)",
+        "accel_sign(bear,axis)",
+        "friction_sliding(bear,on:river)"
+      ],
+      "content_score_60": 40,
+      "signal_score_40": 40.0,
+      "total_score_100": 80.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "deformation(bear)": 40.0,
+        "frame_discontinuity(t)": 8.0,
+        "trajectory_dir(bear,axis)": 7.6667,
+        "continuity(bear)": 7.3333,
+        "interpenetration(bear,water)": 7.1667,
+        "accel_sign(bear,axis)": 7.0,
+        "friction_sliding(bear,on:river)": 6.0
+      },
+      "content_score_raw": "40"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "v5",
+    "a1",
+    "a2",
+    "a3",
+    "a4",
+    "a5"
+  ]
+}

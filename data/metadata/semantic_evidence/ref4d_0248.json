@@ -1,0 +1,68 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0248.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "cv2",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "bottle",
+        "attributes": {
+          "signature": [
+            "white-plastic-bottle-with-a-white-cap,-placed-in-the-blue-circular-holder-of-the-machine"
+          ]
+        },
+        "spans": [
+          [
+            0.1,
+            1.2
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "machine_part",
+        "attributes": {
+          "signature": [
+            "blue-and-black-rotating-component-with-multiple-arms-and-metallic-rods"
+          ]
+        },
+        "spans": [
+          [
+            0.1,
+            1.2
+          ]
+        ]
+      },
+      {
+        "id": "o3",
+        "name": "text_on_machine",
+        "attributes": {
+          "signature": [
+            "white-text-on-top-part-of-the-machine,-partially-visible-as-'explore-chinese-talen'"
+          ]
+        },
+        "spans": [
+          [
+            0.4,
+            0.6
+          ]
+        ]
+      }
+    ],
+    "relations": []
+  },
+  "views": {
+    "objects_count_display": {
+      "bottle": 1,
+      "machine_part": 1,
+      "text_on_machine": 1
+    }
+  }
+}

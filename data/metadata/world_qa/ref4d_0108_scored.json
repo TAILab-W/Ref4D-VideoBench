@@ -1,0 +1,207 @@
+{
+  "summary": {
+    "items": 10,
+    "enter_bank": 10,
+    "clip_range_sec": [
+      0.0,
+      8.3
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Do the cranes on the skyscrapers remain attached to their buildings without sudden detachment?",
+      "signals": [
+        "support(building,crane)",
+        "balance(crane), center_of_mass_over_base(crane)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "balance(crane), center_of_mass_over_base(crane)": 35.8333,
+        "support(building,crane)": 7.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Does the water in the river reflect the overcast sky consistently throughout the clip?",
+      "signals": [
+        "reflection_consistency(water)",
+        "continuity(water)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(water)": 36.6667,
+        "reflection_consistency(water)": 7.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Does the bridge support vehicles and pedestrians by providing a stable structure for crossing over the water?",
+      "signals": [
+        "support(bridge,vehicles)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 35.0,
+      "total_score_100": 85.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "support(bridge,vehicles)": 35.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Do the construction cranes maintain balance, with their center of mass over their base, supported by their respective structures?",
+      "signals": [
+        "size_inconsistency(buildings)",
+        "frame_discontinuity(t)",
+        "support(cranes,buildings)",
+        "balance(cranes)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "frame_discontinuity(t)": 40.0,
+        "size_inconsistency(buildings)": 7.5,
+        "balance(cranes)": 7.1667,
+        "support(cranes,buildings)": 7.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Are the architectural elements placeable within a cityscape supporting typical human tasks such as observation and navigation?",
+      "signals": [
+        "placeable(buildings,cityscape)",
+        "supportable(buildings,ground)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 31.83,
+      "total_score_100": 81.83,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "supportable(buildings,ground)": 26.6667,
+        "placeable(buildings,cityscape)": 5.1667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "The buildings and cranes maintain consistent size and position throughout the video.",
+      "signals": [
+        "size_inconsistency(buildings)",
+        "frame_discontinuity(t)",
+        "continuity(water)",
+        "reflection_consistency(water)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "frame_discontinuity(t)": 40.0,
+        "size_inconsistency(buildings)": 7.5,
+        "continuity(water)": 7.3333,
+        "reflection_consistency(water)": 7.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "The water in the river reflects the overcast sky without sudden changes in hue.",
+      "signals": [
+        "reflection_consistency(water)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 35.0,
+      "total_score_100": 85.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "reflection_consistency(water)": 35.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "The construction cranes on the building sites are supported by their respective structures, maintaining balance.",
+      "signals": [
+        "support(cranes,buildings)",
+        "balance(cranes)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "balance(cranes)": 35.8333,
+        "support(cranes,buildings)": 7.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "A bridge spans the water at the bottom of the scene, providing a stable structure for crossing.",
+      "signals": [
+        "support(bridge,vehicles)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 35.0,
+      "total_score_100": 85.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "support(bridge,vehicles)": 35.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "Cranes remain attached to buildings; they do not suddenly detach or float.",
+      "signals": [
+        "support(building,crane)",
+        "balance(crane), center_of_mass_over_base(crane)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "balance(crane), center_of_mass_over_base(crane)": 35.8333,
+        "support(building,crane)": 7.0
+      },
+      "content_score_raw": "50"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "v5",
+    "a1",
+    "a2",
+    "a3",
+    "a4",
+    "a5"
+  ]
+}

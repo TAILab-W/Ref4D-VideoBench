@@ -1,0 +1,52 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0183.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "decord",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "text",
+        "attributes": {
+          "signature": [
+            "from-concept-to-creation"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            2.5
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "cylinder",
+        "attributes": {
+          "signature": [
+            "white-cylindrical-object-with-black-cap-and-drain"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            2.5
+          ]
+        ]
+      }
+    ],
+    "relations": []
+  },
+  "views": {
+    "objects_count_display": {
+      "text": 1,
+      "cylinder": 1
+    }
+  }
+}

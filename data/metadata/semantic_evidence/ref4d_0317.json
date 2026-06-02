@@ -1,0 +1,193 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0317.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "decord",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "ship",
+        "attributes": {
+          "color": [
+            "orange",
+            "red",
+            "white"
+          ],
+          "pattern": [
+            "strip"
+          ],
+          "material": [
+            "metal"
+          ],
+          "size": [
+            "large"
+          ],
+          "state": [
+            "anchored"
+          ],
+          "position": [
+            "foreground-right"
+          ],
+          "signature": [
+            "white-body-orange-strip-red-emblem-ship-name-39-berkay"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            8.2
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "building",
+        "attributes": {
+          "color": [
+            "brown",
+            "red",
+            "white"
+          ],
+          "signature": [
+            "multi-story-with-red-flag-and-number-3"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            8.2
+          ]
+        ]
+      },
+      {
+        "id": "o3",
+        "name": "crane",
+        "attributes": {
+          "color": [
+            "yellow"
+          ],
+          "action": [
+            "stationary"
+          ],
+          "signature": [
+            "yellow-cranewith-long-arm"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            8.2
+          ]
+        ]
+      },
+      {
+        "id": "o4",
+        "name": "water",
+        "attributes": {
+          "color": [
+            "blue-green"
+          ],
+          "state": [
+            "calm"
+          ],
+          "signature": [
+            "blue-green-water-with-reflections"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            8.2
+          ]
+        ]
+      },
+      {
+        "id": "o5",
+        "name": "sky",
+        "attributes": {
+          "color": [
+            "blue",
+            "white"
+          ],
+          "weather": [
+            "partly-cloudy"
+          ],
+          "signature": [
+            "blue-sky-with-white-clouds"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            8.2
+          ]
+        ]
+      }
+    ],
+    "relations": [
+      {
+        "subject": "o1",
+        "predicate": "anchored-at",
+        "object": "o4",
+        "spans": [
+          [
+            0.0,
+            8.2
+          ]
+        ],
+        "confidence": 0.9
+      },
+      {
+        "subject": "o1",
+        "predicate": "left-of",
+        "object": "o2",
+        "spans": [
+          [
+            0.0,
+            8.2
+          ]
+        ],
+        "confidence": 0.8
+      },
+      {
+        "subject": "o3",
+        "predicate": "above",
+        "object": "o2",
+        "spans": [
+          [
+            0.0,
+            8.2
+          ]
+        ],
+        "confidence": 0.7
+      },
+      {
+        "subject": "o5",
+        "predicate": "over",
+        "object": "o4",
+        "spans": [
+          [
+            0.0,
+            8.2
+          ]
+        ],
+        "confidence": 0.6
+      }
+    ]
+  },
+  "views": {
+    "objects_count_display": {
+      "ship": 1,
+      "building": 1,
+      "crane": 1,
+      "water": 1,
+      "sky": 1
+    }
+  }
+}

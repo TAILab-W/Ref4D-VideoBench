@@ -1,0 +1,188 @@
+{
+  "summary": {
+    "items": 10,
+    "enter_bank": 9,
+    "clip_range_sec": [
+      0.0,
+      6.73
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does snow naturally accumulate on mountain slopes without suddenly disappearing?",
+      "signals": [
+        "continuity(snow)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 36.67,
+      "total_score_100": 86.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(snow)": 36.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Do shadows cast by mountains consistently align with their shapes and light sources, maintaining logical forms without interpenetration?",
+      "signals": [
+        "shadow_consistency(mountain_shadows)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 36.67,
+      "total_score_100": 86.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "shadow_consistency(mountain_shadows)": 36.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Do large rock formations remain rigid and stable, showing no signs of sudden deformation or fracture?",
+      "signals": [
+        "rigid_transform(rock_formations)",
+        "rigid_transform(rocky_surfaces)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "rigid_transform(rock_formations)": 37.5,
+        "rigid_transform(rocky_surfaces)": 7.5
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Is lighting across the scene consistent, avoiding abrupt changes in hue or brightness that do not correspond to natural causes?",
+      "signals": [
+        "hue_histogram_jump(overall_scene)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 33.33,
+      "total_score_100": 83.33,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "hue_histogram_jump(overall_scene)": 33.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Does sunlight illuminate all objects in a manner consistent with its direction, avoiding sudden hue changes or material optics inconsistencies?",
+      "signals": [
+        "hue_histogram_jump(snow_and_mountain)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 33.33,
+      "total_score_100": 83.33,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "hue_histogram_jump(snow_and_mountain)": 33.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "Large rock formations remain rigid and stable, showing no signs of sudden deformation or fracture.",
+      "signals": [
+        "rigid_transform(rock_formations)",
+        "rigid_transform(rocky_surfaces)"
+      ],
+      "content_score_60": 30,
+      "signal_score_40": 40.0,
+      "total_score_100": 70.0,
+      "duplicate_penalized": true,
+      "signal_detail": {
+        "rigid_transform(rock_formations)": 37.5,
+        "rigid_transform(rocky_surfaces)": 7.5
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "Snow naturally accumulates on mountain slopes without suddenly disappearing or floating in mid-air.",
+      "signals": [
+        "continuity(snow)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 36.67,
+      "total_score_100": 86.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(snow)": 36.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "Shadows cast by mountains consistently align with their respective light sources and maintain logical shapes without interpenetration.",
+      "signals": [
+        "shadow_consistency(mountain_shadows)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 36.67,
+      "total_score_100": 86.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "shadow_consistency(mountain_shadows)": 36.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "Lighting across the scene remains consistent, avoiding abrupt changes in hue or brightness.",
+      "signals": [
+        "hue_histogram_jump(overall_scene)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 33.33,
+      "total_score_100": 83.33,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "hue_histogram_jump(overall_scene)": 33.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "Sunlight illuminates all objects consistently with its direction, showing no sudden hue changes.",
+      "signals": [
+        "hue_histogram_jump(snow_and_mountain)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 33.33,
+      "total_score_100": 83.33,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "hue_histogram_jump(snow_and_mountain)": 33.3333
+      },
+      "content_score_raw": "50"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "v5",
+    "a2",
+    "a3",
+    "a4",
+    "a5"
+  ]
+}

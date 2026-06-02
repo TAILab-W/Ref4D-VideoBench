@@ -1,0 +1,124 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0435.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "decord",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "person",
+        "attributes": {
+          "color": [
+            "black",
+            "gray"
+          ],
+          "sex": [
+            "male"
+          ],
+          "state": [
+            "standing"
+          ],
+          "pose": [
+            "front-facing"
+          ],
+          "action": [
+            "talking"
+          ],
+          "signature": [
+            "male-gray-shirt-black-cap-fal-printed-text"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            9.8
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "hat",
+        "attributes": {
+          "color": [
+            "black"
+          ],
+          "printed-text": [
+            "fal"
+          ],
+          "signature": [
+            "black-fal-printed-text"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            9.8
+          ]
+        ]
+      },
+      {
+        "id": "o3",
+        "name": "shirt",
+        "attributes": {
+          "color": [
+            "gray"
+          ],
+          "printed-text": [
+            "code-focusup",
+            "factor-driven-by-choice",
+            "it's-a-journey",
+            "ken-johnson"
+          ],
+          "signature": [
+            "gray-ken-johnson-code-focusup-printed-text"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            9.8
+          ]
+        ]
+      }
+    ],
+    "relations": [
+      {
+        "subject": "o1",
+        "predicate": "wearing",
+        "object": "o2",
+        "spans": [
+          [
+            0.0,
+            9.8
+          ]
+        ],
+        "confidence": 0.8
+      },
+      {
+        "subject": "o1",
+        "predicate": "wearing",
+        "object": "o3",
+        "spans": [
+          [
+            0.0,
+            9.8
+          ]
+        ],
+        "confidence": 0.8
+      }
+    ]
+  },
+  "views": {
+    "objects_count_display": {
+      "person": 1,
+      "hat": 1,
+      "shirt": 1
+    }
+  }
+}

@@ -1,0 +1,152 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0481.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "decord",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "person",
+        "attributes": {
+          "color": [
+            "black",
+            "gray",
+            "white"
+          ],
+          "pattern": [
+            "print"
+          ],
+          "sex": [
+            "male"
+          ],
+          "action": [
+            "climbing",
+            "falling",
+            "talking"
+          ],
+          "state": [
+            "wet"
+          ],
+          "pose": [
+            "hanging",
+            "standing"
+          ],
+          "facing-direction": [
+            "left",
+            "right"
+          ],
+          "signature": [
+            "male-white-shirt-black-pants-gray-shoes-glasses-watch-backprint"
+          ]
+        },
+        "spans": [
+          [
+            0.2,
+            0.8
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "rock-wall",
+        "attributes": {
+          "color": [
+            "black",
+            "blue",
+            "gray",
+            "orange"
+          ],
+          "material": [
+            "concrete"
+          ],
+          "texture": [
+            "rough"
+          ],
+          "signature": [
+            "black-surface-gray-triangles-orange-blue-holds"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            1.0
+          ]
+        ]
+      },
+      {
+        "id": "o3",
+        "name": "rock-holds",
+        "attributes": {
+          "color": [
+            "blue",
+            "orange"
+          ],
+          "shape": [
+            "curved",
+            "triangular"
+          ],
+          "signature": [
+            "orange-blue-geometric-shapes"
+          ]
+        },
+        "spans": [
+          [
+            0.2,
+            0.8
+          ]
+        ]
+      }
+    ],
+    "relations": [
+      {
+        "subject": "o1",
+        "predicate": "climbing-on",
+        "object": "o2",
+        "spans": [
+          [
+            0.2,
+            0.8
+          ]
+        ],
+        "confidence": 0.9
+      },
+      {
+        "subject": "o1",
+        "predicate": "falling-from",
+        "object": "o2",
+        "spans": [
+          [
+            0.2,
+            0.8
+          ]
+        ],
+        "confidence": 0.9
+      },
+      {
+        "subject": "o1",
+        "predicate": "holding",
+        "object": "o3",
+        "spans": [
+          [
+            0.2,
+            0.8
+          ]
+        ],
+        "confidence": 0.9
+      }
+    ]
+  },
+  "views": {
+    "objects_count_display": {
+      "person": 1,
+      "rock-wall": 1,
+      "rock-holds": 1
+    }
+  }
+}

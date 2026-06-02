@@ -1,0 +1,156 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0294.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "decord",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "road",
+        "attributes": {
+          "color": [
+            "gray",
+            "white",
+            "yellow"
+          ],
+          "pattern": [
+            "double-yellow-line",
+            "white-side-lines"
+          ],
+          "material": [
+            "asphalt"
+          ],
+          "state": [
+            "empty",
+            "straight"
+          ],
+          "signature": [
+            "yellow-double-line-white-side-lines"
+          ]
+        },
+        "spans": [
+          [
+            0.1,
+            6.3
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "tree",
+        "attributes": {
+          "color": [
+            "green",
+            "yellow"
+          ],
+          "size": [
+            "tall"
+          ],
+          "texture": [
+            "bark"
+          ],
+          "facing-direction": [
+            "both-sides"
+          ],
+          "signature": [
+            "green-yellow-leaves-tall-sparse-bark"
+          ]
+        },
+        "spans": [
+          [
+            0.1,
+            6.3
+          ]
+        ]
+      },
+      {
+        "id": "o3",
+        "name": "sky",
+        "attributes": {
+          "color": [
+            "blue",
+            "white"
+          ],
+          "pattern": [
+            "clouds"
+          ],
+          "state": [
+            "clear"
+          ],
+          "signature": [
+            "blue-with-white-clouds"
+          ]
+        },
+        "spans": [
+          [
+            0.1,
+            6.3
+          ]
+        ]
+      }
+    ],
+    "relations": [
+      {
+        "subject": "o1",
+        "predicate": "has-line",
+        "object": "o2",
+        "spans": [
+          [
+            0.3,
+            6.3
+          ]
+        ],
+        "confidence": 0.8
+      },
+      {
+        "subject": "o1",
+        "predicate": "has-line",
+        "object": "o3",
+        "spans": [
+          [
+            0.4,
+            6.3
+          ]
+        ],
+        "confidence": 0.8
+      },
+      {
+        "subject": "o2",
+        "predicate": "beside",
+        "object": "o1",
+        "spans": [
+          [
+            0.1,
+            6.3
+          ]
+        ],
+        "confidence": 0.9
+      },
+      {
+        "subject": "o3",
+        "predicate": "above",
+        "object": "o1",
+        "spans": [
+          [
+            0.1,
+            6.3
+          ]
+        ],
+        "confidence": 0.9
+      }
+    ]
+  },
+  "views": {
+    "objects_count_display": {
+      "road": 1,
+      "tree": 1,
+      "sky": 1
+    }
+  }
+}

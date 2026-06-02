@@ -1,0 +1,212 @@
+{
+  "summary": {
+    "items": 10,
+    "enter_bank": 9,
+    "clip_range_sec": [
+      0.0,
+      9.0
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does the red sports car's shadow on the cobblestone pavement match its position and shape throughout the clip?",
+      "signals": [
+        "continuity(car)",
+        "shadow_consistency(car)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(car)": 36.6667,
+        "shadow_consistency(car)": 7.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Is the red sports car stationary with its wheels in contact with the ground, showing no unexpected movement or deformation?",
+      "signals": [
+        "continuity(car)",
+        "wheel_rolling(car)",
+        "shadow_consistency(car)",
+        "shadow_consistency"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(car)": 36.6667,
+        "shadow_consistency(car)": 7.3333,
+        "shadow_consistency": 7.3333,
+        "wheel_rolling(car)": 6.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Is the red sports car parked safely away from pedestrian pathways near the Meridien Modena dealership shop facade?",
+      "signals": [
+        "continuity",
+        "collision"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity": 36.6667,
+        "collision": 6.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Is the red sports car positioned parallel to the curb as if it is properly parked outside the building?",
+      "signals": [
+        "support(pavement,car)",
+        "continuity"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity": 36.6667,
+        "support(pavement,car)": 7.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Do the shadows of objects remain consistent across the video without sudden changes?",
+      "signals": [
+        "shadow_consistency(car)",
+        "shadow_consistency"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "shadow_consistency(car)": 36.6667,
+        "shadow_consistency": 7.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "The red sports car remains stationary on the cobblestone pavement.",
+      "signals": [
+        "continuity(car)",
+        "shadow_consistency(car)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(car)": 36.6667,
+        "shadow_consistency(car)": 7.3333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "The red sports car is parked in front of the Meridien Modena dealership shop, near the curb.",
+      "signals": [
+        "support(pavement,car)",
+        "continuity"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity": 36.6667,
+        "support(pavement,car)": 7.0
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "The shadow of the red sports car matches its position and shape consistently.",
+      "signals": [
+        "continuity(car)",
+        "wheel_rolling(car)",
+        "shadow_consistency(car)",
+        "shadow_consistency"
+      ],
+      "content_score_60": 30,
+      "signal_score_40": 40.0,
+      "total_score_100": 70.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(car)": 36.6667,
+        "shadow_consistency(car)": 7.3333,
+        "shadow_consistency": 7.3333,
+        "wheel_rolling(car)": 6.0
+      },
+      "content_score_raw": "30"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "The red sports car does not show any unexpected movement or deformation.",
+      "signals": [
+        "continuity(car)",
+        "wheel_rolling(car)",
+        "shadow_consistency(car)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(car)": 36.6667,
+        "shadow_consistency(car)": 7.3333,
+        "wheel_rolling(car)": 6.0
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "The wheels of the red sports car are in contact with the cobblestone pavement.",
+      "signals": [
+        "shadow_consistency"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 36.67,
+      "total_score_100": 96.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "shadow_consistency": 36.6667
+      },
+      "content_score_raw": "60"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "v5",
+    "a1",
+    "a2",
+    "a4",
+    "a5"
+  ]
+}

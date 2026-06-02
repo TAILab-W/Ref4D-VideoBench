@@ -1,0 +1,88 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0468.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "decord",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "person",
+        "attributes": {
+          "color": [
+            "black",
+            "blue",
+            "red",
+            "yellow"
+          ],
+          "action": [
+            "leaning",
+            "skating"
+          ],
+          "pose": [
+            "bending",
+            "crouching"
+          ],
+          "equipment": [
+            "skates"
+          ],
+          "signature": [
+            "red-helmet-black-and-yellow-shirt-blue-shorts-red-skates"
+          ]
+        },
+        "spans": [
+          [
+            0.3,
+            0.8
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "cone",
+        "attributes": {
+          "color": [
+            "yellow"
+          ],
+          "size": [
+            "small"
+          ],
+          "signature": [
+            "yellow"
+          ]
+        },
+        "spans": [
+          [
+            0.1,
+            0.7
+          ]
+        ]
+      }
+    ],
+    "relations": [
+      {
+        "subject": "o1",
+        "predicate": "riding",
+        "object": "o2",
+        "spans": [
+          [
+            0.5,
+            0.7
+          ]
+        ],
+        "confidence": 0.9
+      }
+    ]
+  },
+  "views": {
+    "objects_count_display": {
+      "person": 1,
+      "cone": 1
+    }
+  }
+}

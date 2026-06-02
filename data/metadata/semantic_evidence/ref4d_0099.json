@@ -1,0 +1,279 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0099.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "cv2",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "person",
+        "attributes": {
+          "color": [
+            "black",
+            "gray"
+          ],
+          "sex": [
+            "male"
+          ],
+          "action": [
+            "working"
+          ],
+          "pose": [
+            "standing"
+          ],
+          "facing-direction": [
+            "right-facing"
+          ],
+          "position": [
+            "center"
+          ],
+          "signature": [
+            "gray-shirt-black-shorts-watch-toolbelt"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            6.3
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "ceiling",
+        "attributes": {
+          "color": [
+            "white"
+          ],
+          "state": [
+            "unpainted"
+          ],
+          "signature": [
+            "white-unpainted"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            6.3
+          ]
+        ]
+      },
+      {
+        "id": "o3",
+        "name": "toolbelt",
+        "attributes": {
+          "color": [
+            "green"
+          ],
+          "object-part": [
+            "belt"
+          ],
+          "signature": [
+            "green-with-tools"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            6.3
+          ]
+        ]
+      },
+      {
+        "id": "o4",
+        "name": "watch",
+        "attributes": {
+          "color": [
+            "black"
+          ],
+          "signature": [
+            "black-dial"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            6.3
+          ]
+        ]
+      },
+      {
+        "id": "o5",
+        "name": "crown-molding",
+        "attributes": {
+          "color": [
+            "white"
+          ],
+          "pattern": [
+            "ornate"
+          ],
+          "material": [
+            "wood"
+          ],
+          "signature": [
+            "white-ornate"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            6.3
+          ]
+        ]
+      },
+      {
+        "id": "o6",
+        "name": "ceiling_crown_molding",
+        "attributes": {
+          "color": [
+            "white"
+          ],
+          "pattern": [
+            "rectangular",
+            "ridged"
+          ],
+          "material": [
+            "plaster"
+          ],
+          "signature": [
+            "white-textured-rectangular-pattern"
+          ]
+        },
+        "spans": [
+          [
+            6.3,
+            12.2
+          ]
+        ]
+      },
+      {
+        "id": "o7",
+        "name": "wall",
+        "attributes": {
+          "color": [
+            "light-gray"
+          ],
+          "texture": [
+            "flat"
+          ],
+          "material": [
+            "drywall"
+          ],
+          "signature": [
+            "light-gray-flat-surface"
+          ]
+        },
+        "spans": [
+          [
+            6.3,
+            12.2
+          ]
+        ]
+      }
+    ],
+    "relations": [
+      {
+        "subject": "o1",
+        "predicate": "touching",
+        "object": "o5",
+        "spans": [
+          [
+            1.2,
+            6.3
+          ]
+        ],
+        "confidence": 0.9
+      },
+      {
+        "subject": "o1",
+        "predicate": "wearing",
+        "object": "o3",
+        "spans": [
+          [
+            0.0,
+            6.3
+          ]
+        ],
+        "confidence": 0.8
+      },
+      {
+        "subject": "o1",
+        "predicate": "wearing",
+        "object": "o4",
+        "spans": [
+          [
+            0.0,
+            6.3
+          ]
+        ],
+        "confidence": 0.8
+      },
+      {
+        "subject": "o1",
+        "predicate": "looking-at",
+        "object": "o5",
+        "spans": [
+          [
+            0.0,
+            6.3
+          ]
+        ],
+        "confidence": 0.7
+      },
+      {
+        "subject": "o1",
+        "predicate": "standing-on",
+        "object": "o2",
+        "spans": [
+          [
+            0.0,
+            6.3
+          ]
+        ],
+        "confidence": 0.6
+      },
+      {
+        "subject": "o6",
+        "predicate": "above",
+        "object": "o7",
+        "spans": [
+          [
+            6.3,
+            12.2
+          ]
+        ],
+        "confidence": 0.8
+      },
+      {
+        "subject": "o6",
+        "predicate": "on",
+        "object": "o7",
+        "spans": [
+          [
+            6.3,
+            12.2
+          ]
+        ],
+        "confidence": 0.9
+      }
+    ]
+  },
+  "views": {
+    "objects_count_display": {
+      "person": 1,
+      "ceiling": 1,
+      "toolbelt": 1,
+      "watch": 1,
+      "crown-molding": 1,
+      "ceiling_crown_molding": 1,
+      "wall": 1
+    }
+  }
+}

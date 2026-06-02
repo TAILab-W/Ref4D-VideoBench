@@ -1,0 +1,103 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0081.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "cv2",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "bird",
+        "attributes": {
+          "color": [
+            "black",
+            "brown",
+            "gray",
+            "orange",
+            "yellow"
+          ],
+          "pattern": [
+            "solid",
+            "striped"
+          ],
+          "texture": [
+            "feathery"
+          ],
+          "size": [
+            "small"
+          ],
+          "age": [
+            "adult"
+          ],
+          "sex": [
+            "male"
+          ],
+          "state": [
+            "alert",
+            "open-mouth",
+            "perched"
+          ],
+          "pose": [
+            "standing",
+            "tail-raised"
+          ],
+          "action": [
+            "calling",
+            "sitting"
+          ],
+          "orientation": [
+            "left-facing"
+          ],
+          "facing-direction": [
+            "left"
+          ],
+          "position": [
+            "branch-center"
+          ],
+          "object-part": [
+            "beak",
+            "breast",
+            "eye",
+            "head",
+            "legs",
+            "tail",
+            "wings"
+          ],
+          "signature": [
+            "gray-brown-orange-black-head-orange-eye-yellow-breast-brown-wings-tail-orange-legs-left-facing"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            8.3
+          ]
+        ]
+      }
+    ],
+    "relations": [
+      {
+        "subject": "o1",
+        "predicate": "looking-at",
+        "object": "o1",
+        "spans": [
+          [
+            0.2,
+            8.3
+          ]
+        ],
+        "confidence": 0.8
+      }
+    ]
+  },
+  "views": {
+    "objects_count_display": {
+      "bird": 1
+    }
+  }
+}

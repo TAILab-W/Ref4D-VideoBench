@@ -1,0 +1,206 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0400.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "decord",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "person",
+        "attributes": {
+          "color": [
+            "pink"
+          ],
+          "pattern": [
+            "solid"
+          ],
+          "texture": [
+            "smooth"
+          ],
+          "material": [
+            "fabric",
+            "plastic"
+          ],
+          "size": [
+            "small"
+          ],
+          "age": [
+            "child"
+          ],
+          "sex": [
+            "female"
+          ],
+          "state": [
+            "standing",
+            "walking"
+          ],
+          "pose": [
+            "bending",
+            "holding"
+          ],
+          "action": [
+            "carrying",
+            "looking",
+            "searching"
+          ],
+          "orientation": [
+            "facing-right"
+          ],
+          "facing-direction": [
+            "right"
+          ],
+          "signature": [
+            "pink-one-piece-swimsuit-pink-flip-flops-black-hair-in-ponytail"
+          ]
+        },
+        "spans": [
+          [
+            0.2,
+            4.8
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "chair",
+        "attributes": {
+          "color": [
+            "red"
+          ],
+          "material": [
+            "leather"
+          ],
+          "shape": [
+            "couch"
+          ],
+          "signature": [
+            "red-leather-couch"
+          ]
+        },
+        "spans": [
+          [
+            0.3,
+            5.0
+          ]
+        ]
+      },
+      {
+        "id": "o3",
+        "name": "bag",
+        "attributes": {
+          "color": [
+            "blue",
+            "red",
+            "white"
+          ],
+          "pattern": [
+            "text"
+          ],
+          "printed-text": [
+            "90°-pool-proven-curriculum",
+            "aqua-tots-swim-schools",
+            "neighborhood-swim-school",
+            "worldwide"
+          ],
+          "signature": [
+            "blue-tote-bag-with-white-and-red-text"
+          ]
+        },
+        "spans": [
+          [
+            2.7,
+            5.0
+          ]
+        ]
+      },
+      {
+        "id": "o4",
+        "name": "tv",
+        "attributes": {
+          "color": [
+            "black"
+          ],
+          "position": [
+            "wall-mounted"
+          ],
+          "state": [
+            "on"
+          ],
+          "signature": [
+            "wall-mounted-television"
+          ]
+        },
+        "spans": [
+          [
+            1.0,
+            4.8
+          ]
+        ]
+      }
+    ],
+    "relations": [
+      {
+        "subject": "o1",
+        "predicate": "looking_at",
+        "object": "o3",
+        "spans": [
+          [
+            2.7,
+            4.0
+          ]
+        ],
+        "confidence": 0.9
+      },
+      {
+        "subject": "o1",
+        "predicate": "touching",
+        "object": "o2",
+        "spans": [
+          [
+            0.5,
+            1.6
+          ]
+        ],
+        "confidence": 0.8
+      },
+      {
+        "subject": "o1",
+        "predicate": "holding",
+        "object": "o3",
+        "spans": [
+          [
+            2.7,
+            5.0
+          ]
+        ],
+        "confidence": 0.9
+      },
+      {
+        "subject": "o1",
+        "predicate": "left_of",
+        "object": "o4",
+        "spans": [
+          [
+            0.2,
+            4.8
+          ]
+        ],
+        "confidence": 0.8
+      }
+    ]
+  },
+  "views": {
+    "objects_count_display": {
+      "person": 1,
+      "chair": 1,
+      "bag": 1,
+      "tv": 1
+    }
+  }
+}

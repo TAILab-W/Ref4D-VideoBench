@@ -1,0 +1,117 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0025.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "cv2",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "ant",
+        "attributes": {
+          "signature": [
+            "brown-insect-with-segmented-body-and-antennae"
+          ]
+        },
+        "spans": [
+          [
+            0.1,
+            2.9
+          ],
+          [
+            3.4,
+            5.7
+          ],
+          [
+            6.1,
+            8.3
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "leaf",
+        "attributes": {
+          "signature": [
+            "green-leaf-with-visible-veins-and-red-tinted-edges"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            2.9
+          ],
+          [
+            3.4,
+            5.7
+          ],
+          [
+            6.1,
+            8.3
+          ]
+        ]
+      },
+      {
+        "id": "o3",
+        "name": "aphid",
+        "attributes": {
+          "signature": [
+            "small-green-insect-with-long-legs"
+          ]
+        },
+        "spans": [
+          [
+            0.1,
+            2.9
+          ],
+          [
+            3.4,
+            5.7
+          ],
+          [
+            6.1,
+            8.3
+          ]
+        ]
+      }
+    ],
+    "relations": [
+      {
+        "subject": "o1",
+        "predicate": "carrying",
+        "object": "o3",
+        "spans": [
+          [
+            0.1,
+            2.9
+          ]
+        ],
+        "confidence": 0.9
+      },
+      {
+        "subject": "o1",
+        "predicate": "on",
+        "object": "o2",
+        "spans": [
+          [
+            0.1,
+            2.9
+          ]
+        ],
+        "confidence": 0.8
+      }
+    ]
+  },
+  "views": {
+    "objects_count_display": {
+      "ant": 1,
+      "leaf": 1,
+      "aphid": 1
+    }
+  }
+}

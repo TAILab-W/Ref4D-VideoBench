@@ -1,0 +1,145 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0257.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "cv2",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "truck",
+        "attributes": {
+          "signature": [
+            "truck-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            10.4
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "truck",
+        "attributes": {
+          "signature": [
+            "truck-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            10.4
+          ]
+        ]
+      },
+      {
+        "id": "o3",
+        "name": "crane",
+        "attributes": {
+          "signature": [
+            "crane-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            10.4
+          ]
+        ]
+      },
+      {
+        "id": "o4",
+        "name": "person",
+        "attributes": {
+          "signature": [
+            "person-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            10.4
+          ]
+        ]
+      },
+      {
+        "id": "o5",
+        "name": "person",
+        "attributes": {
+          "signature": [
+            "person-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            10.4
+          ]
+        ]
+      },
+      {
+        "id": "o6",
+        "name": "person",
+        "attributes": {
+          "signature": [
+            "person-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            10.4
+          ]
+        ]
+      },
+      {
+        "id": "o7",
+        "name": "scaffolding",
+        "attributes": {
+          "signature": [
+            "scaffolding-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            10.4
+          ]
+        ]
+      },
+      {
+        "id": "o8",
+        "name": "container",
+        "attributes": {
+          "signature": [
+            "container-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            10.4
+          ]
+        ]
+      }
+    ],
+    "relations": []
+  },
+  "views": {
+    "objects_count_display": {
+      "truck": 2,
+      "crane": 1,
+      "person": 3,
+      "scaffolding": 1,
+      "container": 1
+    }
+  }
+}

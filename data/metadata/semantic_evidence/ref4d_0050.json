@@ -1,0 +1,62 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0050.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "cv2",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "leopard",
+        "attributes": {
+          "color": [
+            "black-spots",
+            "brown"
+          ],
+          "pattern": [
+            "spotted"
+          ],
+          "action": [
+            "climbing",
+            "jumping",
+            "running"
+          ],
+          "pose": [
+            "crouching",
+            "hanging",
+            "mid-air"
+          ],
+          "orientation": [
+            "facing-right"
+          ],
+          "position": [
+            "in-air",
+            "near-pond",
+            "on-ground",
+            "on-tree-trunk"
+          ],
+          "signature": [
+            "spotted-coat,-climbing-action,-jumping-motion"
+          ]
+        },
+        "spans": [
+          [
+            0.2,
+            0.8
+          ]
+        ]
+      }
+    ],
+    "relations": []
+  },
+  "views": {
+    "objects_count_display": {
+      "leopard": 1
+    }
+  }
+}

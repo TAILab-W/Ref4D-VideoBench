@@ -1,0 +1,200 @@
+{
+  "summary": {
+    "items": 10,
+    "enter_bank": 9,
+    "clip_range_sec": [
+      0.0,
+      5.1
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does the blue circular base rotate at a constant speed throughout the clip?",
+      "signals": [
+        "rigid_transform(oX)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 37.5,
+      "total_score_100": 87.5,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "rigid_transform(oX)": 37.5
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Do the spray bottles remain upright during the filling process?",
+      "signals": [
+        "balance(oX)"
+      ],
+      "content_score_60": 40,
+      "signal_score_40": 35.83,
+      "total_score_100": 75.83,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "balance(oX)": 35.8333
+      },
+      "content_score_raw": "40"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Are the metallic rods and arms of the machine consistently positioned relative to the rotating component without interpenetration or collision across all frames?",
+      "signals": [
+        "rigid_transform(machine_part)",
+        "interpenetration(machine_part)",
+        "collision(machine_part)",
+        "continuity(oX)",
+        "frame_discontinuity(t)"
+      ],
+      "content_score_60": 45,
+      "signal_score_40": 40.0,
+      "total_score_100": 85.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "frame_discontinuity(t)": 40.0,
+        "rigid_transform(machine_part)": 7.5,
+        "continuity(oX)": 7.3333,
+        "interpenetration(machine_part)": 7.1667,
+        "collision(machine_part)": 6.3333
+      },
+      "content_score_raw": "45"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Is the shadow cast by the rotating part consistent in shape and direction, matching the object's movement?",
+      "signals": [
+        "shadow_consistency(machine_part)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 36.67,
+      "total_score_100": 91.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "shadow_consistency(machine_part)": 36.6667
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Do the moving parts of the machine avoid contact with any human hands or fingers?",
+      "signals": [
+        "tool_contact(machine_part,none)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 28.33,
+      "total_score_100": 83.33,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "tool_contact(machine_part,none)": 28.3333
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "The machine's metallic rods and arms do not contact human hands or fingers.",
+      "signals": [
+        "rigid_transform(machine_part)",
+        "interpenetration(machine_part)",
+        "collision(machine_part)",
+        "tool_contact(machine_part,none)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "rigid_transform(machine_part)": 37.5,
+        "interpenetration(machine_part)": 7.1667,
+        "collision(machine_part)": 6.3333,
+        "tool_contact(machine_part,none)": 5.6667
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "The spray bottles remain upright and stable during the filling process.",
+      "signals": [
+        "balance(oX)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 35.83,
+      "total_score_100": 85.83,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "balance(oX)": 35.8333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "The rotating arm moves continuously without frame discontinuity.",
+      "signals": [
+        "continuity(oX)",
+        "frame_discontinuity(t)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "frame_discontinuity(t)": 40.0,
+        "continuity(oX)": 7.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "The blue circular base rotates at a constant speed.",
+      "signals": [
+        "rigid_transform(oX)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 37.5,
+      "total_score_100": 87.5,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "rigid_transform(oX)": 37.5
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "The metal components of the machine show consistent material optics.",
+      "signals": [
+        "material_optics(oA)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 37.5,
+      "total_score_100": 87.5,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "material_optics(oA)": 37.5
+      },
+      "content_score_raw": "50"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v3",
+    "v4",
+    "v5",
+    "a1",
+    "a2",
+    "a3",
+    "a4",
+    "a5"
+  ]
+}

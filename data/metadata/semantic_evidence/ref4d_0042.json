@@ -1,0 +1,116 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0042.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "cv2",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "butterfly",
+        "attributes": {
+          "color": [
+            "blue",
+            "brown",
+            "white"
+          ],
+          "pattern": [
+            "plain",
+            "spotted",
+            "striped"
+          ],
+          "size": [
+            "large",
+            "small"
+          ],
+          "state": [
+            "flying",
+            "perched"
+          ],
+          "pose": [
+            "closed-wings",
+            "open-wings"
+          ],
+          "action": [
+            "flapping",
+            "hovering",
+            "settling"
+          ],
+          "orientation": [
+            "downward",
+            "sideways",
+            "upward"
+          ],
+          "facing-direction": [
+            "backward",
+            "forward",
+            "left",
+            "right"
+          ],
+          "position": [
+            "lower-middle",
+            "middle-right",
+            "upper-left",
+            "upper-right"
+          ],
+          "signature": [
+            "blue-wings,-brown-spotted,-brown-wing-tips,-brown-and-white-spotted"
+          ]
+        },
+        "spans": [
+          [
+            0.1,
+            2.9
+          ],
+          [
+            3.4,
+            5.7
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "hand",
+        "attributes": {
+          "color": [
+            "pink"
+          ],
+          "material": [
+            "skin"
+          ],
+          "object-part": [
+            "fingers"
+          ],
+          "action": [
+            "hovering",
+            "reaching"
+          ],
+          "position": [
+            "lower-middle"
+          ],
+          "signature": [
+            "human-hand-with-pink-fingernails"
+          ]
+        },
+        "spans": [
+          [
+            2.9,
+            6.1
+          ]
+        ]
+      }
+    ],
+    "relations": []
+  },
+  "views": {
+    "objects_count_display": {
+      "butterfly": 1,
+      "hand": 1
+    }
+  }
+}

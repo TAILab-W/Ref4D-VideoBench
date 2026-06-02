@@ -1,0 +1,222 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0254.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "cv2",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "operator",
+        "attributes": {
+          "color": [
+            "blue"
+          ],
+          "action": [
+            "standing"
+          ],
+          "position": [
+            "left"
+          ],
+          "signature": [
+            "blue-overalls-left-side-of-machine"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            0.2
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "chair",
+        "attributes": {
+          "color": [
+            "black"
+          ],
+          "object-part": [
+            "seat"
+          ],
+          "position": [
+            "left"
+          ],
+          "signature": [
+            "black-with-blue-book-on-it"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            0.3
+          ]
+        ]
+      },
+      {
+        "id": "o3",
+        "name": "table",
+        "attributes": {
+          "material": [
+            "metal",
+            "wood"
+          ],
+          "state": [
+            "working"
+          ],
+          "position": [
+            "center"
+          ],
+          "signature": [
+            "metallic-work-table-with-wooden-board"
+          ]
+        },
+        "spans": [
+          [
+            0.5,
+            1.6
+          ]
+        ]
+      },
+      {
+        "id": "o4",
+        "name": "machine",
+        "attributes": {
+          "color": [
+            "black",
+            "red",
+            "yellow"
+          ],
+          "equipment": [
+            "cnc-machine"
+          ],
+          "state": [
+            "operational"
+          ],
+          "signature": [
+            "large-black-machine-with-red-and-yellow-controls"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            1.6
+          ]
+        ]
+      },
+      {
+        "id": "o5",
+        "name": "water_tank",
+        "attributes": {
+          "color": [
+            "blue"
+          ],
+          "material": [
+            "plastic"
+          ],
+          "position": [
+            "back"
+          ],
+          "signature": [
+            "large-blue-tank-on-back-of-machine"
+          ]
+        },
+        "spans": [
+          [
+            0.8,
+            1.7
+          ]
+        ]
+      },
+      {
+        "id": "o6",
+        "name": "hose",
+        "attributes": {
+          "color": [
+            "blue"
+          ],
+          "material": [
+            "rubber"
+          ],
+          "position": [
+            "right"
+          ],
+          "signature": [
+            "blue-coiled-hose-on-right-side-of-machine"
+          ]
+        },
+        "spans": [
+          [
+            0.9,
+            1.6
+          ]
+        ]
+      }
+    ],
+    "relations": [
+      {
+        "subject": "o1",
+        "predicate": "left-of",
+        "object": "o2",
+        "spans": [
+          [
+            0.0,
+            0.2
+          ]
+        ],
+        "confidence": 0.8
+      },
+      {
+        "subject": "o3",
+        "predicate": "on",
+        "object": "o4",
+        "spans": [
+          [
+            0.5,
+            1.6
+          ]
+        ],
+        "confidence": 0.9
+      },
+      {
+        "subject": "o4",
+        "predicate": "has-part",
+        "object": "o5",
+        "spans": [
+          [
+            0.8,
+            1.7
+          ]
+        ],
+        "confidence": 0.9
+      },
+      {
+        "subject": "o4",
+        "predicate": "has-part",
+        "object": "o6",
+        "spans": [
+          [
+            0.9,
+            1.6
+          ]
+        ],
+        "confidence": 0.9
+      }
+    ]
+  },
+  "views": {
+    "objects_count_display": {
+      "operator": 1,
+      "chair": 1,
+      "table": 1,
+      "machine": 1,
+      "water_tank": 1,
+      "hose": 1
+    }
+  }
+}

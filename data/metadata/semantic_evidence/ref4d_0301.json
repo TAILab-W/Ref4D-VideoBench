@@ -1,0 +1,211 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0301.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "decord",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "rock",
+        "attributes": {
+          "color": [
+            "gray"
+          ],
+          "texture": [
+            "rough"
+          ],
+          "material": [
+            "stone"
+          ],
+          "size": [
+            "large"
+          ],
+          "shape": [
+            "triangular"
+          ],
+          "facing-direction": [
+            "front"
+          ],
+          "signature": [
+            "triangular-shape-green-vegetation-on-top"
+          ]
+        },
+        "spans": [
+          [
+            0.2,
+            0.8
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "water",
+        "attributes": {
+          "color": [
+            "blue",
+            "turquoise"
+          ],
+          "state": [
+            "calm",
+            "wavy"
+          ],
+          "action": [
+            "crashing"
+          ],
+          "signature": [
+            "blue-turquoise-shades-waves-crashing"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            9.1
+          ]
+        ]
+      },
+      {
+        "id": "o3",
+        "name": "plant",
+        "attributes": {
+          "color": [
+            "green"
+          ],
+          "texture": [
+            "foliage"
+          ],
+          "position": [
+            "foreground"
+          ],
+          "signature": [
+            "green-leaves-in-foreground"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            9.1
+          ]
+        ]
+      },
+      {
+        "id": "o4",
+        "name": "palm-tree",
+        "attributes": {
+          "color": [
+            "green"
+          ],
+          "species": [
+            "palm"
+          ],
+          "position": [
+            "right"
+          ],
+          "signature": [
+            "single-palm-tree-on-right"
+          ]
+        },
+        "spans": [
+          [
+            0.7,
+            0.9
+          ]
+        ]
+      },
+      {
+        "id": "o5",
+        "name": "person",
+        "attributes": {
+          "color": [
+            "brown"
+          ],
+          "sex": [
+            "male"
+          ],
+          "pose": [
+            "standing"
+          ],
+          "action": [
+            "looking-at-rock"
+          ],
+          "facing-direction": [
+            "back"
+          ],
+          "signature": [
+            "brown-hat-back-view"
+          ]
+        },
+        "spans": [
+          [
+            7.2,
+            9.1
+          ]
+        ]
+      }
+    ],
+    "relations": [
+      {
+        "subject": "o5",
+        "predicate": "looking-at",
+        "object": "o1",
+        "spans": [
+          [
+            7.2,
+            9.1
+          ]
+        ],
+        "confidence": 0.9
+      },
+      {
+        "subject": "o3",
+        "predicate": "in-front-of",
+        "object": "o1",
+        "spans": [
+          [
+            0.0,
+            9.1
+          ]
+        ],
+        "confidence": 0.8
+      },
+      {
+        "subject": "o4",
+        "predicate": "right-of",
+        "object": "o1",
+        "spans": [
+          [
+            0.7,
+            0.9
+          ]
+        ],
+        "confidence": 0.8
+      },
+      {
+        "subject": "o2",
+        "predicate": "behind",
+        "object": "o1",
+        "spans": [
+          [
+            0.0,
+            9.1
+          ]
+        ],
+        "confidence": 0.8
+      }
+    ]
+  },
+  "views": {
+    "objects_count_display": {
+      "rock": 1,
+      "water": 1,
+      "plant": 1,
+      "palm-tree": 1,
+      "person": 1
+    }
+  }
+}

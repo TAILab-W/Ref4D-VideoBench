@@ -1,0 +1,83 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0055.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "cv2",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "cat",
+        "attributes": {
+          "color": [
+            "black",
+            "white"
+          ],
+          "pattern": [
+            "tuxedo"
+          ],
+          "texture": [
+            "smooth"
+          ],
+          "material": [
+            "fur"
+          ],
+          "size": [
+            "medium"
+          ],
+          "age": [
+            "adult"
+          ],
+          "sex": [
+            "male"
+          ],
+          "state": [
+            "relaxed"
+          ],
+          "pose": [
+            "lying"
+          ],
+          "action": [
+            "resting"
+          ],
+          "orientation": [
+            "front-facing"
+          ],
+          "facing-direction": [
+            "forward"
+          ],
+          "position": [
+            "floor"
+          ],
+          "object-part": [
+            "body",
+            "ears",
+            "head",
+            "paws",
+            "whiskers"
+          ],
+          "signature": [
+            "black-white-yellow-eyes-front-facing"
+          ]
+        },
+        "spans": [
+          [
+            0.2,
+            10.8
+          ]
+        ]
+      }
+    ],
+    "relations": []
+  },
+  "views": {
+    "objects_count_display": {
+      "cat": 1
+    }
+  }
+}

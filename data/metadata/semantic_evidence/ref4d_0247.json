@@ -1,0 +1,127 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0247.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "cv2",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "excavator",
+        "attributes": {
+          "color": [
+            "orange",
+            "red"
+          ],
+          "brand-or-logo": [
+            "hitachi"
+          ],
+          "equipment": [
+            "excavator",
+            "rock-bucket"
+          ],
+          "tool-or-instrument": [
+            "bucket"
+          ],
+          "action": [
+            "digging",
+            "dumping",
+            "lifting"
+          ],
+          "pose": [
+            "operating",
+            "stationary"
+          ],
+          "state": [
+            "working"
+          ],
+          "facing-direction": [
+            "right-facing"
+          ],
+          "model": [
+            "zx350"
+          ],
+          "signature": [
+            "red-hitachi-logo-heavy-duty-rock-bucket-orange-teeth"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            9.7
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "dumper",
+        "attributes": {
+          "color": [
+            "green"
+          ],
+          "equipment": [
+            "dumper-truck"
+          ],
+          "action": [
+            "stationary"
+          ],
+          "pose": [
+            "stationary"
+          ],
+          "state": [
+            "empty"
+          ],
+          "position": [
+            "left"
+          ],
+          "signature": [
+            "green-dumper-truck"
+          ]
+        },
+        "spans": [
+          [
+            3.0,
+            9.7
+          ]
+        ]
+      }
+    ],
+    "relations": [
+      {
+        "subject": "o1",
+        "predicate": "feeding",
+        "object": "o2",
+        "spans": [
+          [
+            3.0,
+            9.7
+          ]
+        ],
+        "confidence": 0.9
+      },
+      {
+        "subject": "o1",
+        "predicate": "loading-into",
+        "object": "o2",
+        "spans": [
+          [
+            3.0,
+            9.7
+          ]
+        ],
+        "confidence": 0.6
+      }
+    ]
+  },
+  "views": {
+    "objects_count_display": {
+      "excavator": 1,
+      "dumper": 1
+    }
+  }
+}

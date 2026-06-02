@@ -1,0 +1,152 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0148.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "cv2",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "building",
+        "attributes": {
+          "color": [
+            "beige"
+          ],
+          "pattern": [
+            "dome-topped",
+            "ornate-trim",
+            "rectangular-paned-windows"
+          ],
+          "material": [
+            "stone"
+          ],
+          "size": [
+            "large"
+          ],
+          "age": [
+            "historic"
+          ],
+          "state": [
+            "standing"
+          ],
+          "orientation": [
+            "facing-front"
+          ],
+          "position": [
+            "centered-in-scene"
+          ],
+          "architectural-style": [
+            "baroque"
+          ],
+          "signature": [
+            "beige-stone-historic-building-with-dome-and-rectangular-windows"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            4.0
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "pond",
+        "attributes": {
+          "color": [
+            "blue-gray"
+          ],
+          "state": [
+            "calm"
+          ],
+          "position": [
+            "foreground"
+          ],
+          "reflection": [
+            "building"
+          ],
+          "signature": [
+            "calm-blue-gray-pond-in-foreground"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            4.0
+          ]
+        ]
+      },
+      {
+        "id": "o3",
+        "name": "grass",
+        "attributes": {
+          "color": [
+            "green"
+          ],
+          "state": [
+            "well-maintained"
+          ],
+          "position": [
+            "midground"
+          ],
+          "texture": [
+            "smooth"
+          ],
+          "signature": [
+            "green-well-maintained-grass-midground"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            4.0
+          ]
+        ]
+      },
+      {
+        "id": "o4",
+        "name": "sky",
+        "attributes": {
+          "color": [
+            "blue-gray"
+          ],
+          "pattern": [
+            "cloudy"
+          ],
+          "state": [
+            "overcast"
+          ],
+          "position": [
+            "background"
+          ],
+          "lighting": [
+            "soft"
+          ],
+          "signature": [
+            "blue-gray-cloudy-overcast-sky-background"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            4.0
+          ]
+        ]
+      }
+    ],
+    "relations": []
+  },
+  "views": {
+    "objects_count_display": {
+      "building": 1,
+      "pond": 1,
+      "grass": 1,
+      "sky": 1
+    }
+  }
+}

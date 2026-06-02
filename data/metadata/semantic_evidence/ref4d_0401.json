@@ -1,0 +1,194 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0401.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "decord",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "child",
+        "attributes": {
+          "color": [
+            "purple"
+          ],
+          "pattern": [
+            "cartoon"
+          ],
+          "printed-text": [
+            "be-kind"
+          ],
+          "sex": [
+            "female"
+          ],
+          "age": [
+            "young"
+          ],
+          "state": [
+            "standing"
+          ],
+          "pose": [
+            "hands-on-ears",
+            "looking-around",
+            "sitting-in-cart"
+          ],
+          "facing-direction": [
+            "forward",
+            "sideways"
+          ],
+          "signature": [
+            "purple-shirt-be-kind-printed-text"
+          ]
+        },
+        "spans": [
+          [
+            0.2,
+            9.4
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "shopping-cart",
+        "attributes": {
+          "color": [
+            "red"
+          ],
+          "material": [
+            "metal"
+          ],
+          "size": [
+            "large"
+          ],
+          "object-part": [
+            "basket",
+            "handle"
+          ],
+          "equipment": [
+            "costco-wholesale"
+          ],
+          "signature": [
+            "red-handled-costco-wholesale-label"
+          ]
+        },
+        "spans": [
+          [
+            0.3,
+            9.4
+          ]
+        ]
+      },
+      {
+        "id": "o3",
+        "name": "cheetos-bag",
+        "attributes": {
+          "color": [
+            "orange"
+          ],
+          "brand-or-logo": [
+            "cheetos"
+          ],
+          "food-type": [
+            "cheetos"
+          ],
+          "signature": [
+            "orange-cheetos-bag"
+          ]
+        },
+        "spans": [
+          [
+            0.5,
+            9.4
+          ]
+        ]
+      },
+      {
+        "id": "o4",
+        "name": "hand",
+        "attributes": {
+          "color": [
+            "black"
+          ],
+          "action": [
+            "holding"
+          ],
+          "position": [
+            "right"
+          ],
+          "signature": [
+            "black-sleeve-hand-holding-cart-handle"
+          ]
+        },
+        "spans": [
+          [
+            0.6,
+            9.4
+          ]
+        ]
+      }
+    ],
+    "relations": [
+      {
+        "subject": "o1",
+        "predicate": "sitting-in",
+        "object": "o2",
+        "spans": [
+          [
+            0.3,
+            9.4
+          ]
+        ],
+        "confidence": 0.8
+      },
+      {
+        "subject": "o1",
+        "predicate": "looking-at",
+        "object": "o3",
+        "spans": [
+          [
+            0.5,
+            9.4
+          ]
+        ],
+        "confidence": 0.7
+      },
+      {
+        "subject": "o1",
+        "predicate": "looking-at",
+        "object": "o4",
+        "spans": [
+          [
+            0.6,
+            9.4
+          ]
+        ],
+        "confidence": 0.7
+      },
+      {
+        "subject": "o4",
+        "predicate": "holding",
+        "object": "o2",
+        "spans": [
+          [
+            0.6,
+            9.4
+          ]
+        ],
+        "confidence": 0.8
+      }
+    ]
+  },
+  "views": {
+    "objects_count_display": {
+      "child": 1,
+      "shopping-cart": 1,
+      "cheetos-bag": 1,
+      "hand": 1
+    }
+  }
+}

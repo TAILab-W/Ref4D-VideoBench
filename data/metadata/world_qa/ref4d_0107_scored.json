@@ -1,0 +1,212 @@
+{
+  "summary": {
+    "items": 10,
+    "enter_bank": 9,
+    "clip_range_sec": [
+      0.0,
+      17.03
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does the water in the pool remain present and not suddenly disappear?",
+      "signals": [
+        "slosh_response(water,amp)",
+        "buoyancy_float(balloon,in:water)",
+        "continuity(water)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(water)": 36.6667,
+        "slosh_response(water,amp)": 6.8333,
+        "buoyancy_float(balloon,in:water)": 6.8333
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Across the clip, does the balloon on the bicycle handlebar maintain a consistent size relative to the ground?",
+      "signals": [
+        "buoyancy_float(balloon,in:water)",
+        "center_of_mass_over_base(balloon)",
+        "continuity(balloon)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(balloon)": 36.6667,
+        "buoyancy_float(balloon,in:water)": 6.8333,
+        "center_of_mass_over_base(balloon)": 6.5
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Does the bicycle's wheel roll smoothly without floating or unexpected movement while remaining stationary on the ground?",
+      "signals": [
+        "wheel_rolling(wheel)",
+        "interpenetration(wheel)",
+        "support(bicycle,ground)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "interpenetration(wheel)": 35.8333,
+        "support(bicycle,ground)": 7.0,
+        "wheel_rolling(wheel)": 6.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Does the shadow of the bicycle align consistently with its position under the clear sky lighting?",
+      "signals": [
+        "shadow_consistency(bicycle)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 36.67,
+      "total_score_100": 86.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "shadow_consistency(bicycle)": 36.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Do people near the water maintain a safe distance from falling hazards?",
+      "signals": [
+        "falling_hazard(water)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 31.67,
+      "total_score_100": 81.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "falling_hazard(water)": 31.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "Water in the pool shows slosh response and contains floating objects.",
+      "signals": [
+        "slosh_response(water,amp)",
+        "buoyancy_float(balloon,in:water)",
+        "continuity(water)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(water)": 36.6667,
+        "slosh_response(water,amp)": 6.8333,
+        "buoyancy_float(balloon,in:water)": 6.8333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "Balloons on the water surface float upwards, maintaining buoyancy and size consistency.",
+      "signals": [
+        "buoyancy_float(balloon,in:water)",
+        "center_of_mass_over_base(balloon)",
+        "continuity(balloon)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(balloon)": 36.6667,
+        "buoyancy_float(balloon,in:water)": 6.8333,
+        "center_of_mass_over_base(balloon)": 6.5
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "Bicycle wheels roll smoothly without interpenetration or unexpected movement; bicycle remains stationary.",
+      "signals": [
+        "wheel_rolling(wheel)",
+        "interpenetration(wheel)",
+        "support(bicycle,ground)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "interpenetration(wheel)": 35.8333,
+        "support(bicycle,ground)": 7.0,
+        "wheel_rolling(wheel)": 6.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "Building structure is stable with no signs of collapse; shadow of bicycle aligns with its position.",
+      "signals": [
+        "fracture(building)",
+        "falling_hazard(building)",
+        "shadow_consistency(bicycle)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "shadow_consistency(bicycle)": 36.6667,
+        "fracture(building)": 6.3333,
+        "falling_hazard(building)": 6.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "People near the water maintain a safe distance from falling hazards.",
+      "signals": [
+        "falling_hazard(water)"
+      ],
+      "content_score_60": 30,
+      "signal_score_40": 31.67,
+      "total_score_100": 61.67,
+      "duplicate_penalized": true,
+      "signal_detail": {
+        "falling_hazard(water)": 31.6667
+      },
+      "content_score_raw": "50"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "v5",
+    "a1",
+    "a2",
+    "a3",
+    "a4"
+  ]
+}

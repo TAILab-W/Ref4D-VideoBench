@@ -1,0 +1,123 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0560.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "cv2",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "airplane",
+        "attributes": {
+          "color": [
+            "white",
+            "yellow"
+          ],
+          "action": [
+            "flying"
+          ],
+          "position": [
+            "center-left"
+          ],
+          "signature": [
+            "white-body-yellow-tail"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            1.0
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "buildings",
+        "attributes": {
+          "color": [
+            "brown",
+            "gray"
+          ],
+          "action": [
+            "stationary"
+          ],
+          "position": [
+            "below-airplane"
+          ],
+          "signature": [
+            "industrial-roofs"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            1.0
+          ]
+        ]
+      },
+      {
+        "id": "o3",
+        "name": "water",
+        "attributes": {
+          "color": [
+            "blue"
+          ],
+          "action": [
+            "stationary"
+          ],
+          "position": [
+            "bottom-left"
+          ],
+          "signature": [
+            "blue-water-front"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            1.0
+          ]
+        ]
+      },
+      {
+        "id": "o4",
+        "name": "sky",
+        "attributes": {
+          "color": [
+            "blue",
+            "white"
+          ],
+          "action": [
+            "stationary"
+          ],
+          "position": [
+            "top"
+          ],
+          "signature": [
+            "cloudy-sky"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            1.0
+          ]
+        ]
+      }
+    ],
+    "relations": []
+  },
+  "views": {
+    "objects_count_display": {
+      "airplane": 1,
+      "buildings": 1,
+      "water": 1,
+      "sky": 1
+    }
+  }
+}

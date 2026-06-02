@@ -1,0 +1,69 @@
+{
+  "events": [
+    {
+      "id": "m0001",
+      "s": 0.0,
+      "e": 0.6211699164345404,
+      "dur": 0.6211699164345404,
+      "members": [
+        "e0001#1",
+        "e0002#1",
+        "e0003#1",
+        "e0004#1"
+      ],
+      "text": "person walk along beach",
+      "s_abs": 0.0,
+      "e_abs": 7.433333333333334,
+      "dur_abs": 7.433333333333334
+    },
+    {
+      "id": "m0002",
+      "s": 0.0,
+      "e": 0.6211699164345404,
+      "dur": 0.6211699164345404,
+      "members": [
+        "e0001#2",
+        "e0002#2",
+        "e0003#2",
+        "e0004#2"
+      ],
+      "text": "person walk in water",
+      "s_abs": 0.0,
+      "e_abs": 7.433333333333334,
+      "dur_abs": 7.433333333333334
+    },
+    {
+      "id": "m0003",
+      "s": 0.6211699164345404,
+      "e": 1.0,
+      "dur": 0.37883008356545955,
+      "members": [
+        "e0005#1",
+        "e0005#2"
+      ],
+      "text": "water flow",
+      "s_abs": 7.433333333333334,
+      "e_abs": 11.966666666666667,
+      "dur_abs": 4.533333333333333
+    }
+  ],
+  "meta": {
+    "lane": "ref",
+    "key": "ref4d_0295",
+    "mode": "micro",
+    "merge_config": {
+      "tau_sem": 0.96,
+      "gap_abs_sec": 1.01,
+      "gap_norm_fallback": 0.1,
+      "min_duration_norm": 0.0
+    },
+    "stats": {
+      "num_input_items": 10,
+      "num_kept_items": 10,
+      "num_clusters": 3
+    },
+    "provenance": {
+      "source_hash": "6003be85bb5d"
+    }
+  }
+}

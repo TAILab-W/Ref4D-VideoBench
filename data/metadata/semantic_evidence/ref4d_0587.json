@@ -1,0 +1,117 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0587.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "cv2",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "train",
+        "attributes": {
+          "color": [
+            "blue",
+            "white"
+          ],
+          "action": [
+            "approaching",
+            "arriving"
+          ],
+          "position": [
+            "at-station",
+            "on-tracks"
+          ],
+          "signature": [
+            "white-blue-stripe-nfta-metro-101"
+          ]
+        },
+        "spans": [
+          [
+            0.2,
+            1.3
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "platform",
+        "attributes": {
+          "signature": [
+            "snow-covered"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            1.3
+          ]
+        ]
+      },
+      {
+        "id": "o3",
+        "name": "bridge",
+        "attributes": {
+          "signature": [
+            "elevated-structure-above-tracks"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            1.3
+          ]
+        ]
+      }
+    ],
+    "relations": [
+      {
+        "subject": "o1",
+        "predicate": "approaching",
+        "object": "o2",
+        "spans": [
+          [
+            0.2,
+            1.3
+          ]
+        ],
+        "confidence": 0.0
+      },
+      {
+        "subject": "o1",
+        "predicate": "on",
+        "object": "o2",
+        "spans": [
+          [
+            0.6,
+            1.3
+          ]
+        ],
+        "confidence": 0.0
+      },
+      {
+        "subject": "o3",
+        "predicate": "over",
+        "object": "o2",
+        "spans": [
+          [
+            0.0,
+            1.3
+          ]
+        ],
+        "confidence": 0.0
+      }
+    ]
+  },
+  "views": {
+    "objects_count_display": {
+      "train": 1,
+      "platform": 1,
+      "bridge": 1
+    }
+  }
+}

@@ -1,0 +1,141 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0543.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "cv2",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "trolley",
+        "attributes": {
+          "color": [
+            "orange",
+            "yellow"
+          ],
+          "pattern": [
+            "striped"
+          ],
+          "facing-direction": [
+            "right-facing"
+          ],
+          "type": [
+            "electric"
+          ],
+          "signature": [
+            "yellow-orange-n2-436"
+          ]
+        },
+        "spans": [
+          [
+            0.5,
+            6.0
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "person",
+        "attributes": {
+          "color": [
+            "pink"
+          ],
+          "action": [
+            "sitting"
+          ],
+          "pose": [
+            "upright"
+          ],
+          "position": [
+            "left-side"
+          ],
+          "signature": [
+            "pink-shirt-back-view"
+          ]
+        },
+        "spans": [
+          [
+            0.2,
+            5.7
+          ]
+        ]
+      },
+      {
+        "id": "o3",
+        "name": "person",
+        "attributes": {
+          "color": [
+            "white"
+          ],
+          "action": [
+            "standing"
+          ],
+          "pose": [
+            "leaning"
+          ],
+          "position": [
+            "right-side"
+          ],
+          "signature": [
+            "white-shirt-front-view"
+          ]
+        },
+        "spans": [
+          [
+            0.8,
+            5.9
+          ]
+        ]
+      }
+    ],
+    "relations": [
+      {
+        "subject": "o1",
+        "predicate": "riding",
+        "object": "o3",
+        "spans": [
+          [
+            0.8,
+            5.9
+          ]
+        ],
+        "confidence": 0.7
+      },
+      {
+        "subject": "o1",
+        "predicate": "overlapping",
+        "object": "o2",
+        "spans": [
+          [
+            0.4,
+            5.6
+          ]
+        ],
+        "confidence": 0.7
+      },
+      {
+        "subject": "o2",
+        "predicate": "inside",
+        "object": "o1",
+        "spans": [
+          [
+            0.2,
+            5.7
+          ]
+        ],
+        "confidence": 0.7
+      }
+    ]
+  },
+  "views": {
+    "objects_count_display": {
+      "trolley": 1,
+      "person": 2
+    }
+  }
+}

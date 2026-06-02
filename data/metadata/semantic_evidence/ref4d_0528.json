@@ -1,0 +1,157 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0528.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "cv2",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "train",
+        "attributes": {
+          "color": [
+            "black",
+            "blue"
+          ],
+          "pattern": [
+            "striped"
+          ],
+          "texture": [
+            "smooth"
+          ],
+          "material": [
+            "metal"
+          ],
+          "size": [
+            "large"
+          ],
+          "facing-direction": [
+            "right"
+          ],
+          "position": [
+            "buildings",
+            "over",
+            "suspended"
+          ],
+          "object-part": [
+            "carriage",
+            "door",
+            "front",
+            "side",
+            "undercarriage",
+            "window"
+          ],
+          "printed-text": [
+            "chiba-urban-monorail",
+            "urbanflyer"
+          ],
+          "brand-or-logo": [
+            "sogo"
+          ],
+          "signature": [
+            "blue-and-black-monorail-car"
+          ]
+        },
+        "spans": [
+          [
+            0.2,
+            7.8
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "person",
+        "attributes": {
+          "color": [
+            "dark"
+          ],
+          "sex": [
+            "male"
+          ],
+          "action": [
+            "walking"
+          ],
+          "pose": [
+            "standing"
+          ],
+          "position": [
+            "right"
+          ],
+          "signature": [
+            "individual-in-dark-clothing"
+          ]
+        },
+        "spans": [
+          [
+            6.9,
+            7.3
+          ]
+        ]
+      },
+      {
+        "id": "o3",
+        "name": "building",
+        "attributes": {
+          "color": [
+            "brown",
+            "white"
+          ],
+          "texture": [
+            "tiled"
+          ],
+          "function": [
+            "commercial"
+          ],
+          "signature": [
+            "structure-with-tiled-facade"
+          ]
+        },
+        "spans": [
+          [
+            0.5,
+            8.0
+          ]
+        ]
+      }
+    ],
+    "relations": [
+      {
+        "subject": "o1",
+        "predicate": "above",
+        "object": "o3",
+        "spans": [
+          [
+            0.7,
+            1.0
+          ]
+        ],
+        "confidence": 0.9
+      },
+      {
+        "subject": "o2",
+        "predicate": "near",
+        "object": "o3",
+        "spans": [
+          [
+            6.9,
+            8.0
+          ]
+        ],
+        "confidence": 0.8
+      }
+    ]
+  },
+  "views": {
+    "objects_count_display": {
+      "train": 1,
+      "person": 1,
+      "building": 1
+    }
+  }
+}

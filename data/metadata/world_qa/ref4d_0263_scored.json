@@ -1,0 +1,197 @@
+{
+  "summary": {
+    "items": 10,
+    "enter_bank": 8,
+    "clip_range_sec": [
+      0.0,
+      18.03
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does the wooden block stay supported by screws on the CNC machine's base without floating or sinking?",
+      "signals": [
+        "support(screws,wooden-block)",
+        "support(wooden-block,screws)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "support(screws,wooden-block)": 35.0,
+        "support(wooden-block,screws)": 7.0
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Does the workpiece remain stable during operation, maintaining center of mass over the base?",
+      "signals": [
+        "support",
+        "center_of_mass_over_base"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "support": 35.0,
+        "center_of_mass_over_base": 6.5
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Across the clip, do no unexpected objects suddenly appear or disappear in the workshop environment?",
+      "signals": [
+        "frame_discontinuity"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "frame_discontinuity": 40.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Does the CNC machine operate without collisions or interpenetration with surrounding objects?",
+      "signals": [
+        "interpenetration(cnc-machine,workshop)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 35.83,
+      "total_score_100": 85.83,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "interpenetration(cnc-machine,workshop)": 35.8333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Does the tool maintain continuous contact with the workpiece throughout the machining process?",
+      "signals": [
+        "tool_contact",
+        "cuttable_progress"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 33.0,
+      "total_score_100": 83.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "tool_contact": 28.3333,
+        "cuttable_progress": 4.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "The wooden block is securely held by screws on the CNC machine's base.",
+      "signals": [
+        "support(screws,wooden-block)",
+        "support(wooden-block,screws)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "support(screws,wooden-block)": 35.0,
+        "support(wooden-block,screws)": 7.0
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "The workpiece remains stable during operation, supported by the base.",
+      "signals": [
+        "support",
+        "center_of_mass_over_base"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "support": 35.0,
+        "center_of_mass_over_base": 6.5
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "The rotation of the wooden block shows consistent speed and direction for machining.",
+      "signals": [
+        "continuity(wooden-block)"
+      ],
+      "content_score_60": 35,
+      "signal_score_40": 36.67,
+      "total_score_100": 71.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(wooden-block)": 36.6667
+      },
+      "content_score_raw": "35"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "The CNC machine operates without unexpected collisions with surrounding objects.",
+      "signals": [
+        "interpenetration(cnc-machine,workshop)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 35.83,
+      "total_score_100": 95.83,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "interpenetration(cnc-machine,workshop)": 35.8333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "The CNC tool maintains continuous contact with the wooden block.",
+      "signals": [
+        "tool_contact",
+        "interpenetration",
+        "collision"
+      ],
+      "content_score_60": 30,
+      "signal_score_40": 40.0,
+      "total_score_100": 70.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "interpenetration": 35.8333,
+        "collision": 6.3333,
+        "tool_contact": 5.6667
+      },
+      "content_score_raw": "30"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "v5",
+    "a1",
+    "a2",
+    "a4"
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0336.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "decord",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "bird",
+        "attributes": {
+          "signature": [
+            "brown-and-white-feathers,-large-wingspan"
+          ]
+        },
+        "spans": [
+          [
+            1.0,
+            8.0
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "fish",
+        "attributes": {
+          "signature": [
+            "small,-silver-body"
+          ]
+        },
+        "spans": [
+          [
+            1.0,
+            8.0
+          ]
+        ]
+      }
+    ],
+    "relations": []
+  },
+  "views": {
+    "objects_count_display": {
+      "bird": 1,
+      "fish": 1
+    }
+  }
+}

@@ -1,0 +1,190 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0060.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "cv2",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "bird",
+        "attributes": {
+          "color": [
+            "gray",
+            "red"
+          ],
+          "pattern": [
+            "smooth"
+          ],
+          "texture": [
+            "feathery"
+          ],
+          "size": [
+            "medium"
+          ],
+          "age": [
+            "adult"
+          ],
+          "sex": [
+            "male"
+          ],
+          "state": [
+            "resting"
+          ],
+          "pose": [
+            "perched"
+          ],
+          "action": [
+            "resting"
+          ],
+          "orientation": [
+            "left-facing"
+          ],
+          "facing-direction": [
+            "left"
+          ],
+          "position": [
+            "on-tree-branch"
+          ],
+          "object-part": [
+            "beak",
+            "body",
+            "head",
+            "wing"
+          ],
+          "species-or-breed": [
+            "pigeon-like-bird"
+          ],
+          "signature": [
+            "red-head-gray-body-long-beak-left-facing-tree-branch"
+          ]
+        },
+        "spans": [
+          [
+            0.2,
+            3.4
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "tree-branch",
+        "attributes": {
+          "color": [
+            "brown",
+            "green"
+          ],
+          "material": [
+            "moss",
+            "wood"
+          ],
+          "texture": [
+            "rough"
+          ],
+          "size": [
+            "large"
+          ],
+          "position": [
+            "horizontal"
+          ],
+          "object-part": [
+            "trunk"
+          ],
+          "signature": [
+            "moss-covered-brown"
+          ]
+        },
+        "spans": [
+          [
+            0.1,
+            3.5
+          ]
+        ]
+      },
+      {
+        "id": "o3",
+        "name": "grass",
+        "attributes": {
+          "color": [
+            "green",
+            "purple"
+          ],
+          "texture": [
+            "soft"
+          ],
+          "size": [
+            "short"
+          ],
+          "position": [
+            "ground"
+          ],
+          "object-part": [
+            "leaves"
+          ],
+          "signature": [
+            "green-with-purple-flowers"
+          ]
+        },
+        "spans": [
+          [
+            3.6,
+            4.7
+          ]
+        ]
+      },
+      {
+        "id": "o4",
+        "name": "bird",
+        "attributes": {
+          "signature": [
+            "bird-coarse"
+          ]
+        },
+        "spans": [
+          [
+            4.7,
+            12.8
+          ]
+        ]
+      }
+    ],
+    "relations": [
+      {
+        "subject": "o1",
+        "predicate": "perched-on",
+        "object": "o2",
+        "spans": [
+          [
+            0.2,
+            3.4
+          ]
+        ],
+        "confidence": 0.9
+      },
+      {
+        "subject": "o1",
+        "predicate": "looking-at",
+        "object": "o3",
+        "spans": [
+          [
+            0.5,
+            3.6
+          ]
+        ],
+        "confidence": 0.8
+      }
+    ]
+  },
+  "views": {
+    "objects_count_display": {
+      "bird": 2,
+      "tree-branch": 1,
+      "grass": 1
+    }
+  }
+}

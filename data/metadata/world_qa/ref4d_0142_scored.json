@@ -1,0 +1,208 @@
+{
+  "summary": {
+    "items": 10,
+    "enter_bank": 7,
+    "clip_range_sec": [
+      0.0,
+      5.2
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Do the building elements show continuous trajectories without sudden appearance or disappearance?",
+      "signals": [
+        "continuity(structure)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 36.67,
+      "total_score_100": 86.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(structure)": 36.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Does the structure maintain consistent size and support relationships throughout, preventing falling hazards?",
+      "signals": [
+        "size_inconsistency",
+        "support",
+        "interpenetration",
+        "falling_hazard"
+      ],
+      "content_score_60": 40,
+      "signal_score_40": 40.0,
+      "total_score_100": 80.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "size_inconsistency": 37.5,
+        "interpenetration": 7.1667,
+        "support": 7.0,
+        "falling_hazard": 6.3333
+      },
+      "content_score_raw": "40"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Are the shadows cast by objects consistent with their contact points on the ground?",
+      "signals": [
+        "shadow_consistency"
+      ],
+      "content_score_60": 30,
+      "signal_score_40": 36.67,
+      "total_score_100": 66.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "shadow_consistency": 36.6667
+      },
+      "content_score_raw": "30"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Do the building components exhibit correct acceleration signs without frame discontinuities?",
+      "signals": [
+        "trajectory_dir",
+        "accel_sign",
+        "frame_discontinuity"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "frame_discontinuity": 40.0,
+        "trajectory_dir": 7.6667,
+        "accel_sign": 7.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Does the structure maintain physical consistency, with no sudden material changes or interpenetration?",
+      "signals": [
+        "continuity(structure)",
+        "falling_hazard"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(structure)": 36.6667,
+        "falling_hazard": 6.3333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "The structure's components maintain physical consistency, with no sudden appearance or disappearance.",
+      "signals": [
+        "continuity(structure)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 36.67,
+      "total_score_100": 96.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(structure)": 36.6667
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "The building elements exhibit continuous trajectories with correct acceleration signs and no frame discontinuities.",
+      "signals": [
+        "size_inconsistency",
+        "support",
+        "interpenetration",
+        "trajectory_dir",
+        "accel_sign",
+        "frame_discontinuity"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "frame_discontinuity": 40.0,
+        "trajectory_dir": 7.6667,
+        "size_inconsistency": 7.5,
+        "interpenetration": 7.1667,
+        "support": 7.0,
+        "accel_sign": 7.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "Shadows cast by objects are consistent with their contact points and light sources.",
+      "signals": [
+        "shadow_consistency"
+      ],
+      "content_score_60": 30,
+      "signal_score_40": 36.67,
+      "total_score_100": 66.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "shadow_consistency": 36.6667
+      },
+      "content_score_raw": "30"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "The overall stability of the stacked structures is maintained, preventing falling hazards.",
+      "signals": [
+        "falling_hazard"
+      ],
+      "content_score_60": 40,
+      "signal_score_40": 31.67,
+      "total_score_100": 71.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "falling_hazard": 31.6667
+      },
+      "content_score_raw": "40"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "The structure's components maintain consistent size and support relationships without sudden material changes.",
+      "signals": [
+        "size_inconsistency",
+        "support",
+        "interpenetration"
+      ],
+      "content_score_60": 40,
+      "signal_score_40": 40.0,
+      "total_score_100": 80.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "size_inconsistency": 37.5,
+        "interpenetration": 7.1667,
+        "support": 7.0
+      },
+      "content_score_raw": "40"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v4",
+    "v5",
+    "a1",
+    "a2",
+    "a5"
+  ]
+}

@@ -1,0 +1,100 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0517.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "cv2",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "train",
+        "attributes": {
+          "signature": [
+            "train-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            9.3
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "person",
+        "attributes": {
+          "signature": [
+            "person-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            9.3
+          ]
+        ]
+      },
+      {
+        "id": "o3",
+        "name": "platform",
+        "attributes": {
+          "signature": [
+            "platform-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            9.3
+          ]
+        ]
+      },
+      {
+        "id": "o4",
+        "name": "sign",
+        "attributes": {
+          "signature": [
+            "sign-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            9.3
+          ]
+        ]
+      },
+      {
+        "id": "o5",
+        "name": "railway",
+        "attributes": {
+          "signature": [
+            "railway-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            9.3
+          ]
+        ]
+      }
+    ],
+    "relations": []
+  },
+  "views": {
+    "objects_count_display": {
+      "train": 1,
+      "person": 1,
+      "platform": 1,
+      "sign": 1,
+      "railway": 1
+    }
+  }
+}

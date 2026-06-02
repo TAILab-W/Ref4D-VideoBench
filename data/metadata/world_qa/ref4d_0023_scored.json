@@ -1,0 +1,209 @@
+{
+  "summary": {
+    "items": 10,
+    "enter_bank": 10,
+    "clip_range_sec": [
+      0.0,
+      16.7
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does the falling penguin from the cliff follow a continuous downward trajectory?",
+      "signals": [
+        "trajectory_dir(penguin,axis)",
+        "accel_sign(penguin,axis)",
+        "friction_sliding(penguin,on:ice)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(penguin,axis)": 38.3333,
+        "accel_sign(penguin,axis)": 7.0,
+        "friction_sliding(penguin,on:ice)": 6.0
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Do the penguins on the ice maintain balance and not suddenly disappear at the top edge?",
+      "signals": [
+        "balance(penguin)",
+        "interpenetration(penguin,penguin)",
+        "frame_discontinuity(t)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "frame_discontinuity(t)": 40.0,
+        "balance(penguin)": 7.1667,
+        "interpenetration(penguin,penguin)": 7.1667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Do the penguins exhibit natural swimming motion in the water?",
+      "signals": [
+        "biological_motion(penguin)",
+        "biological_motion(penguins)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "biological_motion(penguin)": 38.3333,
+        "biological_motion(penguins)": 7.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Does the trajectory of falling penguins from the cliff have a consistent downward direction?",
+      "signals": [
+        "trajectory_dir(penguin,axis:y)",
+        "accel_sign(penguin,axis:y)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(penguin,axis:y)": 38.3333,
+        "accel_sign(penguin,axis:y)": 7.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Do the penguins on the ice show signs of merging with other objects?",
+      "signals": [
+        "continuity(penguins)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 36.67,
+      "total_score_100": 91.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(penguins)": 36.6667
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "Penguins on the ice maintain a stable position without interpenetration.",
+      "signals": [
+        "continuity(penguin)",
+        "size_inconsistency(penguin)",
+        "interpenetration(penguin,penguin)",
+        "balance(penguin)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "size_inconsistency(penguin)": 37.5,
+        "continuity(penguin)": 7.3333,
+        "interpenetration(penguin,penguin)": 7.1667,
+        "balance(penguin)": 7.1667
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "Ice formations and water surfaces show consistent material optics and shadows.",
+      "signals": [
+        "material_optics(ice)",
+        "shadow_consistency(ice)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "material_optics(ice)": 37.5,
+        "shadow_consistency(ice)": 7.3333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "A penguin falls from the cliff, following a continuous downward trajectory due to gravity.",
+      "signals": [
+        "trajectory_dir(penguin,axis:y)",
+        "accel_sign(penguin,axis:y)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(penguin,axis:y)": 38.3333,
+        "accel_sign(penguin,axis:y)": 7.0
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "Penguins swim in the water with natural biological motion.",
+      "signals": [
+        "biological_motion(penguin)",
+        "biological_motion(penguins)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "biological_motion(penguin)": 38.3333,
+        "biological_motion(penguins)": 7.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "Penguins entering or exiting the frame at the top edge do not suddenly disappear.",
+      "signals": [
+        "frame_discontinuity(t)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "frame_discontinuity(t)": 40.0
+      },
+      "content_score_raw": "50"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "v5",
+    "a1",
+    "a2",
+    "a3",
+    "a4",
+    "a5"
+  ]
+}

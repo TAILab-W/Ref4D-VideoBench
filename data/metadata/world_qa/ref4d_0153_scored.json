@@ -1,0 +1,221 @@
+{
+  "summary": {
+    "items": 10,
+    "enter_bank": 10,
+    "clip_range_sec": [
+      0.0,
+      7.97
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does the yellow bucket on the right side of the frame stay in place without moving or tipping over?",
+      "signals": [
+        "continuity(oX)",
+        "interpenetration(oA,oB)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(oX)": 36.6667,
+        "interpenetration(oA,oB)": 7.1667
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Does the water in the concrete container show a consistent volume and material properties throughout the clip?",
+      "signals": [
+        "viscosity_effect(water)",
+        "pour_direction(water,axis)",
+        "buoyancy_float(brick,in:water)",
+        "compressibility(water)",
+        "material_optics",
+        "shadow_consistency"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "material_optics": 37.5,
+        "shadow_consistency": 7.3333,
+        "viscosity_effect(water)": 6.8333,
+        "buoyancy_float(brick,in:water)": 6.8333,
+        "compressibility(water)": 6.1667,
+        "pour_direction(water,axis)": 5.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Are the workers' feet visible, indicating they are standing firmly near the wet area with no signs of slipping?",
+      "signals": [
+        "balance",
+        "friction_sliding"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "balance": 35.8333,
+        "friction_sliding": 6.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Do the bricks remain stacked upright by their supportable base during handling?",
+      "signals": [
+        "supportable",
+        "placeable"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 31.83,
+      "total_score_100": 86.83,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "supportable": 26.6667,
+        "placeable": 5.1667
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Does the blue tarp on the ground maintain its position relative to the construction site's layout?",
+      "signals": [
+        "continuity"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 36.67,
+      "total_score_100": 86.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity": 36.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "Water in the container shows liquid behavior consistent with its volume and material properties.",
+      "signals": [
+        "continuity(oX)",
+        "interpenetration(oA,oB)",
+        "viscosity_effect(water)",
+        "pour_direction(water,axis)",
+        "buoyancy_float(brick,in:water)",
+        "compressibility(water)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(oX)": 36.6667,
+        "interpenetration(oA,oB)": 7.1667,
+        "viscosity_effect(water)": 6.8333,
+        "buoyancy_float(brick,in:water)": 6.8333,
+        "compressibility(water)": 6.1667,
+        "pour_direction(water,axis)": 5.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "Bricks are placed by human hands or tools onto stable bases (ground or mortar).",
+      "signals": [
+        "material_optics",
+        "shadow_consistency",
+        "supportable",
+        "placeable"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "material_optics": 37.5,
+        "shadow_consistency": 7.3333,
+        "supportable": 5.3333,
+        "placeable": 5.1667
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "Materials and tools maintain physical continuity and realistic interaction with the environment.",
+      "signals": [
+        "continuity"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 36.67,
+      "total_score_100": 86.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity": 36.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "Workers handle wet cement, ensuring proper balance to avoid slipping on slippery surfaces.",
+      "signals": [
+        "balance",
+        "friction_sliding"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "balance": 35.8333,
+        "friction_sliding": 6.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "During construction, materials and tools remain stable without unexpected movement or interpenetration.",
+      "signals": [
+        "continuity(oX)",
+        "interpenetration(oA,oB)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(oX)": 36.6667,
+        "interpenetration(oA,oB)": 7.1667
+      },
+      "content_score_raw": "50"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "v5",
+    "a1",
+    "a2",
+    "a3",
+    "a4",
+    "a5"
+  ]
+}

@@ -1,0 +1,99 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0513.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "decord",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "player",
+        "attributes": {
+          "signature": [
+            "player-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            8.8
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "ball",
+        "attributes": {
+          "signature": [
+            "ball-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            8.8
+          ]
+        ]
+      },
+      {
+        "id": "o3",
+        "name": "basket",
+        "attributes": {
+          "signature": [
+            "basket-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            8.8
+          ]
+        ]
+      },
+      {
+        "id": "o4",
+        "name": "jersey",
+        "attributes": {
+          "signature": [
+            "jersey-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            8.8
+          ]
+        ]
+      },
+      {
+        "id": "o5",
+        "name": "jersey",
+        "attributes": {
+          "signature": [
+            "jersey-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            8.8
+          ]
+        ]
+      }
+    ],
+    "relations": []
+  },
+  "views": {
+    "objects_count_display": {
+      "player": 1,
+      "ball": 1,
+      "basket": 1,
+      "jersey": 2
+    }
+  }
+}

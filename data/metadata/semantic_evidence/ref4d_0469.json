@@ -1,0 +1,182 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0469.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "decord",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "person",
+        "attributes": {
+          "color": [
+            "black",
+            "shirtless",
+            "white"
+          ],
+          "sex": [
+            "male"
+          ],
+          "action": [
+            "bending",
+            "dribbling",
+            "heading",
+            "kicking",
+            "walking"
+          ],
+          "pose": [
+            "balancing",
+            "bending-forward",
+            "jumping",
+            "standing",
+            "swinging-arms"
+          ],
+          "facing-direction": [
+            "forward",
+            "left",
+            "right"
+          ],
+          "clothing": [
+            "shorts"
+          ],
+          "signature": [
+            "shirtless-black-shorts-white-cap"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            5.9
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "soccer-ball",
+        "attributes": {
+          "color": [
+            "pattern",
+            "white"
+          ],
+          "object-part": [
+            "round"
+          ],
+          "tool-or-instrument": [
+            "sports-equipment"
+          ],
+          "motion": [
+            "in-air",
+            "stationary"
+          ],
+          "signature": [
+            "white-with-pattern"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            5.9
+          ]
+        ]
+      },
+      {
+        "id": "o3",
+        "name": "field",
+        "attributes": {
+          "color": [
+            "green"
+          ],
+          "texture": [
+            "artificial-turf"
+          ],
+          "scene": [
+            "outdoor-sport"
+          ],
+          "surface": [
+            "grass"
+          ],
+          "signature": [
+            "green-artificial-turf"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            5.9
+          ]
+        ]
+      },
+      {
+        "id": "o4",
+        "name": "parking-lot",
+        "attributes": {
+          "object": [
+            "cars"
+          ],
+          "state": [
+            "parked"
+          ],
+          "scene": [
+            "background"
+          ],
+          "lighting": [
+            "sunlight"
+          ],
+          "signature": [
+            "cars-parked-under-sunlight"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            5.9
+          ]
+        ]
+      },
+      {
+        "id": "o5",
+        "name": "text-box",
+        "attributes": {
+          "color": [
+            "black",
+            "white"
+          ],
+          "printed-text": [
+            "busquets-confidence-+-awareness",
+            "lukaku-physicality",
+            "prime-hazard-dribbling",
+            "vini-jr-agility",
+            "you-can-only-pick-2"
+          ],
+          "position": [
+            "bottom-center"
+          ],
+          "signature": [
+            "white-background-black-text"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            5.9
+          ]
+        ]
+      }
+    ],
+    "relations": []
+  },
+  "views": {
+    "objects_count_display": {
+      "person": 1,
+      "soccer-ball": 1,
+      "field": 1,
+      "parking-lot": 1,
+      "text-box": 1
+    }
+  }
+}

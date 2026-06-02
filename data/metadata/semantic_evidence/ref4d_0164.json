@@ -1,0 +1,143 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0164.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "cv2",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "person",
+        "attributes": {
+          "color": [
+            "black",
+            "light-gray"
+          ],
+          "pose": [
+            "standing"
+          ],
+          "action": [
+            "holding-award",
+            "speaking"
+          ],
+          "state": [
+            "formal"
+          ],
+          "signature": [
+            "light-gray-jacket-black-shirt-white-background-purple-circle-2024"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            7.9
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "award",
+        "attributes": {
+          "color": [
+            "blue",
+            "purple"
+          ],
+          "signature": [
+            "blue-purple-40-2024-text"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            7.9
+          ]
+        ]
+      },
+      {
+        "id": "o3",
+        "name": "text-overlay",
+        "attributes": {
+          "color": [
+            "black",
+            "pink",
+            "white"
+          ],
+          "printed-text": [
+            "24m",
+            "biggest-challenge-for-young-content-marketers?",
+            "comune",
+            "deamly",
+            "dvio-digital",
+            "how's-ai-shaping-content's-future?",
+            "office-parties",
+            "real",
+            "vikshant-shetty"
+          ],
+          "signature": [
+            "pink-white-black-text"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            7.9
+          ]
+        ]
+      },
+      {
+        "id": "o4",
+        "name": "logo",
+        "attributes": {
+          "signature": [
+            "24m-logo-purple-circle"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            7.9
+          ]
+        ]
+      }
+    ],
+    "relations": [
+      {
+        "subject": "o1",
+        "predicate": "holding",
+        "object": "o2",
+        "spans": [
+          [
+            0.0,
+            7.9
+          ]
+        ],
+        "confidence": 0.9
+      },
+      {
+        "subject": "o3",
+        "predicate": "displaying",
+        "object": "o1",
+        "spans": [
+          [
+            0.0,
+            7.9
+          ]
+        ],
+        "confidence": 0.7
+      }
+    ]
+  },
+  "views": {
+    "objects_count_display": {
+      "person": 1,
+      "award": 1,
+      "text-overlay": 1,
+      "logo": 1
+    }
+  }
+}

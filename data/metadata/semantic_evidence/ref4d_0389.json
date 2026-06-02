@@ -1,0 +1,126 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0389.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "decord",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "person",
+        "attributes": {
+          "color": [
+            "light-blue"
+          ],
+          "pattern": [
+            "solid"
+          ],
+          "texture": [
+            "shiny",
+            "smooth"
+          ],
+          "material": [
+            "fabric"
+          ],
+          "size": [
+            "full-body"
+          ],
+          "age": [
+            "adult"
+          ],
+          "sex": [
+            "female"
+          ],
+          "state": [
+            "wet"
+          ],
+          "pose": [
+            "standing"
+          ],
+          "action": [
+            "adjusting-clothing",
+            "looking-upwards",
+            "touching-face"
+          ],
+          "orientation": [
+            "facing-forward"
+          ],
+          "facing-direction": [
+            "front"
+          ],
+          "position": [
+            "center"
+          ],
+          "object-part": [
+            "cape",
+            "hair",
+            "jewelry",
+            "necklace"
+          ],
+          "tool-or-instrument": [
+            "none"
+          ],
+          "equipment": [
+            "air-conditioner"
+          ],
+          "species-or-breed": [
+            "human"
+          ],
+          "vehicle-type": [
+            "none"
+          ],
+          "food-type": [
+            "none"
+          ],
+          "brand-or-logo": [
+            "none"
+          ],
+          "printed-text": [
+            "none"
+          ],
+          "number-or-id": [
+            "none"
+          ],
+          "art-medium": [
+            "none"
+          ],
+          "style": [
+            "traditional"
+          ],
+          "weather": [
+            "none"
+          ],
+          "lighting": [
+            "warm"
+          ],
+          "scene": [
+            "indoor"
+          ],
+          "camera-view": [
+            "frontal"
+          ],
+          "signature": [
+            "light-blue-cape-necklace-gold-jewelry-wet-hair"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            8.6
+          ]
+        ]
+      }
+    ],
+    "relations": []
+  },
+  "views": {
+    "objects_count_display": {
+      "person": 1
+    }
+  }
+}

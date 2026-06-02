@@ -1,0 +1,188 @@
+{
+  "summary": {
+    "items": 10,
+    "enter_bank": 7,
+    "clip_range_sec": [
+      0.0,
+      5.47
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Do the glass doors allow entry and exit between the indoor living space and outdoor garden?",
+      "signals": [
+        "openable"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 25.83,
+      "total_score_100": 80.83,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "openable": 25.8333
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Is the bed inside the house supported by a solid floor?",
+      "signals": [
+        "support"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 35.0,
+      "total_score_100": 85.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "support": 35.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Does the wooden deck outside provide stable support for objects placed on it?",
+      "signals": [
+        "support"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 35.0,
+      "total_score_100": 85.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "support": 35.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Across the clip, do the glass doors maintain continuity in their opening and closing motion without frame discontinuity?",
+      "signals": [
+        "continuity(door)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 36.67,
+      "total_score_100": 86.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(door)": 36.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Are the steps leading to the house properly installed?",
+      "signals": [
+        "support(step,ground)",
+        "deformation(step)",
+        "balance(fan)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "deformation(step)": 40.0,
+        "balance(fan)": 7.1667,
+        "support(step,ground)": 7.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "The glass doors allow entry and exit between the indoor living space and outdoor garden.",
+      "signals": [
+        "openable"
+      ],
+      "content_score_60": 36,
+      "signal_score_40": 25.83,
+      "total_score_100": 61.83,
+      "duplicate_penalized": true,
+      "signal_detail": {
+        "openable": 25.8333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "The bed inside the house is supported by a solid floor.",
+      "signals": [
+        "support"
+      ],
+      "content_score_60": 36,
+      "signal_score_40": 35.0,
+      "total_score_100": 71.0,
+      "duplicate_penalized": true,
+      "signal_detail": {
+        "support": 35.0
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "The wooden deck outside provides stable support for objects placed on it.",
+      "signals": [
+        "support"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 35.0,
+      "total_score_100": 85.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "support": 35.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "The wooden deck steps leading to the house support the weight of a person without deformation.",
+      "signals": [
+        "support(step,ground)",
+        "deformation(step)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "deformation(step)": 40.0,
+        "support(step,ground)": 7.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "The glass doors maintain continuity in their opening and closing motion.",
+      "signals": [
+        "continuity(door)"
+      ],
+      "content_score_60": 40,
+      "signal_score_40": 36.67,
+      "total_score_100": 76.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(door)": 36.6667
+      },
+      "content_score_raw": "40"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "v5",
+    "a3",
+    "a4"
+  ]
+}

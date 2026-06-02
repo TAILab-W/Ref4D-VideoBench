@@ -1,0 +1,199 @@
+{
+  "summary": {
+    "items": 10,
+    "enter_bank": 8,
+    "clip_range_sec": [
+      0.0,
+      7.47
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does the shadow of the hand and salami slices point in the same direction as the light source?",
+      "signals": [
+        "shadow_consistency(Salami)",
+        "shadow_consistency(hand)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "shadow_consistency(Salami)": 36.6667,
+        "shadow_consistency(hand)": 7.3333
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Are the salami slices placed on top of the pesto without overlapping each other?",
+      "signals": [
+        "interpenetration(Salami,Pesto)"
+      ],
+      "content_score_60": 35,
+      "signal_score_40": 35.83,
+      "total_score_100": 70.83,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "interpenetration(Salami,Pesto)": 35.8333
+      },
+      "content_score_raw": "35"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Is the food being handled carefully to avoid contamination?",
+      "signals": [
+        "friction_sliding(bread,on:table)",
+        "grasp_stability(hand,bread)"
+      ],
+      "content_score_60": 45,
+      "signal_score_40": 35.67,
+      "total_score_100": 80.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "friction_sliding(bread,on:table)": 30.0,
+        "grasp_stability(hand,bread)": 5.6667
+      },
+      "content_score_raw": "45"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Is the pesto spread evenly across the entire surface of the bread?",
+      "signals": [
+        "support(oA,oB)",
+        "tool_contact(oTool,oObj)",
+        "placeable(oObj,at:oTarget)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "support(oA,oB)": 35.0,
+        "tool_contact(oTool,oObj)": 5.6667,
+        "placeable(oObj,at:oTarget)": 5.1667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Does the hand hold the salami slices in a way that prevents them from falling off?",
+      "signals": [
+        "friction_sliding(bread,on:table)",
+        "grasp_stability(hand,bread)"
+      ],
+      "content_score_60": 40,
+      "signal_score_40": 35.67,
+      "total_score_100": 75.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "friction_sliding(bread,on:table)": 30.0,
+        "grasp_stability(hand,bread)": 5.6667
+      },
+      "content_score_raw": "40"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "A hand places salami slices on bread without risk of contamination.",
+      "signals": [
+        "friction_sliding(bread,on:table)",
+        "grasp_stability(hand,bread)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 35.67,
+      "total_score_100": 85.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "friction_sliding(bread,on:table)": 30.0,
+        "grasp_stability(hand,bread)": 5.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "The shadow of the food items matches their position and light source direction.",
+      "signals": [
+        "shadow_consistency(Salami)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 36.67,
+      "total_score_100": 91.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "shadow_consistency(Salami)": 36.6667
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "The shadow of the hand is consistent with the light direction.",
+      "signals": [
+        "shadow_consistency(hand)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 36.67,
+      "total_score_100": 86.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "shadow_consistency(hand)": 36.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "Pesto paste is spread evenly on the bread.",
+      "signals": [
+        "support(oA,oB)",
+        "tool_contact(oTool,oObj)",
+        "placeable(oObj,at:oTarget)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "support(oA,oB)": 35.0,
+        "tool_contact(oTool,oObj)": 5.6667,
+        "placeable(oObj,at:oTarget)": 5.1667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "Salami slices are placed without interpenetration with the pesto.",
+      "signals": [
+        "interpenetration(Salami,Pesto)"
+      ],
+      "content_score_60": 45,
+      "signal_score_40": 35.83,
+      "total_score_100": 80.83,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "interpenetration(Salami,Pesto)": 35.8333
+      },
+      "content_score_raw": "45"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v3",
+    "v4",
+    "a1",
+    "a2",
+    "a3",
+    "a4",
+    "a5"
+  ]
+}

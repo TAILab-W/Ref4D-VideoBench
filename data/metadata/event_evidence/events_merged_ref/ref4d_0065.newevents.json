@@ -1,0 +1,79 @@
+{
+  "events": [
+    {
+      "id": "m0001",
+      "s": 0.0,
+      "e": 0.2552083333333333,
+      "dur": 0.2552083333333333,
+      "members": [
+        "e0001#2"
+      ],
+      "text": "bee land",
+      "s_abs": 0.0,
+      "e_abs": 1.6333333333333333,
+      "dur_abs": 1.6333333333333333
+    },
+    {
+      "id": "m0002",
+      "s": 0.0,
+      "e": 0.5104166666666666,
+      "dur": 0.5104166666666666,
+      "members": [
+        "e0001#1",
+        "e0002#1"
+      ],
+      "text": "bee fly",
+      "s_abs": 0.0,
+      "e_abs": 3.2666666666666666,
+      "dur_abs": 3.2666666666666666
+    },
+    {
+      "id": "m0003",
+      "s": 0.2552083333333333,
+      "e": 1.0,
+      "dur": 0.7447916666666667,
+      "members": [
+        "e0002#2",
+        "e0003#1",
+        "e0004#1"
+      ],
+      "text": "bee land on flower bee fly",
+      "s_abs": 1.6333333333333333,
+      "e_abs": 6.4,
+      "dur_abs": 4.7666666666666675
+    },
+    {
+      "id": "m0004",
+      "s": 0.5104166666666666,
+      "e": 1.0,
+      "dur": 0.48958333333333337,
+      "members": [
+        "e0003#2",
+        "e0004#2"
+      ],
+      "text": "bee collect pollen",
+      "s_abs": 3.2666666666666666,
+      "e_abs": 6.4,
+      "dur_abs": 3.1333333333333337
+    }
+  ],
+  "meta": {
+    "lane": "ref",
+    "key": "ref4d_0065",
+    "mode": "micro",
+    "merge_config": {
+      "tau_sem": 0.96,
+      "gap_abs_sec": 1.01,
+      "gap_norm_fallback": 0.1,
+      "min_duration_norm": 0.0
+    },
+    "stats": {
+      "num_input_items": 8,
+      "num_kept_items": 8,
+      "num_clusters": 4
+    },
+    "provenance": {
+      "source_hash": "a2929cd95a70"
+    }
+  }
+}

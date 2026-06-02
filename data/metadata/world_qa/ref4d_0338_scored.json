@@ -1,0 +1,301 @@
+{
+  "summary": {
+    "items": 10,
+    "enter_bank": 10,
+    "clip_range_sec": [
+      0.0,
+      13.03
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does the large iceberg remain stable on the water surface without tilting or fracturing?",
+      "signals": [
+        "support(iceberg,snow)",
+        "support(iceberg,water)",
+        "continuity(iceberg)",
+        "balance(iceberg)",
+        "fracture(iceberg)=false",
+        "tilt_angle_threshold(iceberg,deg)=0"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(iceberg)": 36.6667,
+        "balance(iceberg)": 7.1667,
+        "tilt_angle_threshold(iceberg,deg)=0": 7.1667,
+        "support(iceberg,snow)": 7.0,
+        "support(iceberg,water)": 7.0,
+        "fracture(iceberg)=false": 6.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Do the tents covered with blue tarps stay supported by snow and underlying structures without interpenetration?",
+      "signals": [
+        "support(tent,snow)",
+        "buoyancy_float(tent,in:snow)",
+        "shadow_consistency(tent)",
+        "support(oA,oB)",
+        "containment(oA,oB)",
+        "interpenetration(oA,oB)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "shadow_consistency(tent)": 36.6667,
+        "interpenetration(oA,oB)": 7.1667,
+        "support(tent,snow)": 7.0,
+        "support(oA,oB)": 7.0,
+        "buoyancy_float(tent,in:snow)": 6.8333,
+        "containment(oA,oB)": 5.8333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Does the shape of the white structure maintain continuity across the clip, showing consistent material optics for ice/snow/rock?",
+      "signals": [
+        "deformation(iceberg)",
+        "material_optics(iceberg)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "deformation(iceberg)": 40.0,
+        "material_optics(iceberg)": 7.5
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Does the shadow cast by the large white structure align consistently with its form and light source throughout the video?",
+      "signals": [
+        "material_optics(oA)",
+        "shadow_consistency(oX)",
+        "shadow_consistency(large_structure)",
+        "frame_discontinuity(t)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "frame_discontinuity(t)": 40.0,
+        "material_optics(oA)": 7.5,
+        "shadow_consistency(oX)": 7.3333,
+        "shadow_consistency(large_structure)": 7.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Are there any instances of object interpenetration in the scene?",
+      "signals": [
+        "interpenetration(oA,oB)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 35.83,
+      "total_score_100": 85.83,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "interpenetration(oA,oB)": 35.8333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "The iceberg remains stable on the water surface without sudden changes in position or shape.",
+      "signals": [
+        "continuity(t)",
+        "frame_discontinuity(t)",
+        "size_inconsistency(oX)",
+        "interpenetration(oA,oB)",
+        "buoyancy_float(oA,in:oV)",
+        "friction_sliding(oA,on:oB)",
+        "elastic_bounce(oX)",
+        "slosh_response(oV,amp)",
+        "compressibility(oX)",
+        "viscosity_effect(oV)",
+        "pour_direction(oV,axis)",
+        "leakage(oV,from:oContainer)",
+        "specular_highlight_consistency(oX)",
+        "cast_shadow_contact(oX,shadow)",
+        "grasp_stability(oHand,oObj)",
+        "slip(oA,on:oB)",
+        "tool_contact(oTool,oObj)",
+        "cuttable_progress(oObj)",
+        "pourable(oContainer)",
+        "openable(oContainer)",
+        "supportable(oObj,by:oSurface)",
+        "placeable(oObj,at:oTarget)",
+        "biological_motion(oA)",
+        "action_phase(oAct,phase)",
+        "step_order(prev:task,next:task)",
+        "state_change(oObj,from:state,to:state)",
+        "goal_placement(oObj,at:oTarget)",
+        "result_appearance(oObj)",
+        "handoff_between_hands(oObj)",
+        "tool_usage_correct(oTool,for:oTask)",
+        "spillage(oV)",
+        "finger_clearance(oHand,oTool)",
+        "blade_orientation_away(oTool,oHand)",
+        "hot_surface_contact(oObj,oSurface)",
+        "flame_proximity(oObj,dist)",
+        "prohibited_intersection(oA,oB)",
+        "smoke_direction_consistency(scene)",
+        "falling_hazard(oObj)",
+        "support(iceberg,snow)",
+        "support(iceberg,water)",
+        "continuity(iceberg)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "frame_discontinuity(t)": 40.0,
+        "biological_motion(oA)": 7.6667,
+        "size_inconsistency(oX)": 7.5,
+        "cast_shadow_contact(oX,shadow)": 7.5,
+        "state_change(oObj,from:state,to:state)": 7.5,
+        "continuity(t)": 7.3333,
+        "specular_highlight_consistency(oX)": 7.3333,
+        "prohibited_intersection(oA,oB)": 7.3333,
+        "smoke_direction_consistency(scene)": 7.3333,
+        "continuity(iceberg)": 7.3333,
+        "interpenetration(oA,oB)": 7.1667,
+        "support(iceberg,snow)": 7.0,
+        "support(iceberg,water)": 7.0,
+        "buoyancy_float(oA,in:oV)": 6.8333,
+        "slosh_response(oV,amp)": 6.8333,
+        "viscosity_effect(oV)": 6.8333,
+        "finger_clearance(oHand,oTool)": 6.8333,
+        "hot_surface_contact(oObj,oSurface)": 6.8333,
+        "flame_proximity(oObj,dist)": 6.8333,
+        "falling_hazard(oObj)": 6.3333,
+        "compressibility(oX)": 6.1667,
+        "friction_sliding(oA,on:oB)": 6.0,
+        "leakage(oV,from:oContainer)": 5.8333,
+        "tool_usage_correct(oTool,for:oTask)": 5.8333,
+        "blade_orientation_away(oTool,oHand)": 5.8333,
+        "pour_direction(oV,axis)": 5.6667,
+        "grasp_stability(oHand,oObj)": 5.6667,
+        "tool_contact(oTool,oObj)": 5.6667,
+        "result_appearance(oObj)": 5.6667,
+        "spillage(oV)": 5.6667,
+        "slip(oA,on:oB)": 5.5,
+        "supportable(oObj,by:oSurface)": 5.3333,
+        "action_phase(oAct,phase)": 5.3333,
+        "step_order(prev:task,next:task)": 5.3333,
+        "goal_placement(oObj,at:oTarget)": 5.3333,
+        "handoff_between_hands(oObj)": 5.3333,
+        "pourable(oContainer)": 5.1667,
+        "openable(oContainer)": 5.1667,
+        "placeable(oObj,at:oTarget)": 5.1667,
+        "elastic_bounce(oX)": 4.6667,
+        "cuttable_progress(oObj)": 4.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "The tent is supported by snow and does not show signs of sinking or floating away.",
+      "signals": [
+        "support(tent,snow)",
+        "buoyancy_float(tent,in:snow)",
+        "shadow_consistency(tent)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "shadow_consistency(tent)": 36.6667,
+        "support(tent,snow)": 7.0,
+        "buoyancy_float(tent,in:snow)": 6.8333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "The large iceberg maintains its form, showing no tilting or fracturing.",
+      "signals": [
+        "balance(iceberg)",
+        "fracture(iceberg)=false",
+        "tilt_angle_threshold(iceberg,deg)=0"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "balance(iceberg)": 35.8333,
+        "tilt_angle_threshold(iceberg,deg)=0": 7.1667,
+        "fracture(iceberg)=false": 6.3333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "Object shapes and sizes remain continuous without sudden changes or deformations.",
+      "signals": [
+        "deformation(iceberg)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "deformation(iceberg)": 40.0
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "All visible surfaces exhibit consistent material optics.",
+      "signals": [
+        "material_optics(iceberg)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 37.5,
+      "total_score_100": 87.5,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "material_optics(iceberg)": 37.5
+      },
+      "content_score_raw": "50"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "v5",
+    "a1",
+    "a2",
+    "a3",
+    "a4",
+    "a5"
+  ]
+}

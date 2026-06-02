@@ -1,0 +1,190 @@
+{
+  "summary": {
+    "items": 10,
+    "enter_bank": 7,
+    "clip_range_sec": [
+      0.0,
+      9.03
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does the butterfly remain on the flower without falling off?",
+      "signals": [
+        "support(butterfly,flower)",
+        "support(leaf,flower)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "support(butterfly,flower)": 35.0,
+        "support(leaf,flower)": 7.0
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Are the leaves and flowers stationary with no unexpected movement?",
+      "signals": [
+        "continuity(leaf)",
+        "continuity(flowers)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(leaf)": 36.6667,
+        "continuity(flowers)": 7.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Do the butterfly's wings show natural motion consistent with perching on the flower?",
+      "signals": [
+        "biological_motion(butterfly)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 38.33,
+      "total_score_100": 88.33,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "biological_motion(butterfly)": 38.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Do the butterfly's wings maintain consistent size and shape without sudden deformation?",
+      "signals": [
+        "continuity(butterfly)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 36.67,
+      "total_score_100": 86.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(butterfly)": 36.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Is the shadow of the butterfly on the leaf continuous and consistent with its position?",
+      "signals": [
+        "shadow_consistency(butterfly)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 36.67,
+      "total_score_100": 91.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "shadow_consistency(butterfly)": 36.6667
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "The butterfly is positioned on the flower and supported by the leaf.",
+      "signals": [
+        "support(butterfly,flower)",
+        "support(leaf,flower)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "support(butterfly,flower)": 35.0,
+        "support(leaf,flower)": 7.0
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "The leaves and flowers remain stationary in their positions with no unexpected movement.",
+      "signals": [
+        "continuity(leaf)",
+        "continuity(flowers)"
+      ],
+      "content_score_60": 35,
+      "signal_score_40": 40.0,
+      "total_score_100": 75.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(leaf)": 36.6667,
+        "continuity(flowers)": 7.3333
+      },
+      "content_score_raw": "35"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "The butterfly's wings are positioned naturally for perching on the flower, showing natural motion.",
+      "signals": [
+        "biological_motion(butterfly)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 38.33,
+      "total_score_100": 88.33,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "biological_motion(butterfly)": 38.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "The butterfly's wings maintain consistent size and shape without sudden deformation.",
+      "signals": [
+        "continuity(butterfly)"
+      ],
+      "content_score_60": 30,
+      "signal_score_40": 36.67,
+      "total_score_100": 66.67,
+      "duplicate_penalized": true,
+      "signal_detail": {
+        "continuity(butterfly)": 36.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "The shadow of the butterfly on the leaf is continuous and consistent with its position.",
+      "signals": [
+        "shadow_consistency(butterfly)"
+      ],
+      "content_score_60": 30,
+      "signal_score_40": 36.67,
+      "total_score_100": 66.67,
+      "duplicate_penalized": true,
+      "signal_detail": {
+        "shadow_consistency(butterfly)": 36.6667
+      },
+      "content_score_raw": "50"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "v5",
+    "a1",
+    "a3"
+  ]
+}

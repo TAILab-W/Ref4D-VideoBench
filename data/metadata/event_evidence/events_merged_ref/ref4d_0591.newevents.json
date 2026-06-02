@@ -1,0 +1,65 @@
+{
+  "events": [
+    {
+      "id": "m0001",
+      "s": 0.0,
+      "e": 0.3125,
+      "dur": 0.3125,
+      "members": [
+        "e0001#2"
+      ],
+      "text": "truck stops",
+      "s_abs": 0.0,
+      "e_abs": 2.6666666666666665,
+      "dur_abs": 2.6666666666666665
+    },
+    {
+      "id": "m0002",
+      "s": 0.0,
+      "e": 1.0,
+      "dur": 1.0,
+      "members": [
+        "e0001#1",
+        "e0002#1",
+        "e0003#1",
+        "e0003#2"
+      ],
+      "text": "truck reverse into garage",
+      "s_abs": 0.0,
+      "e_abs": 8.533333333333333,
+      "dur_abs": 8.533333333333333
+    },
+    {
+      "id": "m0003",
+      "s": 0.3125,
+      "e": 0.91015625,
+      "dur": 0.59765625,
+      "members": [
+        "e0002#2"
+      ],
+      "text": "truck drives away",
+      "s_abs": 2.6666666666666665,
+      "e_abs": 7.766666666666667,
+      "dur_abs": 5.1
+    }
+  ],
+  "meta": {
+    "lane": "ref",
+    "key": "ref4d_0591",
+    "mode": "micro",
+    "merge_config": {
+      "tau_sem": 0.96,
+      "gap_abs_sec": 1.01,
+      "gap_norm_fallback": 0.1,
+      "min_duration_norm": 0.0
+    },
+    "stats": {
+      "num_input_items": 6,
+      "num_kept_items": 6,
+      "num_clusters": 3
+    },
+    "provenance": {
+      "source_hash": "5ad03c66861c"
+    }
+  }
+}

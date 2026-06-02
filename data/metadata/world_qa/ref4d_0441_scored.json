@@ -1,0 +1,215 @@
+{
+  "summary": {
+    "items": 10,
+    "enter_bank": 6,
+    "clip_range_sec": [
+      0.0,
+      5.1
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does the baby remain seated in the blue stroller?",
+      "signals": [
+        "containment(baby,stroller)",
+        "balance(baby)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "balance(baby)": 35.8333,
+        "containment(baby,stroller)": 5.8333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Are the adults maintaining a safe distance from each other?",
+      "signals": [
+        "collision-free(person1,person2)",
+        "collision-free(person1,baby)",
+        "collision-free(person2,baby)"
+      ],
+      "content_score_60": 30,
+      "signal_score_40": 32.67,
+      "total_score_100": 62.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "collision-free(person1,person2)": 23.3333,
+        "collision-free(person1,baby)": 4.6667,
+        "collision-free(person2,baby)": 4.6667
+      },
+      "content_score_raw": "30"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Is the person pushing the stroller using their hand to grasp the handle for support, and is the stroller stable with the baby supported by the seat?",
+      "signals": [
+        "tool_contact(stroller_handle,hand)",
+        "support(oA,oB)",
+        "balance(oX)",
+        "center_of_mass_over_base(oX)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "balance(oX)": 35.8333,
+        "support(oA,oB)": 7.0,
+        "center_of_mass_over_base(oX)": 6.5,
+        "tool_contact(stroller_handle,hand)": 5.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Are the child's feet visible above the footrest of the stroller?",
+      "signals": [
+        "containment(oA,oB)",
+        "friction_sliding(oA,on:oB)"
+      ],
+      "content_score_60": 40,
+      "signal_score_40": 35.83,
+      "total_score_100": 75.83,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "friction_sliding(oA,on:oB)": 30.0,
+        "containment(oA,oB)": 5.8333
+      },
+      "content_score_raw": "40"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Do the adults' hands interact naturally with their accessories or clothing?",
+      "signals": [
+        "grasp_stability(oHand,oObj)",
+        "tool_contact(oTool,oObj)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 34.0,
+      "total_score_100": 84.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "grasp_stability(oHand,oObj)": 28.3333,
+        "tool_contact(oTool,oObj)": 5.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "The baby is seated in the blue stroller, supported by the seat.",
+      "signals": [
+        "containment(baby,stroller)",
+        "balance(baby)",
+        "support(oA,oB)",
+        "balance(oX)",
+        "center_of_mass_over_base(oX)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "balance(baby)": 35.8333,
+        "balance(oX)": 7.1667,
+        "support(oA,oB)": 7.0,
+        "center_of_mass_over_base(oX)": 6.5,
+        "containment(baby,stroller)": 5.8333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "All individuals maintain a safe distance from each other to avoid collision.",
+      "signals": [
+        "collision-free(person1,person2)",
+        "collision-free(person1,baby)",
+        "collision-free(person2,baby)"
+      ],
+      "content_score_60": 30,
+      "signal_score_40": 32.67,
+      "total_score_100": 62.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "collision-free(person1,person2)": 23.3333,
+        "collision-free(person1,baby)": 4.6667,
+        "collision-free(person2,baby)": 4.6667
+      },
+      "content_score_raw": "30"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "The person pushing the stroller grasps the handle with their hand and holds accessories.",
+      "signals": [
+        "tool_contact(stroller_handle,hand)",
+        "grasp_stability(oHand,oObj)",
+        "tool_contact(oTool,oObj)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 39.67,
+      "total_score_100": 89.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "tool_contact(stroller_handle,hand)": 28.3333,
+        "grasp_stability(oHand,oObj)": 5.6667,
+        "tool_contact(oTool,oObj)": 5.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "The child's feet are visible above the footrest of the stroller.",
+      "signals": [
+        "containment(oA,oB)",
+        "friction_sliding(oA,on:oB)"
+      ],
+      "content_score_60": 24,
+      "signal_score_40": 35.83,
+      "total_score_100": 59.83,
+      "duplicate_penalized": true,
+      "signal_detail": {
+        "friction_sliding(oA,on:oB)": 30.0,
+        "containment(oA,oB)": 5.8333
+      },
+      "content_score_raw": "40"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "Shadows on the ground show consistency with light direction.",
+      "signals": [
+        "shadow_consistency(oX)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 36.67,
+      "total_score_100": 86.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "shadow_consistency(oX)": 36.6667
+      },
+      "content_score_raw": "50"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v3",
+    "v5",
+    "a1",
+    "a3",
+    "a5"
+  ]
+}

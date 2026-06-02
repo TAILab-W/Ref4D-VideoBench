@@ -1,0 +1,318 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0250.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "cv2",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "machine-part",
+        "attributes": {
+          "color": [
+            "blue",
+            "brown"
+          ],
+          "material": [
+            "metal"
+          ],
+          "size": [
+            "large"
+          ],
+          "state": [
+            "operational"
+          ],
+          "signature": [
+            "blue-metallic-surface-with-grooves-and-brown-components"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            0.8
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "cylinder",
+        "attributes": {
+          "color": [
+            "black",
+            "blue",
+            "silver"
+          ],
+          "material": [
+            "metal"
+          ],
+          "state": [
+            "moving"
+          ],
+          "signature": [
+            "silver-cylinder-with-black-rings-and-blue-hose-connection"
+          ]
+        },
+        "spans": [
+          [
+            0.4,
+            0.9
+          ]
+        ]
+      },
+      {
+        "id": "o3",
+        "name": "pipe",
+        "attributes": {
+          "color": [
+            "clear"
+          ],
+          "material": [
+            "plastic"
+          ],
+          "state": [
+            "connected"
+          ],
+          "signature": [
+            "clear-flexible-pipe-connected-to-machine-part"
+          ]
+        },
+        "spans": [
+          [
+            0.1,
+            0.7
+          ]
+        ]
+      },
+      {
+        "id": "o4",
+        "name": "wire",
+        "attributes": {
+          "color": [
+            "white"
+          ],
+          "material": [
+            "plastic"
+          ],
+          "state": [
+            "connected"
+          ],
+          "signature": [
+            "white-electrical-wire-with-connectors"
+          ]
+        },
+        "spans": [
+          [
+            0.2,
+            0.8
+          ]
+        ]
+      },
+      {
+        "id": "o5",
+        "name": "machine",
+        "attributes": {
+          "signature": [
+            "machine-coarse"
+          ]
+        },
+        "spans": [
+          [
+            5.3,
+            13.1
+          ]
+        ]
+      },
+      {
+        "id": "o6",
+        "name": "wall",
+        "attributes": {
+          "signature": [
+            "wall-coarse"
+          ]
+        },
+        "spans": [
+          [
+            5.3,
+            13.1
+          ]
+        ]
+      },
+      {
+        "id": "o7",
+        "name": "text",
+        "attributes": {
+          "signature": [
+            "text-coarse"
+          ]
+        },
+        "spans": [
+          [
+            5.3,
+            13.1
+          ]
+        ]
+      },
+      {
+        "id": "o8",
+        "name": "door",
+        "attributes": {
+          "signature": [
+            "door-coarse"
+          ]
+        },
+        "spans": [
+          [
+            5.3,
+            13.1
+          ]
+        ]
+      },
+      {
+        "id": "o9",
+        "name": "light",
+        "attributes": {
+          "signature": [
+            "light-coarse"
+          ]
+        },
+        "spans": [
+          [
+            5.3,
+            13.1
+          ]
+        ]
+      },
+      {
+        "id": "o10",
+        "name": "button",
+        "attributes": {
+          "signature": [
+            "button-coarse"
+          ]
+        },
+        "spans": [
+          [
+            5.3,
+            13.1
+          ]
+        ]
+      },
+      {
+        "id": "o11",
+        "name": "button",
+        "attributes": {
+          "signature": [
+            "button-coarse"
+          ]
+        },
+        "spans": [
+          [
+            5.3,
+            13.1
+          ]
+        ]
+      }
+    ],
+    "relations": [
+      {
+        "subject": "o1",
+        "predicate": "left-of",
+        "object": "o2",
+        "spans": [
+          [
+            0.0,
+            0.5
+          ]
+        ],
+        "confidence": 0.8
+      },
+      {
+        "subject": "o1",
+        "predicate": "left-of",
+        "object": "o3",
+        "spans": [
+          [
+            0.0,
+            0.2
+          ]
+        ],
+        "confidence": 0.8
+      },
+      {
+        "subject": "o1",
+        "predicate": "left-of",
+        "object": "o4",
+        "spans": [
+          [
+            0.0,
+            0.2
+          ],
+          [
+            0.6,
+            0.8
+          ]
+        ],
+        "confidence": 0.8
+      },
+      {
+        "subject": "o2",
+        "predicate": "above",
+        "object": "o1",
+        "spans": [
+          [
+            0.0,
+            0.4
+          ]
+        ],
+        "confidence": 0.8
+      },
+      {
+        "subject": "o3",
+        "predicate": "above",
+        "object": "o1",
+        "spans": [
+          [
+            0.0,
+            0.3
+          ]
+        ],
+        "confidence": 0.8
+      },
+      {
+        "subject": "o4",
+        "predicate": "above",
+        "object": "o1",
+        "spans": [
+          [
+            0.0,
+            0.2
+          ],
+          [
+            0.6,
+            0.8
+          ]
+        ],
+        "confidence": 0.8
+      }
+    ]
+  },
+  "views": {
+    "objects_count_display": {
+      "machine-part": 1,
+      "cylinder": 1,
+      "pipe": 1,
+      "wire": 1,
+      "machine": 1,
+      "wall": 1,
+      "text": 1,
+      "door": 1,
+      "light": 1,
+      "button": 2
+    }
+  }
+}

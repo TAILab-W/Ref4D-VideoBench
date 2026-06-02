@@ -1,0 +1,214 @@
+{
+  "summary": {
+    "items": 10,
+    "enter_bank": 9,
+    "clip_range_sec": [
+      0.0,
+      6.93
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does player_7 throw the ball towards the goal without colliding with other players?",
+      "signals": [
+        "trajectory_dir(player_7,axis)",
+        "balance(player_5)",
+        "friction_sliding(player_7,on:floor)",
+        "collision(player_7,player_5)"
+      ],
+      "content_score_60": 58,
+      "signal_score_40": 40.0,
+      "total_score_100": 98.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(player_7,axis)": 38.3333,
+        "balance(player_5)": 7.1667,
+        "collision(player_7,player_5)": 6.3333,
+        "friction_sliding(player_7,on:floor)": 6.0
+      },
+      "content_score_raw": "58"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Does the ball follow a continuous trajectory under gravity after being hit by player_7?",
+      "signals": [
+        "support(floor,ball)",
+        "trajectory_dir(oX,axis)",
+        "accel_sign(oX,axis)",
+        "continuity(oX)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(oX,axis)": 38.3333,
+        "continuity(oX)": 7.3333,
+        "support(floor,ball)": 7.0,
+        "accel_sign(oX,axis)": 7.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Is the net part of the goal designed to catch the ball when it enters?",
+      "signals": [
+        "goal_placement(oObj,at:oTarget)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 26.67,
+      "total_score_100": 86.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "goal_placement(oObj,at:oTarget)": 26.6667
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Do spectators in the red seats maintain safe distances from the active play area?",
+      "signals": [
+        "collision(oA,oB)",
+        "friction_sliding(oA,on:oB)",
+        "collision_avoidance"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "collision(oA,oB)": 31.6667,
+        "friction_sliding(oA,on:oB)": 6.0,
+        "collision_avoidance": 4.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Does the text 'GOOOOOL' appear as an exclamation during the scoring event?",
+      "signals": [
+        "result_appearance(oObj)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 28.33,
+      "total_score_100": 88.33,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "result_appearance(oObj)": 28.3333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "Player 7 hits the ball towards the goal.",
+      "signals": [
+        "trajectory_dir(player_7,axis)",
+        "balance(player_5)",
+        "friction_sliding(player_7,on:floor)",
+        "support(floor,ball)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(player_7,axis)": 38.3333,
+        "balance(player_5)": 7.1667,
+        "support(floor,ball)": 7.0,
+        "friction_sliding(player_7,on:floor)": 6.0
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "The player's action is an attempt to score, aiming for the goal.",
+      "signals": [
+        "action_phase(oAct,phase)",
+        "step_order(prev:task,next:task)",
+        "goal_placement(oObj,at:oTarget)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 37.33,
+      "total_score_100": 97.33,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "action_phase(oAct,phase)": 26.6667,
+        "step_order(prev:task,next:task)": 5.3333,
+        "goal_placement(oObj,at:oTarget)": 5.3333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "The text 'GOOOOOL' with a flame emoji appears on the screen.",
+      "signals": [
+        "result_appearance(oObj)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 28.33,
+      "total_score_100": 88.33,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "result_appearance(oObj)": 28.3333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "The ball follows a continuous trajectory under gravity into the goal.",
+      "signals": [
+        "trajectory_dir(oX,axis)",
+        "accel_sign(oX,axis)",
+        "continuity(oX)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(oX,axis)": 38.3333,
+        "continuity(oX)": 7.3333,
+        "accel_sign(oX,axis)": 7.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "Players avoid collisions in the playing area.",
+      "signals": [
+        "collision_avoidance"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 23.33,
+      "total_score_100": 73.33,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "collision_avoidance": 23.3333
+      },
+      "content_score_raw": "50"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "v5",
+    "a1",
+    "a2",
+    "a3",
+    "a4"
+  ]
+}

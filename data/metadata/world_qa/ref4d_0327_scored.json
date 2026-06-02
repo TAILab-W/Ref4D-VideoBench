@@ -1,0 +1,206 @@
+{
+  "summary": {
+    "items": 10,
+    "enter_bank": 9,
+    "clip_range_sec": [
+      0.0,
+      8.4
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does the bird fly above the water without violating natural flight patterns?",
+      "signals": [
+        "trajectory_dir(bird,axis)",
+        "buoyancy_float(boat,in:water)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(bird,axis)": 38.3333,
+        "buoyancy_float(boat,in:water)": 6.8333
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Do the small red boats float on the water surface without sinking?",
+      "signals": [
+        "buoyancy_float(boat,in:water)",
+        "center_of_mass_over_base(boat)",
+        "buoyancy_float(vessel,in:water)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "buoyancy_float(boat,in:water)": 34.1667,
+        "buoyancy_float(vessel,in:water)": 6.8333,
+        "center_of_mass_over_base(boat)": 6.5
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Does the flying bird maintain a consistent vertical trajectory direction and acceleration sign throughout its motion?",
+      "signals": [
+        "trajectory_dir(bird,axis:vertical),accel_sign(bird,axis:vertical)",
+        "buoyancy_float(boat,in:water)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(bird,axis:vertical),accel_sign(bird,axis:vertical)": 38.3333,
+        "buoyancy_float(boat,in:water)": 6.8333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Are the size and material optics of the small red boats appropriate for real-world vessels, with continuous water surface around them?",
+      "signals": [
+        "size_inconsistency(boat),material_optics(boat)",
+        "continuity(water surface)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "size_inconsistency(boat),material_optics(boat)": 37.5,
+        "continuity(water surface)": 7.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Do the shadows cast by objects in the scene align consistently with their positions relative to the light source?",
+      "signals": [
+        "shadow_consistency(object,shadow)",
+        "falling_hazard(structure)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "shadow_consistency(object,shadow)": 36.6667,
+        "falling_hazard(structure)": 6.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "A bird flies above the water, maintaining natural flight patterns.",
+      "signals": [
+        "trajectory_dir(bird,axis)",
+        "buoyancy_float(boat,in:water)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(bird,axis)": 38.3333,
+        "buoyancy_float(boat,in:water)": 6.8333
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "Small red boats float on the water surface without sinking.",
+      "signals": [
+        "buoyancy_float(boat,in:water)",
+        "center_of_mass_over_base(boat)",
+        "buoyancy_float(vessel,in:water)"
+      ],
+      "content_score_60": 30,
+      "signal_score_40": 40.0,
+      "total_score_100": 70.0,
+      "duplicate_penalized": true,
+      "signal_detail": {
+        "buoyancy_float(boat,in:water)": 34.1667,
+        "buoyancy_float(vessel,in:water)": 6.8333,
+        "center_of_mass_over_base(boat)": 6.5
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "The water surface remains continuous and smooth throughout the video.",
+      "signals": [
+        "trajectory_dir(bird,axis:vertical),accel_sign(bird,axis:vertical)",
+        "continuity(water surface)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(bird,axis:vertical),accel_sign(bird,axis:vertical)": 38.3333,
+        "continuity(water surface)": 7.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "Shadows of objects align with their positions relative to the light source direction.",
+      "signals": [
+        "size_inconsistency(boat),material_optics(boat)",
+        "shadow_consistency(object,shadow)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "size_inconsistency(boat),material_optics(boat)": 37.5,
+        "shadow_consistency(object,shadow)": 7.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "No unexpected collisions or interpenetrations occur between any objects.",
+      "signals": [
+        "collision(boat,boat),interpenetration(boat,boat)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 31.67,
+      "total_score_100": 81.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "collision(boat,boat),interpenetration(boat,boat)": 31.6667
+      },
+      "content_score_raw": "50"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "v5",
+    "a1",
+    "a3",
+    "a4",
+    "a5"
+  ]
+}

@@ -1,0 +1,83 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0341.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "decord",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "person",
+        "attributes": {
+          "clothing": [
+            "black-hoodie",
+            "white-pants"
+          ],
+          "action": [
+            "adjusting-hair",
+            "sitting"
+          ],
+          "pose": [
+            "sitting-on-rock"
+          ],
+          "signature": [
+            "black-hoodie-white-pants-right-side"
+          ]
+        },
+        "spans": [
+          [
+            0.5,
+            0.8
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "group",
+        "attributes": {
+          "clothing": [
+            "white-cloak"
+          ],
+          "action": [
+            "standing",
+            "walking"
+          ],
+          "signature": [
+            "multiple-people-in-white-cloaks"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            0.7
+          ]
+        ]
+      }
+    ],
+    "relations": [
+      {
+        "subject": "o2",
+        "predicate": "in-front-of",
+        "object": "o1",
+        "spans": [
+          [
+            0.0,
+            0.8
+          ]
+        ],
+        "confidence": 0.8
+      }
+    ]
+  },
+  "views": {
+    "objects_count_display": {
+      "person": 1,
+      "group": 1
+    }
+  }
+}

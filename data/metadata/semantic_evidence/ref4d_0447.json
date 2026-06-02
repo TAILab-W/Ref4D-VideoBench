@@ -1,0 +1,98 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0447.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "decord",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "person",
+        "attributes": {
+          "signature": [
+            "person-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            7.3
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "person",
+        "attributes": {
+          "signature": [
+            "person-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            7.3
+          ]
+        ]
+      },
+      {
+        "id": "o3",
+        "name": "person",
+        "attributes": {
+          "signature": [
+            "person-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            7.3
+          ]
+        ]
+      },
+      {
+        "id": "o4",
+        "name": "doll",
+        "attributes": {
+          "signature": [
+            "doll-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            7.3
+          ]
+        ]
+      },
+      {
+        "id": "o5",
+        "name": "stool",
+        "attributes": {
+          "signature": [
+            "stool-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            7.3
+          ]
+        ]
+      }
+    ],
+    "relations": []
+  },
+  "views": {
+    "objects_count_display": {
+      "person": 3,
+      "doll": 1,
+      "stool": 1
+    }
+  }
+}

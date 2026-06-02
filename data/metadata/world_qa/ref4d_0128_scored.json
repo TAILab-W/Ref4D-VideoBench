@@ -1,0 +1,184 @@
+{
+  "summary": {
+    "items": 10,
+    "enter_bank": 9,
+    "clip_range_sec": [
+      0.0,
+      6.03
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does the text_korean object remain in its designated position without sudden disappearance?",
+      "signals": [
+        "continuity(text_korean)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 36.67,
+      "total_score_100": 86.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(text_korean)": 36.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Does the water reflect surrounding trees and sky consistently throughout the clip?",
+      "signals": [
+        "continuity(water)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 36.67,
+      "total_score_100": 86.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(water)": 36.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Do shadows cast by objects near the top of the frame align with their light sources, not contradicting object positions?",
+      "signals": [
+        "shadow_consistency(shadow)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 36.67,
+      "total_score_100": 86.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "shadow_consistency(shadow)": 36.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Do tree leaves on branches above the frame show natural movement or remain static without interpenetration?",
+      "signals": [
+        "interpenetration(leaves)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 35.83,
+      "total_score_100": 95.83,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "interpenetration(leaves)": 35.8333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Do all objects maintain consistent size and position without sudden changes across the entire clip?",
+      "signals": [
+        "continuity(text_korean)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 36.67,
+      "total_score_100": 96.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(text_korean)": 36.6667
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "The text_korean object remains in its designated position without sudden disappearance.",
+      "signals": [
+        "continuity(text_korean)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 36.67,
+      "total_score_100": 86.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(text_korean)": 36.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "Water in the lake reflects surrounding trees and sky consistently.",
+      "signals": [
+        "continuity(water)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 36.67,
+      "total_score_100": 96.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(water)": 36.6667
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "Tree leaves on branches above the frame remain static.",
+      "signals": [
+        "interpenetration(leaves)"
+      ],
+      "content_score_60": 0,
+      "signal_score_40": 35.83,
+      "total_score_100": 35.83,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "interpenetration(leaves)": 35.8333
+      },
+      "content_score_raw": "0"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "All objects maintain consistent size and position without sudden changes.",
+      "signals": [
+        "continuity(text_korean)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 36.67,
+      "total_score_100": 96.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(text_korean)": 36.6667
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "Text elements appear with consistent size and position relative to each other.",
+      "signals": [
+        "size_inconsistency(text)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 37.5,
+      "total_score_100": 97.5,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "size_inconsistency(text)": 37.5
+      },
+      "content_score_raw": "60"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "v5",
+    "a1",
+    "a2",
+    "a4",
+    "a5"
+  ]
+}

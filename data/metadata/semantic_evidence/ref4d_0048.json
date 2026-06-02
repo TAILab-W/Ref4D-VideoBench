@@ -1,0 +1,152 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0048.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "cv2",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "kangaroo",
+        "attributes": {
+          "color": [
+            "brown",
+            "gray"
+          ],
+          "texture": [
+            "fur"
+          ],
+          "size": [
+            "large"
+          ],
+          "age": [
+            "young"
+          ],
+          "sex": [
+            "male"
+          ],
+          "state": [
+            "alert",
+            "calm"
+          ],
+          "pose": [
+            "sitting",
+            "standing"
+          ],
+          "action": [
+            "being-held",
+            "looking-around"
+          ],
+          "orientation": [
+            "facing-forward",
+            "facing-left",
+            "facing-right"
+          ],
+          "facing-direction": [
+            "forward",
+            "left",
+            "right"
+          ],
+          "position": [
+            "center",
+            "foreground"
+          ],
+          "object-part": [
+            "body",
+            "ears",
+            "head",
+            "paws"
+          ],
+          "signature": [
+            "gray-brown-fur-tall-ears"
+          ]
+        },
+        "spans": [
+          [
+            0.2,
+            5.8
+          ],
+          [
+            6.7,
+            8.7
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "person",
+        "attributes": {
+          "color": [
+            "dark-gray"
+          ],
+          "action": [
+            "holding",
+            "petting"
+          ],
+          "position": [
+            "background",
+            "holding-kangaroo"
+          ],
+          "signature": [
+            "dark-jacket-hands"
+          ]
+        },
+        "spans": [
+          [
+            0.2,
+            5.8
+          ],
+          [
+            6.7,
+            8.7
+          ]
+        ]
+      }
+    ],
+    "relations": [
+      {
+        "subject": "o2",
+        "predicate": "holding",
+        "object": "o1",
+        "spans": [
+          [
+            0.2,
+            5.8
+          ],
+          [
+            6.7,
+            8.7
+          ]
+        ],
+        "confidence": 0.9
+      },
+      {
+        "subject": "o1",
+        "predicate": "looking-at",
+        "object": "o2",
+        "spans": [
+          [
+            0.2,
+            5.8
+          ],
+          [
+            6.7,
+            8.7
+          ]
+        ],
+        "confidence": 0.8
+      }
+    ]
+  },
+  "views": {
+    "objects_count_display": {
+      "kangaroo": 1,
+      "person": 1
+    }
+  }
+}

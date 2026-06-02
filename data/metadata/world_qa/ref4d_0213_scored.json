@@ -1,0 +1,194 @@
+{
+  "summary": {
+    "items": 10,
+    "enter_bank": 9,
+    "clip_range_sec": [
+      0.0,
+      4.33
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does the honey flow smoothly from the bottle into the bowl?",
+      "signals": [
+        "pour_direction(honey,axis)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 28.33,
+      "total_score_100": 83.33,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "pour_direction(honey,axis)": 28.3333
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Is the lit candle stable and kept away from flammable items like paper or fabric on the table?",
+      "signals": [
+        "balance(candle)",
+        "friction_sliding(candle,on:holder)",
+        "flame_proximity(candle,dist)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "balance(candle)": 35.8333,
+        "flame_proximity(candle,dist)": 6.8333,
+        "friction_sliding(candle,on:holder)": 6.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Are the lit candles placed at a safe distance from other objects to prevent fire hazards?",
+      "signals": [
+        "flame_proximity(oObj,dist)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 34.17,
+      "total_score_100": 84.17,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "flame_proximity(oObj,dist)": 34.1667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Does the liquid (honey) follow a downward trajectory due to gravity as it is poured onto the cereal?",
+      "signals": [
+        "trajectory_dir(oX,axis)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 38.33,
+      "total_score_100": 93.33,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(oX,axis)": 38.3333
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Does the text overlay appear clearly in the center of the frame?",
+      "signals": [
+        "_default"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 23.33,
+      "total_score_100": 78.33,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "_default": 23.3333
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "Honey flows downward from the bottle into the bowl due to gravity.",
+      "signals": [
+        "trajectory_dir(oX,axis)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 38.33,
+      "total_score_100": 93.33,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(oX,axis)": 38.3333
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "The lit candle in the glass holder remains stable and does not move.",
+      "signals": [
+        "pour_direction(honey,axis)",
+        "balance(candle)",
+        "friction_sliding(candle,on:holder)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "balance(candle)": 35.8333,
+        "friction_sliding(candle,on:holder)": 6.0,
+        "pour_direction(honey,axis)": 5.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "The lit candles are placed on a table away from flammable items.",
+      "signals": [
+        "flame_proximity(oObj,dist)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 34.17,
+      "total_score_100": 84.17,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "flame_proximity(oObj,dist)": 34.1667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "The glass candle holder is positioned at a safe distance from the bowl of cereal.",
+      "signals": [
+        "flame_proximity(candle,dist)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 34.17,
+      "total_score_100": 84.17,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "flame_proximity(candle,dist)": 34.1667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "The surface of the lit candle in the glass holder does not show signs of sudden movement.",
+      "signals": [
+        "balance(candle)",
+        "friction_sliding(candle,on:holder)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "balance(candle)": 35.8333,
+        "friction_sliding(candle,on:holder)": 6.0
+      },
+      "content_score_raw": "50"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "a1",
+    "a2",
+    "a3",
+    "a4",
+    "a5"
+  ]
+}

@@ -1,0 +1,217 @@
+{
+  "summary": {
+    "items": 10,
+    "enter_bank": 10,
+    "clip_range_sec": [
+      0.0,
+      18.17
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does the road remain clear and continuous for vehicle travel?",
+      "signals": [
+        "continuity(mountain)",
+        "frame_discontinuity(t)",
+        "trajectory_dir(road,axis)",
+        "accel_sign(vehicles,axis)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "frame_discontinuity(t)": 40.0,
+        "trajectory_dir(road,axis)": 7.6667,
+        "continuity(mountain)": 7.3333,
+        "accel_sign(vehicles,axis)": 7.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Do rocks stay on their respective surfaces without floating or sudden movement?",
+      "signals": [
+        "support(rock,mountain)",
+        "containment(bush,road)",
+        "continuity(rock)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(rock)": 36.6667,
+        "support(rock,mountain)": 7.0,
+        "containment(bush,road)": 5.8333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Do shadows of rocks align consistently with their shapes and light source direction?",
+      "signals": [
+        "shadow_consistency(rock)",
+        "shadow_consistency(oX)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "shadow_consistency(rock)": 36.6667,
+        "shadow_consistency(oX)": 7.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Does the snow-capped peak maintain a stable size and tilt angle throughout?",
+      "signals": [
+        "size_inconsistency(mountain)",
+        "tilt_angle_threshold(mountain,deg)",
+        "material_optics(mountain)",
+        "hue_histogram_jump(mountain)",
+        "continuity(mountain)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "size_inconsistency(mountain)": 37.5,
+        "material_optics(mountain)": 7.5,
+        "continuity(mountain)": 7.3333,
+        "tilt_angle_threshold(mountain,deg)": 7.1667,
+        "hue_histogram_jump(mountain)": 6.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Are there no falling hazards from steep slopes in the video?",
+      "signals": [
+        "falling_hazard(rock)",
+        "falling_hazard(bush)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 38.0,
+      "total_score_100": 88.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "falling_hazard(rock)": 31.6667,
+        "falling_hazard(bush)": 6.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "The road and surrounding rocks maintain consistent size and position throughout the video.",
+      "signals": [
+        "continuity(mountain)",
+        "frame_discontinuity(t)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "frame_discontinuity(t)": 40.0,
+        "continuity(mountain)": 7.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "Bushes remain on the mountain slope without sudden movement or displacement.",
+      "signals": [
+        "continuity(rock)",
+        "interpenetration(bush,rock)",
+        "frame_discontinuity(t)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "frame_discontinuity(t)": 40.0,
+        "continuity(rock)": 7.3333,
+        "interpenetration(bush,rock)": 7.1667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "Shadows cast by bushes align with their physical forms and light source direction.",
+      "signals": [
+        "shadow_consistency(rock)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 36.67,
+      "total_score_100": 86.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "shadow_consistency(rock)": 36.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "Rocks stay on their respective surfaces without interpenetration or floating.",
+      "signals": [
+        "support(rock,mountain)",
+        "containment(bush,road)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "support(rock,mountain)": 35.0,
+        "containment(bush,road)": 5.8333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "The narrow, winding road is clear of obstructions.",
+      "signals": [
+        "support(road,ground)",
+        "friction_sliding(vehicles,on:road)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "support(road,ground)": 35.0,
+        "friction_sliding(vehicles,on:road)": 6.0
+      },
+      "content_score_raw": "50"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "v5",
+    "a1",
+    "a2",
+    "a3",
+    "a4",
+    "a5"
+  ]
+}

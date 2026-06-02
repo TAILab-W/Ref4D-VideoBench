@@ -1,0 +1,211 @@
+{
+  "summary": {
+    "items": 10,
+    "enter_bank": 8,
+    "clip_range_sec": [
+      0.0,
+      7.5
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Are the dancers positioned safely away from vehicular traffic?",
+      "signals": [
+        "support(oA,oB)",
+        "wheel_rolling(oX)",
+        "shadow_consistency(oX)",
+        "friction_sliding(performers,on:ground)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "shadow_consistency(oX)": 36.6667,
+        "support(oA,oB)": 7.0,
+        "wheel_rolling(oX)": 6.0,
+        "friction_sliding(performers,on:ground)": 6.0
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Do the dancers' movements maintain balance and physical continuity throughout the sequence?",
+      "signals": [
+        "continuity(dancers)",
+        "continuity(dancers' postures)",
+        "balance(dancers)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(dancers)": 36.6667,
+        "continuity(dancers' postures)": 7.3333,
+        "balance(dancers)": 7.1667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Do the shadows of the dancers on the ground match their positions consistently with the lighting?",
+      "signals": [
+        "shadow_consistency(dancers)",
+        "shadow_consistency(performers' shadows)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "shadow_consistency(dancers)": 36.6667,
+        "shadow_consistency(performers' shadows)": 7.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Are the long skirts worn by the dancers appropriate for fluid movement in a dance performance?",
+      "signals": [
+        "biological_motion(dancers)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 38.33,
+      "total_score_100": 88.33,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "biological_motion(dancers)": 38.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Is there any risk of collision between the performers and passing cars or pedestrians?",
+      "signals": [
+        "collision-free(performers & vehicles)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 23.33,
+      "total_score_100": 73.33,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "collision-free(performers & vehicles)": 23.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "Cars are parked on the street near the dancers.",
+      "signals": [
+        "support(oA,oB)",
+        "wheel_rolling(oX)",
+        "shadow_consistency(oX)",
+        "friction_sliding(performers,on:ground)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "shadow_consistency(oX)": 36.6667,
+        "support(oA,oB)": 7.0,
+        "wheel_rolling(oX)": 6.0,
+        "friction_sliding(performers,on:ground)": 6.0
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "The dancers' arms and legs move in continuous, smooth trajectories during the dance.",
+      "signals": [
+        "trajectory_dir(oX,axis)",
+        "continuity(oX)",
+        "continuity(dancers)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(oX,axis)": 38.3333,
+        "continuity(oX)": 7.3333,
+        "continuity(dancers)": 7.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "The long skirts allow fluid movement for traditional dance performance without abrupt posture changes.",
+      "signals": [
+        "biological_motion(dancers)",
+        "continuity(dancers' postures)",
+        "balance(dancers)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "biological_motion(dancers)": 38.3333,
+        "continuity(dancers' postures)": 7.3333,
+        "balance(dancers)": 7.1667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "Shadows of the dancers match their positions under consistent lighting conditions.",
+      "signals": [
+        "shadow_consistency(dancers)",
+        "shadow_consistency(performers' shadows)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "shadow_consistency(dancers)": 36.6667,
+        "shadow_consistency(performers' shadows)": 7.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "Dancers perform safely away from vehicular traffic to avoid collisions.",
+      "signals": [
+        "collision-free(performers & vehicles)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 23.33,
+      "total_score_100": 73.33,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "collision-free(performers & vehicles)": 23.3333
+      },
+      "content_score_raw": "50"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "a1",
+    "a2",
+    "a3",
+    "a4"
+  ]
+}

@@ -1,0 +1,246 @@
+{
+  "summary": {
+    "items": 10,
+    "enter_bank": 9,
+    "clip_range_sec": [
+      0.0,
+      5.63
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does the shadow of the lemon wedge on the plate align with its position and light source direction?",
+      "signals": [
+        "support(plate,table)",
+        "continuity(food)",
+        "friction_sliding(food,on:plate)",
+        "shadow_consistency(lemon wedge)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(food)": 36.6667,
+        "shadow_consistency(lemon wedge)": 7.3333,
+        "support(plate,table)": 7.0,
+        "friction_sliding(food,on:plate)": 6.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Is the fried fish in contact with a hot surface as expected for this dish?",
+      "signals": [
+        "hot_surface_contact(fried fish,batter coating)"
+      ],
+      "content_score_60": 40,
+      "signal_score_40": 34.17,
+      "total_score_100": 74.17,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "hot_surface_contact(fried fish,batter coating)": 34.1667
+      },
+      "content_score_raw": "40"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Do the food items on the plates remain in their respective positions without sudden movement or interpenetration?",
+      "signals": [
+        "support(oA,oB)",
+        "balance(oX)",
+        "continuity(oX)",
+        "friction_sliding(oA,on:oB)",
+        "support(plate,table)",
+        "containment(fish,on:plate)",
+        "containment(fries,on:plate)",
+        "balance(plate)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(oX)": 36.6667,
+        "balance(oX)": 7.1667,
+        "balance(plate)": 7.1667,
+        "support(oA,oB)": 7.0,
+        "support(plate,table)": 7.0,
+        "friction_sliding(oA,on:oB)": 6.0,
+        "containment(fish,on:plate)": 5.8333,
+        "containment(fries,on:plate)": 5.8333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Are the shadows of the objects on the white tray consistent with their actual positions and light source direction?",
+      "signals": [
+        "shadow_consistency(lemon,plate)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 36.67,
+      "total_score_100": 86.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "shadow_consistency(lemon,plate)": 36.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Does the mashed potato stay supported by the plate without floating?",
+      "signals": [
+        "support(plate,table)",
+        "continuity(food)",
+        "friction_sliding(food,on:plate)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(food)": 36.6667,
+        "support(plate,table)": 7.0,
+        "friction_sliding(food,on:plate)": 6.0
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "The food items on the plate remain in their respective positions without sudden movement.",
+      "signals": [
+        "support(oA,oB)",
+        "balance(oX)",
+        "continuity(oX)",
+        "friction_sliding(oA,on:oB)",
+        "support(plate,table)",
+        "continuity(food)",
+        "friction_sliding(food,on:plate)",
+        "containment(fish,on:plate)",
+        "containment(fries,on:plate)",
+        "balance(plate)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(oX)": 36.6667,
+        "continuity(food)": 7.3333,
+        "balance(oX)": 7.1667,
+        "balance(plate)": 7.1667,
+        "support(oA,oB)": 7.0,
+        "support(plate,table)": 7.0,
+        "friction_sliding(oA,on:oB)": 6.0,
+        "friction_sliding(food,on:plate)": 6.0,
+        "containment(fish,on:plate)": 5.8333,
+        "containment(fries,on:plate)": 5.8333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "The shadow of the lemon wedge aligns with its position and light source direction.",
+      "signals": [
+        "shadow_consistency(lemon wedge)",
+        "shadow_consistency(lemon,plate)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "shadow_consistency(lemon wedge)": 36.6667,
+        "shadow_consistency(lemon,plate)": 7.3333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "The fried fish has a batter coating, indicating hot surface contact.",
+      "signals": [
+        "hot_surface_contact(fried fish,batter coating)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 34.17,
+      "total_score_100": 94.17,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "hot_surface_contact(fried fish,batter coating)": 34.1667
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "The peas on the plate do not interpenetrate with other food items.",
+      "signals": [
+        "support(oA,oB)",
+        "balance(oX)",
+        "continuity(oX)",
+        "friction_sliding(oA,on:oB)",
+        "support(plate,table)",
+        "continuity(food)",
+        "friction_sliding(food,on:plate)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(oX)": 36.6667,
+        "continuity(food)": 7.3333,
+        "balance(oX)": 7.1667,
+        "support(oA,oB)": 7.0,
+        "support(plate,table)": 7.0,
+        "friction_sliding(oA,on:oB)": 6.0,
+        "friction_sliding(food,on:plate)": 6.0
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "The French fries remain in place without sudden movement.",
+      "signals": [
+        "support(plate,table)",
+        "containment(fish,on:plate)",
+        "containment(fries,on:plate)",
+        "balance(plate)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "balance(plate)": 35.8333,
+        "support(plate,table)": 7.0,
+        "containment(fish,on:plate)": 5.8333,
+        "containment(fries,on:plate)": 5.8333
+      },
+      "content_score_raw": "60"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v3",
+    "v4",
+    "v5",
+    "a1",
+    "a2",
+    "a3",
+    "a4",
+    "a5"
+  ]
+}

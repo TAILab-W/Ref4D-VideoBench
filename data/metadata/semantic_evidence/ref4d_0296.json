@@ -1,0 +1,52 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0296.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "cv2",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "tree",
+        "attributes": {
+          "signature": [
+            "green-vegetation"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            2.9
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "mountain",
+        "attributes": {
+          "signature": [
+            "distant-landform"
+          ]
+        },
+        "spans": [
+          [
+            0.1,
+            2.9
+          ]
+        ]
+      }
+    ],
+    "relations": []
+  },
+  "views": {
+    "objects_count_display": {
+      "tree": 1,
+      "mountain": 1
+    }
+  }
+}

@@ -1,0 +1,195 @@
+{
+  "summary": {
+    "items": 10,
+    "enter_bank": 8,
+    "clip_range_sec": [
+      0.0,
+      6.9
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does the black wireless router rotate 360 degrees without abrupt size changes?",
+      "signals": [
+        "size_inconsistency(router)",
+        "deformation(router)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "deformation(router)": 40.0,
+        "size_inconsistency(router)": 7.5
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Does the router's center of mass stay over its base during rotation?",
+      "signals": [
+        "center_of_mass_over_base(router)"
+      ],
+      "content_score_60": 40,
+      "signal_score_40": 32.5,
+      "total_score_100": 72.5,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "center_of_mass_over_base(router)": 32.5
+      },
+      "content_score_raw": "40"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Is the text 'From IDEA to INDUSTRY' static and centered at the top throughout?",
+      "signals": [
+        "continuity(text-'from-idea-to-industry')"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 36.67,
+      "total_score_100": 91.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(text-'from-idea-to-industry')": 36.6667
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Do the vents and ports on the router show consistent material optics and shadows with their shapes?",
+      "signals": [
+        "material_optics",
+        "shadow_consistency"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "material_optics": 37.5,
+        "shadow_consistency": 7.3333
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Does the phrase 'From IDEA to INDUSTRY' indicate a progression from concept to production?",
+      "signals": [
+        "goal_placement"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 26.67,
+      "total_score_100": 76.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "goal_placement": 26.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "The black wireless router with four antennas rotates 360 degrees without abrupt size or shape changes.",
+      "signals": [
+        "size_inconsistency(router)",
+        "deformation(router)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "deformation(router)": 40.0,
+        "size_inconsistency(router)": 7.5
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "The router's center of mass remains over its base during rotation to maintain balance.",
+      "signals": [
+        "center_of_mass_over_base(router)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 32.5,
+      "total_score_100": 92.5,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "center_of_mass_over_base(router)": 32.5
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "The text 'From IDEA to INDUSTRY' at the top center is static and does not move.",
+      "signals": [
+        "continuity(text-'from-idea-to-industry')"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 36.67,
+      "total_score_100": 86.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(text-'from-idea-to-industry')": 36.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "The router's structure supports antennas without deformation or interpenetration.",
+      "signals": [
+        "support",
+        "deformation",
+        "interpenetration"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "deformation": 40.0,
+        "interpenetration": 7.1667,
+        "support": 7.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "The vents and ports on the router exhibit consistent material optics and shadows.",
+      "signals": [
+        "material_optics",
+        "shadow_consistency"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "material_optics": 37.5,
+        "shadow_consistency": 7.3333
+      },
+      "content_score_raw": "50"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v3",
+    "v4",
+    "a1",
+    "a2",
+    "a3",
+    "a4",
+    "a5"
+  ]
+}

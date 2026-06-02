@@ -1,0 +1,99 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0425.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "decord",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "person",
+        "attributes": {
+          "signature": [
+            "person-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            7.5
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "person",
+        "attributes": {
+          "signature": [
+            "person-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            7.5
+          ]
+        ]
+      },
+      {
+        "id": "o3",
+        "name": "child",
+        "attributes": {
+          "signature": [
+            "child-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            7.5
+          ]
+        ]
+      },
+      {
+        "id": "o4",
+        "name": "store",
+        "attributes": {
+          "signature": [
+            "store-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            7.5
+          ]
+        ]
+      },
+      {
+        "id": "o5",
+        "name": "gymnasium",
+        "attributes": {
+          "signature": [
+            "gymnasium-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            7.5
+          ]
+        ]
+      }
+    ],
+    "relations": []
+  },
+  "views": {
+    "objects_count_display": {
+      "person": 2,
+      "child": 1,
+      "store": 1,
+      "gymnasium": 1
+    }
+  }
+}

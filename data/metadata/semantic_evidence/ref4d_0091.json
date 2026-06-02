@@ -1,0 +1,84 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0091.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "cv2",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "bird",
+        "attributes": {
+          "color": [
+            "orange",
+            "pink",
+            "white",
+            "yellow"
+          ],
+          "pattern": [
+            "crest",
+            "solid",
+            "spot"
+          ],
+          "texture": [
+            "feathery",
+            "smooth"
+          ],
+          "size": [
+            "small"
+          ],
+          "age": [
+            "adult"
+          ],
+          "sex": [
+            "male"
+          ],
+          "state": [
+            "alert",
+            "perched",
+            "vocalizing"
+          ],
+          "pose": [
+            "facing-forward",
+            "looking-around",
+            "standing"
+          ],
+          "action": [
+            "calling",
+            "moving-head",
+            "sitting"
+          ],
+          "orientation": [
+            "facing-front",
+            "turning-left-right"
+          ],
+          "facing-direction": [
+            "front",
+            "left",
+            "right"
+          ],
+          "signature": [
+            "white-yellow-orange-crested-pink-footed"
+          ]
+        },
+        "spans": [
+          [
+            0.2,
+            9.9
+          ]
+        ]
+      }
+    ],
+    "relations": []
+  },
+  "views": {
+    "objects_count_display": {
+      "bird": 1
+    }
+  }
+}

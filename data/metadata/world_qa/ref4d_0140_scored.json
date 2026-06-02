@@ -1,0 +1,204 @@
+{
+  "summary": {
+    "items": 10,
+    "enter_bank": 7,
+    "clip_range_sec": [
+      0.0,
+      9.8
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does the person in a plaid dress sit on the bench without falling off?",
+      "signals": [
+        "trajectory_dir(person-walking-in-foreground,axis)",
+        "balance(person-taking-photos)",
+        "containment(person-walking-in-foreground,cathedral)",
+        "interpenetration(person-in-black-shirt-with-backpack,building)"
+      ],
+      "content_score_60": 30,
+      "signal_score_40": 40.0,
+      "total_score_100": 70.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(person-walking-in-foreground,axis)": 38.3333,
+        "balance(person-taking-photos)": 7.1667,
+        "interpenetration(person-in-black-shirt-with-backpack,building)": 7.1667,
+        "containment(person-walking-in-foreground,cathedral)": 5.8333
+      },
+      "content_score_raw": "30"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Is the cathedral stationary and not moving or deforming throughout the scene?",
+      "signals": [
+        "rigid_transform(cathedral)",
+        "deformation(cathedral)=false",
+        "trajectory_dir(person,axis)",
+        "accel_sign(person,axis)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "deformation(cathedral)=false": 40.0,
+        "trajectory_dir(person,axis)": 7.6667,
+        "rigid_transform(cathedral)": 7.5,
+        "accel_sign(person,axis)": 7.0
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Does the text 'LIKE & SUBSCRIBE' remain visible at the top of the frame across the clip?",
+      "signals": [
+        "frame_discontinuity(t)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "frame_discontinuity(t)": 40.0
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Are people near the steps avoiding any dangerous positions that could cause them to fall?",
+      "signals": [
+        "falling_hazard(person-walking-in-foreground)",
+        "falling_hazard(person-sitting-on-bench)"
+      ],
+      "content_score_60": 30,
+      "signal_score_40": 38.0,
+      "total_score_100": 68.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "falling_hazard(person-walking-in-foreground)": 31.6667,
+        "falling_hazard(person-sitting-on-bench)": 6.3333
+      },
+      "content_score_raw": "30"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Does the flagpole maintain a consistent height relative to the buildings around it?",
+      "signals": [
+        "size_inconsistency(flagpole)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 37.5,
+      "total_score_100": 97.5,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "size_inconsistency(flagpole)": 37.5
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "People walk and sit in the public square without sudden disappearance or merging.",
+      "signals": [
+        "continuity(person-walking-in-foreground)",
+        "continuity(person-sitting-on-bench)",
+        "continuity(person-taking-photos)",
+        "continuity(person-in-black-shirt-with-backpack)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(person-walking-in-foreground)": 36.6667,
+        "continuity(person-sitting-on-bench)": 7.3333,
+        "continuity(person-taking-photos)": 7.3333,
+        "continuity(person-in-black-shirt-with-backpack)": 7.3333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "The cathedral remains stationary with no material deformation or unexpected movement.",
+      "signals": [
+        "rigid_transform(cathedral)",
+        "deformation(cathedral)=false"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "deformation(cathedral)=false": 40.0,
+        "rigid_transform(cathedral)": 7.5
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "The bench provides support for individuals to sit on, as observed by the person in plaid dress.",
+      "signals": [
+        "support(person-sitting-on-bench, bench)"
+      ],
+      "content_score_60": 30,
+      "signal_score_40": 35.0,
+      "total_score_100": 65.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "support(person-sitting-on-bench, bench)": 35.0
+      },
+      "content_score_raw": "30"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "The text 'LIKE & SUBSCRIBE' remains in place without sudden disappearance or movement.",
+      "signals": [
+        "frame_discontinuity(t)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "frame_discontinuity(t)": 40.0
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "The shadow of the white pillar with red Chinese characters aligns consistently with its base.",
+      "signals": [
+        "shadow_consistency(pillar)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 36.67,
+      "total_score_100": 96.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "shadow_consistency(pillar)": 36.6667
+      },
+      "content_score_raw": "60"
+    }
+  ],
+  "bank_ids": [
+    "v2",
+    "v3",
+    "v5",
+    "a1",
+    "a2",
+    "a4",
+    "a5"
+  ]
+}

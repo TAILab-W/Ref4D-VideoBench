@@ -1,0 +1,36 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0530.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "cv2",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "car",
+        "attributes": {
+          "signature": [
+            "lexus-es300h"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            11.7
+          ]
+        ]
+      }
+    ],
+    "relations": []
+  },
+  "views": {
+    "objects_count_display": {
+      "car": 1
+    }
+  }
+}

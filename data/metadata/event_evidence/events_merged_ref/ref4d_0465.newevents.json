@@ -1,0 +1,130 @@
+{
+  "events": [
+    {
+      "id": "m0001",
+      "s": 0.0,
+      "e": 0.1457286432160804,
+      "dur": 0.1457286432160804,
+      "members": [
+        "e0001#2",
+        "e0002#2"
+      ],
+      "text": "soccer player run",
+      "s_abs": 0.0,
+      "e_abs": 2.9,
+      "dur_abs": 2.9
+    },
+    {
+      "id": "m0002",
+      "s": 0.0,
+      "e": 0.4371859296482412,
+      "dur": 0.4371859296482412,
+      "members": [
+        "e0001#1",
+        "e0002#1",
+        "e0003#1",
+        "e0003#2",
+        "e0004#1",
+        "e0004#2",
+        "e0005#1"
+      ],
+      "text": "soccer player kick ball",
+      "s_abs": 0.0,
+      "e_abs": 8.7,
+      "dur_abs": 8.7
+    },
+    {
+      "id": "m0003",
+      "s": 0.35678391959798994,
+      "e": 1.0,
+      "dur": 0.6432160804020101,
+      "members": [
+        "e0005#2",
+        "e0006#1",
+        "e0007#1",
+        "e0008#1",
+        "e0009#1",
+        "e0010#2",
+        "e0011#1",
+        "e0012#2"
+      ],
+      "text": "soccer player run",
+      "s_abs": 7.1,
+      "e_abs": 19.9,
+      "dur_abs": 12.799999999999999
+    },
+    {
+      "id": "m0004",
+      "s": 0.6582914572864322,
+      "e": 0.7386934673366834,
+      "dur": 0.08040201005025116,
+      "members": [
+        "e0009#2"
+      ],
+      "text": "soccer ball kick soccer ball roll",
+      "s_abs": 13.1,
+      "e_abs": 14.7,
+      "dur_abs": 1.5999999999999996
+    },
+    {
+      "id": "m0005",
+      "s": 0.6582914572864322,
+      "e": 0.7386934673366834,
+      "dur": 0.08040201005025116,
+      "members": [
+        "e0009#3"
+      ],
+      "text": "soccer player chase soccor player kick",
+      "s_abs": 13.1,
+      "e_abs": 14.7,
+      "dur_abs": 1.5999999999999996
+    },
+    {
+      "id": "m0006",
+      "s": 0.6582914572864322,
+      "e": 0.7386934673366834,
+      "dur": 0.08040201005025116,
+      "members": [
+        "e0009#4"
+      ],
+      "text": "soccer goal attempt",
+      "s_abs": 13.1,
+      "e_abs": 14.7,
+      "dur_abs": 1.5999999999999996
+    },
+    {
+      "id": "m0007",
+      "s": 0.7386934673366834,
+      "e": 1.0,
+      "dur": 0.2613065326633166,
+      "members": [
+        "e0010#1",
+        "e0011#2",
+        "e0012#1"
+      ],
+      "text": "soccer player kick ball",
+      "s_abs": 14.7,
+      "e_abs": 19.9,
+      "dur_abs": 5.199999999999999
+    }
+  ],
+  "meta": {
+    "lane": "ref",
+    "key": "ref4d_0465",
+    "mode": "micro",
+    "merge_config": {
+      "tau_sem": 0.96,
+      "gap_abs_sec": 1.01,
+      "gap_norm_fallback": 0.1,
+      "min_duration_norm": 0.0
+    },
+    "stats": {
+      "num_input_items": 23,
+      "num_kept_items": 23,
+      "num_clusters": 7
+    },
+    "provenance": {
+      "source_hash": "23e45ca4b9b8"
+    }
+  }
+}

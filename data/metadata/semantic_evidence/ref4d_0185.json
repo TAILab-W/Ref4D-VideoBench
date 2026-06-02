@@ -1,0 +1,89 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0185.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "decord",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "lettuce",
+        "attributes": {
+          "signature": [
+            "green-leaves-in-grocery-bins"
+          ]
+        },
+        "spans": [
+          [
+            0.2,
+            10.3
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "person",
+        "attributes": {
+          "signature": [
+            "light-gray-shirt-dark-pants"
+          ]
+        },
+        "spans": [
+          [
+            0.1,
+            10.3
+          ]
+        ]
+      }
+    ],
+    "relations": [
+      {
+        "subject": "o2",
+        "predicate": "looking-at",
+        "object": "o1",
+        "spans": [
+          [
+            0.3,
+            0.6
+          ]
+        ],
+        "confidence": 0.9
+      },
+      {
+        "subject": "o2",
+        "predicate": "standing-in",
+        "object": "o1",
+        "spans": [
+          [
+            0.7,
+            0.8
+          ]
+        ],
+        "confidence": 0.8
+      },
+      {
+        "subject": "o2",
+        "predicate": "talking-about",
+        "object": "o1",
+        "spans": [
+          [
+            0.1,
+            0.4
+          ]
+        ],
+        "confidence": 0.9
+      }
+    ]
+  },
+  "views": {
+    "objects_count_display": {
+      "lettuce": 1,
+      "person": 1
+    }
+  }
+}

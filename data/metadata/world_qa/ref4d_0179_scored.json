@@ -1,0 +1,205 @@
+{
+  "summary": {
+    "items": 10,
+    "enter_bank": 8,
+    "clip_range_sec": [
+      0.0,
+      5.83
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does a person hold the black headphones with their hands?",
+      "signals": [
+        "containment(headphones,case)",
+        "grasp_stability(person,headphones)",
+        "tool_usage_correct(cable_2,for:headphones)",
+        "grasp_stability"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "containment(headphones,case)": 29.1667,
+        "tool_usage_correct(cable_2,for:headphones)": 5.8333,
+        "grasp_stability(person,headphones)": 5.6667,
+        "grasp_stability": 5.6667
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Do the green plants remain stationary on the surface?",
+      "signals": [
+        "accel_sign",
+        "friction_sliding"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "accel_sign": 35.0,
+        "friction_sliding": 6.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Are the shadows of the objects consistent with their positions on the wooden surface?",
+      "signals": [
+        "material_optics",
+        "shadow_consistency"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "material_optics": 37.5,
+        "shadow_consistency": 7.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Is there handoff between both hands for the coiled cable removal?",
+      "signals": [
+        "handoff_between_hands"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 26.67,
+      "total_score_100": 76.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "handoff_between_hands": 26.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Does the USB cable maintain a continuous trajectory without sudden size inconsistency?",
+      "signals": [
+        "continuity",
+        "frame_discontinuity",
+        "size_inconsistency"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "frame_discontinuity": 40.0,
+        "size_inconsistency": 7.5,
+        "continuity": 7.3333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "A person is handling a pair of black Sony-branded over-ear headphones.",
+      "signals": [
+        "containment(headphones,case)",
+        "grasp_stability(person,headphones)",
+        "tool_usage_correct(cable_2,for:headphones)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "containment(headphones,case)": 29.1667,
+        "tool_usage_correct(cable_2,for:headphones)": 5.8333,
+        "grasp_stability(person,headphones)": 5.6667
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "Human hands hold and manipulate the black headphones without interpenetration.",
+      "signals": [
+        "grasp_stability",
+        "tool_contact",
+        "interpenetration"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "interpenetration": 35.8333,
+        "grasp_stability": 5.6667,
+        "tool_contact": 5.6667
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "Both hands are involved in removing the coiled cable from its case.",
+      "signals": [
+        "handoff_between_hands"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 26.67,
+      "total_score_100": 76.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "handoff_between_hands": 26.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "The material optics of the black headphones match normal lighting conditions.",
+      "signals": [
+        "material_optics"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 37.5,
+      "total_score_100": 87.5,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "material_optics": 37.5
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "Shadows on the light wooden surface correspond to the objects' positions.",
+      "signals": [
+        "shadow_consistency"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 36.67,
+      "total_score_100": 86.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "shadow_consistency": 36.6667
+      },
+      "content_score_raw": "50"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v5",
+    "a1",
+    "a2",
+    "a4",
+    "a5"
+  ]
+}

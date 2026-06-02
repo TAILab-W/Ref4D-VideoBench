@@ -1,0 +1,307 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0141.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "cv2",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "building",
+        "attributes": {
+          "color": [
+            "black",
+            "brown",
+            "glass"
+          ],
+          "pattern": [
+            "grid-like"
+          ],
+          "texture": [
+            "smooth"
+          ],
+          "material": [
+            "concrete",
+            "glass"
+          ],
+          "size": [
+            "large"
+          ],
+          "state": [
+            "under-construction"
+          ],
+          "position": [
+            "center-left"
+          ],
+          "signature": [
+            "modern-architecture-glass-facade-cranes-on-top"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            6.2
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "car",
+        "attributes": {
+          "color": [
+            "dark"
+          ],
+          "action": [
+            "parked"
+          ],
+          "position": [
+            "under-building"
+          ],
+          "signature": [
+            "dark-color-parked-under-building"
+          ]
+        },
+        "spans": [
+          [
+            3.5,
+            6.2
+          ]
+        ]
+      },
+      {
+        "id": "o3",
+        "name": "tree",
+        "attributes": {
+          "color": [
+            "green"
+          ],
+          "size": [
+            "small"
+          ],
+          "position": [
+            "along-riverbank"
+          ],
+          "signature": [
+            "young-green-leaves"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            6.2
+          ]
+        ]
+      },
+      {
+        "id": "o4",
+        "name": "water",
+        "attributes": {
+          "color": [
+            "blue-gray"
+          ],
+          "state": [
+            "calm"
+          ],
+          "reflection": [
+            "buildings",
+            "sky"
+          ],
+          "signature": [
+            "reflecting-sky-and-buildings"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            6.2
+          ]
+        ]
+      },
+      {
+        "id": "o5",
+        "name": "grass",
+        "attributes": {
+          "color": [
+            "green"
+          ],
+          "state": [
+            "well-maintained"
+          ],
+          "signature": [
+            "green-lawn-along-riverbank"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            6.2
+          ]
+        ]
+      },
+      {
+        "id": "o6",
+        "name": "sky",
+        "attributes": {
+          "color": [
+            "blue",
+            "orange",
+            "pink"
+          ],
+          "weather": [
+            "partly-cloudy"
+          ],
+          "lighting": [
+            "soft",
+            "warm"
+          ],
+          "signature": [
+            "cloudy-with-orange-pink-hues-at-sunset"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            6.2
+          ]
+        ]
+      }
+    ],
+    "relations": [
+      {
+        "subject": "o1",
+        "predicate": "left-of",
+        "object": "o2",
+        "spans": [
+          [
+            0.0,
+            3.5
+          ]
+        ],
+        "confidence": 0.8
+      },
+      {
+        "subject": "o1",
+        "predicate": "left-of",
+        "object": "o3",
+        "spans": [
+          [
+            0.0,
+            4.5
+          ]
+        ],
+        "confidence": 0.8
+      },
+      {
+        "subject": "o1",
+        "predicate": "left-of",
+        "object": "o4",
+        "spans": [
+          [
+            0.0,
+            6.2
+          ]
+        ],
+        "confidence": 0.8
+      },
+      {
+        "subject": "o1",
+        "predicate": "left-of",
+        "object": "o5",
+        "spans": [
+          [
+            0.0,
+            6.2
+          ]
+        ],
+        "confidence": 0.8
+      },
+      {
+        "subject": "o1",
+        "predicate": "left-of",
+        "object": "o6",
+        "spans": [
+          [
+            0.0,
+            6.2
+          ]
+        ],
+        "confidence": 0.8
+      },
+      {
+        "subject": "o2",
+        "predicate": "under",
+        "object": "o1",
+        "spans": [
+          [
+            3.5,
+            6.2
+          ]
+        ],
+        "confidence": 0.8
+      },
+      {
+        "subject": "o3",
+        "predicate": "along",
+        "object": "o5",
+        "spans": [
+          [
+            0.0,
+            6.2
+          ]
+        ],
+        "confidence": 0.8
+      },
+      {
+        "subject": "o4",
+        "predicate": "in-front-of",
+        "object": "o5",
+        "spans": [
+          [
+            0.0,
+            6.2
+          ]
+        ],
+        "confidence": 0.8
+      },
+      {
+        "subject": "o5",
+        "predicate": "next-to",
+        "object": "o4",
+        "spans": [
+          [
+            0.0,
+            6.2
+          ]
+        ],
+        "confidence": 0.8
+      },
+      {
+        "subject": "o6",
+        "predicate": "over",
+        "object": "o1",
+        "spans": [
+          [
+            0.0,
+            6.2
+          ]
+        ],
+        "confidence": 0.8
+      }
+    ]
+  },
+  "views": {
+    "objects_count_display": {
+      "building": 1,
+      "car": 1,
+      "tree": 1,
+      "water": 1,
+      "grass": 1,
+      "sky": 1
+    }
+  }
+}

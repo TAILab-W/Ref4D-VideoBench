@@ -1,0 +1,286 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0103.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "cv2",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "castle",
+        "attributes": {
+          "color": [
+            "gray",
+            "white"
+          ],
+          "material": [
+            "stone"
+          ],
+          "size": [
+            "large"
+          ],
+          "state": [
+            "standing"
+          ],
+          "position": [
+            "center"
+          ],
+          "signature": [
+            "white-towers-gray-roofs-multiple-windows"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            1.0
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "castle",
+        "attributes": {
+          "signature": [
+            "castle-coarse"
+          ]
+        },
+        "spans": [
+          [
+            3.7,
+            11.8
+          ]
+        ]
+      },
+      {
+        "id": "o3",
+        "name": "text",
+        "attributes": {
+          "signature": [
+            "text-coarse"
+          ]
+        },
+        "spans": [
+          [
+            3.7,
+            11.8
+          ]
+        ]
+      },
+      {
+        "id": "o4",
+        "name": "text",
+        "attributes": {
+          "signature": [
+            "text-coarse"
+          ]
+        },
+        "spans": [
+          [
+            3.7,
+            11.8
+          ]
+        ]
+      },
+      {
+        "id": "o5",
+        "name": "text",
+        "attributes": {
+          "signature": [
+            "text-coarse"
+          ]
+        },
+        "spans": [
+          [
+            3.7,
+            11.8
+          ]
+        ]
+      },
+      {
+        "id": "o6",
+        "name": "text",
+        "attributes": {
+          "signature": [
+            "text-coarse"
+          ]
+        },
+        "spans": [
+          [
+            3.7,
+            11.8
+          ]
+        ]
+      },
+      {
+        "id": "o7",
+        "name": "text",
+        "attributes": {
+          "signature": [
+            "text-coarse"
+          ]
+        },
+        "spans": [
+          [
+            3.7,
+            11.8
+          ]
+        ]
+      },
+      {
+        "id": "o8",
+        "name": "building",
+        "attributes": {
+          "signature": [
+            "building-coarse"
+          ]
+        },
+        "spans": [
+          [
+            3.7,
+            11.8
+          ]
+        ]
+      },
+      {
+        "id": "o9",
+        "name": "window",
+        "attributes": {
+          "signature": [
+            "window-coarse"
+          ]
+        },
+        "spans": [
+          [
+            3.7,
+            11.8
+          ]
+        ]
+      },
+      {
+        "id": "o10",
+        "name": "window",
+        "attributes": {
+          "signature": [
+            "window-coarse"
+          ]
+        },
+        "spans": [
+          [
+            3.7,
+            11.8
+          ]
+        ]
+      },
+      {
+        "id": "o11",
+        "name": "grass",
+        "attributes": {
+          "signature": [
+            "grass-coarse"
+          ]
+        },
+        "spans": [
+          [
+            3.7,
+            11.8
+          ]
+        ]
+      },
+      {
+        "id": "o12",
+        "name": "stone",
+        "attributes": {
+          "signature": [
+            "stone-coarse"
+          ]
+        },
+        "spans": [
+          [
+            3.7,
+            11.8
+          ]
+        ]
+      },
+      {
+        "id": "o13",
+        "name": "path",
+        "attributes": {
+          "signature": [
+            "path-coarse"
+          ]
+        },
+        "spans": [
+          [
+            3.7,
+            11.8
+          ]
+        ]
+      },
+      {
+        "id": "o14",
+        "name": "water",
+        "attributes": {
+          "signature": [
+            "water-coarse"
+          ]
+        },
+        "spans": [
+          [
+            3.7,
+            11.8
+          ]
+        ]
+      },
+      {
+        "id": "o15",
+        "name": "car",
+        "attributes": {
+          "signature": [
+            "car-coarse"
+          ]
+        },
+        "spans": [
+          [
+            3.7,
+            11.8
+          ]
+        ]
+      },
+      {
+        "id": "o16",
+        "name": "tree",
+        "attributes": {
+          "signature": [
+            "tree-coarse"
+          ]
+        },
+        "spans": [
+          [
+            3.7,
+            11.8
+          ]
+        ]
+      }
+    ],
+    "relations": []
+  },
+  "views": {
+    "objects_count_display": {
+      "castle": 2,
+      "text": 5,
+      "building": 1,
+      "window": 2,
+      "grass": 1,
+      "stone": 1,
+      "path": 1,
+      "water": 1,
+      "car": 1,
+      "tree": 1
+    }
+  }
+}

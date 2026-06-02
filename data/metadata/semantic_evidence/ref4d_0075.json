@@ -1,0 +1,66 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0075.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "cv2",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "zebra",
+        "attributes": {
+          "color": [
+            "black",
+            "white"
+          ],
+          "pose": [
+            "lying",
+            "resting",
+            "struggling"
+          ],
+          "action": [
+            "resting",
+            "struggling",
+            "swimming"
+          ],
+          "state": [
+            "dry",
+            "wet"
+          ],
+          "position": [
+            "bank",
+            "water"
+          ],
+          "orientation": [
+            "facing-left",
+            "facing-right"
+          ],
+          "signature": [
+            "striped-body-lying-on-bank"
+          ]
+        },
+        "spans": [
+          [
+            0.2,
+            3.5
+          ],
+          [
+            4.8,
+            7.6
+          ]
+        ]
+      }
+    ],
+    "relations": []
+  },
+  "views": {
+    "objects_count_display": {
+      "zebra": 1
+    }
+  }
+}

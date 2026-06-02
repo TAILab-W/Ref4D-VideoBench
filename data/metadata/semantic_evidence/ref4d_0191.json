@@ -1,0 +1,146 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0191.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "cv2",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "text",
+        "attributes": {
+          "signature": [
+            "text-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            7.5
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "plant",
+        "attributes": {
+          "signature": [
+            "plant-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            7.5
+          ]
+        ]
+      },
+      {
+        "id": "o3",
+        "name": "bread",
+        "attributes": {
+          "signature": [
+            "bread-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            7.5
+          ]
+        ]
+      },
+      {
+        "id": "o4",
+        "name": "bread",
+        "attributes": {
+          "signature": [
+            "bread-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            7.5
+          ]
+        ]
+      },
+      {
+        "id": "o5",
+        "name": "pistachio-paste",
+        "attributes": {
+          "signature": [
+            "pistachio-paste-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            7.5
+          ]
+        ]
+      },
+      {
+        "id": "o6",
+        "name": "spoon",
+        "attributes": {
+          "signature": [
+            "spoon-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            7.5
+          ]
+        ]
+      },
+      {
+        "id": "o7",
+        "name": "hand",
+        "attributes": {
+          "signature": [
+            "hand-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            7.5
+          ]
+        ]
+      },
+      {
+        "id": "o8",
+        "name": "hand",
+        "attributes": {
+          "signature": [
+            "hand-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            7.5
+          ]
+        ]
+      }
+    ],
+    "relations": []
+  },
+  "views": {
+    "objects_count_display": {
+      "text": 1,
+      "plant": 1,
+      "bread": 2,
+      "pistachio-paste": 1,
+      "spoon": 1,
+      "hand": 2
+    }
+  }
+}

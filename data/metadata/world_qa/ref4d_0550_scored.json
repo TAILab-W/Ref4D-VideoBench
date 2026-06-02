@@ -1,0 +1,206 @@
+{
+  "summary": {
+    "items": 10,
+    "enter_bank": 9,
+    "clip_range_sec": [
+      0.0,
+      18.13
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Is the bus door closed?",
+      "signals": [
+        "continuity(door)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 36.67,
+      "total_score_100": 91.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(door)": 36.6667
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Does the blue bus move forward continuously without sudden speed changes?",
+      "signals": [
+        "trajectory_dir(bus,axis)",
+        "trajectory_dir(bicycle,axis)",
+        "trajectory_dir(oX,axis)",
+        "accel_sign(oX,axis)",
+        "continuity(oX)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(bus,axis)": 38.3333,
+        "trajectory_dir(bicycle,axis)": 7.6667,
+        "trajectory_dir(oX,axis)": 7.6667,
+        "continuity(oX)": 7.3333,
+        "accel_sign(oX,axis)": 7.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Does the cyclist wait for traffic to clear before crossing the road?",
+      "signals": [
+        "prohibited_intersection(bicycle,road)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 36.67,
+      "total_score_100": 91.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "prohibited_intersection(bicycle,road)": 36.6667
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Do the shadows of the tree trunk and other objects align consistently with their positions relative to the light source?",
+      "signals": [
+        "shadow_consistency(oX)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 36.67,
+      "total_score_100": 86.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "shadow_consistency(oX)": 36.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Does the person on the bicycle interact with the environment in a physically plausible manner?",
+      "signals": [
+        "biological_motion(person)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 38.33,
+      "total_score_100": 93.33,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "biological_motion(person)": 38.3333
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "The bus door remains closed throughout the video.",
+      "signals": [
+        "continuity(door)",
+        "trajectory_dir(bus,axis)",
+        "trajectory_dir(bicycle,axis)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(bus,axis)": 38.3333,
+        "trajectory_dir(bicycle,axis)": 7.6667,
+        "continuity(door)": 7.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "The cyclist moves forward in a continuous trajectory without sudden changes in speed or direction.",
+      "signals": [
+        "interpenetration(door,seat)",
+        "collision(person,bicycle)",
+        "trajectory_dir(bus,axis)",
+        "trajectory_dir(bicycle,axis)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(bus,axis)": 38.3333,
+        "trajectory_dir(bicycle,axis)": 7.6667,
+        "interpenetration(door,seat)": 7.1667,
+        "collision(person,bicycle)": 6.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "The person on the bicycle waits for traffic to clear before crossing the road.",
+      "signals": [
+        "biological_motion(person)",
+        "prohibited_intersection(bicycle,road)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "biological_motion(person)": 38.3333,
+        "prohibited_intersection(bicycle,road)": 7.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "Shadows of the bus, tree trunk, and other objects align with their positions relative to the light source.",
+      "signals": [
+        "shadow_consistency(oX)"
+      ],
+      "content_score_60": 30,
+      "signal_score_40": 36.67,
+      "total_score_100": 66.67,
+      "duplicate_penalized": true,
+      "signal_detail": {
+        "shadow_consistency(oX)": 36.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "A blue bus stop sign is clearly visible.",
+      "signals": [
+        "support(oA,oB)",
+        "placeable(oObj,at:oTarget)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "support(oA,oB)": 35.0,
+        "placeable(oObj,at:oTarget)": 5.1667
+      },
+      "content_score_raw": "50"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "v5",
+    "a1",
+    "a2",
+    "a3",
+    "a5"
+  ]
+}

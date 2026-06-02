@@ -1,0 +1,108 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0373.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "cv2",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "water",
+        "attributes": {
+          "color": [
+            "brown",
+            "dark"
+          ],
+          "depth": [
+            "shallow"
+          ],
+          "signature": [
+            "dark-brown-shallow-left"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            1.0
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "land",
+        "attributes": {
+          "color": [
+            "brown",
+            "muddy"
+          ],
+          "signature": [
+            "dry-brown-muddy-right"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            1.0
+          ]
+        ]
+      },
+      {
+        "id": "o3",
+        "name": "road",
+        "attributes": {
+          "color": [
+            "gray"
+          ],
+          "shape": [
+            "straight"
+          ],
+          "signature": [
+            "straight-gray-top"
+          ]
+        },
+        "spans": [
+          [
+            0.5,
+            1.0
+          ]
+        ]
+      },
+      {
+        "id": "o4",
+        "name": "house",
+        "attributes": {
+          "color": [
+            "red",
+            "white"
+          ],
+          "roof": [
+            "red"
+          ],
+          "signature": [
+            "large-white-roofed-bottom-center"
+          ]
+        },
+        "spans": [
+          [
+            0.6,
+            0.8
+          ]
+        ]
+      }
+    ],
+    "relations": []
+  },
+  "views": {
+    "objects_count_display": {
+      "water": 1,
+      "land": 1,
+      "road": 1,
+      "house": 1
+    }
+  }
+}

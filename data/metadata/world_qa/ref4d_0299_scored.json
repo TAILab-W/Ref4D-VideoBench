@@ -1,0 +1,194 @@
+{
+  "summary": {
+    "items": 10,
+    "enter_bank": 9,
+    "clip_range_sec": [
+      0.0,
+      5.5
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Across the clip, do the snow-covered trees maintain consistent size relative to the mountains?",
+      "signals": [
+        "continuity(trees)",
+        "continuity-mountains"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(trees)": 36.6667,
+        "continuity-mountains": 4.6667
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Does the snow on the trees accumulate naturally without sudden changes in material properties?",
+      "signals": [
+        "continuity(snow)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 36.67,
+      "total_score_100": 86.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(snow)": 36.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Does the train follow a continuous trajectory on the track through the forest?",
+      "signals": [
+        "friction_sliding(train,on:tracks)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 30.0,
+      "total_score_100": 85.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "friction_sliding(train,on:tracks)": 30.0
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Are the shadows cast by the train cars consistent with their positions and light sources?",
+      "signals": [
+        "shadow_consistency(train_car)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 36.67,
+      "total_score_100": 86.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "shadow_consistency(train_car)": 36.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Does the tunnel remain supported on the mountain slope without collapsing?",
+      "signals": [
+        "support(train,on:tracks)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 35.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "support(train,on:tracks)": 35.0
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "Snow-covered trees and mountains maintain consistent size and spatial relationships.",
+      "signals": [
+        "continuity(trees)",
+        "continuity-mountains"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(trees)": 36.6667,
+        "continuity-mountains": 4.6667
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "Train follows a continuous trajectory on the track without sudden changes in direction or speed, operating safely near snowy terrain.",
+      "signals": [
+        "trajectory_dir(train,track)",
+        "accel_sign(train,track)",
+        "friction_sliding(train,on:tracks)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(train,track)": 38.3333,
+        "accel_sign(train,track)": 7.0,
+        "friction_sliding(train,on:tracks)": 6.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "Snowy landscape elements like trees and mountain slopes show no signs of instability or collapse.",
+      "signals": [
+        "balance(trees)",
+        "friction_sliding(snow,tree)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "balance(trees)": 35.8333,
+        "friction_sliding(snow,tree)": 6.0
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "Snow on trees accumulates naturally with no sudden changes in size or material properties.",
+      "signals": [
+        "continuity(snow)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 36.67,
+      "total_score_100": 86.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(snow)": 36.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "Shadows cast by train cars are consistent with their positions and light sources.",
+      "signals": [
+        "shadow_consistency(train_car)"
+      ],
+      "content_score_60": 30,
+      "signal_score_40": 36.67,
+      "total_score_100": 66.67,
+      "duplicate_penalized": true,
+      "signal_detail": {
+        "shadow_consistency(train_car)": 36.6667
+      },
+      "content_score_raw": "50"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "v5",
+    "a1",
+    "a2",
+    "a3",
+    "a4"
+  ]
+}

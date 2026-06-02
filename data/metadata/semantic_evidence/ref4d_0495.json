@@ -1,0 +1,201 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0495.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "decord",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "a.-thomas",
+        "attributes": {
+          "color": [
+            "black",
+            "yellow"
+          ],
+          "pattern": [
+            "striped"
+          ],
+          "pose": [
+            "dancing"
+          ],
+          "action": [
+            "dancing"
+          ],
+          "facing-direction": [
+            "front-facing"
+          ],
+          "position": [
+            "center"
+          ],
+          "signature": [
+            "wa-1-back-name-a-thomas"
+          ]
+        },
+        "spans": [
+          [
+            0.3,
+            0.6
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "team-member-with-'jamaica'-on-shorts",
+        "attributes": {
+          "color": [
+            "black",
+            "yellow"
+          ],
+          "pattern": [
+            "striped"
+          ],
+          "pose": [
+            "dancing"
+          ],
+          "action": [
+            "dancing"
+          ],
+          "facing-direction": [
+            "front-facing"
+          ],
+          "position": [
+            "right"
+          ],
+          "signature": [
+            "jamaica-on-short-side"
+          ]
+        },
+        "spans": [
+          [
+            0.8,
+            1.0
+          ]
+        ]
+      },
+      {
+        "id": "o3",
+        "name": "team-member-with-'wa'-on-front",
+        "attributes": {
+          "color": [
+            "black",
+            "yellow"
+          ],
+          "pattern": [
+            "striped"
+          ],
+          "pose": [
+            "dancing"
+          ],
+          "action": [
+            "dancing"
+          ],
+          "facing-direction": [
+            "front-facing"
+          ],
+          "position": [
+            "center"
+          ],
+          "signature": [
+            "wa-on-front-center"
+          ]
+        },
+        "spans": [
+          [
+            0.3,
+            0.7
+          ]
+        ]
+      },
+      {
+        "id": "o4",
+        "name": "team-member-with-'c'-on-jersey",
+        "attributes": {
+          "color": [
+            "black",
+            "yellow"
+          ],
+          "pattern": [
+            "striped"
+          ],
+          "pose": [
+            "dancing"
+          ],
+          "action": [
+            "dancing"
+          ],
+          "facing-direction": [
+            "back-facing"
+          ],
+          "position": [
+            "left"
+          ],
+          "signature": [
+            "c-on-jersey-back"
+          ]
+        },
+        "spans": [
+          [
+            0.5,
+            0.7
+          ]
+        ]
+      }
+    ],
+    "relations": [
+      {
+        "subject": "o1",
+        "predicate": "left-of",
+        "object": "o2",
+        "spans": [
+          [
+            0.3,
+            0.5
+          ],
+          [
+            0.8,
+            1.0
+          ]
+        ],
+        "confidence": 0.8
+      },
+      {
+        "subject": "o3",
+        "predicate": "left-of",
+        "object": "o2",
+        "spans": [
+          [
+            0.5,
+            1.0
+          ]
+        ],
+        "confidence": 0.8
+      },
+      {
+        "subject": "o3",
+        "predicate": "left-of",
+        "object": "o4",
+        "spans": [
+          [
+            0.5,
+            0.7
+          ]
+        ],
+        "confidence": 0.8
+      }
+    ]
+  },
+  "views": {
+    "objects_count_display": {
+      "a.-thomas": 1,
+      "team-member-with-'jamaica'-on-shorts": 1,
+      "team-member-with-'wa'-on-front": 1,
+      "team-member-with-'c'-on-jersey": 1
+    }
+  }
+}

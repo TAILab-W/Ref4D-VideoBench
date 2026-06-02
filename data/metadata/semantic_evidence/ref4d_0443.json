@@ -1,0 +1,223 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0443.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "decord",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "person",
+        "attributes": {
+          "signature": [
+            "person-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            8.3
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "chair",
+        "attributes": {
+          "signature": [
+            "chair-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            8.3
+          ]
+        ]
+      },
+      {
+        "id": "o3",
+        "name": "chair",
+        "attributes": {
+          "signature": [
+            "chair-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            8.3
+          ]
+        ]
+      },
+      {
+        "id": "o4",
+        "name": "table",
+        "attributes": {
+          "signature": [
+            "table-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            8.3
+          ]
+        ]
+      },
+      {
+        "id": "o5",
+        "name": "banner",
+        "attributes": {
+          "signature": [
+            "banner-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            8.3
+          ]
+        ]
+      },
+      {
+        "id": "o6",
+        "name": "banner",
+        "attributes": {
+          "signature": [
+            "banner-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            8.3
+          ]
+        ]
+      },
+      {
+        "id": "o7",
+        "name": "banner",
+        "attributes": {
+          "signature": [
+            "banner-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            8.3
+          ]
+        ]
+      },
+      {
+        "id": "o8",
+        "name": "banner",
+        "attributes": {
+          "signature": [
+            "banner-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            8.3
+          ]
+        ]
+      },
+      {
+        "id": "o9",
+        "name": "banner",
+        "attributes": {
+          "signature": [
+            "banner-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            8.3
+          ]
+        ]
+      },
+      {
+        "id": "o10",
+        "name": "tv",
+        "attributes": {
+          "signature": [
+            "tv-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            8.3
+          ]
+        ]
+      },
+      {
+        "id": "o11",
+        "name": "window",
+        "attributes": {
+          "signature": [
+            "window-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            8.3
+          ]
+        ]
+      },
+      {
+        "id": "o12",
+        "name": "door",
+        "attributes": {
+          "signature": [
+            "door-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            8.3
+          ]
+        ]
+      },
+      {
+        "id": "o13",
+        "name": "lollipop",
+        "attributes": {
+          "signature": [
+            "lollipop-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            8.3
+          ]
+        ]
+      }
+    ],
+    "relations": []
+  },
+  "views": {
+    "objects_count_display": {
+      "person": 1,
+      "chair": 2,
+      "table": 1,
+      "banner": 5,
+      "tv": 1,
+      "window": 1,
+      "door": 1,
+      "lollipop": 1
+    }
+  }
+}

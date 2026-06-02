@@ -1,0 +1,196 @@
+{
+  "summary": {
+    "items": 10,
+    "enter_bank": 9,
+    "clip_range_sec": [
+      0.0,
+      7.13
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Do the meatballs float in the boiling water?",
+      "signals": [
+        "buoyancy_float(meatball,in:water)",
+        "hot_surface_contact(meatball,stove)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "buoyancy_float(meatball,in:water)": 34.1667,
+        "hot_surface_contact(meatball,stove)": 6.8333
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Does the spatula lift a meatball without trapping it and drop it securely?",
+      "signals": [
+        "tool_contact(spatula,meatball)",
+        "grasp_stability"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 34.0,
+      "total_score_100": 84.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "tool_contact(spatula,meatball)": 28.3333,
+        "grasp_stability": 5.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Is there a white plate on the right side of the pot for placing cooked meatballs?",
+      "signals": [
+        "support(plate,bowl)",
+        "support(plate,meatball)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "support(plate,bowl)": 35.0,
+        "support(plate,meatball)": 7.0
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Does the liquid slosh when the ladle is lifted from the pot?",
+      "signals": [
+        "slosh_response"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 34.17,
+      "total_score_100": 84.17,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "slosh_response": 34.1667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Does the stove surface show any prohibited intersection with other objects?",
+      "signals": [
+        "prohibited_intersection"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 36.67,
+      "total_score_100": 86.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "prohibited_intersection": 36.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "Meatballs float in boiling water due to buoyancy.",
+      "signals": [
+        "buoyancy_float(meatball,in:water)",
+        "tool_contact(spatula,meatball)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 39.83,
+      "total_score_100": 89.83,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "buoyancy_float(meatball,in:water)": 34.1667,
+        "tool_contact(spatula,meatball)": 5.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "The stove is hot, and the pot does not intersect with other objects.",
+      "signals": [
+        "hot_surface_contact(meatball,stove)",
+        "prohibited_intersection"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "prohibited_intersection": 36.6667,
+        "hot_surface_contact(meatball,stove)": 6.8333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "A hand holds a ladle that lifts meatballs without dropping them.",
+      "signals": [
+        "support(plate,meatball)",
+        "grasp_stability"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "support(plate,meatball)": 35.0,
+        "grasp_stability": 5.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "Liquid sloshes when the ladle moves upward.",
+      "signals": [
+        "slosh_response"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 34.17,
+      "total_score_100": 84.17,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "slosh_response": 34.1667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "The spatula's slotted design allows lifting meatballs without trapping them.",
+      "signals": [
+        "tool_contact(spatula,meatball)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 28.33,
+      "total_score_100": 78.33,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "tool_contact(spatula,meatball)": 28.3333
+      },
+      "content_score_raw": "50"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "v5",
+    "a1",
+    "a2",
+    "a3",
+    "a4"
+  ]
+}

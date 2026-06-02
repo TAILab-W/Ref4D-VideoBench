@@ -1,0 +1,211 @@
+{
+  "summary": {
+    "items": 10,
+    "enter_bank": 8,
+    "clip_range_sec": [
+      0.0,
+      12.7
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Do the cars in the parking area move along roads or remain stationary?",
+      "signals": [
+        "continuity(oX)",
+        "trajectory_dir(oX,axis)",
+        "accel_sign(oX,axis)"
+      ],
+      "content_score_60": 40,
+      "signal_score_40": 40.0,
+      "total_score_100": 80.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(oX,axis)": 38.3333,
+        "continuity(oX)": 7.3333,
+        "accel_sign(oX,axis)": 7.0
+      },
+      "content_score_raw": "40"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Do the shadows of houses and large structures align with their positions and orientations throughout the clip?",
+      "signals": [
+        "cast_shadow_contact(oX,shadow)",
+        "shadow_consistency(house)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "cast_shadow_contact(oX,shadow)": 37.5,
+        "shadow_consistency(house)": 7.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Does a person use scissors to cut fabric on a table during the video?",
+      "signals": [
+        "tool_contact(scissors,fabric)",
+        "cuttable_progress(fabric)"
+      ],
+      "content_score_60": 30,
+      "signal_score_40": 33.0,
+      "total_score_100": 63.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "tool_contact(scissors,fabric)": 28.3333,
+        "cuttable_progress(fabric)": 4.6667
+      },
+      "content_score_raw": "30"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Do vehicles stay on designated paths without colliding with buildings or trees?",
+      "signals": [
+        "trajectory_dir(car,axis)",
+        "interpenetration(car,road)",
+        "collision(car,house)",
+        "collision(car,tree)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(car,axis)": 38.3333,
+        "interpenetration(car,road)": 7.1667,
+        "collision(car,house)": 6.3333,
+        "collision(car,tree)": 6.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Does the building maintain continuity and no sudden size inconsistency across the scene?",
+      "signals": [
+        "continuity(fabric)",
+        "frame_discontinuity(t)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "frame_discontinuity(t)": 40.0,
+        "continuity(fabric)": 7.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "A person uses scissors to cut fabric on a table.",
+      "signals": [
+        "tool_contact(scissors,fabric)",
+        "cuttable_progress(fabric)"
+      ],
+      "content_score_60": 30,
+      "signal_score_40": 33.0,
+      "total_score_100": 63.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "tool_contact(scissors,fabric)": 28.3333,
+        "cuttable_progress(fabric)": 4.6667
+      },
+      "content_score_raw": "30"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "The buildings and landscape maintain continuity in appearance and position.",
+      "signals": [
+        "continuity(oX)",
+        "continuity(fabric)",
+        "frame_discontinuity(t)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "frame_discontinuity(t)": 40.0,
+        "continuity(oX)": 7.3333,
+        "continuity(fabric)": 7.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "Shadows cast by houses align with their positions and orientations.",
+      "signals": [
+        "cast_shadow_contact(oX,shadow)",
+        "shadow_consistency(house)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "cast_shadow_contact(oX,shadow)": 37.5,
+        "shadow_consistency(house)": 7.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "Vehicles move along roads without interpenetration with other objects.",
+      "signals": [
+        "trajectory_dir(car,axis)",
+        "interpenetration(car,road)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(car,axis)": 38.3333,
+        "interpenetration(car,road)": 7.1667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "Cars exhibit consistent trajectory direction.",
+      "signals": [
+        "trajectory_dir(oX,axis)",
+        "accel_sign(oX,axis)"
+      ],
+      "content_score_60": 40,
+      "signal_score_40": 40.0,
+      "total_score_100": 80.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(oX,axis)": 38.3333,
+        "accel_sign(oX,axis)": 7.0
+      },
+      "content_score_raw": "40"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v4",
+    "v5",
+    "a2",
+    "a3",
+    "a4",
+    "a5"
+  ]
+}

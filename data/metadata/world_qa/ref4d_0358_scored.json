@@ -1,0 +1,249 @@
+{
+  "summary": {
+    "items": 10,
+    "enter_bank": 10,
+    "clip_range_sec": [
+      0.0,
+      8.73
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does the sun gradually move lower toward the horizon?",
+      "signals": [
+        "trajectory_dir(sun,axis)",
+        "accel_sign(sun,axis)",
+        "size_inconsistency(sun)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(sun,axis)": 38.3333,
+        "size_inconsistency(sun)": 7.5,
+        "accel_sign(sun,axis)": 7.0
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Are the ocean ripples gentle and stable throughout the clip?",
+      "signals": [
+        "continuity(clouds)",
+        "continuity(sea)",
+        "hue_histogram_jump(clouds)",
+        "hue_histogram_jump(sea)",
+        "slosh_response(sea,amp)",
+        "friction_sliding(sea,on:air)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(clouds)": 36.6667,
+        "continuity(sea)": 7.3333,
+        "slosh_response(sea,amp)": 6.8333,
+        "hue_histogram_jump(clouds)": 6.6667,
+        "hue_histogram_jump(sea)": 6.6667,
+        "friction_sliding(sea,on:air)": 6.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Does the sea surface reflect the sunset light consistently without abrupt color changes?",
+      "signals": [
+        "continuity(clouds)",
+        "continuity(sea)",
+        "material_optics(clouds)",
+        "material_optics(sea)",
+        "material_optics(ocean)",
+        "reflection_consistency(ocean)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "material_optics(clouds)": 37.5,
+        "material_optics(sea)": 7.5,
+        "material_optics(ocean)": 7.5,
+        "continuity(clouds)": 7.3333,
+        "continuity(sea)": 7.3333,
+        "reflection_consistency(ocean)": 7.0
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Do the clouds' shadows on the water match their positions above them?",
+      "signals": [
+        "shadow_consistency(clouds)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 36.67,
+      "total_score_100": 86.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "shadow_consistency(clouds)": 36.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Is the sky's cloud formation continuous across the scene?",
+      "signals": [
+        "continuity(clouds)",
+        "continuity(sea)",
+        "hue_histogram_jump(clouds)",
+        "hue_histogram_jump(sea)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(clouds)": 36.6667,
+        "continuity(sea)": 7.3333,
+        "hue_histogram_jump(clouds)": 6.6667,
+        "hue_histogram_jump(sea)": 6.6667
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "The sun gradually descends below the horizon, changing its position and light intensity.",
+      "signals": [
+        "continuity(clouds)",
+        "continuity(sea)",
+        "material_optics(clouds)",
+        "material_optics(sea)",
+        "trajectory_dir(sun,axis)",
+        "size_inconsistency(sun)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(sun,axis)": 38.3333,
+        "material_optics(clouds)": 7.5,
+        "material_optics(sea)": 7.5,
+        "size_inconsistency(sun)": 7.5,
+        "continuity(clouds)": 7.3333,
+        "continuity(sea)": 7.3333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "The ocean surface shows gentle ripples without abrupt changes or hazardous disturbances.",
+      "signals": [
+        "trajectory_dir(sun,axis)",
+        "accel_sign(sun,axis)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(sun,axis)": 38.3333,
+        "accel_sign(sun,axis)": 7.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "Cloud shadows on the water maintain consistency with their positions above the clouds.",
+      "signals": [
+        "material_optics(ocean)",
+        "reflection_consistency(ocean)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "material_optics(ocean)": 37.5,
+        "reflection_consistency(ocean)": 7.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "The sea remains stable throughout the sunset scene.",
+      "signals": [
+        "continuity(clouds)",
+        "continuity(sea)",
+        "hue_histogram_jump(clouds)",
+        "hue_histogram_jump(sea)",
+        "slosh_response(sea,amp)",
+        "friction_sliding(sea,on:air)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(clouds)": 36.6667,
+        "continuity(sea)": 7.3333,
+        "slosh_response(sea,amp)": 6.8333,
+        "hue_histogram_jump(clouds)": 6.6667,
+        "hue_histogram_jump(sea)": 6.6667,
+        "friction_sliding(sea,on:air)": 6.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "The ocean surface consistently reflects the sunlight, showing no material or optics inconsistencies.",
+      "signals": [
+        "continuity(clouds)",
+        "continuity(sea)",
+        "material_optics(clouds)",
+        "material_optics(sea)",
+        "material_optics(ocean)",
+        "reflection_consistency(ocean)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "material_optics(clouds)": 37.5,
+        "material_optics(sea)": 7.5,
+        "material_optics(ocean)": 7.5,
+        "continuity(clouds)": 7.3333,
+        "continuity(sea)": 7.3333,
+        "reflection_consistency(ocean)": 7.0
+      },
+      "content_score_raw": "55"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "v5",
+    "a1",
+    "a2",
+    "a3",
+    "a4",
+    "a5"
+  ]
+}

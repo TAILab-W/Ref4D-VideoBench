@@ -1,0 +1,100 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0293.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "decord",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "cable",
+        "attributes": {
+          "signature": [
+            "thin,-black,-vertical-lines-extending-from-top-of-frame-towards-the-mountain"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            8.4
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "mountain",
+        "attributes": {
+          "signature": [
+            "snow-covered-slope-with-trees"
+          ]
+        },
+        "spans": [
+          [
+            0.1,
+            8.4
+          ]
+        ]
+      },
+      {
+        "id": "o3",
+        "name": "tree",
+        "attributes": {
+          "signature": [
+            "green-trees-on-snow-covered-mountainside"
+          ]
+        },
+        "spans": [
+          [
+            0.1,
+            8.4
+          ]
+        ]
+      },
+      {
+        "id": "o4",
+        "name": "fog",
+        "attributes": {
+          "signature": [
+            "white,-dense-layer-covering-lower-part-of-valley"
+          ]
+        },
+        "spans": [
+          [
+            0.1,
+            8.4
+          ]
+        ]
+      },
+      {
+        "id": "o5",
+        "name": "sky",
+        "attributes": {
+          "signature": [
+            "clear-blue-sky-above-fog-layer"
+          ]
+        },
+        "spans": [
+          [
+            0.1,
+            8.4
+          ]
+        ]
+      }
+    ],
+    "relations": []
+  },
+  "views": {
+    "objects_count_display": {
+      "cable": 1,
+      "mountain": 1,
+      "tree": 1,
+      "fog": 1,
+      "sky": 1
+    }
+  }
+}

@@ -1,0 +1,210 @@
+{
+  "summary": {
+    "items": 10,
+    "enter_bank": 9,
+    "clip_range_sec": [
+      0.0,
+      8.63
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Do the trees in Central Park maintain their natural size and proportions without any inconsistency?",
+      "signals": [
+        "size_inconsistency(oX)",
+        "interpenetration(oA,oB)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "size_inconsistency(oX)": 37.5,
+        "interpenetration(oA,oB)": 7.1667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Do the clouds move consistently from left to right, matching expected physical behavior?",
+      "signals": [
+        "trajectory_dir(clouds,axis=horizontal,right)",
+        "trajectory_dir(oX,axis)",
+        "continuity(oX)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(clouds,axis=horizontal,right)": 38.3333,
+        "trajectory_dir(oX,axis)": 7.6667,
+        "continuity(oX)": 7.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Do the lakes show slosh_response consistent with air movement, not sudden spillage, while exhibiting seasonal color changes?",
+      "signals": [
+        "slosh_response(lakes,amp=gentle)",
+        "hue_histogram_jump(trees)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "slosh_response(lakes,amp=gentle)": 34.1667,
+        "hue_histogram_jump(trees)": 6.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Do the buildings surrounding Central Park remain stable and within defined boundaries without structural collapse or interpenetration?",
+      "signals": [
+        "support(buildings)",
+        "interpenetration(buildings)",
+        "interpenetration(oA,oB)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "interpenetration(buildings)": 35.8333,
+        "interpenetration(oA,oB)": 7.1667,
+        "support(buildings)": 7.0
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Does the bird's shadow at [t0:0.5, t1:0.6] cast correctly on the ground below, aligning with its trajectory and light source?",
+      "signals": [
+        "shadow_consistency(bird)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 36.67,
+      "total_score_100": 86.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "shadow_consistency(bird)": 36.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "The trees and park features maintain their natural size and proportions within the defined boundaries.",
+      "signals": [
+        "size_inconsistency(oX)",
+        "interpenetration(oA,oB)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "size_inconsistency(oX)": 37.5,
+        "interpenetration(oA,oB)": 7.1667
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "The clouds move consistently from left to right, maintaining trajectory_dir without frame discontinuity.",
+      "signals": [
+        "continuity(park)",
+        "continuity(cityscape)",
+        "frame_discontinuity(t)",
+        "trajectory_dir(clouds,axis=horizontal,right)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "frame_discontinuity(t)": 40.0,
+        "trajectory_dir(clouds,axis=horizontal,right)": 7.6667,
+        "continuity(park)": 7.3333,
+        "continuity(cityscape)": 7.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "The buildings surrounding Central Park show no signs of structural collapse or interpenetration with other objects.",
+      "signals": [
+        "size_inconsistency(trees)",
+        "frame_discontinuity(t)",
+        "support(buildings)",
+        "interpenetration(buildings)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "frame_discontinuity(t)": 40.0,
+        "size_inconsistency(trees)": 7.5,
+        "interpenetration(buildings)": 7.1667,
+        "support(buildings)": 7.0
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "The water bodies in the park exhibit slosh_response consistent with wind movement.",
+      "signals": [
+        "slosh_response(lakes,amp=gentle)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 34.17,
+      "total_score_100": 84.17,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "slosh_response(lakes,amp=gentle)": 34.1667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "The bird's shadow is cast correctly on the ground below at [t0:0.5, t1:0.6], aligning with its trajectory and light source direction.",
+      "signals": [
+        "shadow_consistency(bird)"
+      ],
+      "content_score_60": 30,
+      "signal_score_40": 36.67,
+      "total_score_100": 66.67,
+      "duplicate_penalized": true,
+      "signal_detail": {
+        "shadow_consistency(bird)": 36.6667
+      },
+      "content_score_raw": "50"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "v5",
+    "a1",
+    "a2",
+    "a3",
+    "a4"
+  ]
+}

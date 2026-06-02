@@ -1,0 +1,152 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0143.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "cv2",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "staircase",
+        "attributes": {
+          "color": [
+            "brown",
+            "metallic"
+          ],
+          "pattern": [
+            "ornate"
+          ],
+          "material": [
+            "metal"
+          ],
+          "size": [
+            "large"
+          ],
+          "orientation": [
+            "left-facing"
+          ],
+          "position": [
+            "interior"
+          ],
+          "signature": [
+            "brown-metallic-ornate-railing-left-facing"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            0.2
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "building",
+        "attributes": {
+          "color": [
+            "brick",
+            "brown"
+          ],
+          "pattern": [
+            "brick"
+          ],
+          "material": [
+            "brick"
+          ],
+          "size": [
+            "large"
+          ],
+          "state": [
+            "under-construction"
+          ],
+          "position": [
+            "urban"
+          ],
+          "signature": [
+            "brick-structure-green-external-ladder"
+          ]
+        },
+        "spans": [
+          [
+            0.3,
+            10.0
+          ]
+        ]
+      },
+      {
+        "id": "o3",
+        "name": "person",
+        "attributes": {
+          "color": [
+            "yellow"
+          ],
+          "action": [
+            "working"
+          ],
+          "position": [
+            "roof"
+          ],
+          "signature": [
+            "yellow-vest-on-roof"
+          ]
+        },
+        "spans": [
+          [
+            0.4,
+            0.7
+          ]
+        ]
+      }
+    ],
+    "relations": [
+      {
+        "subject": "o1",
+        "predicate": "inside",
+        "object": "o2",
+        "spans": [
+          [
+            0.0,
+            10.0
+          ]
+        ],
+        "confidence": 0.8
+      },
+      {
+        "subject": "o3",
+        "predicate": "on",
+        "object": "o2",
+        "spans": [
+          [
+            0.3,
+            10.0
+          ]
+        ],
+        "confidence": 0.9
+      },
+      {
+        "subject": "o2",
+        "predicate": "part_of",
+        "object": "o2",
+        "spans": [
+          [
+            0.3,
+            10.0
+          ]
+        ],
+        "confidence": 0.9
+      }
+    ]
+  },
+  "views": {
+    "objects_count_display": {
+      "staircase": 1,
+      "building": 1,
+      "person": 1
+    }
+  }
+}

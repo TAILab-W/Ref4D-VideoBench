@@ -1,0 +1,139 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0378.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "decord",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "person",
+        "attributes": {
+          "color": [
+            "brown",
+            "red"
+          ],
+          "action": [
+            "walking"
+          ],
+          "pose": [
+            "standing"
+          ],
+          "equipment": [
+            "ski-poles"
+          ],
+          "clothing": [
+            "jacket"
+          ],
+          "signature": [
+            "red-jacket-brown-pants"
+          ]
+        },
+        "spans": [
+          [
+            0.3,
+            0.6
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "mountain",
+        "attributes": {
+          "color": [
+            "gray",
+            "white"
+          ],
+          "texture": [
+            "rocky",
+            "snowy"
+          ],
+          "feature": [
+            "peak",
+            "ridge"
+          ],
+          "signature": [
+            "snowy-peaks"
+          ]
+        },
+        "spans": [
+          [
+            0.1,
+            6.5
+          ]
+        ]
+      },
+      {
+        "id": "o3",
+        "name": "sky",
+        "attributes": {
+          "color": [
+            "blue"
+          ],
+          "condition": [
+            "clear"
+          ],
+          "signature": [
+            "clear-blue"
+          ]
+        },
+        "spans": [
+          [
+            0.1,
+            6.5
+          ]
+        ]
+      }
+    ],
+    "relations": [
+      {
+        "subject": "o1",
+        "predicate": "walking-on",
+        "object": "o2",
+        "spans": [
+          [
+            0.3,
+            0.6
+          ]
+        ],
+        "confidence": 0.9
+      },
+      {
+        "subject": "o1",
+        "predicate": "looking-at",
+        "object": "o2",
+        "spans": [
+          [
+            0.3,
+            0.6
+          ]
+        ],
+        "confidence": 0.8
+      },
+      {
+        "subject": "o1",
+        "predicate": "standing-on",
+        "object": "o2",
+        "spans": [
+          [
+            0.3,
+            0.6
+          ]
+        ],
+        "confidence": 0.9
+      }
+    ]
+  },
+  "views": {
+    "objects_count_display": {
+      "person": 1,
+      "mountain": 1,
+      "sky": 1
+    }
+  }
+}

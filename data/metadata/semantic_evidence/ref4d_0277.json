@@ -1,0 +1,170 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0277.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "cv2",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "person-(blue-shirt,-right-side)",
+        "attributes": {
+          "color": [
+            "blue"
+          ],
+          "sex": [
+            "male"
+          ],
+          "action": [
+            "manipulating-hot-iron",
+            "observing-machine-operation"
+          ],
+          "pose": [
+            "bending-forward",
+            "standing"
+          ],
+          "facing-direction": [
+            "left",
+            "right"
+          ],
+          "signature": [
+            "blue-shirt-right-side"
+          ]
+        },
+        "spans": [
+          [
+            0.7,
+            0.9
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "person-(black-shirt,-left-side)",
+        "attributes": {
+          "color": [
+            "black"
+          ],
+          "sex": [
+            "male"
+          ],
+          "action": [
+            "manipulating-hot-iron",
+            "observing-machine-operation"
+          ],
+          "pose": [
+            "bending-forward",
+            "standing"
+          ],
+          "facing-direction": [
+            "right"
+          ],
+          "signature": [
+            "black-shirt-left-side"
+          ]
+        },
+        "spans": [
+          [
+            0.3,
+            0.4
+          ]
+        ]
+      },
+      {
+        "id": "o3",
+        "name": "machine-(blue-press-machine)",
+        "attributes": {
+          "color": [
+            "blue"
+          ],
+          "material": [
+            "metal"
+          ],
+          "size": [
+            "large"
+          ],
+          "equipment": [
+            "press-machine"
+          ],
+          "object-part": [
+            "cylindrical-body",
+            "horizontal-anvil",
+            "round-opening",
+            "vertical-hammer"
+          ],
+          "signature": [
+            "large-blue-machine-with-round-opening"
+          ]
+        },
+        "spans": [
+          [
+            0.1,
+            0.5
+          ]
+        ]
+      }
+    ],
+    "relations": [
+      {
+        "subject": "o1",
+        "predicate": "right-of",
+        "object": "o2",
+        "spans": [
+          [
+            0.3,
+            0.4
+          ]
+        ],
+        "confidence": 0.9
+      },
+      {
+        "subject": "o2",
+        "predicate": "left-of",
+        "object": "o1",
+        "spans": [
+          [
+            0.3,
+            0.4
+          ]
+        ],
+        "confidence": 0.9
+      },
+      {
+        "subject": "o1",
+        "predicate": "inside",
+        "object": "o3",
+        "spans": [
+          [
+            0.1,
+            0.8
+          ]
+        ],
+        "confidence": 0.8
+      },
+      {
+        "subject": "o2",
+        "predicate": "inside",
+        "object": "o3",
+        "spans": [
+          [
+            0.1,
+            0.5
+          ]
+        ],
+        "confidence": 0.8
+      }
+    ]
+  },
+  "views": {
+    "objects_count_display": {
+      "person-(blue-shirt,-right-side)": 1,
+      "person-(black-shirt,-left-side)": 1,
+      "machine-(blue-press-machine)": 1
+    }
+  }
+}

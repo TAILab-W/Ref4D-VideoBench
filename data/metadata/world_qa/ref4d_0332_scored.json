@@ -1,0 +1,206 @@
+{
+  "summary": {
+    "items": 10,
+    "enter_bank": 9,
+    "clip_range_sec": [
+      0.0,
+      10.37
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does the central machinery process or transport materials in the construction site?",
+      "signals": [
+        "tool_contact(oTool,oObj)",
+        "material_optics(oA)",
+        "tool_usage_correct(oTool,for:oTask)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "material_optics(oA)": 37.5,
+        "tool_usage_correct(oTool,for:oTask)": 5.8333,
+        "tool_contact(oTool,oObj)": 5.6667
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Does the river below show slosh response due to nearby activity?",
+      "signals": [
+        "placeable(oObj,at:oTarget)",
+        "result_appearance(oObj)",
+        "slosh_response(oV,amp)"
+      ],
+      "content_score_60": 40,
+      "signal_score_40": 40.0,
+      "total_score_100": 80.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "slosh_response(oV,amp)": 34.1667,
+        "result_appearance(oObj)": 5.6667,
+        "placeable(oObj,at:oTarget)": 5.1667
+      },
+      "content_score_raw": "40"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Do workers maintain a safe distance from moving machines and debris?",
+      "signals": [
+        "friction_sliding(oA,on:oB)",
+        "collision(oA,oB)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 37.67,
+      "total_score_100": 87.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "collision(oA,oB)": 31.6667,
+        "friction_sliding(oA,on:oB)": 6.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Does the water in the pool maintain continuity and consistency in its appearance and behavior?",
+      "signals": [
+        "continuity(oX)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 36.67,
+      "total_score_100": 86.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(oX)": 36.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Does the shadow of the white vehicle on the right side match its position and orientation?",
+      "signals": [
+        "shadow_consistency(oX)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 36.67,
+      "total_score_100": 86.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "shadow_consistency(oX)": 36.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "The heavy machinery remains stable on uneven terrain, and workers stand at a safe distance.",
+      "signals": [
+        "balance(oX)",
+        "center_of_mass_over_base(oX)",
+        "friction_sliding(oA,on:oB)",
+        "collision(oA,oB)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "balance(oX)": 35.8333,
+        "center_of_mass_over_base(oX)": 6.5,
+        "collision(oA,oB)": 6.3333,
+        "friction_sliding(oA,on:oB)": 6.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "The central machine processes or transports materials in the construction site.",
+      "signals": [
+        "tool_contact(oTool,oObj)",
+        "material_optics(oA)",
+        "tool_usage_correct(oTool,for:oTask)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "material_optics(oA)": 37.5,
+        "tool_usage_correct(oTool,for:oTask)": 5.8333,
+        "tool_contact(oTool,oObj)": 5.6667
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "A water body is present as a natural feature within the construction area.",
+      "signals": [
+        "placeable(oObj,at:oTarget)",
+        "result_appearance(oObj)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 33.5,
+      "total_score_100": 83.5,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "result_appearance(oObj)": 28.3333,
+        "placeable(oObj,at:oTarget)": 5.1667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "The pool's water maintains continuity and consistency in its appearance.",
+      "signals": [
+        "continuity(oX)"
+      ],
+      "content_score_60": 40,
+      "signal_score_40": 36.67,
+      "total_score_100": 76.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(oX)": 36.6667
+      },
+      "content_score_raw": "40"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "The shadow of the white vehicle matches its position and orientation.",
+      "signals": [
+        "shadow_consistency(oX)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 36.67,
+      "total_score_100": 86.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "shadow_consistency(oX)": 36.6667
+      },
+      "content_score_raw": "50"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "v5",
+    "a1",
+    "a2",
+    "a3",
+    "a5"
+  ]
+}

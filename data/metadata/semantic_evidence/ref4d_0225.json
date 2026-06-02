@@ -1,0 +1,207 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0225.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "cv2",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "person",
+        "attributes": {
+          "signature": [
+            "person-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            10.0
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "person",
+        "attributes": {
+          "signature": [
+            "person-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            10.0
+          ]
+        ]
+      },
+      {
+        "id": "o3",
+        "name": "person",
+        "attributes": {
+          "signature": [
+            "person-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            10.0
+          ]
+        ]
+      },
+      {
+        "id": "o4",
+        "name": "person",
+        "attributes": {
+          "signature": [
+            "person-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            10.0
+          ]
+        ]
+      },
+      {
+        "id": "o5",
+        "name": "person",
+        "attributes": {
+          "signature": [
+            "person-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            10.0
+          ]
+        ]
+      },
+      {
+        "id": "o6",
+        "name": "pancake",
+        "attributes": {
+          "signature": [
+            "pancake-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            10.0
+          ]
+        ]
+      },
+      {
+        "id": "o7",
+        "name": "fire",
+        "attributes": {
+          "signature": [
+            "fire-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            10.0
+          ]
+        ]
+      },
+      {
+        "id": "o8",
+        "name": "glove",
+        "attributes": {
+          "signature": [
+            "glove-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            10.0
+          ]
+        ]
+      },
+      {
+        "id": "o9",
+        "name": "glove",
+        "attributes": {
+          "signature": [
+            "glove-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            10.0
+          ]
+        ]
+      },
+      {
+        "id": "o10",
+        "name": "knife",
+        "attributes": {
+          "signature": [
+            "knife-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            10.0
+          ]
+        ]
+      },
+      {
+        "id": "o11",
+        "name": "spatula",
+        "attributes": {
+          "signature": [
+            "spatula-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            10.0
+          ]
+        ]
+      },
+      {
+        "id": "o12",
+        "name": "plate",
+        "attributes": {
+          "signature": [
+            "plate-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            10.0
+          ]
+        ]
+      }
+    ],
+    "relations": []
+  },
+  "views": {
+    "objects_count_display": {
+      "person": 5,
+      "pancake": 1,
+      "fire": 1,
+      "glove": 2,
+      "knife": 1,
+      "spatula": 1,
+      "plate": 1
+    }
+  }
+}

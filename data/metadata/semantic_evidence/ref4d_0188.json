@@ -1,0 +1,153 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0188.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "cv2",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "footwear",
+        "attributes": {
+          "color": [
+            "blue",
+            "orange"
+          ],
+          "pattern": [
+            "grid",
+            "mesh",
+            "striped"
+          ],
+          "texture": [
+            "arch-support",
+            "breathable",
+            "cushion",
+            "heel-relief",
+            "reinforced",
+            "stretchable",
+            "thick"
+          ],
+          "material": [
+            "foam",
+            "mesh",
+            "rubber"
+          ],
+          "size": [
+            "large"
+          ],
+          "age": [
+            "adult"
+          ],
+          "sex": [
+            "male"
+          ],
+          "state": [
+            "functional",
+            "worn"
+          ],
+          "pose": [
+            "flexing",
+            "rotating",
+            "standing"
+          ],
+          "action": [
+            "demonstrating-features"
+          ],
+          "orientation": [
+            "angled",
+            "rotating",
+            "upright"
+          ],
+          "facing-direction": [
+            "bottom",
+            "front",
+            "side"
+          ],
+          "position": [
+            "centered",
+            "on-platform"
+          ],
+          "object-part": [
+            "arch",
+            "cuff",
+            "foot",
+            "heel",
+            "sole",
+            "toe",
+            "upper"
+          ],
+          "tool-or-instrument": [
+            "none"
+          ],
+          "equipment": [
+            "platform"
+          ],
+          "species-or-breed": [
+            "human"
+          ],
+          "vehicle-type": [
+            "none"
+          ],
+          "food-type": [
+            "none"
+          ],
+          "brand-or-logo": [
+            "none"
+          ],
+          "printed-text": [
+            "arch-support",
+            "breathable",
+            "reinforced-cushion",
+            "relieve-heel",
+            "stretchable",
+            "thick"
+          ],
+          "number-or-id": [
+            "none"
+          ],
+          "art-medium": [
+            "animation"
+          ],
+          "style": [
+            "product-demonstration",
+            "technical"
+          ],
+          "weather": [
+            "none"
+          ],
+          "lighting": [
+            "highlighted",
+            "studio"
+          ],
+          "scene": [
+            "product-showcase"
+          ],
+          "camera-view": [
+            "close-up",
+            "rotating"
+          ],
+          "signature": [
+            "blue-and-orange-sock-with-various-features-highlighted"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            11.1
+          ]
+        ]
+      }
+    ],
+    "relations": []
+  },
+  "views": {
+    "objects_count_display": {
+      "footwear": 1
+    }
+  }
+}

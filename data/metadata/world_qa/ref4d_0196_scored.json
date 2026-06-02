@@ -1,0 +1,217 @@
+{
+  "summary": {
+    "items": 10,
+    "enter_bank": 10,
+    "clip_range_sec": [
+      0.0,
+      7.07
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does the lime wedge remain stationary on the table next to the taco?",
+      "signals": [
+        "support(taco,foil)",
+        "grasp_stability(person,taco)",
+        "interpenetration(taco,foil)",
+        "support(lime-wedge,table)",
+        "friction_sliding(lime-wedge,on:table)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "interpenetration(taco,foil)": 35.8333,
+        "support(taco,foil)": 7.0,
+        "support(lime-wedge,table)": 7.0,
+        "friction_sliding(lime-wedge,on:table)": 6.0,
+        "grasp_stability(person,taco)": 5.6667
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Does the cup in the background maintain consistent size and shadow throughout the sequence?",
+      "signals": [
+        "size_inconsistency",
+        "shadow_consistency"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "size_inconsistency": 37.5,
+        "shadow_consistency": 7.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Does the foil under the food items show continuity in its position without interpenetrating with other objects?",
+      "signals": [
+        "continuity",
+        "interpenetration"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity": 36.6667,
+        "interpenetration": 7.1667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Is the taco held by a hand during the eating process before being brought to the mouth?",
+      "signals": [
+        "grasp_stability"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 28.33,
+      "total_score_100": 83.33,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "grasp_stability": 28.3333
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Does the meat inside the taco suddenly appear or disappear, maintaining material consistency?",
+      "signals": [
+        "material_optics(taco)",
+        "size_inconsistency(taco)",
+        "fracture(taco)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "material_optics(taco)": 37.5,
+        "size_inconsistency(taco)": 7.5,
+        "fracture(taco)": 6.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "The taco is held by a hand and supported on foil without interpenetration.",
+      "signals": [
+        "support(taco,foil)",
+        "grasp_stability(person,taco)",
+        "interpenetration(taco,foil)",
+        "continuity",
+        "interpenetration"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity": 36.6667,
+        "interpenetration(taco,foil)": 7.1667,
+        "interpenetration": 7.1667,
+        "support(taco,foil)": 7.0,
+        "grasp_stability(person,taco)": 5.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "The lime wedge remains stationary next to the taco on the table.",
+      "signals": [
+        "support(lime-wedge,table)",
+        "friction_sliding(lime-wedge,on:table)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "support(lime-wedge,table)": 35.0,
+        "friction_sliding(lime-wedge,on:table)": 6.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "The lime wedge stays in place during the scene.",
+      "signals": [
+        "support"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 35.0,
+      "total_score_100": 85.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "support": 35.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "The food inside the taco does not suddenly appear or disappear.",
+      "signals": [
+        "material_optics(taco)",
+        "size_inconsistency(taco)",
+        "fracture(taco)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "material_optics(taco)": 37.5,
+        "size_inconsistency(taco)": 7.5,
+        "fracture(taco)": 6.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "The cup in the background maintains consistent size and shadow.",
+      "signals": [
+        "size_inconsistency",
+        "shadow_consistency"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "size_inconsistency": 37.5,
+        "shadow_consistency": 7.3333
+      },
+      "content_score_raw": "50"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "v5",
+    "a1",
+    "a2",
+    "a3",
+    "a4",
+    "a5"
+  ]
+}

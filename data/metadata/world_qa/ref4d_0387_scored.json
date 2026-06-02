@@ -1,0 +1,206 @@
+{
+  "summary": {
+    "items": 10,
+    "enter_bank": 9,
+    "clip_range_sec": [
+      0.0,
+      8.83
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does the blue tarp remain on the ground without floating or interpenetrating with other objects?",
+      "signals": [
+        "buoyancy_float(oA,in:oV)",
+        "shadow_consistency(oX)",
+        "support(oA,oB)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "shadow_consistency(oX)": 36.6667,
+        "support(oA,oB)": 7.0,
+        "buoyancy_float(oA,in:oV)": 6.8333
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Can the person grasp the white-and-orange net for its intended purpose?",
+      "signals": [
+        "material_optics(oA)",
+        "friction_sliding(oA,on:oB)",
+        "tool_contact(oTool,oObj)",
+        "grasp_stability(hand,net)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "material_optics(oA)": 37.5,
+        "friction_sliding(oA,on:oB)": 6.0,
+        "tool_contact(oTool,oObj)": 5.6667,
+        "grasp_stability(hand,net)": 5.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Is the area where the person works potentially uneven terrain?",
+      "signals": [
+        "friction_sliding(foot,on:ground)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 30.0,
+      "total_score_100": 80.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "friction_sliding(foot,on:ground)": 30.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Are the person's feet barefoot in a dirt area near water?",
+      "signals": [
+        "friction_sliding(foot,on:soil)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 30.0,
+      "total_score_100": 85.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "friction_sliding(foot,on:soil)": 30.0
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Does the person's hand maintain grasp stability while handling the net?",
+      "signals": [
+        "grasp_stability(oHand,oObj)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 28.33,
+      "total_score_100": 78.33,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "grasp_stability(oHand,oObj)": 28.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "The person is barefoot in a dirt area near water.",
+      "signals": [
+        "friction_sliding(foot,on:ground)",
+        "friction_sliding(foot,on:soil)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 36.0,
+      "total_score_100": 96.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "friction_sliding(foot,on:ground)": 30.0,
+        "friction_sliding(foot,on:soil)": 6.0
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "The person holds the white-and-orange net with their hand.",
+      "signals": [
+        "tool_contact(net,hand)",
+        "grasp_stability(hand,net)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 34.0,
+      "total_score_100": 94.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "tool_contact(net,hand)": 28.3333,
+        "grasp_stability(hand,net)": 5.6667
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "The wet net is manipulated on the blue tarp.",
+      "signals": [
+        "material_optics(oA)",
+        "friction_sliding(oA,on:oB)",
+        "tool_contact(oTool,oObj)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "material_optics(oA)": 37.5,
+        "friction_sliding(oA,on:oB)": 6.0,
+        "tool_contact(oTool,oObj)": 5.6667
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "The blue tarp remains on the ground without floating.",
+      "signals": [
+        "buoyancy_float(oA,in:oV)",
+        "shadow_consistency(oX)",
+        "support(oA,oB)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "shadow_consistency(oX)": 36.6667,
+        "support(oA,oB)": 7.0,
+        "buoyancy_float(oA,in:oV)": 6.8333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "The person's hand maintains grasp stability while handling the net.",
+      "signals": [
+        "grasp_stability(oHand,oObj)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 28.33,
+      "total_score_100": 88.33,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "grasp_stability(oHand,oObj)": 28.3333
+      },
+      "content_score_raw": "60"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "a1",
+    "a2",
+    "a3",
+    "a4",
+    "a5"
+  ]
+}

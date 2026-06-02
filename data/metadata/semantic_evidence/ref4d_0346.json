@@ -1,0 +1,84 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0346.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "decord",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "boat",
+        "attributes": {
+          "signature": [
+            "traditional-outrigger-boat"
+          ]
+        },
+        "spans": [
+          [
+            0.2,
+            2.1
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "rock",
+        "attributes": {
+          "signature": [
+            "jagged-cliff"
+          ]
+        },
+        "spans": [
+          [
+            0.1,
+            2.2
+          ]
+        ]
+      },
+      {
+        "id": "o3",
+        "name": "tree",
+        "attributes": {
+          "signature": [
+            "green-foliage"
+          ]
+        },
+        "spans": [
+          [
+            0.1,
+            2.2
+          ]
+        ]
+      },
+      {
+        "id": "o4",
+        "name": "water",
+        "attributes": {
+          "signature": [
+            "clear-blue-sea"
+          ]
+        },
+        "spans": [
+          [
+            0.1,
+            2.2
+          ]
+        ]
+      }
+    ],
+    "relations": []
+  },
+  "views": {
+    "objects_count_display": {
+      "boat": 1,
+      "rock": 1,
+      "tree": 1,
+      "water": 1
+    }
+  }
+}

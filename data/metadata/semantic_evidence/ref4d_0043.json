@@ -1,0 +1,182 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0043.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "cv2",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "lizard",
+        "attributes": {
+          "color": [
+            "brown",
+            "yellow"
+          ],
+          "pattern": [
+            "spiky"
+          ],
+          "texture": [
+            "rough"
+          ],
+          "size": [
+            "small"
+          ],
+          "state": [
+            "alert",
+            "perched"
+          ],
+          "pose": [
+            "sitting"
+          ],
+          "action": [
+            "resting"
+          ],
+          "orientation": [
+            "facing-right"
+          ],
+          "facing-direction": [
+            "right"
+          ],
+          "position": [
+            "on-plant"
+          ],
+          "object-part": [
+            "body",
+            "head",
+            "tail"
+          ],
+          "signature": [
+            "brown-spiky-skin-yellow-eye"
+          ]
+        },
+        "spans": [
+          [
+            0.2,
+            4.3
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "flower",
+        "attributes": {
+          "signature": [
+            "flower"
+          ]
+        },
+        "spans": [
+          [
+            0.2,
+            4.3
+          ]
+        ]
+      },
+      {
+        "id": "o3",
+        "name": "plant",
+        "attributes": {
+          "signature": [
+            "plant"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            4.3
+          ]
+        ]
+      },
+      {
+        "id": "o4",
+        "name": "lizard",
+        "attributes": {
+          "color": [
+            "green",
+            "orange",
+            "yellow"
+          ],
+          "pattern": [
+            "scales"
+          ],
+          "texture": [
+            "rough",
+            "spiky"
+          ],
+          "material": [
+            "reptile"
+          ],
+          "size": [
+            "small"
+          ],
+          "state": [
+            "alert",
+            "perched"
+          ],
+          "pose": [
+            "clinging"
+          ],
+          "action": [
+            "resting"
+          ],
+          "orientation": [
+            "upright"
+          ],
+          "facing-direction": [
+            "right"
+          ],
+          "skin-condition": [
+            "wet"
+          ],
+          "signature": [
+            "green-yellow-scales-orange-eye-ring"
+          ]
+        },
+        "spans": [
+          [
+            4.3,
+            9.6
+          ]
+        ]
+      }
+    ],
+    "relations": [
+      {
+        "subject": "o1",
+        "predicate": "looking-at",
+        "object": "o2",
+        "spans": [
+          [
+            0.3,
+            4.3
+          ]
+        ],
+        "confidence": 0.9
+      },
+      {
+        "subject": "o1",
+        "predicate": "perched-on",
+        "object": "o3",
+        "spans": [
+          [
+            0.5,
+            4.3
+          ]
+        ],
+        "confidence": 0.9
+      }
+    ]
+  },
+  "views": {
+    "objects_count_display": {
+      "lizard": 2,
+      "flower": 1,
+      "plant": 1
+    }
+  }
+}

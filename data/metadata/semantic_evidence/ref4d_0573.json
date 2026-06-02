@@ -1,0 +1,172 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0573.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "cv2",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "helicopter",
+        "attributes": {
+          "color": [
+            "black",
+            "white"
+          ],
+          "size": [
+            "large"
+          ],
+          "state": [
+            "hovering",
+            "moving-forward"
+          ],
+          "action": [
+            "hovering",
+            "moving-forward"
+          ],
+          "orientation": [
+            "facing-forward"
+          ],
+          "position": [
+            "center",
+            "foreground"
+          ],
+          "object-part": [
+            "open-door",
+            "rotating-blades",
+            "snow-skis"
+          ],
+          "tool-or-instrument": [
+            "rotating-blades"
+          ],
+          "signature": [
+            "black-and-white-snow-skis-rotating-blades"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            2.9
+          ],
+          [
+            3.4,
+            4.5
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "person",
+        "attributes": {
+          "color": [
+            "black",
+            "blue"
+          ],
+          "sex": [
+            "male"
+          ],
+          "age": [
+            "adult"
+          ],
+          "state": [
+            "adjusting-gear",
+            "holding-door",
+            "seated"
+          ],
+          "pose": [
+            "leaning-out",
+            "sitting-on-step"
+          ],
+          "action": [
+            "adjusting-gear",
+            "holding-door",
+            "preparing-to-enter"
+          ],
+          "orientation": [
+            "facing-forward"
+          ],
+          "position": [
+            "inside-helicopter",
+            "right-side"
+          ],
+          "equipment": [
+            "black-pants",
+            "blue-jacket",
+            "gloves",
+            "helmet"
+          ],
+          "signature": [
+            "blue-jacket-black-pants-helmet"
+          ]
+        },
+        "spans": [
+          [
+            2.7,
+            5.0
+          ]
+        ]
+      }
+    ],
+    "relations": [
+      {
+        "subject": "o2",
+        "predicate": "entering",
+        "object": "o1",
+        "spans": [
+          [
+            3.8,
+            5.0
+          ]
+        ],
+        "confidence": 0.9
+      },
+      {
+        "subject": "o2",
+        "predicate": "holding",
+        "object": "o1",
+        "spans": [
+          [
+            4.6,
+            4.7
+          ]
+        ],
+        "confidence": 0.8
+      },
+      {
+        "subject": "o2",
+        "predicate": "adjusting",
+        "object": "o1",
+        "spans": [
+          [
+            4.7,
+            5.0
+          ]
+        ],
+        "confidence": 0.8
+      },
+      {
+        "subject": "o1",
+        "predicate": "facing",
+        "object": "o2",
+        "spans": [
+          [
+            0.0,
+            2.9
+          ]
+        ],
+        "confidence": 0.9
+      }
+    ]
+  },
+  "views": {
+    "objects_count_display": {
+      "helicopter": 1,
+      "person": 1
+    }
+  }
+}

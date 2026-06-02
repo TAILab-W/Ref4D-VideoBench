@@ -1,0 +1,197 @@
+{
+  "summary": {
+    "items": 10,
+    "enter_bank": 8,
+    "clip_range_sec": [
+      0.0,
+      8.93
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does the blue-coiled hose on the right side of the machine remain properly coiled and connected?",
+      "signals": [
+        "deformation(hose)",
+        "fracture(hose)",
+        "friction_sliding(hose,on:table)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "deformation(hose)": 40.0,
+        "fracture(hose)": 6.3333,
+        "friction_sliding(hose,on:table)": 6.0
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Is the operator's hand clear of the blade path during operation?",
+      "signals": [
+        "prohibited_intersection(machine,operator)",
+        "falling_hazard(machine)",
+        "blade_orientation_away(blade,hand)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "prohibited_intersection(machine,operator)": 36.6667,
+        "falling_hazard(machine)": 6.3333,
+        "blade_orientation_away(blade,hand)": 5.8333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Is the work table metallic with a wooden board placed on it?",
+      "signals": [
+        "tool_contact(machine,table)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 28.33,
+      "total_score_100": 83.33,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "tool_contact(machine,table)": 28.3333
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Does the blue hose stay connected to the machine without floating or detaching suddenly?",
+      "signals": [
+        "continuity(hose)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 36.67,
+      "total_score_100": 86.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(hose)": 36.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Do the machine's components maintain physical consistency without sudden changes in position?",
+      "signals": [
+        "continuity(machine)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 36.67,
+      "total_score_100": 86.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(machine)": 36.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "The blue-coiled hose on the right side of the machine remains properly coiled.",
+      "signals": [
+        "deformation(hose)",
+        "fracture(hose)",
+        "friction_sliding(hose,on:table)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "deformation(hose)": 40.0,
+        "fracture(hose)": 6.3333,
+        "friction_sliding(hose,on:table)": 6.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "The large-black machine with red-and-yellow controls operates within its designated workspace.",
+      "signals": [
+        "prohibited_intersection(machine,operator)",
+        "falling_hazard(machine)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "prohibited_intersection(machine,operator)": 36.6667,
+        "falling_hazard(machine)": 6.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "The CNC machine processes a metallic work table with a wooden board placed on it.",
+      "signals": [
+        "tool_contact(machine,table)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 28.33,
+      "total_score_100": 78.33,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "tool_contact(machine,table)": 28.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "The blue hose is connected to the machine and does not float without support.",
+      "signals": [
+        "continuity(hose)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 36.67,
+      "total_score_100": 86.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(hose)": 36.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "No operator's hand is visible in the blade path during operation.",
+      "signals": [
+        "blade_orientation_away(blade,hand)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 29.17,
+      "total_score_100": 79.17,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "blade_orientation_away(blade,hand)": 29.1667
+      },
+      "content_score_raw": "50"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "v5",
+    "a1",
+    "a2",
+    "a4"
+  ]
+}

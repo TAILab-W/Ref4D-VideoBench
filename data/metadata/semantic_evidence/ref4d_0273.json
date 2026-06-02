@@ -1,0 +1,71 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0273.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "cv2",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "machine",
+        "attributes": {
+          "color": [
+            "black",
+            "gray"
+          ],
+          "material": [
+            "metal"
+          ],
+          "state": [
+            "operational"
+          ],
+          "signature": [
+            "gray-black-metallic-surface"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            1.0
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "rebar",
+        "attributes": {
+          "color": [
+            "gray"
+          ],
+          "material": [
+            "steel"
+          ],
+          "texture": [
+            "twisted"
+          ],
+          "signature": [
+            "twisted-steel-bar"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            1.0
+          ]
+        ]
+      }
+    ],
+    "relations": []
+  },
+  "views": {
+    "objects_count_display": {
+      "machine": 1,
+      "rebar": 1
+    }
+  }
+}

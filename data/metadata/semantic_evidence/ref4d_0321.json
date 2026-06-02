@@ -1,0 +1,148 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0321.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "decord",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "cloud",
+        "attributes": {
+          "color": [
+            "blue",
+            "golden-yellow",
+            "orange"
+          ],
+          "pattern": [
+            "fluffy",
+            "scattered"
+          ],
+          "texture": [
+            "layered",
+            "soft"
+          ],
+          "signature": [
+            "fluffy,-scattered,-soft,-layered"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            8.2
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "house",
+        "attributes": {
+          "color": [
+            "dark"
+          ],
+          "shape": [
+            "triangular-roof"
+          ],
+          "position": [
+            "silhouette"
+          ],
+          "signature": [
+            "dark-silhouette-with-triangular-roof"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            8.2
+          ]
+        ]
+      },
+      {
+        "id": "o3",
+        "name": "tree",
+        "attributes": {
+          "color": [
+            "dark"
+          ],
+          "shape": [
+            "foliage"
+          ],
+          "position": [
+            "silhouette"
+          ],
+          "signature": [
+            "dark-foliage-silhouette"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            8.2
+          ]
+        ]
+      }
+    ],
+    "relations": [
+      {
+        "subject": "o1",
+        "predicate": "above",
+        "object": "o2",
+        "spans": [
+          [
+            0.0,
+            8.2
+          ]
+        ],
+        "confidence": 0.9
+      },
+      {
+        "subject": "o1",
+        "predicate": "above",
+        "object": "o3",
+        "spans": [
+          [
+            0.0,
+            8.2
+          ]
+        ],
+        "confidence": 0.9
+      },
+      {
+        "subject": "o2",
+        "predicate": "below",
+        "object": "o1",
+        "spans": [
+          [
+            0.0,
+            8.2
+          ]
+        ],
+        "confidence": 0.9
+      },
+      {
+        "subject": "o3",
+        "predicate": "below",
+        "object": "o1",
+        "spans": [
+          [
+            0.0,
+            8.2
+          ]
+        ],
+        "confidence": 0.9
+      }
+    ]
+  },
+  "views": {
+    "objects_count_display": {
+      "cloud": 1,
+      "house": 1,
+      "tree": 1
+    }
+  }
+}

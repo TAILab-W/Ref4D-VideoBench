@@ -1,0 +1,200 @@
+{
+  "summary": {
+    "items": 10,
+    "enter_bank": 9,
+    "clip_range_sec": [
+      0.0,
+      8.0
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Are the birds near the water foraging?",
+      "signals": [
+        "buoyancy_float(fish,in:water)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 34.17,
+      "total_score_100": 89.17,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "buoyancy_float(fish,in:water)": 34.1667
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Do the birds walk on land and wade in water naturally?",
+      "signals": [
+        "biological_motion(bird)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 38.33,
+      "total_score_100": 88.33,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "biological_motion(bird)": 38.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Does the large rock stay afloat without sinking or moving suddenly?",
+      "signals": [
+        "buoyancy_float",
+        "continuity"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity": 36.6667,
+        "buoyancy_float": 6.8333
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Do the shadows of the birds align with their positions under the sunlight?",
+      "signals": [
+        "shadow_consistency"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 36.67,
+      "total_score_100": 86.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "shadow_consistency": 36.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Do the fish move through the water following gravity?",
+      "signals": [
+        "continuity(bird)",
+        "buoyancy_float(fish,in:water)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(bird)": 36.6667,
+        "buoyancy_float(fish,in:water)": 6.8333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "Birds stand on the shore and walk near the water, fish are in the lake.",
+      "signals": [
+        "buoyancy_float(fish,in:water)",
+        "biological_motion(bird)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "biological_motion(bird)": 38.3333,
+        "buoyancy_float(fish,in:water)": 6.8333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "A bird flies over the water with a fish in its beak.",
+      "signals": [
+        "continuity(bird)",
+        "buoyancy_float(fish,in:water)",
+        "biological_motion"
+      ],
+      "content_score_60": 0,
+      "signal_score_40": 40.0,
+      "total_score_100": 40.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "biological_motion": 38.3333,
+        "continuity(bird)": 7.3333,
+        "buoyancy_float(fish,in:water)": 6.8333
+      },
+      "content_score_raw": "0"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "Rocks float or rest at the bottom of the clear blue lake.",
+      "signals": [
+        "buoyancy_float",
+        "continuity"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity": 36.6667,
+        "buoyancy_float": 6.8333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "Shadows from birds fall onto the ground.",
+      "signals": [
+        "shadow_consistency"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 36.67,
+      "total_score_100": 96.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "shadow_consistency": 36.6667
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "Birds move naturally on land and in the air, following physical laws.",
+      "signals": [
+        "biological_motion(bird)",
+        "continuity(bird)",
+        "buoyancy_float(fish,in:water)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "biological_motion(bird)": 38.3333,
+        "continuity(bird)": 7.3333,
+        "buoyancy_float(fish,in:water)": 6.8333
+      },
+      "content_score_raw": "60"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "v5",
+    "a1",
+    "a3",
+    "a4",
+    "a5"
+  ]
+}

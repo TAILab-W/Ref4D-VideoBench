@@ -1,0 +1,209 @@
+{
+  "summary": {
+    "items": 10,
+    "enter_bank": 8,
+    "clip_range_sec": [
+      0.0,
+      14.5
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does the barbell stay in a stable position relative to the ground without moving?",
+      "signals": [
+        "balance(oX)",
+        "interpenetration(barbell,ground)",
+        "collision(barbell,exercise_bench)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "balance(oX)": 35.8333,
+        "interpenetration(barbell,ground)": 7.1667,
+        "collision(barbell,exercise_bench)": 6.3333
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Across the clip, does the shadow of the barbell on the floor match its actual position and light source?",
+      "signals": [
+        "interpenetration(barbell, floor)",
+        "friction_sliding(barbell, on: floor)",
+        "shadow_consistency"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "shadow_consistency": 36.6667,
+        "interpenetration(barbell, floor)": 7.1667,
+        "friction_sliding(barbell, on: floor)": 6.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "During sit-ups, does the man's body maintain balance continuously without sudden state changes?",
+      "signals": [
+        "center_of_mass_over_base(oX)",
+        "continuity",
+        "balance"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity": 36.6667,
+        "balance": 7.1667,
+        "center_of_mass_over_base(oX)": 6.5
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Are the weight plates correctly placed and supported by the rowing machine during use?",
+      "signals": [
+        "support(weight, barbell)",
+        "support(oA,oB)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "support(weight, barbell)": 35.0,
+        "support(oA,oB)": 7.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Does the man’s body show any sudden size inconsistency or frame discontinuity while performing exercises?",
+      "signals": [
+        "continuity(person)",
+        "size_inconsistency(person)",
+        "frame_discontinuity(t)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "frame_discontinuity(t)": 40.0,
+        "size_inconsistency(person)": 7.5,
+        "continuity(person)": 7.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "The person performs sit-ups on the barbell, maintaining balance and continuity.",
+      "signals": [
+        "balance(oX)",
+        "continuity(person)",
+        "size_inconsistency(person)",
+        "frame_discontinuity(t)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "frame_discontinuity(t)": 40.0,
+        "size_inconsistency(person)": 7.5,
+        "continuity(person)": 7.3333,
+        "balance(oX)": 7.1667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "The barbell remains stationary relative to the ground with no interpenetration.",
+      "signals": [
+        "interpenetration(barbell,ground)",
+        "collision(barbell,exercise_bench)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "interpenetration(barbell,ground)": 35.8333,
+        "collision(barbell,exercise_bench)": 6.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "The gym environment is safe for physical activity without visible hazards.",
+      "signals": [
+        "prohibited_intersection"
+      ],
+      "content_score_60": 40,
+      "signal_score_40": 36.67,
+      "total_score_100": 76.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "prohibited_intersection": 36.6667
+      },
+      "content_score_raw": "40"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "The rowing machine supports the user's weight during exercise.",
+      "signals": [
+        "center_of_mass_over_base(oX)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 32.5,
+      "total_score_100": 82.5,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "center_of_mass_over_base(oX)": 32.5
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "The shadow of the barbell on the floor matches its position and light source.",
+      "signals": [
+        "shadow_consistency"
+      ],
+      "content_score_60": 20,
+      "signal_score_40": 36.67,
+      "total_score_100": 56.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "shadow_consistency": 36.6667
+      },
+      "content_score_raw": "20"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "v5",
+    "a1",
+    "a2",
+    "a4"
+  ]
+}

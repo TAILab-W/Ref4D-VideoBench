@@ -1,0 +1,134 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0213.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "cv2",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "bowl",
+        "attributes": {
+          "color": [
+            "white"
+          ],
+          "content": [
+            "cereal",
+            "strawberries"
+          ],
+          "signature": [
+            "white-round-bowl-with-cereal-and-strawberries"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            4.3
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "honey",
+        "attributes": {
+          "color": [
+            "golden"
+          ],
+          "action": [
+            "pouring"
+          ],
+          "signature": [
+            "golden-liquid-being-poured"
+          ]
+        },
+        "spans": [
+          [
+            0.3,
+            4.3
+          ]
+        ]
+      },
+      {
+        "id": "o3",
+        "name": "bottle",
+        "attributes": {
+          "color": [
+            "green"
+          ],
+          "printed-text": [
+            "omega-3"
+          ],
+          "signature": [
+            "green-bottle-with-label"
+          ]
+        },
+        "spans": [
+          [
+            0.4,
+            4.3
+          ]
+        ]
+      },
+      {
+        "id": "o4",
+        "name": "candle",
+        "attributes": {
+          "color": [
+            "orange"
+          ],
+          "state": [
+            "lit"
+          ],
+          "signature": [
+            "lit-candle-in-glass-holder"
+          ]
+        },
+        "spans": [
+          [
+            0.7,
+            4.3
+          ]
+        ]
+      }
+    ],
+    "relations": [
+      {
+        "subject": "o1",
+        "predicate": "contains",
+        "object": "o2",
+        "spans": [
+          [
+            0.3,
+            4.3
+          ]
+        ],
+        "confidence": 0.9
+      },
+      {
+        "subject": "o1",
+        "predicate": "beside",
+        "object": "o3",
+        "spans": [
+          [
+            0.4,
+            4.3
+          ]
+        ],
+        "confidence": 0.9
+      }
+    ]
+  },
+  "views": {
+    "objects_count_display": {
+      "bowl": 1,
+      "honey": 1,
+      "bottle": 1,
+      "candle": 1
+    }
+  }
+}

@@ -1,0 +1,253 @@
+{
+  "summary": {
+    "items": 10,
+    "enter_bank": 10,
+    "clip_range_sec": [
+      0.0,
+      6.53
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does the baby gorilla rest on the adult's chest without interpenetration?",
+      "signals": [
+        "support(oA,oB)",
+        "containment(oA,oB)",
+        "continuity(oX)",
+        "biological_motion",
+        "interpenetration"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "biological_motion": 38.3333,
+        "continuity(oX)": 7.3333,
+        "interpenetration": 7.1667,
+        "support(oA,oB)": 7.0,
+        "containment(oA,oB)": 5.8333
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Do the gorillas maintain stable positions throughout the clip?",
+      "signals": [
+        "continuity(gorilla)",
+        "continuity(baby)",
+        "support(gorilla,ground)",
+        "biological_motion(gorilla)",
+        "biological_motion(baby)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "biological_motion(gorilla)": 38.3333,
+        "biological_motion(baby)": 7.6667,
+        "continuity(gorilla)": 7.3333,
+        "continuity(baby)": 7.3333,
+        "support(gorilla,ground)": 7.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Does the adult gorilla's body show any unnatural deformation?",
+      "signals": [
+        "continuity",
+        "deformation"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "deformation": 40.0,
+        "continuity": 7.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Is the environment dense foliage around the gorillas?",
+      "signals": [
+        "support",
+        "containment"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "support": 35.0,
+        "containment": 5.8333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Are there any sudden changes in the gorillas' postures?",
+      "signals": [
+        "continuity(gorilla)",
+        "continuity(baby)",
+        "support(gorilla,ground)",
+        "biological_motion(gorilla)",
+        "biological_motion(baby)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "biological_motion(gorilla)": 38.3333,
+        "biological_motion(baby)": 7.6667,
+        "continuity(gorilla)": 7.3333,
+        "continuity(baby)": 7.3333,
+        "support(gorilla,ground)": 7.0
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "The baby gorilla rests on the adult gorilla's chest, supported by its arms.",
+      "signals": [
+        "support(oA,oB)",
+        "containment(oA,oB)",
+        "continuity(oX)",
+        "continuity(gorilla)",
+        "continuity(baby)",
+        "support(gorilla,ground)",
+        "biological_motion(gorilla)",
+        "biological_motion(baby)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "biological_motion(gorilla)": 38.3333,
+        "biological_motion(baby)": 7.6667,
+        "continuity(oX)": 7.3333,
+        "continuity(gorilla)": 7.3333,
+        "continuity(baby)": 7.3333,
+        "support(oA,oB)": 7.0,
+        "support(gorilla,ground)": 7.0,
+        "containment(oA,oB)": 5.8333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "The adult gorilla maintains a natural posture with no frame discontinuity.",
+      "signals": [
+        "continuity(gorilla)",
+        "continuity(baby)",
+        "biological_motion(gorilla)",
+        "biological_motion(baby)",
+        "continuity",
+        "deformation"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "deformation": 40.0,
+        "biological_motion(gorilla)": 7.6667,
+        "biological_motion(baby)": 7.6667,
+        "continuity(gorilla)": 7.3333,
+        "continuity(baby)": 7.3333,
+        "continuity": 7.3333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "Dense green foliage surrounds the gorillas, providing support for their resting position.",
+      "signals": [
+        "biological_motion",
+        "interpenetration",
+        "support",
+        "containment"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "biological_motion": 38.3333,
+        "interpenetration": 7.1667,
+        "support": 7.0,
+        "containment": 5.8333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "The gorilla and baby maintain a stable interaction without sudden position changes.",
+      "signals": [
+        "continuity(gorilla)",
+        "continuity(baby)",
+        "support(gorilla,ground)",
+        "biological_motion(gorilla)",
+        "biological_motion(baby)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "biological_motion(gorilla)": 38.3333,
+        "biological_motion(baby)": 7.6667,
+        "continuity(gorilla)": 7.3333,
+        "continuity(baby)": 7.3333,
+        "support(gorilla,ground)": 7.0
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "The gorilla's body shows continuity with no unnatural deformation.",
+      "signals": [
+        "continuity",
+        "deformation"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "deformation": 40.0,
+        "continuity": 7.3333
+      },
+      "content_score_raw": "60"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "v5",
+    "a1",
+    "a2",
+    "a3",
+    "a4",
+    "a5"
+  ]
+}

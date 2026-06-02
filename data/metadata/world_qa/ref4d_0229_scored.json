@@ -1,0 +1,192 @@
+{
+  "summary": {
+    "items": 10,
+    "enter_bank": 9,
+    "clip_range_sec": [
+      0.0,
+      6.1
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Is the hand holding the meat wearing a glove?",
+      "signals": [
+        "grasp_stability(Hand,meat),hot_surface_contact(meat,grill),glove_on(Hand)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 28.33,
+      "total_score_100": 83.33,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "grasp_stability(Hand,meat),hot_surface_contact(meat,grill),glove_on(Hand)": 28.3333
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Does the meat stay supported by the metal rod without falling into the hot charcoal?",
+      "signals": [
+        "hot_surface_contact(meat,grill)",
+        "tool_contact(metal_rod,meat)",
+        "support(oA,oB)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "support(oA,oB)": 35.0,
+        "hot_surface_contact(meat,grill)": 6.8333,
+        "tool_contact(metal_rod,meat)": 5.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Does the meat remain on the grill grate and not float away?",
+      "signals": [
+        "hot_surface_contact(meat,grill_grate)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 34.17,
+      "total_score_100": 89.17,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "hot_surface_contact(meat,grill_grate)": 34.1667
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Are the flames below the grill grate providing consistent heat to cook the meat?",
+      "signals": [
+        "flame_proximity(meat,dist)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 34.17,
+      "total_score_100": 84.17,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "flame_proximity(meat,dist)": 34.1667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Does the use of tongs by the gloved hand indicate proper handling tools for safely moving hot food?",
+      "signals": [
+        "tool_usage_correct(tongs,for:grilling)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 29.17,
+      "total_score_100": 84.17,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "tool_usage_correct(tongs,for:grilling)": 29.1667
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "A gloved hand holds the meat, providing protection from heat.",
+      "signals": [
+        "grasp_stability(Hand,meat),hot_surface_contact(meat,grill),glove_on(Hand)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 28.33,
+      "total_score_100": 88.33,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "grasp_stability(Hand,meat),hot_surface_contact(meat,grill),glove_on(Hand)": 28.3333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "The use of tongs by the gloved hand indicates proper handling tools for safely moving hot food.",
+      "signals": [
+        "tool_usage_correct(tongs,for:grilling)"
+      ],
+      "content_score_60": 33,
+      "signal_score_40": 29.17,
+      "total_score_100": 62.17,
+      "duplicate_penalized": true,
+      "signal_detail": {
+        "tool_usage_correct(tongs,for:grilling)": 29.1667
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "The meat remains on the grill grate and does not float or detach from the surface.",
+      "signals": [
+        "hot_surface_contact(meat,grill_grate)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 34.17,
+      "total_score_100": 94.17,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "hot_surface_contact(meat,grill_grate)": 34.1667
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "Flames below the grill grate provide consistent heat to cook the meat.",
+      "signals": [
+        "flame_proximity(meat,dist)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 34.17,
+      "total_score_100": 84.17,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "flame_proximity(meat,dist)": 34.1667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "The meat is supported by a metal rod to prevent falling into the hot charcoal.",
+      "signals": [
+        "hot_surface_contact(meat,grill)",
+        "tool_contact(metal_rod,meat)",
+        "support(oA,oB)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "support(oA,oB)": 35.0,
+        "hot_surface_contact(meat,grill)": 6.8333,
+        "tool_contact(metal_rod,meat)": 5.6667
+      },
+      "content_score_raw": "50"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "v5",
+    "a1",
+    "a3",
+    "a4",
+    "a5"
+  ]
+}

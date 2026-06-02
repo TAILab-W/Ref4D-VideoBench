@@ -1,0 +1,173 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0056.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "cv2",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "bear",
+        "attributes": {
+          "color": [
+            "light-brown"
+          ],
+          "pattern": [
+            "solid"
+          ],
+          "texture": [
+            "dense"
+          ],
+          "size": [
+            "large"
+          ],
+          "age": [
+            "adult"
+          ],
+          "sex": [
+            "male"
+          ],
+          "state": [
+            "playful"
+          ],
+          "pose": [
+            "lying-on-back",
+            "rolling"
+          ],
+          "action": [
+            "biting",
+            "clawing",
+            "nuzzling"
+          ],
+          "orientation": [
+            "facing-left"
+          ],
+          "position": [
+            "left-side-of-frame"
+          ],
+          "signature": [
+            "light-brown-fur-larger-bear"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            6.1
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "bear",
+        "attributes": {
+          "color": [
+            "dark-brown"
+          ],
+          "pattern": [
+            "solid"
+          ],
+          "texture": [
+            "dense",
+            "wet"
+          ],
+          "size": [
+            "medium"
+          ],
+          "age": [
+            "adult"
+          ],
+          "sex": [
+            "male"
+          ],
+          "state": [
+            "playful"
+          ],
+          "pose": [
+            "leaning",
+            "standing"
+          ],
+          "action": [
+            "biting",
+            "clawing",
+            "nuzzling"
+          ],
+          "orientation": [
+            "facing-right"
+          ],
+          "position": [
+            "right-side-of-frame"
+          ],
+          "signature": [
+            "dark-brown-wet-fur-smaller-bear"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            6.1
+          ]
+        ]
+      }
+    ],
+    "relations": [
+      {
+        "subject": "o1",
+        "predicate": "touching",
+        "object": "o2",
+        "spans": [
+          [
+            0.0,
+            6.1
+          ]
+        ],
+        "confidence": 0.9
+      },
+      {
+        "subject": "o1",
+        "predicate": "looking-at",
+        "object": "o2",
+        "spans": [
+          [
+            0.0,
+            6.1
+          ]
+        ],
+        "confidence": 0.8
+      },
+      {
+        "subject": "o2",
+        "predicate": "touching",
+        "object": "o1",
+        "spans": [
+          [
+            0.0,
+            6.1
+          ]
+        ],
+        "confidence": 0.9
+      },
+      {
+        "subject": "o2",
+        "predicate": "looking-at",
+        "object": "o1",
+        "spans": [
+          [
+            0.0,
+            6.1
+          ]
+        ],
+        "confidence": 0.8
+      }
+    ]
+  },
+  "views": {
+    "objects_count_display": {
+      "bear": 2
+    }
+  }
+}

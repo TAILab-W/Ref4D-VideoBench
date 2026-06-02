@@ -1,0 +1,245 @@
+{
+  "summary": {
+    "items": 10,
+    "enter_bank": 10,
+    "clip_range_sec": [
+      0.0,
+      6.17
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Do cars and pedestrians use crosswalks to cross the street?",
+      "signals": [
+        "continuity(t)",
+        "trajectory_dir(oX,axis)",
+        "accel_sign(oX,axis)",
+        "friction_sliding(oA,on:oB)",
+        "prohibited_intersection(oA,oB)",
+        "falling_hazard(oObj)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(oX,axis)": 38.3333,
+        "continuity(t)": 7.3333,
+        "prohibited_intersection(oA,oB)": 7.3333,
+        "accel_sign(oX,axis)": 7.0,
+        "falling_hazard(oObj)": 6.3333,
+        "friction_sliding(oA,on:oB)": 6.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Does the tram on tracks remain stable without tilting while moving?",
+      "signals": [
+        "support(oA,oB)",
+        "placeable(oObj,at:oTarget)",
+        "balance(oX)",
+        "tilt_angle_threshold(oX,deg)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "balance(oX)": 35.8333,
+        "tilt_angle_threshold(oX,deg)": 7.1667,
+        "support(oA,oB)": 7.0,
+        "placeable(oObj,at:oTarget)": 5.1667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Are shadows of trees consistent with their positions relative to buildings in this scene?",
+      "signals": [
+        "shadow_consistency(oX)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 36.67,
+      "total_score_100": 86.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "shadow_consistency(oX)": 36.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Is there a red traffic light visible at the intersection near the hotel?",
+      "signals": [
+        "continuity(t)",
+        "trajectory_dir(oX,axis)",
+        "accel_sign(oX,axis)",
+        "friction_sliding(oA,on:oB)",
+        "prohibited_intersection(oA,oB)",
+        "falling_hazard(oObj)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(oX,axis)": 38.3333,
+        "continuity(t)": 7.3333,
+        "prohibited_intersection(oA,oB)": 7.3333,
+        "accel_sign(oX,axis)": 7.0,
+        "falling_hazard(oObj)": 6.3333,
+        "friction_sliding(oA,on:oB)": 6.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Does the white car stay supported by the road surface as it moves?",
+      "signals": [
+        "support(oA,oB)",
+        "placeable(oObj,at:oTarget)",
+        "balance(oX)",
+        "tilt_angle_threshold(oX,deg)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "balance(oX)": 35.8333,
+        "tilt_angle_threshold(oX,deg)": 7.1667,
+        "support(oA,oB)": 7.0,
+        "placeable(oObj,at:oTarget)": 5.1667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "A white car is driving on the road, following traffic rules.",
+      "signals": [
+        "continuity(t)",
+        "trajectory_dir(oX,axis)",
+        "accel_sign(oX,axis)",
+        "friction_sliding(oA,on:oB)",
+        "prohibited_intersection(oA,oB)",
+        "falling_hazard(oObj)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(oX,axis)": 38.3333,
+        "continuity(t)": 7.3333,
+        "prohibited_intersection(oA,oB)": 7.3333,
+        "accel_sign(oX,axis)": 7.0,
+        "falling_hazard(oObj)": 6.3333,
+        "friction_sliding(oA,on:oB)": 6.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "The yellow tram runs on tracks in front of the hotel building.",
+      "signals": [
+        "support(oA,oB)",
+        "placeable(oObj,at:oTarget)",
+        "balance(oX)",
+        "tilt_angle_threshold(oX,deg)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "balance(oX)": 35.8333,
+        "tilt_angle_threshold(oX,deg)": 7.1667,
+        "support(oA,oB)": 7.0,
+        "placeable(oObj,at:oTarget)": 5.1667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "Shadows from trees and buildings are visible on the ground.",
+      "signals": [
+        "shadow_consistency(oX)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 36.67,
+      "total_score_100": 86.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "shadow_consistency(oX)": 36.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "Pedestrians are walking on the sidewalk, not crossing the street without a crosswalk.",
+      "signals": [
+        "continuity(t)",
+        "trajectory_dir(oX,axis)",
+        "accel_sign(oX,axis)",
+        "friction_sliding(oA,on:oB)",
+        "prohibited_intersection(oA,oB)",
+        "falling_hazard(oObj)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(oX,axis)": 38.3333,
+        "continuity(t)": 7.3333,
+        "prohibited_intersection(oA,oB)": 7.3333,
+        "accel_sign(oX,axis)": 7.0,
+        "falling_hazard(oObj)": 6.3333,
+        "friction_sliding(oA,on:oB)": 6.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "The white car is used for transportation along the road.",
+      "signals": [
+        "support(oA,oB)",
+        "placeable(oObj,at:oTarget)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "support(oA,oB)": 35.0,
+        "placeable(oObj,at:oTarget)": 5.1667
+      },
+      "content_score_raw": "50"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "v5",
+    "a1",
+    "a2",
+    "a3",
+    "a4",
+    "a5"
+  ]
+}

@@ -1,0 +1,96 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0353.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "decord",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "person",
+        "attributes": {
+          "color": [
+            "black",
+            "blue",
+            "gray"
+          ],
+          "pose": [
+            "hands-on-hips"
+          ],
+          "action": [
+            "standing"
+          ],
+          "signature": [
+            "blue-jacket-gray-shorts-black-shoes"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            9.1
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "mountain",
+        "attributes": {
+          "color": [
+            "brown",
+            "white"
+          ],
+          "signature": [
+            "snow-capped-mountains"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            9.1
+          ]
+        ]
+      },
+      {
+        "id": "o3",
+        "name": "lake",
+        "attributes": {
+          "signature": [
+            "blue-lake-with-white-surroundings"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            9.1
+          ]
+        ]
+      }
+    ],
+    "relations": [
+      {
+        "subject": "o1",
+        "predicate": "looking-at",
+        "object": "o2",
+        "spans": [
+          [
+            0.0,
+            9.1
+          ]
+        ],
+        "confidence": 0.9
+      }
+    ]
+  },
+  "views": {
+    "objects_count_display": {
+      "person": 1,
+      "mountain": 1,
+      "lake": 1
+    }
+  }
+}

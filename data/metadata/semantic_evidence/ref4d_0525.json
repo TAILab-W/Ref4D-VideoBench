@@ -1,0 +1,77 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0525.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "cv2",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "woman-in-black",
+        "attributes": {
+          "color": [
+            "black",
+            "white"
+          ],
+          "action": [
+            "adjusting-hair",
+            "looking-at-train",
+            "standing"
+          ],
+          "pose": [
+            "facing-right"
+          ],
+          "object-part": [
+            "backpack"
+          ],
+          "signature": [
+            "black-shirt-black-shorts-white-shoes-backpack-long-hair"
+          ]
+        },
+        "spans": [
+          [
+            1.0,
+            8.6
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "man-in-dark-clothes",
+        "attributes": {
+          "color": [
+            "dark"
+          ],
+          "action": [
+            "looking-at-train",
+            "standing"
+          ],
+          "pose": [
+            "facing-left"
+          ],
+          "signature": [
+            "dark-clothes-long-hair-facing-left"
+          ]
+        },
+        "spans": [
+          [
+            1.0,
+            8.6
+          ]
+        ]
+      }
+    ],
+    "relations": []
+  },
+  "views": {
+    "objects_count_display": {
+      "woman-in-black": 1,
+      "man-in-dark-clothes": 1
+    }
+  }
+}

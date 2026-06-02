@@ -1,0 +1,221 @@
+{
+  "summary": {
+    "items": 10,
+    "enter_bank": 10,
+    "clip_range_sec": [
+      0.0,
+      12.97
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does the wave collide with the rock cliff face and create a large water spray?",
+      "signals": [
+        "collision(wave,rock)",
+        "continuity(wave)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(wave)": 36.6667,
+        "collision(wave,rock)": 6.3333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "During the explosive burst, does the water dissipate as droplets and mist without interpenetration or frame discontinuity?",
+      "signals": [
+        "collision(wave,rock)",
+        "friction_sliding(water,on:rock)",
+        "buoyancy_float(water,in:air)",
+        "continuity(wave)",
+        "continuity(water)",
+        "frame_discontinuity(t)",
+        "size_inconsistency(water)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "frame_discontinuity(t)": 40.0,
+        "size_inconsistency(water)": 7.5,
+        "continuity(wave)": 7.3333,
+        "continuity(water)": 7.3333,
+        "buoyancy_float(water,in:air)": 6.8333,
+        "collision(wave,rock)": 6.3333,
+        "friction_sliding(water,on:rock)": 6.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Does the shadow of the rock formation match its shape consistently across the clip?",
+      "signals": [
+        "shadow_consistency(rock)",
+        "material_optics(rock)",
+        "support(rock,ground)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "material_optics(rock)": 37.5,
+        "shadow_consistency(rock)": 7.3333,
+        "support(rock,ground)": 7.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Is there a risk to nearby objects due to the falling hazard of the waves against the rocky cliffs?",
+      "signals": [
+        "falling_hazard(wave)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 31.67,
+      "total_score_100": 81.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "falling_hazard(wave)": 31.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Does the collision between the wave and the rock generate a significant splash?",
+      "signals": [
+        "collision(wave,rock)",
+        "continuity(wave)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(wave)": 36.6667,
+        "collision(wave,rock)": 6.3333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "A large wave collides with the rock cliff face, creating a big water spray and splash.",
+      "signals": [
+        "collision(wave,rock)",
+        "continuity(wave)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(wave)": 36.6667,
+        "collision(wave,rock)": 6.3333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "The explosive burst of the wave dissipates energy as droplets and mist without interpenetration.",
+      "signals": [
+        "collision(wave,rock)",
+        "friction_sliding(water,on:rock)",
+        "buoyancy_float(water,in:air)",
+        "continuity(wave)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(wave)": 36.6667,
+        "buoyancy_float(water,in:air)": 6.8333,
+        "collision(wave,rock)": 6.3333,
+        "friction_sliding(water,on:rock)": 6.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "Water exhibits natural splashing behavior during impact, showing continuity in motion.",
+      "signals": [
+        "continuity(water)",
+        "frame_discontinuity(t)",
+        "size_inconsistency(water)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "frame_discontinuity(t)": 40.0,
+        "size_inconsistency(water)": 7.5,
+        "continuity(water)": 7.3333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "The shadow on the left side matches the shape of the vertical rock formation.",
+      "signals": [
+        "shadow_consistency(rock)",
+        "material_optics(rock)",
+        "support(rock,ground)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "material_optics(rock)": 37.5,
+        "shadow_consistency(rock)": 7.3333,
+        "support(rock,ground)": 7.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "The large wave's impact against the cliff poses a falling hazard to nearby objects or people.",
+      "signals": [
+        "falling_hazard(wave)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 31.67,
+      "total_score_100": 81.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "falling_hazard(wave)": 31.6667
+      },
+      "content_score_raw": "50"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "v5",
+    "a1",
+    "a2",
+    "a3",
+    "a4",
+    "a5"
+  ]
+}

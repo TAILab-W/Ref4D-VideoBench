@@ -1,0 +1,186 @@
+{
+  "summary": {
+    "items": 10,
+    "enter_bank": 9,
+    "clip_range_sec": [
+      0.0,
+      9.83
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does the blue car stop when the traffic light is red?",
+      "signals": [
+        "state_change(oObj,from:state,to:state)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 37.5,
+      "total_score_100": 92.5,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "state_change(oObj,from:state,to:state)": 37.5
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Do vehicles remain stationary on the flat road during a red light?",
+      "signals": [
+        "state_change(oObj,from:state,to:state)",
+        "continuity(oX)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "state_change(oObj,from:state,to:state)": 37.5,
+        "continuity(oX)": 7.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Are shadows consistent with sunlight direction in the scene?",
+      "signals": [
+        "shadow_consistency(oX)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 36.67,
+      "total_score_100": 86.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "shadow_consistency(oX)": 36.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Does the blue car stay in its lane without interpenetrating other objects?",
+      "signals": [
+        "interpenetration(oA,oB)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 35.83,
+      "total_score_100": 85.83,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "interpenetration(oA,oB)": 35.8333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Does the vehicle prepare to stop at the yellow traffic light?",
+      "signals": [
+        "state_change(oObj,from:state,to:state)"
+      ],
+      "content_score_60": 45,
+      "signal_score_40": 37.5,
+      "total_score_100": 82.5,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "state_change(oObj,from:state,to:state)": 37.5
+      },
+      "content_score_raw": "45"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "The traffic light is red, indicating vehicles must stop.",
+      "signals": [
+        "state_change(oObj,from:state,to:state)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 37.5,
+      "total_score_100": 97.5,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "state_change(oObj,from:state,to:state)": 37.5
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "Vehicles remain stationary at the intersection with yellow traffic lights.",
+      "signals": [
+        "state_change(oObj,from:state,to:state)"
+      ],
+      "content_score_60": 0,
+      "signal_score_40": 37.5,
+      "total_score_100": 37.5,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "state_change(oObj,from:state,to:state)": 37.5
+      },
+      "content_score_raw": "0"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "The road surface is flat and continuous for vehicle movement.",
+      "signals": [
+        "continuity(oX)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 36.67,
+      "total_score_100": 91.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(oX)": 36.6667
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "The blue car stays in its lane without interpenetrating other objects.",
+      "signals": [
+        "interpenetration(oA,oB)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 35.83,
+      "total_score_100": 85.83,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "interpenetration(oA,oB)": 35.8333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "Shadows on the road match the position of sunlight.",
+      "signals": [
+        "shadow_consistency(oX)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 36.67,
+      "total_score_100": 86.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "shadow_consistency(oX)": 36.6667
+      },
+      "content_score_raw": "50"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "v5",
+    "a1",
+    "a3",
+    "a4",
+    "a5"
+  ]
+}

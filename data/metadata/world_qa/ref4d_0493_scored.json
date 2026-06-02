@@ -1,0 +1,228 @@
+{
+  "summary": {
+    "items": 10,
+    "enter_bank": 9,
+    "clip_range_sec": [
+      0.0,
+      11.3
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does the ball follow a continuous trajectory without sudden size inconsistency or collision with other objects?",
+      "signals": [
+        "balance(person)",
+        "interpenetration(person,person)",
+        "trajectory_dir(oX,axis)",
+        "continuity(oX)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(oX,axis)": 38.3333,
+        "continuity(oX)": 7.3333,
+        "balance(person)": 7.1667,
+        "interpenetration(person,person)": 7.1667
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Is the player in the green shirt exhibiting proper body posture and movement for playing squash?",
+      "signals": [
+        "biological_motion(oA)",
+        "biological_motion(player)"
+      ],
+      "content_score_60": 40,
+      "signal_score_40": 40.0,
+      "total_score_100": 80.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "biological_motion(oA)": 38.3333,
+        "biological_motion(player)": 7.6667
+      },
+      "content_score_raw": "40"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Do the players' movements on the court floor avoid any hazardous actions like falling hazards?",
+      "signals": [
+        "falling_hazard(oObj)",
+        "falling_hazard(floor)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 38.0,
+      "total_score_100": 88.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "falling_hazard(oObj)": 31.6667,
+        "falling_hazard(floor)": 6.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Does the person's motion during running and hitting maintain physical consistency, avoiding interpenetration of limbs?",
+      "signals": [
+        "trajectory_dir(ball,axis)",
+        "accel_sign(ball,axis)",
+        "size_inconsistency(ball)",
+        "collision(ball,wall)",
+        "continuity(ball)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(ball,axis)": 38.3333,
+        "size_inconsistency(ball)": 7.5,
+        "continuity(ball)": 7.3333,
+        "accel_sign(ball,axis)": 7.0,
+        "collision(ball,wall)": 6.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Is the person wearing appropriate sports attire while playing squash?",
+      "signals": [
+        "biological_motion(person)",
+        "tool_usage_correct(racket,for:squash)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "biological_motion(person)": 38.3333,
+        "tool_usage_correct(racket,for:squash)": 5.8333
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "The player in the blue shirt swings the racket with his right hand.",
+      "signals": [
+        "balance(person)",
+        "interpenetration(person,person)",
+        "continuity(person)",
+        "interpenetration(person,racket)",
+        "frame_discontinuity(t)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "frame_discontinuity(t)": 40.0,
+        "continuity(person)": 7.3333,
+        "balance(person)": 7.1667,
+        "interpenetration(person,person)": 7.1667,
+        "interpenetration(person,racket)": 7.1667
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "The ball moves continuously from the left side of the court towards the front wall.",
+      "signals": [
+        "trajectory_dir(oX,axis)",
+        "continuity(oX)",
+        "continuity(ball)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(oX,axis)": 38.3333,
+        "continuity(oX)": 7.3333,
+        "continuity(ball)": 7.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "The person in the green shirt wears a short-sleeved shirt and shorts while playing squash.",
+      "signals": [
+        "biological_motion(oA)",
+        "biological_motion(person)",
+        "tool_usage_correct(racket,for:squash)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "biological_motion(oA)": 38.3333,
+        "biological_motion(person)": 7.6667,
+        "tool_usage_correct(racket,for:squash)": 5.8333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "The player's body motion during running is consistent with normal human biomechanics.",
+      "signals": [
+        "falling_hazard(oObj)",
+        "biological_motion(player)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "biological_motion(player)": 38.3333,
+        "falling_hazard(oObj)": 6.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "The ball follows a continuous trajectory without sudden size inconsistency or collision with other objects.",
+      "signals": [
+        "trajectory_dir(ball,axis)",
+        "accel_sign(ball,axis)",
+        "size_inconsistency(ball)",
+        "collision(ball,wall)"
+      ],
+      "content_score_60": 30,
+      "signal_score_40": 40.0,
+      "total_score_100": 70.0,
+      "duplicate_penalized": true,
+      "signal_detail": {
+        "trajectory_dir(ball,axis)": 38.3333,
+        "size_inconsistency(ball)": 7.5,
+        "accel_sign(ball,axis)": 7.0,
+        "collision(ball,wall)": 6.3333
+      },
+      "content_score_raw": "50"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "v5",
+    "a1",
+    "a2",
+    "a3",
+    "a4"
+  ]
+}

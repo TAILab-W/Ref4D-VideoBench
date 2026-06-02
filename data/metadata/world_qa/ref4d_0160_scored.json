@@ -1,0 +1,225 @@
+{
+  "summary": {
+    "items": 10,
+    "enter_bank": 10,
+    "clip_range_sec": [
+      0.0,
+      6.57
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Do the coffee beans stay stationary and not move unexpectedly?",
+      "signals": [
+        "continuity(coffee-bean)",
+        "support(cup,ground)",
+        "balance(cup)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(coffee-bean)": 36.6667,
+        "balance(cup)": 7.1667,
+        "support(cup,ground)": 7.0
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Are the coffee beans on both sides of the text 'COFFEE' static, with smooth movement around the scene without collision?",
+      "signals": [
+        "material_optics(coffee-bean)",
+        "size_inconsistency(coffee-bean)",
+        "collision(bean, nut)",
+        "size_inconsistency(bean)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "material_optics(coffee-bean)": 37.5,
+        "size_inconsistency(coffee-bean)": 7.5,
+        "size_inconsistency(bean)": 7.5,
+        "collision(bean, nut)": 6.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Does the hot coffee in the cup avoid contact with any prohibited surfaces or other objects to indicate safety hazards?",
+      "signals": [
+        "prohibited_intersection(coffee,cup)",
+        "support(cup, surface)",
+        "continuity(cup)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "prohibited_intersection(coffee,cup)": 36.6667,
+        "continuity(cup)": 7.3333,
+        "support(cup, surface)": 7.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Does the coffee cup remain stable on the surface without interpenetration or frame discontinuity?",
+      "signals": [
+        "support(cup,ground)",
+        "balance(cup)",
+        "support(cup, surface)",
+        "continuity(cup)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(cup)": 36.6667,
+        "balance(cup)": 7.1667,
+        "support(cup,ground)": 7.0,
+        "support(cup, surface)": 7.0
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Is the text 'COFFEE' legible and consistent in appearance, with clear material optics and hue histogram?",
+      "signals": [
+        "material_optics(coffee-bean)",
+        "size_inconsistency(coffee-bean)",
+        "material_optics(text)",
+        "hue_histogram_jump(text)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "material_optics(coffee-bean)": 37.5,
+        "size_inconsistency(coffee-bean)": 7.5,
+        "material_optics(text)": 7.5,
+        "hue_histogram_jump(text)": 6.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "Coffee beans remain stationary and do not show signs of unexpected movement or interpenetration.",
+      "signals": [
+        "continuity(coffee-bean)",
+        "material_optics(coffee-bean)",
+        "size_inconsistency(coffee-bean)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "material_optics(coffee-bean)": 37.5,
+        "size_inconsistency(coffee-bean)": 7.5,
+        "continuity(coffee-bean)": 7.3333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "The coffee cup remains stable on the surface, with no visible frame discontinuity.",
+      "signals": [
+        "support(cup,ground)",
+        "balance(cup)",
+        "support(cup, surface)",
+        "continuity(cup)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(cup)": 36.6667,
+        "balance(cup)": 7.1667,
+        "support(cup,ground)": 7.0,
+        "support(cup, surface)": 7.0
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "Coffee beans and nuts move smoothly around the scene without collision.",
+      "signals": [
+        "collision(bean, nut)",
+        "size_inconsistency(bean)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "size_inconsistency(bean)": 37.5,
+        "collision(bean, nut)": 6.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "The text 'COFFEE' is legible and consistent in appearance.",
+      "signals": [
+        "material_optics(text)",
+        "hue_histogram_jump(text)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "material_optics(text)": 37.5,
+        "hue_histogram_jump(text)": 6.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "The hot coffee in the cup does not come into contact with any surfaces that would indicate a safety hazard.",
+      "signals": [
+        "prohibited_intersection(coffee,cup)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 36.67,
+      "total_score_100": 86.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "prohibited_intersection(coffee,cup)": 36.6667
+      },
+      "content_score_raw": "50"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "v5",
+    "a1",
+    "a2",
+    "a3",
+    "a4",
+    "a5"
+  ]
+}

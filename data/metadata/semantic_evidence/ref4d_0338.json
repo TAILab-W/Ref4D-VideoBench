@@ -1,0 +1,178 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0338.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "decord",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "iceberg",
+        "attributes": {
+          "color": [
+            "blue",
+            "white"
+          ],
+          "size": [
+            "large"
+          ],
+          "shape": [
+            "irregular",
+            "triangular"
+          ],
+          "material": [
+            "ice"
+          ],
+          "state": [
+            "floating"
+          ],
+          "position": [
+            "center"
+          ],
+          "signature": [
+            "large-white-and-blue-ice-formation-floating-in-water"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            2.5
+          ],
+          [
+            3.8,
+            6.7
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "tent",
+        "attributes": {
+          "color": [
+            "blue"
+          ],
+          "size": [
+            "medium"
+          ],
+          "material": [
+            "fabric"
+          ],
+          "state": [
+            "covered"
+          ],
+          "position": [
+            "foreground"
+          ],
+          "signature": [
+            "medium-sized-structure-covered-with-blue-tarp"
+          ]
+        },
+        "spans": [
+          [
+            3.8,
+            6.7
+          ]
+        ]
+      },
+      {
+        "id": "o3",
+        "name": "building",
+        "attributes": {
+          "color": [
+            "brown"
+          ],
+          "size": [
+            "large"
+          ],
+          "material": [
+            "wood"
+          ],
+          "state": [
+            "standing"
+          ],
+          "position": [
+            "background"
+          ],
+          "signature": [
+            "large-brown-wooden-structure"
+          ]
+        },
+        "spans": [
+          [
+            3.8,
+            6.7
+          ]
+        ]
+      },
+      {
+        "id": "o4",
+        "name": "rock",
+        "attributes": {
+          "color": [
+            "gray"
+          ],
+          "size": [
+            "small-to-medium"
+          ],
+          "material": [
+            "stone"
+          ],
+          "state": [
+            "snow-covered"
+          ],
+          "position": [
+            "scattered"
+          ],
+          "signature": [
+            "small-to-medium-stone-objects-scattered-on-snow"
+          ]
+        },
+        "spans": [
+          [
+            3.8,
+            6.7
+          ]
+        ]
+      },
+      {
+        "id": "o5",
+        "name": "snow",
+        "attributes": {
+          "color": [
+            "white"
+          ],
+          "state": [
+            "covering-ground"
+          ],
+          "position": [
+            "ground"
+          ],
+          "signature": [
+            "white-ground-covering"
+          ]
+        },
+        "spans": [
+          [
+            3.8,
+            6.7
+          ]
+        ]
+      }
+    ],
+    "relations": []
+  },
+  "views": {
+    "objects_count_display": {
+      "iceberg": 1,
+      "tent": 1,
+      "building": 1,
+      "rock": 1,
+      "snow": 1
+    }
+  }
+}

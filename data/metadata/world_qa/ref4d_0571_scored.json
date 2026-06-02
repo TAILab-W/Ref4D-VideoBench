@@ -1,0 +1,217 @@
+{
+  "summary": {
+    "items": 10,
+    "enter_bank": 10,
+    "clip_range_sec": [
+      0.0,
+      9.13
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does the black vintage car stay stationary on the green grassy area?",
+      "signals": [
+        "shadow_consistency(oX)",
+        "rigid_transform(car)",
+        "deformation(car)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "deformation(car)": 40.0,
+        "rigid_transform(car)": 7.5,
+        "shadow_consistency(oX)": 7.3333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Is the person in the yellow shirt standing next to the car without visible movement?",
+      "signals": [
+        "continuity(oX)",
+        "friction_sliding(person,on:car)",
+        "biological_motion(person)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "biological_motion(person)": 38.3333,
+        "continuity(oX)": 7.3333,
+        "friction_sliding(person,on:car)": 6.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Are there no flames or smoke present from the exposed engine of the car?",
+      "signals": [
+        "flame_proximity(oObj,dist)",
+        "shadow_consistency(person)",
+        "shadow_consistency(car)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "shadow_consistency(person)": 36.6667,
+        "shadow_consistency(car)": 7.3333,
+        "flame_proximity(oObj,dist)": 6.8333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Do the exposed engine components of the car remain clearly visible and stable throughout?",
+      "signals": [
+        "openable(car)",
+        "placeable(hand,on:engine)",
+        "buoyancy_float"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "buoyancy_float": 34.1667,
+        "openable(car)": 5.1667,
+        "placeable(hand,on:engine)": 5.1667
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Does the shadow cast by the car align with its actual position on the grass?",
+      "signals": [
+        "rigid_transform(car)",
+        "deformation(car)",
+        "friction_sliding(car,on:grass)",
+        "shadow_consistency",
+        "interpenetration"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "deformation(car)": 40.0,
+        "rigid_transform(car)": 7.5,
+        "shadow_consistency": 7.3333,
+        "interpenetration": 7.1667,
+        "friction_sliding(car,on:grass)": 6.0
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "The black vintage car is stationary on the green grassy area.",
+      "signals": [
+        "shadow_consistency(oX)",
+        "rigid_transform(car)",
+        "deformation(car)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "deformation(car)": 40.0,
+        "rigid_transform(car)": 7.5,
+        "shadow_consistency(oX)": 7.3333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "The person in the yellow shirt stands next to the car without visible movement.",
+      "signals": [
+        "continuity(oX)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 36.67,
+      "total_score_100": 86.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(oX)": 36.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "The person in the yellow shirt and cap is standing safely at a distance from moving parts.",
+      "signals": [
+        "friction_sliding(person,on:car)",
+        "biological_motion(person)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "biological_motion(person)": 38.3333,
+        "friction_sliding(person,on:car)": 6.0
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "The shadow of the people and the car onto the grass maintains consistency throughout the video.",
+      "signals": [
+        "shadow_consistency(person)",
+        "shadow_consistency(car)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "shadow_consistency(person)": 36.6667,
+        "shadow_consistency(car)": 7.3333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "The person wearing a yellow shirt is standing near the car.",
+      "signals": [
+        "action_phase(person,phase:observing)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 26.67,
+      "total_score_100": 86.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "action_phase(person,phase:observing)": 26.6667
+      },
+      "content_score_raw": "60"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "v5",
+    "a1",
+    "a2",
+    "a3",
+    "a4",
+    "a5"
+  ]
+}

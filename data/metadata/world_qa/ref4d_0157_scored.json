@@ -1,0 +1,200 @@
+{
+  "summary": {
+    "items": 10,
+    "enter_bank": 7,
+    "clip_range_sec": [
+      0.0,
+      5.1
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does the cow remain inside its designated enclosure without interpenetrating with other objects?",
+      "signals": [
+        "containment(oA,oB)",
+        "interpenetration(oA,oB)"
+      ],
+      "content_score_60": 0,
+      "signal_score_40": 40.0,
+      "total_score_100": 40.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "interpenetration(oA,oB)": 35.8333,
+        "containment(oA,oB)": 5.8333
+      },
+      "content_score_raw": "0"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Does the person in front maintain their physical form and continuity without sudden size inconsistency or frame discontinuity?",
+      "signals": [
+        "continuity(oX)",
+        "size_inconsistency(oX)",
+        "frame_discontinuity(t)",
+        "hot_surface_contact(oObj,oSurface)",
+        "flame_proximity(oObj,dist)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "frame_discontinuity(t)": 40.0,
+        "size_inconsistency(oX)": 7.5,
+        "continuity(oX)": 7.3333,
+        "hot_surface_contact(oObj,oSurface)": 6.8333,
+        "flame_proximity(oObj,dist)": 6.8333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Does the shadow of the person in front align with their body position and not appear disconnected from the light direction?",
+      "signals": [
+        "shadow_consistency(oX)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 36.67,
+      "total_score_100": 86.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "shadow_consistency(oX)": 36.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Is the mountain in the background static and show no unexpected movement or disappearance?",
+      "signals": [
+        "continuity(oX)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 36.67,
+      "total_score_100": 96.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(oX)": 36.6667
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Do the people near the temple entrance stand on a stable surface, showing proper balance and support?",
+      "signals": [
+        "balance(oX), support(oA,oB)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 35.83,
+      "total_score_100": 85.83,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "balance(oX), support(oA,oB)": 35.8333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "The person in the black turban and mask maintains physical form without size inconsistency.",
+      "signals": [
+        "continuity(oX)",
+        "size_inconsistency(oX)",
+        "frame_discontinuity(t)",
+        "shadow_consistency(oX)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "frame_discontinuity(t)": 40.0,
+        "size_inconsistency(oX)": 7.5,
+        "continuity(oX)": 7.3333,
+        "shadow_consistency(oX)": 7.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "The mountain with snow remains static in the background throughout the video.",
+      "signals": [
+        "continuity(oX)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 36.67,
+      "total_score_100": 96.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(oX)": 36.6667
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "People near the temple entrance stand on a stable surface, showing proper balance.",
+      "signals": [
+        "balance(oX), support(oA,oB)"
+      ],
+      "content_score_60": 30,
+      "signal_score_40": 35.83,
+      "total_score_100": 65.83,
+      "duplicate_penalized": true,
+      "signal_detail": {
+        "balance(oX), support(oA,oB)": 35.8333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "A cow is visible inside its designated enclosure at the bottom left.",
+      "signals": [
+        "containment(oA,oB)",
+        "interpenetration(oA,oB)"
+      ],
+      "content_score_60": 0,
+      "signal_score_40": 40.0,
+      "total_score_100": 40.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "interpenetration(oA,oB)": 35.8333,
+        "containment(oA,oB)": 5.8333
+      },
+      "content_score_raw": "0"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "The shadow of the person in front aligns with their body position and light direction.",
+      "signals": [
+        "shadow_consistency(oX)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 36.67,
+      "total_score_100": 86.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "shadow_consistency(oX)": 36.6667
+      },
+      "content_score_raw": "50"
+    }
+  ],
+  "bank_ids": [
+    "v2",
+    "v3",
+    "v4",
+    "v5",
+    "a1",
+    "a2",
+    "a5"
+  ]
+}

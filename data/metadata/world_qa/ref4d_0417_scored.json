@@ -1,0 +1,217 @@
+{
+  "summary": {
+    "items": 10,
+    "enter_bank": 10,
+    "clip_range_sec": [
+      0.0,
+      8.57
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does the mug stay supported by the person's hand without floating or sinking?",
+      "signals": [
+        "support(person,mug)",
+        "continuity(mug)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(mug)": 36.6667,
+        "support(person,mug)": 7.0
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Across the clip, does the man's beard and robe keep a consistent appearance relative to his body?",
+      "signals": [
+        "continuity(person)",
+        "deformation(person)",
+        "continuity(beard)",
+        "biological_motion(beard)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "deformation(person)": 40.0,
+        "biological_motion(beard)": 7.6667,
+        "continuity(person)": 7.3333,
+        "continuity(beard)": 7.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Is the floor lamp in the background stationary throughout the video?",
+      "signals": [
+        "friction_sliding(lamp,ground)",
+        "rigid_transform(lamp)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "rigid_transform(lamp)": 37.5,
+        "friction_sliding(lamp,ground)": 6.0
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Does the man's hand maintain a consistent size while holding the mug across the clip?",
+      "signals": [
+        "size_inconsistency(mug)",
+        "frame_discontinuity(t)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "frame_discontinuity(t)": 40.0,
+        "size_inconsistency(mug)": 7.5
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Are there no hot surfaces visible that could cause harm?",
+      "signals": [
+        "hot_surface_contact(mug,table)",
+        "falling_hazard(mug)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "hot_surface_contact(mug,table)": 34.1667,
+        "falling_hazard(mug)": 6.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "The man's hand holds the white mug consistently throughout the clip.",
+      "signals": [
+        "support(person,mug)",
+        "continuity(mug)",
+        "size_inconsistency(mug)",
+        "frame_discontinuity(t)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "frame_discontinuity(t)": 40.0,
+        "size_inconsistency(mug)": 7.5,
+        "continuity(mug)": 7.3333,
+        "support(person,mug)": 7.0
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "The man's long beard and hair show natural, continuous motion without interpenetration.",
+      "signals": [
+        "continuity(person)",
+        "deformation(person)",
+        "continuity(beard)",
+        "biological_motion(beard)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "deformation(person)": 40.0,
+        "biological_motion(beard)": 7.6667,
+        "continuity(person)": 7.3333,
+        "continuity(beard)": 7.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "A floor lamp is visible in the background to the right of the man.",
+      "signals": [
+        "friction_sliding(lamp,ground)",
+        "rigid_transform(lamp)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "rigid_transform(lamp)": 37.5,
+        "friction_sliding(lamp,ground)": 6.0
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "The man's robe remains consistently draped over his shoulders and body.",
+      "signals": [
+        "continuity(person)",
+        "deformation(person)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "deformation(person)": 40.0,
+        "continuity(person)": 7.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "The background features a red wall with no visible movement.",
+      "signals": [
+        "friction_sliding(lamp,ground)",
+        "rigid_transform(lamp)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "rigid_transform(lamp)": 37.5,
+        "friction_sliding(lamp,ground)": 6.0
+      },
+      "content_score_raw": "55"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "v5",
+    "a1",
+    "a2",
+    "a3",
+    "a4",
+    "a5"
+  ]
+}

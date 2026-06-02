@@ -1,0 +1,84 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0350.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "decord",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "tree",
+        "attributes": {
+          "signature": [
+            "snow-covered-evergreen-tree"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            8.0
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "cloud",
+        "attributes": {
+          "signature": [
+            "dense-white-cloud-layer"
+          ]
+        },
+        "spans": [
+          [
+            0.1,
+            8.0
+          ]
+        ]
+      },
+      {
+        "id": "o3",
+        "name": "mountain",
+        "attributes": {
+          "signature": [
+            "snow-capped-mountain"
+          ]
+        },
+        "spans": [
+          [
+            0.1,
+            8.0
+          ]
+        ]
+      },
+      {
+        "id": "o4",
+        "name": "snow",
+        "attributes": {
+          "signature": [
+            "snow-on-trees-and-mountains"
+          ]
+        },
+        "spans": [
+          [
+            0.1,
+            8.0
+          ]
+        ]
+      }
+    ],
+    "relations": []
+  },
+  "views": {
+    "objects_count_display": {
+      "tree": 1,
+      "cloud": 1,
+      "mountain": 1,
+      "snow": 1
+    }
+  }
+}

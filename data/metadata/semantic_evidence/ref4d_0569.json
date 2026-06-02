@@ -1,0 +1,92 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0569.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "cv2",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "bus",
+        "attributes": {
+          "signature": [
+            "bus"
+          ]
+        },
+        "spans": [
+          [
+            0.1,
+            0.7
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "bus",
+        "attributes": {
+          "signature": [
+            "bus"
+          ]
+        },
+        "spans": [
+          [
+            0.2,
+            0.4
+          ]
+        ]
+      },
+      {
+        "id": "o3",
+        "name": "car",
+        "attributes": {
+          "signature": [
+            "car"
+          ]
+        },
+        "spans": [
+          [
+            0.2,
+            0.9
+          ]
+        ]
+      }
+    ],
+    "relations": [
+      {
+        "subject": "o1",
+        "predicate": "left-of",
+        "object": "o1",
+        "spans": [
+          [
+            0.1,
+            0.7
+          ]
+        ],
+        "confidence": 0.8
+      },
+      {
+        "subject": "o1",
+        "predicate": "right-of",
+        "object": "o3",
+        "spans": [
+          [
+            0.2,
+            0.4
+          ]
+        ],
+        "confidence": 0.8
+      }
+    ]
+  },
+  "views": {
+    "objects_count_display": {
+      "bus": 2,
+      "car": 1
+    }
+  }
+}

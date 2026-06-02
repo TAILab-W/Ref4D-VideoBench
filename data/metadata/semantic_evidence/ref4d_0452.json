@@ -1,0 +1,84 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0452.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "decord",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "person",
+        "attributes": {
+          "color": [
+            "black"
+          ],
+          "pattern": [
+            "solid"
+          ],
+          "texture": [
+            "smooth"
+          ],
+          "material": [
+            "fabric"
+          ],
+          "size": [
+            "large"
+          ],
+          "age": [
+            "young"
+          ],
+          "sex": [
+            "male"
+          ],
+          "state": [
+            "standing"
+          ],
+          "pose": [
+            "upright"
+          ],
+          "action": [
+            "holding-hand"
+          ],
+          "orientation": [
+            "left-facing"
+          ],
+          "position": [
+            "left"
+          ],
+          "object-part": [
+            "arm",
+            "body",
+            "face",
+            "hand"
+          ],
+          "tool-or-instrument": [
+            "bowtie",
+            "buttons",
+            "chains",
+            "cloak"
+          ],
+          "signature": [
+            "black-tuxedo-bowtie-gold-buttons-cloak-chains-left-facing"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            8.9
+          ]
+        ]
+      }
+    ],
+    "relations": []
+  },
+  "views": {
+    "objects_count_display": {
+      "person": 1
+    }
+  }
+}

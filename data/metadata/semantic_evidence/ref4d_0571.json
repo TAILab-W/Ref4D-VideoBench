@@ -1,0 +1,129 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0571.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "cv2",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "person",
+        "attributes": {
+          "signature": [
+            "yellow-shirt,-blue-jeans,-cap"
+          ]
+        },
+        "spans": [
+          [
+            0.2,
+            9.1
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "car",
+        "attributes": {
+          "signature": [
+            "black-vintage-car-with-exposed-engine"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            9.1
+          ]
+        ]
+      },
+      {
+        "id": "o3",
+        "name": "grass",
+        "attributes": {
+          "signature": [
+            "green-grassy-area"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            9.1
+          ]
+        ]
+      }
+    ],
+    "relations": [
+      {
+        "subject": "o1",
+        "predicate": "standing-on",
+        "object": "o3",
+        "spans": [
+          [
+            0.0,
+            1.3
+          ]
+        ],
+        "confidence": 0.8
+      },
+      {
+        "subject": "o1",
+        "predicate": "looking-at",
+        "object": "o2",
+        "spans": [
+          [
+            0.0,
+            1.3
+          ]
+        ],
+        "confidence": 0.9
+      },
+      {
+        "subject": "o1",
+        "predicate": "standing-next-to",
+        "object": "o2",
+        "spans": [
+          [
+            0.0,
+            1.3
+          ]
+        ],
+        "confidence": 0.7
+      },
+      {
+        "subject": "o2",
+        "predicate": "parked-on",
+        "object": "o3",
+        "spans": [
+          [
+            0.0,
+            9.1
+          ]
+        ],
+        "confidence": 0.6
+      },
+      {
+        "subject": "o2",
+        "predicate": "displaying",
+        "object": "o2",
+        "spans": [
+          [
+            0.0,
+            9.1
+          ]
+        ],
+        "confidence": 0.5
+      }
+    ]
+  },
+  "views": {
+    "objects_count_display": {
+      "person": 1,
+      "car": 1,
+      "grass": 1
+    }
+  }
+}

@@ -1,0 +1,208 @@
+{
+  "summary": {
+    "items": 10,
+    "enter_bank": 9,
+    "clip_range_sec": [
+      0.0,
+      7.9
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does the person remain seated on the couch without any visible movement or displacement?",
+      "signals": [
+        "continuity(person)",
+        "size_inconsistency(wall)",
+        "size_inconsistency(couch)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "size_inconsistency(wall)": 37.5,
+        "size_inconsistency(couch)": 7.5,
+        "continuity(person)": 7.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Is the wall behind the person and the couch maintaining consistent positions and proportions throughout the video?",
+      "signals": [
+        "continuity(person)",
+        "support(person,couch)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(person)": 36.6667,
+        "support(person,couch)": 7.0
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Does the person's posture with a straight back indicate no risk of falling or injury while seated?",
+      "signals": [
+        "balance(person)",
+        "continuity(person)"
+      ],
+      "content_score_60": 40,
+      "signal_score_40": 40.0,
+      "total_score_100": 80.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(person)": 36.6667,
+        "balance(person)": 7.1667
+      },
+      "content_score_raw": "40"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Does the person's shadow consistently match a seated position on the couch across the clip?",
+      "signals": [
+        "continuity(person)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 36.67,
+      "total_score_100": 86.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(person)": 36.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Are the size and shape of the couch relative to the background wall stable during the entire sequence?",
+      "signals": [
+        "size_inconsistency(wall)",
+        "size_inconsistency(couch)",
+        "continuity(person)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "size_inconsistency(wall)": 37.5,
+        "size_inconsistency(couch)": 7.5,
+        "continuity(person)": 7.3333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "The wall and couch maintain consistent positions and proportions.",
+      "signals": [
+        "size_inconsistency(wall)",
+        "size_inconsistency(couch)",
+        "continuity(person)",
+        "support(person,couch)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "size_inconsistency(wall)": 37.5,
+        "size_inconsistency(couch)": 7.5,
+        "continuity(person)": 7.3333,
+        "support(person,couch)": 7.0
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "The person remains seated on the couch with a straight back posture.",
+      "signals": [
+        "continuity(person)"
+      ],
+      "content_score_60": 40,
+      "signal_score_40": 36.67,
+      "total_score_100": 76.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(person)": 36.6667
+      },
+      "content_score_raw": "40"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "The person is sitting in a stable position without any visible movement.",
+      "signals": [
+        "balance(person)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 35.83,
+      "total_score_100": 85.83,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "balance(person)": 35.8333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "The person's shadow on the wall is consistent with their seated position.",
+      "signals": [
+        "size_inconsistency(wall)",
+        "size_inconsistency(couch)",
+        "continuity(person)",
+        "support(person,couch)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "size_inconsistency(wall)": 37.5,
+        "size_inconsistency(couch)": 7.5,
+        "continuity(person)": 7.3333,
+        "support(person,couch)": 7.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "The couch and background do not show any visible displacement or deformation.",
+      "signals": [
+        "continuity(person)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 36.67,
+      "total_score_100": 96.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(person)": 36.6667
+      },
+      "content_score_raw": "60"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "v5",
+    "a1",
+    "a3",
+    "a4",
+    "a5"
+  ]
+}

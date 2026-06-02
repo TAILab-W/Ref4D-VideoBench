@@ -1,0 +1,169 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0113.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "cv2",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "mosque",
+        "attributes": {
+          "color": [
+            "gray",
+            "white"
+          ],
+          "pattern": [
+            "dome",
+            "minarets"
+          ],
+          "material": [
+            "stone"
+          ],
+          "size": [
+            "large"
+          ],
+          "state": [
+            "flooded"
+          ],
+          "position": [
+            "center"
+          ],
+          "signature": [
+            "white-gray-stone-large-dome-minarets-center-flooded"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            8.0
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "river",
+        "attributes": {
+          "color": [
+            "brown"
+          ],
+          "state": [
+            "flooded"
+          ],
+          "texture": [
+            "rough"
+          ],
+          "signature": [
+            "brown-flooded-rough"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            8.0
+          ]
+        ]
+      },
+      {
+        "id": "o3",
+        "name": "hill",
+        "attributes": {
+          "color": [
+            "green"
+          ],
+          "state": [
+            "vegetated"
+          ],
+          "signature": [
+            "green-vegetated"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            8.0
+          ]
+        ]
+      },
+      {
+        "id": "o4",
+        "name": "house",
+        "attributes": {
+          "color": [
+            "various"
+          ],
+          "state": [
+            "on-hill"
+          ],
+          "signature": [
+            "various-colors-on-hill"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            8.0
+          ]
+        ]
+      },
+      {
+        "id": "o5",
+        "name": "cloud",
+        "attributes": {
+          "color": [
+            "white"
+          ],
+          "state": [
+            "overhill"
+          ],
+          "signature": [
+            "white-overhill"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            8.0
+          ]
+        ]
+      },
+      {
+        "id": "o6",
+        "name": "logo",
+        "attributes": {
+          "color": [
+            "golden"
+          ],
+          "text": [
+            "yam-kapuk"
+          ],
+          "signature": [
+            "golden-crest-with-text"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            7.0
+          ]
+        ]
+      }
+    ],
+    "relations": []
+  },
+  "views": {
+    "objects_count_display": {
+      "mosque": 1,
+      "river": 1,
+      "hill": 1,
+      "house": 1,
+      "cloud": 1,
+      "logo": 1
+    }
+  }
+}

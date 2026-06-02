@@ -1,0 +1,100 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0283.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "cv2",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "machine",
+        "attributes": {
+          "color": [
+            "black",
+            "silver"
+          ],
+          "action": [
+            "processing"
+          ],
+          "position": [
+            "center",
+            "top"
+          ],
+          "signature": [
+            "codpac-top-left"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            5.5
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "packaging-bag",
+        "attributes": {
+          "color": [
+            "green"
+          ],
+          "pattern": [
+            "food-image"
+          ],
+          "material": [
+            "plastic"
+          ],
+          "state": [
+            "packaged"
+          ],
+          "signature": [
+            "green-with-food-image"
+          ]
+        },
+        "spans": [
+          [
+            1.9,
+            5.5
+          ]
+        ]
+      }
+    ],
+    "relations": [
+      {
+        "subject": "o1",
+        "predicate": "contains",
+        "object": "o2",
+        "spans": [
+          [
+            0.0,
+            5.5
+          ]
+        ],
+        "confidence": 0.9
+      },
+      {
+        "subject": "o2",
+        "predicate": "operates",
+        "object": "o1",
+        "spans": [
+          [
+            0.0,
+            5.5
+          ]
+        ],
+        "confidence": 0.8
+      }
+    ]
+  },
+  "views": {
+    "objects_count_display": {
+      "machine": 1,
+      "packaging-bag": 1
+    }
+  }
+}

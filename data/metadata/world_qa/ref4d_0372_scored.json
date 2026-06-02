@@ -1,0 +1,220 @@
+{
+  "summary": {
+    "items": 10,
+    "enter_bank": 7,
+    "clip_range_sec": [
+      0.0,
+      6.03
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Is the person submerged in the water?",
+      "signals": [
+        "buoyancy_float(person,in:wave)",
+        "trajectory_dir(wave,axis)",
+        "friction_sliding(person,on:wave)"
+      ],
+      "content_score_60": 5,
+      "signal_score_40": 40.0,
+      "total_score_100": 45.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(wave,axis)": 38.3333,
+        "buoyancy_float(person,in:wave)": 6.8333,
+        "friction_sliding(person,on:wave)": 6.0
+      },
+      "content_score_raw": "5"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Do the waves show continuous motion without abrupt size changes?",
+      "signals": [
+        "continuity(waves)",
+        "frame_discontinuity(t)",
+        "size_inconsistency(waves)"
+      ],
+      "content_score_60": 40,
+      "signal_score_40": 40.0,
+      "total_score_100": 80.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "frame_discontinuity(t)": 40.0,
+        "size_inconsistency(waves)": 7.5,
+        "continuity(waves)": 7.3333
+      },
+      "content_score_raw": "40"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Does the white foam on the wave crest appear naturally above the darker blue-green water?",
+      "signals": [
+        "buoyancy_float(water,in:waves)",
+        "material_optics(water)",
+        "interpenetration(waves,water)"
+      ],
+      "content_score_60": 40,
+      "signal_score_40": 40.0,
+      "total_score_100": 80.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "material_optics(water)": 37.5,
+        "interpenetration(waves,water)": 7.1667,
+        "buoyancy_float(water,in:waves)": 6.8333
+      },
+      "content_score_raw": "40"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Are there no high crests that pose a falling hazard to someone swimming below?",
+      "signals": [
+        "falling_hazard(wave_crest)"
+      ],
+      "content_score_60": 40,
+      "signal_score_40": 31.67,
+      "total_score_100": 71.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "falling_hazard(wave_crest)": 31.6667
+      },
+      "content_score_raw": "40"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Does the position of the swimmer align with natural human movement under such conditions?",
+      "signals": [
+        "buoyancy_float(person,in:wave)",
+        "trajectory_dir(wave,axis:left)",
+        "biological_motion(person)"
+      ],
+      "content_score_60": 40,
+      "signal_score_40": 40.0,
+      "total_score_100": 80.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(wave,axis:left)": 38.3333,
+        "biological_motion(person)": 7.6667,
+        "buoyancy_float(person,in:wave)": 6.8333
+      },
+      "content_score_raw": "40"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "Waves exhibit continuity and natural motion without sudden frame discontinuity.",
+      "signals": [
+        "continuity(waves)",
+        "frame_discontinuity(t)",
+        "size_inconsistency(waves)"
+      ],
+      "content_score_60": 40,
+      "signal_score_40": 40.0,
+      "total_score_100": 80.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "frame_discontinuity(t)": 40.0,
+        "size_inconsistency(waves)": 7.5,
+        "continuity(waves)": 7.3333
+      },
+      "content_score_raw": "40"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "The person is submerged, moving with the wave's force naturally.",
+      "signals": [
+        "buoyancy_float(person,in:wave)",
+        "trajectory_dir(wave,axis:left)",
+        "biological_motion(person)",
+        "buoyancy_float(water,in:waves)",
+        "material_optics(water)",
+        "interpenetration(waves,water)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(wave,axis:left)": 38.3333,
+        "biological_motion(person)": 7.6667,
+        "material_optics(water)": 7.5,
+        "interpenetration(waves,water)": 7.1667,
+        "buoyancy_float(person,in:wave)": 6.8333,
+        "buoyancy_float(water,in:waves)": 6.8333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "The person maintains physical consistency, not violating material optics or interpenetration.",
+      "signals": [
+        "buoyancy_float(person,in:wave)",
+        "trajectory_dir(wave,axis)",
+        "friction_sliding(person,on:wave)"
+      ],
+      "content_score_60": 40,
+      "signal_score_40": 40.0,
+      "total_score_100": 80.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(wave,axis)": 38.3333,
+        "buoyancy_float(person,in:wave)": 6.8333,
+        "friction_sliding(person,on:wave)": 6.0
+      },
+      "content_score_raw": "40"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "No falling hazard from high wave crests is present.",
+      "signals": [
+        "falling_hazard(wave_crest)"
+      ],
+      "content_score_60": 40,
+      "signal_score_40": 31.67,
+      "total_score_100": 71.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "falling_hazard(wave_crest)": 31.6667
+      },
+      "content_score_raw": "40"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "Water responds naturally to wave forces without showing unreasonable scene colors.",
+      "signals": [
+        "buoyancy_float(water,in:waves)",
+        "material_optics(water)",
+        "interpenetration(waves,water)"
+      ],
+      "content_score_60": 40,
+      "signal_score_40": 40.0,
+      "total_score_100": 80.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "material_optics(water)": 37.5,
+        "interpenetration(waves,water)": 7.1667,
+        "buoyancy_float(water,in:waves)": 6.8333
+      },
+      "content_score_raw": "40"
+    }
+  ],
+  "bank_ids": [
+    "v2",
+    "v3",
+    "v5",
+    "a1",
+    "a2",
+    "a3",
+    "a5"
+  ]
+}

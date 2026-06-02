@@ -1,0 +1,220 @@
+{
+  "summary": {
+    "items": 10,
+    "enter_bank": 9,
+    "clip_range_sec": [
+      0.0,
+      14.83
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Are the safety barriers and cones placed to prevent pedestrians from entering the bus's path?",
+      "signals": [
+        "collision(oA,oB)",
+        "friction_sliding(oA,on:oB)",
+        "prohibited_intersection(barrier,pedestrian)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "prohibited_intersection(barrier,pedestrian)": 36.6667,
+        "collision(oA,oB)": 6.3333,
+        "friction_sliding(oA,on:oB)": 6.0
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Is the person with a backpack standing still relative to the ground at the bus stop?",
+      "signals": [
+        "openable(bus,door)",
+        "action_phase(boarding,phase=init)",
+        "friction_sliding(person,on:ground)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "friction_sliding(person,on:ground)": 30.0,
+        "action_phase(boarding,phase=init)": 5.3333,
+        "openable(bus,door)": 5.1667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Do the wheels of the bus roll smoothly on the concrete surface, maintaining consistent contact without floating or sinking?",
+      "signals": [
+        "wheel_rolling(oX)",
+        "shadow_consistency(oX)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "shadow_consistency(oX)": 36.6667,
+        "wheel_rolling(oX)": 6.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Do passengers wait behind the safety barrier and cones for safe boarding?",
+      "signals": [
+        "prohibited_intersection(bus,barrier)",
+        "friction_sliding(person,on:barrier)",
+        "center_of_mass_over_base(barrier)",
+        "support(oA,oB)",
+        "containment(oA,oB)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "prohibited_intersection(bus,barrier)": 36.6667,
+        "support(oA,oB)": 7.0,
+        "center_of_mass_over_base(barrier)": 6.5,
+        "friction_sliding(person,on:barrier)": 6.0,
+        "containment(oA,oB)": 5.8333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Are there backpacks visible on people standing in front of the bus?",
+      "signals": [
+        "biological_motion(oA)",
+        "action_phase(oAct,phase)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "biological_motion(oA)": 38.3333,
+        "action_phase(oAct,phase)": 5.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "Passengers wait behind the safety barrier and cones for safe boarding.",
+      "signals": [
+        "prohibited_intersection(bus,barrier)",
+        "friction_sliding(person,on:barrier)",
+        "center_of_mass_over_base(barrier)",
+        "collision(oA,oB)",
+        "friction_sliding(oA,on:oB)"
+      ],
+      "content_score_60": 30,
+      "signal_score_40": 40.0,
+      "total_score_100": 70.0,
+      "duplicate_penalized": true,
+      "signal_detail": {
+        "prohibited_intersection(bus,barrier)": 36.6667,
+        "center_of_mass_over_base(barrier)": 6.5,
+        "collision(oA,oB)": 6.3333,
+        "friction_sliding(person,on:barrier)": 6.0,
+        "friction_sliding(oA,on:oB)": 6.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "The bus door is open, allowing people to board or alight safely. The metal barrier provides a designated waiting area.",
+      "signals": [
+        "openable(bus,door)",
+        "action_phase(boarding,phase=init)",
+        "support(oA,oB)",
+        "containment(oA,oB)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "support(oA,oB)": 35.0,
+        "containment(oA,oB)": 5.8333,
+        "action_phase(boarding,phase=init)": 5.3333,
+        "openable(bus,door)": 5.1667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "The bus wheels roll smoothly on the ground with consistent contact.",
+      "signals": [
+        "wheel_rolling(oX)",
+        "shadow_consistency(oX)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "shadow_consistency(oX)": 36.6667,
+        "wheel_rolling(oX)": 6.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "The metal barrier and signboard serve as a boundary preventing pedestrian access to the bus operation area.",
+      "signals": [
+        "prohibited_intersection(barrier,pedestrian)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 36.67,
+      "total_score_100": 86.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "prohibited_intersection(barrier,pedestrian)": 36.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "The orange cones are placed upright on the ground, maintaining balance.",
+      "signals": [
+        "balance(cone)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 35.83,
+      "total_score_100": 85.83,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "balance(cone)": 35.8333
+      },
+      "content_score_raw": "50"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "v5",
+    "a2",
+    "a3",
+    "a4",
+    "a5"
+  ]
+}

@@ -1,0 +1,219 @@
+{
+  "summary": {
+    "items": 10,
+    "enter_bank": 10,
+    "clip_range_sec": [
+      0.0,
+      7.7
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does the man in brown pants walk on the sidewalk without stepping onto the road?",
+      "signals": [
+        "collision(car,bicycle)",
+        "collision(person,car)",
+        "prohibited_intersection(person,bicycle)",
+        "support(bicycle,road)",
+        "biological_motion"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "biological_motion": 38.3333,
+        "prohibited_intersection(person,bicycle)": 7.3333,
+        "support(bicycle,road)": 7.0,
+        "collision(car,bicycle)": 6.3333,
+        "collision(person,car)": 6.3333
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Do cars drive parallel roads with no interpenetration between them?",
+      "signals": [
+        "interpenetration(car1,car2)",
+        "size_inconsistency"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "size_inconsistency": 37.5,
+        "interpenetration(car1,car2)": 7.1667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Do moving cars have rolling wheels and not defy gravity by floating?",
+      "signals": [
+        "friction_sliding",
+        "wheel_rolling"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 36.0,
+      "total_score_100": 91.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "friction_sliding": 30.0,
+        "wheel_rolling": 6.0
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Do trees provide shade for people standing near them?",
+      "signals": [
+        "shadow_consistency(person)",
+        "shadow_consistency(tree)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "shadow_consistency(person)": 36.6667,
+        "shadow_consistency(tree)": 7.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Do buildings form a static background supporting urban infrastructure?",
+      "signals": [
+        "support(building,sky)",
+        "placeable(person,on:crosswalk)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "support(building,sky)": 35.0,
+        "placeable(person,on:crosswalk)": 5.1667
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "A person walks on the sidewalk, maintaining a safe distance from vehicles.",
+      "signals": [
+        "trajectory_dir(car,axis)",
+        "trajectory_dir(person,axis)",
+        "accel_sign(car,axis)",
+        "accel_sign(person,axis)",
+        "collision(car,bicycle)",
+        "collision(person,car)",
+        "prohibited_intersection(person,bicycle)",
+        "support(bicycle,road)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(car,axis)": 38.3333,
+        "trajectory_dir(person,axis)": 7.6667,
+        "prohibited_intersection(person,bicycle)": 7.3333,
+        "accel_sign(car,axis)": 7.0,
+        "accel_sign(person,axis)": 7.0,
+        "support(bicycle,road)": 7.0,
+        "collision(car,bicycle)": 6.3333,
+        "collision(person,car)": 6.3333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "Trees are present near the street, providing shade for pedestrians.",
+      "signals": [
+        "shadow_consistency(person)",
+        "shadow_consistency(tree)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "shadow_consistency(person)": 36.6667,
+        "shadow_consistency(tree)": 7.3333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "Buildings with windows and balconies form the static urban background.",
+      "signals": [
+        "support(building,sky)",
+        "placeable(person,on:crosswalk)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "support(building,sky)": 35.0,
+        "placeable(person,on:crosswalk)": 5.1667
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "Cars maintain consistent size relative to other objects in the scene.",
+      "signals": [
+        "size_inconsistency"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 37.5,
+      "total_score_100": 87.5,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "size_inconsistency": 37.5
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "Pedestrians use designated pathways separated from vehicular traffic.",
+      "signals": [
+        "biological_motion"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 38.33,
+      "total_score_100": 88.33,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "biological_motion": 38.3333
+      },
+      "content_score_raw": "50"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "v5",
+    "a1",
+    "a2",
+    "a3",
+    "a4",
+    "a5"
+  ]
+}

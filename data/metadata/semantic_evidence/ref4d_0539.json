@@ -1,0 +1,187 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0539.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "cv2",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "train",
+        "attributes": {
+          "color": [
+            "green",
+            "white"
+          ],
+          "pattern": [
+            "striped"
+          ],
+          "printed-text": [
+            "railclinic"
+          ],
+          "signature": [
+            "white-green-front-emblem-3-cross-railclinic"
+          ]
+        },
+        "spans": [
+          [
+            0.2,
+            6.2
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "rail",
+        "attributes": {
+          "color": [
+            "gray"
+          ],
+          "material": [
+            "metal"
+          ],
+          "texture": [
+            "smooth"
+          ],
+          "signature": [
+            "curved-track-with-gravel"
+          ]
+        },
+        "spans": [
+          [
+            0.4,
+            6.2
+          ]
+        ]
+      },
+      {
+        "id": "o3",
+        "name": "gravel",
+        "attributes": {
+          "color": [
+            "gray"
+          ],
+          "texture": [
+            "rough"
+          ],
+          "material": [
+            "rock"
+          ],
+          "signature": [
+            "small-rounded-stones-around-track"
+          ]
+        },
+        "spans": [
+          [
+            0.6,
+            6.2
+          ]
+        ]
+      },
+      {
+        "id": "o4",
+        "name": "tree",
+        "attributes": {
+          "color": [
+            "green"
+          ],
+          "texture": [
+            "foliage"
+          ],
+          "signature": [
+            "dense-green-leaves"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            6.2
+          ]
+        ]
+      },
+      {
+        "id": "o5",
+        "name": "sign",
+        "attributes": {
+          "color": [
+            "black",
+            "white"
+          ],
+          "signature": [
+            "black-post-with-white-number-3"
+          ]
+        },
+        "spans": [
+          [
+            0.7,
+            6.2
+          ]
+        ]
+      }
+    ],
+    "relations": [
+      {
+        "subject": "o1",
+        "predicate": "on",
+        "object": "o2",
+        "spans": [
+          [
+            0.4,
+            6.2
+          ]
+        ],
+        "confidence": 0.9
+      },
+      {
+        "subject": "o1",
+        "predicate": "left-of",
+        "object": "o5",
+        "spans": [
+          [
+            0.6,
+            6.2
+          ]
+        ],
+        "confidence": 0.8
+      },
+      {
+        "subject": "o1",
+        "predicate": "above",
+        "object": "o3",
+        "spans": [
+          [
+            0.7,
+            6.2
+          ]
+        ],
+        "confidence": 0.9
+      },
+      {
+        "subject": "o1",
+        "predicate": "in-front-of",
+        "object": "o4",
+        "spans": [
+          [
+            0.0,
+            6.2
+          ]
+        ],
+        "confidence": 0.8
+      }
+    ]
+  },
+  "views": {
+    "objects_count_display": {
+      "train": 1,
+      "rail": 1,
+      "gravel": 1,
+      "tree": 1,
+      "sign": 1
+    }
+  }
+}

@@ -1,0 +1,149 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0506.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "decord",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "jaylen-green",
+        "attributes": {
+          "color": [
+            "red",
+            "yellow"
+          ],
+          "action": [
+            "climbing-up-to-the-rim",
+            "dribbling",
+            "jumping",
+            "running"
+          ],
+          "pose": [
+            "dynamic",
+            "upright"
+          ],
+          "position": [
+            "center-court",
+            "mid-court",
+            "near-basket"
+          ],
+          "signature": [
+            "red-jersey-yellow-shoes"
+          ]
+        },
+        "spans": [
+          [
+            0.2,
+            0.9
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "defender",
+        "attributes": {
+          "color": [
+            "blue"
+          ],
+          "action": [
+            "blocking",
+            "chasing",
+            "guarding"
+          ],
+          "pose": [
+            "crouched",
+            "stretched"
+          ],
+          "position": [
+            "mid-court",
+            "near-jaylen-green"
+          ],
+          "signature": [
+            "blue-jersey"
+          ]
+        },
+        "spans": [
+          [
+            0.1,
+            0.8
+          ]
+        ]
+      },
+      {
+        "id": "o3",
+        "name": "crowd",
+        "attributes": {
+          "color": [
+            "red"
+          ],
+          "action": [
+            "watching"
+          ],
+          "state": [
+            "engaged"
+          ],
+          "signature": [
+            "red-shirts"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            0.9
+          ]
+        ]
+      }
+    ],
+    "relations": [
+      {
+        "subject": "o1",
+        "predicate": "chasing",
+        "object": "o2",
+        "spans": [
+          [
+            0.3,
+            0.4
+          ]
+        ],
+        "confidence": 0.9
+      },
+      {
+        "subject": "o1",
+        "predicate": "jumping",
+        "object": "o2",
+        "spans": [
+          [
+            0.7,
+            0.8
+          ]
+        ],
+        "confidence": 0.9
+      },
+      {
+        "subject": "o1",
+        "predicate": "running",
+        "object": "o2",
+        "spans": [
+          [
+            0.1,
+            0.2
+          ]
+        ],
+        "confidence": 0.8
+      }
+    ]
+  },
+  "views": {
+    "objects_count_display": {
+      "jaylen-green": 1,
+      "defender": 1,
+      "crowd": 1
+    }
+  }
+}

@@ -1,0 +1,187 @@
+{
+  "summary": {
+    "items": 10,
+    "enter_bank": 8,
+    "clip_range_sec": [
+      0.0,
+      6.67
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does the tram move smoothly on the tracks without sudden acceleration or deceleration?",
+      "signals": [
+        "wheel_rolling(trolley)",
+        "wheel_rolling(oX)"
+      ],
+      "content_score_60": 45,
+      "signal_score_40": 36.0,
+      "total_score_100": 81.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "wheel_rolling(trolley)": 30.0,
+        "wheel_rolling(oX)": 6.0
+      },
+      "content_score_raw": "45"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Does the person near the platform edge maintain a safe distance from the moving tram?",
+      "signals": [
+        "collision(person,trolley)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 31.67,
+      "total_score_100": 81.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "collision(person,trolley)": 31.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Is the man with the umbrella walking along the sidewalk for protection?",
+      "signals": [
+        "tool_usage_correct(umbrella,for:protection)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 29.17,
+      "total_score_100": 84.17,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "tool_usage_correct(umbrella,for:protection)": 29.1667
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Does the statue remain stationary and supported by the side of the trolley throughout its motion?",
+      "signals": [
+        "support(statue,trolley)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 35.0,
+      "total_score_100": 85.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "support(statue,trolley)": 35.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Does the tram maintain a safe distance from pedestrians?",
+      "signals": [
+        "friction_sliding(oA,on:oB)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 30.0,
+      "total_score_100": 80.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "friction_sliding(oA,on:oB)": 30.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "The tram provides public transportation for people to travel along the city streets.",
+      "signals": [
+        "support(oA,oB)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 35.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "support(oA,oB)": 35.0
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "The tram's wheels roll smoothly on the tracks without sudden acceleration or deceleration.",
+      "signals": [
+        "wheel_rolling(trolley)",
+        "wheel_rolling(oX)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 36.0,
+      "total_score_100": 96.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "wheel_rolling(trolley)": 30.0,
+        "wheel_rolling(oX)": 6.0
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "The person standing near the edge of the platform maintains a safe distance from the moving trolley.",
+      "signals": [
+        "collision(person,trolley)"
+      ],
+      "content_score_60": 30,
+      "signal_score_40": 31.67,
+      "total_score_100": 61.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "collision(person,trolley)": 31.6667
+      },
+      "content_score_raw": "30"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "The tram maintains a safe distance from pedestrians and other vehicles on the street.",
+      "signals": [
+        "friction_sliding(oA,on:oB)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 30.0,
+      "total_score_100": 80.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "friction_sliding(oA,on:oB)": 30.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "The man with the umbrella walks along the sidewalk, using the umbrella for protection.",
+      "signals": [
+        "tool_usage_correct(umbrella,for:protection)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 29.17,
+      "total_score_100": 79.17,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "tool_usage_correct(umbrella,for:protection)": 29.1667
+      },
+      "content_score_raw": "50"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "v5",
+    "a1",
+    "a2",
+    "a4"
+  ]
+}

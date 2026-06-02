@@ -1,0 +1,205 @@
+{
+  "summary": {
+    "items": 10,
+    "enter_bank": 10,
+    "clip_range_sec": [
+      0.0,
+      6.33
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does the black handlebar with blue mirror stay rigidly attached to the bike frame and maintain its position relative to the camera?",
+      "signals": [
+        "rigid_transform",
+        "continuity(bike-handlebar)",
+        "continuity(glove)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "rigid_transform": 37.5,
+        "continuity(bike-handlebar)": 7.3333,
+        "continuity(glove)": 7.3333
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Does the traffic light in the distance change from red to green, indicating a state change in its signal?",
+      "signals": [
+        "state_change(traffic light,from:red,to:green)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 37.5,
+      "total_score_100": 87.5,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "state_change(traffic light,from:red,to:green)": 37.5
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Is the cyclist wearing gloves while riding, which provides hand protection during cycling?",
+      "signals": [
+        "grasp_stability(gloves,on:handlebars)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 28.33,
+      "total_score_100": 83.33,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "grasp_stability(gloves,on:handlebars)": 28.3333
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Is the building with green sign visible in the background without obstructing the view of the road?",
+      "signals": [
+        "support(building,road)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 35.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "support(building,road)": 35.0
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Across the clip, do the bicycle's handlebars and front wheel maintain consistent size and position relative to the camera perspective?",
+      "signals": [
+        "continuity(handlebars)",
+        "continuity(front wheel)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(handlebars)": 36.6667,
+        "continuity(front wheel)": 7.3333
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "The black handlebar with blue mirror is rigidly attached to the bike frame.",
+      "signals": [
+        "rigid_transform",
+        "continuity(bike-handlebar)",
+        "continuity(glove)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "rigid_transform": 37.5,
+        "continuity(bike-handlebar)": 7.3333,
+        "continuity(glove)": 7.3333
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "The cyclist wears gloves on both hands while riding.",
+      "signals": [
+        "tool_contact(bike-handlebar,hand)",
+        "grasp_stability(gloves,on:handlebars)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 34.0,
+      "total_score_100": 89.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "tool_contact(bike-handlebar,hand)": 28.3333,
+        "grasp_stability(gloves,on:handlebars)": 5.6667
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "A building with a green sign and traffic lights are visible in the background.",
+      "signals": [
+        "support(building,road)",
+        "state_change(traffic light,from:red,to:green)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "state_change(traffic light,from:red,to:green)": 37.5,
+        "support(building,road)": 7.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "The bicycle's handlebars and front wheel maintain consistent size and position relative to the camera.",
+      "signals": [
+        "continuity(handlebars)",
+        "continuity(front wheel)",
+        "deformation(road surface)",
+        "material_optics(road surface)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "deformation(road surface)": 40.0,
+        "material_optics(road surface)": 7.5,
+        "continuity(handlebars)": 7.3333,
+        "continuity(front wheel)": 7.3333
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "The traffic light changes from red to green.",
+      "signals": [
+        "state_change(traffic light,from:red,to:green)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 37.5,
+      "total_score_100": 87.5,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "state_change(traffic light,from:red,to:green)": 37.5
+      },
+      "content_score_raw": "50"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "v5",
+    "a1",
+    "a2",
+    "a3",
+    "a4",
+    "a5"
+  ]
+}

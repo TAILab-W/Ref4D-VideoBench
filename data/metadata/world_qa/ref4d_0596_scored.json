@@ -1,0 +1,190 @@
+{
+  "summary": {
+    "items": 10,
+    "enter_bank": 7,
+    "clip_range_sec": [
+      0.0,
+      8.23
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Do the train's wheels roll smoothly on the tracks without sudden acceleration or deceleration?",
+      "signals": [
+        "wheel_rolling(oX)",
+        "interpenetration(oA,oB)"
+      ],
+      "content_score_60": 45,
+      "signal_score_40": 40.0,
+      "total_score_100": 85.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "interpenetration(oA,oB)": 35.8333,
+        "wheel_rolling(oX)": 6.0
+      },
+      "content_score_raw": "45"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Are the Amtrak logo and color stripes visible on both the engine and passenger car?",
+      "signals": [
+        "containment(oA,oB)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 29.17,
+      "total_score_100": 79.17,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "containment(oA,oB)": 29.1667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Does the train maintain continuous motion with a consistent shadow trajectory on the snow?",
+      "signals": [
+        "shadow_consistency(oX)",
+        "continuity(oX)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "shadow_consistency(oX)": 36.6667,
+        "continuity(oX)": 7.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Is the center of mass of the train over its base, ensuring stability during travel?",
+      "signals": [
+        "center_of_mass_over_base(oX)",
+        "interpenetration(oA,oB)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "interpenetration(oA,oB)": 35.8333,
+        "center_of_mass_over_base(oX)": 6.5
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Does the shadow of the train consistently align with its position relative to the light source?",
+      "signals": [
+        "shadow_consistency(oX)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 36.67,
+      "total_score_100": 86.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "shadow_consistency(oX)": 36.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "The Amtrak logo and color stripes on the train identify it as part of the same railway system.",
+      "signals": [
+        "containment(oA,oB)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 29.17,
+      "total_score_100": 79.17,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "containment(oA,oB)": 29.1667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "The train's wheels roll smoothly along the tracks without sudden acceleration or deceleration.",
+      "signals": [
+        "wheel_rolling(oX)",
+        "interpenetration(oA,oB)"
+      ],
+      "content_score_60": 27,
+      "signal_score_40": 40.0,
+      "total_score_100": 67.0,
+      "duplicate_penalized": true,
+      "signal_detail": {
+        "interpenetration(oA,oB)": 35.8333,
+        "wheel_rolling(oX)": 6.0
+      },
+      "content_score_raw": "45"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "The shadow of the train follows a consistent trajectory in the snow.",
+      "signals": [
+        "shadow_consistency(oX)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 36.67,
+      "total_score_100": 86.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "shadow_consistency(oX)": 36.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "The ground surface shows no interpenetration between objects, maintaining realistic spatial relationships.",
+      "signals": [
+        "interpenetration(oA,oB)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 35.83,
+      "total_score_100": 85.83,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "interpenetration(oA,oB)": 35.8333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "The center of mass of the moving train is over its base to ensure stability during travel.",
+      "signals": [
+        "center_of_mass_over_base(oX)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 32.5,
+      "total_score_100": 82.5,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "center_of_mass_over_base(oX)": 32.5
+      },
+      "content_score_raw": "50"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v3",
+    "v4",
+    "v5",
+    "a3",
+    "a4",
+    "a5"
+  ]
+}

@@ -1,0 +1,223 @@
+{
+  "summary": {
+    "items": 10,
+    "enter_bank": 10,
+    "clip_range_sec": [
+      0.0,
+      9.7
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does the dumper truck stay balanced on uneven terrain without tipping or sliding?",
+      "signals": [
+        "balance(dumper)",
+        "center_of_mass_over_base(dumper)",
+        "friction_sliding(dumper.wheel,on:ground)",
+        "friction_sliding(dumper,on:ground)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "balance(dumper)": 35.8333,
+        "center_of_mass_over_base(dumper)": 6.5,
+        "friction_sliding(dumper.wheel,on:ground)": 6.0,
+        "friction_sliding(dumper,on:ground)": 6.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Does the excavator's bucket avoid colliding with the nearby dumper truck?",
+      "signals": [
+        "collision(excavator,bucket,dumper)",
+        "prohibited_intersection(excavator,dumper)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "prohibited_intersection(excavator,dumper)": 36.6667,
+        "collision(excavator,bucket,dumper)": 6.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Does the excavator's bucket maintain a stable trajectory during operation?",
+      "signals": [
+        "trajectory_dir(excavator_bucket,axis)",
+        "accel_sign(excavator_bucket,axis)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(excavator_bucket,axis)": 38.3333,
+        "accel_sign(excavator_bucket,axis)": 7.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Do the rocks flow naturally into the dumper when dumped, without unnatural splashing?",
+      "signals": [
+        "slosh_response(rock_material,amp)",
+        "buoyancy_float(rock_material,in:dumper)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "slosh_response(rock_material,amp)": 34.1667,
+        "buoyancy_float(rock_material,in:dumper)": 6.8333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Does the excavator's bucket follow a consistent path relative to the ground throughout the clip?",
+      "signals": [
+        "trajectory_dir(excavator.bucket,axis)",
+        "accel_sign(excavator.bucket,axis)",
+        "continuity(excavator.bucket)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(excavator.bucket,axis)": 38.3333,
+        "continuity(excavator.bucket)": 7.3333,
+        "accel_sign(excavator.bucket,axis)": 7.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "The excavator's bucket maintains a consistent trajectory and orientation relative to the ground.",
+      "signals": [
+        "trajectory_dir(excavator.bucket,axis)",
+        "accel_sign(excavator.bucket,axis)",
+        "continuity(excavator.bucket)",
+        "trajectory_dir(excavator_bucket,axis)",
+        "accel_sign(excavator_bucket,axis)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(excavator.bucket,axis)": 38.3333,
+        "trajectory_dir(excavator_bucket,axis)": 7.6667,
+        "continuity(excavator.bucket)": 7.3333,
+        "accel_sign(excavator.bucket,axis)": 7.0,
+        "accel_sign(excavator_bucket,axis)": 7.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "The dumper truck remains stationary on uneven terrain without tilting or sliding.",
+      "signals": [
+        "balance(dumper)",
+        "center_of_mass_over_base(dumper)",
+        "friction_sliding(dumper.wheel,on:ground)",
+        "friction_sliding(dumper,on:ground)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "balance(dumper)": 35.8333,
+        "center_of_mass_over_base(dumper)": 6.5,
+        "friction_sliding(dumper.wheel,on:ground)": 6.0,
+        "friction_sliding(dumper,on:ground)": 6.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "The excavator operates within safe boundaries, avoiding collisions with the nearby dumper truck.",
+      "signals": [
+        "collision(excavator,bucket,dumper)",
+        "prohibited_intersection(excavator,dumper)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "prohibited_intersection(excavator,dumper)": 36.6667,
+        "collision(excavator,bucket,dumper)": 6.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "The rocks exhibit realistic shadows under natural lighting conditions.",
+      "signals": [
+        "material_optics(rocks)",
+        "shadow_consistency(rocks)",
+        "reflection_consistency(rocks)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "material_optics(rocks)": 37.5,
+        "shadow_consistency(rocks)": 7.3333,
+        "reflection_consistency(rocks)": 7.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "The rock materials flow naturally into the dumper.",
+      "signals": [
+        "slosh_response(rock_material,amp)",
+        "buoyancy_float(rock_material,in:dumper)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "slosh_response(rock_material,amp)": 34.1667,
+        "buoyancy_float(rock_material,in:dumper)": 6.8333
+      },
+      "content_score_raw": "50"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "v5",
+    "a1",
+    "a2",
+    "a3",
+    "a4",
+    "a5"
+  ]
+}

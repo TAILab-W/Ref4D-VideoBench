@@ -1,0 +1,220 @@
+{
+  "summary": {
+    "items": 10,
+    "enter_bank": 7,
+    "clip_range_sec": [
+      0.0,
+      9.3
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Do the waves continuously move towards the shore and reflect sky colors?",
+      "signals": [
+        "trajectory_dir(waves,axis)",
+        "reflection_consistency(sea)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(waves,axis)": 38.3333,
+        "reflection_consistency(sea)": 7.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Does the sea surface maintain a smooth color gradient from blue to orange-yellow without abrupt changes?",
+      "signals": [
+        "trajectory_dir(oX,axis)",
+        "buoyancy_float(oA,in:oV)",
+        "hue_histogram_jump(oX)",
+        "material_optics(oA)"
+      ],
+      "content_score_60": 40,
+      "signal_score_40": 40.0,
+      "total_score_100": 80.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(oX,axis)": 38.3333,
+        "material_optics(oA)": 7.5,
+        "buoyancy_float(oA,in:oV)": 6.8333,
+        "hue_histogram_jump(oX)": 6.6667
+      },
+      "content_score_raw": "40"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Is the beach sand wet, stable, and free of falling hazards or prohibited intersections?",
+      "signals": [
+        "support(beach,waves)",
+        "deformation(beach)",
+        "interpenetration(waves,beach)",
+        "falling_hazard(beach)",
+        "prohibited_intersection(oA,oB)"
+      ],
+      "content_score_60": 30,
+      "signal_score_40": 40.0,
+      "total_score_100": 70.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "deformation(beach)": 40.0,
+        "prohibited_intersection(oA,oB)": 7.3333,
+        "interpenetration(waves,beach)": 7.1667,
+        "support(beach,waves)": 7.0,
+        "falling_hazard(beach)": 6.3333
+      },
+      "content_score_raw": "30"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Do the sunset light reflections on the water show safe hue gradients with no sudden brightness shifts?",
+      "signals": [
+        "continuity(waves)",
+        "reflection_consistency(sea)",
+        "hue_histogram_jump(sea)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(waves)": 36.6667,
+        "reflection_consistency(sea)": 7.0,
+        "hue_histogram_jump(sea)": 6.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Does the wave interaction afford sloshing responses in the ocean?",
+      "signals": [
+        "slosh_response(sea,amp)"
+      ],
+      "content_score_60": 30,
+      "signal_score_40": 34.17,
+      "total_score_100": 64.17,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "slosh_response(sea,amp)": 34.1667
+      },
+      "content_score_raw": "30"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "Waves continuously move towards the shore and reflect light from the setting sun.",
+      "signals": [
+        "trajectory_dir(waves,axis)",
+        "reflection_consistency(sea)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(waves,axis)": 38.3333,
+        "reflection_consistency(sea)": 7.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "The waves consistently move in a natural direction, reflecting sunset light throughout the scene.",
+      "signals": [
+        "continuity(waves)",
+        "reflection_consistency(sea)",
+        "trajectory_dir(oX,axis)",
+        "buoyancy_float(oA,in:oV)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(oX,axis)": 38.3333,
+        "continuity(waves)": 7.3333,
+        "reflection_consistency(sea)": 7.0,
+        "buoyancy_float(oA,in:oV)": 6.8333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "The sky's color gradient transitions smoothly from blue to orange-yellow with consistent hue histogram.",
+      "signals": [
+        "hue_histogram_jump(sky)",
+        "hue_histogram_jump(oX)",
+        "material_optics(oA)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "material_optics(oA)": 37.5,
+        "hue_histogram_jump(sky)": 6.6667,
+        "hue_histogram_jump(oX)": 6.6667
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "Wet beach sand remains stable, supporting small foamy waves without deformation.",
+      "signals": [
+        "support(beach,waves)",
+        "deformation(beach)",
+        "interpenetration(waves,beach)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "deformation(beach)": 40.0,
+        "interpenetration(waves,beach)": 7.1667,
+        "support(beach,waves)": 7.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "The beach environment is static, showing no falling hazards or prohibited intersections.",
+      "signals": [
+        "falling_hazard(beach)",
+        "prohibited_intersection(oA,oB)"
+      ],
+      "content_score_60": 30,
+      "signal_score_40": 40.0,
+      "total_score_100": 70.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "prohibited_intersection(oA,oB)": 36.6667,
+        "falling_hazard(beach)": 6.3333
+      },
+      "content_score_raw": "30"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v4",
+    "a1",
+    "a2",
+    "a3",
+    "a4"
+  ]
+}

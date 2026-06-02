@@ -1,0 +1,195 @@
+{
+  "summary": {
+    "items": 10,
+    "enter_bank": 10,
+    "clip_range_sec": [
+      0.0,
+      16.03
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Do the boats float on water?",
+      "signals": [
+        "buoyancy_float(boat,in:water)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 34.17,
+      "total_score_100": 94.17,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "buoyancy_float(boat,in:water)": 34.1667
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Does the boat in the foreground move forward continuously without abrupt changes in direction?",
+      "signals": [
+        "trajectory_dir(boat,axis:forward)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 38.33,
+      "total_score_100": 88.33,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(boat,axis:forward)": 38.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Are the shadows of the boats consistent with their position and orientation, showing them moving through clear blue water?",
+      "signals": [
+        "shadow_consistency(boat)",
+        "trajectory_dir(boat,axis)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(boat,axis)": 38.3333,
+        "shadow_consistency(boat)": 7.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Do people on smaller boats remain supported by the boat while it moves across the scene?",
+      "signals": [
+        "support(boat,people-on-smaller-boats)",
+        "support(boat,person)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "support(boat,people-on-smaller-boats)": 35.0,
+        "support(boat,person)": 7.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Do the boats maintain buoyancy throughout the clip?",
+      "signals": [
+        "buoyancy_float(boat,in:water)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 34.17,
+      "total_score_100": 94.17,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "buoyancy_float(boat,in:water)": 34.1667
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "Boats float on the water and maintain buoyancy.",
+      "signals": [
+        "buoyancy_float(boat,in:water)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 34.17,
+      "total_score_100": 94.17,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "buoyancy_float(boat,in:water)": 34.1667
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "Shadows of boats in clear water are consistent with their position and orientation.",
+      "signals": [
+        "shadow_consistency(boat)",
+        "buoyancy_float(boat,in:water)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "shadow_consistency(boat)": 36.6667,
+        "buoyancy_float(boat,in:water)": 6.8333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "People on smaller boats remain supported by the boat, showing continuous forward motion.",
+      "signals": [
+        "trajectory_dir(boat,axis:forward)",
+        "support(boat,people-on-smaller-boats)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(boat,axis:forward)": 38.3333,
+        "support(boat,people-on-smaller-boats)": 7.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "A larger boat moves through clear blue water due to buoyancy.",
+      "signals": [
+        "trajectory_dir(boat,axis)",
+        "buoyancy_float(boat,in:water)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(boat,axis)": 38.3333,
+        "buoyancy_float(boat,in:water)": 6.8333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "At least one person is on a smaller boat.",
+      "signals": [
+        "support(boat,person)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 35.0,
+      "total_score_100": 85.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "support(boat,person)": 35.0
+      },
+      "content_score_raw": "50"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "v5",
+    "a1",
+    "a2",
+    "a3",
+    "a4",
+    "a5"
+  ]
+}

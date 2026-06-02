@@ -1,0 +1,195 @@
+{
+  "summary": {
+    "items": 10,
+    "enter_bank": 6,
+    "clip_range_sec": [
+      0.0,
+      6.97
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does the large round pizza remain on the tray throughout the scene?",
+      "signals": [
+        "support(pizza,tray)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 35.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "support(pizza,tray)": 35.0
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Does the liquid in the cup show a consistent slosh response when moved?",
+      "signals": [
+        "slosh_response(liquid,amp)"
+      ],
+      "content_score_60": 30,
+      "signal_score_40": 34.17,
+      "total_score_100": 64.17,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "slosh_response(liquid,amp)": 34.1667
+      },
+      "content_score_raw": "30"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Does the hot surface of the pizza pan come into contact with skin?",
+      "signals": [
+        "hot_surface_contact(tray,skin)"
+      ],
+      "content_score_60": 30,
+      "signal_score_40": 34.17,
+      "total_score_100": 64.17,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "hot_surface_contact(tray,skin)": 34.1667
+      },
+      "content_score_raw": "30"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Can the customer grasp small pieces of food using their fingers?",
+      "signals": [
+        "grasp_stability(customer-1,food)",
+        "grasp_stability(customer-2,food)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 34.0,
+      "total_score_100": 94.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "grasp_stability(customer-1,food)": 28.3333,
+        "grasp_stability(customer-2,food)": 5.6667
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Is it possible to take food from the pizza using hand during serving?",
+      "signals": [
+        "tool_contact(person-serving-pizza,pizza)",
+        "grasp_stability(person-serving-pizza,pizza)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 34.0,
+      "total_score_100": 94.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "tool_contact(person-serving-pizza,pizza)": 28.3333,
+        "grasp_stability(person-serving-pizza,pizza)": 5.6667
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "A person uses their fingers to grasp a piece of food from the pizza.",
+      "signals": [
+        "tool_contact(person-serving-pizza,pizza)",
+        "grasp_stability(person-serving-pizza,pizza)",
+        "grasp_stability(customer-1,food)",
+        "grasp_stability(customer-2,food)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "tool_contact(person-serving-pizza,pizza)": 28.3333,
+        "grasp_stability(person-serving-pizza,pizza)": 5.6667,
+        "grasp_stability(customer-1,food)": 5.6667,
+        "grasp_stability(customer-2,food)": 5.6667
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "The large round pizza remains on the tray throughout the scene.",
+      "signals": [
+        "support(pizza,tray)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 35.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "support(pizza,tray)": 35.0
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "The liquid in the cup shows consistent slosh response when moved.",
+      "signals": [
+        "slosh_response(liquid,amp)"
+      ],
+      "content_score_60": 30,
+      "signal_score_40": 34.17,
+      "total_score_100": 64.17,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "slosh_response(liquid,amp)": 34.1667
+      },
+      "content_score_raw": "30"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "The hot surface of the pizza pan does not come into contact with skin.",
+      "signals": [
+        "hot_surface_contact(tray,skin)"
+      ],
+      "content_score_60": 18,
+      "signal_score_40": 34.17,
+      "total_score_100": 52.17,
+      "duplicate_penalized": true,
+      "signal_detail": {
+        "hot_surface_contact(tray,skin)": 34.1667
+      },
+      "content_score_raw": "30"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "The shadow of the hand holding the plate is cast correctly on the table.",
+      "signals": [
+        "finger_clearance(customer-1,food)",
+        "finger_clearance(customer-2,food)",
+        "cast_shadow_contact(hand,shadow)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "cast_shadow_contact(hand,shadow)": 37.5,
+        "finger_clearance(customer-1,food)": 6.8333,
+        "finger_clearance(customer-2,food)": 6.8333
+      },
+      "content_score_raw": "60"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v4",
+    "v5",
+    "a1",
+    "a2",
+    "a5"
+  ]
+}

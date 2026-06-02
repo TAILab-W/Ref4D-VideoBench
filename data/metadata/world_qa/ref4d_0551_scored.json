@@ -1,0 +1,225 @@
+{
+  "summary": {
+    "items": 10,
+    "enter_bank": 10,
+    "clip_range_sec": [
+      0.0,
+      6.47
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does the white truck maintain a consistent trajectory on the right lane without sudden changes?",
+      "signals": [
+        "continuity(vehicles)",
+        "trajectory_dir(vehicles,axis)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(vehicles,axis)": 38.3333,
+        "continuity(vehicles)": 7.3333
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Are there any collisions between vehicles in the scene?",
+      "signals": [
+        "collision(vehicles)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 31.67,
+      "total_score_100": 91.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "collision(vehicles)": 31.6667
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Do the shadows of the trucks and cars align with their positions under the clear sky?",
+      "signals": [
+        "shadow_consistency(trucks)",
+        "shadow_consistency(cars)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "shadow_consistency(trucks)": 36.6667,
+        "shadow_consistency(cars)": 7.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Do all visible vehicles keep moving forward along the highway?",
+      "signals": [
+        "size_inconsistency(truck)",
+        "trajectory_dir(truck,axis)",
+        "accel_sign(truck,axis)",
+        "size_inconsistency(suv)",
+        "trajectory_dir(suv,axis)",
+        "accel_sign(suv,axis)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(truck,axis)": 38.3333,
+        "trajectory_dir(suv,axis)": 7.6667,
+        "size_inconsistency(truck)": 7.5,
+        "size_inconsistency(suv)": 7.5,
+        "accel_sign(truck,axis)": 7.0,
+        "accel_sign(suv,axis)": 7.0
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Do the reflections on the white truck's side remain realistic and unchanged throughout the clip?",
+      "signals": [
+        "material_optics(truck)",
+        "material_optics(car)",
+        "post_collision_change(vehicles)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "material_optics(truck)": 37.5,
+        "material_optics(car)": 7.5,
+        "post_collision_change(vehicles)": 6.8333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "Vehicles on the highway maintain consistent size and trajectory.",
+      "signals": [
+        "size_inconsistency(truck)",
+        "trajectory_dir(truck,axis)",
+        "accel_sign(truck,axis)",
+        "size_inconsistency(suv)",
+        "trajectory_dir(suv,axis)",
+        "accel_sign(suv,axis)",
+        "continuity(vehicles)",
+        "trajectory_dir(vehicles,axis)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(truck,axis)": 38.3333,
+        "trajectory_dir(suv,axis)": 7.6667,
+        "trajectory_dir(vehicles,axis)": 7.6667,
+        "size_inconsistency(truck)": 7.5,
+        "size_inconsistency(suv)": 7.5,
+        "continuity(vehicles)": 7.3333,
+        "accel_sign(truck,axis)": 7.0,
+        "accel_sign(suv,axis)": 7.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "Shadows of trucks align with their positions under clear sky light.",
+      "signals": [
+        "shadow_consistency(trucks)",
+        "shadow_consistency(cars)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "shadow_consistency(trucks)": 36.6667,
+        "shadow_consistency(cars)": 7.3333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "No collision occurs between vehicles moving on the road.",
+      "signals": [
+        "collision(vehicles)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 31.67,
+      "total_score_100": 91.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "collision(vehicles)": 31.6667
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "Vehicles on the road maintain consistent trajectory direction without sudden changes.",
+      "signals": [
+        "continuity(vehicles)",
+        "trajectory_dir(vehicles,axis)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(vehicles,axis)": 38.3333,
+        "continuity(vehicles)": 7.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "Reflections from vehicle windows remain realistic and do not show abrupt post-collision changes.",
+      "signals": [
+        "material_optics(truck)",
+        "material_optics(car)",
+        "post_collision_change(vehicles)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "material_optics(truck)": 37.5,
+        "material_optics(car)": 7.5,
+        "post_collision_change(vehicles)": 6.8333
+      },
+      "content_score_raw": "50"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "v5",
+    "a1",
+    "a2",
+    "a3",
+    "a4",
+    "a5"
+  ]
+}

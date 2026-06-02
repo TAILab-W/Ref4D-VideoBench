@@ -1,0 +1,165 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0343.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "decord",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "black-car",
+        "attributes": {
+          "color": [
+            "black"
+          ],
+          "brand-or-logo": [
+            "suzuki"
+          ],
+          "printed-text": [
+            "fyp-481"
+          ],
+          "signature": [
+            "black,-suzuki,-fyp-481,-left-facing"
+          ]
+        },
+        "spans": [
+          [
+            0.1,
+            0.3
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "red-bus",
+        "attributes": {
+          "color": [
+            "red"
+          ],
+          "brand-or-logo": [
+            "dhl"
+          ],
+          "printed-text": [
+            "service-partner-of-dhl",
+            "yzd-882"
+          ],
+          "signature": [
+            "red,-dhl-service-partner,-yzd-882,-7302,-right-facing"
+          ]
+        },
+        "spans": [
+          [
+            0.5,
+            0.8
+          ]
+        ]
+      },
+      {
+        "id": "o3",
+        "name": "yellow-truck",
+        "attributes": {
+          "color": [
+            "yellow"
+          ],
+          "printed-text": [
+            "24-euro"
+          ],
+          "signature": [
+            "yellow,-24-euro,-right-facing"
+          ]
+        },
+        "spans": [
+          [
+            0.8,
+            1.0
+          ]
+        ]
+      },
+      {
+        "id": "o4",
+        "name": "gray-car",
+        "attributes": {
+          "color": [
+            "gray"
+          ],
+          "signature": [
+            "gray,-left-facing"
+          ]
+        },
+        "spans": [
+          [
+            0.3,
+            0.7
+          ]
+        ]
+      }
+    ],
+    "relations": [
+      {
+        "subject": "o1",
+        "predicate": "left-of",
+        "object": "o2",
+        "spans": [
+          [
+            0.1,
+            0.8
+          ]
+        ],
+        "confidence": 0.9
+      },
+      {
+        "subject": "o4",
+        "predicate": "left-of",
+        "object": "o2",
+        "spans": [
+          [
+            0.3,
+            0.8
+          ]
+        ],
+        "confidence": 0.8
+      },
+      {
+        "subject": "o1",
+        "predicate": "right-of",
+        "object": "o3",
+        "spans": [
+          [
+            0.1,
+            0.3
+          ],
+          [
+            0.8,
+            1.0
+          ]
+        ],
+        "confidence": 0.9
+      },
+      {
+        "subject": "o4",
+        "predicate": "right-of",
+        "object": "o3",
+        "spans": [
+          [
+            0.3,
+            1.0
+          ]
+        ],
+        "confidence": 0.8
+      }
+    ]
+  },
+  "views": {
+    "objects_count_display": {
+      "black-car": 1,
+      "red-bus": 1,
+      "yellow-truck": 1,
+      "gray-car": 1
+    }
+  }
+}

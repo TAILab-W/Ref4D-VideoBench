@@ -1,0 +1,203 @@
+{
+  "summary": {
+    "items": 10,
+    "enter_bank": 10,
+    "clip_range_sec": [
+      0.0,
+      8.93
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does the snow on the trees remain in its position without sudden disappearance?",
+      "signals": [
+        "continuity(snow-on-trees-and-mountains)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 36.67,
+      "total_score_100": 91.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(snow-on-trees-and-mountains)": 36.6667
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Do the cloud layers maintain their natural form and density, with no abrupt size inconsistency or collision with mountains?",
+      "signals": [
+        "size_inconsistency(cloud)",
+        "collision(cloud,tree)",
+        "containment(cloud,mountain)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "size_inconsistency(cloud)": 37.5,
+        "collision(cloud,tree)": 6.3333,
+        "containment(cloud,mountain)": 5.8333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Do the tree branches covered with snow exhibit stable support from the branch structure, maintaining balance without unexpected deformation?",
+      "signals": [
+        "balance(snow-covered-evergreen-tree)",
+        "deformation(tree)",
+        "fracture(tree)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "deformation(tree)": 40.0,
+        "balance(snow-covered-evergreen-tree)": 7.1667,
+        "fracture(tree)": 6.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Are there no interpenetration between cloud layers and mountains, maintaining spatial integrity?",
+      "signals": [
+        "interpenetration(clouds,mountains)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 35.83,
+      "total_score_100": 85.83,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "interpenetration(clouds,mountains)": 35.8333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Does the support between tree branches and surrounding elements (like clouds or air) persist as part of a stable mountainous landscape?",
+      "signals": [
+        "support(tree-branches,clouds-air)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 35.0,
+      "total_score_100": 85.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "support(tree-branches,clouds-air)": 35.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "Snow on tree branches and mountains remains consistent in appearance and position.",
+      "signals": [
+        "continuity(snow-on-trees-and-mountains)",
+        "size_inconsistency(cloud)",
+        "collision(cloud,tree)",
+        "containment(cloud,mountain)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "size_inconsistency(cloud)": 37.5,
+        "continuity(snow-on-trees-and-mountains)": 7.3333,
+        "collision(cloud,tree)": 6.3333,
+        "containment(cloud,mountain)": 5.8333
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "Tree branches covered with snow exhibit stable support from the branch structure.",
+      "signals": [
+        "balance(snow-covered-evergreen-tree)",
+        "deformation(tree)",
+        "fracture(tree)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "deformation(tree)": 40.0,
+        "balance(snow-covered-evergreen-tree)": 7.1667,
+        "fracture(tree)": 6.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "Cloud layers do not interpenetrate with mountain peaks, maintaining spatial integrity.",
+      "signals": [
+        "interpenetration(clouds,mountains)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 35.83,
+      "total_score_100": 85.83,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "interpenetration(clouds,mountains)": 35.8333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "Tree branches maintain support from surrounding air and clouds in the mountainous landscape.",
+      "signals": [
+        "support(tree-branches,clouds-air)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 35.0,
+      "total_score_100": 85.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "support(tree-branches,clouds-air)": 35.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "Snow on tree branches does not suddenly disappear or merge with other objects.",
+      "signals": [
+        "continuity(snow)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 36.67,
+      "total_score_100": 86.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(snow)": 36.6667
+      },
+      "content_score_raw": "50"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "v5",
+    "a1",
+    "a2",
+    "a3",
+    "a4",
+    "a5"
+  ]
+}

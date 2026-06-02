@@ -1,0 +1,211 @@
+{
+  "events": [
+    {
+      "id": "m0001",
+      "s": 0.0,
+      "e": 0.37681159420289856,
+      "dur": 0.37681159420289856,
+      "members": [
+        "e0001#2"
+      ],
+      "text": "person catch ball person run forward",
+      "s_abs": 0.0,
+      "e_abs": 2.6,
+      "dur_abs": 2.6
+    },
+    {
+      "id": "m0002",
+      "s": 0.0,
+      "e": 0.37681159420289856,
+      "dur": 0.37681159420289856,
+      "members": [
+        "e0001#4"
+      ],
+      "text": "player push past person swing arm",
+      "s_abs": 0.0,
+      "e_abs": 2.6,
+      "dur_abs": 2.6
+    },
+    {
+      "id": "m0003",
+      "s": 0.0,
+      "e": 0.37681159420289856,
+      "dur": 0.37681159420289856,
+      "members": [
+        "e0001#5"
+      ],
+      "text": "person block shot person jump u",
+      "s_abs": 0.0,
+      "e_abs": 2.6,
+      "dur_abs": 2.6
+    },
+    {
+      "id": "m0004",
+      "s": 0.0,
+      "e": 0.5362318840579711,
+      "dur": 0.5362318840579711,
+      "members": [
+        "e0001#3",
+        "e0002#4"
+      ],
+      "text": "person jump up person hold ball",
+      "s_abs": 0.0,
+      "e_abs": 3.7,
+      "dur_abs": 3.7
+    },
+    {
+      "id": "m0005",
+      "s": 0.0,
+      "e": 0.821256038647343,
+      "dur": 0.821256038647343,
+      "members": [
+        "e0001#1",
+        "e0002#2",
+        "e0003#2",
+        "e0003#3"
+      ],
+      "text": "person throw ball",
+      "s_abs": 0.0,
+      "e_abs": 5.666666666666667,
+      "dur_abs": 5.666666666666667
+    },
+    {
+      "id": "m0006",
+      "s": 0.37681159420289856,
+      "e": 0.5362318840579711,
+      "dur": 0.1594202898550725,
+      "members": [
+        "e0002#3"
+      ],
+      "text": "person catch ball man swing arm",
+      "s_abs": 2.6,
+      "e_abs": 3.7,
+      "dur_abs": 1.1
+    },
+    {
+      "id": "m0007",
+      "s": 0.37681159420289856,
+      "e": 0.5362318840579711,
+      "dur": 0.1594202898550725,
+      "members": [
+        "e0002#6"
+      ],
+      "text": "man swing arm person jump",
+      "s_abs": 2.6,
+      "e_abs": 3.7,
+      "dur_abs": 1.1
+    },
+    {
+      "id": "m0008",
+      "s": 0.37681159420289856,
+      "e": 0.821256038647343,
+      "dur": 0.4444444444444444,
+      "members": [
+        "e0002#1",
+        "e0002#5",
+        "e0003#1"
+      ],
+      "text": "person jump",
+      "s_abs": 2.6,
+      "e_abs": 5.666666666666667,
+      "dur_abs": 3.066666666666667
+    },
+    {
+      "id": "m0009",
+      "s": 0.5362318840579711,
+      "e": 0.821256038647343,
+      "dur": 0.2850241545893719,
+      "members": [
+        "e0003#4"
+      ],
+      "text": "person catch ball goalkeeper stand",
+      "s_abs": 3.7,
+      "e_abs": 5.666666666666667,
+      "dur_abs": 1.9666666666666668
+    },
+    {
+      "id": "m0010",
+      "s": 0.5362318840579711,
+      "e": 0.821256038647343,
+      "dur": 0.2850241545893719,
+      "members": [
+        "e0003#5"
+      ],
+      "text": "ball fly person jump",
+      "s_abs": 3.7,
+      "e_abs": 5.666666666666667,
+      "dur_abs": 1.9666666666666668
+    },
+    {
+      "id": "m0011",
+      "s": 0.821256038647343,
+      "e": 1.0,
+      "dur": 0.17874396135265702,
+      "members": [
+        "e0004#1"
+      ],
+      "text": "goalkeeper block shot",
+      "s_abs": 5.666666666666667,
+      "e_abs": 6.9,
+      "dur_abs": 1.2333333333333334
+    },
+    {
+      "id": "m0012",
+      "s": 0.821256038647343,
+      "e": 1.0,
+      "dur": 0.17874396135265702,
+      "members": [
+        "e0004#2"
+      ],
+      "text": "ball hit goalpost goalkeeper reach out",
+      "s_abs": 5.666666666666667,
+      "e_abs": 6.9,
+      "dur_abs": 1.2333333333333334
+    },
+    {
+      "id": "m0013",
+      "s": 0.821256038647343,
+      "e": 1.0,
+      "dur": 0.17874396135265702,
+      "members": [
+        "e0004#3"
+      ],
+      "text": "ball deflect off post goalie attempt save",
+      "s_abs": 5.666666666666667,
+      "e_abs": 6.9,
+      "dur_abs": 1.2333333333333334
+    },
+    {
+      "id": "m0014",
+      "s": 0.821256038647343,
+      "e": 1.0,
+      "dur": 0.17874396135265702,
+      "members": [
+        "e0004#4"
+      ],
+      "text": "ball rebound back into play",
+      "s_abs": 5.666666666666667,
+      "e_abs": 6.9,
+      "dur_abs": 1.2333333333333334
+    }
+  ],
+  "meta": {
+    "lane": "ref",
+    "key": "ref4d_0500",
+    "mode": "micro",
+    "merge_config": {
+      "tau_sem": 0.96,
+      "gap_abs_sec": 1.01,
+      "gap_norm_fallback": 0.1,
+      "min_duration_norm": 0.0
+    },
+    "stats": {
+      "num_input_items": 20,
+      "num_kept_items": 20,
+      "num_clusters": 14
+    },
+    "provenance": {
+      "source_hash": "487b5c23b63e"
+    }
+  }
+}

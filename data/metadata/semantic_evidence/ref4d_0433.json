@@ -1,0 +1,168 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0433.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "decord",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "person",
+        "attributes": {
+          "color": [
+            "blue",
+            "white"
+          ],
+          "pattern": [
+            "small-dark"
+          ],
+          "texture": [
+            "smooth"
+          ],
+          "material": [
+            "cloth"
+          ],
+          "size": [
+            "adult"
+          ],
+          "age": [
+            "middle-aged"
+          ],
+          "sex": [
+            "male"
+          ],
+          "state": [
+            "standing"
+          ],
+          "pose": [
+            "facing-forward"
+          ],
+          "action": [
+            "talking"
+          ],
+          "orientation": [
+            "facing-right"
+          ],
+          "facing-direction": [
+            "right"
+          ],
+          "signature": [
+            "white-shirt-with-dark-patterns-glasses-white-cap-yellow-brown-band"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            6.3
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "shop-sign",
+        "attributes": {
+          "color": [
+            "green",
+            "orange",
+            "red",
+            "yellow"
+          ],
+          "material": [
+            "plastic"
+          ],
+          "text": [
+            "airtel-4g",
+            "ezcash",
+            "hutch"
+          ],
+          "signature": [
+            "red-airtel-4g-banner-green-electronic-board-orange-hutch-sign-yellow-ezcash-board"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            6.3
+          ]
+        ]
+      },
+      {
+        "id": "o3",
+        "name": "balloons",
+        "attributes": {
+          "color": [
+            "white"
+          ],
+          "shape": [
+            "round"
+          ],
+          "material": [
+            "latex"
+          ],
+          "position": [
+            "left-side-of-shop"
+          ],
+          "signature": [
+            "white-balloon-cluster"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            6.3
+          ]
+        ]
+      }
+    ],
+    "relations": [
+      {
+        "subject": "o1",
+        "predicate": "wearing",
+        "object": "o1",
+        "spans": [
+          [
+            0.0,
+            6.3
+          ]
+        ],
+        "confidence": 0.8
+      },
+      {
+        "subject": "o1",
+        "predicate": "standing-in-front-of",
+        "object": "o2",
+        "spans": [
+          [
+            0.0,
+            6.3
+          ]
+        ],
+        "confidence": 0.8
+      },
+      {
+        "subject": "o3",
+        "predicate": "left-of",
+        "object": "o1",
+        "spans": [
+          [
+            0.0,
+            6.3
+          ]
+        ],
+        "confidence": 0.7
+      }
+    ]
+  },
+  "views": {
+    "objects_count_display": {
+      "person": 1,
+      "shop-sign": 1,
+      "balloons": 1
+    }
+  }
+}

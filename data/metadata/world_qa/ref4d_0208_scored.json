@@ -1,0 +1,183 @@
+{
+  "summary": {
+    "items": 10,
+    "enter_bank": 4,
+    "clip_range_sec": [
+      0.0,
+      8.07
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does the knife make a continuous cut through the meat during slicing?",
+      "signals": [
+        "cuttable_progress(meat)",
+        "cuttable_progress"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 28.0,
+      "total_score_100": 83.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "cuttable_progress(meat)": 23.3333,
+        "cuttable_progress": 4.6667
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Does the hand maintain stable contact with the meat while cutting?",
+      "signals": [
+        "grasp_stability"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 28.33,
+      "total_score_100": 78.33,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "grasp_stability": 28.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Is the blade orientation of the knife away from the person's hand?",
+      "signals": [
+        "blade_orientation_away"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 29.17,
+      "total_score_100": 84.17,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "blade_orientation_away": 29.1667
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Does the knife make cuttable progress on the meat during slicing?",
+      "signals": [
+        "cuttable_progress(meat)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 23.33,
+      "total_score_100": 83.33,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "cuttable_progress(meat)": 23.3333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Is the cutting process continuous through the meat?",
+      "signals": [
+        "cuttable_progress"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 23.33,
+      "total_score_100": 73.33,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "cuttable_progress": 23.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "The knife makes a cuttable progress on the meat during slicing.",
+      "signals": [
+        "cuttable_progress(meat)",
+        "cuttable_progress"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 28.0,
+      "total_score_100": 88.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "cuttable_progress(meat)": 23.3333,
+        "cuttable_progress": 4.6667
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "The hand maintains stable contact with the meat while holding it steady.",
+      "signals": [
+        "grasp_stability"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 28.33,
+      "total_score_100": 78.33,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "grasp_stability": 28.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "The blade orientation of the knife is away from the person's hand.",
+      "signals": [
+        "blade_orientation_away"
+      ],
+      "content_score_60": 33,
+      "signal_score_40": 29.17,
+      "total_score_100": 62.17,
+      "duplicate_penalized": true,
+      "signal_detail": {
+        "blade_orientation_away": 29.1667
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "The hand holds the meat steady for cutting.",
+      "signals": [
+        "grasp_stability"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 28.33,
+      "total_score_100": 78.33,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "grasp_stability": 28.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "The knife makes a continuous cut through the meat.",
+      "signals": [
+        "cuttable_progress(meat)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 23.33,
+      "total_score_100": 78.33,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "cuttable_progress(meat)": 23.3333
+      },
+      "content_score_raw": "55"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v3",
+    "v4",
+    "a1"
+  ]
+}

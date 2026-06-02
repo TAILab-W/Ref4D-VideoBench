@@ -1,0 +1,77 @@
+{
+  "events": [
+    {
+      "id": "m0001",
+      "s": 0.0,
+      "e": 0.7158273381294964,
+      "dur": 0.7158273381294964,
+      "members": [
+        "e0001#1"
+      ],
+      "text": "mountain remain still",
+      "s_abs": 0.0,
+      "e_abs": 6.633333333333334,
+      "dur_abs": 6.633333333333334
+    },
+    {
+      "id": "m0002",
+      "s": 0.0,
+      "e": 0.7158273381294964,
+      "dur": 0.7158273381294964,
+      "members": [
+        "e0001#2"
+      ],
+      "text": "water remain still",
+      "s_abs": 0.0,
+      "e_abs": 6.633333333333334,
+      "dur_abs": 6.633333333333334
+    },
+    {
+      "id": "m0003",
+      "s": 0.7158273381294964,
+      "e": 1.0,
+      "dur": 0.2841726618705036,
+      "members": [
+        "e0002#1",
+        "e0003#1"
+      ],
+      "text": "snow fall",
+      "s_abs": 6.633333333333334,
+      "e_abs": 9.266666666666667,
+      "dur_abs": 2.6333333333333337
+    },
+    {
+      "id": "m0004",
+      "s": 0.7158273381294964,
+      "e": 1.0,
+      "dur": 0.2841726618705036,
+      "members": [
+        "e0002#2",
+        "e0003#2"
+      ],
+      "text": "snow cover trees",
+      "s_abs": 6.633333333333334,
+      "e_abs": 9.266666666666667,
+      "dur_abs": 2.6333333333333337
+    }
+  ],
+  "meta": {
+    "lane": "ref",
+    "key": "ref4d_0354",
+    "mode": "micro",
+    "merge_config": {
+      "tau_sem": 0.96,
+      "gap_abs_sec": 1.01,
+      "gap_norm_fallback": 0.1,
+      "min_duration_norm": 0.0
+    },
+    "stats": {
+      "num_input_items": 6,
+      "num_kept_items": 6,
+      "num_clusters": 4
+    },
+    "provenance": {
+      "source_hash": "403112ad8b90"
+    }
+  }
+}

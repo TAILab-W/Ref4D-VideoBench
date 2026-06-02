@@ -1,0 +1,200 @@
+{
+  "summary": {
+    "items": 10,
+    "enter_bank": 9,
+    "clip_range_sec": [
+      0.0,
+      6.1
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does the turtle float naturally in the water without unexpected sinking?",
+      "signals": [
+        "support(hand,turtle)",
+        "buoyancy_float(turtle,in:water)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "support(hand,turtle)": 35.0,
+        "buoyancy_float(turtle,in:water)": 6.8333
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Across the clip, does the turtle's shell and flippers maintain physical continuity while floating stably?",
+      "signals": [
+        "continuity(turtle)",
+        "buoyancy_float(turtle,in:water)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(turtle)": 36.6667,
+        "buoyancy_float(turtle,in:water)": 6.8333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Is the human hand stable when interacting with the turtle’s head?",
+      "signals": [
+        "grasp_stability(hand,turtle)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 28.33,
+      "total_score_100": 83.33,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "grasp_stability(hand,turtle)": 28.3333
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Does the hand approach the turtle in a natural biological motion without unnatural acceleration?",
+      "signals": [
+        "support(hand,turtle)",
+        "biological_motion(turtle)",
+        "biological_motion(hand)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "biological_motion(turtle)": 38.3333,
+        "biological_motion(hand)": 7.6667,
+        "support(hand,turtle)": 7.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Does the turtle exhibit consistent buoyancy throughout the clip?",
+      "signals": [
+        "buoyancy_float(turtle,in:water)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 34.17,
+      "total_score_100": 84.17,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "buoyancy_float(turtle,in:water)": 34.1667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "The hand is positioned near the turtle's head, supporting it without causing harm.",
+      "signals": [
+        "support(hand,turtle)",
+        "continuity(turtle)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(turtle)": 36.6667,
+        "support(hand,turtle)": 7.0
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "The turtle floats naturally in the water with consistent buoyancy.",
+      "signals": [
+        "buoyancy_float(turtle,in:water)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 34.17,
+      "total_score_100": 84.17,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "buoyancy_float(turtle,in:water)": 34.1667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "The human hand maintains contact with the turtle’s flipper and shell continuously.",
+      "signals": [
+        "support(hand,turtle)",
+        "biological_motion(turtle)",
+        "grasp_stability(hand,turtle)"
+      ],
+      "content_score_60": 0,
+      "signal_score_40": 40.0,
+      "total_score_100": 40.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "biological_motion(turtle)": 38.3333,
+        "support(hand,turtle)": 7.0,
+        "grasp_stability(hand,turtle)": 5.6667
+      },
+      "content_score_raw": "0"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "The hand does not slip or lose grasp stability while interacting with the turtle.",
+      "signals": [
+        "support(hand,turtle)",
+        "grasp_stability(hand,turtle)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "support(hand,turtle)": 35.0,
+        "grasp_stability(hand,turtle)": 5.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "The hand moves naturally towards the turtle without unnatural acceleration.",
+      "signals": [
+        "biological_motion(hand)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 38.33,
+      "total_score_100": 88.33,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "biological_motion(hand)": 38.3333
+      },
+      "content_score_raw": "50"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "v5",
+    "a1",
+    "a2",
+    "a4",
+    "a5"
+  ]
+}

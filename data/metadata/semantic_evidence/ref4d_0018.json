@@ -1,0 +1,115 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0018.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "cv2",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "lion",
+        "attributes": {
+          "signature": [
+            "spotted-fur,-tawny-color"
+          ]
+        },
+        "spans": [
+          [
+            0.1,
+            1.9
+          ],
+          [
+            3.4,
+            5.6
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "lion",
+        "attributes": {
+          "signature": [
+            "spotted-fur,-tawny-color"
+          ]
+        },
+        "spans": [
+          [
+            0.1,
+            1.9
+          ],
+          [
+            3.4,
+            5.6
+          ]
+        ]
+      },
+      {
+        "id": "o3",
+        "name": "tree",
+        "attributes": {
+          "signature": [
+            "tree"
+          ]
+        },
+        "spans": [
+          [
+            0.7,
+            1.8
+          ],
+          [
+            2.3,
+            3.2
+          ],
+          [
+            4.5,
+            5.7
+          ],
+          [
+            6.8,
+            7.9
+          ]
+        ]
+      },
+      {
+        "id": "o4",
+        "name": "grass",
+        "attributes": {
+          "signature": [
+            "grass"
+          ]
+        },
+        "spans": [
+          [
+            0.1,
+            1.9
+          ],
+          [
+            2.3,
+            3.2
+          ],
+          [
+            4.5,
+            5.7
+          ],
+          [
+            6.8,
+            7.9
+          ]
+        ]
+      }
+    ],
+    "relations": []
+  },
+  "views": {
+    "objects_count_display": {
+      "lion": 2,
+      "tree": 1,
+      "grass": 1
+    }
+  }
+}

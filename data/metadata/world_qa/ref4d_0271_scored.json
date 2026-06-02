@@ -1,0 +1,213 @@
+{
+  "summary": {
+    "items": 10,
+    "enter_bank": 8,
+    "clip_range_sec": [
+      0.0,
+      9.87
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Do the tools and components on the table remain stable without falling off?",
+      "signals": [
+        "tool_usage_correct",
+        "friction_sliding"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 35.83,
+      "total_score_100": 90.83,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "friction_sliding": 30.0,
+        "tool_usage_correct": 5.8333
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Do the small parts move consistently with gravity when handled by workers?",
+      "signals": [
+        "trajectory_dir",
+        "friction_sliding(oA,on:oB)",
+        "grasp_stability(oHand,oObj)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir": 38.3333,
+        "friction_sliding(oA,on:oB)": 6.0,
+        "grasp_stability(oHand,oObj)": 5.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Are the black baskets used to properly contain materials for easy access during work?",
+      "signals": [
+        "containment(oA,oB)",
+        "falling_hazard(oObj)",
+        "containment",
+        "placeable"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "falling_hazard(oObj)": 31.6667,
+        "containment(oA,oB)": 5.8333,
+        "containment": 5.8333,
+        "placeable": 5.1667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Do the items being packaged show a consistent motion trajectory in the hands of workers?",
+      "signals": [
+        "trajectory_dir(oX,axis)",
+        "accel_sign(oX,axis)",
+        "tool_usage_correct"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(oX,axis)": 38.3333,
+        "accel_sign(oX,axis)": 7.0,
+        "tool_usage_correct": 5.8333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Do the objects moving along the conveyor belt follow gravitational direction, and are workers wearing protective clothing?",
+      "signals": [
+        "trajectory_dir",
+        "accel_sign",
+        "supportable"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir": 38.3333,
+        "accel_sign": 7.0,
+        "supportable": 5.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "Workers handle tools and components with care to ensure proper packaging.",
+      "signals": [
+        "tool_usage_correct",
+        "friction_sliding(oA,on:oB)",
+        "grasp_stability(oHand,oObj)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "friction_sliding(oA,on:oB)": 30.0,
+        "tool_usage_correct": 5.8333,
+        "grasp_stability(oHand,oObj)": 5.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "Objects on the table remain stable and are properly contained in baskets.",
+      "signals": [
+        "friction_sliding",
+        "containment(oA,oB)",
+        "falling_hazard(oObj)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "falling_hazard(oObj)": 31.6667,
+        "friction_sliding": 6.0,
+        "containment(oA,oB)": 5.8333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "Black baskets serve as containers for organizing parts during work.",
+      "signals": [
+        "containment",
+        "placeable"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 34.33,
+      "total_score_100": 84.33,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "containment": 29.1667,
+        "placeable": 5.1667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "Workers wear blue protective clothing while handling items.",
+      "signals": [
+        "supportable"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 26.67,
+      "total_score_100": 76.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "supportable": 26.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "The workstation provides sufficient space for multiple operators to perform tasks simultaneously.",
+      "signals": [
+        "placeable"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 25.83,
+      "total_score_100": 75.83,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "placeable": 25.8333
+      },
+      "content_score_raw": "50"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "v5",
+    "a1",
+    "a2",
+    "a3"
+  ]
+}

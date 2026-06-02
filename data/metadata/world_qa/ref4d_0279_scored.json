@@ -1,0 +1,200 @@
+{
+  "summary": {
+    "items": 10,
+    "enter_bank": 9,
+    "clip_range_sec": [
+      0.0,
+      10.0
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does the cutter-tool make continuous contact with the metal-part-being-machined?",
+      "signals": [
+        "tool_contact(oTool,oObj)",
+        "tool_contact(cutter-tool,metal-part-being-machined)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 34.0,
+      "total_score_100": 89.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "tool_contact(oTool,oObj)": 28.3333,
+        "tool_contact(cutter-tool,metal-part-being-machined)": 5.6667
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Is the machine-spindle maintaining a stable rotation during operation?",
+      "signals": [
+        "continuity(metal-part-being-machined)",
+        "tool_contact"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(metal-part-being-machined)": 36.6667,
+        "tool_contact": 5.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Are the spindle and its attached components rigidly connected throughout the process?",
+      "signals": [
+        "continuity(oX)",
+        "rigid_transform(machine-spindle)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "rigid_transform(machine-spindle)": 37.5,
+        "continuity(oX)": 7.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Does the cutting action result in smooth, progressive deformation of the workpiece without unexpected ejection of debris?",
+      "signals": [
+        "trajectory_dir(cutter-tool,axis)",
+        "wheel_rolling"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(cutter-tool,axis)": 38.3333,
+        "wheel_rolling": 6.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Is the reflection on the polished surface of the workpiece consistent with its material properties?",
+      "signals": [
+        "reflection_consistency"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 35.0,
+      "total_score_100": 85.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "reflection_consistency": 35.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "The cutter-tool makes continuous contact with the metal-part-being-machined to remove material.",
+      "signals": [
+        "tool_contact(oTool,oObj)",
+        "trajectory_dir(oX,axis)",
+        "accel_sign(oX,axis)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(oX,axis)": 38.3333,
+        "accel_sign(oX,axis)": 7.0,
+        "tool_contact(oTool,oObj)": 5.6667
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "The machine-spindle and its attached components remain rigidly connected throughout the operation.",
+      "signals": [
+        "continuity(metal-part-being-machined)",
+        "rigid_transform(machine-spindle)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "rigid_transform(machine-spindle)": 37.5,
+        "continuity(metal-part-being-machined)": 7.3333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "The metal-part-being-machined shows progressive deformation as material is removed by the cutter-tool.",
+      "signals": [
+        "deformation(metal-part-being-machined)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "deformation(metal-part-being-machined)": 40.0
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "During machining, the cutting tool maintains continuous contact with the rotating workpiece.",
+      "signals": [
+        "tool_contact",
+        "wheel_rolling"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 35.67,
+      "total_score_100": 95.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "wheel_rolling": 30.0,
+        "tool_contact": 5.6667
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "The reflection on the polished surface of the workpiece is consistent with its material properties.",
+      "signals": [
+        "reflection_consistency"
+      ],
+      "content_score_60": 30,
+      "signal_score_40": 35.0,
+      "total_score_100": 65.0,
+      "duplicate_penalized": true,
+      "signal_detail": {
+        "reflection_consistency": 35.0
+      },
+      "content_score_raw": "50"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "v5",
+    "a1",
+    "a2",
+    "a3",
+    "a4"
+  ]
+}

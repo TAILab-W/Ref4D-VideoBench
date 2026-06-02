@@ -1,0 +1,225 @@
+{
+  "summary": {
+    "items": 10,
+    "enter_bank": 10,
+    "clip_range_sec": [
+      0.0,
+      11.83
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does the water reflect the colors of the sky during sunset?",
+      "signals": [
+        "continuity(water)",
+        "reflection_consistency(oX)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(water)": 36.6667,
+        "reflection_consistency(oX)": 7.0
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Are the tree branches in the foreground stationary throughout the clip?",
+      "signals": [
+        "slosh_response(water,amp)",
+        "continuity(oX)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(oX)": 36.6667,
+        "slosh_response(water,amp)": 6.8333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Do the distant lights on the horizon remain static and consistent in brightness?",
+      "signals": [
+        "size_inconsistency(lights)",
+        "trajectory_dir(lights,axis)",
+        "frame_discontinuity(t)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "frame_discontinuity(t)": 40.0,
+        "trajectory_dir(lights,axis)": 7.6667,
+        "size_inconsistency(lights)": 7.5
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Do the ducks float smoothly on the lake's surface, following natural physical behavior?",
+      "signals": [
+        "buoyancy_float",
+        "continuity",
+        "buoyancy_float(ducks,in:water)",
+        "slosh_response(water,amp=low)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity": 36.6667,
+        "buoyancy_float": 6.8333,
+        "buoyancy_float(ducks,in:water)": 6.8333,
+        "slosh_response(water,amp=low)": 6.8333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Do the city lights cast shadows on the water that align with their position?",
+      "signals": [
+        "reflection_consistency(water)",
+        "reflection_consistency(lights)",
+        "reflection_consistency(tree)",
+        "shadow_consistency"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "shadow_consistency": 36.6667,
+        "reflection_consistency(water)": 7.0,
+        "reflection_consistency(lights)": 7.0,
+        "reflection_consistency(tree)": 7.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "The water surface reflects the colors of the sky during sunset.",
+      "signals": [
+        "continuity(water)",
+        "reflection_consistency(oX)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(water)": 36.6667,
+        "reflection_consistency(oX)": 7.0
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "Distant lights on the horizon are static and maintain consistent brightness.",
+      "signals": [
+        "size_inconsistency(lights)",
+        "trajectory_dir(lights,axis)",
+        "frame_discontinuity(t)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "frame_discontinuity(t)": 40.0,
+        "trajectory_dir(lights,axis)": 7.6667,
+        "size_inconsistency(lights)": 7.5
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "The lake's water exhibits gentle ripples, showing natural fluid behavior.",
+      "signals": [
+        "slosh_response(water,amp)",
+        "buoyancy_float(ducks,in:water)",
+        "slosh_response(water,amp=low)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "slosh_response(water,amp)": 34.1667,
+        "buoyancy_float(ducks,in:water)": 6.8333,
+        "slosh_response(water,amp=low)": 6.8333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "Tree branches in the foreground remain stationary while ducks float smoothly on the water.",
+      "signals": [
+        "continuity(oX)",
+        "buoyancy_float",
+        "continuity"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(oX)": 36.6667,
+        "continuity": 7.3333,
+        "buoyancy_float": 6.8333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "Lights from the city cast reflections on the water with shadow consistency.",
+      "signals": [
+        "reflection_consistency(water)",
+        "reflection_consistency(lights)",
+        "reflection_consistency(tree)",
+        "shadow_consistency"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "shadow_consistency": 36.6667,
+        "reflection_consistency(water)": 7.0,
+        "reflection_consistency(lights)": 7.0,
+        "reflection_consistency(tree)": 7.0
+      },
+      "content_score_raw": "60"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "v5",
+    "a1",
+    "a2",
+    "a3",
+    "a4",
+    "a5"
+  ]
+}

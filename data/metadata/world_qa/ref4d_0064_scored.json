@@ -1,0 +1,226 @@
+{
+  "summary": {
+    "items": 10,
+    "enter_bank": 7,
+    "clip_range_sec": [
+      0.0,
+      7.9
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Do the dogs maintain consistent physical boundaries without interpenetration?",
+      "signals": [
+        "interpenetration(dog1,dog2)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 35.83,
+      "total_score_100": 90.83,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "interpenetration(dog1,dog2)": 35.8333
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Does the dog's fur exhibit continuity and natural deformation during movement?",
+      "signals": [
+        "continuity(dog1)",
+        "deformation(dog1)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "deformation(dog1)": 40.0,
+        "continuity(dog1)": 7.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Do the large dogs avoid sudden collisions that could cause injury while playing?",
+      "signals": [
+        "collision(dog1,dog2)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 31.67,
+      "total_score_100": 81.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "collision(dog1,dog2)": 31.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Are the dogs' body movements continuous and consistent with their biological motion?",
+      "signals": [
+        "continuity(dog)",
+        "biological_motion(dog)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "biological_motion(dog)": 38.3333,
+        "continuity(dog)": 7.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Do objects in the scene maintain continuity without sudden frame discontinuity or interpenetration?",
+      "signals": [
+        "continuity(dogA)",
+        "continuity(dogB)",
+        "frame_discontinuity(t)",
+        "interpenetration(dogA,dogB)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "frame_discontinuity(t)": 40.0,
+        "continuity(dogA)": 7.3333,
+        "continuity(dogB)": 7.3333,
+        "interpenetration(dogA,dogB)": 7.1667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "The two dogs maintain consistent physical boundaries without interpenetration.",
+      "signals": [
+        "interpenetration(dog1,dog2)",
+        "continuity(dog)",
+        "biological_motion(dog)"
+      ],
+      "content_score_60": 30,
+      "signal_score_40": 40.0,
+      "total_score_100": 70.0,
+      "duplicate_penalized": true,
+      "signal_detail": {
+        "biological_motion(dog)": 38.3333,
+        "continuity(dog)": 7.3333,
+        "interpenetration(dog1,dog2)": 7.1667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "The dog's fur exhibits continuity and natural deformation during movement.",
+      "signals": [
+        "continuity(dog1)",
+        "deformation(dog1)",
+        "continuity(dogA)",
+        "continuity(dogB)",
+        "frame_discontinuity(t)",
+        "interpenetration(dogA,dogB)"
+      ],
+      "content_score_60": 30,
+      "signal_score_40": 40.0,
+      "total_score_100": 70.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "deformation(dog1)": 40.0,
+        "frame_discontinuity(t)": 8.0,
+        "continuity(dog1)": 7.3333,
+        "continuity(dogA)": 7.3333,
+        "continuity(dogB)": 7.3333,
+        "interpenetration(dogA,dogB)": 7.1667
+      },
+      "content_score_raw": "30"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "The large dogs interact closely, avoiding sudden collisions that could cause injury.",
+      "signals": [
+        "collision(dog1,dog2)",
+        "biological_motion(dogA)",
+        "biological_motion(dogB)"
+      ],
+      "content_score_60": 45,
+      "signal_score_40": 40.0,
+      "total_score_100": 85.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "biological_motion(dogA)": 38.3333,
+        "biological_motion(dogB)": 7.6667,
+        "collision(dog1,dog2)": 6.3333
+      },
+      "content_score_raw": "45"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "The dog's fur shows natural continuity and no frame discontinuity during interaction.",
+      "signals": [
+        "continuity(dog1)",
+        "deformation(dog1)",
+        "continuity(dogA)",
+        "continuity(dogB)",
+        "frame_discontinuity(t)",
+        "interpenetration(dogA,dogB)"
+      ],
+      "content_score_60": 40,
+      "signal_score_40": 40.0,
+      "total_score_100": 80.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "deformation(dog1)": 40.0,
+        "frame_discontinuity(t)": 8.0,
+        "continuity(dog1)": 7.3333,
+        "continuity(dogA)": 7.3333,
+        "continuity(dogB)": 7.3333,
+        "interpenetration(dogA,dogB)": 7.1667
+      },
+      "content_score_raw": "40"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "The dogs' body movements are continuous and consistent with their biological motion.",
+      "signals": [
+        "continuity(dog)",
+        "biological_motion(dog)",
+        "biological_motion(dogA)",
+        "biological_motion(dogB)"
+      ],
+      "content_score_60": 30,
+      "signal_score_40": 40.0,
+      "total_score_100": 70.0,
+      "duplicate_penalized": true,
+      "signal_detail": {
+        "biological_motion(dog)": 38.3333,
+        "biological_motion(dogA)": 7.6667,
+        "biological_motion(dogB)": 7.6667,
+        "continuity(dog)": 7.3333
+      },
+      "content_score_raw": "50"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "v5",
+    "a3",
+    "a4"
+  ]
+}

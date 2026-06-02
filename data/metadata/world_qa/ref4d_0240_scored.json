@@ -1,0 +1,215 @@
+{
+  "summary": {
+    "items": 10,
+    "enter_bank": 8,
+    "clip_range_sec": [
+      0.0,
+      8.1
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Is the hot liquid poured over raw shrimp?",
+      "signals": [
+        "hot_surface_contact(liquid,pot)",
+        "tool_contact(pouring_tool,liquid)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 39.83,
+      "total_score_100": 94.83,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "hot_surface_contact(liquid,pot)": 34.1667,
+        "tool_contact(pouring_tool,liquid)": 5.6667
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Does the sauce flow smoothly from the container into the bowl without sudden stops?",
+      "signals": [
+        "pour_direction(oV,axis)",
+        "viscosity_effect(oV)",
+        "slosh_response(oV,amp)",
+        "continuity(oX)",
+        "friction_sliding(oA,on:oB)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(oX)": 36.6667,
+        "viscosity_effect(oV)": 6.8333,
+        "slosh_response(oV,amp)": 6.8333,
+        "friction_sliding(oA,on:oB)": 6.0,
+        "pour_direction(oV,axis)": 5.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Do the shrimp and other ingredients in the bowl remain stable during the pouring of the sauce?",
+      "signals": [
+        "support(oA,oB)",
+        "balance(oX)",
+        "containment(oA,oB)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "balance(oX)": 35.8333,
+        "support(oA,oB)": 7.0,
+        "containment(oA,oB)": 5.8333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Do the shrimp stay submerged and not float abnormally due to buoyancy?",
+      "signals": [
+        "buoyancy_float(shrimp,in:liquid)",
+        "center_of_mass_over_base(shrimp)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "buoyancy_float(shrimp,in:liquid)": 34.1667,
+        "center_of_mass_over_base(shrimp)": 6.5
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Is there no direct interaction between heat sources and food items?",
+      "signals": [
+        "hot_surface_contact(oObj,oSurface)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 34.17,
+      "total_score_100": 84.17,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "hot_surface_contact(oObj,oSurface)": 34.1667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "The liquid flows smoothly from the container into the bowl without spillage.",
+      "signals": [
+        "pour_direction(oV,axis)",
+        "viscosity_effect(oV)",
+        "slosh_response(oV,amp)",
+        "continuity(oX)",
+        "friction_sliding(oA,on:oB)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(oX)": 36.6667,
+        "viscosity_effect(oV)": 6.8333,
+        "slosh_response(oV,amp)": 6.8333,
+        "friction_sliding(oA,on:oB)": 6.0,
+        "pour_direction(oV,axis)": 5.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "Hot liquid is poured over raw shrimp, indicating a cooking task.",
+      "signals": [
+        "hot_surface_contact(liquid,pot)",
+        "tool_contact(pouring_tool,liquid)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 39.83,
+      "total_score_100": 99.83,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "hot_surface_contact(liquid,pot)": 34.1667,
+        "tool_contact(pouring_tool,liquid)": 5.6667
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "The shrimp and other ingredients in the bowl remain stable during the pouring of the sauce.",
+      "signals": [
+        "support(oA,oB)",
+        "balance(oX)",
+        "containment(oA,oB)"
+      ],
+      "content_score_60": 30,
+      "signal_score_40": 40.0,
+      "total_score_100": 70.0,
+      "duplicate_penalized": true,
+      "signal_detail": {
+        "balance(oX)": 35.8333,
+        "support(oA,oB)": 7.0,
+        "containment(oA,oB)": 5.8333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "No direct interaction between heat sources and food items is observed.",
+      "signals": [
+        "hot_surface_contact(oObj,oSurface)"
+      ],
+      "content_score_60": 0,
+      "signal_score_40": 34.17,
+      "total_score_100": 34.17,
+      "duplicate_penalized": true,
+      "signal_detail": {
+        "hot_surface_contact(oObj,oSurface)": 34.1667
+      },
+      "content_score_raw": "0"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "The shrimp in the pot remain submerged and do not float abnormally due to buoyancy.",
+      "signals": [
+        "buoyancy_float(shrimp,in:liquid)",
+        "center_of_mass_over_base(shrimp)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "buoyancy_float(shrimp,in:liquid)": 34.1667,
+        "center_of_mass_over_base(shrimp)": 6.5
+      },
+      "content_score_raw": "50"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "v5",
+    "a1",
+    "a2",
+    "a5"
+  ]
+}

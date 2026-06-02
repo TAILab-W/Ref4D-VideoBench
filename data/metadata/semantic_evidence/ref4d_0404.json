@@ -1,0 +1,139 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0404.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "decord",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "person",
+        "attributes": {
+          "color": [
+            "red",
+            "white"
+          ],
+          "pattern": [
+            "bow-tie"
+          ],
+          "material": [
+            "cloth"
+          ],
+          "size": [
+            "medium"
+          ],
+          "sex": [
+            "male"
+          ],
+          "state": [
+            "standing"
+          ],
+          "pose": [
+            "holding-pan"
+          ],
+          "action": [
+            "talking"
+          ],
+          "orientation": [
+            "facing-forward"
+          ],
+          "facing-direction": [
+            "right"
+          ],
+          "signature": [
+            "white-coat-bow-tie-black-white-pan"
+          ]
+        },
+        "spans": [
+          [
+            0.2,
+            4.9
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "person",
+        "attributes": {
+          "color": [
+            "black",
+            "blue",
+            "white"
+          ],
+          "pattern": [
+            "floral"
+          ],
+          "material": [
+            "cloth"
+          ],
+          "size": [
+            "medium"
+          ],
+          "sex": [
+            "female"
+          ],
+          "state": [
+            "standing"
+          ],
+          "pose": [
+            "facing-forward"
+          ],
+          "action": [
+            "listening"
+          ],
+          "orientation": [
+            "facing-forward"
+          ],
+          "facing-direction": [
+            "left"
+          ],
+          "signature": [
+            "blue-sleeve-floral-pattern-glasses"
+          ]
+        },
+        "spans": [
+          [
+            1.3,
+            5.1
+          ]
+        ]
+      }
+    ],
+    "relations": [
+      {
+        "subject": "o1",
+        "predicate": "looking-at",
+        "object": "o2",
+        "spans": [
+          [
+            0.2,
+            4.9
+          ]
+        ],
+        "confidence": 0.8
+      },
+      {
+        "subject": "o2",
+        "predicate": "looking-at",
+        "object": "o1",
+        "spans": [
+          [
+            1.3,
+            5.1
+          ]
+        ],
+        "confidence": 0.8
+      }
+    ]
+  },
+  "views": {
+    "objects_count_display": {
+      "person": 2
+    }
+  }
+}

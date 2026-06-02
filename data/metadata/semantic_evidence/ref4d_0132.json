@@ -1,0 +1,166 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0132.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "cv2",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "house",
+        "attributes": {
+          "color": [
+            "brown",
+            "red",
+            "stone"
+          ],
+          "material": [
+            "brick",
+            "stone"
+          ],
+          "signature": [
+            "red-roof-brown-and-stone-walls-american-flag-on-roof"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            15.2
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "american-flag",
+        "attributes": {
+          "color": [
+            "blue",
+            "red",
+            "white"
+          ],
+          "action": [
+            "waving"
+          ],
+          "signature": [
+            "blue-field-with-white-stars-and-red-and-white-stripes"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            15.2
+          ]
+        ]
+      },
+      {
+        "id": "o3",
+        "name": "palm-tree",
+        "attributes": {
+          "signature": [
+            "tall-tropical-tree-with-spread-leaves"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            15.2
+          ]
+        ]
+      },
+      {
+        "id": "o4",
+        "name": "bush",
+        "attributes": {
+          "signature": [
+            "small-green-shrubs-around-house"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            15.2
+          ]
+        ]
+      },
+      {
+        "id": "o5",
+        "name": "driveway",
+        "attributes": {
+          "signature": [
+            "paved-road-in-front-of-house"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            15.2
+          ]
+        ]
+      }
+    ],
+    "relations": [
+      {
+        "subject": "o1",
+        "predicate": "above",
+        "object": "o2",
+        "spans": [
+          [
+            0.0,
+            15.2
+          ]
+        ],
+        "confidence": 0.9
+      },
+      {
+        "subject": "o3",
+        "predicate": "right-of",
+        "object": "o1",
+        "spans": [
+          [
+            0.0,
+            15.2
+          ]
+        ],
+        "confidence": 0.8
+      },
+      {
+        "subject": "o4",
+        "predicate": "in-front-of",
+        "object": "o1",
+        "spans": [
+          [
+            0.0,
+            15.2
+          ]
+        ],
+        "confidence": 0.7
+      },
+      {
+        "subject": "o5",
+        "predicate": "in-front-of",
+        "object": "o1",
+        "spans": [
+          [
+            0.0,
+            15.2
+          ]
+        ],
+        "confidence": 0.7
+      }
+    ]
+  },
+  "views": {
+    "objects_count_display": {
+      "house": 1,
+      "american-flag": 1,
+      "palm-tree": 1,
+      "bush": 1,
+      "driveway": 1
+    }
+  }
+}

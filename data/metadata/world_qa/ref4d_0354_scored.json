@@ -1,0 +1,204 @@
+{
+  "summary": {
+    "items": 10,
+    "enter_bank": 9,
+    "clip_range_sec": [
+      0.0,
+      9.27
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does the snow on the mountain and trees remain in their initial positions without sudden changes?",
+      "signals": [
+        "continuity(mountain)",
+        "continuity(tree)",
+        "continuity(snow)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(mountain)": 36.6667,
+        "continuity(tree)": 7.3333,
+        "continuity(snow)": 7.3333
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Is the water in the lake calm with a smooth surface throughout the clip?",
+      "signals": [
+        "slosh_response(lake,amp=low)",
+        "continuity(lake)",
+        "slosh_response(water,amp=low)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(lake)": 36.6667,
+        "slosh_response(lake,amp=low)": 6.8333,
+        "slosh_response(water,amp=low)": 6.8333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Are there no falling hazards from the snowy mountain slope or tall trees during the video?",
+      "signals": [
+        "falling_hazard(mountain)",
+        "falling_hazard(tree)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 38.0,
+      "total_score_100": 88.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "falling_hazard(mountain)": 31.6667,
+        "falling_hazard(tree)": 6.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Do the tree structures on the mountainside maintain their balance and integrity, not collapsing or deforming?",
+      "signals": [
+        "continuity(snow)",
+        "balance(trees),deformation(trees)=0"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(snow)": 36.6667,
+        "balance(trees),deformation(trees)=0": 7.1667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "“Does <object> stay supported by <surface> without floating or sinking?",
+      "signals": [
+        "_default"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 23.33,
+      "total_score_100": 73.33,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "_default": 23.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "Snow on the mountain and trees remains consistent in appearance and position.",
+      "signals": [
+        "continuity(mountain)",
+        "continuity(tree)",
+        "continuity(snow)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(mountain)": 36.6667,
+        "continuity(tree)": 7.3333,
+        "continuity(snow)": 7.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "Water in the lake is calm blue with smooth surface continuity.",
+      "signals": [
+        "slosh_response(lake,amp=low)",
+        "continuity(lake)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(lake)": 36.6667,
+        "slosh_response(lake,amp=low)": 6.8333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "No falling hazards from high-altitude objects like snowy peaks or tall trees are present.",
+      "signals": [
+        "falling_hazard(mountain)",
+        "falling_hazard(tree)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 38.0,
+      "total_score_100": 88.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "falling_hazard(mountain)": 31.6667,
+        "falling_hazard(tree)": 6.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "Snow on mountain peaks does not suddenly disappear or merge with other objects.",
+      "signals": [
+        "continuity(snow)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 36.67,
+      "total_score_100": 86.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(snow)": 36.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "Trees on the mountainside maintain their structural integrity and balance.",
+      "signals": [
+        "balance(trees),deformation(trees)=0"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 35.83,
+      "total_score_100": 85.83,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "balance(trees),deformation(trees)=0": 35.8333
+      },
+      "content_score_raw": "50"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "a1",
+    "a2",
+    "a3",
+    "a4",
+    "a5"
+  ]
+}

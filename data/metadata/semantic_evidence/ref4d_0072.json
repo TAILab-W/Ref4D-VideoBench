@@ -1,0 +1,155 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0072.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "cv2",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "gazelle",
+        "attributes": {
+          "color": [
+            "black",
+            "orange",
+            "white"
+          ],
+          "pattern": [
+            "striped"
+          ],
+          "action": [
+            "attacking",
+            "running",
+            "struggling"
+          ],
+          "pose": [
+            "bent",
+            "standing"
+          ],
+          "facing-direction": [
+            "left",
+            "right"
+          ],
+          "signature": [
+            "orange-white-black-stripe-legs"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            6.7
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "baboon",
+        "attributes": {
+          "color": [
+            "brown"
+          ],
+          "size": [
+            "large"
+          ],
+          "sex": [
+            "male"
+          ],
+          "state": [
+            "aggressive",
+            "feeding"
+          ],
+          "action": [
+            "attacking",
+            "eating"
+          ],
+          "pose": [
+            "holding",
+            "sitting",
+            "standing"
+          ],
+          "facing-direction": [
+            "left",
+            "right"
+          ],
+          "signature": [
+            "large-brown-fur"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            6.7
+          ]
+        ]
+      },
+      {
+        "id": "o3",
+        "name": "gazelle-fawn",
+        "attributes": {
+          "color": [
+            "orange",
+            "white"
+          ],
+          "size": [
+            "small"
+          ],
+          "action": [
+            "being-eaten",
+            "lying"
+          ],
+          "pose": [
+            "lying",
+            "partially-eaten"
+          ],
+          "signature": [
+            "small-orange-white"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            6.7
+          ]
+        ]
+      }
+    ],
+    "relations": [
+      {
+        "subject": "o2",
+        "predicate": "chasing",
+        "object": "o1",
+        "spans": [
+          [
+            0.0,
+            6.7
+          ]
+        ],
+        "confidence": 0.9
+      },
+      {
+        "subject": "o2",
+        "predicate": "attacking",
+        "object": "o1",
+        "spans": [
+          [
+            0.0,
+            6.7
+          ]
+        ],
+        "confidence": 0.9
+      }
+    ]
+  },
+  "views": {
+    "objects_count_display": {
+      "gazelle": 1,
+      "baboon": 1,
+      "gazelle-fawn": 1
+    }
+  }
+}

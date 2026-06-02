@@ -1,0 +1,202 @@
+{
+  "summary": {
+    "items": 10,
+    "enter_bank": 5,
+    "clip_range_sec": [
+      0.0,
+      5.73
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does the bread stay supported by tongs and placed into the bowl without falling?",
+      "signals": [
+        "support(oA,oB)",
+        "containment(oA,oB)",
+        "friction_sliding(oA,on:oB)",
+        "tool_contact(tongs,bread)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "support(oA,oB)": 35.0,
+        "friction_sliding(oA,on:oB)": 6.0,
+        "containment(oA,oB)": 5.8333,
+        "tool_contact(tongs,bread)": 5.6667
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Is the white bread placeable in the round glass bowl?",
+      "signals": [
+        "placeable(bread,in:bowl)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 25.83,
+      "total_score_100": 75.83,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "placeable(bread,in:bowl)": 25.8333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "During placement, is the handoff between the tong and the bread stable?",
+      "signals": [
+        "grasp_stability(tongs,bread)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 28.33,
+      "total_score_100": 78.33,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "grasp_stability(tongs,bread)": 28.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Across the clip, does the shadow of the bread on the wooden surface show consistency with its position?",
+      "signals": [
+        "shadow_consistency(bread)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 36.67,
+      "total_score_100": 86.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "shadow_consistency(bread)": 36.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Is the bread's size appropriate for fitting into the glass bowl?",
+      "signals": [
+        "support(oA,oB)",
+        "containment(oA,oB)",
+        "friction_sliding(oA,on:oB)",
+        "placeable(bread,in:bowl)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "support(oA,oB)": 35.0,
+        "friction_sliding(oA,on:oB)": 6.0,
+        "containment(oA,oB)": 5.8333,
+        "placeable(bread,in:bowl)": 5.1667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "A pair of tongs holds a slice of white bread.",
+      "signals": [
+        "tool_contact(tongs,bread)",
+        "support(oA,oB)",
+        "containment(oA,oB)",
+        "friction_sliding(oA,on:oB)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "support(oA,oB)": 35.0,
+        "friction_sliding(oA,on:oB)": 6.0,
+        "containment(oA,oB)": 5.8333,
+        "tool_contact(tongs,bread)": 5.6667
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "The round glass bowl is large enough to hold the white bread.",
+      "signals": [
+        "placeable(bread,in:bowl)"
+      ],
+      "content_score_60": 30,
+      "signal_score_40": 25.83,
+      "total_score_100": 55.83,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "placeable(bread,in:bowl)": 25.8333
+      },
+      "content_score_raw": "30"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "The handoff between the tong and the bread is stable during placement.",
+      "signals": [
+        "grasp_stability(tongs,bread)"
+      ],
+      "content_score_60": 18,
+      "signal_score_40": 28.33,
+      "total_score_100": 46.33,
+      "duplicate_penalized": true,
+      "signal_detail": {
+        "grasp_stability(tongs,bread)": 28.3333
+      },
+      "content_score_raw": "30"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "The shadow of the bread on the wooden surface shows consistency with its position.",
+      "signals": [
+        "shadow_consistency(bread)"
+      ],
+      "content_score_60": 25,
+      "signal_score_40": 36.67,
+      "total_score_100": 61.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "shadow_consistency(bread)": 36.6667
+      },
+      "content_score_raw": "25"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "The bread is placed into the bowl without falling.",
+      "signals": [
+        "support(oA,oB)",
+        "containment(oA,oB)",
+        "friction_sliding(oA,on:oB)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "support(oA,oB)": 35.0,
+        "friction_sliding(oA,on:oB)": 6.0,
+        "containment(oA,oB)": 5.8333
+      },
+      "content_score_raw": "60"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v4",
+    "v5",
+    "a1",
+    "a5"
+  ]
+}

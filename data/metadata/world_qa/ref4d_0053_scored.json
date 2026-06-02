@@ -1,0 +1,210 @@
+{
+  "summary": {
+    "items": 10,
+    "enter_bank": 9,
+    "clip_range_sec": [
+      0.0,
+      10.5
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does the beekeeper's glove support the honeycomb frame without it tilting or falling?",
+      "signals": [
+        "support(beekeeper_glove,honeycomb)",
+        "balance(honeycomb)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "balance(honeycomb)": 35.8333,
+        "support(beekeeper_glove,honeycomb)": 7.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Are the bees moving on the honeycomb in a way that follows natural biological motion?",
+      "signals": [
+        "biological_motion(bee)"
+      ],
+      "content_score_60": 40,
+      "signal_score_40": 38.33,
+      "total_score_100": 78.33,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "biological_motion(bee)": 38.3333
+      },
+      "content_score_raw": "40"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Do the hexagonal cells of the honeycomb maintain their shape and continuity throughout the clip?",
+      "signals": [
+        "deformation(honeycomb)",
+        "fracture(honeycomb)",
+        "fracture",
+        "deformation"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "deformation(honeycomb)": 40.0,
+        "deformation": 8.0,
+        "fracture(honeycomb)": 6.3333,
+        "fracture": 6.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Do the bees move within the honeycomb structure without colliding with each other?",
+      "signals": [
+        "interpenetration(bees)",
+        "collision(bees)"
+      ],
+      "content_score_60": 40,
+      "signal_score_40": 40.0,
+      "total_score_100": 80.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "interpenetration(bees)": 35.8333,
+        "collision(bees)": 6.3333
+      },
+      "content_score_raw": "40"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Is the lighting consistent, showing no sudden changes in shadow direction?",
+      "signals": [
+        "material_optics",
+        "shadow_consistency"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "material_optics": 37.5,
+        "shadow_consistency": 7.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "The hexagonal cells of the honeycomb maintain structural continuity without material fracture or deformation.",
+      "signals": [
+        "continuity(honeycomb)",
+        "deformation(honeycomb)",
+        "fracture(honeycomb)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "deformation(honeycomb)": 40.0,
+        "continuity(honeycomb)": 7.3333,
+        "fracture(honeycomb)": 6.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "The beekeeper's glove supports the frame of the honeycomb, maintaining its balance and stability.",
+      "signals": [
+        "support(beekeeper_glove,honeycomb)",
+        "balance(honeycomb)",
+        "fracture",
+        "deformation"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "deformation": 40.0,
+        "balance(honeycomb)": 7.1667,
+        "support(beekeeper_glove,honeycomb)": 7.0,
+        "fracture": 6.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "Bees are actively moving on the honeycomb, showing natural biological motion.",
+      "signals": [
+        "biological_motion(bee)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 38.33,
+      "total_score_100": 88.33,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "biological_motion(bee)": 38.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "Bees move within the honeycomb structure without interpenetration or collision with each other.",
+      "signals": [
+        "interpenetration(bees)",
+        "collision(bees)"
+      ],
+      "content_score_60": 40,
+      "signal_score_40": 40.0,
+      "total_score_100": 80.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "interpenetration(bees)": 35.8333,
+        "collision(bees)": 6.3333
+      },
+      "content_score_raw": "40"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "The lighting in the scene is consistent, maintaining material optics and shadow consistency.",
+      "signals": [
+        "material_optics",
+        "shadow_consistency"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "material_optics": 37.5,
+        "shadow_consistency": 7.3333
+      },
+      "content_score_raw": "50"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v3",
+    "v4",
+    "v5",
+    "a1",
+    "a2",
+    "a3",
+    "a4",
+    "a5"
+  ]
+}

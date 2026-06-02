@@ -1,0 +1,121 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0021.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "cv2",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "cheetah",
+        "attributes": {
+          "color": [
+            "black",
+            "brown",
+            "yellow"
+          ],
+          "pattern": [
+            "spotted"
+          ],
+          "texture": [
+            "short-furred"
+          ],
+          "size": [
+            "large"
+          ],
+          "age": [
+            "adult"
+          ],
+          "sex": [
+            "male"
+          ],
+          "state": [
+            "alert",
+            "calm"
+          ],
+          "pose": [
+            "sitting"
+          ],
+          "action": [
+            "looking-around",
+            "resting",
+            "vocalizing"
+          ],
+          "orientation": [
+            "facing-right"
+          ],
+          "facing-direction": [
+            "right"
+          ],
+          "position": [
+            "center-left"
+          ],
+          "object-part": [
+            "body",
+            "head",
+            "legs"
+          ],
+          "species-or-breed": [
+            "cheetah"
+          ],
+          "signature": [
+            "spotted-coat-orange-eyes-short-furred-large-adult-male-alert-calm-sitting-resting-looking-around-vocalizing-facing-right-center-left-head-body-legs-cheetah"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            16.9
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "sky",
+        "attributes": {
+          "color": [
+            "blue",
+            "gray"
+          ],
+          "weather": [
+            "cloudy"
+          ],
+          "signature": [
+            "blue-cloudy"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            16.9
+          ]
+        ]
+      }
+    ],
+    "relations": [
+      {
+        "subject": "o1",
+        "predicate": "looking-at",
+        "object": "o2",
+        "spans": [
+          [
+            0.0,
+            16.9
+          ]
+        ],
+        "confidence": 0.8
+      }
+    ]
+  },
+  "views": {
+    "objects_count_display": {
+      "cheetah": 1,
+      "sky": 1
+    }
+  }
+}

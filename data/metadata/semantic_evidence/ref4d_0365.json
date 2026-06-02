@@ -1,0 +1,130 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0365.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "decord",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "person",
+        "attributes": {
+          "signature": [
+            "person-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            5.2
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "person",
+        "attributes": {
+          "signature": [
+            "person-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            5.2
+          ]
+        ]
+      },
+      {
+        "id": "o3",
+        "name": "boat",
+        "attributes": {
+          "signature": [
+            "boat-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            5.2
+          ]
+        ]
+      },
+      {
+        "id": "o4",
+        "name": "boat",
+        "attributes": {
+          "signature": [
+            "boat-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            5.2
+          ]
+        ]
+      },
+      {
+        "id": "o5",
+        "name": "bridge",
+        "attributes": {
+          "signature": [
+            "bridge-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            5.2
+          ]
+        ]
+      },
+      {
+        "id": "o6",
+        "name": "flag",
+        "attributes": {
+          "signature": [
+            "flag-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            5.2
+          ]
+        ]
+      },
+      {
+        "id": "o7",
+        "name": "water",
+        "attributes": {
+          "signature": [
+            "water-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            5.2
+          ]
+        ]
+      }
+    ],
+    "relations": []
+  },
+  "views": {
+    "objects_count_display": {
+      "person": 2,
+      "boat": 2,
+      "bridge": 1,
+      "flag": 1,
+      "water": 1
+    }
+  }
+}

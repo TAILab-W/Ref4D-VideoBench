@@ -1,0 +1,233 @@
+{
+  "summary": {
+    "items": 10,
+    "enter_bank": 10,
+    "clip_range_sec": [
+      0.0,
+      16.47
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Do the monkeys move on the ground with natural biological motion?",
+      "signals": [
+        "continuity(monkey)",
+        "biological_motion(monkey)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "biological_motion(monkey)": 38.3333,
+        "continuity(monkey)": 7.3333
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Do the yellow fruits stay in place without suddenly disappearing or interpenetrating other objects?",
+      "signals": [
+        "continuity(monkey)",
+        "interpenetration(monkey,ground)",
+        "friction_sliding(monkey,on:ground)",
+        "continuity(ground)",
+        "continuity(leaves)",
+        "continuity(yellow_fruit)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(monkey)": 36.6667,
+        "continuity(ground)": 7.3333,
+        "continuity(leaves)": 7.3333,
+        "continuity(yellow_fruit)": 7.3333,
+        "interpenetration(monkey,ground)": 7.1667,
+        "friction_sliding(monkey,on:ground)": 6.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Does the monkey's tail follow a natural trajectory and not twist rigidly?",
+      "signals": [
+        "trajectory_dir(monkey_tail,axis)",
+        "rigid_transform(monkey_tail)",
+        "biological_motion(oA)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(monkey_tail,axis)": 38.3333,
+        "biological_motion(oA)": 7.6667,
+        "rigid_transform(monkey_tail)": 7.5
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Do the shadows of the monkeys remain consistent with their positions and light sources?",
+      "signals": [
+        "continuity(monkey)",
+        "continuity(oX)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(monkey)": 36.6667,
+        "continuity(oX)": 7.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Do the ground elements, such as leaves and small items, maintain continuity in appearance and position?",
+      "signals": [
+        "continuity(monkey)",
+        "continuity(ground)",
+        "continuity(leaves)",
+        "continuity(yellow_fruit)",
+        "shadow_consistency(oX)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(monkey)": 36.6667,
+        "continuity(ground)": 7.3333,
+        "continuity(leaves)": 7.3333,
+        "continuity(yellow_fruit)": 7.3333,
+        "shadow_consistency(oX)": 7.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "Monkeys move naturally on the ground, following gravity and biological motion.",
+      "signals": [
+        "continuity(monkey)",
+        "biological_motion(monkey)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "biological_motion(monkey)": 38.3333,
+        "continuity(monkey)": 7.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "Yellow fruit remains visible on the ground without sudden disappearance.",
+      "signals": [
+        "continuity(monkey)",
+        "interpenetration(monkey,ground)",
+        "friction_sliding(monkey,on:ground)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(monkey)": 36.6667,
+        "interpenetration(monkey,ground)": 7.1667,
+        "friction_sliding(monkey,on:ground)": 6.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "Ground surface and background elements maintain continuity and consistency throughout the scene.",
+      "signals": [
+        "continuity(monkey)",
+        "continuity(ground)",
+        "continuity(leaves)",
+        "continuity(yellow_fruit)",
+        "falling_hazard(monkey)",
+        "falling_hazard(ground)",
+        "falling_hazard(leaves)",
+        "falling_hazard(yellow_fruit)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(monkey)": 36.6667,
+        "continuity(ground)": 7.3333,
+        "continuity(leaves)": 7.3333,
+        "continuity(yellow_fruit)": 7.3333,
+        "falling_hazard(monkey)": 6.3333,
+        "falling_hazard(ground)": 6.3333,
+        "falling_hazard(leaves)": 6.3333,
+        "falling_hazard(yellow_fruit)": 6.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "Monkey tails follow natural trajectories, avoiding impossible rigid transformations.",
+      "signals": [
+        "trajectory_dir(monkey_tail,axis)",
+        "rigid_transform(monkey_tail)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(monkey_tail,axis)": 38.3333,
+        "rigid_transform(monkey_tail)": 7.5
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "Monkeys interact with their environment in a manner consistent with natural biological motion.",
+      "signals": [
+        "biological_motion(oA)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 38.33,
+      "total_score_100": 88.33,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "biological_motion(oA)": 38.3333
+      },
+      "content_score_raw": "50"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "v5",
+    "a1",
+    "a2",
+    "a3",
+    "a4",
+    "a5"
+  ]
+}

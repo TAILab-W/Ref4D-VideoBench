@@ -1,0 +1,213 @@
+{
+  "summary": {
+    "items": 10,
+    "enter_bank": 4,
+    "clip_range_sec": [
+      0.0,
+      7.4
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does the train move along a straight track without changing direction?",
+      "signals": [
+        "trajectory_dir(train,axis)",
+        "accel_sign(train,axis)",
+        "continuity(train)"
+      ],
+      "content_score_60": 30,
+      "signal_score_40": 40.0,
+      "total_score_100": 70.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(train,axis)": 38.3333,
+        "continuity(train)": 7.3333,
+        "accel_sign(train,axis)": 7.0
+      },
+      "content_score_raw": "30"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Are the trees stationary and not swaying in the wind?",
+      "signals": [
+        "balance(palm-tree)",
+        "balance(tree)",
+        "rigid_transform(palm-tree)",
+        "deformation(tree)",
+        "fracture(tree)"
+      ],
+      "content_score_60": 20,
+      "signal_score_40": 40.0,
+      "total_score_100": 60.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "deformation(tree)": 40.0,
+        "rigid_transform(palm-tree)": 7.5,
+        "balance(palm-tree)": 7.1667,
+        "balance(tree)": 7.1667,
+        "fracture(tree)": 6.3333
+      },
+      "content_score_raw": "20"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Is the shadow of the train visible on the ground below it?",
+      "signals": [
+        "shadow_consistency(train)"
+      ],
+      "content_score_60": 10,
+      "signal_score_40": 36.67,
+      "total_score_100": 46.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "shadow_consistency(train)": 36.6667
+      },
+      "content_score_raw": "10"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Does the train's motion follow real-world physics, moving smoothly forward?",
+      "signals": [
+        "falling_hazard(train)",
+        "buoyancy_float(train,in:air)",
+        "trajectory_dir(oX,axis)",
+        "accel_sign(oX,axis)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(oX,axis)": 38.3333,
+        "accel_sign(oX,axis)": 7.0,
+        "buoyancy_float(train,in:air)": 6.8333,
+        "falling_hazard(train)": 6.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Does the train remain at a safe distance from the nearby tree branches?",
+      "signals": [
+        "collision(train,tree)"
+      ],
+      "content_score_60": 40,
+      "signal_score_40": 31.67,
+      "total_score_100": 71.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "collision(train,tree)": 31.6667
+      },
+      "content_score_raw": "40"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "The train moves consistently along its track without abrupt changes in direction or position.",
+      "signals": [
+        "trajectory_dir(train,axis)",
+        "accel_sign(train,axis)",
+        "continuity(train)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(train,axis)": 38.3333,
+        "continuity(train)": 7.3333,
+        "accel_sign(train,axis)": 7.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "The palm tree and other trees remain stationary throughout the video with no unexpected movement.",
+      "signals": [
+        "balance(palm-tree)",
+        "balance(tree)",
+        "rigid_transform(palm-tree)",
+        "deformation(tree)",
+        "fracture(tree)"
+      ],
+      "content_score_60": 30,
+      "signal_score_40": 40.0,
+      "total_score_100": 70.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "deformation(tree)": 40.0,
+        "rigid_transform(palm-tree)": 7.5,
+        "balance(palm-tree)": 7.1667,
+        "balance(tree)": 7.1667,
+        "fracture(tree)": 6.3333
+      },
+      "content_score_raw": "30"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "The train's motion is consistent with real-world physics, not defying gravity.",
+      "signals": [
+        "falling_hazard(train)",
+        "buoyancy_float(train,in:air)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "buoyancy_float(train,in:air)": 34.1667,
+        "falling_hazard(train)": 6.3333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "The tree leaves and branches remain attached to the trees without floating unexpectedly.",
+      "signals": [
+        "support(oA,oB)",
+        "friction_sliding(oA,on:oB)"
+      ],
+      "content_score_60": 40,
+      "signal_score_40": 40.0,
+      "total_score_100": 80.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "support(oA,oB)": 35.0,
+        "friction_sliding(oA,on:oB)": 6.0
+      },
+      "content_score_raw": "40"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "The sky shows a blue color gradient near the horizon.",
+      "signals": [
+        "hue_histogram_jump(oX)"
+      ],
+      "content_score_60": 20,
+      "signal_score_40": 33.33,
+      "total_score_100": 53.33,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "hue_histogram_jump(oX)": 33.3333
+      },
+      "content_score_raw": "20"
+    }
+  ],
+  "bank_ids": [
+    "v4",
+    "a1",
+    "a3",
+    "a4"
+  ]
+}

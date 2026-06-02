@@ -1,0 +1,68 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0010.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "cv2",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "elephant",
+        "attributes": {
+          "signature": [
+            "large-animal-with-gray-skin-and-tusks"
+          ]
+        },
+        "spans": [
+          [
+            0.2,
+            3.5
+          ],
+          [
+            4.8,
+            6.7
+          ],
+          [
+            9.1,
+            11.2
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "deer",
+        "attributes": {
+          "signature": [
+            "smaller-animal-with-brown-fur"
+          ]
+        },
+        "spans": [
+          [
+            4.5,
+            5.3
+          ],
+          [
+            7.8,
+            8.6
+          ],
+          [
+            10.1,
+            10.9
+          ]
+        ]
+      }
+    ],
+    "relations": []
+  },
+  "views": {
+    "objects_count_display": {
+      "elephant": 1,
+      "deer": 1
+    }
+  }
+}

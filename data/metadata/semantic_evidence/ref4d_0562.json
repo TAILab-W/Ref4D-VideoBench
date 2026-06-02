@@ -1,0 +1,221 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0562.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "cv2",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "bus",
+        "attributes": {
+          "color": [
+            "black",
+            "white"
+          ],
+          "pattern": [
+            "articulated"
+          ],
+          "size": [
+            "large"
+          ],
+          "state": [
+            "parked"
+          ],
+          "position": [
+            "alongside-road"
+          ],
+          "signature": [
+            "white-black-tram-style-articulated-with-dark-ribbons-between-sections"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            7.5
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "bicycle",
+        "attributes": {
+          "color": [
+            "white"
+          ],
+          "object-part": [
+            "frame"
+          ],
+          "tool-or-instrument": [
+            "signboard"
+          ],
+          "signature": [
+            "white-frame-with-colorful-signboard"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            7.5
+          ]
+        ]
+      },
+      {
+        "id": "o3",
+        "name": "tree",
+        "attributes": {
+          "color": [
+            "green"
+          ],
+          "size": [
+            "large"
+          ],
+          "signature": [
+            "green-leaves-on-left-side-of-road"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            7.5
+          ]
+        ]
+      },
+      {
+        "id": "o4",
+        "name": "building",
+        "attributes": {
+          "color": [
+            "beige"
+          ],
+          "material": [
+            "stone"
+          ],
+          "style": [
+            "historical"
+          ],
+          "signature": [
+            "tall-beige-building-with-balconies-and-gabled-roof"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            7.5
+          ]
+        ]
+      },
+      {
+        "id": "o5",
+        "name": "building",
+        "attributes": {
+          "color": [
+            "light-beige"
+          ],
+          "material": [
+            "stone"
+          ],
+          "style": [
+            "historical"
+          ],
+          "signature": [
+            "lighter-beige-building-with-balconies-and-gabled-roof"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            7.5
+          ]
+        ]
+      },
+      {
+        "id": "o6",
+        "name": "building",
+        "attributes": {
+          "color": [
+            "white"
+          ],
+          "material": [
+            "glass"
+          ],
+          "style": [
+            "modern"
+          ],
+          "signature": [
+            "modern-white-building-with-glass-windows"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            7.5
+          ]
+        ]
+      }
+    ],
+    "relations": [
+      {
+        "subject": "o1",
+        "predicate": "left-of",
+        "object": "o2",
+        "spans": [
+          [
+            0.0,
+            7.5
+          ]
+        ],
+        "confidence": 0.0
+      },
+      {
+        "subject": "o3",
+        "predicate": "left-of",
+        "object": "o4",
+        "spans": [
+          [
+            0.0,
+            7.5
+          ]
+        ],
+        "confidence": 0.0
+      },
+      {
+        "subject": "o5",
+        "predicate": "right-of",
+        "object": "o4",
+        "spans": [
+          [
+            0.0,
+            7.5
+          ]
+        ],
+        "confidence": 0.0
+      },
+      {
+        "subject": "o6",
+        "predicate": "left-of",
+        "object": "o4",
+        "spans": [
+          [
+            0.0,
+            7.5
+          ]
+        ],
+        "confidence": 0.0
+      }
+    ]
+  },
+  "views": {
+    "objects_count_display": {
+      "bus": 1,
+      "bicycle": 1,
+      "tree": 1,
+      "building": 3
+    }
+  }
+}

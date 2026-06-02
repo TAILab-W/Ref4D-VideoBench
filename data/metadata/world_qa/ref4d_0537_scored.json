@@ -1,0 +1,223 @@
+{
+  "summary": {
+    "items": 10,
+    "enter_bank": 8,
+    "clip_range_sec": [
+      0.0,
+      8.93
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does the bus remain stationary on the ground with its wheels in contact?",
+      "signals": [
+        "balance(bus)",
+        "continuity(bus)",
+        "center_of_mass_over_base(bus)",
+        "friction_sliding(bus,on:ground)",
+        "cast_shadow_contact(bus,shadow)",
+        "friction_sliding"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "cast_shadow_contact(bus,shadow)": 37.5,
+        "continuity(bus)": 7.3333,
+        "balance(bus)": 7.1667,
+        "center_of_mass_over_base(bus)": 6.5,
+        "friction_sliding(bus,on:ground)": 6.0,
+        "friction_sliding": 6.0
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Does the bus's shadow match its position and shape consistently?",
+      "signals": [
+        "shadow_consistency"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 36.67,
+      "total_score_100": 86.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "shadow_consistency": 36.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Are the lighting conditions across the scene color consistent without abrupt shifts?",
+      "signals": [
+        "hue_histogram_jump"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 33.33,
+      "total_score_100": 83.33,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "hue_histogram_jump": 33.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Is the bus parked near the platform without obstructing pedestrian areas?",
+      "signals": [
+        "prohibited_intersection"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 36.67,
+      "total_score_100": 86.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "prohibited_intersection": 36.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Does the bus show any unexpected movement or floating?",
+      "signals": [
+        "balance(bus)",
+        "continuity(bus)",
+        "center_of_mass_over_base(bus)",
+        "friction_sliding(bus,on:ground)",
+        "cast_shadow_contact(bus,shadow)",
+        "friction_sliding"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "cast_shadow_contact(bus,shadow)": 37.5,
+        "continuity(bus)": 7.3333,
+        "balance(bus)": 7.1667,
+        "center_of_mass_over_base(bus)": 6.5,
+        "friction_sliding(bus,on:ground)": 6.0,
+        "friction_sliding": 6.0
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "The bus remains stationary on the ground with its wheels in contact.",
+      "signals": [
+        "balance(bus)",
+        "continuity(bus)",
+        "center_of_mass_over_base(bus)",
+        "friction_sliding(bus,on:ground)",
+        "cast_shadow_contact(bus,shadow)",
+        "friction_sliding"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "cast_shadow_contact(bus,shadow)": 37.5,
+        "continuity(bus)": 7.3333,
+        "balance(bus)": 7.1667,
+        "center_of_mass_over_base(bus)": 6.5,
+        "friction_sliding(bus,on:ground)": 6.0,
+        "friction_sliding": 6.0
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "The shadow of the bus matches its position and shape consistently.",
+      "signals": [
+        "shadow_consistency"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 36.67,
+      "total_score_100": 86.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "shadow_consistency": 36.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "The lighting conditions maintain color consistency across the scene.",
+      "signals": [
+        "hue_histogram_jump"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 33.33,
+      "total_score_100": 83.33,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "hue_histogram_jump": 33.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "The bus is parked near a platform without obstructing pedestrian areas.",
+      "signals": [
+        "prohibited_intersection"
+      ],
+      "content_score_60": 30,
+      "signal_score_40": 36.67,
+      "total_score_100": 66.67,
+      "duplicate_penalized": true,
+      "signal_detail": {
+        "prohibited_intersection": 36.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "The bus does not show any unexpected movement or floating.",
+      "signals": [
+        "balance(bus)",
+        "continuity(bus)",
+        "center_of_mass_over_base(bus)",
+        "friction_sliding(bus,on:ground)",
+        "cast_shadow_contact(bus,shadow)",
+        "friction_sliding"
+      ],
+      "content_score_60": 36,
+      "signal_score_40": 40.0,
+      "total_score_100": 76.0,
+      "duplicate_penalized": true,
+      "signal_detail": {
+        "cast_shadow_contact(bus,shadow)": 37.5,
+        "continuity(bus)": 7.3333,
+        "balance(bus)": 7.1667,
+        "center_of_mass_over_base(bus)": 6.5,
+        "friction_sliding(bus,on:ground)": 6.0,
+        "friction_sliding": 6.0
+      },
+      "content_score_raw": "60"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "v5",
+    "a1",
+    "a2",
+    "a3"
+  ]
+}

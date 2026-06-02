@@ -1,0 +1,42 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0170.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "cv2",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "bottle",
+        "attributes": {
+          "color": [
+            "green",
+            "orange",
+            "pink",
+            "yellow"
+          ],
+          "signature": [
+            "small,-plastic,-bottle-shaped,-pink-orange-yellow-green-color"
+          ]
+        },
+        "spans": [
+          [
+            0.2,
+            0.8
+          ]
+        ]
+      }
+    ],
+    "relations": []
+  },
+  "views": {
+    "objects_count_display": {
+      "bottle": 1
+    }
+  }
+}

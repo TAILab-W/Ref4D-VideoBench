@@ -1,0 +1,121 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0501.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "decord",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "field-hockey-player",
+        "attributes": {
+          "clothing": [
+            "black-tank-top",
+            "green-shorts",
+            "pink-shoes",
+            "white-knee-high-socks"
+          ],
+          "action": [
+            "bending-down",
+            "dribbling-ball",
+            "juggling-ball",
+            "posing-with-stick"
+          ],
+          "position": [
+            "center"
+          ],
+          "signature": [
+            "black-tank-top,-green-shorts,-white-knee-high-socks,-pink-shoes,-#herohil-banner-in-background"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            7.6
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "field-hockey-ball",
+        "attributes": {
+          "color": [
+            "white"
+          ],
+          "position": [
+            "on-blue-field"
+          ],
+          "signature": [
+            "white,-on-blue-field"
+          ]
+        },
+        "spans": [
+          [
+            0.3,
+            0.7
+          ]
+        ]
+      },
+      {
+        "id": "o3",
+        "name": "field-hockey-stick",
+        "attributes": {
+          "color": [
+            "black",
+            "white"
+          ],
+          "position": [
+            "held-by-e1"
+          ],
+          "signature": [
+            "white-handle,-black-head,-held-by-e1"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            7.6
+          ]
+        ]
+      }
+    ],
+    "relations": [
+      {
+        "subject": "o1",
+        "predicate": "holding",
+        "object": "o3",
+        "spans": [
+          [
+            0.0,
+            7.6
+          ]
+        ],
+        "confidence": 0.0
+      },
+      {
+        "subject": "o1",
+        "predicate": "interacting_with",
+        "object": "o2",
+        "spans": [
+          [
+            0.0,
+            7.6
+          ]
+        ],
+        "confidence": 0.0
+      }
+    ]
+  },
+  "views": {
+    "objects_count_display": {
+      "field-hockey-player": 1,
+      "field-hockey-ball": 1,
+      "field-hockey-stick": 1
+    }
+  }
+}

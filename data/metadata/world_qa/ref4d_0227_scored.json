@@ -1,0 +1,198 @@
+{
+  "summary": {
+    "items": 10,
+    "enter_bank": 9,
+    "clip_range_sec": [
+      0.0,
+      7.73
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does the food on the plate show signs of sudden movement or collapse?",
+      "signals": [
+        "continuity(oX)",
+        "balance(oX)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(oX)": 36.6667,
+        "balance(oX)": 7.1667
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Is there steam rising from the hot noodles indicating they are freshly cooked?",
+      "signals": [
+        "smoke_direction_consistency(scene)",
+        "hot_surface_contact(noodles,plate)",
+        "hot_surface_contact(dish)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "smoke_direction_consistency(scene)": 36.6667,
+        "hot_surface_contact(noodles,plate)": 6.8333,
+        "hot_surface_contact(dish)": 6.8333
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Do the cup and spoon in the background maintain their relative position without frame discontinuity?",
+      "signals": [
+        "frame_discontinuity(cup)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "frame_discontinuity(cup)": 40.0
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Are the ingredients on the plate interpenetrating with each other?",
+      "signals": [
+        "continuity(noodles)",
+        "support(plate,table)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(noodles)": 36.6667,
+        "support(plate,table)": 7.0
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Do the noodles remain fully visible on the plate, not disappearing under any object?",
+      "signals": [
+        "continuity(noodles)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 36.67,
+      "total_score_100": 91.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(noodles)": 36.6667
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "The food on the plate remains stable and does not show signs of sudden movement or collapse.",
+      "signals": [
+        "balance(oX)",
+        "continuity(oX)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(oX)": 36.6667,
+        "balance(oX)": 7.1667
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "Steam rises from the hot noodles, indicating they are freshly cooked.",
+      "signals": [
+        "smoke_direction_consistency(scene)",
+        "hot_surface_contact(noodles,plate)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "smoke_direction_consistency(scene)": 36.6667,
+        "hot_surface_contact(noodles,plate)": 6.8333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "The cup and spoon in the background maintain their relative position without sudden frame discontinuity.",
+      "signals": [
+        "frame_discontinuity(cup)"
+      ],
+      "content_score_60": 36,
+      "signal_score_40": 40.0,
+      "total_score_100": 76.0,
+      "duplicate_penalized": true,
+      "signal_detail": {
+        "frame_discontinuity(cup)": 40.0
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "The vegetables do not interpenetrate with each other.",
+      "signals": [
+        "continuity(noodles)",
+        "support(plate,table)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(noodles)": 36.6667,
+        "support(plate,table)": 7.0
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "The noodles remain on the plate without interpenetration with other objects.",
+      "signals": [
+        "continuity(noodles)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 36.67,
+      "total_score_100": 91.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(noodles)": 36.6667
+      },
+      "content_score_raw": "55"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "v5",
+    "a1",
+    "a2",
+    "a4",
+    "a5"
+  ]
+}

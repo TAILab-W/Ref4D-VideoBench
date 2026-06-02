@@ -1,0 +1,193 @@
+{
+  "summary": {
+    "items": 10,
+    "enter_bank": 6,
+    "clip_range_sec": [
+      0.0,
+      9.93
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does the person maintain a stable posture while leaning over the barbecue grill?",
+      "signals": [
+        "balance(oX)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 35.83,
+      "total_score_100": 85.83,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "balance(oX)": 35.8333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Does smoke consistently rise from the barbecue grill, and is its direction consistent with flame proximity?",
+      "signals": [
+        "smoke_direction_consistency(scene)",
+        "smoke_direction_consistency(scene),flame_proximity(Food,dist)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "smoke_direction_consistency(scene)": 36.6667,
+        "smoke_direction_consistency(scene),flame_proximity(Food,dist)": 7.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Is the person using their arm to interact with an object on the barbecue grill by holding a brush for proper tool usage?",
+      "signals": [
+        "tool_contact(oTool,oObj)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 28.33,
+      "total_score_100": 78.33,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "tool_contact(oTool,oObj)": 28.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Is the hand holding the brush moving it over the food during saucemixing?",
+      "signals": [
+        "tool_contact(Brush,Food)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 28.33,
+      "total_score_100": 78.33,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "tool_contact(Brush,Food)": 28.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Does the sauce application occur in a continuous manner without frame discontinuity or sudden size inconsistency?",
+      "signals": [
+        "grasp_stability(Hand,Brush)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 28.33,
+      "total_score_100": 78.33,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "grasp_stability(Hand,Brush)": 28.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "The person leans over the barbecue grill with a stable posture.",
+      "signals": [
+        "balance(oX)",
+        "hot_surface_contact(oObj,oSurface)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "balance(oX)": 35.8333,
+        "hot_surface_contact(oObj,oSurface)": 6.8333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "The person uses their arm to hold a brush and apply sauce to the meat.",
+      "signals": [
+        "tool_contact(oTool,oObj)",
+        "tool_contact(Brush,Food)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 34.0,
+      "total_score_100": 94.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "tool_contact(oTool,oObj)": 28.3333,
+        "tool_contact(Brush,Food)": 5.6667
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "Food items rest on a metal rack, supported by the tray without interpenetration.",
+      "signals": [
+        "support(oA,oB)",
+        "interpenetration(oA,oB)",
+        "support(Food,Rack)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "interpenetration(oA,oB)": 35.8333,
+        "support(oA,oB)": 7.0,
+        "support(Food,Rack)": 7.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "Smoke rises from the barbecue grill consistently in one direction.",
+      "signals": [
+        "smoke_direction_consistency(scene)",
+        "smoke_direction_consistency(scene),flame_proximity(Food,dist)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "smoke_direction_consistency(scene)": 36.6667,
+        "smoke_direction_consistency(scene),flame_proximity(Food,dist)": 7.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "The hand holds the brush away from the hot surface of the grill.",
+      "signals": [
+        "tool_contact(oTool,oObj)"
+      ],
+      "content_score_60": 0,
+      "signal_score_40": 28.33,
+      "total_score_100": 28.33,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "tool_contact(oTool,oObj)": 28.3333
+      },
+      "content_score_raw": "0"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "a1",
+    "a2",
+    "a3",
+    "a4"
+  ]
+}

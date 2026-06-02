@@ -1,0 +1,227 @@
+{
+  "summary": {
+    "items": 10,
+    "enter_bank": 10,
+    "clip_range_sec": [
+      0.0,
+      8.83
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does the rebar follow a continuous cutting trajectory while in contact with the cutter?",
+      "signals": [
+        "tool_contact(oTool,oObj)",
+        "trajectory_dir(oX,axis)",
+        "continuity(oX)",
+        "trajectory_dir(rebar,axis)",
+        "tool_contact(cutting_tool,rebar)",
+        "continuity(rebar)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(oX,axis)": 38.3333,
+        "trajectory_dir(rebar,axis)": 7.6667,
+        "continuity(oX)": 7.3333,
+        "continuity(rebar)": 7.3333,
+        "tool_contact(oTool,oObj)": 5.6667,
+        "tool_contact(cutting_tool,rebar)": 5.6667
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Is the tool contact between the cutter and the rebar stable without sudden frame discontinuity?",
+      "signals": [
+        "tool_contact(cutter,rebar)",
+        "frame_discontinuity(t)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "frame_discontinuity(t)": 40.0,
+        "tool_contact(cutter,rebar)": 5.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Is the heavy machinery operating safely on the concrete surface, showing no signs of instability or falling hazard?",
+      "signals": [
+        "friction_sliding(machinery,on:concrete)",
+        "falling_hazard(machinery)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 37.67,
+      "total_score_100": 87.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "falling_hazard(machinery)": 31.6667,
+        "friction_sliding(machinery,on:concrete)": 6.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Does the rebar remain continuous and not interpenetrate with the machine during cutting?",
+      "signals": [
+        "continuity(rebar)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 36.67,
+      "total_score_100": 96.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(rebar)": 36.6667
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Does the rebar stay supported by the cutting tool throughout the operation?",
+      "signals": [
+        "tool_contact(oTool,oObj)",
+        "trajectory_dir(oX,axis)",
+        "continuity(oX)",
+        "trajectory_dir(rebar,axis)",
+        "tool_contact(cutting_tool,rebar)",
+        "continuity(rebar)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(oX,axis)": 38.3333,
+        "trajectory_dir(rebar,axis)": 7.6667,
+        "continuity(oX)": 7.3333,
+        "continuity(rebar)": 7.3333,
+        "tool_contact(oTool,oObj)": 5.6667,
+        "tool_contact(cutting_tool,rebar)": 5.6667
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "The rebar follows a continuous cutting trajectory as it is being cut.",
+      "signals": [
+        "tool_contact(oTool,oObj)",
+        "trajectory_dir(oX,axis)",
+        "continuity(oX)",
+        "trajectory_dir(rebar,axis)",
+        "tool_contact(cutting_tool,rebar)",
+        "continuity(rebar)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(oX,axis)": 38.3333,
+        "trajectory_dir(rebar,axis)": 7.6667,
+        "continuity(oX)": 7.3333,
+        "continuity(rebar)": 7.3333,
+        "tool_contact(oTool,oObj)": 5.6667,
+        "tool_contact(cutting_tool,rebar)": 5.6667
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "The tool contact between the cutter and the rebar is stable and consistent.",
+      "signals": [
+        "tool_contact(cutter,rebar)",
+        "frame_discontinuity(t)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "frame_discontinuity(t)": 40.0,
+        "tool_contact(cutter,rebar)": 5.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "The heavy machinery operates safely on a concrete surface.",
+      "signals": [
+        "friction_sliding(machinery,on:concrete)",
+        "falling_hazard(machinery)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 37.67,
+      "total_score_100": 87.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "falling_hazard(machinery)": 31.6667,
+        "friction_sliding(machinery,on:concrete)": 6.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "The rebar remains in contact with the cutting tool during the operation.",
+      "signals": [
+        "tool_contact(oTool,oObj)",
+        "trajectory_dir(oX,axis)",
+        "continuity(oX)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(oX,axis)": 38.3333,
+        "continuity(oX)": 7.3333,
+        "tool_contact(oTool,oObj)": 5.6667
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "The rebar does not interpenetrate with the machine during cutting.",
+      "signals": [
+        "continuity(rebar)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 36.67,
+      "total_score_100": 96.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(rebar)": 36.6667
+      },
+      "content_score_raw": "60"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "v5",
+    "a1",
+    "a2",
+    "a3",
+    "a4",
+    "a5"
+  ]
+}

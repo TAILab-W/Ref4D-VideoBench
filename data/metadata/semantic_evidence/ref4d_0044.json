@@ -1,0 +1,86 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0044.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "cv2",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "elephant",
+        "attributes": {
+          "color": [
+            "gray"
+          ],
+          "pattern": [
+            "wrinkled"
+          ],
+          "texture": [
+            "rough"
+          ],
+          "material": [
+            "skin"
+          ],
+          "size": [
+            "large"
+          ],
+          "age": [
+            "adult"
+          ],
+          "sex": [
+            "male"
+          ],
+          "state": [
+            "calm"
+          ],
+          "pose": [
+            "standing"
+          ],
+          "action": [
+            "approaching-camera",
+            "walking"
+          ],
+          "orientation": [
+            "facing-forward"
+          ],
+          "facing-direction": [
+            "towards-camera"
+          ],
+          "position": [
+            "center",
+            "foreground"
+          ],
+          "object-part": [
+            "body",
+            "ears",
+            "trunk",
+            "tusks"
+          ],
+          "species-or-breed": [
+            "elephant"
+          ],
+          "signature": [
+            "large-gray-wrinkled-skin-tusks-front-facing"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            5.6
+          ]
+        ]
+      }
+    ],
+    "relations": []
+  },
+  "views": {
+    "objects_count_display": {
+      "elephant": 1
+    }
+  }
+}

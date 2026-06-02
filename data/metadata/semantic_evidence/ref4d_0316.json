@@ -1,0 +1,65 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0316.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "decord",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "sky",
+        "attributes": {
+          "color": [
+            "blue",
+            "gray"
+          ],
+          "pattern": [
+            "cloudy"
+          ],
+          "signature": [
+            "blue-gray-clouds"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            9.3
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "sand",
+        "attributes": {
+          "color": [
+            "beige"
+          ],
+          "state": [
+            "wet"
+          ],
+          "signature": [
+            "wet-beige-shoreline"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            9.3
+          ]
+        ]
+      }
+    ],
+    "relations": []
+  },
+  "views": {
+    "objects_count_display": {
+      "sky": 1,
+      "sand": 1
+    }
+  }
+}

@@ -1,0 +1,217 @@
+{
+  "summary": {
+    "items": 10,
+    "enter_bank": 10,
+    "clip_range_sec": [
+      0.0,
+      6.93
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does the water flow continuously down the rock face without abrupt changes in trajectory?",
+      "signals": [
+        "trajectory_dir(water,axis)",
+        "continuity(water)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(water,axis)": 38.3333,
+        "continuity(water)": 7.3333
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Do the rocks remain static and support the falling water, with water flowing around them naturally?",
+      "signals": [
+        "support(water,rock)",
+        "balance(rock)",
+        "fracture(rock)",
+        "interpenetration(water,rock)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "balance(rock)": 35.8333,
+        "interpenetration(water,rock)": 7.1667,
+        "support(water,rock)": 7.0,
+        "fracture(rock)": 6.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Does the waterfall follow a downward trajectory consistent with gravity throughout the clip?",
+      "signals": [
+        "trajectory_dir(oX,axis)",
+        "accel_sign(oX,axis)",
+        "accel_sign(water,axis)",
+        "falling_hazard(water)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(oX,axis)": 38.3333,
+        "accel_sign(oX,axis)": 7.0,
+        "accel_sign(water,axis)": 7.0,
+        "falling_hazard(water)": 6.3333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Do the water droplets and streams on the rocks exhibit natural shadow consistency reflecting realistic light interaction?",
+      "signals": [
+        "material_optics(oA)",
+        "shadow_consistency(oX)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "material_optics(oA)": 37.5,
+        "shadow_consistency(oX)": 7.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Is there grass visible on the moist areas of the rocky surface?",
+      "signals": [
+        "placeable(grass,on:rock)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 25.83,
+      "total_score_100": 80.83,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "placeable(grass,on:rock)": 25.8333
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "Water flows downward from the top of the waterfall and cascades down the rock face.",
+      "signals": [
+        "trajectory_dir(water,axis)",
+        "continuity(water)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(water,axis)": 38.3333,
+        "continuity(water)": 7.3333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "The rock formations are static and support the falling water without deformation, with water flowing around them.",
+      "signals": [
+        "support(water,rock)",
+        "balance(rock)",
+        "fracture(rock)",
+        "interpenetration(water,rock)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "balance(rock)": 35.8333,
+        "interpenetration(water,rock)": 7.1667,
+        "support(water,rock)": 7.0,
+        "fracture(rock)": 6.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "During the waterfall's flow, water follows a downward trajectory consistent with gravity.",
+      "signals": [
+        "trajectory_dir(oX,axis)",
+        "accel_sign(oX,axis)",
+        "accel_sign(water,axis)",
+        "falling_hazard(water)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(oX,axis)": 38.3333,
+        "accel_sign(oX,axis)": 7.0,
+        "accel_sign(water,axis)": 7.0,
+        "falling_hazard(water)": 6.3333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "Water droplets and streams on the rocks exhibit natural material optics and shadow consistency.",
+      "signals": [
+        "material_optics(oA)",
+        "shadow_consistency(oX)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "material_optics(oA)": 37.5,
+        "shadow_consistency(oX)": 7.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "Grass grows on the moist areas of the rocky surface.",
+      "signals": [
+        "placeable(grass,on:rock)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 25.83,
+      "total_score_100": 80.83,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "placeable(grass,on:rock)": 25.8333
+      },
+      "content_score_raw": "55"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "v5",
+    "a1",
+    "a2",
+    "a3",
+    "a4",
+    "a5"
+  ]
+}

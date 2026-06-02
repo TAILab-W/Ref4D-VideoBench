@@ -1,0 +1,176 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0267.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "cv2",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "machine",
+        "attributes": {
+          "color": [
+            "green"
+          ],
+          "material": [
+            "metal"
+          ],
+          "size": [
+            "large"
+          ],
+          "state": [
+            "operational"
+          ],
+          "signature": [
+            "green-backdrop-with-metal-parts"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            0.4
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "metal_rod",
+        "attributes": {
+          "pattern": [
+            "spiral"
+          ],
+          "material": [
+            "metal"
+          ],
+          "state": [
+            "cutting"
+          ],
+          "orientation": [
+            "horizontal"
+          ],
+          "signature": [
+            "long-spiral-rod-being-cut"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            0.5
+          ]
+        ]
+      },
+      {
+        "id": "o3",
+        "name": "water",
+        "attributes": {
+          "color": [
+            "white"
+          ],
+          "texture": [
+            "liquid"
+          ],
+          "state": [
+            "flowing"
+          ],
+          "signature": [
+            "liquid-on-machine-table"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            0.6
+          ]
+        ]
+      },
+      {
+        "id": "o4",
+        "name": "sparks",
+        "attributes": {
+          "color": [
+            "orange",
+            "yellow"
+          ],
+          "state": [
+            "flashing"
+          ],
+          "action": [
+            "emitting"
+          ],
+          "signature": [
+            "orange-yellow-flashes-from-cutting"
+          ]
+        },
+        "spans": [
+          [
+            0.1,
+            0.7
+          ]
+        ]
+      }
+    ],
+    "relations": [
+      {
+        "subject": "o1",
+        "predicate": "looking-at",
+        "object": "o2",
+        "spans": [
+          [
+            0.2,
+            0.5
+          ]
+        ],
+        "confidence": 0.9
+      },
+      {
+        "subject": "o1",
+        "predicate": "adjusting",
+        "object": "o1",
+        "spans": [
+          [
+            0.4,
+            0.9
+          ]
+        ],
+        "confidence": 0.7
+      },
+      {
+        "subject": "o2",
+        "predicate": "cutting",
+        "object": "o3",
+        "spans": [
+          [
+            0.2,
+            0.7
+          ]
+        ],
+        "confidence": 0.8
+      },
+      {
+        "subject": "o2",
+        "predicate": "emitting",
+        "object": "o4",
+        "spans": [
+          [
+            0.1,
+            0.7
+          ]
+        ],
+        "confidence": 0.9
+      }
+    ]
+  },
+  "views": {
+    "objects_count_display": {
+      "machine": 1,
+      "metal_rod": 1,
+      "water": 1,
+      "sparks": 1
+    }
+  }
+}

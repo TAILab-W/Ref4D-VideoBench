@@ -1,0 +1,163 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0214.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "cv2",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "pan",
+        "attributes": {
+          "signature": [
+            "pan-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            14.7
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "pan",
+        "attributes": {
+          "signature": [
+            "pan-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            14.7
+          ]
+        ]
+      },
+      {
+        "id": "o3",
+        "name": "spoon",
+        "attributes": {
+          "signature": [
+            "spoon-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            14.7
+          ]
+        ]
+      },
+      {
+        "id": "o4",
+        "name": "gas_stove",
+        "attributes": {
+          "signature": [
+            "gas_stove-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            14.7
+          ]
+        ]
+      },
+      {
+        "id": "o5",
+        "name": "tortilla",
+        "attributes": {
+          "signature": [
+            "tortilla-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            14.7
+          ]
+        ]
+      },
+      {
+        "id": "o6",
+        "name": "cheese",
+        "attributes": {
+          "signature": [
+            "cheese-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            14.7
+          ]
+        ]
+      },
+      {
+        "id": "o7",
+        "name": "meat",
+        "attributes": {
+          "signature": [
+            "meat-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            14.7
+          ]
+        ]
+      },
+      {
+        "id": "o8",
+        "name": "lettuce",
+        "attributes": {
+          "signature": [
+            "lettuce-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            14.7
+          ]
+        ]
+      },
+      {
+        "id": "o9",
+        "name": "spatula",
+        "attributes": {
+          "signature": [
+            "spatula-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            14.7
+          ]
+        ]
+      }
+    ],
+    "relations": []
+  },
+  "views": {
+    "objects_count_display": {
+      "pan": 2,
+      "spoon": 1,
+      "gas_stove": 1,
+      "tortilla": 1,
+      "cheese": 1,
+      "meat": 1,
+      "lettuce": 1,
+      "spatula": 1
+    }
+  }
+}

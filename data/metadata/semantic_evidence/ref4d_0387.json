@@ -1,0 +1,149 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0387.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "decord",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "person",
+        "attributes": {
+          "color": [
+            "gray",
+            "red"
+          ],
+          "sex": [
+            "male"
+          ],
+          "state": [
+            "dirty"
+          ],
+          "pose": [
+            "squatting"
+          ],
+          "action": [
+            "handling-net"
+          ],
+          "clothing_details": [
+            "red-shirt-with-white-logo-on-sleeve"
+          ],
+          "signature": [
+            "red-shirt-gray-pants-barefoot"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            8.8
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "net",
+        "attributes": {
+          "color": [
+            "orange",
+            "white"
+          ],
+          "material": [
+            "mesh"
+          ],
+          "state": [
+            "dirty"
+          ],
+          "type": [
+            "fishing-net"
+          ],
+          "signature": [
+            "white-and-orange-net"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            8.8
+          ]
+        ]
+      },
+      {
+        "id": "o3",
+        "name": "tarpaulin",
+        "attributes": {
+          "color": [
+            "blue"
+          ],
+          "material": [
+            "fabric"
+          ],
+          "state": [
+            "dirty"
+          ],
+          "position": [
+            "on-ground"
+          ],
+          "signature": [
+            "blue-tarpaulin"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            8.8
+          ]
+        ]
+      }
+    ],
+    "relations": [
+      {
+        "subject": "o1",
+        "predicate": "touching",
+        "object": "o2",
+        "spans": [
+          [
+            0.0,
+            8.8
+          ]
+        ],
+        "confidence": 0.8
+      },
+      {
+        "subject": "o1",
+        "predicate": "touching",
+        "object": "o3",
+        "spans": [
+          [
+            0.0,
+            8.8
+          ]
+        ],
+        "confidence": 0.8
+      },
+      {
+        "subject": "o2",
+        "predicate": "on",
+        "object": "o3",
+        "spans": [
+          [
+            0.0,
+            8.8
+          ]
+        ],
+        "confidence": 0.8
+      }
+    ]
+  },
+  "views": {
+    "objects_count_display": {
+      "person": 1,
+      "net": 1,
+      "tarpaulin": 1
+    }
+  }
+}

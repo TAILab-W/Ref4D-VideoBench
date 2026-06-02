@@ -1,0 +1,203 @@
+{
+  "summary": {
+    "items": 10,
+    "enter_bank": 8,
+    "clip_range_sec": [
+      0.0,
+      8.83
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does the train move smoothly along the track without abrupt changes in speed or direction?",
+      "signals": [
+        "continuity(train)",
+        "trajectory_dir(train,railway)",
+        "accel_sign(train,railway)",
+        "wheel_rolling(oX)",
+        "continuity(oX)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(train,railway)": 38.3333,
+        "continuity(train)": 7.3333,
+        "continuity(oX)": 7.3333,
+        "accel_sign(train,railway)": 7.0,
+        "wheel_rolling(oX)": 6.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Is the 'South Western Railway' text clearly visible on the side of the train?",
+      "signals": [
+        "material_optics(oA)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 37.5,
+      "total_score_100": 87.5,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "material_optics(oA)": 37.5
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Does the yellow tactile paving at the platform edge remain continuous and unbroken throughout the scene?",
+      "signals": [
+        "continuity(tactile_paving)",
+        "fracture(oX)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(tactile_paving)": 36.6667,
+        "fracture(oX)": 6.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Does the shadow of the train align consistently with its position and movement, following a consistent trajectory across the platform?",
+      "signals": [
+        "shadow_consistency(train,platform)",
+        "shadow_consistency(train)",
+        "shadow_consistency(oX)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "shadow_consistency(train,platform)": 36.6667,
+        "shadow_consistency(train)": 7.3333,
+        "shadow_consistency(oX)": 7.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Is the yellow tactile paving present to mark the edge of the platform for passenger safety?",
+      "signals": [
+        "support(platform,edge)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 35.0,
+      "total_score_100": 85.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "support(platform,edge)": 35.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "The text 'South Western Railway' is visible on the side of the train.",
+      "signals": [
+        "material_optics(oA)"
+      ],
+      "content_score_60": 36,
+      "signal_score_40": 37.5,
+      "total_score_100": 73.5,
+      "duplicate_penalized": true,
+      "signal_detail": {
+        "material_optics(oA)": 37.5
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "The yellow tactile paving at the platform edge remains continuous and unbroken.",
+      "signals": [
+        "continuity(tactile_paving)",
+        "fracture(oX)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(tactile_paving)": 36.6667,
+        "fracture(oX)": 6.3333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "The train moves along the railway track with smooth, continuous motion.",
+      "signals": [
+        "continuity(train)",
+        "trajectory_dir(train,railway)",
+        "accel_sign(train,railway)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(train,railway)": 38.3333,
+        "continuity(train)": 7.3333,
+        "accel_sign(train,railway)": 7.0
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "The shadow of the train aligns consistently with its position on the platform.",
+      "signals": [
+        "shadow_consistency(train,platform)"
+      ],
+      "content_score_60": 40,
+      "signal_score_40": 36.67,
+      "total_score_100": 76.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "shadow_consistency(train,platform)": 36.6667
+      },
+      "content_score_raw": "40"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "The platform edge is marked by yellow tactile paving for passenger safety.",
+      "signals": [
+        "support(platform,edge)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 35.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "support(platform,edge)": 35.0
+      },
+      "content_score_raw": "60"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "v5",
+    "a2",
+    "a3",
+    "a5"
+  ]
+}

@@ -1,0 +1,193 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0498.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "cv2",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "person",
+        "attributes": {
+          "signature": [
+            "person-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            9.5
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "mannequin",
+        "attributes": {
+          "signature": [
+            "mannequin-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            9.5
+          ]
+        ]
+      },
+      {
+        "id": "o3",
+        "name": "ball",
+        "attributes": {
+          "signature": [
+            "ball-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            9.5
+          ]
+        ]
+      },
+      {
+        "id": "o4",
+        "name": "ball",
+        "attributes": {
+          "signature": [
+            "ball-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            9.5
+          ]
+        ]
+      },
+      {
+        "id": "o5",
+        "name": "ball",
+        "attributes": {
+          "signature": [
+            "ball-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            9.5
+          ]
+        ]
+      },
+      {
+        "id": "o6",
+        "name": "bench",
+        "attributes": {
+          "signature": [
+            "bench-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            9.5
+          ]
+        ]
+      },
+      {
+        "id": "o7",
+        "name": "door",
+        "attributes": {
+          "signature": [
+            "door-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            9.5
+          ]
+        ]
+      },
+      {
+        "id": "o8",
+        "name": "wall",
+        "attributes": {
+          "signature": [
+            "wall-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            9.5
+          ]
+        ]
+      },
+      {
+        "id": "o9",
+        "name": "mats",
+        "attributes": {
+          "signature": [
+            "mats-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            9.5
+          ]
+        ]
+      },
+      {
+        "id": "o10",
+        "name": "window",
+        "attributes": {
+          "signature": [
+            "window-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            9.5
+          ]
+        ]
+      },
+      {
+        "id": "o11",
+        "name": "bench",
+        "attributes": {
+          "signature": [
+            "bench-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            9.5
+          ]
+        ]
+      }
+    ],
+    "relations": []
+  },
+  "views": {
+    "objects_count_display": {
+      "person": 1,
+      "mannequin": 1,
+      "ball": 3,
+      "bench": 2,
+      "door": 1,
+      "wall": 1,
+      "mats": 1,
+      "window": 1
+    }
+  }
+}

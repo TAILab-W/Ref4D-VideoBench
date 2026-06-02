@@ -1,0 +1,116 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0203.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "cv2",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "hand",
+        "attributes": {
+          "signature": [
+            "hand-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            6.4
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "chopsticks",
+        "attributes": {
+          "signature": [
+            "chopsticks-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            6.4
+          ]
+        ]
+      },
+      {
+        "id": "o3",
+        "name": "vegetables",
+        "attributes": {
+          "signature": [
+            "vegetables-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            6.4
+          ]
+        ]
+      },
+      {
+        "id": "o4",
+        "name": "soy-sauce",
+        "attributes": {
+          "signature": [
+            "soy-sauce-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            6.4
+          ]
+        ]
+      },
+      {
+        "id": "o5",
+        "name": "water",
+        "attributes": {
+          "signature": [
+            "water-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            6.4
+          ]
+        ]
+      },
+      {
+        "id": "o6",
+        "name": "sauce",
+        "attributes": {
+          "signature": [
+            "sauce-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            6.4
+          ]
+        ]
+      }
+    ],
+    "relations": []
+  },
+  "views": {
+    "objects_count_display": {
+      "hand": 1,
+      "chopsticks": 1,
+      "vegetables": 1,
+      "soy-sauce": 1,
+      "water": 1,
+      "sauce": 1
+    }
+  }
+}

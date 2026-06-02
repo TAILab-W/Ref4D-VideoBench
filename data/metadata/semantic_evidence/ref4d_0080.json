@@ -1,0 +1,68 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0080.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "cv2",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "clownfish",
+        "attributes": {
+          "signature": [
+            "orange-and-white-stripes"
+          ]
+        },
+        "spans": [
+          [
+            0.2,
+            2.1
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "coral",
+        "attributes": {
+          "signature": [
+            "green,-blue,-orange,-red"
+          ]
+        },
+        "spans": [
+          [
+            0.2,
+            2.1
+          ]
+        ]
+      },
+      {
+        "id": "o3",
+        "name": "fish",
+        "attributes": {
+          "signature": [
+            "yellow-body"
+          ]
+        },
+        "spans": [
+          [
+            0.2,
+            2.1
+          ]
+        ]
+      }
+    ],
+    "relations": []
+  },
+  "views": {
+    "objects_count_display": {
+      "clownfish": 1,
+      "coral": 1,
+      "fish": 1
+    }
+  }
+}

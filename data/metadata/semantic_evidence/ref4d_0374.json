@@ -1,0 +1,100 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0374.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "decord",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "berry",
+        "attributes": {
+          "signature": [
+            "small,-white,-clustered-fruit-like-structures"
+          ]
+        },
+        "spans": [
+          [
+            0.1,
+            2.9
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "leaf",
+        "attributes": {
+          "signature": [
+            "green,-oval-shaped-leaves"
+          ]
+        },
+        "spans": [
+          [
+            0.1,
+            2.9
+          ]
+        ]
+      },
+      {
+        "id": "o3",
+        "name": "branch",
+        "attributes": {
+          "signature": [
+            "thin,-brown-branches"
+          ]
+        },
+        "spans": [
+          [
+            0.1,
+            2.9
+          ]
+        ]
+      },
+      {
+        "id": "o4",
+        "name": "ground",
+        "attributes": {
+          "signature": [
+            "dried-leaves-and-pine-needles"
+          ]
+        },
+        "spans": [
+          [
+            0.1,
+            2.9
+          ]
+        ]
+      },
+      {
+        "id": "o5",
+        "name": "shoe",
+        "attributes": {
+          "signature": [
+            "black-shoe-visible-at-the-bottom-right-corner"
+          ]
+        },
+        "spans": [
+          [
+            0.9,
+            2.9
+          ]
+        ]
+      }
+    ],
+    "relations": []
+  },
+  "views": {
+    "objects_count_display": {
+      "berry": 1,
+      "leaf": 1,
+      "branch": 1,
+      "ground": 1,
+      "shoe": 1
+    }
+  }
+}

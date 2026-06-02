@@ -1,0 +1,199 @@
+{
+  "summary": {
+    "items": 10,
+    "enter_bank": 8,
+    "clip_range_sec": [
+      0.0,
+      9.27
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does the drill-bit create a circular hole in the wooden plank?",
+      "signals": [
+        "tool_contact(drill-bit,wooden-plank)",
+        "cuttable_progress(wooden-plank)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 33.0,
+      "total_score_100": 93.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "tool_contact(drill-bit,wooden-plank)": 28.3333,
+        "cuttable_progress(wooden-plank)": 4.6667
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Does sawdust accumulate around the drilled area on the wooden plank?",
+      "signals": [
+        "material_optics(wooden-plank)",
+        "friction_sliding(sawdust,on:wooden-plank)",
+        "tool_contact(drill,wood), spillage(sawdust)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "material_optics(wooden-plank)": 37.5,
+        "friction_sliding(sawdust,on:wooden-plank)": 6.0,
+        "tool_contact(drill,wood), spillage(sawdust)": 5.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Is the person's hand maintaining finger clearance from the rotating drill-bit during operation?",
+      "signals": [
+        "finger_clearance(person,drill-bit)",
+        "blade_orientation_away(drill-bit,person-hand)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "finger_clearance(person,drill-bit)": 34.1667,
+        "blade_orientation_away(drill-bit,person-hand)": 5.8333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Is the hand holding the wooden block positioned to stabilize the workpiece?",
+      "signals": [
+        "grasp_stability(hand,wood)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 28.33,
+      "total_score_100": 78.33,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "grasp_stability(hand,wood)": 28.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Does the drill bit make a circular cut in the wood?",
+      "signals": [
+        "cuttable_progress(wood)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 23.33,
+      "total_score_100": 83.33,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "cuttable_progress(wood)": 23.3333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "The drill-bit creates a circular hole in the wooden plank.",
+      "signals": [
+        "tool_contact(drill-bit,wooden-plank)",
+        "cuttable_progress(wooden-plank)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 33.0,
+      "total_score_100": 93.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "tool_contact(drill-bit,wooden-plank)": 28.3333,
+        "cuttable_progress(wooden-plank)": 4.6667
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "Sawdust accumulates around the drilled area on the wooden plank.",
+      "signals": [
+        "material_optics(wooden-plank)",
+        "friction_sliding(sawdust,on:wooden-plank)",
+        "tool_contact(drill,wood), spillage(sawdust)"
+      ],
+      "content_score_60": 0,
+      "signal_score_40": 40.0,
+      "total_score_100": 40.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "material_optics(wooden-plank)": 37.5,
+        "friction_sliding(sawdust,on:wooden-plank)": 6.0,
+        "tool_contact(drill,wood), spillage(sawdust)": 5.6667
+      },
+      "content_score_raw": "0"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "The person's hand maintains finger clearance from the rotating drill-bit.",
+      "signals": [
+        "finger_clearance(person,drill-bit)",
+        "blade_orientation_away(drill-bit,person-hand)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "finger_clearance(person,drill-bit)": 34.1667,
+        "blade_orientation_away(drill-bit,person-hand)": 5.8333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "The hand holding the wooden block stabilizes the workpiece during operation.",
+      "signals": [
+        "grasp_stability(hand,wood)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 28.33,
+      "total_score_100": 88.33,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "grasp_stability(hand,wood)": 28.3333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "The drill bit makes a circular cut in the wood.",
+      "signals": [
+        "cuttable_progress(wood)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 23.33,
+      "total_score_100": 83.33,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "cuttable_progress(wood)": 23.3333
+      },
+      "content_score_raw": "60"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v5",
+    "a1",
+    "a3",
+    "a4",
+    "a5"
+  ]
+}

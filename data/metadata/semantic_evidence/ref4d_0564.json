@@ -1,0 +1,65 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0564.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "cv2",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "cow",
+        "attributes": {
+          "signature": [
+            "large,-red,-cartoon-like-animal-with-horns"
+          ]
+        },
+        "spans": [
+          [
+            0.2,
+            5.7
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "bench",
+        "attributes": {
+          "signature": [
+            "metallic,-perforated"
+          ]
+        },
+        "spans": [
+          [
+            0.3,
+            5.7
+          ]
+        ]
+      }
+    ],
+    "relations": [
+      {
+        "subject": "o1",
+        "predicate": "left-of",
+        "object": "o2",
+        "spans": [
+          [
+            0.3,
+            0.4
+          ]
+        ],
+        "confidence": 0.8
+      }
+    ]
+  },
+  "views": {
+    "objects_count_display": {
+      "cow": 1,
+      "bench": 1
+    }
+  }
+}

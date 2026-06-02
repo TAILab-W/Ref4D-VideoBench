@@ -1,0 +1,143 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0079.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "cv2",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "leaf-insect",
+        "attributes": {
+          "color": [
+            "brown",
+            "green"
+          ],
+          "pattern": [
+            "leaf-shaped"
+          ],
+          "texture": [
+            "rough"
+          ],
+          "material": [
+            "insect-exoskeleton"
+          ],
+          "size": [
+            "small"
+          ],
+          "state": [
+            "resting"
+          ],
+          "pose": [
+            "clinging"
+          ],
+          "action": [
+            "holding-onto-hand"
+          ],
+          "orientation": [
+            "facing-downward"
+          ],
+          "facing-direction": [
+            "down"
+          ],
+          "position": [
+            "on-wrist"
+          ],
+          "object-part": [
+            "wrist"
+          ],
+          "signature": [
+            "green-brown-edged-leaf-patterned-body"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            5.7
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "person",
+        "attributes": {
+          "color": [
+            "black"
+          ],
+          "material": [
+            "fabric",
+            "metal",
+            "skin"
+          ],
+          "equipment": [
+            "bracelet"
+          ],
+          "tattoo": [
+            "tree",
+            "triangle"
+          ],
+          "signature": [
+            "black-sleeve-tattoo-bracelet"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            5.7
+          ]
+        ]
+      },
+      {
+        "id": "o3",
+        "name": "plant",
+        "attributes": {
+          "color": [
+            "green",
+            "yellow"
+          ],
+          "pattern": [
+            "leaves"
+          ],
+          "scene": [
+            "outdoor"
+          ],
+          "signature": [
+            "yellow-green-leaves"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            5.7
+          ]
+        ]
+      }
+    ],
+    "relations": [
+      {
+        "subject": "o1",
+        "predicate": "holding",
+        "object": "o2",
+        "spans": [
+          [
+            0.0,
+            5.7
+          ]
+        ],
+        "confidence": 0.9
+      }
+    ]
+  },
+  "views": {
+    "objects_count_display": {
+      "leaf-insect": 1,
+      "person": 1,
+      "plant": 1
+    }
+  }
+}

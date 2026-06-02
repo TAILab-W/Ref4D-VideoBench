@@ -1,0 +1,213 @@
+{
+  "summary": {
+    "items": 10,
+    "enter_bank": 10,
+    "clip_range_sec": [
+      0.0,
+      8.9
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does the dancer in yellow maintain balance over her base during arm extension?",
+      "signals": [
+        "trajectory_dir(dancer,axis)",
+        "accel_sign(dancer,axis)",
+        "balance(dancer)",
+        "center_of_mass_over_base(dancer)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(dancer,axis)": 38.3333,
+        "balance(dancer)": 7.1667,
+        "accel_sign(dancer,axis)": 7.0,
+        "center_of_mass_over_base(dancer)": 6.5
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Do the dancers' movements avoid sudden changes in direction or pose collision risks?",
+      "signals": [
+        "trajectory_dir(dancer,axis)",
+        "accel_sign(dancer,axis)",
+        "falling_hazard(dancer)",
+        "collision(dancer,dancer)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(dancer,axis)": 38.3333,
+        "accel_sign(dancer,axis)": 7.0,
+        "falling_hazard(dancer)": 6.3333,
+        "collision(dancer,dancer)": 6.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Are the shadows of the dancers consistent with their postures and light sources?",
+      "signals": [
+        "balance(dancer)",
+        "interpenetration(dancer,dancer)",
+        "shadow_consistency(dancer), reflection_consistency(shadow)"
+      ],
+      "content_score_60": 40,
+      "signal_score_40": 40.0,
+      "total_score_100": 80.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "shadow_consistency(dancer), reflection_consistency(shadow)": 36.6667,
+        "balance(dancer)": 7.1667,
+        "interpenetration(dancer,dancer)": 7.1667
+      },
+      "content_score_raw": "40"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Does the gray-shirt-gray-skirt-right-front-facing-right dancer perform a continuous motion without abrupt stops?",
+      "signals": [
+        "biological_motion(dancer)",
+        "continuity(dancer), balance(dancer), trajectory_dir(dancer, vertical), accel_sign(dancer, vertical)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "biological_motion(dancer)": 38.3333,
+        "continuity(dancer), balance(dancer), trajectory_dir(dancer, vertical), accel_sign(dancer, vertical)": 7.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Does the white hat on the central dancer stay securely placed during dynamic head movements?",
+      "signals": [
+        "falling_hazard(clothing), biological_motion(dancer)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 31.67,
+      "total_score_100": 81.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "falling_hazard(clothing), biological_motion(dancer)": 31.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "The dancers' movements show no sudden changes in trajectory or acceleration direction.",
+      "signals": [
+        "trajectory_dir(dancer,axis)",
+        "accel_sign(dancer,axis)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(dancer,axis)": 38.3333,
+        "accel_sign(dancer,axis)": 7.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "The dancer's balance and center of mass are maintained over their base, avoiding interpenetration.",
+      "signals": [
+        "balance(dancer)",
+        "center_of_mass_over_base(dancer)",
+        "interpenetration(dancer,dancer)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "balance(dancer)": 35.8333,
+        "interpenetration(dancer,dancer)": 7.1667,
+        "center_of_mass_over_base(dancer)": 6.5
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "The shadows on the ground match the dancers' positions and postures under light sources.",
+      "signals": [
+        "falling_hazard(dancer)",
+        "collision(dancer,dancer)",
+        "shadow_consistency(dancer), reflection_consistency(shadow)"
+      ],
+      "content_score_60": 40,
+      "signal_score_40": 40.0,
+      "total_score_100": 80.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "shadow_consistency(dancer), reflection_consistency(shadow)": 36.6667,
+        "falling_hazard(dancer)": 6.3333,
+        "collision(dancer,dancer)": 6.3333
+      },
+      "content_score_raw": "40"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "The gray-shirt-gray-skirt-right-front-facing-right dancer performs continuous dance motions with proper biological motion.",
+      "signals": [
+        "biological_motion(dancer)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 38.33,
+      "total_score_100": 88.33,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "biological_motion(dancer)": 38.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "The white hat worn by the central dancer does not pose a falling hazard during dynamic movements.",
+      "signals": [
+        "falling_hazard(clothing), biological_motion(dancer)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 31.67,
+      "total_score_100": 81.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "falling_hazard(clothing), biological_motion(dancer)": 31.6667
+      },
+      "content_score_raw": "50"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "v5",
+    "a1",
+    "a2",
+    "a3",
+    "a4",
+    "a5"
+  ]
+}

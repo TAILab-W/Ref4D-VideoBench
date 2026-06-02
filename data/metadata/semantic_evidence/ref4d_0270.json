@@ -1,0 +1,129 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0270.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "cv2",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "robot-arm",
+        "attributes": {
+          "signature": [
+            "robot-arm-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            8.2
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "poster",
+        "attributes": {
+          "signature": [
+            "poster-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            8.2
+          ]
+        ]
+      },
+      {
+        "id": "o3",
+        "name": "poster",
+        "attributes": {
+          "signature": [
+            "poster-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            8.2
+          ]
+        ]
+      },
+      {
+        "id": "o4",
+        "name": "poster",
+        "attributes": {
+          "signature": [
+            "poster-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            8.2
+          ]
+        ]
+      },
+      {
+        "id": "o5",
+        "name": "table",
+        "attributes": {
+          "signature": [
+            "table-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            8.2
+          ]
+        ]
+      },
+      {
+        "id": "o6",
+        "name": "chair",
+        "attributes": {
+          "signature": [
+            "chair-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            8.2
+          ]
+        ]
+      },
+      {
+        "id": "o7",
+        "name": "chair",
+        "attributes": {
+          "signature": [
+            "chair-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            8.2
+          ]
+        ]
+      }
+    ],
+    "relations": []
+  },
+  "views": {
+    "objects_count_display": {
+      "robot-arm": 1,
+      "poster": 3,
+      "table": 1,
+      "chair": 2
+    }
+  }
+}

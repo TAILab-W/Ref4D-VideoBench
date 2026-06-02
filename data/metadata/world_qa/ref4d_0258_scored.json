@@ -1,0 +1,209 @@
+{
+  "summary": {
+    "items": 10,
+    "enter_bank": 8,
+    "clip_range_sec": [
+      0.0,
+      7.3
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does the green base of the setup remain stable throughout the operation?",
+      "signals": [
+        "balance(table)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 35.83,
+      "total_score_100": 90.83,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "balance(table)": 35.8333
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Does the robotic manipulator's end effector avoid collisions with people or objects in its operational area?",
+      "signals": [
+        "collision(robot,table)",
+        "collision(robot,human)",
+        "collision(robot_arm,table)",
+        "collision(robot_arm,human)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "collision(robot,table)": 31.6667,
+        "collision(robot,human)": 6.3333,
+        "collision(robot_arm,table)": 6.3333,
+        "collision(robot_arm,human)": 6.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Does the white cylindrical tool attached to the robot maintain consistent size and shape during its motion?",
+      "signals": [
+        "size_inconsistency(cylindrical_tool)",
+        "deformation(cylindrical_tool)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "deformation(cylindrical_tool)": 40.0,
+        "size_inconsistency(cylindrical_tool)": 7.5
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Does the robot arm move smoothly along the designated path on the table without sudden changes in direction or speed?",
+      "signals": [
+        "trajectory_dir(robot_arm,axis)",
+        "accel_sign(robot_arm,axis)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(robot_arm,axis)": 38.3333,
+        "accel_sign(robot_arm,axis)": 7.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Is the black object held by the robot designed to be placed onto one of the labeled slots on the track?",
+      "signals": [
+        "goal_placement(black_object,at:slot)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 26.67,
+      "total_score_100": 76.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "goal_placement(black_object,at:slot)": 26.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "The robot arm moves continuously and smoothly along the designated path on the table.",
+      "signals": [
+        "continuity(robot)",
+        "trajectory_dir(robot,table)",
+        "accel_sign(robot,table)",
+        "trajectory_dir(robot_arm,axis)",
+        "accel_sign(robot_arm,axis)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(robot,table)": 38.3333,
+        "trajectory_dir(robot_arm,axis)": 7.6667,
+        "continuity(robot)": 7.3333,
+        "accel_sign(robot,table)": 7.0,
+        "accel_sign(robot_arm,axis)": 7.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "The robotic manipulator's end effector does not collide with any objects or people.",
+      "signals": [
+        "collision(robot,table)",
+        "collision(robot,human)",
+        "collision(robot_arm,table)",
+        "collision(robot_arm,human)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "collision(robot,table)": 31.6667,
+        "collision(robot,human)": 6.3333,
+        "collision(robot_arm,table)": 6.3333,
+        "collision(robot_arm,human)": 6.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "The black object held by the robot is designed to be placed onto one of the labeled slots on the track.",
+      "signals": [
+        "goal_placement(black_object,at:slot)"
+      ],
+      "content_score_60": 30,
+      "signal_score_40": 26.67,
+      "total_score_100": 56.67,
+      "duplicate_penalized": true,
+      "signal_detail": {
+        "goal_placement(black_object,at:slot)": 26.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "The green base of the setup remains stable throughout the operation.",
+      "signals": [
+        "balance(table)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 35.83,
+      "total_score_100": 85.83,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "balance(table)": 35.8333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "The white cylindrical tool attached to the robot maintains consistent size and shape throughout its motion.",
+      "signals": [
+        "size_inconsistency(cylindrical_tool)",
+        "deformation(cylindrical_tool)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "deformation(cylindrical_tool)": 40.0,
+        "size_inconsistency(cylindrical_tool)": 7.5
+      },
+      "content_score_raw": "50"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "a1",
+    "a2",
+    "a4",
+    "a5"
+  ]
+}

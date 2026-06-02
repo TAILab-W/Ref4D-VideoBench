@@ -1,0 +1,184 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0134.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "cv2",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "solar-panel",
+        "attributes": {
+          "color": [
+            "black"
+          ],
+          "material": [
+            "glass"
+          ],
+          "state": [
+            "installed"
+          ],
+          "signature": [
+            "dark-surface,-hexagonal-shape"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            1.0
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "building",
+        "attributes": {
+          "color": [
+            "green",
+            "silver"
+          ],
+          "architecture": [
+            "modern"
+          ],
+          "signature": [
+            "silver-exterior,-curved-balconies"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            1.0
+          ]
+        ]
+      },
+      {
+        "id": "o3",
+        "name": "tree",
+        "attributes": {
+          "color": [
+            "green"
+          ],
+          "size": [
+            "small"
+          ],
+          "signature": [
+            "small-green-foliage"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            1.0
+          ]
+        ]
+      },
+      {
+        "id": "o4",
+        "name": "person",
+        "attributes": {
+          "signature": [
+            "person-coarse"
+          ]
+        },
+        "spans": [
+          [
+            5.7,
+            11.0
+          ]
+        ]
+      },
+      {
+        "id": "o5",
+        "name": "person",
+        "attributes": {
+          "signature": [
+            "person-coarse"
+          ]
+        },
+        "spans": [
+          [
+            5.7,
+            11.0
+          ]
+        ]
+      },
+      {
+        "id": "o6",
+        "name": "person",
+        "attributes": {
+          "signature": [
+            "person-coarse"
+          ]
+        },
+        "spans": [
+          [
+            5.7,
+            11.0
+          ]
+        ]
+      },
+      {
+        "id": "o7",
+        "name": "bridge",
+        "attributes": {
+          "signature": [
+            "bridge-coarse"
+          ]
+        },
+        "spans": [
+          [
+            5.7,
+            11.0
+          ]
+        ]
+      },
+      {
+        "id": "o8",
+        "name": "water",
+        "attributes": {
+          "signature": [
+            "water-coarse"
+          ]
+        },
+        "spans": [
+          [
+            5.7,
+            11.0
+          ]
+        ]
+      },
+      {
+        "id": "o9",
+        "name": "sun",
+        "attributes": {
+          "signature": [
+            "sun-coarse"
+          ]
+        },
+        "spans": [
+          [
+            5.7,
+            11.0
+          ]
+        ]
+      }
+    ],
+    "relations": []
+  },
+  "views": {
+    "objects_count_display": {
+      "solar-panel": 1,
+      "building": 1,
+      "tree": 1,
+      "person": 3,
+      "bridge": 1,
+      "water": 1,
+      "sun": 1
+    }
+  }
+}

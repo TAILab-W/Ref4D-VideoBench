@@ -1,0 +1,211 @@
+{
+  "summary": {
+    "items": 10,
+    "enter_bank": 8,
+    "clip_range_sec": [
+      0.0,
+      9.63
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does the camera move forward consistently without sudden changes in direction?",
+      "signals": [
+        "trajectory_dir(camera,forward)",
+        "accel_sign(camera,forward)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(camera,forward)": 38.3333,
+        "accel_sign(camera,forward)": 7.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Do clouds and shadows maintain smooth, natural motion with consistent speed and orientation throughout the clip?",
+      "signals": [
+        "trajectory_dir(cloud,axis)",
+        "frame_discontinuity(cloud)",
+        "shadow_consistency(tree)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "frame_discontinuity(cloud)": 40.0,
+        "trajectory_dir(cloud,axis)": 7.6667,
+        "shadow_consistency(tree)": 7.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Are mountains and terrain continuous across all frames of the video?",
+      "signals": [
+        "continuity(mountain)",
+        "deformation(rock)",
+        "continuity(terrain)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "deformation(rock)": 40.0,
+        "continuity(mountain)": 7.3333,
+        "continuity(terrain)": 7.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Are there no loose rocks or unstable ground visible that could pose a safety hazard?",
+      "signals": [
+        "falling_hazard(mountain)",
+        "falling_hazard(rock)",
+        "falling_hazard(rocks)"
+      ],
+      "content_score_60": 30,
+      "signal_score_40": 40.0,
+      "total_score_100": 70.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "falling_hazard(mountain)": 31.6667,
+        "falling_hazard(rock)": 6.3333,
+        "falling_hazard(rocks)": 6.3333
+      },
+      "content_score_raw": "30"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Do shadows on the ground match the position and shape of objects above them?",
+      "signals": [
+        "shadow_consistency(ground,objects)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 36.67,
+      "total_score_100": 86.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "shadow_consistency(ground,objects)": 36.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "The cloud in the sky moves smoothly and consistently.",
+      "signals": [
+        "trajectory_dir(cloud,axis)",
+        "frame_discontinuity(cloud)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "frame_discontinuity(cloud)": 40.0,
+        "trajectory_dir(cloud,axis)": 7.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "Mountains and rocks maintain their natural shapes and positions throughout the video.",
+      "signals": [
+        "continuity(mountain)",
+        "deformation(rock)",
+        "continuity(terrain)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "deformation(rock)": 40.0,
+        "continuity(mountain)": 7.3333,
+        "continuity(terrain)": 7.3333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "The camera's forward motion shows no sudden changes in acceleration direction.",
+      "signals": [
+        "trajectory_dir(camera,forward)",
+        "accel_sign(camera,forward)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(camera,forward)": 38.3333,
+        "accel_sign(camera,forward)": 7.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "Shadows on the ground match the position and shape of objects, indicating correct light source interaction.",
+      "signals": [
+        "shadow_consistency(tree)",
+        "shadow_consistency(ground,objects)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "shadow_consistency(tree)": 36.6667,
+        "shadow_consistency(ground,objects)": 7.3333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "There are no loose rocks or unstable terrain that could pose a risk.",
+      "signals": [
+        "falling_hazard(mountain)",
+        "falling_hazard(rock)",
+        "falling_hazard(rocks)"
+      ],
+      "content_score_60": 30,
+      "signal_score_40": 40.0,
+      "total_score_100": 70.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "falling_hazard(mountain)": 31.6667,
+        "falling_hazard(rock)": 6.3333,
+        "falling_hazard(rocks)": 6.3333
+      },
+      "content_score_raw": "30"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v5",
+    "a1",
+    "a2",
+    "a3",
+    "a4"
+  ]
+}

@@ -1,0 +1,192 @@
+{
+  "summary": {
+    "items": 10,
+    "enter_bank": 9,
+    "clip_range_sec": [
+      0.0,
+      9.77
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does the man's head and body stay in a consistent position relative to the background throughout the scene?",
+      "signals": [
+        "continuity(person)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 36.67,
+      "total_score_100": 91.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(person)": 36.6667
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Does the hat on the man's head stay securely on his head without falling off or moving unexpectedly?",
+      "signals": [
+        "rigid_transform(hat)",
+        "support(hat,head)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "rigid_transform(hat)": 37.5,
+        "support(hat,head)": 7.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Is the text 'KEN JOHNSON CODE FOCUSUP FACTOR DRIVEN BY CHOICE' legible and unchanged on the man's shirt across the clip?",
+      "signals": [
+        "continuity(shirt)",
+        "deformation(shirt)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "deformation(shirt)": 40.0,
+        "continuity(shirt)": 7.3333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Are there any visible hazards affecting the man's stability or safety while he stands outdoors near the train car?",
+      "signals": [
+        "friction_sliding(person,on:ground)",
+        "falling_hazard(train_car)"
+      ],
+      "content_score_60": 45,
+      "signal_score_40": 37.67,
+      "total_score_100": 82.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "falling_hazard(train_car)": 31.6667,
+        "friction_sliding(person,on:ground)": 6.0
+      },
+      "content_score_raw": "45"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Does the shadow of the man on the ground remain consistent with his position and the lighting conditions?",
+      "signals": [
+        "shadow_consistency(oX)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 36.67,
+      "total_score_100": 86.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "shadow_consistency(oX)": 36.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "The man stands in a consistent position with no sudden movement.",
+      "signals": [
+        "continuity(person)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 36.67,
+      "total_score_100": 91.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(person)": 36.6667
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "The hat remains on the man's head without falling off.",
+      "signals": [
+        "rigid_transform(hat)",
+        "support(hat,head)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "rigid_transform(hat)": 37.5,
+        "support(hat,head)": 7.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "The text 'KEN JOHNSON CODE FOCUSUP FACTOR DRIVEN BY CHOICE' is legible on the shirt.",
+      "signals": [
+        "continuity(shirt)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 36.67,
+      "total_score_100": 96.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(shirt)": 36.6667
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "The person is outdoors, standing safely near train cars.",
+      "signals": [
+        "friction_sliding(person,on:ground)"
+      ],
+      "content_score_60": 45,
+      "signal_score_40": 30.0,
+      "total_score_100": 75.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "friction_sliding(person,on:ground)": 30.0
+      },
+      "content_score_raw": "45"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "The man's shadow on the ground matches his position and lighting.",
+      "signals": [
+        "shadow_consistency(oX)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 36.67,
+      "total_score_100": 86.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "shadow_consistency(oX)": 36.6667
+      },
+      "content_score_raw": "50"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "v5",
+    "a1",
+    "a2",
+    "a3",
+    "a5"
+  ]
+}

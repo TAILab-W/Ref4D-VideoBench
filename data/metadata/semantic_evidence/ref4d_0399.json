@@ -1,0 +1,98 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0399.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "decord",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "person",
+        "attributes": {
+          "color": [
+            "black",
+            "red"
+          ],
+          "pattern": [
+            "striped"
+          ],
+          "texture": [
+            "smooth"
+          ],
+          "material": [
+            "fabric"
+          ],
+          "size": [
+            "adult"
+          ],
+          "sex": [
+            "male"
+          ],
+          "state": [
+            "speaking"
+          ],
+          "pose": [
+            "standing"
+          ],
+          "action": [
+            "gesturing",
+            "placing-hand-on-chest",
+            "pointing"
+          ],
+          "orientation": [
+            "facing-forward"
+          ],
+          "facing-direction": [
+            "front-facing"
+          ],
+          "position": [
+            "center"
+          ],
+          "object-part": [
+            "head",
+            "shoulders",
+            "torso"
+          ],
+          "brand-or-logo": [
+            "adidas",
+            "benfica"
+          ],
+          "printed-text": [
+            "adidas",
+            "benfica-logo"
+          ],
+          "lighting": [
+            "bright"
+          ],
+          "scene": [
+            "indoor",
+            "room"
+          ],
+          "camera-view": [
+            "close-up"
+          ],
+          "signature": [
+            "black-red-shirt-curly-hair-beard"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            9.1
+          ]
+        ]
+      }
+    ],
+    "relations": []
+  },
+  "views": {
+    "objects_count_display": {
+      "person": 1
+    }
+  }
+}

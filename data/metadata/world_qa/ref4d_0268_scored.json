@@ -1,0 +1,196 @@
+{
+  "summary": {
+    "items": 10,
+    "enter_bank": 9,
+    "clip_range_sec": [
+      0.0,
+      5.57
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Is the power tool used to cut or shape the metal pipe?",
+      "signals": [
+        "tool_contact",
+        "tool_contact(drill,pipe)",
+        "cuttable_progress(pipe)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 38.67,
+      "total_score_100": 93.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "tool_contact": 28.3333,
+        "tool_contact(drill,pipe)": 5.6667,
+        "cuttable_progress(pipe)": 4.6667
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Are the person's hand and fingers clear of the cutting path of the drill?",
+      "signals": [
+        "finger_clearance"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 34.17,
+      "total_score_100": 89.17,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "finger_clearance": 34.1667
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Does the falling object follow a trajectory consistent with gravity?",
+      "signals": [
+        "trajectory_dir"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 38.33,
+      "total_score_100": 93.33,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir": 38.3333
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Is the drill bit directed towards the end of the pipe for proper alignment?",
+      "signals": [
+        "trajectory_dir(drill_bit,axis)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 38.33,
+      "total_score_100": 93.33,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(drill_bit,axis)": 38.3333
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Does the person holding the drill maintain a firm grasp on the tool?",
+      "signals": [
+        "grasp_stability(hand,drill)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 28.33,
+      "total_score_100": 83.33,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "grasp_stability(hand,drill)": 28.3333
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "The person uses a power tool to cut or shape the metal pipe.",
+      "signals": [
+        "tool_contact",
+        "tool_contact(drill,pipe)",
+        "cuttable_progress(pipe)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 38.67,
+      "total_score_100": 98.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "tool_contact": 28.3333,
+        "tool_contact(drill,pipe)": 5.6667,
+        "cuttable_progress(pipe)": 4.6667
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "The person's hand and fingers are clear of the cutting path of the power tool.",
+      "signals": [
+        "finger_clearance"
+      ],
+      "content_score_60": 0,
+      "signal_score_40": 34.17,
+      "total_score_100": 34.17,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "finger_clearance": 34.1667
+      },
+      "content_score_raw": "0"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "The black metal pipe shows reasonable reflection and shadow consistency.",
+      "signals": [
+        "reflection_consistency",
+        "shadow_consistency"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "shadow_consistency": 36.6667,
+        "reflection_consistency": 7.0
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "The drill bit is directed towards the end of the pipe.",
+      "signals": [
+        "trajectory_dir(drill_bit,axis)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 38.33,
+      "total_score_100": 93.33,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(drill_bit,axis)": 38.3333
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "Shadows in the workshop match the position of the objects.",
+      "signals": [
+        "shadow_consistency(drill)",
+        "shadow_consistency(pipe)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "shadow_consistency(drill)": 36.6667,
+        "shadow_consistency(pipe)": 7.3333
+      },
+      "content_score_raw": "55"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "v5",
+    "a1",
+    "a3",
+    "a4",
+    "a5"
+  ]
+}

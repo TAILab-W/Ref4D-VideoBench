@@ -1,0 +1,146 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0475.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "decord",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "runner",
+        "attributes": {
+          "color": [
+            "black",
+            "red",
+            "white"
+          ],
+          "pattern": [
+            "striped"
+          ],
+          "action": [
+            "running"
+          ],
+          "pose": [
+            "mid-stride"
+          ],
+          "facing-direction": [
+            "right-facing"
+          ],
+          "signature": [
+            "white-tank-top-red-striped-shorts-black-and-white-sneakers"
+          ]
+        },
+        "spans": [
+          [
+            0.2,
+            0.4
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "runner",
+        "attributes": {
+          "color": [
+            "blue",
+            "orange"
+          ],
+          "action": [
+            "running"
+          ],
+          "pose": [
+            "mid-stride"
+          ],
+          "facing-direction": [
+            "right-facing"
+          ],
+          "signature": [
+            "orange-and-blue-athletic-suit-blue-shorts-sunglasses"
+          ]
+        },
+        "spans": [
+          [
+            0.3,
+            0.5
+          ]
+        ]
+      },
+      {
+        "id": "o3",
+        "name": "runner",
+        "attributes": {
+          "color": [
+            "green",
+            "white"
+          ],
+          "action": [
+            "running"
+          ],
+          "pose": [
+            "mid-stride"
+          ],
+          "facing-direction": [
+            "right-facing"
+          ],
+          "signature": [
+            "white-tank-top-green-trunks-green-and-white-sneakers"
+          ]
+        },
+        "spans": [
+          [
+            0.6,
+            0.8
+          ]
+        ]
+      }
+    ],
+    "relations": [
+      {
+        "subject": "o1",
+        "predicate": "left-of",
+        "object": "o2",
+        "spans": [
+          [
+            0.3,
+            0.5
+          ]
+        ],
+        "confidence": 0.8
+      },
+      {
+        "subject": "o1",
+        "predicate": "left-of",
+        "object": "o3",
+        "spans": [
+          [
+            0.4,
+            0.6
+          ]
+        ],
+        "confidence": 0.8
+      },
+      {
+        "subject": "o2",
+        "predicate": "left-of",
+        "object": "o3",
+        "spans": [
+          [
+            0.5,
+            0.7
+          ]
+        ],
+        "confidence": 0.8
+      }
+    ]
+  },
+  "views": {
+    "objects_count_display": {
+      "runner": 3
+    }
+  }
+}

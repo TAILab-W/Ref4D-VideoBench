@@ -1,0 +1,241 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0278.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "cv2",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "excavator-arm",
+        "attributes": {
+          "color": [
+            "gray",
+            "red"
+          ],
+          "material": [
+            "metal"
+          ],
+          "size": [
+            "large"
+          ],
+          "object-part": [
+            "arm",
+            "bucket",
+            "cable"
+          ],
+          "signature": [
+            "large-gray-metal-arm-with-red-wheel-and-number-105"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            6.0
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "excavator-bucket",
+        "attributes": {
+          "color": [
+            "gray"
+          ],
+          "material": [
+            "metal"
+          ],
+          "size": [
+            "large"
+          ],
+          "action": [
+            "carrying",
+            "dumping"
+          ],
+          "signature": [
+            "metal-bucket-with-number-511-and-teeth"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            6.0
+          ]
+        ]
+      },
+      {
+        "id": "o3",
+        "name": "train-car",
+        "attributes": {
+          "color": [
+            "gray"
+          ],
+          "material": [
+            "metal"
+          ],
+          "size": [
+            "large"
+          ],
+          "state": [
+            "loaded"
+          ],
+          "position": [
+            "on-rails"
+          ],
+          "signature": [
+            "open-top-train-car-on-rails"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            6.0
+          ]
+        ]
+      },
+      {
+        "id": "o4",
+        "name": "rock",
+        "attributes": {
+          "color": [
+            "black",
+            "dark-gray"
+          ],
+          "texture": [
+            "rough"
+          ],
+          "material": [
+            "rock"
+          ],
+          "signature": [
+            "dark-gray-to-black-rock"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            6.0
+          ]
+        ]
+      },
+      {
+        "id": "o5",
+        "name": "text",
+        "attributes": {
+          "printed-text": [
+            "titan-works"
+          ],
+          "signature": [
+            "white-printed-text-titan-works"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            6.0
+          ]
+        ]
+      }
+    ],
+    "relations": [
+      {
+        "subject": "o1",
+        "predicate": "carrying",
+        "object": "o4",
+        "spans": [
+          [
+            0.0,
+            6.0
+          ]
+        ],
+        "confidence": 0.9
+      },
+      {
+        "subject": "o1",
+        "predicate": "dumping",
+        "object": "o4",
+        "spans": [
+          [
+            0.0,
+            6.0
+          ]
+        ],
+        "confidence": 0.9
+      },
+      {
+        "subject": "o1",
+        "predicate": "overlapping",
+        "object": "o3",
+        "spans": [
+          [
+            0.0,
+            6.0
+          ]
+        ],
+        "confidence": 0.8
+      },
+      {
+        "subject": "o2",
+        "predicate": "inside",
+        "object": "o1",
+        "spans": [
+          [
+            0.0,
+            6.0
+          ]
+        ],
+        "confidence": 0.9
+      },
+      {
+        "subject": "o2",
+        "predicate": "touching",
+        "object": "o3",
+        "spans": [
+          [
+            0.0,
+            6.0
+          ]
+        ],
+        "confidence": 0.8
+      },
+      {
+        "subject": "o2",
+        "predicate": "over",
+        "object": "o3",
+        "spans": [
+          [
+            0.0,
+            6.0
+          ]
+        ],
+        "confidence": 0.8
+      },
+      {
+        "subject": "o5",
+        "predicate": "on",
+        "object": "o1",
+        "spans": [
+          [
+            0.0,
+            6.0
+          ]
+        ],
+        "confidence": 0.7
+      }
+    ]
+  },
+  "views": {
+    "objects_count_display": {
+      "excavator-arm": 1,
+      "excavator-bucket": 1,
+      "train-car": 1,
+      "rock": 1,
+      "text": 1
+    }
+  }
+}

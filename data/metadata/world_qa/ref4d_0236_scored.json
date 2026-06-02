@@ -1,0 +1,213 @@
+{
+  "summary": {
+    "items": 10,
+    "enter_bank": 10,
+    "clip_range_sec": [
+      0.0,
+      8.57
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does the spoon move continuously from hand to plate without stopping?",
+      "signals": [
+        "buoyancy_float(oA,in:oV)",
+        "continuity(spoon)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(spoon)": 36.6667,
+        "buoyancy_float(oA,in:oV)": 6.8333
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Does the solid object on the spoon keep its original shape and size during transfer?",
+      "signals": [
+        "rigid_transform(spoon)",
+        "size_inconsistency(pumpkin seeds)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "rigid_transform(spoon)": 37.5,
+        "size_inconsistency(pumpkin seeds)": 7.5
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Does the hand holding the tongs maintain a stable grasp throughout the action?",
+      "signals": [
+        "grasp_stability(hand,spoon)",
+        "interpenetration(spoon,plate)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "interpenetration(spoon,plate)": 35.8333,
+        "grasp_stability(hand,spoon)": 5.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Does the small cube placed with tongs remain intact after being set down?",
+      "signals": [
+        "deformation(oX)",
+        "fracture(oX)",
+        "tool_contact(oTool,oObj)",
+        "pourable(oContainer)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "deformation(oX)": 40.0,
+        "fracture(oX)": 6.3333,
+        "tool_contact(oTool,oObj)": 5.6667,
+        "pourable(oContainer)": 5.1667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Do all objects fall downward due to gravity in this scene?",
+      "signals": [
+        "buoyancy_float(oA,in:oV)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 34.17,
+      "total_score_100": 89.17,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "buoyancy_float(oA,in:oV)": 34.1667
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "A hand uses tongs to place a solid object onto the salad, and it does not float.",
+      "signals": [
+        "deformation(oX)",
+        "fracture(oX)",
+        "buoyancy_float(oA,in:oV)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "deformation(oX)": 40.0,
+        "buoyancy_float(oA,in:oV)": 6.8333,
+        "fracture(oX)": 6.3333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "The spoon holds small cubes without deformation during placement.",
+      "signals": [
+        "tool_contact(oTool,oObj)",
+        "pourable(oContainer)",
+        "rigid_transform(spoon)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "rigid_transform(spoon)": 37.5,
+        "tool_contact(oTool,oObj)": 5.6667,
+        "pourable(oContainer)": 5.1667
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "The trajectory of the food being held by the tong is continuous from above the plate.",
+      "signals": [
+        "size_inconsistency(pumpkin seeds)",
+        "continuity(spoon)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "size_inconsistency(pumpkin seeds)": 37.5,
+        "continuity(spoon)": 7.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "The food placed with tongs does not interpenetrate the salad leaves.",
+      "signals": [
+        "deformation(oX)",
+        "fracture(oX)",
+        "interpenetration(spoon,plate)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "deformation(oX)": 40.0,
+        "interpenetration(spoon,plate)": 7.1667,
+        "fracture(oX)": 6.3333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "Gravity causes small cubes to fall downward onto the plate.",
+      "signals": [
+        "buoyancy_float(oA,in:oV)",
+        "size_inconsistency(pumpkin seeds)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "size_inconsistency(pumpkin seeds)": 37.5,
+        "buoyancy_float(oA,in:oV)": 6.8333
+      },
+      "content_score_raw": "50"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "v5",
+    "a1",
+    "a2",
+    "a3",
+    "a4",
+    "a5"
+  ]
+}

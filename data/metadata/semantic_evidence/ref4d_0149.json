@@ -1,0 +1,155 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0149.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "cv2",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "house",
+        "attributes": {
+          "color": [
+            "brown",
+            "gray",
+            "white"
+          ],
+          "material": [
+            "concrete",
+            "glass",
+            "wood"
+          ],
+          "size": [
+            "large"
+          ],
+          "style": [
+            "modern"
+          ],
+          "signature": [
+            "modern-architecture-with-gray-and-brown-exterior,-large-glass-windows,-wooden-accents,-elevated-on-pillars,-grassy-lawn,-stone-path,-small-tree,-cloudy-sky"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            6.2
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "window",
+        "attributes": {
+          "signature": [
+            "window"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            6.2
+          ]
+        ]
+      },
+      {
+        "id": "o3",
+        "name": "balcony",
+        "attributes": {
+          "signature": [
+            "balcony"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            6.2
+          ]
+        ]
+      },
+      {
+        "id": "o4",
+        "name": "tree",
+        "attributes": {
+          "signature": [
+            "tree"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            6.2
+          ]
+        ]
+      },
+      {
+        "id": "o5",
+        "name": "grass",
+        "attributes": {
+          "signature": [
+            "grass"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            6.2
+          ]
+        ]
+      },
+      {
+        "id": "o6",
+        "name": "path",
+        "attributes": {
+          "signature": [
+            "path"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            6.2
+          ]
+        ]
+      },
+      {
+        "id": "o7",
+        "name": "sky",
+        "attributes": {
+          "condition": [
+            "cloudy"
+          ],
+          "color": [
+            "blue",
+            "gray"
+          ],
+          "signature": [
+            "blue-gray"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            6.2
+          ]
+        ]
+      }
+    ],
+    "relations": []
+  },
+  "views": {
+    "objects_count_display": {
+      "house": 1,
+      "window": 1,
+      "balcony": 1,
+      "tree": 1,
+      "grass": 1,
+      "path": 1,
+      "sky": 1
+    }
+  }
+}

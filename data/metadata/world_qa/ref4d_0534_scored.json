@@ -1,0 +1,294 @@
+{
+  "summary": {
+    "items": 10,
+    "enter_bank": 9,
+    "clip_range_sec": [
+      0.0,
+      12.9
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Is the traffic light in the background stationary?",
+      "signals": [
+        "rigid_transform(traffic-light)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 37.5,
+      "total_score_100": 92.5,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "rigid_transform(traffic-light)": 37.5
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Does the bus move forward with its wheels on the ground and continuous rolling motion?",
+      "signals": [
+        "balance(bus)",
+        "support(bus, road)",
+        "wheel_rolling(bus), trajectory_dir(bus, axis)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "balance(bus)": 35.8333,
+        "support(bus, road)": 7.0,
+        "wheel_rolling(bus), trajectory_dir(bus, axis)": 6.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Are vehicles maintaining safe distances from each other on the road?",
+      "signals": [
+        "collision(bus, car), support(traffic-light, pole)"
+      ],
+      "content_score_60": 40,
+      "signal_score_40": 31.67,
+      "total_score_100": 71.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "collision(bus, car), support(traffic-light, pole)": 31.6667
+      },
+      "content_score_raw": "40"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Are the bus's rear lights illuminated when it is moving slowly or stationary at the red light?",
+      "signals": [
+        "size_inconsistency(bus)",
+        "shadow_consistency(bus)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "size_inconsistency(bus)": 37.5,
+        "shadow_consistency(bus)": 7.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Do cars yield to pedestrians near the intersection?",
+      "signals": [
+        "collision(bus,car)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 31.67,
+      "total_score_100": 81.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "collision(bus,car)": 31.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "The traffic light in the background remains stationary and its size is consistent.",
+      "signals": [
+        "rigid_transform(traffic-light)",
+        "size_inconsistency(traffic-light)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "rigid_transform(traffic-light)": 37.5,
+        "size_inconsistency(traffic-light)": 7.5
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "The bus moves forward on the road, supported by its wheels making continuous rolling motion.",
+      "signals": [
+        "balance(bus)",
+        "support(bus, road)",
+        "wheel_rolling(bus), trajectory_dir(bus, axis)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "balance(bus)": 35.8333,
+        "support(bus, road)": 7.0,
+        "wheel_rolling(bus), trajectory_dir(bus, axis)": 6.0
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "The bus's rear lights are illuminated as it stops at the red traffic light.",
+      "signals": [
+        "collision(bus, car), support(traffic-light, pole)",
+        "size_inconsistency(bus)",
+        "shadow_consistency(bus)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "size_inconsistency(bus)": 37.5,
+        "shadow_consistency(bus)": 7.3333,
+        "collision(bus, car), support(traffic-light, pole)": 6.3333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "The bus follows the traffic light's signal, stopping at red and preparing to proceed when green.",
+      "signals": [
+        "size_inconsistency(bus)",
+        "continuity(bus)",
+        "shadow_consistency(bus)",
+        "trajectory_dir(bus,axis)",
+        "accel_sign(bus,axis)",
+        "rigid_transform(bus)",
+        "deformation(bus)",
+        "fracture(bus)",
+        "wheel_rolling(bus)",
+        "reflection_consistency(bus)",
+        "tilt_angle_threshold(bus,deg)",
+        "center_of_mass_over_base(bus)",
+        "friction_sliding(bus,on:traffic-light)",
+        "elastic_bounce(bus)",
+        "slosh_response(bus,amp)",
+        "buoyancy_float(bus,in:air)",
+        "compressibility(bus)",
+        "viscosity_effect(bus)",
+        "pour_direction(bus,axis)",
+        "leakage(bus,from:bus)",
+        "specular_highlight_consistency(bus)",
+        "cast_shadow_contact(bus,shadow)",
+        "grasp_stability(bus,hand)",
+        "slip(bus,on:traffic-light)",
+        "tool_contact(bus,obj)",
+        "cuttable_progress(bus)",
+        "pourable(bus)",
+        "openable(bus)",
+        "supportable(bus,by:traffic-light)",
+        "placeable(bus,at:target)",
+        "biological_motion(bus)",
+        "action_phase(bus,phase)",
+        "step_order(prev:task,next:task)",
+        "state_change(bus,from:state,to:state)",
+        "goal_placement(bus,at:target)",
+        "result_appearance(bus)",
+        "handoff_between_hands(bus)",
+        "tool_usage_correct(bus,for:task)",
+        "spillage(bus)",
+        "finger_clearance(bus,tool)",
+        "blade_orientation_away(bus,hand)",
+        "hot_surface_contact(bus,surface)",
+        "flame_proximity(bus,dist)",
+        "prohibited_intersection(bus,traffic-light)",
+        "smoke_direction_consistency(bus)",
+        "falling_hazard(bus)",
+        "collision(bus,car)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "deformation(bus)": 40.0,
+        "trajectory_dir(bus,axis)": 7.6667,
+        "biological_motion(bus)": 7.6667,
+        "size_inconsistency(bus)": 7.5,
+        "rigid_transform(bus)": 7.5,
+        "cast_shadow_contact(bus,shadow)": 7.5,
+        "state_change(bus,from:state,to:state)": 7.5,
+        "continuity(bus)": 7.3333,
+        "shadow_consistency(bus)": 7.3333,
+        "specular_highlight_consistency(bus)": 7.3333,
+        "prohibited_intersection(bus,traffic-light)": 7.3333,
+        "smoke_direction_consistency(bus)": 7.3333,
+        "tilt_angle_threshold(bus,deg)": 7.1667,
+        "accel_sign(bus,axis)": 7.0,
+        "reflection_consistency(bus)": 7.0,
+        "slosh_response(bus,amp)": 6.8333,
+        "buoyancy_float(bus,in:air)": 6.8333,
+        "viscosity_effect(bus)": 6.8333,
+        "finger_clearance(bus,tool)": 6.8333,
+        "hot_surface_contact(bus,surface)": 6.8333,
+        "flame_proximity(bus,dist)": 6.8333,
+        "center_of_mass_over_base(bus)": 6.5,
+        "fracture(bus)": 6.3333,
+        "falling_hazard(bus)": 6.3333,
+        "collision(bus,car)": 6.3333,
+        "compressibility(bus)": 6.1667,
+        "wheel_rolling(bus)": 6.0,
+        "friction_sliding(bus,on:traffic-light)": 6.0,
+        "leakage(bus,from:bus)": 5.8333,
+        "tool_usage_correct(bus,for:task)": 5.8333,
+        "blade_orientation_away(bus,hand)": 5.8333,
+        "pour_direction(bus,axis)": 5.6667,
+        "grasp_stability(bus,hand)": 5.6667,
+        "tool_contact(bus,obj)": 5.6667,
+        "result_appearance(bus)": 5.6667,
+        "spillage(bus)": 5.6667,
+        "slip(bus,on:traffic-light)": 5.5,
+        "supportable(bus,by:traffic-light)": 5.3333,
+        "action_phase(bus,phase)": 5.3333,
+        "step_order(prev:task,next:task)": 5.3333,
+        "goal_placement(bus,at:target)": 5.3333,
+        "handoff_between_hands(bus)": 5.3333,
+        "pourable(bus)": 5.1667,
+        "openable(bus)": 5.1667,
+        "placeable(bus,at:target)": 5.1667,
+        "elastic_bounce(bus)": 4.6667,
+        "cuttable_progress(bus)": 4.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "Other vehicles on the road maintain safe distances from the bus.",
+      "signals": [
+        "size_inconsistency(bus)",
+        "shadow_consistency(bus)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "size_inconsistency(bus)": 37.5,
+        "shadow_consistency(bus)": 7.3333
+      },
+      "content_score_raw": "50"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v4",
+    "v5",
+    "a1",
+    "a2",
+    "a3",
+    "a4",
+    "a5"
+  ]
+}

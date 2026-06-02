@@ -1,0 +1,191 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0550.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "cv2",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "door",
+        "attributes": {
+          "signature": [
+            "glass,-black-frame,-red-button,-green-pole"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            5.0
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "bus-interior",
+        "attributes": {
+          "signature": [
+            "blue-seats,-light-green-poles,-advertisement-poster"
+          ]
+        },
+        "spans": [
+          [
+            0.4,
+            6.1
+          ]
+        ]
+      },
+      {
+        "id": "o3",
+        "name": "person",
+        "attributes": {
+          "signature": [
+            "back-view,-short-hair,-dark-jacket"
+          ]
+        },
+        "spans": [
+          [
+            4.8,
+            6.1
+          ]
+        ]
+      },
+      {
+        "id": "o4",
+        "name": "bicycle",
+        "attributes": {
+          "signature": [
+            "yellow-jacket,-helmet,-on-road"
+          ]
+        },
+        "spans": [
+          [
+            6.1,
+            6.2
+          ]
+        ]
+      },
+      {
+        "id": "o5",
+        "name": "bus",
+        "attributes": {
+          "signature": [
+            "white-exterior,-visible-through-window"
+          ]
+        },
+        "spans": [
+          [
+            6.1,
+            6.2
+          ]
+        ]
+      },
+      {
+        "id": "o6",
+        "name": "bus",
+        "attributes": {
+          "signature": [
+            "bus-coarse"
+          ]
+        },
+        "spans": [
+          [
+            9.3,
+            18.1
+          ]
+        ]
+      },
+      {
+        "id": "o7",
+        "name": "bus",
+        "attributes": {
+          "signature": [
+            "bus-coarse"
+          ]
+        },
+        "spans": [
+          [
+            9.3,
+            18.1
+          ]
+        ]
+      },
+      {
+        "id": "o8",
+        "name": "bus",
+        "attributes": {
+          "signature": [
+            "bus-coarse"
+          ]
+        },
+        "spans": [
+          [
+            9.3,
+            18.1
+          ]
+        ]
+      },
+      {
+        "id": "o9",
+        "name": "bicycle",
+        "attributes": {
+          "signature": [
+            "bicycle-coarse"
+          ]
+        },
+        "spans": [
+          [
+            9.3,
+            18.1
+          ]
+        ]
+      },
+      {
+        "id": "o10",
+        "name": "person",
+        "attributes": {
+          "signature": [
+            "person-coarse"
+          ]
+        },
+        "spans": [
+          [
+            9.3,
+            18.1
+          ]
+        ]
+      },
+      {
+        "id": "o11",
+        "name": "bird",
+        "attributes": {
+          "signature": [
+            "bird-coarse"
+          ]
+        },
+        "spans": [
+          [
+            9.3,
+            18.1
+          ]
+        ]
+      }
+    ],
+    "relations": []
+  },
+  "views": {
+    "objects_count_display": {
+      "door": 1,
+      "bus-interior": 1,
+      "person": 2,
+      "bicycle": 2,
+      "bus": 4,
+      "bird": 1
+    }
+  }
+}

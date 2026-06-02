@@ -1,0 +1,163 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0580.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "cv2",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "train",
+        "attributes": {
+          "color": [
+            "green",
+            "orange"
+          ],
+          "pattern": [
+            "striped"
+          ],
+          "size": [
+            "long"
+          ],
+          "facing-direction": [
+            "forward"
+          ],
+          "position": [
+            "on-bridge"
+          ],
+          "vehicle-type": [
+            "passenger-train"
+          ],
+          "logo": [
+            "no-visible-logo"
+          ],
+          "number": [
+            "no-visible-number"
+          ],
+          "animal-pattern": [
+            "no-animal-pattern"
+          ],
+          "clothing": [
+            "no-clothing-on-train"
+          ],
+          "track-condition": [
+            "rusted"
+          ],
+          "signature": [
+            "a-long-green-and-orange-striped-passenger-train"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            5.1
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "bridge",
+        "attributes": {
+          "material": [
+            "metal",
+            "stone"
+          ],
+          "structure": [
+            "arched",
+            "rusted"
+          ],
+          "position": [
+            "over-water"
+          ],
+          "lighting": [
+            "natural-daylight"
+          ],
+          "camera-angle": [
+            "top-down"
+          ],
+          "signature": [
+            "a-stone-and-metal-arched-bridge-with-rusted-tracks"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            5.1
+          ]
+        ]
+      },
+      {
+        "id": "o3",
+        "name": "person",
+        "attributes": {
+          "color": [
+            "dark"
+          ],
+          "action": [
+            "standing"
+          ],
+          "facing-direction": [
+            "away"
+          ],
+          "position": [
+            "on-track"
+          ],
+          "clothing": [
+            "dark-clothing"
+          ],
+          "signature": [
+            "a-person-in-dark-clothing-standing-on-the-track"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            3.0
+          ]
+        ]
+      },
+      {
+        "id": "o4",
+        "name": "vegetation",
+        "attributes": {
+          "type": [
+            "lush",
+            "tropical"
+          ],
+          "color": [
+            "green"
+          ],
+          "position": [
+            "surrounding-bridge"
+          ],
+          "lighting": [
+            "natural-daylight"
+          ],
+          "signature": [
+            "lush-green-tropical-vegetation"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            5.1
+          ]
+        ]
+      }
+    ],
+    "relations": []
+  },
+  "views": {
+    "objects_count_display": {
+      "train": 1,
+      "bridge": 1,
+      "person": 1,
+      "vegetation": 1
+    }
+  }
+}

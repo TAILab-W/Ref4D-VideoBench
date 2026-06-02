@@ -1,0 +1,231 @@
+{
+  "summary": {
+    "items": 10,
+    "enter_bank": 10,
+    "clip_range_sec": [
+      0.0,
+      9.3
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Do the traditional-outrigger-boats remain afloat in clear-blue-sea water and maintain safe distances from jagged-cliff rocks?",
+      "signals": [
+        "buoyancy_float(boat,in:clear-blue-sea)",
+        "collision(boat,rock)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "buoyancy_float(boat,in:clear-blue-sea)": 34.1667,
+        "collision(boat,rock)": 6.3333
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Are the boats, rocks, trees, and water continuous without abrupt state changes or frame discontinuity during their motion?",
+      "signals": [
+        "frame_discontinuity(t)",
+        "state_change(boat,from:state,to:state)",
+        "buoyancy_float(boat,in:water)",
+        "deformation(rock)",
+        "fracture(rock)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "frame_discontinuity(t)": 40.0,
+        "deformation(rock)": 8.0,
+        "state_change(boat,from:state,to:state)": 7.5,
+        "buoyancy_float(boat,in:water)": 6.8333,
+        "fracture(rock)": 6.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Do the green-foliage trees on jagged-cliff rocks show natural growth stability consistent with biological motion?",
+      "signals": [
+        "tilt_angle_threshold(tree,deg)",
+        "falling_hazard(rock)",
+        "continuity",
+        "deformation",
+        "fracture"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "deformation": 40.0,
+        "continuity": 7.3333,
+        "tilt_angle_threshold(tree,deg)": 7.1667,
+        "falling_hazard(rock)": 6.3333,
+        "fracture": 6.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Does the water display slosh_response consistent with its volume and movement, supporting the boats on the sea surface?",
+      "signals": [
+        "slosh_response(water,amp)",
+        "frame_discontinuity(t)",
+        "supportable"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "frame_discontinuity(t)": 40.0,
+        "slosh_response(water,amp)": 6.8333,
+        "supportable": 5.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Do the boats remain afloat in water due to buoyancy without falling hazards from the cliff edges?",
+      "signals": [
+        "buoyancy_float",
+        "falling_hazard"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "buoyancy_float": 34.1667,
+        "falling_hazard": 6.3333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "Traditional-outrigger-boats remain afloat in clear-blue-sea water due to buoyancy.",
+      "signals": [
+        "buoyancy_float(boat,in:clear-blue-sea)",
+        "buoyancy_float(boat,in:water)",
+        "deformation(rock)",
+        "fracture(rock)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "deformation(rock)": 40.0,
+        "buoyancy_float(boat,in:clear-blue-sea)": 6.8333,
+        "buoyancy_float(boat,in:water)": 6.8333,
+        "fracture(rock)": 6.3333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "Jagged-cliff rocks and green-foliage trees on them maintain their physical structure without deformation.",
+      "signals": [
+        "deformation(rock)",
+        "fracture(rock)",
+        "deformation(tree)",
+        "fracture(tree)",
+        "continuity",
+        "deformation",
+        "fracture"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "deformation(rock)": 40.0,
+        "deformation(tree)": 8.0,
+        "deformation": 8.0,
+        "continuity": 7.3333,
+        "fracture(rock)": 6.3333,
+        "fracture(tree)": 6.3333,
+        "fracture": 6.3333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "Traditional-outrigger-boats are positioned at safe distances from jagged-cliff rocks to avoid collision hazards.",
+      "signals": [
+        "collision(boat,rock)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 31.67,
+      "total_score_100": 91.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "collision(boat,rock)": 31.6667
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "Objects (boats, rocks, trees, water) exhibit continuity in appearance and motion without frame discontinuity.",
+      "signals": [
+        "frame_discontinuity(t)",
+        "state_change(boat,from:state,to:state)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "frame_discontinuity(t)": 40.0,
+        "state_change(boat,from:state,to:state)": 7.5
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "Water displays slosh_response consistent with its volume and movement, maintaining continuity.",
+      "signals": [
+        "slosh_response(water,amp)",
+        "frame_discontinuity(t)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "frame_discontinuity(t)": 40.0,
+        "slosh_response(water,amp)": 6.8333
+      },
+      "content_score_raw": "60"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "v5",
+    "a1",
+    "a2",
+    "a3",
+    "a4",
+    "a5"
+  ]
+}

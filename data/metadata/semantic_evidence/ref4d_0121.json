@@ -1,0 +1,388 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0121.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "cv2",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "person",
+        "attributes": {
+          "signature": [
+            "person-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            9.7
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "person",
+        "attributes": {
+          "signature": [
+            "person-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            9.7
+          ]
+        ]
+      },
+      {
+        "id": "o3",
+        "name": "person",
+        "attributes": {
+          "signature": [
+            "person-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            9.7
+          ]
+        ]
+      },
+      {
+        "id": "o4",
+        "name": "person",
+        "attributes": {
+          "signature": [
+            "person-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            9.7
+          ]
+        ]
+      },
+      {
+        "id": "o5",
+        "name": "person",
+        "attributes": {
+          "signature": [
+            "person-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            9.7
+          ]
+        ]
+      },
+      {
+        "id": "o6",
+        "name": "person",
+        "attributes": {
+          "signature": [
+            "person-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            9.7
+          ]
+        ]
+      },
+      {
+        "id": "o7",
+        "name": "person",
+        "attributes": {
+          "signature": [
+            "person-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            9.7
+          ]
+        ]
+      },
+      {
+        "id": "o8",
+        "name": "chair",
+        "attributes": {
+          "signature": [
+            "chair-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            9.7
+          ]
+        ]
+      },
+      {
+        "id": "o9",
+        "name": "table",
+        "attributes": {
+          "signature": [
+            "table-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            9.7
+          ]
+        ]
+      },
+      {
+        "id": "o10",
+        "name": "vase",
+        "attributes": {
+          "signature": [
+            "vase-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            9.7
+          ]
+        ]
+      },
+      {
+        "id": "o11",
+        "name": "vase",
+        "attributes": {
+          "signature": [
+            "vase-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            9.7
+          ]
+        ]
+      },
+      {
+        "id": "o12",
+        "name": "vase",
+        "attributes": {
+          "signature": [
+            "vase-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            9.7
+          ]
+        ]
+      },
+      {
+        "id": "o13",
+        "name": "vase",
+        "attributes": {
+          "signature": [
+            "vase-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            9.7
+          ]
+        ]
+      },
+      {
+        "id": "o14",
+        "name": "vase",
+        "attributes": {
+          "signature": [
+            "vase-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            9.7
+          ]
+        ]
+      },
+      {
+        "id": "o15",
+        "name": "vase",
+        "attributes": {
+          "signature": [
+            "vase-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            9.7
+          ]
+        ]
+      },
+      {
+        "id": "o16",
+        "name": "vase",
+        "attributes": {
+          "signature": [
+            "vase-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            9.7
+          ]
+        ]
+      },
+      {
+        "id": "o17",
+        "name": "light",
+        "attributes": {
+          "signature": [
+            "light-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            9.7
+          ]
+        ]
+      },
+      {
+        "id": "o18",
+        "name": "light",
+        "attributes": {
+          "signature": [
+            "light-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            9.7
+          ]
+        ]
+      },
+      {
+        "id": "o19",
+        "name": "light",
+        "attributes": {
+          "signature": [
+            "light-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            9.7
+          ]
+        ]
+      },
+      {
+        "id": "o20",
+        "name": "window",
+        "attributes": {
+          "signature": [
+            "window-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            9.7
+          ]
+        ]
+      },
+      {
+        "id": "o21",
+        "name": "window",
+        "attributes": {
+          "signature": [
+            "window-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            9.7
+          ]
+        ]
+      },
+      {
+        "id": "o22",
+        "name": "wall",
+        "attributes": {
+          "signature": [
+            "wall-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            9.7
+          ]
+        ]
+      },
+      {
+        "id": "o23",
+        "name": "person",
+        "attributes": {
+          "signature": [
+            "person-coarse"
+          ]
+        },
+        "spans": [
+          [
+            9.7,
+            19.6
+          ]
+        ]
+      },
+      {
+        "id": "o24",
+        "name": "statue",
+        "attributes": {
+          "signature": [
+            "statue-coarse"
+          ]
+        },
+        "spans": [
+          [
+            9.7,
+            19.6
+          ]
+        ]
+      }
+    ],
+    "relations": []
+  },
+  "views": {
+    "objects_count_display": {
+      "person": 8,
+      "chair": 1,
+      "table": 1,
+      "vase": 7,
+      "light": 3,
+      "window": 2,
+      "wall": 1,
+      "statue": 1
+    }
+  }
+}

@@ -1,0 +1,158 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0137.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "cv2",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "statue",
+        "attributes": {
+          "color": [
+            "bronze",
+            "green"
+          ],
+          "material": [
+            "metal"
+          ],
+          "size": [
+            "large"
+          ],
+          "pose": [
+            "holding-spear",
+            "standing"
+          ],
+          "action": [
+            "fighting"
+          ],
+          "orientation": [
+            "facing-right"
+          ],
+          "position": [
+            "centered-on-wall"
+          ],
+          "signature": [
+            "green-bronze-arched-niche-gold-background"
+          ]
+        },
+        "spans": [
+          [
+            0.1,
+            0.3
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "plaque",
+        "attributes": {
+          "color": [
+            "brown",
+            "white"
+          ],
+          "material": [
+            "metal"
+          ],
+          "size": [
+            "medium"
+          ],
+          "printed-text": [
+            "erbau-1583---1597-im-auftrag-herzog-wilhelm-v.-von-friedrich-sustris",
+            "sankt-michael"
+          ],
+          "signature": [
+            "brown-circular-plaque-white-text"
+          ]
+        },
+        "spans": [
+          [
+            1.4,
+            2.9
+          ]
+        ]
+      },
+      {
+        "id": "o3",
+        "name": "statue",
+        "attributes": {
+          "color": [
+            "bronze",
+            "brown"
+          ],
+          "material": [
+            "metal"
+          ],
+          "size": [
+            "large"
+          ],
+          "sex": [
+            "male"
+          ],
+          "state": [
+            "resting"
+          ],
+          "pose": [
+            "holding-book",
+            "sitting"
+          ],
+          "action": [
+            "looking-forward"
+          ],
+          "orientation": [
+            "facing-right"
+          ],
+          "position": [
+            "foreground-of-church"
+          ],
+          "signature": [
+            "brown-bronze-angelic-statue-with-wings"
+          ]
+        },
+        "spans": [
+          [
+            5.6,
+            7.8
+          ]
+        ]
+      }
+    ],
+    "relations": [
+      {
+        "subject": "o2",
+        "predicate": "mounted-on",
+        "object": "o2",
+        "spans": [
+          [
+            2.6,
+            3.7
+          ]
+        ],
+        "confidence": 0.9
+      },
+      {
+        "subject": "o3",
+        "predicate": "looking-at",
+        "object": "o3",
+        "spans": [
+          [
+            7.2,
+            8.3
+          ]
+        ],
+        "confidence": 0.8
+      }
+    ]
+  },
+  "views": {
+    "objects_count_display": {
+      "statue": 2,
+      "plaque": 1
+    }
+  }
+}

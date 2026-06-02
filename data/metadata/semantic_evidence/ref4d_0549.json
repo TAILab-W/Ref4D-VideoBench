@@ -1,0 +1,85 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0549.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "cv2",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "train",
+        "attributes": {
+          "color": [
+            "blue",
+            "red",
+            "white"
+          ],
+          "pattern": [
+            "striped"
+          ],
+          "printed-text": [
+            "70-disneyland"
+          ],
+          "facing-direction": [
+            "right"
+          ],
+          "position": [
+            "on轨道"
+          ],
+          "signature": [
+            "70-disneyland"
+          ]
+        },
+        "spans": [
+          [
+            0.2,
+            4.8
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "palm-tree",
+        "attributes": {
+          "signature": [
+            "palm-tree"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            4.9
+          ]
+        ]
+      },
+      {
+        "id": "o3",
+        "name": "tree",
+        "attributes": {
+          "signature": [
+            "tree"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            4.9
+          ]
+        ]
+      }
+    ],
+    "relations": []
+  },
+  "views": {
+    "objects_count_display": {
+      "train": 1,
+      "palm-tree": 1,
+      "tree": 1
+    }
+  }
+}

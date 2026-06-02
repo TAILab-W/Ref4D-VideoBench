@@ -1,0 +1,211 @@
+{
+  "summary": {
+    "items": 10,
+    "enter_bank": 10,
+    "clip_range_sec": [
+      0.0,
+      14.9
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Is the laptop stationary on the table?",
+      "signals": [
+        "tool_contact(pen,book)",
+        "grasp_stability(person,pen)",
+        "action_phase(writing,phase)",
+        "falling_hazard(laptop)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "falling_hazard(laptop)": 31.6667,
+        "tool_contact(pen,book)": 5.6667,
+        "grasp_stability(person,pen)": 5.6667,
+        "action_phase(writing,phase)": 5.3333
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Does the cup remain upright and stable with apple slices inside it?",
+      "signals": [
+        "containment(apple,cup)",
+        "interpenetration(apple,cup)",
+        "support(cup,table)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "interpenetration(apple,cup)": 35.8333,
+        "support(cup,table)": 7.0,
+        "containment(apple,cup)": 5.8333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Is the straw supported by the rim of the cup, keeping its position consistent under gravity?",
+      "signals": [
+        "support(straw,cup)",
+        "center_of_mass_over_base"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "support(straw,cup)": 35.0,
+        "center_of_mass_over_base": 6.5
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Does the plastic bag stay in place without posing a falling hazard or interpenetrating other objects?",
+      "signals": [
+        "prohibited_intersection",
+        "falling_hazard(plastic-bag)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "prohibited_intersection": 36.6667,
+        "falling_hazard(plastic-bag)": 6.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Does the person's hand show natural motion while holding the pen?",
+      "signals": [
+        "grasp_stability(hand,pen),finger_clearance(hand,pen)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 28.33,
+      "total_score_100": 83.33,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "grasp_stability(hand,pen),finger_clearance(hand,pen)": 28.3333
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "The person is writing on a book with a pen.",
+      "signals": [
+        "tool_contact(pen,book)",
+        "grasp_stability(person,pen)",
+        "action_phase(writing,phase)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 39.33,
+      "total_score_100": 89.33,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "tool_contact(pen,book)": 28.3333,
+        "grasp_stability(person,pen)": 5.6667,
+        "action_phase(writing,phase)": 5.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "The laptop is stationary on the table, posing no falling hazard.",
+      "signals": [
+        "falling_hazard(laptop)",
+        "falling_hazard(plastic-bag)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 38.0,
+      "total_score_100": 88.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "falling_hazard(laptop)": 31.6667,
+        "falling_hazard(plastic-bag)": 6.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "The apple slices in the cup remain inside and gravity is consistent.",
+      "signals": [
+        "containment(apple,cup)",
+        "interpenetration(apple,cup)",
+        "center_of_mass_over_base"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "interpenetration(apple,cup)": 35.8333,
+        "center_of_mass_over_base": 6.5,
+        "containment(apple,cup)": 5.8333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "The plastic bag does not pose a falling hazard; the hand shows natural motion.",
+      "signals": [
+        "prohibited_intersection",
+        "grasp_stability(hand,pen),finger_clearance(hand,pen)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "prohibited_intersection": 36.6667,
+        "grasp_stability(hand,pen),finger_clearance(hand,pen)": 5.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "The cup remains upright and stable on the table.",
+      "signals": [
+        "support(cup,table)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 35.0,
+      "total_score_100": 85.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "support(cup,table)": 35.0
+      },
+      "content_score_raw": "50"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "v5",
+    "a1",
+    "a2",
+    "a3",
+    "a4",
+    "a5"
+  ]
+}

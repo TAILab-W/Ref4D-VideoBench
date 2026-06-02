@@ -1,0 +1,12 @@
+# Ref collect pipeline dependencies
+
+# YouTube metadata collection
+google-api-python-client
+httplib2
+PySocks
+
+# Video download
+yt-dlp
+
+# Shot detection
+scenedetect

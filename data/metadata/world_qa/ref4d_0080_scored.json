@@ -1,0 +1,219 @@
+{
+  "summary": {
+    "items": 10,
+    "enter_bank": 10,
+    "clip_range_sec": [
+      0.0,
+      7.87
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Do the clownfish swim in natural directions?",
+      "signals": [
+        "biological_motion(clownfish)",
+        "biological_motion(fish)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "biological_motion(clownfish)": 38.3333,
+        "biological_motion(fish)": 7.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Are the coral structures fixed and not moving?",
+      "signals": [
+        "support(coral,substrate)",
+        "continuity(coral)",
+        "biological_motion(fish)",
+        "biological_motion(coral)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "biological_motion(fish)": 38.3333,
+        "biological_motion(coral)": 7.6667,
+        "continuity(coral)": 7.3333,
+        "support(coral,substrate)": 7.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Do the fish float naturally due to buoyancy?",
+      "signals": [
+        "buoyancy_float(clownfish,in:water)",
+        "buoyancy_float(fish,in:water)",
+        "buoyancy_float(coral,in:water)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "buoyancy_float(clownfish,in:water)": 34.1667,
+        "buoyancy_float(fish,in:water)": 6.8333,
+        "buoyancy_float(coral,in:water)": 6.8333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Is the underwater scene continuous without frame breaks?",
+      "signals": [
+        "continuity(underwater_scene)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 36.67,
+      "total_score_100": 86.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(underwater_scene)": 36.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Do any objects suddenly disappear or merge?",
+      "signals": [
+        "frame_discontinuity(t)",
+        "size_inconsistency(oX)",
+        "containment(oA,oB)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "frame_discontinuity(t)": 40.0,
+        "size_inconsistency(oX)": 7.5,
+        "containment(oA,oB)": 5.8333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "Clownfish swim naturally among stationary coral structures in the aquarium.",
+      "signals": [
+        "biological_motion(clownfish)",
+        "biological_motion(fish)",
+        "support(coral,substrate)",
+        "continuity(coral)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "biological_motion(clownfish)": 38.3333,
+        "biological_motion(fish)": 7.6667,
+        "continuity(coral)": 7.3333,
+        "support(coral,substrate)": 7.0
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "Fish float due to buoyancy, and marine life placement is consistent with water environment.",
+      "signals": [
+        "buoyancy_float(clownfish,in:water)",
+        "buoyancy_float(fish,in:water)",
+        "buoyancy_float(coral,in:water)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "buoyancy_float(clownfish,in:water)": 34.1667,
+        "buoyancy_float(fish,in:water)": 6.8333,
+        "buoyancy_float(coral,in:water)": 6.8333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "Coral exhibits natural biological motion without frame discontinuity.",
+      "signals": [
+        "biological_motion(fish)",
+        "biological_motion(coral)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "biological_motion(fish)": 38.3333,
+        "biological_motion(coral)": 7.6667
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "Coral structures remain fixed in the aquarium background throughout the video.",
+      "signals": [
+        "support(coral,substrate)",
+        "continuity(coral)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(coral)": 36.6667,
+        "support(coral,substrate)": 7.0
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "No objects suddenly disappear or merge within the aquarium scene.",
+      "signals": [
+        "frame_discontinuity(t)",
+        "size_inconsistency(oX)",
+        "containment(oA,oB)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "frame_discontinuity(t)": 40.0,
+        "size_inconsistency(oX)": 7.5,
+        "containment(oA,oB)": 5.8333
+      },
+      "content_score_raw": "60"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "v5",
+    "a1",
+    "a2",
+    "a3",
+    "a4",
+    "a5"
+  ]
+}

@@ -1,0 +1,193 @@
+{
+  "summary": {
+    "items": 10,
+    "enter_bank": 8,
+    "clip_range_sec": [
+      0.0,
+      5.23
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Is the steak in contact with the hot pan surface?",
+      "signals": [
+        "hot_surface_contact(steak,pan)",
+        "hot_surface_contact"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "hot_surface_contact(steak,pan)": 34.1667,
+        "hot_surface_contact": 6.8333
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Does the spatula show controlled handling to flip the steak?",
+      "signals": [
+        "hot_surface_contact"
+      ],
+      "content_score_60": 45,
+      "signal_score_40": 34.17,
+      "total_score_100": 79.17,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "hot_surface_contact": 34.1667
+      },
+      "content_score_raw": "45"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Is the spoon used correctly for handling the steak?",
+      "signals": [
+        "tool_contact(spoon,steak)",
+        "blade_orientation_away(spoon,hand)"
+      ],
+      "content_score_60": 35,
+      "signal_score_40": 34.83,
+      "total_score_100": 69.83,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "blade_orientation_away(spoon,hand)": 29.1667,
+        "tool_contact(spoon,steak)": 5.6667
+      },
+      "content_score_raw": "35"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Across the clip, does the sizzling sound indicate meat contact with the hot oil?",
+      "signals": [
+        "tool_contact",
+        "friction_sliding"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 35.67,
+      "total_score_100": 85.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "friction_sliding": 30.0,
+        "tool_contact": 5.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Does the steak cook in a pan with oil, showing proper heat contact?",
+      "signals": [
+        "hot_surface_contact"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 34.17,
+      "total_score_100": 94.17,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "hot_surface_contact": 34.1667
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "The steak is in contact with the hot pan surface, and oil sizzles around it.",
+      "signals": [
+        "hot_surface_contact(steak,pan)",
+        "hot_surface_contact"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "hot_surface_contact(steak,pan)": 34.1667,
+        "hot_surface_contact": 6.8333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "The spatula flips the steak without causing it to fall apart.",
+      "signals": [
+        "tool_contact",
+        "friction_sliding"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 35.67,
+      "total_score_100": 85.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "friction_sliding": 30.0,
+        "tool_contact": 5.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "Proper care is needed during cooking due to direct heat from the pan.",
+      "signals": [
+        "hot_surface_contact"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 34.17,
+      "total_score_100": 89.17,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "hot_surface_contact": 34.1667
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "The steak remains on the pan surface during cooking.",
+      "signals": [
+        "hot_surface_contact(steak,pan)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 34.17,
+      "total_score_100": 94.17,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "hot_surface_contact(steak,pan)": 34.1667
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "Oil is present in the pan, creating a sizzling sound.",
+      "signals": [
+        "hot_surface_contact"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 34.17,
+      "total_score_100": 94.17,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "hot_surface_contact": 34.1667
+      },
+      "content_score_raw": "60"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v4",
+    "v5",
+    "a1",
+    "a2",
+    "a3",
+    "a4",
+    "a5"
+  ]
+}

@@ -1,0 +1,203 @@
+{
+  "summary": {
+    "items": 10,
+    "enter_bank": 10,
+    "clip_range_sec": [
+      0.0,
+      6.43
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Do the wolves' positions show interpenetration or frame discontinuity during their interaction?",
+      "signals": [
+        "continuity(wolf)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 36.67,
+      "total_score_100": 91.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(wolf)": 36.6667
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Does the white wolf's posture on the ground indicate playfulness without violating biological motion in snow?",
+      "signals": [
+        "biological_motion(wolf)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 38.33,
+      "total_score_100": 88.33,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "biological_motion(wolf)": 38.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Do the wolves' movements maintain physical consistency and continuous snow coverage throughout the clip?",
+      "signals": [
+        "biological_motion(wolfA)",
+        "biological_motion(wolfB)",
+        "continuity(snow)",
+        "frame_discontinuity(t)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "frame_discontinuity(t)": 40.0,
+        "biological_motion(wolfA)": 7.6667,
+        "biological_motion(wolfB)": 7.6667,
+        "continuity(snow)": 7.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Does the white wolf's head trajectory match its body orientation as it moves forward?",
+      "signals": [
+        "trajectory_dir(wolfB_head,axis)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 38.33,
+      "total_score_100": 88.33,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(wolfB_head,axis)": 38.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Are the shadows consistent with a snowy environment across the scene?",
+      "signals": [
+        "shadow_consistency(wolfA)",
+        "shadow_consistency(wolfB)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "shadow_consistency(wolfA)": 36.6667,
+        "shadow_consistency(wolfB)": 7.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "The snow on the ground remains continuous without frame discontinuity.",
+      "signals": [
+        "continuity(snow)",
+        "frame_discontinuity(t)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "frame_discontinuity(t)": 40.0,
+        "continuity(snow)": 7.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "The white wolf's posture shows natural biological motion of playfulness or submission.",
+      "signals": [
+        "biological_motion(wolf)",
+        "biological_motion(wolfA)",
+        "biological_motion(wolfB)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "biological_motion(wolf)": 38.3333,
+        "biological_motion(wolfA)": 7.6667,
+        "biological_motion(wolfB)": 7.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "The wolves' movements and positions maintain physical consistency in a snowy environment.",
+      "signals": [
+        "continuity(wolf)",
+        "biological_motion(wolf)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "biological_motion(wolf)": 38.3333,
+        "continuity(wolf)": 7.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "The white wolf's head trajectory matches its body orientation during interaction.",
+      "signals": [
+        "trajectory_dir(wolfB_head,axis)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 38.33,
+      "total_score_100": 88.33,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(wolfB_head,axis)": 38.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "Shadows are consistent throughout the snowy scene.",
+      "signals": [
+        "shadow_consistency(wolfA)",
+        "shadow_consistency(wolfB)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "shadow_consistency(wolfA)": 36.6667,
+        "shadow_consistency(wolfB)": 7.3333
+      },
+      "content_score_raw": "50"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "v5",
+    "a1",
+    "a2",
+    "a3",
+    "a4",
+    "a5"
+  ]
+}

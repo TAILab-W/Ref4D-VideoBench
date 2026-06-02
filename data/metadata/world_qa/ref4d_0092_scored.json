@@ -1,0 +1,197 @@
+{
+  "summary": {
+    "items": 10,
+    "enter_bank": 8,
+    "clip_range_sec": [
+      0.0,
+      7.27
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does the deer float or levitate?",
+      "signals": [
+        "buoyancy_float"
+      ],
+      "content_score_60": 0,
+      "signal_score_40": 34.17,
+      "total_score_100": 34.17,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "buoyancy_float": 34.1667
+      },
+      "content_score_raw": "0"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Is the grass a natural support surface for the deer to stand on?",
+      "signals": [
+        "support"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 35.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "support": 35.0
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Does the deer exhibit natural biological motion when interacting with the human?",
+      "signals": [
+        "biological_motion"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 38.33,
+      "total_score_100": 98.33,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "biological_motion": 38.3333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Does the interaction pose a falling hazard to the deer?",
+      "signals": [
+        "falling_hazard"
+      ],
+      "content_score_60": 0,
+      "signal_score_40": 31.67,
+      "total_score_100": 31.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "falling_hazard": 31.6667
+      },
+      "content_score_raw": "0"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Is the fawn's head supported by the human's hand in a stable grasp?",
+      "signals": [
+        "grasp_stability"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 28.33,
+      "total_score_100": 88.33,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "grasp_stability": 28.3333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "The deer stands on the grass, not floating or levitating.",
+      "signals": [
+        "buoyancy_float",
+        "support"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "support": 35.0,
+        "buoyancy_float": 6.8333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "The person's hand gently touches the deer's head without interpenetration.",
+      "signals": [
+        "tool_contact",
+        "interpenetration",
+        "biological_motion"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "biological_motion": 38.3333,
+        "interpenetration": 7.1667,
+        "tool_contact": 5.6667
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "The human interacts with the young deer in a non-threatening manner.",
+      "signals": [
+        "biological_motion",
+        "action_phase",
+        "falling_hazard"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "biological_motion": 38.3333,
+        "falling_hazard": 6.3333,
+        "action_phase": 5.3333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "The human's hand supports the fawn's head in a stable grasp.",
+      "signals": [
+        "biological_motion",
+        "action_phase",
+        "grasp_stability"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "biological_motion": 38.3333,
+        "grasp_stability": 5.6667,
+        "action_phase": 5.3333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "The grass provides natural support for the deer to stand.",
+      "signals": [
+        "support"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 35.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "support": 35.0
+      },
+      "content_score_raw": "60"
+    }
+  ],
+  "bank_ids": [
+    "v2",
+    "v3",
+    "v5",
+    "a1",
+    "a2",
+    "a3",
+    "a4",
+    "a5"
+  ]
+}

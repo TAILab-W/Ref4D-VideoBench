@@ -1,0 +1,88 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0011.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "cv2",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "lizard",
+        "attributes": {
+          "color": [
+            "brown"
+          ],
+          "pattern": [
+            "speckled"
+          ],
+          "texture": [
+            "rough"
+          ],
+          "size": [
+            "medium"
+          ],
+          "state": [
+            "resting"
+          ],
+          "pose": [
+            "perched"
+          ],
+          "action": [
+            "tongue-out"
+          ],
+          "orientation": [
+            "facing-right"
+          ],
+          "position": [
+            "on-branch"
+          ],
+          "signature": [
+            "brown-speckled-texture-long-tongue-facing-right"
+          ]
+        },
+        "spans": [
+          [
+            0.1,
+            2.9
+          ]
+        ]
+      }
+    ],
+    "relations": [
+      {
+        "subject": "o1",
+        "predicate": "looking-at",
+        "object": "o1",
+        "spans": [
+          [
+            0.2,
+            3.4
+          ]
+        ],
+        "confidence": 0.9
+      },
+      {
+        "subject": "o1",
+        "predicate": "tongue-out",
+        "object": "o1",
+        "spans": [
+          [
+            1.7,
+            1.8
+          ]
+        ],
+        "confidence": 0.9
+      }
+    ]
+  },
+  "views": {
+    "objects_count_display": {
+      "lizard": 1
+    }
+  }
+}

@@ -1,0 +1,224 @@
+{
+  "summary": {
+    "items": 10,
+    "enter_bank": 9,
+    "clip_range_sec": [
+      0.0,
+      8.9
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does the red and black taxi move forward on the road?",
+      "signals": [
+        "trajectory_dir(vehicles,axis)",
+        "accel_sign(vehicles,axis)",
+        "friction_sliding(vehicles,on:road)",
+        "trajectory_dir(white_car,axis)",
+        "trajectory_dir(blue_taxi,axis)",
+        "trajectory_dir(motorcycle,axis)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(vehicles,axis)": 38.3333,
+        "trajectory_dir(white_car,axis)": 7.6667,
+        "trajectory_dir(blue_taxi,axis)": 7.6667,
+        "trajectory_dir(motorcycle,axis)": 7.6667,
+        "accel_sign(vehicles,axis)": 7.0,
+        "friction_sliding(vehicles,on:road)": 6.0
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Do shadows under the building change direction suddenly?",
+      "signals": [
+        "continuity(building)",
+        "continuity(vehicles)",
+        "interpenetration(vehicles,buildings)",
+        "size_inconsistency(vehicles)",
+        "trajectory_dir(vehicles,axis)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(vehicles,axis)": 38.3333,
+        "size_inconsistency(vehicles)": 7.5,
+        "continuity(building)": 7.3333,
+        "continuity(vehicles)": 7.3333,
+        "interpenetration(vehicles,buildings)": 7.1667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Does the blue metal scaffolding support objects without collapsing?",
+      "signals": [
+        "support(scaffolding,blue_structure)"
+      ],
+      "content_score_60": 40,
+      "signal_score_40": 35.0,
+      "total_score_100": 75.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "support(scaffolding,blue_structure)": 35.0
+      },
+      "content_score_raw": "40"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Is the white van a consistent size compared to the nearby car?",
+      "signals": [
+        "deformation(vehicles)",
+        "size_inconsistency(vehicles)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "deformation(vehicles)": 40.0,
+        "size_inconsistency(vehicles)": 7.5
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Do moving vehicles cast shadows that align with their positions?",
+      "signals": [
+        "shadow_consistency(building)",
+        "shadow_consistency(buildings,vehicles)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "shadow_consistency(building)": 36.6667,
+        "shadow_consistency(buildings,vehicles)": 7.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "The orange and black taxi maintains its size and shape as it moves on the road.",
+      "signals": [
+        "continuity(building)",
+        "continuity(vehicles)",
+        "interpenetration(vehicles,buildings)",
+        "size_inconsistency(vehicles)",
+        "deformation(vehicles)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "deformation(vehicles)": 40.0,
+        "size_inconsistency(vehicles)": 7.5,
+        "continuity(building)": 7.3333,
+        "continuity(vehicles)": 7.3333,
+        "interpenetration(vehicles,buildings)": 7.1667
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "The white van follows a straight trajectory along the street, not violating any physical laws.",
+      "signals": [
+        "trajectory_dir(white_car,axis)",
+        "trajectory_dir(blue_taxi,axis)",
+        "trajectory_dir(motorcycle,axis)",
+        "continuity(vehicles)",
+        "trajectory_dir(vehicles,axis)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(white_car,axis)": 38.3333,
+        "trajectory_dir(blue_taxi,axis)": 7.6667,
+        "trajectory_dir(motorcycle,axis)": 7.6667,
+        "trajectory_dir(vehicles,axis)": 7.6667,
+        "continuity(vehicles)": 7.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "Pedestrians walk safely at a distance from the moving vehicles near the intersection.",
+      "signals": [
+        "collision(vehicles,pedestrians)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 31.67,
+      "total_score_100": 81.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "collision(vehicles,pedestrians)": 31.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "Flower baskets hang consistently under the windows of the building without changing position or material appearance.",
+      "signals": [
+        "support(scaffolding,blue_structure)",
+        "shadow_consistency(buildings,vehicles)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "shadow_consistency(buildings,vehicles)": 36.6667,
+        "support(scaffolding,blue_structure)": 7.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "Shadows cast by the buildings align with the light source direction.",
+      "signals": [
+        "shadow_consistency(building)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 36.67,
+      "total_score_100": 86.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "shadow_consistency(building)": 36.6667
+      },
+      "content_score_raw": "50"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v4",
+    "v5",
+    "a1",
+    "a2",
+    "a3",
+    "a4",
+    "a5"
+  ]
+}

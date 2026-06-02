@@ -1,0 +1,207 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0209.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "cv2",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "person",
+        "attributes": {
+          "signature": [
+            "person-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            9.7
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "egg",
+        "attributes": {
+          "signature": [
+            "egg-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            9.7
+          ]
+        ]
+      },
+      {
+        "id": "o3",
+        "name": "egg",
+        "attributes": {
+          "signature": [
+            "egg-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            9.7
+          ]
+        ]
+      },
+      {
+        "id": "o4",
+        "name": "egg",
+        "attributes": {
+          "signature": [
+            "egg-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            9.7
+          ]
+        ]
+      },
+      {
+        "id": "o5",
+        "name": "egg",
+        "attributes": {
+          "signature": [
+            "egg-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            9.7
+          ]
+        ]
+      },
+      {
+        "id": "o6",
+        "name": "pan",
+        "attributes": {
+          "signature": [
+            "pan-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            9.7
+          ]
+        ]
+      },
+      {
+        "id": "o7",
+        "name": "chopstick",
+        "attributes": {
+          "signature": [
+            "chopstick-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            9.7
+          ]
+        ]
+      },
+      {
+        "id": "o8",
+        "name": "plate",
+        "attributes": {
+          "signature": [
+            "plate-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            9.7
+          ]
+        ]
+      },
+      {
+        "id": "o9",
+        "name": "plant",
+        "attributes": {
+          "signature": [
+            "plant-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            9.7
+          ]
+        ]
+      },
+      {
+        "id": "o10",
+        "name": "plant",
+        "attributes": {
+          "signature": [
+            "plant-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            9.7
+          ]
+        ]
+      },
+      {
+        "id": "o11",
+        "name": "container",
+        "attributes": {
+          "signature": [
+            "container-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            9.7
+          ]
+        ]
+      },
+      {
+        "id": "o12",
+        "name": "container",
+        "attributes": {
+          "signature": [
+            "container-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            9.7
+          ]
+        ]
+      }
+    ],
+    "relations": []
+  },
+  "views": {
+    "objects_count_display": {
+      "person": 1,
+      "egg": 4,
+      "pan": 1,
+      "chopstick": 1,
+      "plate": 1,
+      "plant": 2,
+      "container": 2
+    }
+  }
+}

@@ -1,0 +1,6 @@
+device: auto
+weights: checkpoints/transnetv2/transnetv2-pytorch-weights.pth
+threshold: 0.2
+min_scene_sec: 0.2
+win: 100
+stride: 50

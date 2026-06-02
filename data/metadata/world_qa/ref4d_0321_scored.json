@@ -1,0 +1,228 @@
+{
+  "summary": {
+    "items": 10,
+    "enter_bank": 9,
+    "clip_range_sec": [
+      0.0,
+      8.17
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Do the houses and trees remain static as silhouettes without unexpected motion?",
+      "signals": [
+        "continuity(cloud)",
+        "rigid_transform(house)",
+        "rigid_transform(tree)",
+        "deformation(house)",
+        "deformation(tree)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "deformation(house)": 40.0,
+        "deformation(tree)": 8.0,
+        "rigid_transform(house)": 7.5,
+        "rigid_transform(tree)": 7.5,
+        "continuity(cloud)": 7.3333
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Does the sun's position near the horizon follow a typical daily trajectory for sunset?",
+      "signals": [
+        "shadow_consistency(oX)",
+        "continuity(oX)",
+        "trajectory_dir(oX,axis)",
+        "accel_sign(oX,axis)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(oX,axis)": 38.3333,
+        "shadow_consistency(oX)": 7.3333,
+        "continuity(oX)": 7.3333,
+        "accel_sign(oX,axis)": 7.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Are the clouds moving in a direction consistent with atmospheric conditions relative to the setting sun?",
+      "signals": [
+        "trajectory_dir(oX,axis)",
+        "falling_hazard(sun)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(oX,axis)": 38.3333,
+        "falling_hazard(sun)": 6.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Do the clouds exhibit natural shadow consistency and continuity with the light source?",
+      "signals": [
+        "continuity(cloud)",
+        "shadow_consistency(oX)",
+        "continuity(oX)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(cloud)": 36.6667,
+        "shadow_consistency(oX)": 7.3333,
+        "continuity(oX)": 7.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Are the houses' dark shapes maintained without deformation or violating physical boundaries?",
+      "signals": [
+        "rigid_transform(house)",
+        "rigid_transform(tree)",
+        "deformation(house)",
+        "deformation(tree)",
+        "falling_hazard(sun)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "deformation(house)": 40.0,
+        "deformation(tree)": 8.0,
+        "rigid_transform(house)": 7.5,
+        "rigid_transform(tree)": 7.5,
+        "falling_hazard(sun)": 6.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "Clouds move and layer naturally, while houses and trees remain static as dark silhouettes.",
+      "signals": [
+        "continuity(cloud)",
+        "rigid_transform(house)",
+        "rigid_transform(tree)",
+        "deformation(house)",
+        "deformation(tree)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "deformation(house)": 40.0,
+        "deformation(tree)": 8.0,
+        "rigid_transform(house)": 7.5,
+        "rigid_transform(tree)": 7.5,
+        "continuity(cloud)": 7.3333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "Shadows on clouds are consistent with the light source from the setting sun.",
+      "signals": [
+        "shadow_consistency(oX)",
+        "continuity(oX)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "shadow_consistency(oX)": 36.6667,
+        "continuity(oX)": 7.3333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "The sun is near the horizon, following a typical daily trajectory without violating physical boundaries.",
+      "signals": [
+        "trajectory_dir(oX,axis)",
+        "accel_sign(oX,axis)",
+        "falling_hazard(sun)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(oX,axis)": 38.3333,
+        "accel_sign(oX,axis)": 7.0,
+        "falling_hazard(sun)": 6.3333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "Clouds drift in a direction opposite to the movement of the setting sun.",
+      "signals": [
+        "trajectory_dir(oX,axis)"
+      ],
+      "content_score_60": 30,
+      "signal_score_40": 38.33,
+      "total_score_100": 68.33,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(oX,axis)": 38.3333
+      },
+      "content_score_raw": "30"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "Clouds exhibit natural movement, consistent with atmospheric conditions during sunset.",
+      "signals": [
+        "continuity(cloud)",
+        "trajectory_dir(oX,axis)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(oX,axis)": 38.3333,
+        "continuity(cloud)": 7.3333
+      },
+      "content_score_raw": "60"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "v5",
+    "a1",
+    "a2",
+    "a3",
+    "a5"
+  ]
+}

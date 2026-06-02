@@ -1,0 +1,199 @@
+{
+  "summary": {
+    "items": 10,
+    "enter_bank": 4,
+    "clip_range_sec": [
+      0.0,
+      8.87
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does the sand maintain its light-brown, loose-material appearance without sudden size inconsistency?",
+      "signals": [
+        "continuity(sand)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 36.67,
+      "total_score_100": 86.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(sand)": 36.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Do grass tufts on the sand exhibit consistent trajectory direction and acceleration along the moving axis?",
+      "signals": [
+        "trajectory_dir(grass,axis)",
+        "accel_sign(grass,axis)",
+        "frame_discontinuity(t)"
+      ],
+      "content_score_60": 30,
+      "signal_score_40": 40.0,
+      "total_score_100": 70.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "frame_discontinuity(t)": 40.0,
+        "trajectory_dir(grass,axis)": 7.6667,
+        "accel_sign(grass,axis)": 7.0
+      },
+      "content_score_raw": "30"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Do trees in the background remain stationary relative to each other with no collision or intersection with foreground elements?",
+      "signals": [
+        "support(tree,sky)",
+        "prohibited_intersection(tree,foreground)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "prohibited_intersection(tree,foreground)": 36.6667,
+        "support(tree,sky)": 7.0
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Is there no falling hazard from elevated terrain during dune crossing?",
+      "signals": [
+        "falling_hazard(sand_dune)"
+      ],
+      "content_score_60": 35,
+      "signal_score_40": 31.67,
+      "total_score_100": 66.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "falling_hazard(sand_dune)": 31.6667
+      },
+      "content_score_raw": "35"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Do sand dunes exhibit natural continuity and consistent trajectory direction without abrupt frame discontinuity?",
+      "signals": [
+        "continuity(sand_dune)",
+        "trajectory_dir(sand_dune,axis)",
+        "frame_discontinuity(t)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "frame_discontinuity(t)": 40.0,
+        "trajectory_dir(sand_dune,axis)": 7.6667,
+        "continuity(sand_dune)": 7.3333
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "The sand maintains a light-brown, loose-material appearance throughout the scene.",
+      "signals": [
+        "continuity(sand)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 36.67,
+      "total_score_100": 96.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(sand)": 36.6667
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "Grass tufts on the sand exhibit consistent trajectory direction and acceleration along the moving axis.",
+      "signals": [
+        "trajectory_dir(grass,axis)",
+        "accel_sign(grass,axis)",
+        "frame_discontinuity(t)"
+      ],
+      "content_score_60": 15,
+      "signal_score_40": 40.0,
+      "total_score_100": 55.0,
+      "duplicate_penalized": true,
+      "signal_detail": {
+        "frame_discontinuity(t)": 40.0,
+        "trajectory_dir(grass,axis)": 7.6667,
+        "accel_sign(grass,axis)": 7.0
+      },
+      "content_score_raw": "25"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "Trees in the background remain stationary relative to each other without collision or intersection with foreground elements.",
+      "signals": [
+        "support(tree,sky)",
+        "prohibited_intersection(tree,foreground)"
+      ],
+      "content_score_60": 33,
+      "signal_score_40": 40.0,
+      "total_score_100": 73.0,
+      "duplicate_penalized": true,
+      "signal_detail": {
+        "prohibited_intersection(tree,foreground)": 36.6667,
+        "support(tree,sky)": 7.0
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "No falling hazard from elevated terrain is present during dune crossing.",
+      "signals": [
+        "falling_hazard(sand_dune)"
+      ],
+      "content_score_60": 24,
+      "signal_score_40": 31.67,
+      "total_score_100": 55.67,
+      "duplicate_penalized": true,
+      "signal_detail": {
+        "falling_hazard(sand_dune)": 31.6667
+      },
+      "content_score_raw": "40"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "Sand dunes exhibit natural continuity and consistent trajectory direction without abrupt frame discontinuity.",
+      "signals": [
+        "continuity(sand_dune)",
+        "trajectory_dir(sand_dune,axis)",
+        "frame_discontinuity(t)"
+      ],
+      "content_score_60": 33,
+      "signal_score_40": 40.0,
+      "total_score_100": 73.0,
+      "duplicate_penalized": true,
+      "signal_detail": {
+        "frame_discontinuity(t)": 40.0,
+        "trajectory_dir(sand_dune,axis)": 7.6667,
+        "continuity(sand_dune)": 7.3333
+      },
+      "content_score_raw": "55"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v3",
+    "v5",
+    "a1"
+  ]
+}

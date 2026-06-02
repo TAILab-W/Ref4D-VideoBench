@@ -1,0 +1,159 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0496.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "decord",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "person",
+        "attributes": {
+          "clothing": [
+            "blue-jeans",
+            "gray-hoodie"
+          ],
+          "action": [
+            "doing-push-ups",
+            "holding-fishing-rod",
+            "talking"
+          ],
+          "signature": [
+            "gray-hoodie-blue-jeans"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            1.0
+          ],
+          [
+            2.0,
+            3.0
+          ],
+          [
+            4.0,
+            5.0
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "fishing-rod",
+        "attributes": {
+          "color": [
+            "black",
+            "silver"
+          ],
+          "action": [
+            "being-held"
+          ],
+          "signature": [
+            "black-fishing-rod-with-silver-reel"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            1.0
+          ]
+        ]
+      },
+      {
+        "id": "o3",
+        "name": "basketball-hoop",
+        "attributes": {
+          "color": [
+            "blue",
+            "yellow"
+          ],
+          "position": [
+            "background"
+          ],
+          "signature": [
+            "yellow-and-blue-frame-with-basketball-net"
+          ]
+        },
+        "spans": [
+          [
+            2.0,
+            5.0
+          ]
+        ]
+      },
+      {
+        "id": "o4",
+        "name": "goalpost",
+        "attributes": {
+          "color": [
+            "blue",
+            "yellow"
+          ],
+          "position": [
+            "background"
+          ],
+          "signature": [
+            "yellow-and-blue-frame"
+          ]
+        },
+        "spans": [
+          [
+            2.0,
+            5.0
+          ]
+        ]
+      }
+    ],
+    "relations": [
+      {
+        "subject": "o1",
+        "predicate": "holding",
+        "object": "o2",
+        "spans": [
+          [
+            0.0,
+            1.0
+          ]
+        ],
+        "confidence": 0.9
+      },
+      {
+        "subject": "o1",
+        "predicate": "in-front-of",
+        "object": "o3",
+        "spans": [
+          [
+            2.0,
+            5.0
+          ]
+        ],
+        "confidence": 0.8
+      },
+      {
+        "subject": "o1",
+        "predicate": "in-front-of",
+        "object": "o4",
+        "spans": [
+          [
+            2.0,
+            5.0
+          ]
+        ],
+        "confidence": 0.8
+      }
+    ]
+  },
+  "views": {
+    "objects_count_display": {
+      "person": 1,
+      "fishing-rod": 1,
+      "basketball-hoop": 1,
+      "goalpost": 1
+    }
+  }
+}

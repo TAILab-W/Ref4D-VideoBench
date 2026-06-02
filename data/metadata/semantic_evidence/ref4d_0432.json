@@ -1,0 +1,199 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0432.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "decord",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "person",
+        "attributes": {
+          "color": [
+            "black",
+            "gray"
+          ],
+          "pattern": [
+            "solid"
+          ],
+          "texture": [
+            "smooth"
+          ],
+          "material": [
+            "fabric",
+            "plastic"
+          ],
+          "size": [
+            "large"
+          ],
+          "sex": [
+            "male"
+          ],
+          "state": [
+            "speaking"
+          ],
+          "pose": [
+            "sitting"
+          ],
+          "action": [
+            "talking"
+          ],
+          "orientation": [
+            "facing-forward"
+          ],
+          "facing-direction": [
+            "front"
+          ],
+          "position": [
+            "center"
+          ],
+          "object-part": [
+            "arm",
+            "face",
+            "head",
+            "torso"
+          ],
+          "tool-or-instrument": [
+            "microphone"
+          ],
+          "equipment": [
+            "microphone"
+          ],
+          "species-or-breed": [
+            "human"
+          ],
+          "brand-or-logo": [
+            "ny"
+          ],
+          "printed-text": [
+            "ny"
+          ],
+          "lighting": [
+            "dim"
+          ],
+          "scene": [
+            "studio"
+          ],
+          "camera-view": [
+            "close-up"
+          ],
+          "signature": [
+            "black-shirt-gray-cap-beard-glasses-ny-logo"
+          ]
+        },
+        "spans": [
+          [
+            0.1,
+            6.6
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "microphone",
+        "attributes": {
+          "color": [
+            "black",
+            "silver"
+          ],
+          "pattern": [
+            "striped"
+          ],
+          "texture": [
+            "smooth"
+          ],
+          "material": [
+            "metal",
+            "plastic"
+          ],
+          "size": [
+            "medium"
+          ],
+          "state": [
+            "active"
+          ],
+          "position": [
+            "foreground"
+          ],
+          "object-part": [
+            "body",
+            "cable"
+          ],
+          "tool-or-instrument": [
+            "microphone"
+          ],
+          "equipment": [
+            "microphone"
+          ],
+          "lighting": [
+            "dim"
+          ],
+          "scene": [
+            "studio"
+          ],
+          "camera-view": [
+            "close-up"
+          ],
+          "signature": [
+            "silver-black-microphone-with-cable"
+          ]
+        },
+        "spans": [
+          [
+            0.1,
+            6.6
+          ]
+        ]
+      }
+    ],
+    "relations": [
+      {
+        "subject": "o1",
+        "predicate": "wearing",
+        "object": "o1",
+        "spans": [
+          [
+            0.2,
+            6.6
+          ]
+        ],
+        "confidence": 0.9
+      },
+      {
+        "subject": "o1",
+        "predicate": "looking-at",
+        "object": "o2",
+        "spans": [
+          [
+            0.3,
+            6.6
+          ]
+        ],
+        "confidence": 0.8
+      },
+      {
+        "subject": "o1",
+        "predicate": "holding",
+        "object": "o2",
+        "spans": [
+          [
+            0.5,
+            6.6
+          ]
+        ],
+        "confidence": 0.8
+      }
+    ]
+  },
+  "views": {
+    "objects_count_display": {
+      "person": 1,
+      "microphone": 1
+    }
+  }
+}

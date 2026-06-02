@@ -1,0 +1,223 @@
+{
+  "summary": {
+    "items": 10,
+    "enter_bank": 8,
+    "clip_range_sec": [
+      0.0,
+      8.07
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does the lizard remain on the branch without falling off?",
+      "signals": [
+        "support(oA,oB)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 35.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "support(oA,oB)": 35.0
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Across the clip, does the lizard's body maintain continuity and balance on the branch?",
+      "signals": [
+        "continuity(lizard)",
+        "balance(lizard,branch)",
+        "size_inconsistency(lizard)",
+        "interpenetration(lizard,branch)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "size_inconsistency(lizard)": 37.5,
+        "continuity(lizard)": 7.3333,
+        "balance(lizard,branch)": 7.1667,
+        "interpenetration(lizard,branch)": 7.1667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Is the shadow of the lizard consistent with its position on the branch?",
+      "signals": [
+        "shadow_consistency(lizard,shadow)",
+        "material_optics(lizard)"
+      ],
+      "content_score_60": 45,
+      "signal_score_40": 40.0,
+      "total_score_100": 85.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "material_optics(lizard)": 37.5,
+        "shadow_consistency(lizard,shadow)": 7.3333
+      },
+      "content_score_raw": "45"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Does the lizard's tongue movement align with biological behavior for its species?",
+      "signals": [
+        "continuity(oX)",
+        "deformation(oX)",
+        "frame_discontinuity(t)",
+        "interpenetration(oA,oB)"
+      ],
+      "content_score_60": 40,
+      "signal_score_40": 40.0,
+      "total_score_100": 80.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "deformation(oX)": 40.0,
+        "frame_discontinuity(t)": 8.0,
+        "continuity(oX)": 7.3333,
+        "interpenetration(oA,oB)": 7.1667
+      },
+      "content_score_raw": "40"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Does the lizard move in a natural manner without unnatural acceleration?",
+      "signals": [
+        "biological_motion(lizard)",
+        "accel_sign(lizard,axis)",
+        "collision(lizard,other_obj)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "biological_motion(lizard)": 38.3333,
+        "accel_sign(lizard,axis)": 7.0,
+        "collision(lizard,other_obj)": 6.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "The lizard remains on the branch without falling off.",
+      "signals": [
+        "support(oA,oB)",
+        "continuity(oX)",
+        "deformation(oX)",
+        "frame_discontinuity(t)",
+        "interpenetration(oA,oB)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "deformation(oX)": 40.0,
+        "frame_discontinuity(t)": 8.0,
+        "continuity(oX)": 7.3333,
+        "interpenetration(oA,oB)": 7.1667,
+        "support(oA,oB)": 7.0
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "The lizard's body maintains continuity and balance on the branch.",
+      "signals": [
+        "continuity(lizard)",
+        "balance(lizard,branch)",
+        "size_inconsistency(lizard)",
+        "interpenetration(lizard,branch)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "size_inconsistency(lizard)": 37.5,
+        "continuity(lizard)": 7.3333,
+        "balance(lizard,branch)": 7.1667,
+        "interpenetration(lizard,branch)": 7.1667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "The lizard's shadow is consistent with its position on the branch.",
+      "signals": [
+        "shadow_consistency(lizard,shadow)",
+        "material_optics(lizard)"
+      ],
+      "content_score_60": 27,
+      "signal_score_40": 40.0,
+      "total_score_100": 67.0,
+      "duplicate_penalized": true,
+      "signal_detail": {
+        "material_optics(lizard)": 37.5,
+        "shadow_consistency(lizard,shadow)": 7.3333
+      },
+      "content_score_raw": "45"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "The lizard extends its tongue forward.",
+      "signals": [
+        "biological_motion(oA)"
+      ],
+      "content_score_60": 40,
+      "signal_score_40": 38.33,
+      "total_score_100": 78.33,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "biological_motion(oA)": 38.3333
+      },
+      "content_score_raw": "40"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "The lizard's limbs show natural deformation without sudden frame discontinuity.",
+      "signals": [
+        "continuity(oX)",
+        "deformation(oX)",
+        "frame_discontinuity(t)",
+        "interpenetration(oA,oB)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "deformation(oX)": 40.0,
+        "frame_discontinuity(t)": 8.0,
+        "continuity(oX)": 7.3333,
+        "interpenetration(oA,oB)": 7.1667
+      },
+      "content_score_raw": "50"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "v5",
+    "a1",
+    "a2",
+    "a5"
+  ]
+}

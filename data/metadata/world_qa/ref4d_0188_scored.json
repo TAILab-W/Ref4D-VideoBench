@@ -1,0 +1,193 @@
+{
+  "summary": {
+    "items": 10,
+    "enter_bank": 8,
+    "clip_range_sec": [
+      0.0,
+      11.1
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does the foot's center of mass stay over the platform base to maintain balance?",
+      "signals": [
+        "center_of_mass_over_base(foot)",
+        "center_of_mass_over_base(foot平台上)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 39.0,
+      "total_score_100": 89.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "center_of_mass_over_base(foot)": 32.5,
+        "center_of_mass_over_base(foot平台上)": 6.5
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Does the text 'THICK SUPPORT' remain visible and in its original position throughout the clip?",
+      "signals": [
+        "continuity(oX)"
+      ],
+      "content_score_60": 40,
+      "signal_score_40": 36.67,
+      "total_score_100": 76.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(oX)": 36.6667
+      },
+      "content_score_raw": "40"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Does the wheel roll continuously on the platform without stopping or reversing direction abruptly?",
+      "signals": [
+        "wheel_rolling(oX)",
+        "frame_discontinuity(t)",
+        "wheel_rolling(平台上的轮子)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "frame_discontinuity(t)": 40.0,
+        "wheel_rolling(oX)": 6.0,
+        "wheel_rolling(平台上的轮子)": 6.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Does the blue sock show natural stretchability as the foot moves, consistent with material properties?",
+      "signals": [
+        "deformation(脚袜)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "deformation(脚袜)": 40.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Does the foot remain fully on the platform without disappearing under it?",
+      "signals": [
+        "continuity(foot)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 36.67,
+      "total_score_100": 86.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(foot)": 36.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "The text 'THICK SUPPORT' and 'BREATHABLE' is visible on the screen.",
+      "signals": [
+        "continuity(oX)"
+      ],
+      "content_score_60": 30,
+      "signal_score_40": 36.67,
+      "total_score_100": 66.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(oX)": 36.6667
+      },
+      "content_score_raw": "30"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "The wheel of the platform rolls continuously under the foot.",
+      "signals": [
+        "wheel_rolling(oX)",
+        "frame_discontinuity(t)",
+        "wheel_rolling(平台上的轮子)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "frame_discontinuity(t)": 40.0,
+        "wheel_rolling(oX)": 6.0,
+        "wheel_rolling(平台上的轮子)": 6.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "The blue sock stretches as the foot moves, showing its material properties.",
+      "signals": [
+        "deformation(脚袜)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "deformation(脚袜)": 40.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "The foot remains fully on the platform without disappearing or interpenetrating with it.",
+      "signals": [
+        "continuity(foot)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 36.67,
+      "total_score_100": 86.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(foot)": 36.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "The trajectory of the rolling wheel does not change direction abruptly.",
+      "signals": [
+        "wheel_rolling(foot下平台)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 30.0,
+      "total_score_100": 80.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "wheel_rolling(foot下平台)": 30.0
+      },
+      "content_score_raw": "50"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v3",
+    "v4",
+    "v5",
+    "a2",
+    "a3",
+    "a4",
+    "a5"
+  ]
+}

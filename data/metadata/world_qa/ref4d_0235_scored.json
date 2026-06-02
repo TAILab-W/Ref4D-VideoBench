@@ -1,0 +1,199 @@
+{
+  "summary": {
+    "items": 10,
+    "enter_bank": 8,
+    "clip_range_sec": [
+      0.0,
+      13.5
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Do the cups on the table remain in their positions without sudden movement or displacement?",
+      "signals": [
+        "continuity(cups)",
+        "support(oA,oB)",
+        "balance(oX)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(cups)": 36.6667,
+        "balance(oX)": 7.1667,
+        "support(oA,oB)": 7.0
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Does the vase with flowers stay stably on the table, and its position not change abruptly?",
+      "signals": [
+        "support(vase,table)",
+        "supportable"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "support(vase,table)": 35.0,
+        "supportable": 5.3333
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Does a hand grasp and move flowers without causing interpenetration between fingers and objects?",
+      "signals": [
+        "tool_usage_correct(scissors,for:placing_flowers)",
+        "interpenetration(oA,oB)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "interpenetration(oA,oB)": 35.8333,
+        "tool_usage_correct(scissors,for:placing_flowers)": 5.8333
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Are scissors held safely by the person, away from any body parts to prevent accidental injury?",
+      "signals": [
+        "blade_orientation_away(oTool,oHand)",
+        "grasp_stability(person,scissors)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 34.83,
+      "total_score_100": 89.83,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "blade_orientation_away(oTool,oHand)": 29.1667,
+        "grasp_stability(person,scissors)": 5.6667
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Can the white cup be grasped and used for pouring or holding liquids, and does the white flower stay held by the hand?",
+      "signals": [
+        "grasp_stability(person,white_cup), pourable(white_cup)",
+        "grasp_stability"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 34.0,
+      "total_score_100": 89.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "grasp_stability(person,white_cup), pourable(white_cup)": 28.3333,
+        "grasp_stability": 5.6667
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "Cups containing desserts are placed on a flat surface, maintaining support and balance.",
+      "signals": [
+        "support(oA,oB)",
+        "balance(oX)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "balance(oX)": 35.8333,
+        "support(oA,oB)": 7.0
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "The cups on the table remain in their positions without sudden movement or displacement.",
+      "signals": [
+        "continuity(cups)"
+      ],
+      "content_score_60": 33,
+      "signal_score_40": 36.67,
+      "total_score_100": 69.67,
+      "duplicate_penalized": true,
+      "signal_detail": {
+        "continuity(cups)": 36.6667
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "The vase with flowers is placed stably on the table, and its position does not change abruptly.",
+      "signals": [
+        "support(vase,table)"
+      ],
+      "content_score_60": 33,
+      "signal_score_40": 35.0,
+      "total_score_100": 68.0,
+      "duplicate_penalized": true,
+      "signal_detail": {
+        "support(vase,table)": 35.0
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "A hand grasps and moves flowers without causing interpenetration between fingers and objects.",
+      "signals": [
+        "tool_usage_correct(scissors,for:placing_flowers)",
+        "interpenetration(oA,oB)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "interpenetration(oA,oB)": 35.8333,
+        "tool_usage_correct(scissors,for:placing_flowers)": 5.8333
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "Scissors are held with proper finger clearance to avoid blade orientation towards hands.",
+      "signals": [
+        "blade_orientation_away(oTool,oHand)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 29.17,
+      "total_score_100": 84.17,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "blade_orientation_away(oTool,oHand)": 29.1667
+      },
+      "content_score_raw": "55"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "v5",
+    "a1",
+    "a4",
+    "a5"
+  ]
+}

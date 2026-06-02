@@ -1,0 +1,210 @@
+{
+  "summary": {
+    "items": 10,
+    "enter_bank": 9,
+    "clip_range_sec": [
+      0.0,
+      8.0
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does the microphone stay supported by the person's hand without floating or moving independently?",
+      "signals": [
+        "continuity(oX)",
+        "support(oA,oB)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(oX)": 36.6667,
+        "support(oA,oB)": 7.0
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Is the ring on the right hand visible and stationary relative to the wrist across the clip?",
+      "signals": [
+        "continuity(oX)",
+        "rigid_transform(ring)",
+        "grasp_stability(person's右手,rings)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "rigid_transform(ring)": 37.5,
+        "continuity(oX)": 7.3333,
+        "grasp_stability(person's右手,rings)": 5.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Does the bracelet on the right wrist remain consistently present and not show signs of slipping?",
+      "signals": [
+        "continuity(oX), interpenetration(oA,oB)",
+        "slip(bracelet,on:person's右手腕)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(oX), interpenetration(oA,oB)": 36.6667,
+        "slip(bracelet,on:person's右手腕)": 5.5
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Does the woman's hair maintain its natural flow and continuity without sudden changes or interpenetration?",
+      "signals": [
+        "balance(microphone)",
+        "continuity(microphone)",
+        "continuity(oX)",
+        "interpenetration(oA,oB)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(microphone)": 36.6667,
+        "continuity(oX)": 7.3333,
+        "balance(microphone)": 7.1667,
+        "interpenetration(oA,oB)": 7.1667
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Are there any falling hazards present in the scene?",
+      "signals": [
+        "falling_hazard(oObj)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 31.67,
+      "total_score_100": 86.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "falling_hazard(oObj)": 31.6667
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "The person's hand holds the microphone steadily without sudden movement.",
+      "signals": [
+        "continuity(oX)",
+        "balance(microphone)",
+        "continuity(microphone)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(oX)": 36.6667,
+        "continuity(microphone)": 7.3333,
+        "balance(microphone)": 7.1667
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "The ring on the right hand remains visible and stationary relative to the wrist.",
+      "signals": [
+        "continuity(oX)",
+        "rigid_transform(ring)",
+        "grasp_stability(person's右手,rings)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "rigid_transform(ring)": 37.5,
+        "continuity(oX)": 7.3333,
+        "grasp_stability(person's右手,rings)": 5.6667
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "The bracelet on the right wrist is consistently present and does not show signs of slipping.",
+      "signals": [
+        "continuity(oX), interpenetration(oA,oB)",
+        "slip(bracelet,on:person's右手腕)"
+      ],
+      "content_score_60": 36,
+      "signal_score_40": 40.0,
+      "total_score_100": 76.0,
+      "duplicate_penalized": true,
+      "signal_detail": {
+        "continuity(oX), interpenetration(oA,oB)": 36.6667,
+        "slip(bracelet,on:person's右手腕)": 5.5
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "The microphone remains in contact with the hand throughout the video.",
+      "signals": [
+        "support(oA,oB)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 35.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "support(oA,oB)": 35.0
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "The woman's hair maintains its natural flow and continuity without sudden changes.",
+      "signals": [
+        "continuity(oX)",
+        "interpenetration(oA,oB)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(oX)": 36.6667,
+        "interpenetration(oA,oB)": 7.1667
+      },
+      "content_score_raw": "60"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "v5",
+    "a1",
+    "a2",
+    "a4",
+    "a5"
+  ]
+}

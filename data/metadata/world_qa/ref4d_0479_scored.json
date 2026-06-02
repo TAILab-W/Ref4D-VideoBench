@@ -1,0 +1,190 @@
+{
+  "summary": {
+    "items": 10,
+    "enter_bank": 9,
+    "clip_range_sec": [
+      0.0,
+      8.73
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does the person's leg movement direction stay consistent during the exercise?",
+      "signals": [
+        "trajectory_dir(leg,axis)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 38.33,
+      "total_score_100": 93.33,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(leg,axis)": 38.3333
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Does the bench provide stable support for the weights and the person without any risk of collapse or instability?",
+      "signals": [
+        "support(bench,weights)",
+        "support(bench,bench)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "support(bench,weights)": 35.0,
+        "support(bench,bench)": 7.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Are the person's feet securely on the footplate to prevent slipping?",
+      "signals": [
+        "friction_sliding(foot,on:footplate)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 30.0,
+      "total_score_100": 80.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "friction_sliding(foot,on:footplate)": 30.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Is the equipment designed for lower body strength training tasks?",
+      "signals": [
+        "tool_usage_correct(leg_press_machine,for:leg_press)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 29.17,
+      "total_score_100": 89.17,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "tool_usage_correct(leg_press_machine,for:leg_press)": 29.1667
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Does the person use their hands to hold the sides of the bench while performing the exercise?",
+      "signals": [
+        "tool_contact(hand,bench)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 28.33,
+      "total_score_100": 83.33,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "tool_contact(hand,bench)": 28.3333
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "The equipment is designed for performing lower body strength training tasks.",
+      "signals": [
+        "tool_usage_correct(leg_press_machine,for:leg_press)"
+      ],
+      "content_score_60": 36,
+      "signal_score_40": 29.17,
+      "total_score_100": 65.17,
+      "duplicate_penalized": true,
+      "signal_detail": {
+        "tool_usage_correct(leg_press_machine,for:leg_press)": 29.1667
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "The person uses their hands to hold the sides of the bench while feet remain securely on the footplate.",
+      "signals": [
+        "tool_contact(hand,bench)",
+        "friction_sliding(foot,on:footplate)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 35.67,
+      "total_score_100": 85.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "friction_sliding(foot,on:footplate)": 30.0,
+        "tool_contact(hand,bench)": 5.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "The support surface of the machine maintains stability and balance during use.",
+      "signals": [
+        "balance(machine)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 35.83,
+      "total_score_100": 95.83,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "balance(machine)": 35.8333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "The bench provides stable support for the weights without any risk of collapse or instability.",
+      "signals": [
+        "support(bench,weights)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 35.0,
+      "total_score_100": 85.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "support(bench,weights)": 35.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "The legs move in a controlled manner with consistent trajectory direction along the axis of motion.",
+      "signals": [
+        "trajectory_dir(leg,axis)",
+        "accel_sign(leg,axis)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(leg,axis)": 38.3333,
+        "accel_sign(leg,axis)": 7.0
+      },
+      "content_score_raw": "60"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "v5",
+    "a2",
+    "a3",
+    "a4",
+    "a5"
+  ]
+}

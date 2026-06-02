@@ -1,0 +1,229 @@
+{
+  "summary": {
+    "items": 10,
+    "enter_bank": 10,
+    "clip_range_sec": [
+      0.0,
+      16.5
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does the man stand on dry grass without moving?",
+      "signals": [
+        "continuity(truck)",
+        "balance(person)",
+        "friction_sliding(person,on:grass)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(truck)": 36.6667,
+        "balance(person)": 7.1667,
+        "friction_sliding(person,on:grass)": 6.0
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Is the text 'Throttle Response + RPM' visible above the truck's hood?",
+      "signals": [
+        "material_optics(text)",
+        "continuity(truck)",
+        "continuity(person)",
+        "rigid_transform(truck)",
+        "rigid_transform(person)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "material_optics(text)": 37.5,
+        "rigid_transform(truck)": 7.5,
+        "rigid_transform(person)": 7.5,
+        "continuity(truck)": 7.3333,
+        "continuity(person)": 7.3333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Does the truck remain stationary relative to the man throughout the clip?",
+      "signals": [
+        "continuity(person)",
+        "continuity(truck)",
+        "center_of_mass_over_base(person)",
+        "center_of_mass_over_base(truck)",
+        "friction_sliding(person,on:ground)",
+        "friction_sliding(truck,on:ground)",
+        "rigid_transform(truck)",
+        "rigid_transform(person)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "rigid_transform(truck)": 37.5,
+        "rigid_transform(person)": 7.5,
+        "continuity(person)": 7.3333,
+        "continuity(truck)": 7.3333,
+        "center_of_mass_over_base(person)": 6.5,
+        "center_of_mass_over_base(truck)": 6.5,
+        "friction_sliding(person,on:ground)": 6.0,
+        "friction_sliding(truck,on:ground)": 6.0
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Is the shadow of the man consistent with his position and does the truck's hood stay open?",
+      "signals": [
+        "shadow_consistency(person)",
+        "continuity(oX)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "shadow_consistency(person)": 36.6667,
+        "continuity(oX)": 7.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Does the person maintain a stable posture near the parked truck, and is the screen text unchanged?",
+      "signals": [
+        "balance(oX), center_of_mass_over_base(oX)",
+        "size_inconsistency(oX), hue_histogram_jump(oX)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "size_inconsistency(oX), hue_histogram_jump(oX)": 37.5,
+        "balance(oX), center_of_mass_over_base(oX)": 7.1667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "The truck's hood is open, and the vehicle remains stationary on the grassy field.",
+      "signals": [
+        "continuity(truck)",
+        "continuity(person)",
+        "rigid_transform(truck)",
+        "rigid_transform(person)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "rigid_transform(truck)": 37.5,
+        "rigid_transform(person)": 7.5,
+        "continuity(truck)": 7.3333,
+        "continuity(person)": 7.3333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "The person stands still on dry grass next to the parked truck.",
+      "signals": [
+        "balance(person)",
+        "friction_sliding(person,on:grass)",
+        "rigid_transform(truck)",
+        "rigid_transform(person)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "rigid_transform(truck)": 37.5,
+        "rigid_transform(person)": 7.5,
+        "balance(person)": 7.1667,
+        "friction_sliding(person,on:grass)": 6.0
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "Green text 'Throttle Response > RPM +' appears above the truck consistently.",
+      "signals": [
+        "material_optics(text)",
+        "size_inconsistency(oX), hue_histogram_jump(oX)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "material_optics(text)": 37.5,
+        "size_inconsistency(oX), hue_histogram_jump(oX)": 7.5
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "The shadow of the person matches their position on the ground.",
+      "signals": [
+        "shadow_consistency(person)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 36.67,
+      "total_score_100": 86.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "shadow_consistency(person)": 36.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "The truck's hood stays open without closing or moving.",
+      "signals": [
+        "continuity(oX)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 36.67,
+      "total_score_100": 96.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(oX)": 36.6667
+      },
+      "content_score_raw": "60"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "v5",
+    "a1",
+    "a2",
+    "a3",
+    "a4",
+    "a5"
+  ]
+}

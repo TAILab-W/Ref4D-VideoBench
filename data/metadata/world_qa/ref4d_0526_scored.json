@@ -1,0 +1,203 @@
+{
+  "summary": {
+    "items": 10,
+    "enter_bank": 10,
+    "clip_range_sec": [
+      0.0,
+      8.07
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does the cable car follow a consistent trajectory along the cables without sudden changes in direction or velocity?",
+      "signals": [
+        "trajectory_dir(cable_car,axis)",
+        "balance(cable_car)",
+        "accel_sign(cable_car,axis)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(cable_car,axis)": 38.3333,
+        "balance(cable_car)": 7.1667,
+        "accel_sign(cable_car,axis)": 7.0
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Do the cable cars move apart from each other to avoid collision with any structural elements of the cable system?",
+      "signals": [
+        "collision(cable_car,cable_car)",
+        "collision(cable_car,cable_structure)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 38.0,
+      "total_score_100": 88.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "collision(cable_car,cable_car)": 31.6667,
+        "collision(cable_car,cable_structure)": 6.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Does the green support structure provide stable balance for the moving cable cars?",
+      "signals": [
+        "support(cable_car_structure,ground)",
+        "balance(cable_car_structure)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "balance(cable_car_structure)": 35.8333,
+        "support(cable_car_structure,ground)": 7.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Are the cable cars designed to carry passengers safely through the air using tensioned cables as their primary means of transportation?",
+      "signals": [
+        "rigid_transform(cable_car)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 37.5,
+      "total_score_100": 97.5,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "rigid_transform(cable_car)": 37.5
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Is the purpose of the cable cars transporting passengers over mountainous terrain?",
+      "signals": [
+        "support(cable_car,cable_structure)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 35.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "support(cable_car,cable_structure)": 35.0
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "Cable cars move along cables without colliding with each other or structures.",
+      "signals": [
+        "trajectory_dir(cable_car,axis)",
+        "balance(cable_car)",
+        "collision(cable_car,cable_car)",
+        "collision(cable_car,cable_structure)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(cable_car,axis)": 38.3333,
+        "balance(cable_car)": 7.1667,
+        "collision(cable_car,cable_car)": 6.3333,
+        "collision(cable_car,cable_structure)": 6.3333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "Cable cars maintain a consistent direction and velocity on the cables.",
+      "signals": [
+        "trajectory_dir(cable_car,axis)",
+        "accel_sign(cable_car,axis)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(cable_car,axis)": 38.3333,
+        "accel_sign(cable_car,axis)": 7.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "Green support structure provides stable balance for cable cars.",
+      "signals": [
+        "support(cable_car_structure,ground)",
+        "balance(cable_car_structure)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "balance(cable_car_structure)": 35.8333,
+        "support(cable_car_structure,ground)": 7.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "Cable cars transport passengers safely over mountainous terrain.",
+      "signals": [
+        "rigid_transform(cable_car)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 37.5,
+      "total_score_100": 92.5,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "rigid_transform(cable_car)": 37.5
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "Shadows of cable car cabins are continuous and follow their shapes.",
+      "signals": [
+        "shadow_consistency(cable_car_cabin)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 36.67,
+      "total_score_100": 86.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "shadow_consistency(cable_car_cabin)": 36.6667
+      },
+      "content_score_raw": "50"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "v5",
+    "a1",
+    "a2",
+    "a3",
+    "a4",
+    "a5"
+  ]
+}

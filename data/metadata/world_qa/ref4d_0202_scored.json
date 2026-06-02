@@ -1,0 +1,215 @@
+{
+  "summary": {
+    "items": 10,
+    "enter_bank": 8,
+    "clip_range_sec": [
+      0.0,
+      14.77
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does the rice cooker stay stationary on the stove while food is being poured?",
+      "signals": [
+        "openable(rice-cooker)",
+        "pourable(rice-cooker)",
+        "tool_usage_correct(rice-cooker,for:transfer-food)",
+        "support(rice-cooker,stove)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "support(rice-cooker,stove)": 35.0,
+        "tool_usage_correct(rice-cooker,for:transfer-food)": 5.8333,
+        "openable(rice-cooker)": 5.1667,
+        "pourable(rice-cooker)": 5.1667
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Is the flow of food from the pressure cooker controlled to avoid spillage onto the countertop?",
+      "signals": [
+        "pourable(oContainer)",
+        "spillage(oV)",
+        "grasp_stability(person,pressure-cooker)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 39.17,
+      "total_score_100": 89.17,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "spillage(oV)": 28.3333,
+        "grasp_stability(person,pressure-cooker)": 5.6667,
+        "pourable(oContainer)": 5.1667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Is the hot surface of the open pressure cooker kept away from direct contact with other objects or hands?",
+      "signals": [
+        "hot_surface_contact(oObj,oSurface)",
+        "hot_surface_contact(plate,pressure-cooker)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "hot_surface_contact(oObj,oSurface)": 34.1667,
+        "hot_surface_contact(plate,pressure-cooker)": 6.8333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Can the lid of the pressure cooker be opened and placed upright on the countertop next to the pot?",
+      "signals": [
+        "containment(pressure-cooker,food)",
+        "openable",
+        "supportable"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 39.67,
+      "total_score_100": 94.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "containment(pressure-cooker,food)": 29.1667,
+        "supportable": 5.3333,
+        "openable": 5.1667
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Are the actions of holding the pot and pouring its contents sequential?",
+      "signals": [
+        "continuity",
+        "action_phase"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity": 36.6667,
+        "action_phase": 5.3333
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "A person uses a rice cooker to transfer cooked food onto a plate of yellow rice.",
+      "signals": [
+        "openable(rice-cooker)",
+        "pourable(rice-cooker)",
+        "tool_usage_correct(rice-cooker,for:transfer-food)",
+        "support(rice-cooker,stove)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "support(rice-cooker,stove)": 35.0,
+        "tool_usage_correct(rice-cooker,for:transfer-food)": 5.8333,
+        "openable(rice-cooker)": 5.1667,
+        "pourable(rice-cooker)": 5.1667
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "The person controls the flow from the pressure cooker to avoid spillage while holding it steadily.",
+      "signals": [
+        "pourable(oContainer)",
+        "spillage(oV)",
+        "grasp_stability(person,pressure-cooker)"
+      ],
+      "content_score_60": 45,
+      "signal_score_40": 39.17,
+      "total_score_100": 84.17,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "spillage(oV)": 28.3333,
+        "grasp_stability(person,pressure-cooker)": 5.6667,
+        "pourable(oContainer)": 5.1667
+      },
+      "content_score_raw": "45"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "The open pressure cooker lid is kept away from direct contact with skin, preventing burns.",
+      "signals": [
+        "hot_surface_contact(oObj,oSurface)",
+        "hot_surface_contact(plate,pressure-cooker)"
+      ],
+      "content_score_60": 35,
+      "signal_score_40": 40.0,
+      "total_score_100": 75.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "hot_surface_contact(oObj,oSurface)": 34.1667,
+        "hot_surface_contact(plate,pressure-cooker)": 6.8333
+      },
+      "content_score_raw": "35"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "Food in the pot has a continuous trajectory when being poured onto the plate.",
+      "signals": [
+        "containment(pressure-cooker,food)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 29.17,
+      "total_score_100": 79.17,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "containment(pressure-cooker,food)": 29.1667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "The rice cooker lid is openable and supports on the countertop.",
+      "signals": [
+        "openable",
+        "supportable"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 31.83,
+      "total_score_100": 86.83,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "supportable": 26.6667,
+        "openable": 5.1667
+      },
+      "content_score_raw": "55"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "v5",
+    "a1",
+    "a2",
+    "a5"
+  ]
+}

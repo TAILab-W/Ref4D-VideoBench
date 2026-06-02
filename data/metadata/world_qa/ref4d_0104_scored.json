@@ -1,0 +1,205 @@
+{
+  "summary": {
+    "items": 10,
+    "enter_bank": 10,
+    "clip_range_sec": [
+      0.0,
+      7.37
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does the black metal gate remain open and stationary, supported by its hinges?",
+      "signals": [
+        "support(gate,hinge)",
+        "continuity(gate)",
+        "collision(guards,barrier)",
+        "biological_motion(guards)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "biological_motion(guards)": 38.3333,
+        "continuity(gate)": 7.3333,
+        "support(gate,hinge)": 7.0,
+        "collision(guards,barrier)": 6.3333
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Does the police officer's high-visibility jacket maintain consistent size throughout the clip?",
+      "signals": [
+        "size_inconsistency(police-officer)",
+        "continuity(police-officer)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "size_inconsistency(police-officer)": 37.5,
+        "continuity(police-officer)": 7.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Are the guards in red coats positioned safely behind barriers from the crowd?",
+      "signals": [
+        "containment(crowd,barriers)",
+        "friction_sliding(crowd,on:barriers)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 35.83,
+      "total_score_100": 90.83,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "friction_sliding(crowd,on:barriers)": 30.0,
+        "containment(crowd,barriers)": 5.8333
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Does the crowd exhibit continuous movement without sudden frame discontinuity?",
+      "signals": [
+        "continuity(crowd)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 36.67,
+      "total_score_100": 86.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(crowd)": 36.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Do shadows cast by people align consistently with their light sources?",
+      "signals": [
+        "shadow_consistency(shadow)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 36.67,
+      "total_score_100": 86.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "shadow_consistency(shadow)": 36.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "The black metal gate remains open and stationary, supported by its hinges and base.",
+      "signals": [
+        "support(gate,hinge)",
+        "continuity(gate)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(gate)": 36.6667,
+        "support(gate,hinge)": 7.0
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "Guards in red coats stand formally behind the gate near an official building.",
+      "signals": [
+        "collision(guards,barrier)",
+        "biological_motion(guards)",
+        "support(crowd,uniformed_persons)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "biological_motion(guards)": 38.3333,
+        "support(crowd,uniformed_persons)": 7.0,
+        "collision(guards,barrier)": 6.3333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "The crowd is positioned safely behind barriers without obstruction.",
+      "signals": [
+        "containment(crowd,barriers)",
+        "friction_sliding(crowd,on:barriers)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 35.83,
+      "total_score_100": 95.83,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "friction_sliding(crowd,on:barriers)": 30.0,
+        "containment(crowd,barriers)": 5.8333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "The police officer's high-visibility jacket maintains consistent size and shape.",
+      "signals": [
+        "size_inconsistency(police-officer)",
+        "continuity(police-officer)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "size_inconsistency(police-officer)": 37.5,
+        "continuity(police-officer)": 7.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "The crowd's movement and posture exhibit continuity without sudden frame discontinuity.",
+      "signals": [
+        "continuity(crowd)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 36.67,
+      "total_score_100": 86.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(crowd)": 36.6667
+      },
+      "content_score_raw": "50"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "v5",
+    "a1",
+    "a2",
+    "a3",
+    "a4",
+    "a5"
+  ]
+}

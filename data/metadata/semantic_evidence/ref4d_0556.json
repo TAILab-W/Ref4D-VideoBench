@@ -1,0 +1,172 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0556.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "cv2",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "cable_car_1",
+        "attributes": {
+          "color": [
+            "black",
+            "blue"
+          ],
+          "pattern": [
+            "solid"
+          ],
+          "size": [
+            "large"
+          ],
+          "state": [
+            "empty",
+            "suspended"
+          ],
+          "position": [
+            "mid-air",
+            "moving"
+          ],
+          "facing-direction": [
+            "left"
+          ],
+          "signature": [
+            "blue_visa_logo_facing_left_suspended_mid_air"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            13.9
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "fence",
+        "attributes": {
+          "color": [
+            "blue"
+          ],
+          "material": [
+            "metal"
+          ],
+          "state": [
+            "upright"
+          ],
+          "position": [
+            "foreground"
+          ],
+          "signature": [
+            "blue_metal_fence_in_foreground"
+          ]
+        },
+        "spans": [
+          [
+            5.0,
+            13.9
+          ]
+        ]
+      },
+      {
+        "id": "o3",
+        "name": "mountain",
+        "attributes": {
+          "color": [
+            "brown",
+            "white"
+          ],
+          "texture": [
+            "rocky",
+            "snowy"
+          ],
+          "state": [
+            "snow-covered"
+          ],
+          "signature": [
+            "snowy_mountain_with_darker_areas"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            13.9
+          ]
+        ]
+      },
+      {
+        "id": "o4",
+        "name": "sky",
+        "attributes": {
+          "color": [
+            "blue",
+            "white"
+          ],
+          "state": [
+            "cloudy"
+          ],
+          "signature": [
+            "cloudy_sky"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            13.9
+          ]
+        ]
+      }
+    ],
+    "relations": [
+      {
+        "subject": "o1",
+        "predicate": "suspended-from",
+        "object": "o2",
+        "spans": [
+          [
+            0.0,
+            13.9
+          ]
+        ],
+        "confidence": 0.9
+      },
+      {
+        "subject": "o2",
+        "predicate": "in-front-of",
+        "object": "o3",
+        "spans": [
+          [
+            5.0,
+            13.9
+          ]
+        ],
+        "confidence": 0.8
+      },
+      {
+        "subject": "o3",
+        "predicate": "under",
+        "object": "o4",
+        "spans": [
+          [
+            0.0,
+            13.9
+          ]
+        ],
+        "confidence": 0.9
+      }
+    ]
+  },
+  "views": {
+    "objects_count_display": {
+      "cable_car_1": 1,
+      "fence": 1,
+      "mountain": 1,
+      "sky": 1
+    }
+  }
+}

@@ -1,0 +1,203 @@
+{
+  "summary": {
+    "items": 10,
+    "enter_bank": 8,
+    "clip_range_sec": [
+      0.0,
+      7.33
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does the person maintain balance while stepping over the hurdle?",
+      "signals": [
+        "continuity(person)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 36.67,
+      "total_score_100": 91.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(person)": 36.6667
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Is the red-and-white hurdle supporting the jump without interpenetration with the athlete's body?",
+      "signals": [
+        "support(hurdle,person)",
+        "interpenetration(hurdle,athlete)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "interpenetration(hurdle,athlete)": 35.8333,
+        "support(hurdle,person)": 7.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Does the person avoid falling during the step-over action?",
+      "signals": [
+        "balance(person)",
+        "interpenetration(hurdle, person)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "balance(person)": 35.8333,
+        "interpenetration(hurdle, person)": 7.1667
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Does the raised leg follow a continuous trajectory to clear the hurdle in one phase?",
+      "signals": [
+        "trajectory_dir(leg,axis)",
+        "action_phase(jump,phase)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(leg,axis)": 38.3333,
+        "action_phase(jump,phase)": 5.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Is the track equipment properly balanced for high jumps?",
+      "signals": [
+        "balance(athlete)"
+      ],
+      "content_score_60": 30,
+      "signal_score_40": 35.83,
+      "total_score_100": 65.83,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "balance(athlete)": 35.8333
+      },
+      "content_score_raw": "30"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "The person maintains balance while jumping over the red-and-white hurdle.",
+      "signals": [
+        "continuity(person)",
+        "support(hurdle,person)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(person)": 36.6667,
+        "support(hurdle,person)": 7.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "The athlete's foot contacts one hurdle at a time without interpenetration.",
+      "signals": [
+        "balance(person)",
+        "interpenetration(hurdle, person)",
+        "interpenetration(hurdle,athlete)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "balance(person)": 35.8333,
+        "interpenetration(hurdle, person)": 7.1667,
+        "interpenetration(hurdle,athlete)": 7.1667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "The leg trajectory is continuous and consistent with clearing the hurdle.",
+      "signals": [
+        "trajectory_dir(person, vertical)",
+        "continuity(person)",
+        "trajectory_dir(leg,axis)",
+        "action_phase(jump,phase)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(person, vertical)": 38.3333,
+        "trajectory_dir(leg,axis)": 7.6667,
+        "continuity(person)": 7.3333,
+        "action_phase(jump,phase)": 5.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "The person avoids falling hazards by maintaining proper balance during the jump.",
+      "signals": [
+        "continuity(person)",
+        "balance(athlete)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(person)": 36.6667,
+        "balance(athlete)": 7.1667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "The red-and-white hurdle supports the athlete's movement over it.",
+      "signals": [
+        "support(hurdle,person)"
+      ],
+      "content_score_60": 30,
+      "signal_score_40": 35.0,
+      "total_score_100": 65.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "support(hurdle,person)": 35.0
+      },
+      "content_score_raw": "30"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "a1",
+    "a2",
+    "a3",
+    "a4"
+  ]
+}

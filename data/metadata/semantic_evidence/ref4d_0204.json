@@ -1,0 +1,222 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0204.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "cv2",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "honey",
+        "attributes": {
+          "color": [
+            "brown",
+            "golden"
+          ],
+          "texture": [
+            "thick",
+            "viscous"
+          ],
+          "material": [
+            "natural"
+          ],
+          "signature": [
+            "golden-brown-liquid"
+          ]
+        },
+        "spans": [
+          [
+            0.2,
+            1.0
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "jar",
+        "attributes": {
+          "color": [
+            "clear",
+            "translucent"
+          ],
+          "material": [
+            "glass"
+          ],
+          "size": [
+            "large"
+          ],
+          "signature": [
+            "mason-jar-with-label"
+          ]
+        },
+        "spans": [
+          [
+            0.3,
+            1.0
+          ]
+        ]
+      },
+      {
+        "id": "o3",
+        "name": "knife",
+        "attributes": {
+          "color": [
+            "black",
+            "silver"
+          ],
+          "material": [
+            "metal"
+          ],
+          "signature": [
+            "silver-blade-with-black-handle"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            0.1
+          ]
+        ]
+      },
+      {
+        "id": "o4",
+        "name": "spoon",
+        "attributes": {
+          "color": [
+            "white"
+          ],
+          "material": [
+            "plastic"
+          ],
+          "signature": [
+            "white-plastic-spoon"
+          ]
+        },
+        "spans": [
+          [
+            4.8,
+            9.7
+          ]
+        ]
+      },
+      {
+        "id": "o5",
+        "name": "garlic-clove",
+        "attributes": {
+          "color": [
+            "brown",
+            "white"
+          ],
+          "shape": [
+            "curved"
+          ],
+          "signature": [
+            "white-garlic-clove-with-brown-spot"
+          ]
+        },
+        "spans": [
+          [
+            9.6,
+            12.5
+          ]
+        ]
+      }
+    ],
+    "relations": [
+      {
+        "subject": "o1",
+        "predicate": "inside",
+        "object": "o2",
+        "spans": [
+          [
+            0.3,
+            0.5
+          ]
+        ],
+        "confidence": 0.9
+      },
+      {
+        "subject": "o4",
+        "predicate": "inside",
+        "object": "o1",
+        "spans": [
+          [
+            4.8,
+            9.7
+          ]
+        ],
+        "confidence": 0.9
+      },
+      {
+        "subject": "o5",
+        "predicate": "inside",
+        "object": "o2",
+        "spans": [
+          [
+            9.6,
+            12.5
+          ]
+        ],
+        "confidence": 0.9
+      },
+      {
+        "subject": "o3",
+        "predicate": "left-of",
+        "object": "o2",
+        "spans": [
+          [
+            0.0,
+            0.5
+          ]
+        ],
+        "confidence": 0.8
+      },
+      {
+        "subject": "o4",
+        "predicate": "left-of",
+        "object": "o2",
+        "spans": [
+          [
+            0.3,
+            0.5
+          ],
+          [
+            4.8,
+            9.7
+          ]
+        ],
+        "confidence": 0.8
+      },
+      {
+        "subject": "o5",
+        "predicate": "left-of",
+        "object": "o2",
+        "spans": [
+          [
+            0.3,
+            0.5
+          ],
+          [
+            9.6,
+            12.5
+          ]
+        ],
+        "confidence": 0.8
+      }
+    ]
+  },
+  "views": {
+    "objects_count_display": {
+      "honey": 1,
+      "jar": 1,
+      "knife": 1,
+      "spoon": 1,
+      "garlic-clove": 1
+    }
+  }
+}

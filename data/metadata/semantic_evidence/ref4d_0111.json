@@ -1,0 +1,109 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0111.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "cv2",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "boat",
+        "attributes": {
+          "color": [
+            "green",
+            "red",
+            "white"
+          ],
+          "size": [
+            "small"
+          ],
+          "facing-direction": [
+            "right"
+          ],
+          "signature": [
+            "red-body-green-white-roof"
+          ]
+        },
+        "spans": [
+          [
+            0.2,
+            3.5
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "boat",
+        "attributes": {
+          "color": [
+            "blue"
+          ],
+          "size": [
+            "small"
+          ],
+          "facing-direction": [
+            "left"
+          ],
+          "signature": [
+            "blue-roof-with-motor"
+          ]
+        },
+        "spans": [
+          [
+            4.9,
+            6.7
+          ]
+        ]
+      },
+      {
+        "id": "o3",
+        "name": "ruin",
+        "attributes": {
+          "material": [
+            "brick"
+          ],
+          "color": [
+            "red-brown"
+          ],
+          "age": [
+            "ancient"
+          ],
+          "signature": [
+            "large-brick-pagoda"
+          ]
+        },
+        "spans": [
+          [
+            0.1,
+            7.6
+          ]
+        ]
+      }
+    ],
+    "relations": [
+      {
+        "subject": "o1",
+        "predicate": "left-of",
+        "object": "o2",
+        "spans": [
+          [
+            0.2,
+            3.5
+          ]
+        ],
+        "confidence": 0.8
+      }
+    ]
+  },
+  "views": {
+    "objects_count_display": {
+      "boat": 2,
+      "ruin": 1
+    }
+  }
+}

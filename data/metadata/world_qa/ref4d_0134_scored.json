@@ -1,0 +1,227 @@
+{
+  "summary": {
+    "items": 10,
+    "enter_bank": 10,
+    "clip_range_sec": [
+      0.0,
+      11.03
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Do the solar panels on the bridge maintain their hexagonal shape without deformation?",
+      "signals": [
+        "support(bridge,solar-panel)",
+        "deformation(solar-panel)",
+        "interpenetration(solar-panel,bridge)",
+        "support(oA,oB)",
+        "interpenetration(oA,oB)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "deformation(solar-panel)": 40.0,
+        "interpenetration(solar-panel,bridge)": 7.1667,
+        "interpenetration(oA,oB)": 7.1667,
+        "support(bridge,solar-panel)": 7.0,
+        "support(oA,oB)": 7.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Do the birds fly with smooth trajectories and appropriate shadow consistency?",
+      "signals": [
+        "biological_motion(bird)",
+        "shadow_consistency(bird)",
+        "trajectory_dir(bird,axis)",
+        "accel_sign(bird,axis)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "biological_motion(bird)": 38.3333,
+        "trajectory_dir(bird,axis)": 7.6667,
+        "shadow_consistency(bird)": 7.3333,
+        "accel_sign(bird,axis)": 7.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Do people walking on the bridge follow a continuous trajectory without prohibited intersections with structural elements?",
+      "signals": [
+        "balance(person),trajectory_dir(person,axis),continuity(person)",
+        "prohibited_intersection(person,bridge)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "prohibited_intersection(person,bridge)": 36.6667,
+        "balance(person),trajectory_dir(person,axis),continuity(person)": 7.1667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Does the water exhibit continuous slosh response across the clip?",
+      "signals": [
+        "slosh_response(water,amp)",
+        "continuity(water)",
+        "frame_discontinuity(t)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "frame_discontinuity(t)": 40.0,
+        "continuity(water)": 7.3333,
+        "slosh_response(water,amp)": 6.8333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Does sunlight cast consistent shadows on all visible surfaces?",
+      "signals": [
+        "shadow_consistency(oX)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 36.67,
+      "total_score_100": 86.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "shadow_consistency(oX)": 36.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "Solar panels on the bridge maintain their hexagonal shape and are supported by the structure.",
+      "signals": [
+        "support(building,solar-panel)",
+        "support(bridge,solar-panel)",
+        "deformation(solar-panel)",
+        "interpenetration(solar-panel,bridge)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "deformation(solar-panel)": 40.0,
+        "interpenetration(solar-panel,bridge)": 7.1667,
+        "support(building,solar-panel)": 7.0,
+        "support(bridge,solar-panel)": 7.0
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "Birds fly with smooth trajectories, showing natural flight patterns without sudden changes.",
+      "signals": [
+        "biological_motion(bird)",
+        "shadow_consistency(bird)",
+        "trajectory_dir(bird,axis)",
+        "accel_sign(bird,axis)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "biological_motion(bird)": 38.3333,
+        "trajectory_dir(bird,axis)": 7.6667,
+        "shadow_consistency(bird)": 7.3333,
+        "accel_sign(bird,axis)": 7.0
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "Water reflections of the bridge remain continuous across the surface.",
+      "signals": [
+        "continuity(oX)",
+        "frame_discontinuity(t)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "frame_discontinuity(t)": 40.0,
+        "continuity(oX)": 7.3333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "People walk on the bridge following a continuous trajectory, maintaining balance to avoid falling hazards.",
+      "signals": [
+        "balance(person),trajectory_dir(person,axis),continuity(person)",
+        "trajectory_dir(person,axis)",
+        "balance(person)",
+        "collision(person,person)",
+        "falling_hazard(person)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(person,axis)": 38.3333,
+        "balance(person),trajectory_dir(person,axis),continuity(person)": 7.1667,
+        "balance(person)": 7.1667,
+        "collision(person,person)": 6.3333,
+        "falling_hazard(person)": 6.3333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "Sunlight casts consistent shadows on all visible surfaces.",
+      "signals": [
+        "shadow_consistency(oX)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 36.67,
+      "total_score_100": 96.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "shadow_consistency(oX)": 36.6667
+      },
+      "content_score_raw": "60"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "v5",
+    "a1",
+    "a2",
+    "a3",
+    "a4",
+    "a5"
+  ]
+}

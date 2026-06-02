@@ -1,0 +1,60 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0289.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "cv2",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "excavator",
+        "attributes": {
+          "signature": [
+            "large-yellow-and-blue-excavator-with-'bucyrus'-text,-number-'76',-and-'495hr'-on-the-side"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            18.5
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "dump-truck",
+        "attributes": {
+          "state": [
+            "empty",
+            "loaded"
+          ],
+          "action": [
+            "moving",
+            "parked"
+          ],
+          "signature": [
+            "large-yellow-dump-truck-with-number-'76'-or-'130'"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            18.5
+          ]
+        ]
+      }
+    ],
+    "relations": []
+  },
+  "views": {
+    "objects_count_display": {
+      "excavator": 1,
+      "dump-truck": 1
+    }
+  }
+}

@@ -1,0 +1,207 @@
+{
+  "summary": {
+    "items": 10,
+    "enter_bank": 10,
+    "clip_range_sec": [
+      0.0,
+      18.3
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does the boat move downstream along the slope of the waterfall?",
+      "signals": [
+        "continuity",
+        "trajectory_dir"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir": 38.3333,
+        "continuity": 7.3333
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Does the water fall downward from the waterfall due to gravity?",
+      "signals": [
+        "continuity(river_water)",
+        "buoyancy_float(e2,in:river_water)",
+        "trajectory_dir(e2,axis:vertical)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(e2,axis:vertical)": 38.3333,
+        "continuity(river_water)": 7.3333,
+        "buoyancy_float(e2,in:river_water)": 6.8333
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Does the boat maintain balance while moving through the water?",
+      "signals": [
+        "balance"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 35.83,
+      "total_score_100": 90.83,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "balance": 35.8333
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Does the continuous movement of the boat and water flow show consistent physical behavior without sudden changes?",
+      "signals": [
+        "continuity(e1)",
+        "buoyancy_float(e2,in:e1)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(e1)": 36.6667,
+        "buoyancy_float(e2,in:e1)": 6.8333
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Is the lifebuoy securely attached to the post?",
+      "signals": [
+        "rigid_transform"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 37.5,
+      "total_score_100": 92.5,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "rigid_transform": 37.5
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "The water flow in the river is continuous and moves downstream.",
+      "signals": [
+        "continuity",
+        "continuity(river_water)",
+        "buoyancy_float(e2,in:river_water)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity": 36.6667,
+        "continuity(river_water)": 7.3333,
+        "buoyancy_float(e2,in:river_water)": 6.8333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "The boat follows a trajectory directed downstream along the slope of the waterfall.",
+      "signals": [
+        "trajectory_dir",
+        "continuity(e1)",
+        "buoyancy_float(e2,in:e1)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir": 38.3333,
+        "continuity(e1)": 7.3333,
+        "buoyancy_float(e2,in:e1)": 6.8333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "The water flow in the rapids is continuous and consistent with its trajectory.",
+      "signals": [
+        "continuity",
+        "trajectory_dir",
+        "continuity(e1)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir": 38.3333,
+        "continuity": 7.3333,
+        "continuity(e1)": 7.3333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "The waterfall's water consistently falls downward due to gravity.",
+      "signals": [
+        "trajectory_dir(e2,axis:vertical)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 38.33,
+      "total_score_100": 98.33,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(e2,axis:vertical)": 38.3333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "The lifebuoy is securely attached to the structure near the waterfall.",
+      "signals": [
+        "support(e3,e4)",
+        "prohibited_intersection(e3,e4)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "prohibited_intersection(e3,e4)": 36.6667,
+        "support(e3,e4)": 7.0
+      },
+      "content_score_raw": "60"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "v5",
+    "a1",
+    "a2",
+    "a3",
+    "a4",
+    "a5"
+  ]
+}

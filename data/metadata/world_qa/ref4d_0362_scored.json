@@ -1,0 +1,192 @@
+{
+  "summary": {
+    "items": 10,
+    "enter_bank": 9,
+    "clip_range_sec": [
+      0.0,
+      8.3
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does the road surface maintain continuity and consistency in material optics?",
+      "signals": [
+        "continuity(road)",
+        "material_optics(road)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "material_optics(road)": 37.5,
+        "continuity(road)": 7.3333
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Does the shadow of the guardrail on the right side match its contact with the ground?",
+      "signals": [
+        "cast_shadow_contact(guardrail,shadow)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 37.5,
+      "total_score_100": 87.5,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "cast_shadow_contact(guardrail,shadow)": 37.5
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Are the yellow dashed lines on the road clear and continuous throughout the scene?",
+      "signals": [
+        "continuity(dashed_lines)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 36.67,
+      "total_score_100": 91.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(dashed_lines)": 36.6667
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Do the mountains exhibit stable support and consistent material optics across the clip?",
+      "signals": [
+        "support(mountains,road)",
+        "material_optics(mountains)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "material_optics(mountains)": 37.5,
+        "support(mountains,road)": 7.0
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Are the yellow dashed lines on the road properly marked for safe driving?",
+      "signals": [
+        "continuity(dashed_lines)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 36.67,
+      "total_score_100": 86.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(dashed_lines)": 36.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "The road surface is continuous and consistent in material optics.",
+      "signals": [
+        "continuity(road)",
+        "material_optics(road)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "material_optics(road)": 37.5,
+        "continuity(road)": 7.3333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "The shadow of the guardrail on the right side matches its contact with the ground.",
+      "signals": [
+        "cast_shadow_contact(guardrail,shadow)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 37.5,
+      "total_score_100": 97.5,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "cast_shadow_contact(guardrail,shadow)": 37.5
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "The yellow dashed lines on the road are clear and continuous.",
+      "signals": [
+        "continuity(dashed_lines)"
+      ],
+      "content_score_60": 36,
+      "signal_score_40": 36.67,
+      "total_score_100": 72.67,
+      "duplicate_penalized": true,
+      "signal_detail": {
+        "continuity(dashed_lines)": 36.6667
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "The mountains on both sides of the road exhibit stable support and consistent material optics.",
+      "signals": [
+        "support(mountains,road)",
+        "material_optics(mountains)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "material_optics(mountains)": 37.5,
+        "support(mountains,road)": 7.0
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "The yellow dashed lines indicate proper lane markings for safe driving.",
+      "signals": [
+        "continuity(dashed_lines)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 36.67,
+      "total_score_100": 96.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(dashed_lines)": 36.6667
+      },
+      "content_score_raw": "60"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "v5",
+    "a1",
+    "a2",
+    "a4",
+    "a5"
+  ]
+}

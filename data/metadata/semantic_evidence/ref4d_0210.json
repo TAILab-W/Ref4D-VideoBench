@@ -1,0 +1,141 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0210.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "cv2",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "person",
+        "attributes": {
+          "clothing": [
+            "black-shirt",
+            "gray-cap",
+            "orange-text"
+          ],
+          "accessory": [
+            "black-gloves"
+          ],
+          "signature": [
+            "black-gloves-black-shirt-orange-text-gray-cap"
+          ]
+        },
+        "spans": [
+          [
+            0.2,
+            0.5
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "fish",
+        "attributes": {
+          "color": [
+            "red"
+          ],
+          "texture": [
+            "seed-coated"
+          ],
+          "signature": [
+            "red-skin-seed-coating"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            0.3
+          ],
+          [
+            0.6,
+            0.8
+          ]
+        ]
+      },
+      {
+        "id": "o3",
+        "name": "air-fryer",
+        "attributes": {
+          "color": [
+            "black"
+          ],
+          "brand": [
+            "meijer"
+          ],
+          "signature": [
+            "black-air-fryer-with-white-control-panel"
+          ]
+        },
+        "spans": [
+          [
+            0.4,
+            0.7
+          ]
+        ]
+      }
+    ],
+    "relations": [
+      {
+        "subject": "o1",
+        "predicate": "sprinkling",
+        "object": "o2",
+        "spans": [
+          [
+            0.2,
+            0.5
+          ]
+        ],
+        "confidence": 0.0
+      },
+      {
+        "subject": "o1",
+        "predicate": "placing",
+        "object": "o2",
+        "spans": [
+          [
+            0.6,
+            0.8
+          ]
+        ],
+        "confidence": 0.0
+      },
+      {
+        "subject": "o1",
+        "predicate": "adjusting",
+        "object": "o3",
+        "spans": [
+          [
+            0.4,
+            0.7
+          ]
+        ],
+        "confidence": 0.0
+      },
+      {
+        "subject": "o1",
+        "predicate": "cutting",
+        "object": "o2",
+        "spans": [
+          [
+            0.8,
+            1.0
+          ]
+        ],
+        "confidence": 0.0
+      }
+    ]
+  },
+  "views": {
+    "objects_count_display": {
+      "person": 1,
+      "fish": 1,
+      "air-fryer": 1
+    }
+  }
+}

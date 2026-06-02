@@ -1,0 +1,36 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0515.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "decord",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "ball",
+        "attributes": {
+          "signature": [
+            "ball-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            9.2
+          ]
+        ]
+      }
+    ],
+    "relations": []
+  },
+  "views": {
+    "objects_count_display": {
+      "ball": 1
+    }
+  }
+}

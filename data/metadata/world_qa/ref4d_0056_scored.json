@@ -1,0 +1,229 @@
+{
+  "summary": {
+    "items": 10,
+    "enter_bank": 10,
+    "clip_range_sec": [
+      0.0,
+      6.13
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does the smaller bear stay consistently smaller than the larger bear?",
+      "signals": [
+        "biological_motion(bear)",
+        "size_inconsistency(bear)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "biological_motion(bear)": 38.3333,
+        "size_inconsistency(bear)": 7.5
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Do the bears' movements show continuous physical contact without sudden stops?",
+      "signals": [
+        "collision(bear,bear)",
+        "frame_discontinuity(t)",
+        "biological_motion(bear1)",
+        "accel_sign(bear1,axis)",
+        "trajectory_dir(bear1,axis)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "frame_discontinuity(t)": 40.0,
+        "biological_motion(bear1)": 7.6667,
+        "trajectory_dir(bear1,axis)": 7.6667,
+        "accel_sign(bear1,axis)": 7.0,
+        "collision(bear,bear)": 6.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Are the shadows of the bears on the ground consistent throughout the clip?",
+      "signals": [
+        "biological_motion(bear)",
+        "shadow_consistency(bear1)",
+        "reflection_consistency(bear1)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "biological_motion(bear)": 38.3333,
+        "shadow_consistency(bear1)": 7.3333,
+        "reflection_consistency(bear1)": 7.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Do the bears maintain smooth motion trajectories during their interaction?",
+      "signals": [
+        "continuity(bear1)",
+        "frame_discontinuity(t)",
+        "biological_motion(bear1)",
+        "accel_sign(bear1,axis)",
+        "trajectory_dir(bear1,axis)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "frame_discontinuity(t)": 40.0,
+        "biological_motion(bear1)": 7.6667,
+        "trajectory_dir(bear1,axis)": 7.6667,
+        "continuity(bear1)": 7.3333,
+        "accel_sign(bear1,axis)": 7.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Is the size difference between the two bears clear and unchanged?",
+      "signals": [
+        "biological_motion(bear)",
+        "size_inconsistency(bear)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "biological_motion(bear)": 38.3333,
+        "size_inconsistency(bear)": 7.5
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "The smaller bear is consistently positioned on the left side of the larger bear.",
+      "signals": [
+        "biological_motion(bear)",
+        "size_inconsistency(bear)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "biological_motion(bear)": 38.3333,
+        "size_inconsistency(bear)": 7.5
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "The bears' physical contact and movement are continuous and biologically consistent.",
+      "signals": [
+        "collision(bear,bear)",
+        "frame_discontinuity(t)",
+        "biological_motion(bear)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "frame_discontinuity(t)": 40.0,
+        "biological_motion(bear)": 7.6667,
+        "collision(bear,bear)": 6.3333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "The bears move with natural acceleration during their play.",
+      "signals": [
+        "biological_motion(bear1)",
+        "accel_sign(bear1,axis)",
+        "trajectory_dir(bear1,axis)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "biological_motion(bear1)": 38.3333,
+        "trajectory_dir(bear1,axis)": 7.6667,
+        "accel_sign(bear1,axis)": 7.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "Shadows and reflections of the bears on the ground are consistent throughout the interaction.",
+      "signals": [
+        "biological_motion(bear)",
+        "shadow_consistency(bear1)",
+        "reflection_consistency(bear1)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "biological_motion(bear)": 38.3333,
+        "shadow_consistency(bear1)": 7.3333,
+        "reflection_consistency(bear1)": 7.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "The size difference between the two bears remains unchanged during their play.",
+      "signals": [
+        "size_inconsistency(bear)",
+        "biological_motion(bear1)",
+        "accel_sign(bear1,axis)",
+        "trajectory_dir(bear1,axis)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "biological_motion(bear1)": 38.3333,
+        "trajectory_dir(bear1,axis)": 7.6667,
+        "size_inconsistency(bear)": 7.5,
+        "accel_sign(bear1,axis)": 7.0
+      },
+      "content_score_raw": "50"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "v5",
+    "a1",
+    "a2",
+    "a3",
+    "a4",
+    "a5"
+  ]
+}

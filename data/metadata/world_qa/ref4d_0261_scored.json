@@ -1,0 +1,212 @@
+{
+  "summary": {
+    "items": 10,
+    "enter_bank": 9,
+    "clip_range_sec": [
+      0.0,
+      9.9
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does the black bag stay in place and support the falling orange objects without collapsing?",
+      "signals": [
+        "support(oA,oB)",
+        "containment(oA,oB)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "support(oA,oB)": 35.0,
+        "containment(oA,oB)": 5.8333
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Does the cartridge follow a downward trajectory as it is loaded into the bag, and does the user avoid hand contact with moving parts?",
+      "signals": [
+        "trajectory_dir(cartridge,axis:y)",
+        "blade_orientation_away(ryobi-tool,hand)",
+        "finger_clearance(hand,ryobi-tool)"
+      ],
+      "content_score_60": 45,
+      "signal_score_40": 40.0,
+      "total_score_100": 85.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(cartridge,axis:y)": 38.3333,
+        "finger_clearance(hand,ryobi-tool)": 6.8333,
+        "blade_orientation_away(ryobi-tool,hand)": 5.8333
+      },
+      "content_score_raw": "45"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Is the blade orientation of the tool away from the user's hand during use?",
+      "signals": [
+        "blade_orientation_away(tool,hand)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 29.17,
+      "total_score_100": 79.17,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "blade_orientation_away(tool,hand)": 29.1667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Does the green container allow for easy ejection of multiple cartridges?",
+      "signals": [
+        "openable(ryobi-tool)",
+        "pourable(ryobi-tool)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 31.0,
+      "total_score_100": 86.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "openable(ryobi-tool)": 25.8333,
+        "pourable(ryobi-tool)": 5.1667
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Does the black bag afford containment for the orange plastic cartridges?",
+      "signals": [
+        "containment(cartridge,bag)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 29.17,
+      "total_score_100": 84.17,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "containment(cartridge,bag)": 29.1667
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "The tool loads orange plastic cartridges into the black bag.",
+      "signals": [
+        "tool_contact(tool,cartridge)",
+        "tool_usage_correct(tool,for:load_cartridge)",
+        "containment(cartridge,bag)",
+        "trajectory_dir(cartridge,axis:y)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(cartridge,axis:y)": 38.3333,
+        "tool_usage_correct(tool,for:load_cartridge)": 5.8333,
+        "containment(cartridge,bag)": 5.8333,
+        "tool_contact(tool,cartridge)": 5.6667
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "The blade of the Ryobi-tool points away from the user's hand during operation.",
+      "signals": [
+        "blade_orientation_away(tool,hand)",
+        "blade_orientation_away(ryobi-tool,hand)",
+        "finger_clearance(hand,ryobi-tool)"
+      ],
+      "content_score_60": 45,
+      "signal_score_40": 40.0,
+      "total_score_100": 85.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "finger_clearance(hand,ryobi-tool)": 34.1667,
+        "blade_orientation_away(tool,hand)": 5.8333,
+        "blade_orientation_away(ryobi-tool,hand)": 5.8333
+      },
+      "content_score_raw": "45"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "The black bag contains and supports falling orange plastic cartridges without collapsing.",
+      "signals": [
+        "containment(cartridge,bag)",
+        "support(oA,oB)",
+        "containment(oA,oB)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "support(oA,oB)": 35.0,
+        "containment(cartridge,bag)": 5.8333,
+        "containment(oA,oB)": 5.8333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "The orange plastic cartridges are ejected from the tool in a downward trajectory.",
+      "signals": [
+        "trajectory_dir(cartridge,axis:y)",
+        "openable(ryobi-tool)",
+        "pourable(ryobi-tool)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(cartridge,axis:y)": 38.3333,
+        "openable(ryobi-tool)": 5.1667,
+        "pourable(ryobi-tool)": 5.1667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "The user's hand holds the tool securely to prevent accidental spillage.",
+      "signals": [
+        "grasp_stability(oHand,oObj)",
+        "tool_contact(oTool,oObj)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 34.0,
+      "total_score_100": 89.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "grasp_stability(oHand,oObj)": 28.3333,
+        "tool_contact(oTool,oObj)": 5.6667
+      },
+      "content_score_raw": "55"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v4",
+    "v5",
+    "a1",
+    "a2",
+    "a3",
+    "a4",
+    "a5"
+  ]
+}

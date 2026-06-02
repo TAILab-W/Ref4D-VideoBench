@@ -1,0 +1,221 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0542.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "cv2",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "traffic-light",
+        "attributes": {
+          "color": [
+            "red"
+          ],
+          "state": [
+            "stopping"
+          ],
+          "facing-direction": [
+            "forward"
+          ],
+          "signature": [
+            "red-light-with-black-frame-and-number-691"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            7.9
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "platform",
+        "attributes": {
+          "material": [
+            "concrete"
+          ],
+          "texture": [
+            "smooth"
+          ],
+          "color": [
+            "gray"
+          ],
+          "signature": [
+            "concrete-platform-with-yellow-tactile-paving"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            7.9
+          ]
+        ]
+      },
+      {
+        "id": "o3",
+        "name": "railway-track",
+        "attributes": {
+          "material": [
+            "metal"
+          ],
+          "color": [
+            "brown"
+          ],
+          "state": [
+            "empty"
+          ],
+          "signature": [
+            "parallel-metal-rails-with-cross-ties"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            7.9
+          ]
+        ]
+      },
+      {
+        "id": "o4",
+        "name": "tree",
+        "attributes": {
+          "size": [
+            "large"
+          ],
+          "state": [
+            "leafy"
+          ],
+          "signature": [
+            "tall-bare-tree-with-green-leaves-at-top"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            7.9
+          ]
+        ]
+      },
+      {
+        "id": "o5",
+        "name": "building",
+        "attributes": {
+          "material": [
+            "brick"
+          ],
+          "color": [
+            "red",
+            "white"
+          ],
+          "state": [
+            "standing"
+          ],
+          "signature": [
+            "brick-building-with-white-trim-and-roof"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            7.9
+          ]
+        ]
+      },
+      {
+        "id": "o6",
+        "name": "train",
+        "attributes": {
+          "color": [
+            "orange",
+            "yellow"
+          ],
+          "brand-or-logo": [
+            "colas-rail"
+          ],
+          "number-or-id": [
+            "dr73920"
+          ],
+          "vehicle-type": [
+            "locomotive"
+          ],
+          "signature": [
+            "yellow-orange-colas-rail-dr73920-locomotive"
+          ]
+        },
+        "spans": [
+          [
+            3.8,
+            7.9
+          ]
+        ]
+      }
+    ],
+    "relations": [
+      {
+        "subject": "o1",
+        "predicate": "left-of",
+        "object": "o2",
+        "spans": [
+          [
+            0.0,
+            7.9
+          ]
+        ],
+        "confidence": 0.8
+      },
+      {
+        "subject": "o3",
+        "predicate": "left-of",
+        "object": "o2",
+        "spans": [
+          [
+            0.0,
+            7.9
+          ]
+        ],
+        "confidence": 0.8
+      },
+      {
+        "subject": "o5",
+        "predicate": "right-of",
+        "object": "o2",
+        "spans": [
+          [
+            0.0,
+            7.9
+          ]
+        ],
+        "confidence": 0.8
+      },
+      {
+        "subject": "o6",
+        "predicate": "entering",
+        "object": "o2",
+        "spans": [
+          [
+            3.8,
+            7.9
+          ]
+        ],
+        "confidence": 0.8
+      }
+    ]
+  },
+  "views": {
+    "objects_count_display": {
+      "traffic-light": 1,
+      "platform": 1,
+      "railway-track": 1,
+      "tree": 1,
+      "building": 1,
+      "train": 1
+    }
+  }
+}

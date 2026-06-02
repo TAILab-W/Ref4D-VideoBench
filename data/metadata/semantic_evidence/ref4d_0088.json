@@ -1,0 +1,148 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0088.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "cv2",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "person",
+        "attributes": {
+          "signature": [
+            "blonde_hair-purple_jacket-blue_jeans-brown_boots"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            8.9
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "dog",
+        "attributes": {
+          "signature": [
+            "white_gray_fur-wolf-like-animal"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            8.9
+          ]
+        ]
+      },
+      {
+        "id": "o3",
+        "name": "chair",
+        "attributes": {
+          "signature": [
+            "turquoise-purple-plastic-outdoor_chairs"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            8.9
+          ]
+        ]
+      },
+      {
+        "id": "o4",
+        "name": "house",
+        "attributes": {
+          "signature": [
+            "beige_wall-white_window"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            8.9
+          ]
+        ]
+      },
+      {
+        "id": "o5",
+        "name": "snow",
+        "attributes": {
+          "signature": [
+            "white_snow_covered_ground"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            8.9
+          ]
+        ]
+      },
+      {
+        "id": "o6",
+        "name": "tarp",
+        "attributes": {
+          "signature": [
+            "netting_or_tarp_covering_house_side"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            8.9
+          ]
+        ]
+      },
+      {
+        "id": "o7",
+        "name": "door",
+        "attributes": {
+          "signature": [
+            "glass_door_with_frame"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            8.9
+          ]
+        ]
+      },
+      {
+        "id": "o8",
+        "name": "potted_plant",
+        "attributes": {
+          "signature": [
+            "plant_in_container_near_chairs"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            8.9
+          ]
+        ]
+      }
+    ],
+    "relations": []
+  },
+  "views": {
+    "objects_count_display": {
+      "person": 1,
+      "dog": 1,
+      "chair": 1,
+      "house": 1,
+      "snow": 1,
+      "tarp": 1,
+      "door": 1,
+      "potted_plant": 1
+    }
+  }
+}

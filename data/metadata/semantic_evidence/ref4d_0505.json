@@ -1,0 +1,66 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0505.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "decord",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "person",
+        "attributes": {
+          "signature": [
+            "swimmer"
+          ]
+        },
+        "spans": [
+          [
+            0.2,
+            3.4
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "person",
+        "attributes": {
+          "signature": [
+            "swimmer"
+          ]
+        },
+        "spans": [
+          [
+            0.6,
+            7.0
+          ]
+        ]
+      },
+      {
+        "id": "o3",
+        "name": "person",
+        "attributes": {
+          "signature": [
+            "referee"
+          ]
+        },
+        "spans": [
+          [
+            5.8,
+            6.2
+          ]
+        ]
+      }
+    ],
+    "relations": []
+  },
+  "views": {
+    "objects_count_display": {
+      "person": 3
+    }
+  }
+}

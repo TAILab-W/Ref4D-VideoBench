@@ -1,0 +1,189 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0068.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "cv2",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "wolf",
+        "attributes": {
+          "color": [
+            "black",
+            "gray"
+          ],
+          "pattern": [
+            "solid"
+          ],
+          "texture": [
+            "fluffy"
+          ],
+          "material": [
+            "fur"
+          ],
+          "size": [
+            "large"
+          ],
+          "age": [
+            "adult"
+          ],
+          "sex": [
+            "male"
+          ],
+          "state": [
+            "alert",
+            "playful"
+          ],
+          "pose": [
+            "standing",
+            "walking"
+          ],
+          "action": [
+            "biting",
+            "licking",
+            "looking"
+          ],
+          "orientation": [
+            "facing-right"
+          ],
+          "facing-direction": [
+            "right"
+          ],
+          "position": [
+            "foreground",
+            "left-center"
+          ],
+          "signature": [
+            "gray-black-fur-snow-on-face"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            6.4
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "wolf",
+        "attributes": {
+          "color": [
+            "white"
+          ],
+          "pattern": [
+            "solid"
+          ],
+          "texture": [
+            "fluffy"
+          ],
+          "material": [
+            "fur"
+          ],
+          "size": [
+            "large"
+          ],
+          "age": [
+            "adult"
+          ],
+          "sex": [
+            "female"
+          ],
+          "state": [
+            "playful",
+            "relaxed"
+          ],
+          "pose": [
+            "lying",
+            "standing"
+          ],
+          "action": [
+            "biting",
+            "looking",
+            "rolling"
+          ],
+          "orientation": [
+            "facing-left"
+          ],
+          "facing-direction": [
+            "left"
+          ],
+          "position": [
+            "background",
+            "right-center"
+          ],
+          "signature": [
+            "white-fur-snow-on-back"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            6.4
+          ]
+        ]
+      }
+    ],
+    "relations": [
+      {
+        "subject": "o1",
+        "predicate": "biting",
+        "object": "o2",
+        "spans": [
+          [
+            0.5,
+            3.0
+          ]
+        ],
+        "confidence": 0.9
+      },
+      {
+        "subject": "o1",
+        "predicate": "licking",
+        "object": "o2",
+        "spans": [
+          [
+            3.0,
+            4.0
+          ]
+        ],
+        "confidence": 0.8
+      },
+      {
+        "subject": "o1",
+        "predicate": "looking-at",
+        "object": "o2",
+        "spans": [
+          [
+            0.0,
+            6.0
+          ]
+        ],
+        "confidence": 0.9
+      },
+      {
+        "subject": "o2",
+        "predicate": "biting",
+        "object": "o1",
+        "spans": [
+          [
+            0.7,
+            2.5
+          ]
+        ],
+        "confidence": 0.8
+      }
+    ]
+  },
+  "views": {
+    "objects_count_display": {
+      "wolf": 2
+    }
+  }
+}

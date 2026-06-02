@@ -1,0 +1,225 @@
+{
+  "summary": {
+    "items": 10,
+    "enter_bank": 10,
+    "clip_range_sec": [
+      0.0,
+      8.4
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does the parrot stay supported by the window sill without floating or sinking?",
+      "signals": [
+        "support(parrot,window_sill)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 35.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "support(parrot,window_sill)": 35.0
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Does the cat's tail move naturally with its body, not abruptly change direction?",
+      "signals": [
+        "continuity(tail_motion)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 36.67,
+      "total_score_100": 86.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(tail_motion)": 36.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Is the bird on one side of the window and the cat on the other side throughout the clip?",
+      "signals": [
+        "containment(cat,outside:window)",
+        "containment(bird,inside:window)",
+        "interpenetration(cat,bird)",
+        "collision(cat,bird)",
+        "containment(parrot,window)",
+        "containment(cat,outside_window)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "interpenetration(cat,bird)": 35.8333,
+        "collision(cat,bird)": 6.3333,
+        "containment(cat,outside:window)": 5.8333,
+        "containment(bird,inside:window)": 5.8333,
+        "containment(parrot,window)": 5.8333,
+        "containment(cat,outside_window)": 5.8333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Are the two animals observing each other through the glass window for visual communication?",
+      "signals": [
+        "biological_motion(cat)",
+        "biological_motion(parrot)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "biological_motion(cat)": 38.3333,
+        "biological_motion(parrot)": 7.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Is the size of the parrot relative to the cat consistent across the video?",
+      "signals": [
+        "containment(parrot,window)",
+        "containment(cat,outside_window)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 35.0,
+      "total_score_100": 85.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "containment(parrot,window)": 29.1667,
+        "containment(cat,outside_window)": 5.8333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "The cat is outside the window, and the bird is inside on the windowsill.",
+      "signals": [
+        "containment(cat,outside:window)",
+        "containment(bird,inside:window)",
+        "interpenetration(cat,bird)",
+        "collision(cat,bird)",
+        "containment(parrot,window)",
+        "containment(cat,outside_window)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "interpenetration(cat,bird)": 35.8333,
+        "collision(cat,bird)": 6.3333,
+        "containment(cat,outside:window)": 5.8333,
+        "containment(bird,inside:window)": 5.8333,
+        "containment(parrot,window)": 5.8333,
+        "containment(cat,outside_window)": 5.8333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "The cat's tail moves naturally as it looks at the bird.",
+      "signals": [
+        "continuity(tail_motion)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 36.67,
+      "total_score_100": 86.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(tail_motion)": 36.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "The parrot stands still on the flat surface of the window sill while looking at the cat.",
+      "signals": [
+        "support(parrot,window_sill)",
+        "biological_motion(cat)",
+        "biological_motion(parrot)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "biological_motion(cat)": 38.3333,
+        "biological_motion(parrot)": 7.6667,
+        "support(parrot,window_sill)": 7.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "The cat and bird do not interpenetrate or collide through the glass window.",
+      "signals": [
+        "containment(cat,outside:window)",
+        "containment(bird,inside:window)",
+        "interpenetration(cat,bird)",
+        "collision(cat,bird)",
+        "containment(parrot,window)",
+        "containment(cat,outside_window)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "interpenetration(cat,bird)": 35.8333,
+        "collision(cat,bird)": 6.3333,
+        "containment(cat,outside:window)": 5.8333,
+        "containment(bird,inside:window)": 5.8333,
+        "containment(parrot,window)": 5.8333,
+        "containment(cat,outside_window)": 5.8333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "Both animals observe each other directly across the transparent barrier.",
+      "signals": [
+        "biological_motion(cat)",
+        "biological_motion(parrot)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "biological_motion(cat)": 38.3333,
+        "biological_motion(parrot)": 7.6667
+      },
+      "content_score_raw": "60"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "v5",
+    "a1",
+    "a2",
+    "a3",
+    "a4",
+    "a5"
+  ]
+}

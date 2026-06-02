@@ -1,0 +1,248 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0106.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "cv2",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "house",
+        "attributes": {
+          "color": [
+            "blue",
+            "brown"
+          ],
+          "material": [
+            "glass",
+            "wood"
+          ],
+          "size": [
+            "large"
+          ],
+          "state": [
+            "lit",
+            "open"
+          ],
+          "facing-direction": [
+            "front-facing"
+          ],
+          "signature": [
+            "wooden-atrium-window-structure"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            5.5
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "bed",
+        "attributes": {
+          "color": [
+            "white"
+          ],
+          "material": [
+            "fabric",
+            "wood"
+          ],
+          "position": [
+            "left-side"
+          ],
+          "signature": [
+            "white-sheet-bed-with-black-headboard"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            5.5
+          ]
+        ]
+      },
+      {
+        "id": "o3",
+        "name": "ceiling_fan",
+        "attributes": {
+          "color": [
+            "black"
+          ],
+          "material": [
+            "metal"
+          ],
+          "position": [
+            "left-side-ceiling"
+          ],
+          "signature": [
+            "black-fan-with-blades"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            5.5
+          ]
+        ]
+      },
+      {
+        "id": "o4",
+        "name": "table",
+        "attributes": {
+          "color": [
+            "brown"
+          ],
+          "material": [
+            "glass",
+            "wood"
+          ],
+          "size": [
+            "medium"
+          ],
+          "position": [
+            "center-back"
+          ],
+          "signature": [
+            "wooden-table-with-glass-top"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            5.5
+          ]
+        ]
+      },
+      {
+        "id": "o5",
+        "name": "chair",
+        "attributes": {
+          "color": [
+            "brown"
+          ],
+          "material": [
+            "wood"
+          ],
+          "size": [
+            "medium"
+          ],
+          "position": [
+            "around-table"
+          ],
+          "signature": [
+            "wooden-chair-with-carved-backrest"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            5.5
+          ]
+        ]
+      },
+      {
+        "id": "o6",
+        "name": "plant",
+        "attributes": {
+          "color": [
+            "green"
+          ],
+          "material": [
+            "leaves"
+          ],
+          "position": [
+            "left-front"
+          ],
+          "signature": [
+            "green-leafy-plant-by-doorstep"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            5.5
+          ]
+        ]
+      }
+    ],
+    "relations": [
+      {
+        "subject": "o2",
+        "predicate": "inside",
+        "object": "o1",
+        "spans": [
+          [
+            0.0,
+            5.5
+          ]
+        ],
+        "confidence": 0.9
+      },
+      {
+        "subject": "o3",
+        "predicate": "inside",
+        "object": "o1",
+        "spans": [
+          [
+            0.0,
+            5.5
+          ]
+        ],
+        "confidence": 0.9
+      },
+      {
+        "subject": "o4",
+        "predicate": "inside",
+        "object": "o1",
+        "spans": [
+          [
+            0.0,
+            5.5
+          ]
+        ],
+        "confidence": 0.9
+      },
+      {
+        "subject": "o5",
+        "predicate": "inside",
+        "object": "o1",
+        "spans": [
+          [
+            0.0,
+            5.5
+          ]
+        ],
+        "confidence": 0.9
+      },
+      {
+        "subject": "o6",
+        "predicate": "outside",
+        "object": "o1",
+        "spans": [
+          [
+            0.0,
+            5.5
+          ]
+        ],
+        "confidence": 0.9
+      }
+    ]
+  },
+  "views": {
+    "objects_count_display": {
+      "house": 1,
+      "bed": 1,
+      "ceiling_fan": 1,
+      "table": 1,
+      "chair": 1,
+      "plant": 1
+    }
+  }
+}

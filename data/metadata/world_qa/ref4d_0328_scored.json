@@ -1,0 +1,217 @@
+{
+  "summary": {
+    "items": 10,
+    "enter_bank": 10,
+    "clip_range_sec": [
+      0.0,
+      6.53
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Is a person setting up a large beige tent?",
+      "signals": [
+        "goal_placement(tent,at:grass)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 26.67,
+      "total_score_100": 81.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "goal_placement(tent,at:grass)": 26.6667
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Do the ropes hold the tent in place on the ground?",
+      "signals": [
+        "support(tent,rope)",
+        "balance(tent)",
+        "support(tent,ground)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "balance(tent)": 35.8333,
+        "support(tent,rope)": 7.0,
+        "support(tent,ground)": 7.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Does one person stretch the tent fabric while another stands nearby?",
+      "signals": [
+        "support(tent,ground)",
+        "action_phase(person,phase:Setup)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "support(tent,ground)": 35.0,
+        "action_phase(person,phase:Setup)": 5.3333
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Does the canvas maintain its shape without sudden collapse?",
+      "signals": [
+        "support(tent,ground)",
+        "support(tent,pole)",
+        "balance(tent)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "balance(tent)": 35.8333,
+        "support(tent,ground)": 7.0,
+        "support(tent,pole)": 7.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Does the man pulling the tent exert force causing continuous deformation of the fabric?",
+      "signals": [
+        "deformation(fabric)",
+        "friction_sliding(fabric,on:ground)",
+        "continuity(fabric)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "deformation(fabric)": 40.0,
+        "continuity(fabric)": 7.3333,
+        "friction_sliding(fabric,on:ground)": 6.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "A person sets up a large beige tent while another observes.",
+      "signals": [
+        "goal_placement(tent,at:grass)",
+        "support(tent,ground)",
+        "action_phase(person,phase:Setup)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "support(tent,ground)": 35.0,
+        "goal_placement(tent,at:grass)": 5.3333,
+        "action_phase(person,phase:Setup)": 5.3333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "Ropes support the tent, and stakes anchor it in the ground.",
+      "signals": [
+        "support(tent,rope)",
+        "balance(tent)",
+        "support(tent,ground)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "balance(tent)": 35.8333,
+        "support(tent,rope)": 7.0,
+        "support(tent,ground)": 7.0
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "The man pulling the tent fabric exerts force causing continuous deformation.",
+      "signals": [
+        "deformation(fabric)",
+        "friction_sliding(fabric,on:ground)",
+        "continuity(fabric)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "deformation(fabric)": 40.0,
+        "continuity(fabric)": 7.3333,
+        "friction_sliding(fabric,on:ground)": 6.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "The large beige tent maintains its shape without collapse or instability.",
+      "signals": [
+        "balance(tent)",
+        "support(tent,ground)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "balance(tent)": 35.8333,
+        "support(tent,ground)": 7.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "The fabric tent is supported by the ground and poles, maintaining its shape.",
+      "signals": [
+        "support(tent,ground)",
+        "support(tent,pole)",
+        "balance(tent)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "balance(tent)": 35.8333,
+        "support(tent,ground)": 7.0,
+        "support(tent,pole)": 7.0
+      },
+      "content_score_raw": "50"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "v5",
+    "a1",
+    "a2",
+    "a3",
+    "a4",
+    "a5"
+  ]
+}

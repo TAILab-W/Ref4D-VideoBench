@@ -1,0 +1,152 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0022.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "cv2",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "beetle",
+        "attributes": {
+          "color": [
+            "black"
+          ],
+          "pattern": [
+            "smooth"
+          ],
+          "texture": [
+            "shiny"
+          ],
+          "material": [
+            "insect-exoskeleton"
+          ],
+          "size": [
+            "large"
+          ],
+          "state": [
+            "active",
+            "alive"
+          ],
+          "pose": [
+            "walking"
+          ],
+          "action": [
+            "moving"
+          ],
+          "orientation": [
+            "facing-various-directions"
+          ],
+          "facing-direction": [
+            "backward",
+            "forward",
+            "left",
+            "right"
+          ],
+          "position": [
+            "on-ground",
+            "on-hand"
+          ],
+          "object-part": [
+            "antennae",
+            "body",
+            "legs"
+          ],
+          "signature": [
+            "large-black-shiny-body-long-antennae"
+          ]
+        },
+        "spans": [
+          [
+            0.2,
+            1.2
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "hand",
+        "attributes": {
+          "color": [
+            "skin-tone"
+          ],
+          "texture": [
+            "wrinkled"
+          ],
+          "material": [
+            "skin"
+          ],
+          "size": [
+            "medium"
+          ],
+          "state": [
+            "alive"
+          ],
+          "pose": [
+            "closed",
+            "open"
+          ],
+          "action": [
+            "holding",
+            "releasing"
+          ],
+          "position": [
+            "left-side-of-frame",
+            "right-side-of-frame"
+          ],
+          "object-part": [
+            "fingers",
+            "palm",
+            "thumb"
+          ],
+          "signature": [
+            "human-hand-with-wrinkles-and-skin-tone"
+          ]
+        },
+        "spans": [
+          [
+            0.1,
+            1.2
+          ]
+        ]
+      }
+    ],
+    "relations": [
+      {
+        "subject": "o1",
+        "predicate": "touching",
+        "object": "o2",
+        "spans": [
+          [
+            0.3,
+            0.8
+          ]
+        ],
+        "confidence": 0.9
+      },
+      {
+        "subject": "o1",
+        "predicate": "on",
+        "object": "o2",
+        "spans": [
+          [
+            0.1,
+            0.6
+          ]
+        ],
+        "confidence": 0.8
+      }
+    ]
+  },
+  "views": {
+    "objects_count_display": {
+      "beetle": 1,
+      "hand": 1
+    }
+  }
+}

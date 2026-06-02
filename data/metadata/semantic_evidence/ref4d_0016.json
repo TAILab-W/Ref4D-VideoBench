@@ -1,0 +1,169 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0016.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "cv2",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "wolf",
+        "attributes": {
+          "color": [
+            "white"
+          ],
+          "pose": [
+            "laying"
+          ],
+          "action": [
+            "howling"
+          ],
+          "position": [
+            "right"
+          ],
+          "signature": [
+            "white-fur-laying-on-rock"
+          ]
+        },
+        "spans": [
+          [
+            0.2,
+            0.5
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "wolf",
+        "attributes": {
+          "color": [
+            "white"
+          ],
+          "pose": [
+            "standing"
+          ],
+          "action": [
+            "looking-around"
+          ],
+          "position": [
+            "left"
+          ],
+          "signature": [
+            "white-fur-standing-on-rock"
+          ]
+        },
+        "spans": [
+          [
+            0.6,
+            0.8
+          ]
+        ]
+      },
+      {
+        "id": "o3",
+        "name": "wolf",
+        "attributes": {
+          "color": [
+            "white"
+          ],
+          "pose": [
+            "standing"
+          ],
+          "action": [
+            "looking-around"
+          ],
+          "position": [
+            "left"
+          ],
+          "signature": [
+            "white-fur-standing-on-ground"
+          ]
+        },
+        "spans": [
+          [
+            0.2,
+            0.4
+          ]
+        ]
+      },
+      {
+        "id": "o4",
+        "name": "wolf",
+        "attributes": {
+          "color": [
+            "white"
+          ],
+          "pose": [
+            "standing"
+          ],
+          "action": [
+            "looking-around"
+          ],
+          "position": [
+            "left"
+          ],
+          "signature": [
+            "white-fur-standing-on-ground"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            0.2
+          ]
+        ]
+      },
+      {
+        "id": "o5",
+        "name": "wolf",
+        "attributes": {
+          "color": [
+            "white"
+          ],
+          "pose": [
+            "standing"
+          ],
+          "action": [
+            "looking-around"
+          ],
+          "position": [
+            "left"
+          ],
+          "signature": [
+            "white-fur-standing-on-ground"
+          ]
+        },
+        "spans": [
+          [
+            0.4,
+            0.6
+          ]
+        ]
+      }
+    ],
+    "relations": [
+      {
+        "subject": "o1",
+        "predicate": "left-of",
+        "object": "o2",
+        "spans": [
+          [
+            0.5,
+            0.6
+          ]
+        ],
+        "confidence": 0.0
+      }
+    ]
+  },
+  "views": {
+    "objects_count_display": {
+      "wolf": 5
+    }
+  }
+}

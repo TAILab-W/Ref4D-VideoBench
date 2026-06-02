@@ -1,0 +1,209 @@
+{
+  "summary": {
+    "items": 10,
+    "enter_bank": 8,
+    "clip_range_sec": [
+      0.0,
+      6.2
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does the person walk in a straight direction on the path without sudden changes in speed?",
+      "signals": [
+        "trajectory_dir(person,path)",
+        "accel_sign(person,path)",
+        "trajectory_dir(person,path),accel_sign(person,path)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(person,path)": 38.3333,
+        "trajectory_dir(person,path),accel_sign(person,path)": 7.6667,
+        "accel_sign(person,path)": 7.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Do the street lights stay consistently illuminated and bright across the frames?",
+      "signals": [
+        "continuity(light),size_inconsistency(light)",
+        "size_inconsistency(oX)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "size_inconsistency(oX)": 37.5,
+        "continuity(light),size_inconsistency(light)": 7.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Does the building stand stable, and does the man maintain balance while walking on the ground?",
+      "signals": [
+        "balance(building)",
+        "fracture(building)",
+        "balance(person),friction_sliding(person,ground)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "balance(building)": 35.8333,
+        "balance(person),friction_sliding(person,ground)": 7.1667,
+        "fracture(building)": 6.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Is the pathway used for movement through the park environment, and does the grass provide supportable surface?",
+      "signals": [
+        "step_order(task:walking,prev:standing,next:running)",
+        "supportable(ground,by:grass),placeable(person,on:ground)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 32.0,
+      "total_score_100": 82.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "step_order(task:walking,prev:standing,next:running)": 26.6667,
+        "supportable(ground,by:grass),placeable(person,on:ground)": 5.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Do the objects (lights, trees) exhibit consistent appearance and behavior, and do their shadows align with their positions?",
+      "signals": [
+        "continuity(lights)",
+        "frame_discontinuity(t)",
+        "shadow_consistency(oX)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "frame_discontinuity(t)": 40.0,
+        "continuity(lights)": 7.3333,
+        "shadow_consistency(oX)": 7.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "The person walks on the path with a consistent trajectory direction.",
+      "signals": [
+        "trajectory_dir(person,path)",
+        "accel_sign(person,path)",
+        "trajectory_dir(person,path),accel_sign(person,path)"
+      ],
+      "content_score_60": 40,
+      "signal_score_40": 40.0,
+      "total_score_100": 80.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(person,path)": 38.3333,
+        "trajectory_dir(person,path),accel_sign(person,path)": 7.6667,
+        "accel_sign(person,path)": 7.0
+      },
+      "content_score_raw": "40"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "Street lights remain consistently illuminated throughout the scene.",
+      "signals": [
+        "continuity(lights)",
+        "frame_discontinuity(t)",
+        "continuity(light),size_inconsistency(light)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "frame_discontinuity(t)": 40.0,
+        "continuity(lights)": 7.3333,
+        "continuity(light),size_inconsistency(light)": 7.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "The building's structure shows proper balance and support without signs of collapse.",
+      "signals": [
+        "balance(building)",
+        "fracture(building)"
+      ],
+      "content_score_60": 30,
+      "signal_score_40": 40.0,
+      "total_score_100": 70.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "balance(building)": 35.8333,
+        "fracture(building)": 6.3333
+      },
+      "content_score_raw": "30"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "The man uses the pathway for walking through the park environment.",
+      "signals": [
+        "step_order(task:walking,prev:standing,next:running)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 26.67,
+      "total_score_100": 76.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "step_order(task:walking,prev:standing,next:running)": 26.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "The man maintains balance while moving on the solid ground surface.",
+      "signals": [
+        "balance(person),friction_sliding(person,ground)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 35.83,
+      "total_score_100": 85.83,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "balance(person),friction_sliding(person,ground)": 35.8333
+      },
+      "content_score_raw": "50"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "v5",
+    "a1",
+    "a2",
+    "a5"
+  ]
+}

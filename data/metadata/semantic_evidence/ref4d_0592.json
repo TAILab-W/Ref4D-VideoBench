@@ -1,0 +1,99 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0592.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "cv2",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "green-car",
+        "attributes": {
+          "color": [
+            "light-green"
+          ],
+          "vehicle-type": [
+            "car",
+            "sedan"
+          ],
+          "facing-direction": [
+            "right"
+          ],
+          "position": [
+            "parked"
+          ],
+          "number-or-id": [
+            "e780gev"
+          ],
+          "signature": [
+            "light-green,-rear-wheel-drive,-5-spoke-wheels,-yellow-license-plate-e780gev"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            5.3
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "man-in-black-shirt",
+        "attributes": {
+          "color": [
+            "black"
+          ],
+          "sex": [
+            "male"
+          ],
+          "action": [
+            "standing"
+          ],
+          "pose": [
+            "standing"
+          ],
+          "facing-direction": [
+            "left"
+          ],
+          "position": [
+            "outside-car"
+          ],
+          "signature": [
+            "black-shirt,-standing"
+          ]
+        },
+        "spans": [
+          [
+            1.2,
+            1.3
+          ]
+        ]
+      }
+    ],
+    "relations": [
+      {
+        "subject": "o2",
+        "predicate": "standing",
+        "object": "o1",
+        "spans": [
+          [
+            1.2,
+            1.3
+          ]
+        ],
+        "confidence": 0.8
+      }
+    ]
+  },
+  "views": {
+    "objects_count_display": {
+      "green-car": 1,
+      "man-in-black-shirt": 1
+    }
+  }
+}

@@ -1,0 +1,225 @@
+{
+  "summary": {
+    "items": 10,
+    "enter_bank": 10,
+    "clip_range_sec": [
+      0.0,
+      19.17
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does the mouse stay supported by the ground without floating or sinking?",
+      "signals": [
+        "support(mouse,ground)",
+        "interpenetration(mouse,snake)",
+        "size_inconsistency(mouse)",
+        "size_inconsistency(snake)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "size_inconsistency(mouse)": 37.5,
+        "size_inconsistency(snake)": 7.5,
+        "interpenetration(mouse,snake)": 7.1667,
+        "support(mouse,ground)": 7.0
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Across the clip, does the snake keep a consistent size relative to the mouse?",
+      "signals": [
+        "continuity(snake)",
+        "frame_discontinuity(snake)",
+        "trajectory_dir(mouse,axis)",
+        "size_inconsistency(snake)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "frame_discontinuity(snake)": 40.0,
+        "trajectory_dir(mouse,axis)": 7.6667,
+        "size_inconsistency(snake)": 7.5,
+        "continuity(snake)": 7.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Is the biological motion of the mouse natural and continuous when interacting with the snake?",
+      "signals": [
+        "biological_motion(mouse)",
+        "continuity(mouse)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "biological_motion(mouse)": 38.3333,
+        "continuity(mouse)": 7.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Are both animals in their respective natural habitats during the encounter?",
+      "signals": [
+        "friction_sliding(snake,on:ground)",
+        "friction_sliding(mouse,on:ground)",
+        "biological_motion(mouse)"
+      ],
+      "content_score_60": 40,
+      "signal_score_40": 40.0,
+      "total_score_100": 80.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "biological_motion(mouse)": 38.3333,
+        "friction_sliding(snake,on:ground)": 6.0,
+        "friction_sliding(mouse,on:ground)": 6.0
+      },
+      "content_score_raw": "40"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Does the mouse approach and interact with the snake without violating physical laws?",
+      "signals": [
+        "collision(mouse,snake)",
+        "trajectory_dir(mouse,axis)",
+        "accel_sign(mouse,axis)",
+        "biological_motion(mouse)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(mouse,axis)": 38.3333,
+        "biological_motion(mouse)": 7.6667,
+        "accel_sign(mouse,axis)": 7.0,
+        "collision(mouse,snake)": 6.3333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "The mouse is on the ground, not interpenetrating with the snake.",
+      "signals": [
+        "support(mouse,ground)",
+        "interpenetration(mouse,snake)",
+        "size_inconsistency(mouse)",
+        "size_inconsistency(snake)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "size_inconsistency(mouse)": 37.5,
+        "size_inconsistency(snake)": 7.5,
+        "interpenetration(mouse,snake)": 7.1667,
+        "support(mouse,ground)": 7.0
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "The snake's body remains continuous and consistent in size relative to the mouse.",
+      "signals": [
+        "continuity(snake)",
+        "frame_discontinuity(snake)",
+        "trajectory_dir(mouse,axis)",
+        "size_inconsistency(snake)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "frame_discontinuity(snake)": 40.0,
+        "trajectory_dir(mouse,axis)": 7.6667,
+        "size_inconsistency(snake)": 7.5,
+        "continuity(snake)": 7.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "The mouse moves naturally as a small mammal near the snake.",
+      "signals": [
+        "biological_motion(mouse)",
+        "continuity(mouse)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "biological_motion(mouse)": 38.3333,
+        "continuity(mouse)": 7.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "The mouse exhibits cautious behavior typical of an animal reacting to a snake.",
+      "signals": [
+        "biological_motion(mouse)",
+        "biological_motion(oA)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "biological_motion(mouse)": 38.3333,
+        "biological_motion(oA)": 7.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "The mouse approaches the snake in natural rodent motion.",
+      "signals": [
+        "biological_motion(mouse)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 38.33,
+      "total_score_100": 88.33,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "biological_motion(mouse)": 38.3333
+      },
+      "content_score_raw": "50"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "v5",
+    "a1",
+    "a2",
+    "a3",
+    "a4",
+    "a5"
+  ]
+}

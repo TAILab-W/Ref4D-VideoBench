@@ -1,0 +1,211 @@
+{
+  "summary": {
+    "items": 10,
+    "enter_bank": 8,
+    "clip_range_sec": [
+      0.0,
+      6.0
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does the leopard's shadow follow a consistent trajectory with its body position during the jump?",
+      "signals": [
+        "shadow_consistency(oX)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 36.67,
+      "total_score_100": 91.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "shadow_consistency(oX)": 36.6667
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "During the leap, does the leopard maintain continuity of form without interpenetration or sudden size change?",
+      "signals": [
+        "biological_motion(oA)",
+        "continuity(leopard)",
+        "interpenetration(leopard,ground)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "biological_motion(oA)": 38.3333,
+        "continuity(leopard)": 7.3333,
+        "interpenetration(leopard,ground)": 7.1667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Across the clip, does the leopard exhibit continuous acceleration in one direction on the ground before jumping?",
+      "signals": [
+        "trajectory_dir(leopard,ground,axis)",
+        "accel_sign(leopard,ground,axis)",
+        "size_inconsistency(leopard)",
+        "material_optics(ground)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(leopard,ground,axis)": 38.3333,
+        "size_inconsistency(leopard)": 7.5,
+        "material_optics(ground)": 7.5,
+        "accel_sign(leopard,ground,axis)": 7.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Is the water near the climbing area stable and not deep enough to pose falling hazards for the leopard?",
+      "signals": [
+        "falling_hazard(leopard)"
+      ],
+      "content_score_60": 45,
+      "signal_score_40": 31.67,
+      "total_score_100": 76.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "falling_hazard(leopard)": 31.6667
+      },
+      "content_score_raw": "45"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Can the spotted-coat pattern of the leopard be clearly observed while it is mid-air?",
+      "signals": [
+        "biological_motion(leopard)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 38.33,
+      "total_score_100": 88.33,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "biological_motion(leopard)": 38.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "The leopard's body maintains a consistent trajectory during the jump.",
+      "signals": [
+        "trajectory_dir(leopard,ground,axis)",
+        "accel_sign(leopard,ground,axis)",
+        "size_inconsistency(leopard)",
+        "material_optics(ground)",
+        "biological_motion(oA)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(leopard,ground,axis)": 38.3333,
+        "biological_motion(oA)": 7.6667,
+        "size_inconsistency(leopard)": 7.5,
+        "material_optics(ground)": 7.5,
+        "accel_sign(leopard,ground,axis)": 7.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "The leopard exhibits spotted-coat and jumping-motion without interpenetration.",
+      "signals": [
+        "continuity(leopard)",
+        "interpenetration(leopard,ground)",
+        "biological_motion(leopard)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "biological_motion(leopard)": 38.3333,
+        "continuity(leopard)": 7.3333,
+        "interpenetration(leopard,ground)": 7.1667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "The leopard's shadow follows its continuous movement in mid-air.",
+      "signals": [
+        "shadow_consistency(oX)"
+      ],
+      "content_score_60": 45,
+      "signal_score_40": 36.67,
+      "total_score_100": 81.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "shadow_consistency(oX)": 36.6667
+      },
+      "content_score_raw": "45"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "The leopard climbs near water without falling hazards.",
+      "signals": [
+        "falling_hazard(leopard)"
+      ],
+      "content_score_60": 40,
+      "signal_score_40": 31.67,
+      "total_score_100": 71.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "falling_hazard(leopard)": 31.6667
+      },
+      "content_score_raw": "40"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "The leopard's movement shows no sudden changes in size or material optics.",
+      "signals": [
+        "trajectory_dir(leopard,ground,axis)",
+        "accel_sign(leopard,ground,axis)",
+        "size_inconsistency(leopard)",
+        "material_optics(ground)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(leopard,ground,axis)": 38.3333,
+        "size_inconsistency(leopard)": 7.5,
+        "material_optics(ground)": 7.5,
+        "accel_sign(leopard,ground,axis)": 7.0
+      },
+      "content_score_raw": "50"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v5",
+    "a1",
+    "a2",
+    "a3",
+    "a5"
+  ]
+}

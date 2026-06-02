@@ -1,0 +1,132 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0325.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "decord",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "sun",
+        "attributes": {
+          "color": [
+            "orange",
+            "yellow"
+          ],
+          "state": [
+            "setting"
+          ],
+          "signature": [
+            "orange-yellow-disk-between-mountains"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            8.1
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "water",
+        "attributes": {
+          "color": [
+            "dark-blue"
+          ],
+          "texture": [
+            "glistening",
+            "smooth"
+          ],
+          "material": [
+            "liquid"
+          ],
+          "signature": [
+            "dark-blue-glistening-surface"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            8.1
+          ]
+        ]
+      },
+      {
+        "id": "o3",
+        "name": "mountain",
+        "attributes": {
+          "color": [
+            "green"
+          ],
+          "texture": [
+            "rocky",
+            "vegetated"
+          ],
+          "position": [
+            "right"
+          ],
+          "signature": [
+            "green-vegetated-silhouette-with-rocky-shoreline"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            8.1
+          ]
+        ]
+      }
+    ],
+    "relations": [
+      {
+        "subject": "o1",
+        "predicate": "overlapping",
+        "object": "o2",
+        "spans": [
+          [
+            0.0,
+            8.1
+          ]
+        ],
+        "confidence": 0.9
+      },
+      {
+        "subject": "o3",
+        "predicate": "right-of",
+        "object": "o1",
+        "spans": [
+          [
+            0.0,
+            8.1
+          ]
+        ],
+        "confidence": 0.8
+      },
+      {
+        "subject": "o3",
+        "predicate": "right-of",
+        "object": "o2",
+        "spans": [
+          [
+            0.0,
+            8.1
+          ]
+        ],
+        "confidence": 0.7
+      }
+    ]
+  },
+  "views": {
+    "objects_count_display": {
+      "sun": 1,
+      "water": 1,
+      "mountain": 1
+    }
+  }
+}

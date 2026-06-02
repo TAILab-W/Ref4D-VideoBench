@@ -1,0 +1,94 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0177.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "decord",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "gun",
+        "attributes": {
+          "color": [
+            "black",
+            "brown",
+            "red"
+          ],
+          "tool-or-instrument": [
+            "air-rifle"
+          ],
+          "object-part": [
+            "barrel",
+            "scope",
+            "stock"
+          ],
+          "signature": [
+            "red-black-scope-wooden-stock"
+          ]
+        },
+        "spans": [
+          [
+            0.2,
+            0.6
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "person",
+        "attributes": {
+          "color": [
+            "brown"
+          ],
+          "sex": [
+            "male"
+          ],
+          "age": [
+            "young"
+          ],
+          "action": [
+            "holding-gun",
+            "talking"
+          ],
+          "pose": [
+            "sitting"
+          ],
+          "signature": [
+            "brown-shirt-young-male"
+          ]
+        },
+        "spans": [
+          [
+            0.1,
+            0.5
+          ]
+        ]
+      }
+    ],
+    "relations": [
+      {
+        "subject": "o2",
+        "predicate": "holding",
+        "object": "o1",
+        "spans": [
+          [
+            0.3,
+            0.5
+          ]
+        ],
+        "confidence": 0.9
+      }
+    ]
+  },
+  "views": {
+    "objects_count_display": {
+      "gun": 1,
+      "person": 1
+    }
+  }
+}

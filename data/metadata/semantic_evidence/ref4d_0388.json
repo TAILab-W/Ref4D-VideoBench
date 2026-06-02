@@ -1,0 +1,60 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0388.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "decord",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "person",
+        "attributes": {
+          "color": [
+            "black",
+            "blue",
+            "light-green",
+            "purple",
+            "rainbow",
+            "white"
+          ],
+          "sex": [
+            "female",
+            "male"
+          ],
+          "age": [
+            "adult",
+            "child"
+          ],
+          "pose": [
+            "sitting",
+            "standing"
+          ],
+          "action": [
+            "pulling-hair",
+            "sitting"
+          ],
+          "signature": [
+            "white-shirt-male,-light-green-and-blue-sweater-girl,-rainbow-striped-sweater-girl,-black-dress-female,-white-sleeveless-girl,-white-sleeve-shirt-boy"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            10.9
+          ]
+        ]
+      }
+    ],
+    "relations": []
+  },
+  "views": {
+    "objects_count_display": {
+      "person": 1
+    }
+  }
+}

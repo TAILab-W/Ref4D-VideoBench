@@ -1,0 +1,196 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0222.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "cv2",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "pan",
+        "attributes": {
+          "signature": [
+            "pan-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            9.3
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "spoon",
+        "attributes": {
+          "signature": [
+            "spoon-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            9.3
+          ]
+        ]
+      },
+      {
+        "id": "o3",
+        "name": "eggplant",
+        "attributes": {
+          "signature": [
+            "eggplant-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            9.3
+          ]
+        ]
+      },
+      {
+        "id": "o4",
+        "name": "knife",
+        "attributes": {
+          "signature": [
+            "knife-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            9.3
+          ]
+        ]
+      },
+      {
+        "id": "o5",
+        "name": "cutting-board",
+        "attributes": {
+          "signature": [
+            "cutting-board-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            9.3
+          ]
+        ]
+      },
+      {
+        "id": "o6",
+        "name": "oil",
+        "attributes": {
+          "signature": [
+            "oil-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            9.3
+          ]
+        ]
+      },
+      {
+        "id": "o7",
+        "name": "spatula",
+        "attributes": {
+          "signature": [
+            "spatula-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            9.3
+          ]
+        ]
+      },
+      {
+        "id": "o8",
+        "name": "sugar",
+        "attributes": {
+          "signature": [
+            "sugar-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            9.3
+          ]
+        ]
+      },
+      {
+        "id": "o9",
+        "name": "chopped-vegetables",
+        "attributes": {
+          "signature": [
+            "chopped-vegetables-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            9.3
+          ]
+        ]
+      },
+      {
+        "id": "o10",
+        "name": "soy-sauce",
+        "attributes": {
+          "signature": [
+            "soy-sauce-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            9.3
+          ]
+        ]
+      },
+      {
+        "id": "o11",
+        "name": "stir-fried-dish",
+        "attributes": {
+          "signature": [
+            "stir-fried-dish-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            9.3
+          ]
+        ]
+      }
+    ],
+    "relations": []
+  },
+  "views": {
+    "objects_count_display": {
+      "pan": 1,
+      "spoon": 1,
+      "eggplant": 1,
+      "knife": 1,
+      "cutting-board": 1,
+      "oil": 1,
+      "spatula": 1,
+      "sugar": 1,
+      "chopped-vegetables": 1,
+      "soy-sauce": 1,
+      "stir-fried-dish": 1
+    }
+  }
+}

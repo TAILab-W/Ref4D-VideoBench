@@ -1,0 +1,195 @@
+{
+  "summary": {
+    "items": 10,
+    "enter_bank": 8,
+    "clip_range_sec": [
+      0.0,
+      6.43
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does the material on the green conveyor belt move continuously without sudden changes in position or velocity?",
+      "signals": [
+        "continuity(conveyor-belt)",
+        "support(conveyor-belt,material)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(conveyor-belt)": 36.6667,
+        "support(conveyor-belt,material)": 7.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Are the golden and silver parts of the machine rigidly connected to each other during operation?",
+      "signals": [
+        "rigid_transform(machine)"
+      ],
+      "content_score_60": 40,
+      "signal_score_40": 37.5,
+      "total_score_100": 77.5,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "rigid_transform(machine)": 37.5
+      },
+      "content_score_raw": "40"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Do objects on the green surface follow a continuous and smooth trajectory along the direction of the metallic rollers while the gluing machine components remain stable?",
+      "signals": [
+        "trajectory_dir(conveyor-belt,axis)",
+        "continuity(conveyor-belt)",
+        "continuity(belt)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(conveyor-belt,axis)": 38.3333,
+        "continuity(conveyor-belt)": 7.3333,
+        "continuity(belt)": 7.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Is there proper shadow consistency across the clip, indicating no interpenetration or collision between machinery parts?",
+      "signals": [
+        "shadow_consistency(conveyor-belt)",
+        "interpenetration(part1,part2)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "shadow_consistency(conveyor-belt)": 36.6667,
+        "interpenetration(part1,part2)": 7.1667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Is the green surface consistent with its function as a support for items moving through the automatic gluing machine?",
+      "signals": [
+        "material_optics(belt)",
+        "tool_usage_correct(gluing_machine,for:gluing)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "material_optics(belt)": 37.5,
+        "tool_usage_correct(gluing_machine,for:gluing)": 5.8333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "Objects on the green conveyor belt move continuously along its direction.",
+      "signals": [
+        "continuity(conveyor-belt)",
+        "support(conveyor-belt,material)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(conveyor-belt)": 36.6667,
+        "support(conveyor-belt,material)": 7.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "The golden and silver parts of the machine are stationary and rigidly connected.",
+      "signals": [
+        "rigid_transform(machine)"
+      ],
+      "content_score_60": 30,
+      "signal_score_40": 37.5,
+      "total_score_100": 67.5,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "rigid_transform(machine)": 37.5
+      },
+      "content_score_raw": "30"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "The gluing machine components remain stable during operation.",
+      "signals": [
+        "continuity(belt)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 36.67,
+      "total_score_100": 86.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(belt)": 36.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "The green material is consistent with a conveyor belt's appearance and function.",
+      "signals": [
+        "material_optics(belt)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 37.5,
+      "total_score_100": 87.5,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "material_optics(belt)": 37.5
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "Machinery parts do not interpenetrate or collide.",
+      "signals": [
+        "interpenetration(part1,part2)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 35.83,
+      "total_score_100": 85.83,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "interpenetration(part1,part2)": 35.8333
+      },
+      "content_score_raw": "50"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v3",
+    "v4",
+    "v5",
+    "a1",
+    "a3",
+    "a4",
+    "a5"
+  ]
+}

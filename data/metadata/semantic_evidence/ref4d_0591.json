@@ -1,0 +1,89 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0591.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "cv2",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "truck",
+        "attributes": {
+          "color": [
+            "bright-green"
+          ],
+          "pattern": [
+            "stripes"
+          ],
+          "brand-or-logo": [
+            "faw"
+          ],
+          "printed-text": [
+            "总质量35000kg",
+            "整备质量40000kg",
+            "轴距4000/1300mm"
+          ],
+          "vehicle-type": [
+            "semi-truck"
+          ],
+          "orientation": [
+            "facing-left"
+          ],
+          "position": [
+            "parked-outside-garage"
+          ],
+          "signature": [
+            "bright-green-faw-m7"
+          ]
+        },
+        "spans": [
+          [
+            0.2,
+            6.8
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "truck",
+        "attributes": {
+          "color": [
+            "silver-gray"
+          ],
+          "brand-or-logo": [
+            "unspecified"
+          ],
+          "vehicle-type": [
+            "semi-truck"
+          ],
+          "orientation": [
+            "facing-right"
+          ],
+          "position": [
+            "inside-garage"
+          ],
+          "signature": [
+            "silver-gray"
+          ]
+        },
+        "spans": [
+          [
+            3.5,
+            6.4
+          ]
+        ]
+      }
+    ],
+    "relations": []
+  },
+  "views": {
+    "objects_count_display": {
+      "truck": 2
+    }
+  }
+}

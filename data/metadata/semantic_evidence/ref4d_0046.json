@@ -1,0 +1,46 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0046.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "cv2",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "deer",
+        "attributes": {
+          "color": [
+            "brown"
+          ],
+          "action": [
+            "grazing",
+            "walking"
+          ],
+          "pose": [
+            "standing"
+          ],
+          "signature": [
+            "brown-deer-with-small-antlers"
+          ]
+        },
+        "spans": [
+          [
+            0.2,
+            8.1
+          ]
+        ]
+      }
+    ],
+    "relations": []
+  },
+  "views": {
+    "objects_count_display": {
+      "deer": 1
+    }
+  }
+}

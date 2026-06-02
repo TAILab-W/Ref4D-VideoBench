@@ -1,0 +1,214 @@
+{
+  "summary": {
+    "items": 10,
+    "enter_bank": 7,
+    "clip_range_sec": [
+      0.0,
+      6.9
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does the player in red maintain a continuous motion without sudden changes in position?",
+      "signals": [
+        "trajectory_dir(oX,axis)",
+        "accel_sign(oX,axis)",
+        "friction_sliding(oA,on:oB)",
+        "continuity(oX)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(oX,axis)": 38.3333,
+        "continuity(oX)": 7.3333,
+        "accel_sign(oX,axis)": 7.0,
+        "friction_sliding(oA,on:oB)": 6.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Are players avoiding collisions that could cause injury during their movements?",
+      "signals": [
+        "collision(oA,oB)",
+        "collision(player1, player2)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 38.0,
+      "total_score_100": 88.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "collision(oA,oB)": 31.6667,
+        "collision(player1, player2)": 6.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Is the ball's trajectory consistent with physical laws and proper action phases of handball gameplay?",
+      "signals": [
+        "continuity(ball)",
+        "biological_motion(player)"
+      ],
+      "content_score_60": 40,
+      "signal_score_40": 40.0,
+      "total_score_100": 80.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "biological_motion(player)": 38.3333,
+        "continuity(ball)": 7.3333
+      },
+      "content_score_raw": "40"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Does the goalkeeper afford blocking actions to prevent scoring by positioning himself near the goal?",
+      "signals": [
+        "action_phase(oAct,phase)",
+        "step_order(prev:task,next:task)",
+        "goal_placement(goal)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 37.33,
+      "total_score_100": 97.33,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "action_phase(oAct,phase)": 26.6667,
+        "step_order(prev:task,next:task)": 5.3333,
+        "goal_placement(goal)": 5.3333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Is there any interpenetration between players' bodies?",
+      "signals": [
+        "_default"
+      ],
+      "content_score_60": 40,
+      "signal_score_40": 23.33,
+      "total_score_100": 63.33,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "_default": 23.3333
+      },
+      "content_score_raw": "40"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "The handball player in red and white jumps to catch the ball.",
+      "signals": [
+        "trajectory_dir(oX,axis)",
+        "accel_sign(oX,axis)",
+        "friction_sliding(oA,on:oB)",
+        "continuity(oX)"
+      ],
+      "content_score_60": 30,
+      "signal_score_40": 40.0,
+      "total_score_100": 70.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(oX,axis)": 38.3333,
+        "continuity(oX)": 7.3333,
+        "accel_sign(oX,axis)": 7.0,
+        "friction_sliding(oA,on:oB)": 6.0
+      },
+      "content_score_raw": "30"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "A green jersey player collides with a blue jersey player near the goal.",
+      "signals": [
+        "collision(oA,oB)",
+        "collision(player1, player2)"
+      ],
+      "content_score_60": 20,
+      "signal_score_40": 38.0,
+      "total_score_100": 58.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "collision(oA,oB)": 31.6667,
+        "collision(player1, player2)": 6.3333
+      },
+      "content_score_raw": "20"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "Players move towards the goal, attempting to score or defend.",
+      "signals": [
+        "action_phase(oAct,phase)",
+        "step_order(prev:task,next:task)",
+        "biological_motion(player)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "biological_motion(player)": 38.3333,
+        "action_phase(oAct,phase)": 5.3333,
+        "step_order(prev:task,next:task)": 5.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "The ball is in mid-air, following a continuous trajectory from the player's hand.",
+      "signals": [
+        "trajectory_dir(oX,axis)",
+        "accel_sign(oX,axis)",
+        "friction_sliding(oA,on:oB)",
+        "continuity(ball)"
+      ],
+      "content_score_60": 40,
+      "signal_score_40": 40.0,
+      "total_score_100": 80.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(oX,axis)": 38.3333,
+        "continuity(ball)": 7.3333,
+        "accel_sign(oX,axis)": 7.0,
+        "friction_sliding(oA,on:oB)": 6.0
+      },
+      "content_score_raw": "40"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "A green jersey player extends an arm to block or intercept.",
+      "signals": [
+        "collision(oA,oB)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 31.67,
+      "total_score_100": 81.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "collision(oA,oB)": 31.6667
+      },
+      "content_score_raw": "50"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "a3",
+    "a4",
+    "a5"
+  ]
+}

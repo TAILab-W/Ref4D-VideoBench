@@ -1,0 +1,192 @@
+{
+  "summary": {
+    "items": 10,
+    "enter_bank": 5,
+    "clip_range_sec": [
+      0.0,
+      8.77
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does the red car remain stationary on the road while the bear interacts with it?",
+      "signals": [
+        "collision(car,bear)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 31.67,
+      "total_score_100": 91.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "collision(car,bear)": 31.6667
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Does the red car stay supported by the ground without floating or sinking?",
+      "signals": [
+        "support(oA,oB)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 35.0,
+      "total_score_100": 85.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "support(oA,oB)": 35.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Does the young adult bear stand on the red SUV to interact with the vehicle?",
+      "signals": [
+        "support(bear,car)"
+      ],
+      "content_score_60": 30,
+      "signal_score_40": 35.0,
+      "total_score_100": 65.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "support(bear,car)": 35.0
+      },
+      "content_score_raw": "30"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Does the bear support its weight during interaction using the red car as a surface?",
+      "signals": [
+        "support(oA,oB)"
+      ],
+      "content_score_60": 40,
+      "signal_score_40": 35.0,
+      "total_score_100": 75.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "support(oA,oB)": 35.0
+      },
+      "content_score_raw": "40"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Is the bear at risk of falling if it loses balance near the side mirror?",
+      "signals": [
+        "balance(oX)",
+        "falling_hazard(oObj)"
+      ],
+      "content_score_60": 20,
+      "signal_score_40": 40.0,
+      "total_score_100": 60.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "balance(oX)": 35.8333,
+        "falling_hazard(oObj)": 6.3333
+      },
+      "content_score_raw": "20"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "The red car remains stationary on the road while the bear interacts with it.",
+      "signals": [
+        "state_change(oObj,from:state,to:state)",
+        "collision(oA,oB)",
+        "collision(car,bear)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "state_change(oObj,from:state,to:state)": 37.5,
+        "collision(oA,oB)": 6.3333,
+        "collision(car,bear)": 6.3333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "The young adult bear stands on the ground, supporting its weight during interaction with the vehicle.",
+      "signals": [
+        "biological_motion(bear)",
+        "support(bear,car)"
+      ],
+      "content_score_60": 0,
+      "signal_score_40": 40.0,
+      "total_score_100": 40.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "biological_motion(bear)": 38.3333,
+        "support(bear,car)": 7.0
+      },
+      "content_score_raw": "0"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "The reflection in the car's side mirror shows a part of the forest and sky behind the scene.",
+      "signals": [
+        "support(oA,oB)",
+        "reflection_consistency(oX)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "support(oA,oB)": 35.0,
+        "reflection_consistency(oX)": 7.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "A wild bear is near a parked vehicle, posing an immediate safety risk to both entities.",
+      "signals": [
+        "falling_hazard(oObj)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 31.67,
+      "total_score_100": 81.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "falling_hazard(oObj)": 31.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "The bear uses one paw against the door handle area, indicating potential balance loss.",
+      "signals": [
+        "balance(oX)",
+        "falling_hazard(oObj)"
+      ],
+      "content_score_60": 30,
+      "signal_score_40": 40.0,
+      "total_score_100": 70.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "balance(oX)": 35.8333,
+        "falling_hazard(oObj)": 6.3333
+      },
+      "content_score_raw": "30"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "a1",
+    "a3",
+    "a4"
+  ]
+}

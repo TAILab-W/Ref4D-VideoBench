@@ -1,0 +1,78 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0168.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "cv2",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "person",
+        "attributes": {
+          "color": [
+            "black"
+          ],
+          "action": [
+            "gesturing",
+            "holding-gun"
+          ],
+          "position": [
+            "sitting"
+          ],
+          "facing-direction": [
+            "forward"
+          ],
+          "signature": [
+            "black-shirt-black-cap-sunglasses-on-head"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            1.0
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "gun",
+        "attributes": {
+          "color": [
+            "black",
+            "red"
+          ],
+          "material": [
+            "metal"
+          ],
+          "size": [
+            "large"
+          ],
+          "state": [
+            "held"
+          ],
+          "signature": [
+            "black-gun-with-red-tip"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            1.0
+          ]
+        ]
+      }
+    ],
+    "relations": []
+  },
+  "views": {
+    "objects_count_display": {
+      "person": 1,
+      "gun": 1
+    }
+  }
+}

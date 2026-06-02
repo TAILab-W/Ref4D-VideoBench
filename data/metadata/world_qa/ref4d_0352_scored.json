@@ -1,0 +1,191 @@
+{
+  "summary": {
+    "items": 10,
+    "enter_bank": 8,
+    "clip_range_sec": [
+      0.0,
+      7.17
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Do the clouds show pink-orange-gray hues?",
+      "signals": [
+        "hue_histogram_jump(cloud)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 33.33,
+      "total_score_100": 88.33,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "hue_histogram_jump(cloud)": 33.3333
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Is the road an empty-street-with-lane-dividers throughout?",
+      "signals": [
+        "continuity(road)",
+        "trajectory_dir(road,axis)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(road,axis)": 38.3333,
+        "continuity(road)": 7.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Do the buildings have a brown-and-white-facade appearance?",
+      "signals": [
+        "material_optics(building)",
+        "rigid_transform(building)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "material_optics(building)": 37.5,
+        "rigid_transform(building)": 7.5
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Do shadows on the ground match the light source direction and object positions?",
+      "signals": [
+        "shadow_consistency(建筑物的阴影)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 36.67,
+      "total_score_100": 86.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "shadow_consistency(建筑物的阴影)": 36.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Are there no falling hazards from elevated structures?",
+      "signals": [
+        "falling_hazard(建筑物或车辆)"
+      ],
+      "content_score_60": 0,
+      "signal_score_40": 31.67,
+      "total_score_100": 31.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "falling_hazard(建筑物或车辆)": 31.6667
+      },
+      "content_score_raw": "0"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "Clouds exhibit pink-orange-gray hues and float above buildings, trees, and roads.",
+      "signals": [
+        "hue_histogram_jump(cloud)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 33.33,
+      "total_score_100": 93.33,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "hue_histogram_jump(cloud)": 33.3333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "The road remains an empty-street-with-lane-dividers throughout.",
+      "signals": [
+        "continuity(road)",
+        "trajectory_dir(road,axis)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(road,axis)": 38.3333,
+        "continuity(road)": 7.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "Buildings maintain their brown-and-white-facade appearance without material optics inconsistencies.",
+      "signals": [
+        "material_optics(building)",
+        "rigid_transform(building)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "material_optics(building)": 37.5,
+        "rigid_transform(building)": 7.5
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "Shadows cast by buildings on the ground are consistent with light source direction.",
+      "signals": [
+        "shadow_consistency(建筑物的阴影)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 36.67,
+      "total_score_100": 86.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "shadow_consistency(建筑物的阴影)": 36.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "Vehicles on the road follow expected traffic flow and trajectory directions.",
+      "signals": [
+        "trajectory_dir(车辆,水平轴)"
+      ],
+      "content_score_60": 0,
+      "signal_score_40": 38.33,
+      "total_score_100": 38.33,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(车辆,水平轴)": 38.3333
+      },
+      "content_score_raw": "0"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "a1",
+    "a2",
+    "a3",
+    "a4"
+  ]
+}

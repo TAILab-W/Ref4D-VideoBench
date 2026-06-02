@@ -1,0 +1,68 @@
+vllama3:
+  model: checkpoints/videollama3-7b
+  device: auto
+  dtype: bf16
+  attn_impl: flash_attention_2
+  local_files_only: true
+
+  video_decode:
+    backend: decord
+    fps: 6
+    max_frames: 240
+    short_edge: 384
+
+  prompt:
+    template: |
+      Extract visually verifiable event atoms from this segment.
+
+      Output one event phrase per event, separated by " | ".
+      Each phrase must be a complete subject-verb phrase:
+      <specific subject> <main verb> [specific object or target]
+
+      Include:
+      - visible actions, interactions, contact, manipulation, movement, appearance/disappearance, or clear state changes
+      - important ongoing actions if they are visually evident in this segment
+
+      Do not include:
+      - camera motion or viewpoint changes
+      - fragments without an explicit subject and verb
+      - near-duplicate events
+      - temporal order inside the segment
+
+      Rules:
+      - each event phrase must be a complete sentence, not a fragment
+      - every event must have one explicit subject and one base verb (do not omit the subject, do not output phrases without a verb)
+      - if one sentence contains multiple actions linked by "and", "while", "as", "when", or commas, split them into separate event phrases
+      - each event phrase should contain only one main action, keep each phrase short, normally 4 to 10 words
+
+      Good examples:
+      adult gorilla sit | baby gorilla walk
+      person pet elephant trunk | elephant extend trunk
+      car drive along road | pedestrian cross street
+
+      Bad examples:
+      eating | sitting
+      face is seen
+      mountain is visible
+      building stands beside road | camera pans across landscape
+      person stands near building
+
+    lang: en
+
+  gen:
+    # Conservative decoding for stable event descriptions.
+    do_sample: false
+    seed: 2025
+    max_new_tokens: 256
+    repetition_penalty: 1.05
+    no_repeat_ngram_size: 3
+    num_beams: 1
+    force_generate: false
+
+  export:
+    out_dir: ${paths.data_root}/vlm
+    fname_ref: "ref/{sample_id}.vlm.json"
+    fname_gen: "gen/{sample_id}.vlm.json"
+
+paths:
+  data_root: outputs/event/cache

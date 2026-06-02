@@ -1,0 +1,98 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0258.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "cv2",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "robot",
+        "attributes": {
+          "signature": [
+            "robot-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            7.3
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "robot",
+        "attributes": {
+          "signature": [
+            "robot-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            7.3
+          ]
+        ]
+      },
+      {
+        "id": "o3",
+        "name": "table",
+        "attributes": {
+          "signature": [
+            "table-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            7.3
+          ]
+        ]
+      },
+      {
+        "id": "o4",
+        "name": "screen",
+        "attributes": {
+          "signature": [
+            "screen-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            7.3
+          ]
+        ]
+      },
+      {
+        "id": "o5",
+        "name": "screen",
+        "attributes": {
+          "signature": [
+            "screen-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            7.3
+          ]
+        ]
+      }
+    ],
+    "relations": []
+  },
+  "views": {
+    "objects_count_display": {
+      "robot": 2,
+      "table": 1,
+      "screen": 2
+    }
+  }
+}

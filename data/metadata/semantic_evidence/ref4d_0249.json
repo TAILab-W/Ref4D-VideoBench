@@ -1,0 +1,112 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0249.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "cv2",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "orange-box",
+        "attributes": {
+          "color": [
+            "orange",
+            "white"
+          ],
+          "material": [
+            "cardboard"
+          ],
+          "state": [
+            "empty",
+            "open"
+          ],
+          "facing-direction": [
+            "right-facing"
+          ],
+          "signature": [
+            "orange-color,-flat-top,-white-interior,-'talent'-logo-on-side"
+          ]
+        },
+        "spans": [
+          [
+            0.2,
+            0.9
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "blue-machine",
+        "attributes": {
+          "color": [
+            "blue"
+          ],
+          "material": [
+            "metal"
+          ],
+          "equipment": [
+            "packaging-machine"
+          ],
+          "signature": [
+            "blue-color,-multiple-metal-arms,-conveyor-belt"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            2.0
+          ]
+        ]
+      }
+    ],
+    "relations": [
+      {
+        "subject": "o1",
+        "predicate": "left-of",
+        "object": "o2",
+        "spans": [
+          [
+            0.3,
+            0.8
+          ]
+        ],
+        "confidence": 0.9
+      },
+      {
+        "subject": "o1",
+        "predicate": "inside",
+        "object": "o2",
+        "spans": [
+          [
+            0.1,
+            0.6
+          ]
+        ],
+        "confidence": 0.8
+      },
+      {
+        "subject": "o1",
+        "predicate": "part-of",
+        "object": "o2",
+        "spans": [
+          [
+            0.2,
+            0.5
+          ]
+        ],
+        "confidence": 0.7
+      }
+    ]
+  },
+  "views": {
+    "objects_count_display": {
+      "orange-box": 1,
+      "blue-machine": 1
+    }
+  }
+}

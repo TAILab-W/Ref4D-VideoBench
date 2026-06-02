@@ -1,0 +1,146 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0438.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "decord",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "man-in-white-shirt",
+        "attributes": {
+          "color": [
+            "black",
+            "white"
+          ],
+          "action": [
+            "carrying",
+            "walking"
+          ],
+          "signature": [
+            "white-shirt-black-cap-gloves-holding-chair"
+          ]
+        },
+        "spans": [
+          [
+            0.2,
+            3.5
+          ],
+          [
+            4.7,
+            6.8
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "worker-in-yellow-shirt",
+        "attributes": {
+          "color": [
+            "blue",
+            "yellow"
+          ],
+          "action": [
+            "loading"
+          ],
+          "signature": [
+            "yellow-shirt-blue-helmet-loading-van"
+          ]
+        },
+        "spans": [
+          [
+            1.9,
+            2.1
+          ]
+        ]
+      },
+      {
+        "id": "o3",
+        "name": "man-in-tank-top",
+        "attributes": {
+          "color": [
+            "black",
+            "gray"
+          ],
+          "action": [
+            "walking"
+          ],
+          "signature": [
+            "black-tank-top-gray-pants"
+          ]
+        },
+        "spans": [
+          [
+            2.4,
+            4.2
+          ]
+        ]
+      },
+      {
+        "id": "o4",
+        "name": "man-in-red-shirt",
+        "attributes": {
+          "color": [
+            "black",
+            "red"
+          ],
+          "action": [
+            "walking"
+          ],
+          "signature": [
+            "red-shirt-black-cap-gloves"
+          ]
+        },
+        "spans": [
+          [
+            4.7,
+            6.8
+          ]
+        ]
+      }
+    ],
+    "relations": [
+      {
+        "subject": "o1",
+        "predicate": "looking-at",
+        "object": "o2",
+        "spans": [
+          [
+            0.2,
+            3.5
+          ],
+          [
+            4.7,
+            6.8
+          ]
+        ],
+        "confidence": 0.8
+      },
+      {
+        "subject": "o4",
+        "predicate": "talking-to",
+        "object": "o3",
+        "spans": [
+          [
+            5.2,
+            6.8
+          ]
+        ],
+        "confidence": 0.8
+      }
+    ]
+  },
+  "views": {
+    "objects_count_display": {
+      "man-in-white-shirt": 1,
+      "worker-in-yellow-shirt": 1,
+      "man-in-tank-top": 1,
+      "man-in-red-shirt": 1
+    }
+  }
+}

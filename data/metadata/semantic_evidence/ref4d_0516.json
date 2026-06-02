@@ -1,0 +1,209 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0516.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "cv2",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "person",
+        "attributes": {
+          "color": [
+            "black",
+            "red"
+          ],
+          "sex": [
+            "male"
+          ],
+          "action": [
+            "gesturing",
+            "talking"
+          ],
+          "pose": [
+            "standing"
+          ],
+          "facing-direction": [
+            "right"
+          ],
+          "signature": [
+            "red-beard-black-shirt-black-shorts-black-shoes"
+          ]
+        },
+        "spans": [
+          [
+            0.2,
+            9.8
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "truck",
+        "attributes": {
+          "color": [
+            "black"
+          ],
+          "brand-or-logo": [
+            "gmc"
+          ],
+          "state": [
+            "hood-open",
+            "parked"
+          ],
+          "object-part": [
+            "engine",
+            "steering-wheel"
+          ],
+          "equipment": [
+            "throttle-body"
+          ],
+          "vehicle-type": [
+            "pickup-truck"
+          ],
+          "signature": [
+            "black-gmc-01-number-on-door"
+          ]
+        },
+        "spans": [
+          [
+            0.3,
+            7.5
+          ]
+        ]
+      },
+      {
+        "id": "o3",
+        "name": "text",
+        "attributes": {
+          "color": [
+            "green"
+          ],
+          "printed-text": [
+            "performance->-rpm-+",
+            "throttle-response-+"
+          ],
+          "signature": [
+            "green-throttle-response-plus"
+          ]
+        },
+        "spans": [
+          [
+            0.1,
+            2.5
+          ]
+        ]
+      }
+    ],
+    "relations": [
+      {
+        "subject": "o1",
+        "predicate": "standing-in-front-of",
+        "object": "o2",
+        "spans": [
+          [
+            0.2,
+            9.8
+          ]
+        ],
+        "confidence": 0.9
+      },
+      {
+        "subject": "o2",
+        "predicate": "parked-in",
+        "object": "o3",
+        "spans": [
+          [
+            0.4,
+            6.2
+          ]
+        ],
+        "confidence": 0.8
+      },
+      {
+        "subject": "o2",
+        "predicate": "has-part",
+        "object": "o3",
+        "spans": [
+          [
+            0.5,
+            4.8
+          ]
+        ],
+        "confidence": 0.7
+      },
+      {
+        "subject": "o2",
+        "predicate": "is-open-at",
+        "object": "o3",
+        "spans": [
+          [
+            0.3,
+            7.5
+          ]
+        ],
+        "confidence": 0.8
+      },
+      {
+        "subject": "o2",
+        "predicate": "has-number",
+        "object": "o3",
+        "spans": [
+          [
+            0.4,
+            6.2
+          ]
+        ],
+        "confidence": 0.7
+      },
+      {
+        "subject": "o2",
+        "predicate": "has-brand",
+        "object": "o3",
+        "spans": [
+          [
+            0.4,
+            6.2
+          ]
+        ],
+        "confidence": 0.7
+      },
+      {
+        "subject": "o2",
+        "predicate": "has-color",
+        "object": "o3",
+        "spans": [
+          [
+            0.4,
+            6.2
+          ]
+        ],
+        "confidence": 0.7
+      },
+      {
+        "subject": "o2",
+        "predicate": "has-type",
+        "object": "o3",
+        "spans": [
+          [
+            0.5,
+            4.8
+          ]
+        ],
+        "confidence": 0.7
+      }
+    ]
+  },
+  "views": {
+    "objects_count_display": {
+      "person": 1,
+      "truck": 1,
+      "text": 1
+    }
+  }
+}

@@ -1,0 +1,178 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0349.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "cv2",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "beanbag",
+        "attributes": {
+          "signature": [
+            "beanbag-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            6.8
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "beanbag",
+        "attributes": {
+          "signature": [
+            "beanbag-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            6.8
+          ]
+        ]
+      },
+      {
+        "id": "o3",
+        "name": "table",
+        "attributes": {
+          "signature": [
+            "table-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            6.8
+          ]
+        ]
+      },
+      {
+        "id": "o4",
+        "name": "table",
+        "attributes": {
+          "signature": [
+            "table-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            6.8
+          ]
+        ]
+      },
+      {
+        "id": "o5",
+        "name": "fence",
+        "attributes": {
+          "signature": [
+            "fence-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            6.8
+          ]
+        ]
+      },
+      {
+        "id": "o6",
+        "name": "boat",
+        "attributes": {
+          "signature": [
+            "boat-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            6.8
+          ]
+        ]
+      },
+      {
+        "id": "o7",
+        "name": "mountain",
+        "attributes": {
+          "signature": [
+            "mountain-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            6.8
+          ]
+        ]
+      },
+      {
+        "id": "o8",
+        "name": "sea",
+        "attributes": {
+          "signature": [
+            "sea-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            6.8
+          ]
+        ]
+      },
+      {
+        "id": "o9",
+        "name": "grass",
+        "attributes": {
+          "signature": [
+            "grass-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            6.8
+          ]
+        ]
+      },
+      {
+        "id": "o10",
+        "name": "wooden_structure",
+        "attributes": {
+          "signature": [
+            "wooden_structure-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            6.8
+          ]
+        ]
+      }
+    ],
+    "relations": []
+  },
+  "views": {
+    "objects_count_display": {
+      "beanbag": 2,
+      "table": 2,
+      "fence": 1,
+      "boat": 1,
+      "mountain": 1,
+      "sea": 1,
+      "grass": 1,
+      "wooden_structure": 1
+    }
+  }
+}

@@ -1,0 +1,210 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0507.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "decord",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "person",
+        "attributes": {
+          "color": [
+            "blue",
+            "red"
+          ],
+          "sex": [
+            "female"
+          ],
+          "action": [
+            "jumping",
+            "preparing-to-serve"
+          ],
+          "pose": [
+            "left-leg-back",
+            "right-arm-raised"
+          ],
+          "facing-direction": [
+            "forward"
+          ],
+          "signature": [
+            "blue-dress-red-shoes-braided-hair"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            8.7
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "tennis_ball",
+        "attributes": {
+          "color": [
+            "yellow"
+          ],
+          "state": [
+            "in-air"
+          ],
+          "signature": [
+            "yellow"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            8.7
+          ]
+        ]
+      },
+      {
+        "id": "o3",
+        "name": "tennis_racket",
+        "attributes": {
+          "color": [
+            "blue",
+            "yellow"
+          ],
+          "material": [
+            "plastic",
+            "string"
+          ],
+          "tool-or-instrument": [
+            "tennis"
+          ],
+          "signature": [
+            "blue-and-yellow-string"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            8.7
+          ]
+        ]
+      },
+      {
+        "id": "o4",
+        "name": "net",
+        "attributes": {
+          "color": [
+            "blue",
+            "white"
+          ],
+          "material": [
+            "mesh"
+          ],
+          "signature": [
+            "white-net-on-blue-court"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            8.7
+          ]
+        ]
+      },
+      {
+        "id": "o5",
+        "name": "court",
+        "attributes": {
+          "color": [
+            "blue",
+            "green"
+          ],
+          "pattern": [
+            "grid-lines"
+          ],
+          "signature": [
+            "blue-with-white-lines-green-outside"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            8.7
+          ]
+        ]
+      }
+    ],
+    "relations": [
+      {
+        "subject": "o1",
+        "predicate": "looking-at",
+        "object": "o2",
+        "spans": [
+          [
+            0.0,
+            8.7
+          ]
+        ],
+        "confidence": 0.9
+      },
+      {
+        "subject": "o1",
+        "predicate": "holding",
+        "object": "o3",
+        "spans": [
+          [
+            0.0,
+            8.7
+          ]
+        ],
+        "confidence": 0.9
+      },
+      {
+        "subject": "o1",
+        "predicate": "standing-on",
+        "object": "o5",
+        "spans": [
+          [
+            0.0,
+            8.7
+          ]
+        ],
+        "confidence": 0.9
+      },
+      {
+        "subject": "o3",
+        "predicate": "touching",
+        "object": "o1",
+        "spans": [
+          [
+            0.0,
+            8.7
+          ]
+        ],
+        "confidence": 0.9
+      },
+      {
+        "subject": "o2",
+        "predicate": "above",
+        "object": "o1",
+        "spans": [
+          [
+            0.0,
+            8.7
+          ]
+        ],
+        "confidence": 0.9
+      }
+    ]
+  },
+  "views": {
+    "objects_count_display": {
+      "person": 1,
+      "tennis_ball": 1,
+      "tennis_racket": 1,
+      "net": 1,
+      "court": 1
+    }
+  }
+}

@@ -1,0 +1,179 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0453.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "cv2",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "person",
+        "attributes": {
+          "color": [
+            "black",
+            "blue"
+          ],
+          "action": [
+            "arranging",
+            "organizing"
+          ],
+          "pose": [
+            "standing"
+          ],
+          "signature": [
+            "blue-shirt-black-vest-glove-on-left-hand"
+          ]
+        },
+        "spans": [
+          [
+            0.6,
+            10.5
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "glove",
+        "attributes": {
+          "color": [
+            "blue"
+          ],
+          "position": [
+            "on-left-hand"
+          ],
+          "signature": [
+            "blue-glove-on-left-hand"
+          ]
+        },
+        "spans": [
+          [
+            6.7,
+            9.0
+          ]
+        ]
+      },
+      {
+        "id": "o3",
+        "name": "box",
+        "attributes": {
+          "color": [
+            "red",
+            "white"
+          ],
+          "material": [
+            "cardboard"
+          ],
+          "position": [
+            "on-table"
+          ],
+          "signature": [
+            "white-box-with-red-stripes"
+          ]
+        },
+        "spans": [
+          [
+            1.8,
+            10.5
+          ]
+        ]
+      },
+      {
+        "id": "o4",
+        "name": "book",
+        "attributes": {
+          "color": [
+            "blue",
+            "brown",
+            "green",
+            "red",
+            "yellow"
+          ],
+          "size": [
+            "large",
+            "small"
+          ],
+          "state": [
+            "disorganized",
+            "organized"
+          ],
+          "action": [
+            "being-arranged",
+            "being-packed"
+          ],
+          "signature": [
+            "various-books-on-shelf-and-table"
+          ]
+        },
+        "spans": [
+          [
+            1.8,
+            10.5
+          ]
+        ]
+      }
+    ],
+    "relations": [
+      {
+        "subject": "o1",
+        "predicate": "wearing",
+        "object": "o2",
+        "spans": [
+          [
+            6.7,
+            9.0
+          ]
+        ],
+        "confidence": 0.8
+      },
+      {
+        "subject": "o1",
+        "predicate": "organizing",
+        "object": "o4",
+        "spans": [
+          [
+            0.6,
+            10.5
+          ]
+        ],
+        "confidence": 0.8
+      },
+      {
+        "subject": "o1",
+        "predicate": "standing",
+        "object": "o3",
+        "spans": [
+          [
+            0.6,
+            10.5
+          ]
+        ],
+        "confidence": 0.8
+      },
+      {
+        "subject": "o1",
+        "predicate": "arranging",
+        "object": "o4",
+        "spans": [
+          [
+            0.6,
+            10.5
+          ]
+        ],
+        "confidence": 0.8
+      }
+    ]
+  },
+  "views": {
+    "objects_count_display": {
+      "person": 1,
+      "glove": 1,
+      "box": 1,
+      "book": 1
+    }
+  }
+}

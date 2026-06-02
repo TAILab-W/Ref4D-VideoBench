@@ -1,0 +1,76 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0029.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "cv2",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "elephant",
+        "attributes": {
+          "signature": [
+            "large-gray-animal-with-tusks"
+          ]
+        },
+        "spans": [
+          [
+            0.2,
+            1.0
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "elephant",
+        "attributes": {
+          "signature": [
+            "smaller-gray-animal-with-no-visible-tusks"
+          ]
+        },
+        "spans": [
+          [
+            0.3,
+            1.0
+          ]
+        ]
+      }
+    ],
+    "relations": [
+      {
+        "subject": "o1",
+        "predicate": "next-to",
+        "object": "o2",
+        "spans": [
+          [
+            0.2,
+            0.5
+          ]
+        ],
+        "confidence": 0.8
+      },
+      {
+        "subject": "o2",
+        "predicate": "in-front-of",
+        "object": "o1",
+        "spans": [
+          [
+            0.5,
+            0.8
+          ]
+        ],
+        "confidence": 0.8
+      }
+    ]
+  },
+  "views": {
+    "objects_count_display": {
+      "elephant": 2
+    }
+  }
+}

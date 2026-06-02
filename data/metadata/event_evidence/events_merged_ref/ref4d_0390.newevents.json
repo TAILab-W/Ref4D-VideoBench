@@ -1,0 +1,79 @@
+{
+  "events": [
+    {
+      "id": "m0001",
+      "s": 0.0,
+      "e": 0.2,
+      "dur": 0.2,
+      "members": [
+        "e0001#2"
+      ],
+      "text": "woman walk",
+      "s_abs": 0.0,
+      "e_abs": 1.2666666666666666,
+      "dur_abs": 1.2666666666666666
+    },
+    {
+      "id": "m0002",
+      "s": 0.0,
+      "e": 0.38947368421052636,
+      "dur": 0.38947368421052636,
+      "members": [
+        "e0001#1",
+        "e0002#1"
+      ],
+      "text": "woman hold umbrella",
+      "s_abs": 0.0,
+      "e_abs": 2.466666666666667,
+      "dur_abs": 2.466666666666667
+    },
+    {
+      "id": "m0003",
+      "s": 0.2,
+      "e": 1.0,
+      "dur": 0.8,
+      "members": [
+        "e0002#2",
+        "e0003#1",
+        "e0004#1"
+      ],
+      "text": "woman hug woman",
+      "s_abs": 1.2666666666666666,
+      "e_abs": 6.333333333333333,
+      "dur_abs": 5.066666666666666
+    },
+    {
+      "id": "m0004",
+      "s": 0.38947368421052636,
+      "e": 1.0,
+      "dur": 0.6105263157894736,
+      "members": [
+        "e0003#2",
+        "e0004#2"
+      ],
+      "text": "crowd watch",
+      "s_abs": 2.466666666666667,
+      "e_abs": 6.333333333333333,
+      "dur_abs": 3.8666666666666663
+    }
+  ],
+  "meta": {
+    "lane": "ref",
+    "key": "ref4d_0390",
+    "mode": "micro",
+    "merge_config": {
+      "tau_sem": 0.96,
+      "gap_abs_sec": 1.01,
+      "gap_norm_fallback": 0.1,
+      "min_duration_norm": 0.0
+    },
+    "stats": {
+      "num_input_items": 8,
+      "num_kept_items": 8,
+      "num_clusters": 4
+    },
+    "provenance": {
+      "source_hash": "ce4eecaf77c8"
+    }
+  }
+}

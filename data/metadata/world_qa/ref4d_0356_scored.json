@@ -1,0 +1,231 @@
+{
+  "summary": {
+    "items": 10,
+    "enter_bank": 10,
+    "clip_range_sec": [
+      0.0,
+      9.23
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does the mountain's snowy peak maintain a consistent reflection in the lake throughout the clip?",
+      "signals": [
+        "reflection_consistency(mountain)",
+        "continuity(lake)",
+        "continuity(mountain)",
+        "interpenetration(mountain,lake)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(lake)": 36.6667,
+        "continuity(mountain)": 7.3333,
+        "interpenetration(mountain,lake)": 7.1667,
+        "reflection_consistency(mountain)": 7.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Are the clouds white and fluffy without sudden changes or color jumps across the video?",
+      "signals": [
+        "reflection_consistency(lake)",
+        "frame_discontinuity(t)",
+        "hue_histogram_jump(lake)",
+        "reflection_consistency(oX)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "frame_discontinuity(t)": 40.0,
+        "reflection_consistency(lake)": 7.0,
+        "reflection_consistency(oX)": 7.0,
+        "hue_histogram_jump(lake)": 6.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Is the sky clear blue, and the lake calm turquoise with no falling hazards visible at any time?",
+      "signals": [
+        "material_optics(cloud)",
+        "hue_histogram_jump(cloud)",
+        "falling_hazard(oObj)",
+        "state_change(oObj,from:state,to:state)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "material_optics(cloud)": 37.5,
+        "state_change(oObj,from:state,to:state)": 7.5,
+        "hue_histogram_jump(cloud)": 6.6667,
+        "falling_hazard(oObj)": 6.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Do the snow-capped mountains above the lake show material optics that are physically plausible for their reflective properties?",
+      "signals": [
+        "falling_hazard(mountain)",
+        "falling_hazard(lake)",
+        "falling_hazard(cloud)",
+        "material_optics(oA)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "material_optics(oA)": 37.5,
+        "falling_hazard(mountain)": 6.3333,
+        "falling_hazard(lake)": 6.3333,
+        "falling_hazard(cloud)": 6.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Does the shape of the mountain and the water level of the lake remain natural and unchanged during the entire sequence?",
+      "signals": [
+        "continuity(mountain)",
+        "continuity(lake)",
+        "interpenetration(mountain,lake)",
+        "reflection_consistency(oX)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(mountain)": 36.6667,
+        "continuity(lake)": 7.3333,
+        "interpenetration(mountain,lake)": 7.1667,
+        "reflection_consistency(oX)": 7.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "The mountain's snowy peak and the lake below maintain consistent reflection and continuity.",
+      "signals": [
+        "reflection_consistency(mountain)",
+        "continuity(lake)",
+        "continuity(mountain)",
+        "interpenetration(mountain,lake)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(lake)": 36.6667,
+        "continuity(mountain)": 7.3333,
+        "interpenetration(mountain,lake)": 7.1667,
+        "reflection_consistency(mountain)": 7.0
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "The reflection of the mountains in the lake remains consistent with the actual scene.",
+      "signals": [
+        "reflection_consistency(lake)",
+        "frame_discontinuity(t)",
+        "hue_histogram_jump(lake)",
+        "reflection_consistency(oX)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "frame_discontinuity(t)": 40.0,
+        "reflection_consistency(lake)": 7.0,
+        "reflection_consistency(oX)": 7.0,
+        "hue_histogram_jump(lake)": 6.6667
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "The clouds remain as white-fluffy-clouds without material_optics anomalies.",
+      "signals": [
+        "material_optics(cloud)",
+        "hue_histogram_jump(cloud)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "material_optics(cloud)": 37.5,
+        "hue_histogram_jump(cloud)": 6.6667
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "The snow-capped mountains exhibit material optics consistent with their reflective properties.",
+      "signals": [
+        "material_optics(oA)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 37.5,
+      "total_score_100": 97.5,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "material_optics(oA)": 37.5
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "The clear blue sky and calm turquoise lake indicate a stable environment.",
+      "signals": [
+        "falling_hazard(oObj)",
+        "state_change(oObj,from:state,to:state)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "state_change(oObj,from:state,to:state)": 37.5,
+        "falling_hazard(oObj)": 6.3333
+      },
+      "content_score_raw": "50"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "v5",
+    "a1",
+    "a2",
+    "a3",
+    "a4",
+    "a5"
+  ]
+}

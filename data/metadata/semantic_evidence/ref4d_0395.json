@@ -1,0 +1,253 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0395.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "decord",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "car",
+        "attributes": {
+          "signature": [
+            "car-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            13.1
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "car",
+        "attributes": {
+          "signature": [
+            "car-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            13.1
+          ]
+        ]
+      },
+      {
+        "id": "o3",
+        "name": "person",
+        "attributes": {
+          "signature": [
+            "person-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            13.1
+          ]
+        ]
+      },
+      {
+        "id": "o4",
+        "name": "person",
+        "attributes": {
+          "signature": [
+            "person-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            13.1
+          ]
+        ]
+      },
+      {
+        "id": "o5",
+        "name": "person",
+        "attributes": {
+          "signature": [
+            "person-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            13.1
+          ]
+        ]
+      },
+      {
+        "id": "o6",
+        "name": "person",
+        "attributes": {
+          "signature": [
+            "person-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            13.1
+          ]
+        ]
+      },
+      {
+        "id": "o7",
+        "name": "person",
+        "attributes": {
+          "signature": [
+            "person-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            13.1
+          ]
+        ]
+      },
+      {
+        "id": "o8",
+        "name": "hat",
+        "attributes": {
+          "signature": [
+            "hat-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            13.1
+          ]
+        ]
+      },
+      {
+        "id": "o9",
+        "name": "hat",
+        "attributes": {
+          "signature": [
+            "hat-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            13.1
+          ]
+        ]
+      },
+      {
+        "id": "o10",
+        "name": "dress",
+        "attributes": {
+          "signature": [
+            "dress-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            13.1
+          ]
+        ]
+      },
+      {
+        "id": "o11",
+        "name": "suit",
+        "attributes": {
+          "signature": [
+            "suit-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            13.1
+          ]
+        ]
+      },
+      {
+        "id": "o12",
+        "name": "suit",
+        "attributes": {
+          "signature": [
+            "suit-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            13.1
+          ]
+        ]
+      },
+      {
+        "id": "o13",
+        "name": "door",
+        "attributes": {
+          "signature": [
+            "door-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            13.1
+          ]
+        ]
+      },
+      {
+        "id": "o14",
+        "name": "plant",
+        "attributes": {
+          "signature": [
+            "plant-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            13.1
+          ]
+        ]
+      },
+      {
+        "id": "o15",
+        "name": "text",
+        "attributes": {
+          "signature": [
+            "text-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            13.1
+          ]
+        ]
+      }
+    ],
+    "relations": []
+  },
+  "views": {
+    "objects_count_display": {
+      "car": 2,
+      "person": 5,
+      "hat": 2,
+      "dress": 1,
+      "suit": 2,
+      "door": 1,
+      "plant": 1,
+      "text": 1
+    }
+  }
+}

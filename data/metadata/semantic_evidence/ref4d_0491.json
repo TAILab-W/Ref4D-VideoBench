@@ -1,0 +1,122 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0491.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "decord",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "snowboarder",
+        "attributes": {
+          "color": [
+            "black",
+            "pink",
+            "purple"
+          ],
+          "action": [
+            "falling",
+            "performing-aerial-trick",
+            "snowboarding"
+          ],
+          "pose": [
+            "crouched",
+            "landing",
+            "mid-air"
+          ],
+          "equipment": [
+            "snowboard"
+          ],
+          "signature": [
+            "black-purple-pink-gloves-black-helmet"
+          ]
+        },
+        "spans": [
+          [
+            0.2,
+            3.7
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "snowboard",
+        "attributes": {
+          "color": [
+            "black"
+          ],
+          "pattern": [
+            "logo"
+          ],
+          "size": [
+            "large"
+          ],
+          "material": [
+            "plastic"
+          ],
+          "tool-or-instrument": [
+            "snowboard"
+          ],
+          "signature": [
+            "black-12-logo-pink-grip"
+          ]
+        },
+        "spans": [
+          [
+            0.8,
+            3.1
+          ]
+        ]
+      }
+    ],
+    "relations": [
+      {
+        "subject": "o1",
+        "predicate": "riding",
+        "object": "o2",
+        "spans": [
+          [
+            0.8,
+            1.9
+          ]
+        ],
+        "confidence": 0.9
+      },
+      {
+        "subject": "o1",
+        "predicate": "performing-aerial-trick",
+        "object": "o2",
+        "spans": [
+          [
+            1.4,
+            2.5
+          ]
+        ],
+        "confidence": 0.9
+      },
+      {
+        "subject": "o1",
+        "predicate": "falling",
+        "object": "o2",
+        "spans": [
+          [
+            2.6,
+            3.7
+          ]
+        ],
+        "confidence": 0.9
+      }
+    ]
+  },
+  "views": {
+    "objects_count_display": {
+      "snowboarder": 1,
+      "snowboard": 1
+    }
+  }
+}

@@ -1,0 +1,227 @@
+{
+  "summary": {
+    "items": 10,
+    "enter_bank": 10,
+    "clip_range_sec": [
+      0.0,
+      7.4
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does the player in black shorts avoid colliding with other players while moving?",
+      "signals": [
+        "biological_motion(oA)",
+        "balance(oX)",
+        "collision(oA,oB)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "biological_motion(oA)": 38.3333,
+        "balance(oX)": 7.1667,
+        "collision(oA,oB)": 6.3333
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Does the sand support the standing and jumping actions of the volleyball players?",
+      "signals": [
+        "support(oA,oB)",
+        "support(foot,sand)",
+        "placeable(ball,on:net)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "support(oA,oB)": 35.0,
+        "support(foot,sand)": 7.0,
+        "placeable(ball,on:net)": 5.1667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Does the ball follow a continuous trajectory after being hit by the hand, maintaining its shape without sudden size inconsistency?",
+      "signals": [
+        "trajectory_dir(oX,axis)",
+        "accel_sign(oX,axis)",
+        "continuity(ball)",
+        "size_inconsistency(ball)",
+        "interpenetration(ball,other)",
+        "deformation(ball)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "deformation(ball)": 40.0,
+        "trajectory_dir(oX,axis)": 7.6667,
+        "size_inconsistency(ball)": 7.5,
+        "continuity(ball)": 7.3333,
+        "interpenetration(ball,other)": 7.1667,
+        "accel_sign(oX,axis)": 7.0
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Do the players on the sandy court maintain safe distances to avoid collisions or unsafe hazards?",
+      "signals": [
+        "collision(oA,oB)",
+        "falling_hazard(no)",
+        "prohibited_intersection(no)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "prohibited_intersection(no)": 36.6667,
+        "collision(oA,oB)": 6.3333,
+        "falling_hazard(no)": 6.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Do the players move according to beach volleyball rules when interacting with the sand surface?",
+      "signals": [
+        "biological_motion(oA)",
+        "support(oA,oB)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "biological_motion(oA)": 38.3333,
+        "support(oA,oB)": 7.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "Players hit the black sports ball with their hands during the game.",
+      "signals": [
+        "biological_motion(oA)",
+        "trajectory_dir(oX,axis)",
+        "accel_sign(oX,axis)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "biological_motion(oA)": 38.3333,
+        "trajectory_dir(oX,axis)": 7.6667,
+        "accel_sign(oX,axis)": 7.0
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "The sand surface supports players standing and jumping on the court.",
+      "signals": [
+        "support(oA,oB)",
+        "support(foot,sand)",
+        "placeable(ball,on:net)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "support(oA,oB)": 35.0,
+        "support(foot,sand)": 7.0,
+        "placeable(ball,on:net)": 5.1667
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "A player in a blue shirt runs near other players without colliding.",
+      "signals": [
+        "balance(oX)",
+        "collision(oA,oB)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "balance(oX)": 35.8333,
+        "collision(oA,oB)": 6.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "The volleyball follows a continuous trajectory through the air above the net.",
+      "signals": [
+        "continuity(ball)",
+        "size_inconsistency(ball)",
+        "interpenetration(ball,other)",
+        "deformation(ball)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "deformation(ball)": 40.0,
+        "size_inconsistency(ball)": 7.5,
+        "continuity(ball)": 7.3333,
+        "interpenetration(ball,other)": 7.1667
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "There are no visible falling hazards or prohibited intersections around the sandy area.",
+      "signals": [
+        "falling_hazard(no)",
+        "prohibited_intersection(no)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "prohibited_intersection(no)": 36.6667,
+        "falling_hazard(no)": 6.3333
+      },
+      "content_score_raw": "50"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "v5",
+    "a1",
+    "a2",
+    "a3",
+    "a4",
+    "a5"
+  ]
+}

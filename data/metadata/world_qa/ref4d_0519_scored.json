@@ -1,0 +1,218 @@
+{
+  "summary": {
+    "items": 10,
+    "enter_bank": 9,
+    "clip_range_sec": [
+      0.0,
+      19.3
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does the train follow a smooth trajectory along the track without abrupt changes in direction or speed?",
+      "signals": [
+        "trajectory_dir(train,axis)",
+        "continuity(train)",
+        "trajectory_dir(oX,axis)",
+        "accel_sign(oX,axis)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(train,axis)": 38.3333,
+        "trajectory_dir(oX,axis)": 7.6667,
+        "continuity(train)": 7.3333,
+        "accel_sign(oX,axis)": 7.0
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Does the reflection of the train in the water maintain continuity and consistency with the actual train throughout the scene?",
+      "signals": [
+        "reflection_consistency(oX)",
+        "continuity(oX)",
+        "reflection_consistency(train)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(oX)": 36.6667,
+        "reflection_consistency(oX)": 7.0,
+        "reflection_consistency(train)": 7.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Does the train's movement align with real-world physics and its surrounding environment, showing no physical anomalies?",
+      "signals": [
+        "continuity(train)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 36.67,
+      "total_score_100": 86.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(train)": 36.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Does the train move consistently on the designated track, maintaining correct ground contact during motion?",
+      "signals": [
+        "trajectory_dir(train,axis)",
+        "accel_sign(train,axis)",
+        "trajectory_dir(train,ground,axis)",
+        "accel_sign(train,ground,axis)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(train,axis)": 38.3333,
+        "trajectory_dir(train,ground,axis)": 7.6667,
+        "accel_sign(train,axis)": 7.0,
+        "accel_sign(train,ground,axis)": 7.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Does the shadow of the train remain consistent with its position and orientation relative to the platform?",
+      "signals": [
+        "shadow_consistency(train)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 36.67,
+      "total_score_100": 86.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "shadow_consistency(train)": 36.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "The train's reflection in the water maintains continuity and consistency with the actual object.",
+      "signals": [
+        "reflection_consistency(oX)",
+        "continuity(oX)",
+        "trajectory_dir(train,axis)",
+        "accel_sign(train,axis)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(train,axis)": 38.3333,
+        "continuity(oX)": 7.3333,
+        "reflection_consistency(oX)": 7.0,
+        "accel_sign(train,axis)": 7.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "The train follows a smooth trajectory along the track without abrupt changes in direction or speed.",
+      "signals": [
+        "trajectory_dir(oX,axis)",
+        "accel_sign(oX,axis)",
+        "trajectory_dir(train,ground,axis)",
+        "accel_sign(train,ground,axis)"
+      ],
+      "content_score_60": 33,
+      "signal_score_40": 40.0,
+      "total_score_100": 73.0,
+      "duplicate_penalized": true,
+      "signal_detail": {
+        "trajectory_dir(oX,axis)": 38.3333,
+        "trajectory_dir(train,ground,axis)": 7.6667,
+        "accel_sign(oX,axis)": 7.0,
+        "accel_sign(train,ground,axis)": 7.0
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "The train moves consistently on the tracks, maintaining its designated path.",
+      "signals": [
+        "continuity(train)",
+        "trajectory_dir(train,axis)",
+        "accel_sign(train,axis)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(train,axis)": 38.3333,
+        "continuity(train)": 7.3333,
+        "accel_sign(train,axis)": 7.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "The train's trajectory is continuous and consistent with the surrounding environment.",
+      "signals": [
+        "continuity(train)",
+        "shadow_consistency(train)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(train)": 36.6667,
+        "shadow_consistency(train)": 7.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "The high-speed train travels at very high speeds while remaining stable on the elevated track.",
+      "signals": [
+        "rigid_transform(train)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 37.5,
+      "total_score_100": 87.5,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "rigid_transform(train)": 37.5
+      },
+      "content_score_raw": "50"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "v5",
+    "a1",
+    "a3",
+    "a4",
+    "a5"
+  ]
+}

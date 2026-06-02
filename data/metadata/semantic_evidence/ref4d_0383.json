@@ -1,0 +1,125 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0383.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "decord",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "train",
+        "attributes": {
+          "color": [
+            "red",
+            "white"
+          ],
+          "action": [
+            "passing"
+          ],
+          "position": [
+            "background"
+          ],
+          "signature": [
+            "red-white-side"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            0.5
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "person",
+        "attributes": {
+          "color": [
+            "beige",
+            "black",
+            "white"
+          ],
+          "accessory": [
+            "bow",
+            "scarf"
+          ],
+          "action": [
+            "looking-around",
+            "standing"
+          ],
+          "position": [
+            "foreground"
+          ],
+          "signature": [
+            "black-jacket-beige-scarf-white-bow"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            0.6
+          ]
+        ]
+      },
+      {
+        "id": "o3",
+        "name": "person",
+        "attributes": {
+          "action": [
+            "waiting",
+            "walking"
+          ],
+          "position": [
+            "background"
+          ],
+          "signature": [
+            "crowded-background"
+          ]
+        },
+        "spans": [
+          [
+            0.4,
+            0.7
+          ]
+        ]
+      }
+    ],
+    "relations": [
+      {
+        "subject": "o2",
+        "predicate": "wearing",
+        "object": "o2",
+        "spans": [
+          [
+            0.0,
+            0.6
+          ]
+        ],
+        "confidence": 0.9
+      },
+      {
+        "subject": "o2",
+        "predicate": "looking-at",
+        "object": "o1",
+        "spans": [
+          [
+            0.0,
+            0.6
+          ]
+        ],
+        "confidence": 0.8
+      }
+    ]
+  },
+  "views": {
+    "objects_count_display": {
+      "train": 1,
+      "person": 2
+    }
+  }
+}

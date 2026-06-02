@@ -1,0 +1,134 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0089.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "cv2",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "bee",
+        "attributes": {
+          "color": [
+            "black",
+            "brown"
+          ],
+          "pattern": [
+            "striped"
+          ],
+          "pose": [
+            "standing"
+          ],
+          "action": [
+            "interacting"
+          ],
+          "orientation": [
+            "left-facing"
+          ],
+          "facing-direction": [
+            "left"
+          ],
+          "signature": [
+            "left-facing-bee-with-striped-body-and-visible-wings"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            4.0
+          ],
+          [
+            5.0,
+            8.3
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "bee",
+        "attributes": {
+          "color": [
+            "black",
+            "brown"
+          ],
+          "pattern": [
+            "striped"
+          ],
+          "pose": [
+            "standing"
+          ],
+          "action": [
+            "interacting"
+          ],
+          "orientation": [
+            "right-facing"
+          ],
+          "facing-direction": [
+            "right"
+          ],
+          "signature": [
+            "right-facing-bee-with-striped-body-and-visible-wings"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            4.0
+          ],
+          [
+            5.0,
+            8.3
+          ]
+        ]
+      }
+    ],
+    "relations": [
+      {
+        "subject": "o1",
+        "predicate": "touching",
+        "object": "o2",
+        "spans": [
+          [
+            0.5,
+            1.0
+          ]
+        ],
+        "confidence": 0.9
+      },
+      {
+        "subject": "o1",
+        "predicate": "left-of",
+        "object": "o2",
+        "spans": [
+          [
+            0.3,
+            0.7
+          ]
+        ],
+        "confidence": 0.8
+      },
+      {
+        "subject": "o2",
+        "predicate": "right-of",
+        "object": "o1",
+        "spans": [
+          [
+            0.3,
+            0.7
+          ]
+        ],
+        "confidence": 0.8
+      }
+    ]
+  },
+  "views": {
+    "objects_count_display": {
+      "bee": 2
+    }
+  }
+}

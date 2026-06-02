@@ -1,0 +1,100 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0108.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "cv2",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "building",
+        "attributes": {
+          "signature": [
+            "modern-skyscraper-with-glass-facade"
+          ]
+        },
+        "spans": [
+          [
+            0.1,
+            8.0
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "crane",
+        "attributes": {
+          "signature": [
+            "red-construction-crane"
+          ]
+        },
+        "spans": [
+          [
+            0.5,
+            5.9
+          ]
+        ]
+      },
+      {
+        "id": "o3",
+        "name": "bridge",
+        "attributes": {
+          "signature": [
+            "green-arched-bridge"
+          ]
+        },
+        "spans": [
+          [
+            0.1,
+            1.0
+          ]
+        ]
+      },
+      {
+        "id": "o4",
+        "name": "water",
+        "attributes": {
+          "signature": [
+            "river-in-foreground"
+          ]
+        },
+        "spans": [
+          [
+            0.1,
+            1.0
+          ]
+        ]
+      },
+      {
+        "id": "o5",
+        "name": "sky",
+        "attributes": {
+          "signature": [
+            "overcast-sky-with-dark-clouds"
+          ]
+        },
+        "spans": [
+          [
+            0.1,
+            1.0
+          ]
+        ]
+      }
+    ],
+    "relations": []
+  },
+  "views": {
+    "objects_count_display": {
+      "building": 1,
+      "crane": 1,
+      "bridge": 1,
+      "water": 1,
+      "sky": 1
+    }
+  }
+}

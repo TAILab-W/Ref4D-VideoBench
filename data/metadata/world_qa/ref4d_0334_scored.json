@@ -1,0 +1,205 @@
+{
+  "summary": {
+    "items": 10,
+    "enter_bank": 10,
+    "clip_range_sec": [
+      0.0,
+      5.87
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does the sun's position follow a natural downward trajectory during sunset?",
+      "signals": [
+        "trajectory_dir(sun,axis)",
+        "continuity(sun)",
+        "shadow_consistency(mountain)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(sun,axis)": 38.3333,
+        "continuity(sun)": 7.3333,
+        "shadow_consistency(mountain)": 7.3333
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Is the snow cap on the mountain peak white and reflective under sunlight?",
+      "signals": [
+        "material_optics(mountain)",
+        "material_optics(snow)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "material_optics(mountain)": 37.5,
+        "material_optics(snow)": 7.5
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Does the shadow of the mountain align with its shape, pointing towards the lower left?",
+      "signals": [
+        "shadow_consistency(mountain)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 36.67,
+      "total_score_100": 91.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "shadow_consistency(mountain)": 36.6667
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Does the length of the mountain's shadow increase as the sun sets lower?",
+      "signals": [
+        "trajectory_dir(sun,axis)",
+        "continuity(sun)",
+        "shadow_consistency(mountain)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(sun,axis)": 38.3333,
+        "continuity(sun)": 7.3333,
+        "shadow_consistency(mountain)": 7.3333
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Are the dark areas on the snow cap consistent with natural shading from sunlight?",
+      "signals": [
+        "material_optics(mountain)",
+        "shadow_consistency(mountain)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "material_optics(mountain)": 37.5,
+        "shadow_consistency(mountain)": 7.3333
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "The sun is low on the horizon, casting light rays upward.",
+      "signals": [
+        "trajectory_dir(sun,axis)",
+        "continuity(sun)",
+        "material_optics(mountain)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(sun,axis)": 38.3333,
+        "material_optics(mountain)": 7.5,
+        "continuity(sun)": 7.3333
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "The mountain's shadow extends to the right side of the frame.",
+      "signals": [
+        "shadow_consistency(mountain)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 36.67,
+      "total_score_100": 91.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "shadow_consistency(mountain)": 36.6667
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "The snow cap reflects sunlight directly from the setting sun.",
+      "signals": [
+        "shadow_consistency(mountain)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 36.67,
+      "total_score_100": 91.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "shadow_consistency(mountain)": 36.6667
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "The light rays from the sun follow a natural upward trajectory.",
+      "signals": [
+        "trajectory_dir(sun,axis)",
+        "continuity(sun)",
+        "material_optics(snow)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(sun,axis)": 38.3333,
+        "material_optics(snow)": 7.5,
+        "continuity(sun)": 7.3333
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "The snow on the mountain peak has consistent material optics with warm lighting.",
+      "signals": [
+        "material_optics(mountain)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 37.5,
+      "total_score_100": 92.5,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "material_optics(mountain)": 37.5
+      },
+      "content_score_raw": "55"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "v5",
+    "a1",
+    "a2",
+    "a3",
+    "a4",
+    "a5"
+  ]
+}

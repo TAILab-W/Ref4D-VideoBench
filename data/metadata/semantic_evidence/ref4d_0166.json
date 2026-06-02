@@ -1,0 +1,136 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0166.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "cv2",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "box",
+        "attributes": {
+          "color": [
+            "white"
+          ],
+          "pattern": [
+            "text"
+          ],
+          "material": [
+            "paper"
+          ],
+          "size": [
+            "small"
+          ],
+          "state": [
+            "being-opened",
+            "closed"
+          ],
+          "action": [
+            "holding",
+            "peeling"
+          ],
+          "orientation": [
+            "upright"
+          ],
+          "facing-direction": [
+            "back"
+          ],
+          "position": [
+            "center"
+          ],
+          "brand": [
+            "google-pixel-7-pro"
+          ],
+          "model": [
+            "pixel-7-pro"
+          ],
+          "product-type": [
+            "smartphone-packaging"
+          ],
+          "signature": [
+            "white-back-side-with-black-text-and-qr-code"
+          ]
+        },
+        "spans": [
+          [
+            0.2,
+            0.8
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "hand",
+        "attributes": {
+          "color": [
+            "skin-tone"
+          ],
+          "sex": [
+            "male"
+          ],
+          "pose": [
+            "holding"
+          ],
+          "action": [
+            "peeling",
+            "rotating"
+          ],
+          "object-part": [
+            "index-finger",
+            "palm",
+            "thumb"
+          ],
+          "tool-or-instrument": [
+            "watch"
+          ],
+          "signature": [
+            "left-hand-with-watch-and-right-hand-with-clean-nails"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            0.9
+          ]
+        ]
+      }
+    ],
+    "relations": [
+      {
+        "subject": "o2",
+        "predicate": "holding",
+        "object": "o1",
+        "spans": [
+          [
+            0.5,
+            0.9
+          ]
+        ],
+        "confidence": 0.8
+      },
+      {
+        "subject": "o2",
+        "predicate": "peeling",
+        "object": "o1",
+        "spans": [
+          [
+            0.3,
+            0.6
+          ]
+        ],
+        "confidence": 0.8
+      }
+    ]
+  },
+  "views": {
+    "objects_count_display": {
+      "box": 1,
+      "hand": 1
+    }
+  }
+}

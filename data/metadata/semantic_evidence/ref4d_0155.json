@@ -1,0 +1,84 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0155.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "cv2",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "building",
+        "attributes": {
+          "signature": [
+            "building-coarse"
+          ]
+        },
+        "spans": [
+          [
+            5.3,
+            8.8
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "dome",
+        "attributes": {
+          "signature": [
+            "dome-coarse"
+          ]
+        },
+        "spans": [
+          [
+            5.3,
+            8.8
+          ]
+        ]
+      },
+      {
+        "id": "o3",
+        "name": "garden",
+        "attributes": {
+          "signature": [
+            "garden-coarse"
+          ]
+        },
+        "spans": [
+          [
+            5.3,
+            8.8
+          ]
+        ]
+      },
+      {
+        "id": "o4",
+        "name": "path",
+        "attributes": {
+          "signature": [
+            "path-coarse"
+          ]
+        },
+        "spans": [
+          [
+            5.3,
+            8.8
+          ]
+        ]
+      }
+    ],
+    "relations": []
+  },
+  "views": {
+    "objects_count_display": {
+      "building": 1,
+      "dome": 1,
+      "garden": 1,
+      "path": 1
+    }
+  }
+}

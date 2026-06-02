@@ -1,0 +1,216 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0266.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "cv2",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "person",
+        "attributes": {
+          "color": [
+            "blue",
+            "pink"
+          ],
+          "sex": [
+            "male"
+          ],
+          "action": [
+            "hammering",
+            "manipulating"
+          ],
+          "pose": [
+            "standing"
+          ],
+          "facing-direction": [
+            "right-facing"
+          ],
+          "signature": [
+            "pink-shirt-blue-gloves-right-hand"
+          ]
+        },
+        "spans": [
+          [
+            0.6,
+            9.1
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "hammer",
+        "attributes": {
+          "material": [
+            "metal"
+          ],
+          "color": [
+            "gray"
+          ],
+          "state": [
+            "moving"
+          ],
+          "signature": [
+            "large-metal-hammer-head"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            9.1
+          ]
+        ]
+      },
+      {
+        "id": "o3",
+        "name": "anvil",
+        "attributes": {
+          "color": [
+            "black"
+          ],
+          "material": [
+            "metal"
+          ],
+          "texture": [
+            "rough"
+          ],
+          "signature": [
+            "black-anvil-with-texture"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            9.1
+          ]
+        ]
+      },
+      {
+        "id": "o4",
+        "name": "tongs",
+        "attributes": {
+          "material": [
+            "metal"
+          ],
+          "color": [
+            "gray"
+          ],
+          "state": [
+            "open"
+          ],
+          "signature": [
+            "metal-tongs-held-by-person"
+          ]
+        },
+        "spans": [
+          [
+            0.7,
+            9.1
+          ]
+        ]
+      },
+      {
+        "id": "o5",
+        "name": "metal",
+        "attributes": {
+          "color": [
+            "orange",
+            "red"
+          ],
+          "material": [
+            "metal"
+          ],
+          "state": [
+            "glowing",
+            "hot"
+          ],
+          "signature": [
+            "bright-orange-hot-metal-piece"
+          ]
+        },
+        "spans": [
+          [
+            0.2,
+            9.1
+          ]
+        ]
+      }
+    ],
+    "relations": [
+      {
+        "subject": "o1",
+        "predicate": "holding",
+        "object": "o4",
+        "spans": [
+          [
+            7.0,
+            8.5
+          ]
+        ],
+        "confidence": 0.9
+      },
+      {
+        "subject": "o1",
+        "predicate": "manipulating",
+        "object": "o5",
+        "spans": [
+          [
+            0.6,
+            9.1
+          ]
+        ],
+        "confidence": 0.9
+      },
+      {
+        "subject": "o2",
+        "predicate": "touching",
+        "object": "o3",
+        "spans": [
+          [
+            0.0,
+            9.1
+          ]
+        ],
+        "confidence": 0.9
+      },
+      {
+        "subject": "o2",
+        "predicate": "touching",
+        "object": "o5",
+        "spans": [
+          [
+            0.0,
+            9.1
+          ]
+        ],
+        "confidence": 0.9
+      },
+      {
+        "subject": "o3",
+        "predicate": "on",
+        "object": "o5",
+        "spans": [
+          [
+            0.0,
+            9.1
+          ]
+        ],
+        "confidence": 0.9
+      }
+    ]
+  },
+  "views": {
+    "objects_count_display": {
+      "person": 1,
+      "hammer": 1,
+      "anvil": 1,
+      "tongs": 1,
+      "metal": 1
+    }
+  }
+}

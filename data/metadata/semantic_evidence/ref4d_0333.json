@@ -1,0 +1,155 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0333.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "decord",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "sky",
+        "attributes": {
+          "color": [
+            "blue",
+            "gray",
+            "orange",
+            "pink",
+            "yellow"
+          ],
+          "pattern": [
+            "cloudy"
+          ],
+          "texture": [
+            "smooth"
+          ],
+          "signature": [
+            "blue-gray-orange-yellow-pink-clouds"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            9.3
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "sea",
+        "attributes": {
+          "color": [
+            "blue",
+            "orange",
+            "pink",
+            "yellow"
+          ],
+          "pattern": [
+            "wavy"
+          ],
+          "texture": [
+            "smooth"
+          ],
+          "signature": [
+            "wavy-water-reflecting-sunset"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            9.3
+          ]
+        ]
+      },
+      {
+        "id": "o3",
+        "name": "beach",
+        "attributes": {
+          "color": [
+            "brown",
+            "tan"
+          ],
+          "pattern": [
+            "wet"
+          ],
+          "texture": [
+            "smooth"
+          ],
+          "signature": [
+            "wet-sandy-shore"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            9.3
+          ]
+        ]
+      },
+      {
+        "id": "o4",
+        "name": "waves",
+        "attributes": {
+          "color": [
+            "blue",
+            "orange",
+            "white"
+          ],
+          "pattern": [
+            "foamy"
+          ],
+          "texture": [
+            "smooth"
+          ],
+          "signature": [
+            "small-foamy-waves"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            9.3
+          ]
+        ]
+      }
+    ],
+    "relations": [
+      {
+        "subject": "o1",
+        "predicate": "left-of",
+        "object": "o2",
+        "spans": [
+          [
+            0.0,
+            0.3
+          ]
+        ],
+        "confidence": 0.8
+      },
+      {
+        "subject": "o1",
+        "predicate": "right-of",
+        "object": "o2",
+        "spans": [
+          [
+            0.7,
+            1.0
+          ]
+        ],
+        "confidence": 0.8
+      }
+    ]
+  },
+  "views": {
+    "objects_count_display": {
+      "sky": 1,
+      "sea": 1,
+      "beach": 1,
+      "waves": 1
+    }
+  }
+}

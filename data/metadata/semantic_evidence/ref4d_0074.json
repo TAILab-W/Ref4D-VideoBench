@@ -1,0 +1,61 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0074.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "cv2",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "gorilla",
+        "attributes": {
+          "color": [
+            "black"
+          ],
+          "texture": [
+            "fuzzy"
+          ],
+          "pose": [
+            "sitting"
+          ],
+          "action": [
+            "arm-crossed",
+            "resting"
+          ],
+          "orientation": [
+            "left-facing"
+          ],
+          "facing-direction": [
+            "left"
+          ],
+          "fur-style": [
+            "thick"
+          ],
+          "body-position": [
+            "slightly-leaning-back"
+          ],
+          "signature": [
+            "black-fuzzy-sitting-with-arm-crossed"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            7.2
+          ]
+        ]
+      }
+    ],
+    "relations": []
+  },
+  "views": {
+    "objects_count_display": {
+      "gorilla": 1
+    }
+  }
+}

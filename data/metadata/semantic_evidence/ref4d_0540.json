@@ -1,0 +1,137 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0540.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "cv2",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "tram",
+        "attributes": {
+          "color": [
+            "blue",
+            "white"
+          ],
+          "pattern": [
+            "striped"
+          ],
+          "size": [
+            "large"
+          ],
+          "vehicle-type": [
+            "tram"
+          ],
+          "printed-text": [
+            "zürich-tram",
+            "zürich-tram-ag"
+          ],
+          "signature": [
+            "blue-white-tram-14-route-number-4009"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            9.5
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "person",
+        "attributes": {
+          "sex": [
+            "male"
+          ],
+          "action": [
+            "sitting"
+          ],
+          "state": [
+            "visible-through-window"
+          ],
+          "signature": [
+            "passenger-in-window-seat"
+          ]
+        },
+        "spans": [
+          [
+            0.3,
+            0.9
+          ]
+        ]
+      },
+      {
+        "id": "o3",
+        "name": "crane",
+        "attributes": {
+          "color": [
+            "yellow"
+          ],
+          "position": [
+            "left"
+          ],
+          "signature": [
+            "yellow-cranecab-on-top-of-building"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            9.5
+          ]
+        ]
+      }
+    ],
+    "relations": [
+      {
+        "subject": "o1",
+        "predicate": "left-of",
+        "object": "o2",
+        "spans": [
+          [
+            0.0,
+            9.5
+          ]
+        ],
+        "confidence": 0.8
+      },
+      {
+        "subject": "o1",
+        "predicate": "left-of",
+        "object": "o3",
+        "spans": [
+          [
+            0.0,
+            9.5
+          ]
+        ],
+        "confidence": 0.8
+      },
+      {
+        "subject": "o2",
+        "predicate": "inside",
+        "object": "o1",
+        "spans": [
+          [
+            0.3,
+            0.9
+          ]
+        ],
+        "confidence": 0.9
+      }
+    ]
+  },
+  "views": {
+    "objects_count_display": {
+      "tram": 1,
+      "person": 1,
+      "crane": 1
+    }
+  }
+}

@@ -1,0 +1,145 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0402.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "decord",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "car",
+        "attributes": {
+          "signature": [
+            "car-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            7.2
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "tree",
+        "attributes": {
+          "signature": [
+            "tree-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            7.2
+          ]
+        ]
+      },
+      {
+        "id": "o3",
+        "name": "tree",
+        "attributes": {
+          "signature": [
+            "tree-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            7.2
+          ]
+        ]
+      },
+      {
+        "id": "o4",
+        "name": "building",
+        "attributes": {
+          "signature": [
+            "building-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            7.2
+          ]
+        ]
+      },
+      {
+        "id": "o5",
+        "name": "sign",
+        "attributes": {
+          "signature": [
+            "sign-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            7.2
+          ]
+        ]
+      },
+      {
+        "id": "o6",
+        "name": "sign",
+        "attributes": {
+          "signature": [
+            "sign-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            7.2
+          ]
+        ]
+      },
+      {
+        "id": "o7",
+        "name": "umbrella",
+        "attributes": {
+          "signature": [
+            "umbrella-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            7.2
+          ]
+        ]
+      },
+      {
+        "id": "o8",
+        "name": "umbrella",
+        "attributes": {
+          "signature": [
+            "umbrella-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            7.2
+          ]
+        ]
+      }
+    ],
+    "relations": []
+  },
+  "views": {
+    "objects_count_display": {
+      "car": 1,
+      "tree": 2,
+      "building": 1,
+      "sign": 2,
+      "umbrella": 2
+    }
+  }
+}

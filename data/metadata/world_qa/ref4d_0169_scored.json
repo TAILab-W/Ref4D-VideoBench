@@ -1,0 +1,213 @@
+{
+  "summary": {
+    "items": 10,
+    "enter_bank": 10,
+    "clip_range_sec": [
+      0.0,
+      7.6
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does the airsoft gun touch any other object besides the person's hand?",
+      "signals": [
+        "interpenetration(oA,oB)",
+        "collision(oA,oB)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "interpenetration(oA,oB)": 35.8333,
+        "collision(oA,oB)": 6.3333
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Is the rifle held in a way that maintains its balance and stability throughout the clip?",
+      "signals": [
+        "frame_discontinuity(t)",
+        "rigid_transform(oX)"
+      ],
+      "content_score_60": 40,
+      "signal_score_40": 40.0,
+      "total_score_100": 80.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "frame_discontinuity(t)": 40.0,
+        "rigid_transform(oX)": 7.5
+      },
+      "content_score_raw": "40"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Is the scope of the rifle aligned properly with the barrel?",
+      "signals": [
+        "trajectory_dir(rifle,axis)",
+        "friction_sliding(rifle,on:ground)",
+        "biological_motion(person)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(rifle,axis)": 38.3333,
+        "biological_motion(person)": 7.6667,
+        "friction_sliding(rifle,on:ground)": 6.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Does the airsoft gun pose a falling hazard to others in the scene?",
+      "signals": [
+        "falling_hazard(oObj)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 31.67,
+      "total_score_100": 81.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "falling_hazard(oObj)": 31.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Is the rifle held with its scope properly aligned and not twisted?",
+      "signals": [
+        "balance(rifle)",
+        "tool_contact(hand,rifle)",
+        "grasp_stability(hand,rifle)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "balance(rifle)": 35.8333,
+        "tool_contact(hand,rifle)": 5.6667,
+        "grasp_stability(hand,rifle)": 5.6667
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "The airsoft gun is held by the person without interpenetration or collision with other objects.",
+      "signals": [
+        "interpenetration(oA,oB)",
+        "collision(oA,oB)",
+        "frame_discontinuity(t)",
+        "rigid_transform(oX)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "frame_discontinuity(t)": 40.0,
+        "rigid_transform(oX)": 7.5,
+        "interpenetration(oA,oB)": 7.1667,
+        "collision(oA,oB)": 6.3333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "The rifle maintains balance and stability, scope aligned properly throughout the video.",
+      "signals": [
+        "balance(rifle)",
+        "tool_contact(hand,rifle)",
+        "grasp_stability(hand,rifle)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "balance(rifle)": 35.8333,
+        "tool_contact(hand,rifle)": 5.6667,
+        "grasp_stability(hand,rifle)": 5.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "The rifle is pointed away from the person.",
+      "signals": [
+        "trajectory_dir(rifle,axis)",
+        "friction_sliding(rifle,on:ground)",
+        "biological_motion(person)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(rifle,axis)": 38.3333,
+        "biological_motion(person)": 7.6667,
+        "friction_sliding(rifle,on:ground)": 6.0
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "The airsoft gun's position and orientation relative to the person's hand remains continuous.",
+      "signals": [
+        "frame_discontinuity(t)",
+        "rigid_transform(oX)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "frame_discontinuity(t)": 40.0,
+        "rigid_transform(oX)": 7.5
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "The rifle is held in a manner that does not pose a falling hazard.",
+      "signals": [
+        "falling_hazard(oObj)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 31.67,
+      "total_score_100": 81.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "falling_hazard(oObj)": 31.6667
+      },
+      "content_score_raw": "50"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "v5",
+    "a1",
+    "a2",
+    "a3",
+    "a4",
+    "a5"
+  ]
+}

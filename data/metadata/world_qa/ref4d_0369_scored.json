@@ -1,0 +1,200 @@
+{
+  "summary": {
+    "items": 10,
+    "enter_bank": 9,
+    "clip_range_sec": [
+      0.0,
+      9.93
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does the water flow continuously over rocks without sudden trajectory changes?",
+      "signals": [
+        "continuity(water)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 36.67,
+      "total_score_100": 86.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(water)": 36.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Do large dark gray rocks on the riverbed remain stable and stationary trees in the background exist simultaneously?",
+      "signals": [
+        "balance(rock)",
+        "deformation(rock)",
+        "rigid_transform(trees)",
+        "interpenetration(trees,rocks)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "deformation(rock)": 40.0,
+        "rigid_transform(trees)": 7.5,
+        "balance(rock)": 7.1667,
+        "interpenetration(trees,rocks)": 7.1667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Do tree shadows align consistently with their positions throughout the clip?",
+      "signals": [
+        "tilt_angle_threshold(tree,deg)",
+        "shadow_consistency(tree)",
+        "shadow_consistency(rocks)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "shadow_consistency(tree)": 36.6667,
+        "shadow_consistency(rocks)": 7.3333,
+        "tilt_angle_threshold(tree,deg)": 7.1667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Is there a falling hazard from fast-flowing river water near exposed rocks?",
+      "signals": [
+        "falling_hazard(water)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 31.67,
+      "total_score_100": 81.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "falling_hazard(water)": 31.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Are there no high unstable surfaces causing potential falling hazards?",
+      "signals": [
+        "falling_hazard(rocks)"
+      ],
+      "content_score_60": 30,
+      "signal_score_40": 31.67,
+      "total_score_100": 61.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "falling_hazard(rocks)": 31.6667
+      },
+      "content_score_raw": "30"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "Water flows continuously over rocks and through the riverbed without sudden interruptions.",
+      "signals": [
+        "continuity(water)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 36.67,
+      "total_score_100": 96.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(water)": 36.6667
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "Large dark gray rocks on the riverbed remain stable with no unexpected movement.",
+      "signals": [
+        "balance(rock)",
+        "deformation(rock)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "deformation(rock)": 40.0,
+        "balance(rock)": 7.1667
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "Trees and vegetation in the background are stationary with no rigid transform or interpenetration.",
+      "signals": [
+        "rigid_transform(trees)",
+        "interpenetration(trees,rocks)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "rigid_transform(trees)": 37.5,
+        "interpenetration(trees,rocks)": 7.1667
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "Trees along the riverbank stand upright with consistent tilt angles reflecting natural gravitational forces.",
+      "signals": [
+        "tilt_angle_threshold(tree,deg)",
+        "shadow_consistency(tree)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "shadow_consistency(tree)": 36.6667,
+        "tilt_angle_threshold(tree,deg)": 7.1667
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "Shadows cast by rocks and trees align consistently with their positions and light sources.",
+      "signals": [
+        "shadow_consistency(rocks)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 36.67,
+      "total_score_100": 96.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "shadow_consistency(rocks)": 36.6667
+      },
+      "content_score_raw": "60"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "a1",
+    "a2",
+    "a3",
+    "a4",
+    "a5"
+  ]
+}

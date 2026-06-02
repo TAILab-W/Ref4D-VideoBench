@@ -1,0 +1,33 @@
+name: ref4d_semantic_world
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.10
+  - pip
+  - ffmpeg
+  - pip:
+      - torch==2.5.1
+      - torchvision==0.20.1
+      - torchaudio==2.5.1
+      - numpy==1.26.4
+      - scipy>=1.10
+      - pandas>=1.5
+      - opencv-python-headless>=4.8,<5
+      - decord==0.6.0
+      - transformers==4.56.1
+      - accelerate>=1.0
+      - sentencepiece>=0.2
+      - safetensors
+      - huggingface-hub>=0.35,<1.0
+      - tokenizers
+      - tqdm
+      - pyyaml
+      - pillow
+      - einops
+      - imageio-ffmpeg
+      - ffmpeg-python
+      - scikit-learn
+      - google-api-python-client
+      - yt-dlp
+      - scenedetect>=0.6.7

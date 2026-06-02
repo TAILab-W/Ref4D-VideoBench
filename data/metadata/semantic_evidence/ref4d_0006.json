@@ -1,0 +1,152 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0006.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "cv2",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "fish",
+        "attributes": {
+          "color": [
+            "black",
+            "white",
+            "yellow"
+          ],
+          "action": [
+            "swimming"
+          ],
+          "signature": [
+            "black-white-yellow-striped-eye-golden-fins"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            2.9
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "turtle",
+        "attributes": {
+          "color": [
+            "brown",
+            "green"
+          ],
+          "action": [
+            "resting"
+          ],
+          "signature": [
+            "green-scaled-shell"
+          ]
+        },
+        "spans": [
+          [
+            5.0,
+            10.4
+          ]
+        ]
+      }
+    ],
+    "relations": [
+      {
+        "subject": "o1",
+        "predicate": "swimming-in",
+        "object": "o2",
+        "spans": [
+          [
+            0.0,
+            5.0
+          ]
+        ],
+        "confidence": 0.0
+      },
+      {
+        "subject": "o1",
+        "predicate": "left-of",
+        "object": "o2",
+        "spans": [
+          [
+            0.3,
+            4.7
+          ]
+        ],
+        "confidence": 0.0
+      },
+      {
+        "subject": "o1",
+        "predicate": "above",
+        "object": "o2",
+        "spans": [
+          [
+            0.6,
+            4.8
+          ]
+        ],
+        "confidence": 0.0
+      },
+      {
+        "subject": "o1",
+        "predicate": "facing-forward",
+        "object": "o2",
+        "spans": [
+          [
+            0.9,
+            4.9
+          ]
+        ],
+        "confidence": 0.0
+      },
+      {
+        "subject": "o1",
+        "predicate": "looking-at",
+        "object": "o2",
+        "spans": [
+          [
+            1.1,
+            4.9
+          ]
+        ],
+        "confidence": 0.0
+      },
+      {
+        "subject": "o1",
+        "predicate": "overlapping",
+        "object": "o2",
+        "spans": [
+          [
+            1.2,
+            4.8
+          ]
+        ],
+        "confidence": 0.0
+      },
+      {
+        "subject": "o1",
+        "predicate": "next-to",
+        "object": "o2",
+        "spans": [
+          [
+            1.4,
+            4.6
+          ]
+        ],
+        "confidence": 0.0
+      }
+    ]
+  },
+  "views": {
+    "objects_count_display": {
+      "fish": 1,
+      "turtle": 1
+    }
+  }
+}

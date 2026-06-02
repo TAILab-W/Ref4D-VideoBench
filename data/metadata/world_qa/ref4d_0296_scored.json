@@ -1,0 +1,221 @@
+{
+  "summary": {
+    "items": 10,
+    "enter_bank": 10,
+    "clip_range_sec": [
+      0.0,
+      8.73
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does the mountain maintain its natural shape without sudden changes?",
+      "signals": [
+        "continuity(landscape)",
+        "continuity(t)",
+        "frame_discontinuity(t)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "frame_discontinuity(t)": 40.0,
+        "continuity(landscape)": 7.3333,
+        "continuity(t)": 7.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Are the trees in the forest consistent in size and not falling out of place?",
+      "signals": [
+        "tilt_angle_threshold(t,deg)",
+        "falling_hazard(oObj)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "tilt_angle_threshold(t,deg)": 35.8333,
+        "falling_hazard(oObj)": 6.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Do the valley trees show no material anomalies or safety hazards?",
+      "signals": [
+        "material_optics(tree)",
+        "frame_discontinuity(valley)",
+        "size_inconsistency(tree)",
+        "falling_hazard(mountain)",
+        "falling_hazard(forest)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "frame_discontinuity(valley)": 40.0,
+        "material_optics(tree)": 7.5,
+        "size_inconsistency(tree)": 7.5,
+        "falling_hazard(mountain)": 6.3333,
+        "falling_hazard(forest)": 6.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Does the forested area show no unexpected falling hazards or objects?",
+      "signals": [
+        "continuity(t)",
+        "frame_discontinuity(t)",
+        "falling_hazard(oObj)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "frame_discontinuity(t)": 40.0,
+        "continuity(t)": 7.3333,
+        "falling_hazard(oObj)": 6.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Do the trees in the valley maintain a consistent elevation profile with gravity?",
+      "signals": [
+        "tilt_angle_threshold(t,deg)",
+        "material_optics(tree)",
+        "frame_discontinuity(valley)",
+        "size_inconsistency(tree)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "frame_discontinuity(valley)": 40.0,
+        "material_optics(tree)": 7.5,
+        "size_inconsistency(tree)": 7.5,
+        "tilt_angle_threshold(t,deg)": 7.1667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "The forest and mountain landscape maintains continuity and consistency without frame discontinuity.",
+      "signals": [
+        "continuity(landscape)",
+        "continuity(t)",
+        "frame_discontinuity(t)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "frame_discontinuity(t)": 40.0,
+        "continuity(landscape)": 7.3333,
+        "continuity(t)": 7.3333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "The terrain's elevation profile shows mountains in the background with valleys below, consistent with gravity.",
+      "signals": [
+        "tilt_angle_threshold(t,deg)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 35.83,
+      "total_score_100": 95.83,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "tilt_angle_threshold(t,deg)": 35.8333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "The mountain and forest maintain their natural shape and position without sudden changes or interpenetration.",
+      "signals": [
+        "continuity(mountain)",
+        "continuity(forest)",
+        "interpenetration(mountain,forest)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(mountain)": 36.6667,
+        "continuity(forest)": 7.3333,
+        "interpenetration(mountain,forest)": 7.1667
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "The trees in the valley exhibit consistent size.",
+      "signals": [
+        "material_optics(tree)",
+        "frame_discontinuity(valley)",
+        "size_inconsistency(tree)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "frame_discontinuity(valley)": 40.0,
+        "material_optics(tree)": 7.5,
+        "size_inconsistency(tree)": 7.5
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "The forested area is a natural environment with no unexpected falling hazards or objects.",
+      "signals": [
+        "falling_hazard(oObj)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 31.67,
+      "total_score_100": 91.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "falling_hazard(oObj)": 31.6667
+      },
+      "content_score_raw": "60"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "v5",
+    "a1",
+    "a2",
+    "a3",
+    "a4",
+    "a5"
+  ]
+}

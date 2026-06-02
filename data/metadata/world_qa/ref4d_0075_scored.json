@@ -1,0 +1,214 @@
+{
+  "summary": {
+    "items": 10,
+    "enter_bank": 9,
+    "clip_range_sec": [
+      0.0,
+      7.6
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does the zebra lying on the bank show frame discontinuity in its body?",
+      "signals": [
+        "continuity(zebra)",
+        "biological_motion(zebra)"
+      ],
+      "content_score_60": 5,
+      "signal_score_40": 40.0,
+      "total_score_100": 45.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "biological_motion(zebra)": 38.3333,
+        "continuity(zebra)": 7.3333
+      },
+      "content_score_raw": "5"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Does the water exhibit natural slosh response as a zebra moves into it without causing falling hazard for the zebra near the edge?",
+      "signals": [
+        "slosh_response(water,amp)",
+        "falling_hazard(zebra)"
+      ],
+      "content_score_60": 40,
+      "signal_score_40": 40.0,
+      "total_score_100": 80.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "slosh_response(water,amp)": 34.1667,
+        "falling_hazard(zebra)": 6.3333
+      },
+      "content_score_raw": "40"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Does the zebra maintain continuity and consistency in form while moving from land to water, avoiding interpenetration with other objects or itself?",
+      "signals": [
+        "supportable(ground,by:bank)",
+        "continuity(zebra)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(zebra)": 36.6667,
+        "supportable(ground,by:bank)": 5.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Does the zebra's entry into the water display smooth biological motion that interacts naturally with the water surface, showing consistent material optics?",
+      "signals": [
+        "continuity",
+        "deformation",
+        "frame_discontinuity",
+        "interpenetration",
+        "slosh_response",
+        "material_optics",
+        "collision"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "deformation": 40.0,
+        "frame_discontinuity": 8.0,
+        "material_optics": 7.5,
+        "continuity": 7.3333,
+        "interpenetration": 7.1667,
+        "slosh_response": 6.8333,
+        "collision": 6.3333
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Does the zebra near the edge of the rocky bank remain safely positioned without falling into the water?",
+      "signals": [
+        "falling_hazard(zebra)",
+        "supportable(ground,by:bank)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 37.0,
+      "total_score_100": 87.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "falling_hazard(zebra)": 31.6667,
+        "supportable(ground,by:bank)": 5.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "The zebra lying on the bank near the water shows natural biological motion.",
+      "signals": [
+        "continuity(zebra)",
+        "biological_motion(zebra)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "biological_motion(zebra)": 38.3333,
+        "continuity(zebra)": 7.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "The water in the river exhibits slosh response consistent with natural flow.",
+      "signals": [
+        "slosh_response(water,amp)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 34.17,
+      "total_score_100": 89.17,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "slosh_response(water,amp)": 34.1667
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "The zebra's position near the edge of the rocky bank is safe and does not fall into the water.",
+      "signals": [
+        "falling_hazard(zebra)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 31.67,
+      "total_score_100": 81.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "falling_hazard(zebra)": 31.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "The zebra can lie down safely on the uneven ground of the bank, maintaining continuity in form and position.",
+      "signals": [
+        "supportable(ground,by:bank)",
+        "continuity(zebra)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(zebra)": 36.6667,
+        "supportable(ground,by:bank)": 5.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "During the zebra's movement towards the water, its body maintains continuity without frame discontinuity.",
+      "signals": [
+        "continuity",
+        "deformation",
+        "frame_discontinuity",
+        "interpenetration"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "deformation": 40.0,
+        "frame_discontinuity": 8.0,
+        "continuity": 7.3333,
+        "interpenetration": 7.1667
+      },
+      "content_score_raw": "50"
+    }
+  ],
+  "bank_ids": [
+    "v2",
+    "v3",
+    "v4",
+    "v5",
+    "a1",
+    "a2",
+    "a3",
+    "a4",
+    "a5"
+  ]
+}

@@ -1,0 +1,64 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0465.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "cv2",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "person",
+        "attributes": {
+          "signature": [
+            "orange-and-black-striped-jersey-with-'tvc-health'-logo,-number-15-on-back"
+          ]
+        },
+        "spans": [
+          [
+            0.2,
+            0.9
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "person",
+        "attributes": {
+          "signature": [
+            "white-jersey-with-'essar'-sponsor,-number-24-on-shorts"
+          ]
+        },
+        "spans": [
+          [
+            0.5,
+            0.9
+          ]
+        ]
+      }
+    ],
+    "relations": [
+      {
+        "subject": "o1",
+        "predicate": "running",
+        "object": "o2",
+        "spans": [
+          [
+            0.4,
+            0.6
+          ]
+        ],
+        "confidence": 0.8
+      }
+    ]
+  },
+  "views": {
+    "objects_count_display": {
+      "person": 2
+    }
+  }
+}

@@ -1,0 +1,114 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0208.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "cv2",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "meat",
+        "attributes": {
+          "color": [
+            "brown",
+            "red"
+          ],
+          "texture": [
+            "glossy",
+            "juicy",
+            "marbled"
+          ],
+          "state": [
+            "cooked"
+          ],
+          "size": [
+            "large"
+          ],
+          "signature": [
+            "red-brown-glossy-juicy-marbled"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            8.1
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "person",
+        "attributes": {
+          "color": [
+            "black",
+            "gray",
+            "white"
+          ],
+          "pattern": [
+            "plaid"
+          ],
+          "material": [
+            "fabric"
+          ],
+          "object-part": [
+            "arm",
+            "hand"
+          ],
+          "tool-or-instrument": [
+            "knife"
+          ],
+          "action": [
+            "cutting",
+            "holding"
+          ],
+          "signature": [
+            "plaid-shirt-black-gloves"
+          ]
+        },
+        "spans": [
+          [
+            0.1,
+            8.1
+          ]
+        ]
+      }
+    ],
+    "relations": [
+      {
+        "subject": "o2",
+        "predicate": "holding",
+        "object": "o1",
+        "spans": [
+          [
+            5.7,
+            6.0
+          ]
+        ],
+        "confidence": 0.8
+      },
+      {
+        "subject": "o2",
+        "predicate": "looking-at",
+        "object": "o1",
+        "spans": [
+          [
+            0.0,
+            5.6
+          ]
+        ],
+        "confidence": 0.8
+      }
+    ]
+  },
+  "views": {
+    "objects_count_display": {
+      "meat": 1,
+      "person": 1
+    }
+  }
+}

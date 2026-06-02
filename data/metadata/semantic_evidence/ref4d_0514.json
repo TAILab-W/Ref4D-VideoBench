@@ -1,0 +1,105 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0514.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "decord",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "person",
+        "attributes": {
+          "signature": [
+            "wearing-white-and-blue-sports-attire,-holding-a-javelin"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            9.6
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "javelin",
+        "attributes": {
+          "signature": [
+            "long,-thin,-multi-colored"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            9.6
+          ]
+        ]
+      },
+      {
+        "id": "o3",
+        "name": "track",
+        "attributes": {
+          "signature": [
+            "red-running-track-with-white-lines"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            9.6
+          ]
+        ]
+      }
+    ],
+    "relations": [
+      {
+        "subject": "o1",
+        "predicate": "holding",
+        "object": "o2",
+        "spans": [
+          [
+            0.0,
+            0.3
+          ]
+        ],
+        "confidence": 0.9
+      },
+      {
+        "subject": "o1",
+        "predicate": "running_on",
+        "object": "o3",
+        "spans": [
+          [
+            0.4,
+            0.6
+          ]
+        ],
+        "confidence": 0.7
+      },
+      {
+        "subject": "o1",
+        "predicate": "carrying",
+        "object": "o2",
+        "spans": [
+          [
+            0.6,
+            0.8
+          ]
+        ],
+        "confidence": 0.8
+      }
+    ]
+  },
+  "views": {
+    "objects_count_display": {
+      "person": 1,
+      "javelin": 1,
+      "track": 1
+    }
+  }
+}

@@ -1,0 +1,198 @@
+{
+  "summary": {
+    "items": 10,
+    "enter_bank": 7,
+    "clip_range_sec": [
+      0.0,
+      8.9
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does the water flow from a higher position to a lower position in the cup?",
+      "signals": [
+        "trajectory_dir(water,axis)",
+        "support(ice,tree)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(water,axis)": 38.3333,
+        "support(ice,tree)": 7.0
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Is the hand holding the cup stable and graspable throughout the clip?",
+      "signals": [
+        "tool_usage_correct(cup,for:pouring)",
+        "grasp_stability(Hand,cup)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 34.83,
+      "total_score_100": 84.83,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "tool_usage_correct(cup,for:pouring)": 29.1667,
+        "grasp_stability(Hand,cup)": 5.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Is the person's hand positioned safely away from falling hazards near the waterfall?",
+      "signals": [
+        "falling_hazard(cup)",
+        "grasp_stability(hand,cup)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 37.33,
+      "total_score_100": 87.33,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "falling_hazard(cup)": 31.6667,
+        "grasp_stability(hand,cup)": 5.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Does the trajectory of the flowing water align with the orientation of the cup's opening, causing slosh response when tilted?",
+      "signals": [
+        "trajectory_dir(water,axis)",
+        "tool_contact(Cup,Water)",
+        "slosh_response(water,amp)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(water,axis)": 38.3333,
+        "slosh_response(water,amp)": 6.8333,
+        "tool_contact(Cup,Water)": 5.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Is the snow-peak titanium cup easy to handle during pouring?",
+      "signals": [
+        "grasp_stability(Hand,cup)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 28.33,
+      "total_score_100": 78.33,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "grasp_stability(Hand,cup)": 28.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "Water flows from the higher waterfall to the lower cup due to gravity.",
+      "signals": [
+        "trajectory_dir(water,axis)",
+        "support(ice,tree)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(water,axis)": 38.3333,
+        "support(ice,tree)": 7.0
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "The hand holds the cup firmly, maintaining grasp stability during pouring.",
+      "signals": [
+        "grasp_stability(Hand,cup)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 28.33,
+      "total_score_100": 78.33,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "grasp_stability(Hand,cup)": 28.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "The snow-peak titanium cup is easy to handle and supported by the hand.",
+      "signals": [
+        "tool_usage_correct(cup,for:pouring)",
+        "grasp_stability(hand,cup)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 34.83,
+      "total_score_100": 84.83,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "tool_usage_correct(cup,for:pouring)": 29.1667,
+        "grasp_stability(hand,cup)": 5.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "The person's hand holding the cup is positioned safely away from falling hazards.",
+      "signals": [
+        "falling_hazard(cup)"
+      ],
+      "content_score_60": 40,
+      "signal_score_40": 31.67,
+      "total_score_100": 71.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "falling_hazard(cup)": 31.6667
+      },
+      "content_score_raw": "40"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "The water in the stream aligns with the orientation of the cup's opening.",
+      "signals": [
+        "trajectory_dir(water,axis)",
+        "tool_contact(Cup,Water)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(water,axis)": 38.3333,
+        "tool_contact(Cup,Water)": 5.6667
+      },
+      "content_score_raw": "50"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "a1",
+    "a3",
+    "a5"
+  ]
+}

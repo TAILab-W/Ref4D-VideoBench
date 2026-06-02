@@ -1,0 +1,220 @@
+{
+  "summary": {
+    "items": 10,
+    "enter_bank": 9,
+    "clip_range_sec": [
+      0.0,
+      5.57
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does the water remain in the body of water and not suddenly disappear?",
+      "signals": [
+        "continuity(water)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 36.67,
+      "total_score_100": 91.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(water)": 36.6667
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Do the buildings on the land maintain their structural integrity without deformation or size inconsistency across the clip?",
+      "signals": [
+        "continuity(land)",
+        "deformation(building)",
+        "rigid_transform(road)",
+        "support(land,road)",
+        "deformation(land)",
+        "size_inconsistency(land)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "deformation(building)": 40.0,
+        "deformation(land)": 8.0,
+        "rigid_transform(road)": 7.5,
+        "size_inconsistency(land)": 7.5,
+        "continuity(land)": 7.3333,
+        "support(land,road)": 7.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Are the shadows cast by trees and structures consistent with light direction and object positions throughout the video?",
+      "signals": [
+        "shadow_consistency(trees)",
+        "shadow_consistency(buildings)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "shadow_consistency(trees)": 36.6667,
+        "shadow_consistency(buildings)": 7.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Is the dock stable, showing no signs of instability that would cause falling hazards?",
+      "signals": [
+        "falling_hazard(boat)",
+        "falling_hazard(dock)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 38.0,
+      "total_score_100": 88.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "falling_hazard(boat)": 31.6667,
+        "falling_hazard(dock)": 6.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Does the water exhibit continuity and consistent buoyancy, with no sudden material changes or interpenetration?",
+      "signals": [
+        "continuity(water)",
+        "buoyancy_float(building,in:water)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(water)": 36.6667,
+        "buoyancy_float(building,in:water)": 6.8333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "Water remains in the body of water, showing continuity and consistent buoyancy.",
+      "signals": [
+        "continuity(water)",
+        "buoyancy_float(building,in:water)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(water)": 36.6667,
+        "buoyancy_float(building,in:water)": 6.8333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "Shadows cast by trees and structures are consistent with light direction and object positions.",
+      "signals": [
+        "continuity(land)",
+        "deformation(building)",
+        "shadow_consistency(trees)",
+        "shadow_consistency(buildings)"
+      ],
+      "content_score_60": 30,
+      "signal_score_40": 40.0,
+      "total_score_100": 70.0,
+      "duplicate_penalized": true,
+      "signal_detail": {
+        "deformation(building)": 40.0,
+        "continuity(land)": 7.3333,
+        "shadow_consistency(trees)": 7.3333,
+        "shadow_consistency(buildings)": 7.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "The road and surrounding land maintain rigid transform without deformation or size inconsistency.",
+      "signals": [
+        "rigid_transform(road)",
+        "support(land,road)",
+        "deformation(land)",
+        "size_inconsistency(land)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "deformation(land)": 40.0,
+        "rigid_transform(road)": 7.5,
+        "size_inconsistency(land)": 7.5,
+        "support(land,road)": 7.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "Docks near water have stable placement to avoid falling hazards.",
+      "signals": [
+        "falling_hazard(boat)",
+        "falling_hazard(dock)",
+        "falling_hazard(building)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "falling_hazard(boat)": 31.6667,
+        "falling_hazard(dock)": 6.3333,
+        "falling_hazard(building)": 6.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "Buildings on the land maintain their structural integrity without sudden material changes or deformations.",
+      "signals": [
+        "continuity(land)",
+        "deformation(building)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "deformation(building)": 40.0,
+        "continuity(land)": 7.3333
+      },
+      "content_score_raw": "60"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "v5",
+    "a1",
+    "a3",
+    "a4",
+    "a5"
+  ]
+}

@@ -1,0 +1,181 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0090.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "cv2",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "fox",
+        "attributes": {
+          "color": [
+            "brown",
+            "white"
+          ],
+          "action": [
+            "eating",
+            "peering",
+            "sniffing",
+            "walking"
+          ],
+          "pose": [
+            "bending",
+            "crouching",
+            "standing"
+          ],
+          "facing-direction": [
+            "forward",
+            "left",
+            "right"
+          ],
+          "expression": [
+            "curious",
+            "decisive"
+          ],
+          "signature": [
+            "brown-fur-white-tail"
+          ]
+        },
+        "spans": [
+          [
+            0.2,
+            9.2
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "apple",
+        "attributes": {
+          "color": [
+            "red",
+            "yellow"
+          ],
+          "size": [
+            "medium"
+          ],
+          "position": [
+            "floor-front"
+          ],
+          "signature": [
+            "red-yellow"
+          ]
+        },
+        "spans": [
+          [
+            0.4,
+            9.2
+          ]
+        ]
+      },
+      {
+        "id": "o3",
+        "name": "dog-food",
+        "attributes": {
+          "color": [
+            "pink"
+          ],
+          "size": [
+            "small"
+          ],
+          "position": [
+            "floor-front"
+          ],
+          "signature": [
+            "pink"
+          ]
+        },
+        "spans": [
+          [
+            0.1,
+            9.2
+          ]
+        ]
+      },
+      {
+        "id": "o4",
+        "name": "trash-can",
+        "attributes": {
+          "color": [
+            "blue"
+          ],
+          "material": [
+            "plastic"
+          ],
+          "position": [
+            "left-side"
+          ],
+          "signature": [
+            "blue"
+          ]
+        },
+        "spans": [
+          [
+            0.1,
+            9.2
+          ]
+        ]
+      },
+      {
+        "id": "o5",
+        "name": "door",
+        "attributes": {
+          "color": [
+            "glass",
+            "white"
+          ],
+          "position": [
+            "back-ground"
+          ],
+          "signature": [
+            "white-framed-glass-panel"
+          ]
+        },
+        "spans": [
+          [
+            0.1,
+            9.2
+          ]
+        ]
+      },
+      {
+        "id": "o6",
+        "name": "text",
+        "attributes": {
+          "content": [
+            "easiest-decision-of-my-life"
+          ],
+          "position": [
+            "top-center"
+          ],
+          "signature": [
+            "yellow-english"
+          ]
+        },
+        "spans": [
+          [
+            0.7,
+            9.2
+          ]
+        ]
+      }
+    ],
+    "relations": []
+  },
+  "views": {
+    "objects_count_display": {
+      "fox": 1,
+      "apple": 1,
+      "dog-food": 1,
+      "trash-can": 1,
+      "door": 1,
+      "text": 1
+    }
+  }
+}

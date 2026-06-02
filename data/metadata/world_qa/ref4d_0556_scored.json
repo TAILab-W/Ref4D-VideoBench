@@ -1,0 +1,232 @@
+{
+  "summary": {
+    "items": 10,
+    "enter_bank": 9,
+    "clip_range_sec": [
+      0.0,
+      13.9
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does the cable car follow a consistent trajectory along the support cables without sudden changes in direction?",
+      "signals": [
+        "trajectory_dir(cable_car_1,axis)",
+        "support(cable_car_1,cable)",
+        "continuity(cable_car_1)",
+        "trajectory_dir(cable_car,axis)",
+        "balance(cable_car)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(cable_car_1,axis)": 38.3333,
+        "trajectory_dir(cable_car,axis)": 7.6667,
+        "continuity(cable_car_1)": 7.3333,
+        "balance(cable_car)": 7.1667,
+        "support(cable_car_1,cable)": 7.0
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Is the blue metal fence stationary on the snow-covered ground throughout the scene?",
+      "signals": [
+        "continuity(fence)",
+        "support(mountain,fence)",
+        "friction_sliding(fence,on:ground)",
+        "interpenetration(fence,ground)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(fence)": 36.6667,
+        "interpenetration(fence,ground)": 7.1667,
+        "support(mountain,fence)": 7.0,
+        "friction_sliding(fence,on:ground)": 6.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Does the snowy mountain background maintain visual consistency and natural physical properties across frames?",
+      "signals": [
+        "size_inconsistency(mountain)",
+        "material_optics(mountain)"
+      ],
+      "content_score_60": 58,
+      "signal_score_40": 40.0,
+      "total_score_100": 98.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "size_inconsistency(mountain)": 37.5,
+        "material_optics(mountain)": 7.5
+      },
+      "content_score_raw": "58"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Does the ski lift system function smoothly, allowing the cable car to move consistently with no abrupt speed changes?",
+      "signals": [
+        "trajectory_dir(oX,axis)",
+        "accel_sign(oX,axis)",
+        "support(mountain,sky)",
+        "support(mountain,fence)"
+      ],
+      "content_score_60": 52,
+      "signal_score_40": 40.0,
+      "total_score_100": 92.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(oX,axis)": 38.3333,
+        "accel_sign(oX,axis)": 7.0,
+        "support(mountain,sky)": 7.0,
+        "support(mountain,fence)": 7.0
+      },
+      "content_score_raw": "52"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Does the snow on the ground remain continuous and properly separated from the path by the safety barrier?",
+      "signals": [
+        "continuity(oX)",
+        "material_optics(oA)",
+        "friction_sliding(oA,on:oB)",
+        "support(oA,oB)"
+      ],
+      "content_score_60": 59,
+      "signal_score_40": 40.0,
+      "total_score_100": 99.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "material_optics(oA)": 37.5,
+        "continuity(oX)": 7.3333,
+        "support(oA,oB)": 7.0,
+        "friction_sliding(oA,on:oB)": 6.0
+      },
+      "content_score_raw": "59"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "The cable car remains suspended by the supporting cables and moves along a consistent trajectory.",
+      "signals": [
+        "trajectory_dir(cable_car_1,axis)",
+        "support(cable_car_1,cable)",
+        "continuity(cable_car_1)",
+        "trajectory_dir(cable_car,axis)",
+        "balance(cable_car)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(cable_car_1,axis)": 38.3333,
+        "trajectory_dir(cable_car,axis)": 7.6667,
+        "continuity(cable_car_1)": 7.3333,
+        "balance(cable_car)": 7.1667,
+        "support(cable_car_1,cable)": 7.0
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "The blue metal fence in the foreground is stationary on the snow-covered ground.",
+      "signals": [
+        "continuity(fence)",
+        "support(mountain,fence)",
+        "friction_sliding(fence,on:ground)",
+        "interpenetration(fence,ground)"
+      ],
+      "content_score_60": 0,
+      "signal_score_40": 40.0,
+      "total_score_100": 40.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(fence)": 36.6667,
+        "interpenetration(fence,ground)": 7.1667,
+        "support(mountain,fence)": 7.0,
+        "friction_sliding(fence,on:ground)": 6.0
+      },
+      "content_score_raw": "0"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "The snow on the ground maintains continuity in texture and appearance without abrupt transitions.",
+      "signals": [
+        "continuity(oX)",
+        "material_optics(oA)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "material_optics(oA)": 37.5,
+        "continuity(oX)": 7.3333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "The ski lift system functions, allowing the cable car to move smoothly from one point to another.",
+      "signals": [
+        "rigid_transform(oX)",
+        "trajectory_dir(oX,axis)"
+      ],
+      "content_score_60": 53,
+      "signal_score_40": 40.0,
+      "total_score_100": 93.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(oX,axis)": 38.3333,
+        "rigid_transform(oX)": 7.5
+      },
+      "content_score_raw": "53"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "The snowy mountain background shows natural physical properties with shadows and rock formations.",
+      "signals": [
+        "support(mountain,sky)",
+        "support(mountain,fence)"
+      ],
+      "content_score_60": 57,
+      "signal_score_40": 40.0,
+      "total_score_100": 97.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "support(mountain,sky)": 35.0,
+        "support(mountain,fence)": 7.0
+      },
+      "content_score_raw": "57"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "v5",
+    "a1",
+    "a3",
+    "a4",
+    "a5"
+  ]
+}

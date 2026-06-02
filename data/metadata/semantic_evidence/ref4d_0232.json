@@ -1,0 +1,222 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0232.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "cv2",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "fried-rice",
+        "attributes": {
+          "color": [
+            "brown",
+            "green",
+            "yellow"
+          ],
+          "pattern": [
+            "mixed"
+          ],
+          "material": [
+            "food"
+          ],
+          "size": [
+            "large"
+          ],
+          "position": [
+            "left-front"
+          ],
+          "tool-or-instrument": [
+            "black-spoon"
+          ],
+          "signature": [
+            "square-white-plate-black-spoon-chinese-characters"
+          ]
+        },
+        "spans": [
+          [
+            0.2,
+            0.7
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "oyster-dish",
+        "attributes": {
+          "color": [
+            "brown",
+            "green",
+            "white"
+          ],
+          "pattern": [
+            "garlic-chunks",
+            "scallion-bits"
+          ],
+          "material": [
+            "seafood"
+          ],
+          "size": [
+            "medium"
+          ],
+          "position": [
+            "back"
+          ],
+          "species-or-breed": [
+            "oyster"
+          ],
+          "signature": [
+            "shell-plate-garlic-greens"
+          ]
+        },
+        "spans": [
+          [
+            0.3,
+            0.8
+          ]
+        ]
+      },
+      {
+        "id": "o3",
+        "name": "cup",
+        "attributes": {
+          "color": [
+            "green",
+            "white"
+          ],
+          "pattern": [
+            "logo"
+          ],
+          "material": [
+            "plastic"
+          ],
+          "size": [
+            "medium"
+          ],
+          "position": [
+            "left-front"
+          ],
+          "signature": [
+            "white-cup-green-logo"
+          ]
+        },
+        "spans": [
+          [
+            0.1,
+            0.3
+          ]
+        ]
+      },
+      {
+        "id": "o4",
+        "name": "small-bowl",
+        "attributes": {
+          "color": [
+            "green",
+            "white"
+          ],
+          "pattern": [
+            "logo"
+          ],
+          "material": [
+            "ceramic"
+          ],
+          "size": [
+            "small"
+          ],
+          "position": [
+            "right-front"
+          ],
+          "signature": [
+            "white-bowl-green-logo"
+          ]
+        },
+        "spans": [
+          [
+            0.6,
+            0.8
+          ]
+        ]
+      }
+    ],
+    "relations": [
+      {
+        "subject": "o1",
+        "predicate": "left-of",
+        "object": "o2",
+        "spans": [
+          [
+            0.3,
+            0.8
+          ]
+        ],
+        "confidence": 0.9
+      },
+      {
+        "subject": "o4",
+        "predicate": "right-of",
+        "object": "o1",
+        "spans": [
+          [
+            0.2,
+            0.8
+          ]
+        ],
+        "confidence": 0.9
+      },
+      {
+        "subject": "o3",
+        "predicate": "left-of",
+        "object": "o1",
+        "spans": [
+          [
+            0.1,
+            0.6
+          ]
+        ],
+        "confidence": 0.9
+      },
+      {
+        "subject": "o2",
+        "predicate": "above",
+        "object": "o1",
+        "spans": [
+          [
+            0.2,
+            0.6
+          ]
+        ],
+        "confidence": 0.9
+      },
+      {
+        "subject": "o3",
+        "predicate": "left-of",
+        "object": "o4",
+        "spans": [
+          [
+            0.1,
+            0.3
+          ],
+          [
+            0.6,
+            0.8
+          ]
+        ],
+        "confidence": 0.9
+      }
+    ]
+  },
+  "views": {
+    "objects_count_display": {
+      "fried-rice": 1,
+      "oyster-dish": 1,
+      "cup": 1,
+      "small-bowl": 1
+    }
+  }
+}

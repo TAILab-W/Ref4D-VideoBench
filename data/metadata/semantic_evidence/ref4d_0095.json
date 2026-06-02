@@ -1,0 +1,58 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0095.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "decord",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "flamingo",
+        "attributes": {
+          "color": [
+            "pink"
+          ],
+          "posture": [
+            "standing"
+          ],
+          "signature": [
+            "pink-bird-with-long-legs-and-neck,-standing-in-shallow-water"
+          ]
+        },
+        "spans": [
+          [
+            0.1,
+            10.2
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "wetland",
+        "attributes": {
+          "signature": [
+            "shallow-body-of-water-with-mudflats,-typical-habitat-for-flamingos"
+          ]
+        },
+        "spans": [
+          [
+            0.3,
+            4.5
+          ]
+        ]
+      }
+    ],
+    "relations": []
+  },
+  "views": {
+    "objects_count_display": {
+      "flamingo": 1,
+      "wetland": 1
+    }
+  }
+}

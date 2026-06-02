@@ -1,0 +1,210 @@
+{
+  "summary": {
+    "items": 10,
+    "enter_bank": 9,
+    "clip_range_sec": [
+      0.0,
+      9.13
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does the person stand upright with hands on hips without sudden movement?",
+      "signals": [
+        "balance(person)",
+        "center_of_mass_over_base(person)",
+        "continuity(person)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(person)": 36.6667,
+        "balance(person)": 7.1667,
+        "center_of_mass_over_base(person)": 6.5
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Do the mountains in the background remain static and continuous throughout the scene?",
+      "signals": [
+        "continuity(mountain)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 36.67,
+      "total_score_100": 96.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(mountain)": 36.6667
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Does the blue lake maintain its shape at the bottom of the valley without abrupt size change?",
+      "signals": [
+        "size_inconsistency(lake)",
+        "frame_discontinuity(t)",
+        "continuity(lake)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "frame_discontinuity(t)": 40.0,
+        "size_inconsistency(lake)": 7.5,
+        "continuity(lake)": 7.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Is the shadow of the backpack consistent with its position and orientation on the grassy slope?",
+      "signals": [
+        "shadow_consistency(person)",
+        "shadow_consistency"
+      ],
+      "content_score_60": 40,
+      "signal_score_40": 40.0,
+      "total_score_100": 80.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "shadow_consistency(person)": 36.6667,
+        "shadow_consistency": 7.3333
+      },
+      "content_score_raw": "40"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Do the snow patches on the mountains exhibit natural consistency in size relative to the mountain terrain?",
+      "signals": [
+        "deformation(mountain)",
+        "fracture(mountain)",
+        "size_inconsistency"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "deformation(mountain)": 40.0,
+        "size_inconsistency": 7.5,
+        "fracture(mountain)": 6.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "The person stands with hands on hips, body upright and stable.",
+      "signals": [
+        "balance(person)",
+        "center_of_mass_over_base(person)",
+        "continuity(person)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(person)": 36.6667,
+        "balance(person)": 7.1667,
+        "center_of_mass_over_base(person)": 6.5
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "The mountain range in the background remains static and continuous.",
+      "signals": [
+        "continuity(mountain)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 36.67,
+      "total_score_100": 96.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(mountain)": 36.6667
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "The snow-capped mountains maintain their structural integrity and size consistency.",
+      "signals": [
+        "deformation(mountain)",
+        "fracture(mountain)",
+        "size_inconsistency"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "deformation(mountain)": 40.0,
+        "size_inconsistency": 7.5,
+        "fracture(mountain)": 6.3333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "The blue lake at the bottom of the valley is a continuous body of water without abrupt changes.",
+      "signals": [
+        "size_inconsistency(lake)",
+        "frame_discontinuity(t)",
+        "continuity(lake)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "frame_discontinuity(t)": 40.0,
+        "size_inconsistency(lake)": 7.5,
+        "continuity(lake)": 7.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "The shadow of the backpack matches its position under sunlight.",
+      "signals": [
+        "shadow_consistency(person)"
+      ],
+      "content_score_60": 40,
+      "signal_score_40": 36.67,
+      "total_score_100": 76.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "shadow_consistency(person)": 36.6667
+      },
+      "content_score_raw": "40"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "v5",
+    "a1",
+    "a2",
+    "a3",
+    "a4"
+  ]
+}

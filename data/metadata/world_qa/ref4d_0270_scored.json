@@ -1,0 +1,204 @@
+{
+  "summary": {
+    "items": 10,
+    "enter_bank": 9,
+    "clip_range_sec": [
+      0.0,
+      8.23
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does the robotic arm's end effector maintain a safe distance from other objects to avoid collision and have its shadow consistently align with its position?",
+      "signals": [
+        "grasp_stability(robot-arm,small_black_objects)",
+        "shadow_consistency(oX)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "shadow_consistency(oX)": 36.6667,
+        "grasp_stability(robot-arm,small_black_objects)": 5.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Do the small black objects on the circular platform remain stable without suddenly disappearing or merging, and do the table objects stay supported by the table base?",
+      "signals": [
+        "center_of_mass_over_base(table)",
+        "continuity(oX)",
+        "containment(oA,oB)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(oX)": 36.6667,
+        "center_of_mass_over_base(table)": 6.5,
+        "containment(oA,oB)": 5.8333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Are the small black objects around the circular platform static unless interacted with by the robot arm, and does the robotic arm move smoothly without sudden acceleration or deceleration?",
+      "signals": [
+        "continuity(small_black_objects)",
+        "accel_sign(oX,axis)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(small_black_objects)": 36.6667,
+        "accel_sign(oX,axis)": 7.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Does the robotic arm's end effector maintain a safe distance from other equipment to avoid collision while moving?",
+      "signals": [
+        "collision(robot-arm-end-effector,other-object)",
+        "collision(oA,oB)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 38.0,
+      "total_score_100": 98.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "collision(robot-arm-end-effector,other-object)": 31.6667,
+        "collision(oA,oB)": 6.3333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Does the robotic arm move smoothly and consistently without sudden changes in trajectory direction or acceleration sign?",
+      "signals": [
+        "trajectory_dir(robot-arm,axis)",
+        "accel_sign(robot-arm,axis)",
+        "accel_sign(oX,axis)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(robot-arm,axis)": 38.3333,
+        "accel_sign(robot-arm,axis)": 7.0,
+        "accel_sign(oX,axis)": 7.0
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "The robotic arm moves smoothly without sudden changes in trajectory direction or acceleration.",
+      "signals": [
+        "trajectory_dir(robot-arm,axis)",
+        "accel_sign(robot-arm,axis)",
+        "accel_sign(oX,axis)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(robot-arm,axis)": 38.3333,
+        "accel_sign(robot-arm,axis)": 7.0,
+        "accel_sign(oX,axis)": 7.0
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "The small black objects around the circular platform are static and not interacted with by the robot arm.",
+      "signals": [
+        "continuity(small_black_objects)"
+      ],
+      "content_score_60": 0,
+      "signal_score_40": 36.67,
+      "total_score_100": 36.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(small_black_objects)": 36.6667
+      },
+      "content_score_raw": "0"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "The objects on the circular platform remain stable and do not suddenly disappear or merge.",
+      "signals": [
+        "continuity(oX)",
+        "containment(oA,oB)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(oX)": 36.6667,
+        "containment(oA,oB)": 5.8333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "The robotic arm's end effector maintains a safe distance from other objects to avoid collision.",
+      "signals": [
+        "collision(robot-arm-end-effector,other-object)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 31.67,
+      "total_score_100": 91.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "collision(robot-arm-end-effector,other-object)": 31.6667
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "The robot's end effector maintains a safe distance from other equipment to avoid collision.",
+      "signals": [
+        "collision(oA,oB)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 31.67,
+      "total_score_100": 91.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "collision(oA,oB)": 31.6667
+      },
+      "content_score_raw": "60"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "v5",
+    "a1",
+    "a3",
+    "a4",
+    "a5"
+  ]
+}

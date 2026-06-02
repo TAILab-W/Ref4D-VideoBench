@@ -1,0 +1,78 @@
+{
+  "events": [
+    {
+      "id": "m0001",
+      "s": 0.0,
+      "e": 0.735632183908046,
+      "dur": 0.735632183908046,
+      "members": [
+        "e0001#1",
+        "e0002#3"
+      ],
+      "text": "person stand on field",
+      "s_abs": 0.0,
+      "e_abs": 4.266666666666667,
+      "dur_abs": 4.266666666666667
+    },
+    {
+      "id": "m0002",
+      "s": 0.0,
+      "e": 1.0,
+      "dur": 1.0,
+      "members": [
+        "e0001#2",
+        "e0002#1",
+        "e0003#1"
+      ],
+      "text": "person swing stick",
+      "s_abs": 0.0,
+      "e_abs": 5.8,
+      "dur_abs": 5.8
+    },
+    {
+      "id": "m0003",
+      "s": 0.4252873563218391,
+      "e": 0.735632183908046,
+      "dur": 0.31034482758620685,
+      "members": [
+        "e0002#2"
+      ],
+      "text": "ball fly through air person hit ball with stick",
+      "s_abs": 2.466666666666667,
+      "e_abs": 4.266666666666667,
+      "dur_abs": 1.7999999999999998
+    },
+    {
+      "id": "m0004",
+      "s": 0.735632183908046,
+      "e": 1.0,
+      "dur": 0.26436781609195403,
+      "members": [
+        "e0003#2"
+      ],
+      "text": "ball fly up",
+      "s_abs": 4.266666666666667,
+      "e_abs": 5.8,
+      "dur_abs": 1.5333333333333332
+    }
+  ],
+  "meta": {
+    "lane": "ref",
+    "key": "ref4d_0460",
+    "mode": "micro",
+    "merge_config": {
+      "tau_sem": 0.96,
+      "gap_abs_sec": 1.01,
+      "gap_norm_fallback": 0.1,
+      "min_duration_norm": 0.0
+    },
+    "stats": {
+      "num_input_items": 7,
+      "num_kept_items": 7,
+      "num_clusters": 4
+    },
+    "provenance": {
+      "source_hash": "6c263ee8d298"
+    }
+  }
+}

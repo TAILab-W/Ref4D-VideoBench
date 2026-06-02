@@ -1,0 +1,211 @@
+{
+  "summary": {
+    "items": 10,
+    "enter_bank": 10,
+    "clip_range_sec": [
+      0.0,
+      13.23
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does the water surface in the river show continuous wave patterns without sudden changes or discontinuity?",
+      "signals": [
+        "slosh_response(water,amp)",
+        "continuity(water)",
+        "material_optics(water)",
+        "frame_discontinuity(river)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "frame_discontinuity(river)": 40.0,
+        "material_optics(water)": 7.5,
+        "continuity(water)": 7.3333,
+        "slosh_response(water,amp)": 6.8333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Does the sun maintain a natural trajectory and size as it sets below the horizon during sunset?",
+      "signals": [
+        "trajectory_dir(sun,axis)",
+        "continuity(sun)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(sun,axis)": 38.3333,
+        "continuity(sun)": 7.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Does the river exhibit light-blue-water-with-waves behavior with consistent, natural flow throughout the clip?",
+      "signals": [
+        "continuity(river)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 36.67,
+      "total_score_100": 86.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(river)": 36.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Does the tree line on the horizon remain stable and placeable at its respective position along the ground?",
+      "signals": [
+        "frame_discontinuity(tree)",
+        "collision(tree,other)",
+        "continuity(river), material_optics(river)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "frame_discontinuity(tree)": 40.0,
+        "continuity(river), material_optics(river)": 7.3333,
+        "collision(tree,other)": 6.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Does the bird flying above the trees maintain an appropriate altitude to avoid posing a falling hazard?",
+      "signals": [
+        "falling_hazard(bird)",
+        "trajectory_dir(bird,axis)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(bird,axis)": 38.3333,
+        "falling_hazard(bird)": 6.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "The river's water surface shows continuous wave patterns and natural slosh response.",
+      "signals": [
+        "slosh_response(water,amp)",
+        "continuity(water)",
+        "material_optics(water)",
+        "frame_discontinuity(river)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "frame_discontinuity(river)": 40.0,
+        "material_optics(water)": 7.5,
+        "continuity(water)": 7.3333,
+        "slosh_response(water,amp)": 6.8333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "The sun is a yellow-orange disk in the sky, setting below the horizon.",
+      "signals": [
+        "trajectory_dir(sun,axis)",
+        "continuity(sun)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(sun,axis)": 38.3333,
+        "continuity(sun)": 7.3333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "The river exhibits continuous light-blue water with waves, flowing naturally.",
+      "signals": [
+        "continuity(river)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 36.67,
+      "total_score_100": 96.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(river)": 36.6667
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "The dark-green-forest-on-horizon remains consistent without sudden state changes.",
+      "signals": [
+        "frame_discontinuity(tree)",
+        "collision(tree,other)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "frame_discontinuity(tree)": 40.0,
+        "collision(tree,other)": 6.3333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "Vegetation along the riverbank is placed at their respective positions on the ground.",
+      "signals": [
+        "placeable(vegetation,at:riverbank)",
+        "support(vegetation,ground)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "support(vegetation,ground)": 35.0,
+        "placeable(vegetation,at:riverbank)": 5.1667
+      },
+      "content_score_raw": "60"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "v5",
+    "a1",
+    "a2",
+    "a3",
+    "a4",
+    "a5"
+  ]
+}

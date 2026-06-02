@@ -1,0 +1,40 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0004.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "cv2",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "panda",
+        "attributes": {
+          "color": [
+            "black",
+            "white"
+          ],
+          "signature": [
+            "black-white-left-facing-body-on-log"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            9.6
+          ]
+        ]
+      }
+    ],
+    "relations": []
+  },
+  "views": {
+    "objects_count_display": {
+      "panda": 1
+    }
+  }
+}

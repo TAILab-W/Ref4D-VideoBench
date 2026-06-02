@@ -1,0 +1,151 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0047.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "cv2",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "ant",
+        "attributes": {
+          "color": [
+            "black",
+            "brown",
+            "red"
+          ],
+          "texture": [
+            "shiny",
+            "smooth"
+          ],
+          "pose": [
+            "stationary"
+          ],
+          "action": [
+            "exploring",
+            "feeling"
+          ],
+          "orientation": [
+            "facing-left"
+          ],
+          "position": [
+            "on-surface"
+          ],
+          "signature": [
+            "black-brown-red-head-body-legs"
+          ]
+        },
+        "spans": [
+          [
+            0.1,
+            1.9
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "ant",
+        "attributes": {
+          "color": [
+            "black",
+            "dark-brown"
+          ],
+          "action": [
+            "sniffing",
+            "walking"
+          ],
+          "pose": [
+            "standing"
+          ],
+          "orientation": [
+            "facing-forward"
+          ],
+          "position": [
+            "center"
+          ],
+          "signature": [
+            "dark-brown/black-head,-antennae,-6-legs"
+          ]
+        },
+        "spans": [
+          [
+            7.3,
+            14.6
+          ]
+        ]
+      }
+    ],
+    "relations": [
+      {
+        "subject": "o1",
+        "predicate": "touching",
+        "object": "o1",
+        "spans": [
+          [
+            0.2,
+            1.8
+          ]
+        ],
+        "confidence": 0.9
+      },
+      {
+        "subject": "o1",
+        "predicate": "exploring",
+        "object": "o1",
+        "spans": [
+          [
+            0.1,
+            1.9
+          ]
+        ],
+        "confidence": 0.8
+      },
+      {
+        "subject": "o1",
+        "predicate": "feeling",
+        "object": "o1",
+        "spans": [
+          [
+            0.1,
+            1.9
+          ]
+        ],
+        "confidence": 0.7
+      },
+      {
+        "subject": "o2",
+        "predicate": "looking-at",
+        "object": "o2",
+        "spans": [
+          [
+            7.3,
+            14.6
+          ]
+        ],
+        "confidence": 0.8
+      },
+      {
+        "subject": "o2",
+        "predicate": "sniffing",
+        "object": "o2",
+        "spans": [
+          [
+            7.3,
+            14.6
+          ]
+        ],
+        "confidence": 0.7
+      }
+    ]
+  },
+  "views": {
+    "objects_count_display": {
+      "ant": 2
+    }
+  }
+}

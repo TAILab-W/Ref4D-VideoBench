@@ -1,0 +1,76 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0598.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "decord",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "car",
+        "attributes": {
+          "color": [
+            "blue"
+          ],
+          "position": [
+            "left-lane"
+          ],
+          "state": [
+            "stopped"
+          ],
+          "type": [
+            "sedan"
+          ],
+          "signature": [
+            "blue-car"
+          ]
+        },
+        "spans": [
+          [
+            0.2,
+            3.8
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "traffic_light",
+        "attributes": {
+          "color": [
+            "yellow"
+          ],
+          "state": [
+            "caution"
+          ],
+          "type": [
+            "standard-traffic-light"
+          ],
+          "location": [
+            "overhead-on-green-pole"
+          ],
+          "signature": [
+            "yellow-light"
+          ]
+        },
+        "spans": [
+          [
+            0.5,
+            6.7
+          ]
+        ]
+      }
+    ],
+    "relations": []
+  },
+  "views": {
+    "objects_count_display": {
+      "car": 1,
+      "traffic_light": 1
+    }
+  }
+}

@@ -1,0 +1,203 @@
+{
+  "summary": {
+    "items": 10,
+    "enter_bank": 8,
+    "clip_range_sec": [
+      0.0,
+      6.9
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does the platform labeled 'BRANSON' support the helicopter?",
+      "signals": [
+        "support(platform,helicopter)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 35.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "support(platform,helicopter)": 35.0
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Do the rotor blades maintain a consistent speed and trajectory during rotation?",
+      "signals": [
+        "trajectory_dir(oX,axis)",
+        "accel_sign(oX,axis)",
+        "trajectory_dir(aircraft,axis)",
+        "accel_sign(aircraft,axis)",
+        "rigid_transform(aircraft)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(oX,axis)": 38.3333,
+        "trajectory_dir(aircraft,axis)": 7.6667,
+        "rigid_transform(aircraft)": 7.5,
+        "accel_sign(oX,axis)": 7.0,
+        "accel_sign(aircraft,axis)": 7.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Is the pilot inside the cockpit of the helicopter?",
+      "signals": [
+        "containment(oA,oB)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 29.17,
+      "total_score_100": 84.17,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "containment(oA,oB)": 29.1667
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Is the door of the helicopter open, allowing entry or exit?",
+      "signals": [
+        "openable(oContainer)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 25.83,
+      "total_score_100": 80.83,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "openable(oContainer)": 25.8333
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Does the shadow cast by the helicopter on the ground below it show consistency with the light source direction?",
+      "signals": [
+        "shadow_consistency(oX)",
+        "shadow_consistency(aircraft,shadow)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "shadow_consistency(oX)": 36.6667,
+        "shadow_consistency(aircraft,shadow)": 7.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "The platform labeled 'BRANSON' supports the helicopter.",
+      "signals": [
+        "support(platform,helicopter)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 35.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "support(platform,helicopter)": 35.0
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "The pilot is seated inside the cockpit of the helicopter.",
+      "signals": [
+        "containment(oA,oB)"
+      ],
+      "content_score_60": 36,
+      "signal_score_40": 29.17,
+      "total_score_100": 65.17,
+      "duplicate_penalized": true,
+      "signal_detail": {
+        "containment(oA,oB)": 29.1667
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "The door of the helicopter is open, showing entry/exit access.",
+      "signals": [
+        "openable(oContainer)"
+      ],
+      "content_score_60": 0,
+      "signal_score_40": 25.83,
+      "total_score_100": 25.83,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "openable(oContainer)": 25.8333
+      },
+      "content_score_raw": "0"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "The rotor blades rotate consistently in direction and speed.",
+      "signals": [
+        "trajectory_dir(oX,axis)",
+        "accel_sign(oX,axis)",
+        "trajectory_dir(aircraft,axis)",
+        "accel_sign(aircraft,axis)",
+        "rigid_transform(aircraft)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(oX,axis)": 38.3333,
+        "trajectory_dir(aircraft,axis)": 7.6667,
+        "rigid_transform(aircraft)": 7.5,
+        "accel_sign(oX,axis)": 7.0,
+        "accel_sign(aircraft,axis)": 7.0
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "The shadow under the helicopter matches its position and light source.",
+      "signals": [
+        "shadow_consistency(oX)",
+        "shadow_consistency(aircraft,shadow)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "shadow_consistency(oX)": 36.6667,
+        "shadow_consistency(aircraft,shadow)": 7.3333
+      },
+      "content_score_raw": "50"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "v5",
+    "a1",
+    "a4",
+    "a5"
+  ]
+}

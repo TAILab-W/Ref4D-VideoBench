@@ -1,0 +1,200 @@
+{
+  "summary": {
+    "items": 10,
+    "enter_bank": 9,
+    "clip_range_sec": [
+      0.0,
+      14.87
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Do the lollipops on the table stay in place without floating or suddenly disappearing?",
+      "signals": [
+        "containment(oA,oB)",
+        "continuity(oX)",
+        "material_optics(lollipop)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "material_optics(lollipop)": 37.5,
+        "continuity(oX)": 7.3333,
+        "containment(oA,oB)": 5.8333
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Does the child's hand hold the candy with clear finger clearance and consistent position?",
+      "signals": [
+        "grasp_stability(person,lollipop)",
+        "finger_clearance(person,lollipop)",
+        "trajectory_dir(hand,vertical)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(hand,vertical)": 38.3333,
+        "finger_clearance(person,lollipop)": 6.8333,
+        "grasp_stability(person,lollipop)": 5.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Does the person holding the lollipop maintain balance to prevent it from dropping unexpectedly?",
+      "signals": [
+        "balance(lollipop)",
+        "grasp_stability(hand,candy)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "balance(lollipop)": 35.8333,
+        "grasp_stability(hand,candy)": 5.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Does the child play with candies in a way that avoids choking hazards?",
+      "signals": [
+        "biological_motion(person)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 38.33,
+      "total_score_100": 88.33,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "biological_motion(person)": 38.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Does the open gate pose any falling hazard for the children near it?",
+      "signals": [
+        "falling_hazard(gate)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 31.67,
+      "total_score_100": 81.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "falling_hazard(gate)": 31.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "Lollipops on the table do not float or disappear.",
+      "signals": [
+        "containment(oA,oB)",
+        "continuity(oX)",
+        "material_optics(lollipop)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "material_optics(lollipop)": 37.5,
+        "continuity(oX)": 7.3333,
+        "containment(oA,oB)": 5.8333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "The child's hand holds the lollipop without interpenetration with other hands.",
+      "signals": [
+        "grasp_stability(person,lollipop)",
+        "finger_clearance(person,lollipop)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 39.83,
+      "total_score_100": 89.83,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "finger_clearance(person,lollipop)": 34.1667,
+        "grasp_stability(person,lollipop)": 5.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "The person holding the lollipop maintains balance and does not drop it suddenly.",
+      "signals": [
+        "balance(lollipop)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 35.83,
+      "total_score_100": 85.83,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "balance(lollipop)": 35.8333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "Lollipops on the table remain stationary unless interacted with.",
+      "signals": [
+        "continuity(lollipops)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 36.67,
+      "total_score_100": 86.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(lollipops)": 36.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "Candies are held by hands and placed on surfaces.",
+      "signals": [
+        "grasp_stability(hand,candy)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 28.33,
+      "total_score_100": 78.33,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "grasp_stability(hand,candy)": 28.3333
+      },
+      "content_score_raw": "50"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "v5",
+    "a1",
+    "a2",
+    "a3",
+    "a4"
+  ]
+}

@@ -1,0 +1,205 @@
+{
+  "summary": {
+    "items": 10,
+    "enter_bank": 10,
+    "clip_range_sec": [
+      0.0,
+      12.47
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does the green external ladder remain attached to the brick structure without floating?",
+      "signals": [
+        "interpenetration(ladder,building)",
+        "support(building,ladder)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "interpenetration(ladder,building)": 35.8333,
+        "support(building,ladder)": 7.0
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Does the person in the yellow vest on the roof maintain a safe distance from the edge?",
+      "signals": [
+        "falling_hazard(person)",
+        "friction_sliding(person,on:roof)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 37.67,
+      "total_score_100": 87.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "falling_hazard(person)": 31.6667,
+        "friction_sliding(person,on:roof)": 6.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Does the brown-metallic-ornate-railing afford support for climbing up and down the fire escape stairs?",
+      "signals": [
+        "balance(staircase)",
+        "support(staircase,building)",
+        "support(railing,stairs)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "balance(staircase)": 35.8333,
+        "support(staircase,building)": 7.0,
+        "support(railing,stairs)": 7.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Does the green fire escape ladder maintain a consistent vertical trajectory throughout its movement?",
+      "signals": [
+        "trajectory_dir(oX,axis)",
+        "rigid_transform(oX)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(oX,axis)": 38.3333,
+        "rigid_transform(oX)": 7.5
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Do the shadows on the building facades follow a continuous direction?",
+      "signals": [
+        "shadow_consistency(oX)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 36.67,
+      "total_score_100": 91.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "shadow_consistency(oX)": 36.6667
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "The green external ladder remains attached to the brick structure.",
+      "signals": [
+        "interpenetration(ladder,building)",
+        "support(building,ladder)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "interpenetration(ladder,building)": 35.8333,
+        "support(building,ladder)": 7.0
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "Individuals in yellow vests work on rooftops near ladders, maintaining safe distances from edges.",
+      "signals": [
+        "falling_hazard(person)",
+        "friction_sliding(person,on:roof)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 37.67,
+      "total_score_100": 97.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "falling_hazard(person)": 31.6667,
+        "friction_sliding(person,on:roof)": 6.0
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "The brown-metallic-ornate-railing of the staircase affords access and support for climbing up and down.",
+      "signals": [
+        "balance(staircase)",
+        "support(staircase,building)",
+        "support(railing,stairs)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "balance(staircase)": 35.8333,
+        "support(staircase,building)": 7.0,
+        "support(railing,stairs)": 7.0
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "The green fire escape ladder maintains a consistent vertical trajectory and orientation.",
+      "signals": [
+        "trajectory_dir(oX,axis)",
+        "rigid_transform(oX)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(oX,axis)": 38.3333,
+        "rigid_transform(oX)": 7.5
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "The text overlay at the bottom of the frame is static and does not interfere with visual continuity.",
+      "signals": [
+        "frame_discontinuity(t)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "frame_discontinuity(t)": 40.0
+      },
+      "content_score_raw": "60"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "v5",
+    "a1",
+    "a2",
+    "a3",
+    "a4",
+    "a5"
+  ]
+}

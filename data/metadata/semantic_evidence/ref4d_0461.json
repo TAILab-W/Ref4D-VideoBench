@@ -1,0 +1,112 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0461.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "decord",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "person-in-blue-snowsuit",
+        "attributes": {
+          "color": [
+            "blue"
+          ],
+          "equipment": [
+            "backpack",
+            "snowboard"
+          ],
+          "action": [
+            "crawling",
+            "lying-down"
+          ],
+          "pose": [
+            "crawling-on-knees",
+            "lying-on-stomach"
+          ],
+          "signature": [
+            "blue-snowsuit-green-goggles-backpack"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            9.9
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "person-in-black-jacket",
+        "attributes": {
+          "color": [
+            "black",
+            "green"
+          ],
+          "equipment": [
+            "gloves",
+            "goggles",
+            "skis"
+          ],
+          "action": [
+            "drinking",
+            "riding-on-back",
+            "standing"
+          ],
+          "pose": [
+            "crouching",
+            "drinking",
+            "sitting-on-back",
+            "standing"
+          ],
+          "signature": [
+            "black-jacket-red-socks-green-goggles"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            9.9
+          ]
+        ]
+      }
+    ],
+    "relations": [
+      {
+        "subject": "o1",
+        "predicate": "left-of",
+        "object": "o2",
+        "spans": [
+          [
+            0.0,
+            9.9
+          ]
+        ],
+        "confidence": 0.8
+      },
+      {
+        "subject": "o2",
+        "predicate": "riding-on-back-of",
+        "object": "o1",
+        "spans": [
+          [
+            6.7,
+            9.9
+          ]
+        ],
+        "confidence": 0.9
+      }
+    ]
+  },
+  "views": {
+    "objects_count_display": {
+      "person-in-blue-snowsuit": 1,
+      "person-in-black-jacket": 1
+    }
+  }
+}

@@ -1,0 +1,237 @@
+{
+  "summary": {
+    "items": 10,
+    "enter_bank": 10,
+    "clip_range_sec": [
+      0.0,
+      13.27
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Do black cylindrical objects move through the machine's chute without sudden disappearance or interpenetration?",
+      "signals": [
+        "containment(oA,oB)",
+        "trajectory_dir(oX,axis)",
+        "accel_sign(oX,axis)",
+        "friction_sliding(oA,on:oB)",
+        "containment(cylinders,basket)",
+        "support(machine,cylinders)",
+        "continuity(cylinders)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(oX,axis)": 38.3333,
+        "continuity(cylinders)": 7.3333,
+        "accel_sign(oX,axis)": 7.0,
+        "support(machine,cylinders)": 7.0,
+        "friction_sliding(oA,on:oB)": 6.0,
+        "containment(oA,oB)": 5.8333,
+        "containment(cylinders,basket)": 5.8333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Is the blue basket stationary while holding metal cylinders below the chute?",
+      "signals": [
+        "trajectory_dir(oX,axis)",
+        "friction_sliding(oA,on:oB)",
+        "support(oA,oB)",
+        "rigid_transform(oX)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(oX,axis)": 38.3333,
+        "rigid_transform(oX)": 7.5,
+        "support(oA,oB)": 7.0,
+        "friction_sliding(oA,on:oB)": 6.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Do machine parts avoid unexpected collisions and maintain consistent lighting on metallic surfaces?",
+      "signals": [
+        "interpenetration(oA,oB)",
+        "collision(oA,oB)",
+        "material_optics(oA)",
+        "shadow_consistency(oX)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "material_optics(oA)": 37.5,
+        "shadow_consistency(oX)": 7.3333,
+        "interpenetration(oA,oB)": 7.1667,
+        "collision(oA,oB)": 6.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Do metal cylinders move from the chute into the blue basket without interpenetration?",
+      "signals": [
+        "containment(cylinders,basket)",
+        "support(machine,cylinders)",
+        "continuity(cylinders)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(cylinders)": 36.6667,
+        "support(machine,cylinders)": 7.0,
+        "containment(cylinders,basket)": 5.8333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Does the blue basket remain in a fixed position under the machine's chute?",
+      "signals": [
+        "rigid_transform(oX)",
+        "support(oA,oB)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "rigid_transform(oX)": 37.5,
+        "support(oA,oB)": 7.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "Black cylindrical objects are processed and transferred by the machine without sudden disappearance or interpenetration.",
+      "signals": [
+        "containment(oA,oB)",
+        "trajectory_dir(oX,axis)",
+        "accel_sign(oX,axis)",
+        "friction_sliding(oA,on:oB)",
+        "containment(cylinders,basket)",
+        "support(machine,cylinders)",
+        "continuity(cylinders)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(oX,axis)": 38.3333,
+        "continuity(cylinders)": 7.3333,
+        "accel_sign(oX,axis)": 7.0,
+        "support(machine,cylinders)": 7.0,
+        "friction_sliding(oA,on:oB)": 6.0,
+        "containment(oA,oB)": 5.8333,
+        "containment(cylinders,basket)": 5.8333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "A metal cylinder is placed in the machine's chute and moves along its trajectory.",
+      "signals": [
+        "trajectory_dir(oX,axis)",
+        "friction_sliding(oA,on:oB)",
+        "support(oA,oB)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(oX,axis)": 38.3333,
+        "support(oA,oB)": 7.0,
+        "friction_sliding(oA,on:oB)": 6.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "The blue basket below the chute remains stationary while holding objects.",
+      "signals": [
+        "rigid_transform(oX)",
+        "support(oA,oB)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "rigid_transform(oX)": 37.5,
+        "support(oA,oB)": 7.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "Machine parts do not interpenetrate or collide unexpectedly.",
+      "signals": [
+        "interpenetration(oA,oB)",
+        "collision(oA,oB)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "interpenetration(oA,oB)": 35.8333,
+        "collision(oA,oB)": 6.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "The lighting and shadows on metallic surfaces are consistent with material optics.",
+      "signals": [
+        "material_optics(oA)",
+        "shadow_consistency(oX)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "material_optics(oA)": 37.5,
+        "shadow_consistency(oX)": 7.3333
+      },
+      "content_score_raw": "50"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "v5",
+    "a1",
+    "a2",
+    "a3",
+    "a4",
+    "a5"
+  ]
+}

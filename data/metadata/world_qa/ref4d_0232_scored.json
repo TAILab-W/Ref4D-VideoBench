@@ -1,0 +1,238 @@
+{
+  "summary": {
+    "items": 10,
+    "enter_bank": 9,
+    "clip_range_sec": [
+      0.0,
+      8.53
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does the fried rice dish on the left plate stay in its position without moving?",
+      "signals": [
+        "continuity(oX)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 36.67,
+      "total_score_100": 91.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(oX)": 36.6667
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Are the food items securely placed on the table, showing no signs of falling or displacement?",
+      "signals": [
+        "support(oA,oB)",
+        "balance(oX)",
+        "center_of_mass_over_base(fried-rice)",
+        "center_of_mass_over_base(oyster-dish)",
+        "center_of_mass_over_base(cup)",
+        "center_of_mass_over_base(small-bowl)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "balance(oX)": 35.8333,
+        "support(oA,oB)": 7.0,
+        "center_of_mass_over_base(fried-rice)": 6.5,
+        "center_of_mass_over_base(oyster-dish)": 6.5,
+        "center_of_mass_over_base(cup)": 6.5,
+        "center_of_mass_over_base(small-bowl)": 6.5
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Do the oysters remain supported by the white shell dish and not float away?",
+      "signals": [
+        "support(oA,oB)",
+        "containment(oA,oB)",
+        "continuity(oX)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(oX)": 36.6667,
+        "support(oA,oB)": 7.0,
+        "containment(oA,oB)": 5.8333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Is the rice dish on the right side static with no evidence of spillage across the clip?",
+      "signals": [
+        "friction_sliding(oA,on:oB)",
+        "spillage(oV)",
+        "state_change(oObj,from:state,to:state)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "state_change(oObj,from:state,to:state)": 37.5,
+        "friction_sliding(oA,on:oB)": 6.0,
+        "spillage(oV)": 5.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Is the cup standing upright with its base supporting it?",
+      "signals": [
+        "support(oA,oB)",
+        "center_of_mass_over_base(oX)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "support(oA,oB)": 35.0,
+        "center_of_mass_over_base(oX)": 6.5
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "The fried rice and oyster dish remain on their respective plates without displacement.",
+      "signals": [
+        "continuity(oX)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 36.67,
+      "total_score_100": 96.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(oX)": 36.6667
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "The food items are placed securely on the table, posing no falling hazard.",
+      "signals": [
+        "support(oA,oB)",
+        "balance(oX)",
+        "continuity(fried-rice)",
+        "continuity(oyster-dish)",
+        "containment(fried-rice, square-white-plate)",
+        "containment(oyster-dish, shell-plate)",
+        "containment(oA,oB)",
+        "continuity(oX)",
+        "friction_sliding(oA,on:oB)",
+        "spillage(oV)",
+        "state_change(oObj,from:state,to:state)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "state_change(oObj,from:state,to:state)": 37.5,
+        "continuity(fried-rice)": 7.3333,
+        "continuity(oyster-dish)": 7.3333,
+        "continuity(oX)": 7.3333,
+        "balance(oX)": 7.1667,
+        "support(oA,oB)": 7.0,
+        "friction_sliding(oA,on:oB)": 6.0,
+        "containment(fried-rice, square-white-plate)": 5.8333,
+        "containment(oyster-dish, shell-plate)": 5.8333,
+        "containment(oA,oB)": 5.8333,
+        "spillage(oV)": 5.6667
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "The cup is placed upright with its base supporting it.",
+      "signals": [
+        "support(oA,oB)",
+        "center_of_mass_over_base(oX)"
+      ],
+      "content_score_60": 36,
+      "signal_score_40": 40.0,
+      "total_score_100": 76.0,
+      "duplicate_penalized": true,
+      "signal_detail": {
+        "support(oA,oB)": 35.0,
+        "center_of_mass_over_base(oX)": 6.5
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "The fried rice and oyster dish are supported by a stable surface, maintaining balance.",
+      "signals": [
+        "support(oA,oB)",
+        "balance(oX)",
+        "hot_surface_contact(oObj,oSurface)",
+        "flame_proximity(oObj,dist)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "balance(oX)": 35.8333,
+        "support(oA,oB)": 7.0,
+        "hot_surface_contact(oObj,oSurface)": 6.8333,
+        "flame_proximity(oObj,dist)": 6.8333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "There is no evidence of hot surface contact or flame proximity that could cause harm.",
+      "signals": [
+        "center_of_mass_over_base(fried-rice)",
+        "center_of_mass_over_base(oyster-dish)",
+        "center_of_mass_over_base(cup)",
+        "center_of_mass_over_base(small-bowl)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "center_of_mass_over_base(fried-rice)": 32.5,
+        "center_of_mass_over_base(oyster-dish)": 6.5,
+        "center_of_mass_over_base(cup)": 6.5,
+        "center_of_mass_over_base(small-bowl)": 6.5
+      },
+      "content_score_raw": "60"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "v5",
+    "a1",
+    "a2",
+    "a4",
+    "a5"
+  ]
+}

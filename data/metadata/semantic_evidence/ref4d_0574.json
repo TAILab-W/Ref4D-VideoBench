@@ -1,0 +1,53 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0574.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "cv2",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "truck",
+        "attributes": {
+          "action": [
+            "driving",
+            "parking"
+          ],
+          "signature": [
+            "blue-color-n6-16l-max-power-text-on-cab-deck"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            0.4
+          ]
+        ]
+      }
+    ],
+    "relations": [
+      {
+        "subject": "o1",
+        "predicate": "parking",
+        "object": "o1",
+        "spans": [
+          [
+            0.2,
+            0.4
+          ]
+        ],
+        "confidence": 0.8
+      }
+    ]
+  },
+  "views": {
+    "objects_count_display": {
+      "truck": 1
+    }
+  }
+}

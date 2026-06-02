@@ -1,0 +1,206 @@
+{
+  "summary": {
+    "items": 10,
+    "enter_bank": 9,
+    "clip_range_sec": [
+      0.0,
+      8.87
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does the person's right hand maintain a smooth, continuous motion without abrupt changes in position?",
+      "signals": [
+        "continuity(person)",
+        "interpenetration(person)",
+        "frame_discontinuity(t)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "frame_discontinuity(t)": 40.0,
+        "continuity(person)": 7.3333,
+        "interpenetration(person)": 7.1667
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Is the traditional Chinese building structure stable and intact throughout the clip?",
+      "signals": [
+        "material_optics(building)",
+        "support(building,ground)",
+        "support(building,activity)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "material_optics(building)": 37.5,
+        "support(building,ground)": 7.0,
+        "support(building,activity)": 7.0
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Are the shadows on the ground consistent with the light source direction and the person's body position?",
+      "signals": [
+        "friction_sliding(person,on:ground)",
+        "shadow_consistency(person)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "shadow_consistency(person)": 36.6667,
+        "friction_sliding(person,on:ground)": 6.0
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Do the architectural elements behind the person show no signs of material inconsistency or support failure?",
+      "signals": [
+        "shadow_consistency(person)",
+        "support(architectural_element)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "shadow_consistency(person)": 36.6667,
+        "support(architectural_element)": 7.0
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Does the stone-paved surface provide adequate friction for the person to stand barefoot?",
+      "signals": [
+        "support(building,activity)",
+        "continuity(person)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(person)": 36.6667,
+        "support(building,activity)": 7.0
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "The person's right arm is raised, and the left arm is extended to the side.",
+      "signals": [
+        "continuity(person)",
+        "interpenetration(person)",
+        "frame_discontinuity(t)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "frame_discontinuity(t)": 40.0,
+        "continuity(person)": 7.3333,
+        "interpenetration(person)": 7.1667
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "The traditional Chinese building structure remains static in the background.",
+      "signals": [
+        "material_optics(building)",
+        "support(building,ground)",
+        "support(building,activity)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "material_optics(building)": 37.5,
+        "support(building,ground)": 7.0,
+        "support(building,activity)": 7.0
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "The person is barefoot on a stone-paved surface with visible footprints.",
+      "signals": [
+        "friction_sliding(person,on:ground)"
+      ],
+      "content_score_60": 35,
+      "signal_score_40": 30.0,
+      "total_score_100": 65.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "friction_sliding(person,on:ground)": 30.0
+      },
+      "content_score_raw": "35"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "The shadow of the person appears consistent with their position and light source direction.",
+      "signals": [
+        "shadow_consistency(person)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 36.67,
+      "total_score_100": 91.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "shadow_consistency(person)": 36.6667
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "The architectural elements do not show signs of collision or support failure.",
+      "signals": [
+        "support(architectural_element)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 35.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "support(architectural_element)": 35.0
+      },
+      "content_score_raw": "60"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "v5",
+    "a1",
+    "a2",
+    "a4",
+    "a5"
+  ]
+}

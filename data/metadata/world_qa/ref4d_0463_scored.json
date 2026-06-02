@@ -1,0 +1,210 @@
+{
+  "summary": {
+    "items": 10,
+    "enter_bank": 9,
+    "clip_range_sec": [
+      0.0,
+      10.3
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does the person in gray maintain a low center of mass during the martial arts pose?",
+      "signals": [
+        "balance(oX)",
+        "center_of_mass_over_base(oX)",
+        "center_of_mass_over_base(person-in-gray-martial-arts-uniform-with-yellow-belt)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "balance(oX)": 35.8333,
+        "center_of_mass_over_base(oX)": 6.5,
+        "center_of_mass_over_base(person-in-gray-martial-arts-uniform-with-yellow-belt)": 6.5
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Are the individuals performing on a stable outdoor surface without unsafe ground conditions?",
+      "signals": [
+        "friction_sliding(oA,on:oB)",
+        "falling_hazard(person-in-gray-martial-arts-uniform-with-yellow-belt)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 37.67,
+      "total_score_100": 87.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "falling_hazard(person-in-gray-martial-arts-uniform-with-yellow-belt)": 31.6667,
+        "friction_sliding(oA,on:oB)": 6.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Do the shadows cast by the person in gray match their position and light source direction?",
+      "signals": [
+        "shadow_consistency(oX)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 36.67,
+      "total_score_100": 86.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "shadow_consistency(oX)": 36.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Does the sword held by the individual in white-and-brown show proper orientation away from themselves, with no interpenetration or collision with other objects?",
+      "signals": [
+        "blade_orientation_away(person-in-white-and-brown-martial-arts-uniform,hand)",
+        "interpenetration(oA,oB)",
+        "collision(oA,oB)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "interpenetration(oA,oB)": 35.8333,
+        "collision(oA,oB)": 6.3333,
+        "blade_orientation_away(person-in-white-and-brown-martial-arts-uniform,hand)": 5.8333
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Is there an open door behind the participants allowing natural light into the space?",
+      "signals": [
+        "shadow_consistency(person-in-gray-martial-arts-uniform-with-yellow-belt)"
+      ],
+      "content_score_60": 0,
+      "signal_score_40": 36.67,
+      "total_score_100": 36.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "shadow_consistency(person-in-gray-martial-arts-uniform-with-yellow-belt)": 36.6667
+      },
+      "content_score_raw": "0"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "The person in gray maintains a low center of mass and balanced stance.",
+      "signals": [
+        "balance(oX)",
+        "center_of_mass_over_base(oX)",
+        "center_of_mass_over_base(person-in-gray-martial-arts-uniform-with-yellow-belt)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "balance(oX)": 35.8333,
+        "center_of_mass_over_base(oX)": 6.5,
+        "center_of_mass_over_base(person-in-gray-martial-arts-uniform-with-yellow-belt)": 6.5
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "The individuals perform martial arts on a stable outdoor surface without falling hazards.",
+      "signals": [
+        "friction_sliding(oA,on:oB)",
+        "falling_hazard(person-in-gray-martial-arts-uniform-with-yellow-belt)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 37.67,
+      "total_score_100": 92.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "falling_hazard(person-in-gray-martial-arts-uniform-with-yellow-belt)": 31.6667,
+        "friction_sliding(oA,on:oB)": 6.0
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "The shadow of the person in gray clothing matches their position and light source.",
+      "signals": [
+        "shadow_consistency(oX)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 36.67,
+      "total_score_100": 86.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "shadow_consistency(oX)": 36.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "The sword held by the individual in white is used correctly, with no interpenetration or collision.",
+      "signals": [
+        "blade_orientation_away(person-in-white-and-brown-martial-arts-uniform,hand)",
+        "interpenetration(oA,oB)",
+        "collision(oA,oB)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "interpenetration(oA,oB)": 35.8333,
+        "collision(oA,oB)": 6.3333,
+        "blade_orientation_away(person-in-white-and-brown-martial-arts-uniform,hand)": 5.8333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "The person in gray demonstrates proper balance during the martial arts demonstration.",
+      "signals": [
+        "balance(gray-uniform-yellow-belt)",
+        "trajectory_dir(sword,axis)",
+        "friction_sliding(gray-uniform-yellow-belt,on:bricksurface)",
+        "tool_contact(sword,hand)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(sword,axis)": 38.3333,
+        "balance(gray-uniform-yellow-belt)": 7.1667,
+        "friction_sliding(gray-uniform-yellow-belt,on:bricksurface)": 6.0,
+        "tool_contact(sword,hand)": 5.6667
+      },
+      "content_score_raw": "50"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "a1",
+    "a2",
+    "a3",
+    "a4",
+    "a5"
+  ]
+}

@@ -1,0 +1,209 @@
+{
+  "summary": {
+    "items": 10,
+    "enter_bank": 10,
+    "clip_range_sec": [
+      0.0,
+      5.7
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does a wooden crate fall from the back of the large red construction vehicle and land on the highway?",
+      "signals": [
+        "falling_hazard(crate)",
+        "trajectory_dir(crate,axis)",
+        "friction_sliding(crate,on:highway)",
+        "shadow_consistency(crate)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(crate,axis)": 38.3333,
+        "shadow_consistency(crate)": 7.3333,
+        "falling_hazard(crate)": 6.3333,
+        "friction_sliding(crate,on:highway)": 6.0
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Do vehicles maintain consistent trajectory direction along their path?",
+      "signals": [
+        "trajectory_dir",
+        "accel_sign"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir": 38.3333,
+        "accel_sign": 7.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Do truck wheels roll naturally on the road surface without sudden stops?",
+      "signals": [
+        "wheel_rolling"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 30.0,
+      "total_score_100": 85.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "wheel_rolling": 30.0
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Do shadows cast by moving objects like cars remain continuous with the light source direction?",
+      "signals": [
+        "shadow_consistency"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 36.67,
+      "total_score_100": 86.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "shadow_consistency": 36.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Does the large object on the road suddenly disappear without visible interaction?",
+      "signals": [
+        "size_inconsistency"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 37.5,
+      "total_score_100": 92.5,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "size_inconsistency": 37.5
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "A wooden crate falls from the back of the large red construction vehicle.",
+      "signals": [
+        "falling_hazard(crate)",
+        "trajectory_dir(crate,axis)",
+        "friction_sliding(crate,on:highway)",
+        "shadow_consistency(crate)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(crate,axis)": 38.3333,
+        "shadow_consistency(crate)": 7.3333,
+        "falling_hazard(crate)": 6.3333,
+        "friction_sliding(crate,on:highway)": 6.0
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "The black car maintains a consistent trajectory direction on the highway.",
+      "signals": [
+        "trajectory_dir",
+        "accel_sign"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir": 38.3333,
+        "accel_sign": 7.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "The wheels of all vehicles roll naturally on the road surface.",
+      "signals": [
+        "wheel_rolling"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 30.0,
+      "total_score_100": 80.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "wheel_rolling": 30.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "Shadows cast by moving vehicles remain continuous and consistent with the light source direction.",
+      "signals": [
+        "shadow_consistency"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 36.67,
+      "total_score_100": 86.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "shadow_consistency": 36.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "The wooden crate lands on the highway without merging with another object.",
+      "signals": [
+        "falling_hazard(crate)",
+        "trajectory_dir(crate,axis)",
+        "friction_sliding(crate,on:highway)",
+        "shadow_consistency(crate)",
+        "size_inconsistency"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(crate,axis)": 38.3333,
+        "size_inconsistency": 7.5,
+        "shadow_consistency(crate)": 7.3333,
+        "falling_hazard(crate)": 6.3333,
+        "friction_sliding(crate,on:highway)": 6.0
+      },
+      "content_score_raw": "60"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "v5",
+    "a1",
+    "a2",
+    "a3",
+    "a4",
+    "a5"
+  ]
+}

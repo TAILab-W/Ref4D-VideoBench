@@ -1,0 +1,61 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0497.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "decord",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "gymnast",
+        "attributes": {
+          "color": [
+            "black",
+            "green"
+          ],
+          "pattern": [
+            "sparkly"
+          ],
+          "sex": [
+            "female"
+          ],
+          "action": [
+            "jumping",
+            "landing",
+            "raising-arms",
+            "running"
+          ],
+          "pose": [
+            "crouched",
+            "mid-air",
+            "standing"
+          ],
+          "facing-direction": [
+            "forward",
+            "towards-camera"
+          ],
+          "signature": [
+            "black-green-onesie-bun"
+          ]
+        },
+        "spans": [
+          [
+            0.4,
+            1.0
+          ]
+        ]
+      }
+    ],
+    "relations": []
+  },
+  "views": {
+    "objects_count_display": {
+      "gymnast": 1
+    }
+  }
+}

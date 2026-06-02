@@ -1,0 +1,83 @@
+# Ref4D motion evaluation config 
+# This config is shared by:
+# - reference-side motion evidence cache building
+# - single-sample motion eval
+# - batch motion eval
+
+
+dataset:
+  meta_path: data/metadata/ref4d_meta.jsonl
+
+ref:
+  cache_root: data/metadata/motion_ref   
+
+sample:
+  short_side: 448          
+  fps: 8                   
+
+subject:
+  enable: true
+  semantic_root: data/metadata/semantic_evidence
+
+  gdino_cfg: third_party/GroundingDINO/groundingdino/config/GroundingDINO_SwinT_OGC.py
+  gdino_ckpt: checkpoints/groundingdino/groundingdino_swint_ogc.pth
+
+  sam2_cfg_name: configs/sam2.1/sam2.1_hiera_l
+  sam2_ckpt: checkpoints/sam2/sam2.1_hiera_large.pt
+
+  box_conf_thr: 0.15
+  text_thr: 0.20
+  topk_instances: 5
+
+  post_erode: 0
+  post_dilate: 3
+  post_fill_ratio: 0.02
+
+# ---- TAPIR tracking (Torch-only) ----
+tapir:
+  backend: torch
+  weights: checkpoints/tapnet_checkpoints/bootstapir_checkpoint_v2.pt
+  ckpt_dir: null
+  torch_ckpt: null
+  vis_thresh: 0.6
+
+# ---- Seed sampling ----
+tracking:
+  num_fg: 512
+  num_bg: 512
+  border: 2
+  edge_bonus: true         
+  min_tex: 0.02
+  t0_stride: 8
+  t0_offset: 0
+  seed: 2025
+
+fallback:
+  mask:
+    enable: true
+    max_skip: 6
+    dilate_iters: 1
+    min_area_px: 200
+
+
+# ---- Motion feature construction ----
+features:
+  dir_bins: 4
+  min_speed_for_dir: 0.2
+
+# ---- Motion atomic metrics ----
+motion_metrics:
+  tau_s_quantile_ref: 0.40
+  ncc_patch: 32
+  ncc_stride: 32
+  ncc_thr: 0.90
+  unique_min_ratio: 0.15
+  d_mag_winsor_quantile_ref: 0.90
+  smoothness_acc_weight: 0.3
+  smoothness_jerk_weight: 0.7
+
+motion_aggregator:
+  feature_order: [S_dir, S_mag, S_smo, RF, LS]
+  weights: [2.229951, 2.167778, -0.031075, -0.194863, 0.026340]
+  bias: -1.653110
+  use_cdf_100: true

@@ -1,0 +1,19 @@
+
+ddm:
+  repo_dir: third_party/ddmnet
+  ckpt: checkpoints/ddmnet/checkpoint.pth.tar
+  device: auto
+
+  model: "multiframes_resnet"
+  window: 11
+  stride: 1
+  input_size: 224
+
+batch_size: 32
+threshold: 0.5
+min_peak_distance: 5
+min_event_dur: 1.0
+
+
+seed: 1337
+min_peak_prominence: 0.3

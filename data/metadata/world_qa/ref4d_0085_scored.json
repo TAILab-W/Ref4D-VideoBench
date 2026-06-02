@@ -1,0 +1,200 @@
+{
+  "summary": {
+    "items": 10,
+    "enter_bank": 9,
+    "clip_range_sec": [
+      0.0,
+      9.3
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does the hummingbird's beak consistently interact with the nectar while its wings flap continuously?",
+      "signals": [
+        "trajectory_dir(hummingbird,vertical)",
+        "tool_contact(hummingbird_beak,feeder_nectar)",
+        "biological_motion(hummingbird)"
+      ],
+      "content_score_60": 58,
+      "signal_score_40": 40.0,
+      "total_score_100": 98.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(hummingbird,vertical)": 38.3333,
+        "biological_motion(hummingbird)": 7.6667,
+        "tool_contact(hummingbird_beak,feeder_nectar)": 5.6667
+      },
+      "content_score_raw": "58"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Does the liquid in the container show slosh response when the bird lands on it and approaches?",
+      "signals": [
+        "slosh_response(liquid,amp)"
+      ],
+      "content_score_60": 58,
+      "signal_score_40": 34.17,
+      "total_score_100": 92.17,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "slosh_response(liquid,amp)": 34.1667
+      },
+      "content_score_raw": "58"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Is the feeder stable, preventing falling hazard, and does the red lid allow access for the bird to feed?",
+      "signals": [
+        "center_of_mass_over_base(feeder)",
+        "openable(feeder,Container)"
+      ],
+      "content_score_60": 58,
+      "signal_score_40": 37.67,
+      "total_score_100": 95.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "center_of_mass_over_base(feeder)": 32.5,
+        "openable(feeder,Container)": 5.1667
+      },
+      "content_score_raw": "58"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Are the feeder and surrounding area free from falling hazards?",
+      "signals": [
+        "falling_hazard(feeder)",
+        "center_of_mass_over_base(feeder)"
+      ],
+      "content_score_60": 58,
+      "signal_score_40": 38.83,
+      "total_score_100": 96.83,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "center_of_mass_over_base(feeder)": 32.5,
+        "falling_hazard(feeder)": 6.3333
+      },
+      "content_score_raw": "58"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Does the liquid in the container show slosh response when the bird is near it?",
+      "signals": [
+        "slosh_response(liquid,amp)"
+      ],
+      "content_score_60": 58,
+      "signal_score_40": 34.17,
+      "total_score_100": 92.17,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "slosh_response(liquid,amp)": 34.1667
+      },
+      "content_score_raw": "58"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "The hummingbird's beak consistently interacts with the nectar, and its wings flap continuously.",
+      "signals": [
+        "trajectory_dir(hummingbird,vertical)",
+        "tool_contact(hummingbird_beak,feeder_nectar)",
+        "biological_motion(hummingbird)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(hummingbird,vertical)": 38.3333,
+        "biological_motion(hummingbird)": 7.6667,
+        "tool_contact(hummingbird_beak,feeder_nectar)": 5.6667
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "The liquid in the container shows slosh response when the bird lands on it.",
+      "signals": [
+        "slosh_response(liquid,amp)"
+      ],
+      "content_score_60": 0,
+      "signal_score_40": 34.17,
+      "total_score_100": 34.17,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "slosh_response(liquid,amp)": 34.1667
+      },
+      "content_score_raw": "0"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "The feeder is stable on the surface without falling hazard.",
+      "signals": [
+        "center_of_mass_over_base(feeder)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 32.5,
+      "total_score_100": 92.5,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "center_of_mass_over_base(feeder)": 32.5
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "The red lid of the feeder allows the bird to access the nectar.",
+      "signals": [
+        "openable(feeder,Container)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 25.83,
+      "total_score_100": 85.83,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "openable(feeder,Container)": 25.8333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "The liquid in the container shows slosh response as the bird approaches.",
+      "signals": [
+        "trajectory_dir(hummingbird,vertical)",
+        "tool_contact(hummingbird_beak,feeder_nectar)",
+        "slosh_response(liquid,amp)"
+      ],
+      "content_score_60": 58,
+      "signal_score_40": 40.0,
+      "total_score_100": 98.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(hummingbird,vertical)": 38.3333,
+        "slosh_response(liquid,amp)": 6.8333,
+        "tool_contact(hummingbird_beak,feeder_nectar)": 5.6667
+      },
+      "content_score_raw": "58"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "v5",
+    "a1",
+    "a3",
+    "a4",
+    "a5"
+  ]
+}

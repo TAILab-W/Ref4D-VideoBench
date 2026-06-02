@@ -1,0 +1,122 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0162.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "cv2",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "router",
+        "attributes": {
+          "color": [
+            "black"
+          ],
+          "pattern": [
+            "grid"
+          ],
+          "texture": [
+            "smooth"
+          ],
+          "material": [
+            "plastic"
+          ],
+          "size": [
+            "large"
+          ],
+          "state": [
+            "stationary"
+          ],
+          "pose": [
+            "rotating"
+          ],
+          "action": [
+            "displaying"
+          ],
+          "orientation": [
+            "360-degree"
+          ],
+          "facing-direction": [
+            "multiple"
+          ],
+          "position": [
+            "center"
+          ],
+          "object-part": [
+            "antennas",
+            "body",
+            "ports"
+          ],
+          "equipment": [
+            "wireless-router"
+          ],
+          "printed-text": [
+            "from-idea-to-industry"
+          ],
+          "style": [
+            "geometric",
+            "modern"
+          ],
+          "camera-view": [
+            "front"
+          ],
+          "signature": [
+            "black-wireless-router-with-four-antennas-rotating-360-degrees"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            6.9
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "text",
+        "attributes": {
+          "content": [
+            "from-idea-to-industry"
+          ],
+          "font-style": [
+            "bold",
+            "italic"
+          ],
+          "color": [
+            "black"
+          ],
+          "position": [
+            "top-center"
+          ],
+          "size": [
+            "large"
+          ],
+          "language": [
+            "english"
+          ],
+          "signature": [
+            "text-'from-idea-to-industry'-at-top-center-of-the-image"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            6.9
+          ]
+        ]
+      }
+    ],
+    "relations": []
+  },
+  "views": {
+    "objects_count_display": {
+      "router": 1,
+      "text": 1
+    }
+  }
+}

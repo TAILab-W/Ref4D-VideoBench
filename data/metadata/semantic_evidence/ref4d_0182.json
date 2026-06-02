@@ -1,0 +1,70 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0182.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "decord",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "hair-dryer",
+        "attributes": {
+          "object-part": [
+            "brush-attachment",
+            "handle",
+            "head"
+          ],
+          "signature": [
+            "gray-cylindrical-object-with-a-circular-head-and-brush-attachment,-featuring-a-'stop'-button-on-the-handle"
+          ]
+        },
+        "spans": [
+          [
+            0.2,
+            3.7
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "text",
+        "attributes": {
+          "signature": [
+            "black-text-reading-'from-goals-to-gains'"
+          ]
+        },
+        "spans": [
+          [
+            0.1,
+            3.7
+          ]
+        ]
+      }
+    ],
+    "relations": [
+      {
+        "subject": "o1",
+        "predicate": "above",
+        "object": "o2",
+        "spans": [
+          [
+            0.0,
+            1.0
+          ]
+        ],
+        "confidence": 0.8
+      }
+    ]
+  },
+  "views": {
+    "objects_count_display": {
+      "hair-dryer": 1,
+      "text": 1
+    }
+  }
+}

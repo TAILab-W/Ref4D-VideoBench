@@ -1,0 +1,99 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0493.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "decord",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "person",
+        "attributes": {
+          "signature": [
+            "blue-shirt"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            11.3
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "person",
+        "attributes": {
+          "signature": [
+            "green-shirt"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            11.3
+          ]
+        ]
+      },
+      {
+        "id": "o3",
+        "name": "wall",
+        "attributes": {
+          "signature": [
+            "wall"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            11.3
+          ]
+        ]
+      },
+      {
+        "id": "o4",
+        "name": "floor",
+        "attributes": {
+          "signature": [
+            "floor"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            11.3
+          ]
+        ]
+      },
+      {
+        "id": "o5",
+        "name": "text",
+        "attributes": {
+          "signature": [
+            "text"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            11.3
+          ]
+        ]
+      }
+    ],
+    "relations": []
+  },
+  "views": {
+    "objects_count_display": {
+      "person": 2,
+      "wall": 1,
+      "floor": 1,
+      "text": 1
+    }
+  }
+}

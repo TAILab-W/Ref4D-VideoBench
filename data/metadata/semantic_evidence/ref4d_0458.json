@@ -1,0 +1,125 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0458.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "decord",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "rider",
+        "attributes": {
+          "color": [
+            "blue",
+            "green",
+            "yellow"
+          ],
+          "action": [
+            "being-lifted",
+            "celebrating"
+          ],
+          "position": [
+            "center"
+          ],
+          "signature": [
+            "blue-helmet,-green-and-yellow-suit-with-australian-flag"
+          ]
+        },
+        "spans": [
+          [
+            0.2,
+            0.5
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "team-member",
+        "attributes": {
+          "color": [
+            "green",
+            "yellow"
+          ],
+          "action": [
+            "celebrating",
+            "lifting"
+          ],
+          "position": [
+            "left"
+          ],
+          "signature": [
+            "yellow-jacket,-green-beanie"
+          ]
+        },
+        "spans": [
+          [
+            0.1,
+            0.4
+          ]
+        ]
+      },
+      {
+        "id": "o3",
+        "name": "stadium",
+        "attributes": {
+          "color": [
+            "dark"
+          ],
+          "action": [
+            "background"
+          ],
+          "position": [
+            "behind"
+          ],
+          "signature": [
+            "large,-lit-up,-empty-seats"
+          ]
+        },
+        "spans": [
+          [
+            0.6,
+            0.8
+          ]
+        ]
+      }
+    ],
+    "relations": [
+      {
+        "subject": "o1",
+        "predicate": "being-lifted-by",
+        "object": "o2",
+        "spans": [
+          [
+            0.2,
+            0.5
+          ]
+        ],
+        "confidence": 0.9
+      },
+      {
+        "subject": "o3",
+        "predicate": "contains",
+        "object": "o1",
+        "spans": [
+          [
+            0.6,
+            0.8
+          ]
+        ],
+        "confidence": 0.7
+      }
+    ]
+  },
+  "views": {
+    "objects_count_display": {
+      "rider": 1,
+      "team-member": 1,
+      "stadium": 1
+    }
+  }
+}

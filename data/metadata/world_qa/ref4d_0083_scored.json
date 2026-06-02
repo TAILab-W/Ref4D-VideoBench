@@ -1,0 +1,201 @@
+{
+  "summary": {
+    "items": 10,
+    "enter_bank": 10,
+    "clip_range_sec": [
+      0.0,
+      8.1
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does the baby gorilla stay close to the adult gorilla without falling off?",
+      "signals": [
+        "biological_motion(gorilla)",
+        "biological_motion"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "biological_motion(gorilla)": 38.3333,
+        "biological_motion": 7.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Are the two large gorillas maintaining a safe distance from each other throughout?",
+      "signals": [
+        "collision(gorilla,gorilla)",
+        "interpenetration(gorilla,baby_gorilla)"
+      ],
+      "content_score_60": 40,
+      "signal_score_40": 40.0,
+      "total_score_100": 80.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "interpenetration(gorilla,baby_gorilla)": 35.8333,
+        "collision(gorilla,gorilla)": 6.3333
+      },
+      "content_score_raw": "40"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Do the shadows of the gorillas match the direction of the light in the scene?",
+      "signals": [
+        "shadow_consistency(gorilla)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 36.67,
+      "total_score_100": 86.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "shadow_consistency(gorilla)": 36.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Is the appearance of the left gorilla consistent across all frames, with no sudden changes?",
+      "signals": [
+        "continuity(gorilla)",
+        "continuity",
+        "frame_discontinuity"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "frame_discontinuity": 40.0,
+        "continuity(gorilla)": 7.3333,
+        "continuity": 7.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Does the right gorilla hold its mouth open while facing the camera?",
+      "signals": [
+        "grasp_stability",
+        "slip"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 33.83,
+      "total_score_100": 83.83,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "grasp_stability": 28.3333,
+        "slip": 5.5
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "The gorillas exhibit natural biological motion consistent with their species.",
+      "signals": [
+        "biological_motion(gorilla)",
+        "biological_motion"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "biological_motion(gorilla)": 38.3333,
+        "biological_motion": 7.6667
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "There is no interpenetration between the gorillas and baby gorilla.",
+      "signals": [
+        "interpenetration(gorilla,baby_gorilla)",
+        "collision(gorilla,gorilla)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "interpenetration(gorilla,baby_gorilla)": 35.8333,
+        "collision(gorilla,gorilla)": 6.3333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "The appearance of the adult gorillas remains consistent throughout the video.",
+      "signals": [
+        "continuity(gorilla)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 36.67,
+      "total_score_100": 96.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(gorilla)": 36.6667
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "The size of the baby gorilla held by the left gorilla does not change during the clip.",
+      "signals": [
+        "size_inconsistency(gorilla)",
+        "size_inconsistency(baby_gorilla)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "size_inconsistency(gorilla)": 37.5,
+        "size_inconsistency(baby_gorilla)": 7.5
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "Shadows cast by the gorillas are visible on the ground, matching the light source direction.",
+      "signals": [
+        "shadow_consistency(gorilla)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 36.67,
+      "total_score_100": 86.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "shadow_consistency(gorilla)": 36.6667
+      },
+      "content_score_raw": "50"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "v5",
+    "a1",
+    "a2",
+    "a3",
+    "a4",
+    "a5"
+  ]
+}

@@ -1,0 +1,91 @@
+{
+  "events": [
+    {
+      "id": "m0001",
+      "s": 0.0,
+      "e": 0.39499999999999996,
+      "dur": 0.39499999999999996,
+      "members": [
+        "e0001#2"
+      ],
+      "text": "antelope struggle",
+      "s_abs": 0.0,
+      "e_abs": 2.6333333333333333,
+      "dur_abs": 2.6333333333333333
+    },
+    {
+      "id": "m0002",
+      "s": 0.0,
+      "e": 0.585,
+      "dur": 0.585,
+      "members": [
+        "e0001#1",
+        "e0002#1"
+      ],
+      "text": "monkey attack antelope",
+      "s_abs": 0.0,
+      "e_abs": 3.9,
+      "dur_abs": 3.9
+    },
+    {
+      "id": "m0003",
+      "s": 0.39499999999999996,
+      "e": 0.585,
+      "dur": 0.19,
+      "members": [
+        "e0002#2"
+      ],
+      "text": "antelope fight back",
+      "s_abs": 2.6333333333333333,
+      "e_abs": 3.9,
+      "dur_abs": 1.2666666666666666
+    },
+    {
+      "id": "m0004",
+      "s": 0.585,
+      "e": 0.735,
+      "dur": 0.15000000000000002,
+      "members": [
+        "e0003#1"
+      ],
+      "text": "monkey carry animal",
+      "s_abs": 3.9,
+      "e_abs": 4.9,
+      "dur_abs": 1.0000000000000004
+    },
+    {
+      "id": "m0005",
+      "s": 0.585,
+      "e": 1.0,
+      "dur": 0.41500000000000004,
+      "members": [
+        "e0003#2",
+        "e0004#1",
+        "e0004#2"
+      ],
+      "text": "monkey eat",
+      "s_abs": 3.9,
+      "e_abs": 6.666666666666667,
+      "dur_abs": 2.766666666666667
+    }
+  ],
+  "meta": {
+    "lane": "ref",
+    "key": "ref4d_0072",
+    "mode": "micro",
+    "merge_config": {
+      "tau_sem": 0.96,
+      "gap_abs_sec": 1.01,
+      "gap_norm_fallback": 0.1,
+      "min_duration_norm": 0.0
+    },
+    "stats": {
+      "num_input_items": 8,
+      "num_kept_items": 8,
+      "num_clusters": 5
+    },
+    "provenance": {
+      "source_hash": "69fdba45c020"
+    }
+  }
+}

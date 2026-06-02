@@ -1,0 +1,120 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0028.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "cv2",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "orca",
+        "attributes": {
+          "color": [
+            "black",
+            "white"
+          ],
+          "action": [
+            "nudging",
+            "swimming"
+          ],
+          "position": [
+            "near-surface",
+            "underwater"
+          ],
+          "signature": [
+            "black-white-surface"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            10.0
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "surfboard",
+        "attributes": {
+          "color": [
+            "black",
+            "white"
+          ],
+          "position": [
+            "surface"
+          ],
+          "signature": [
+            "white-black-patterned"
+          ]
+        },
+        "spans": [
+          [
+            3.5,
+            7.8
+          ]
+        ]
+      }
+    ],
+    "relations": [
+      {
+        "subject": "o1",
+        "predicate": "swimming-around",
+        "object": "o2",
+        "spans": [
+          [
+            0.0,
+            10.5
+          ]
+        ],
+        "confidence": 0.9
+      },
+      {
+        "subject": "o1",
+        "predicate": "nudges",
+        "object": "o2",
+        "spans": [
+          [
+            0.0,
+            10.5
+          ]
+        ],
+        "confidence": 0.9
+      },
+      {
+        "subject": "o1",
+        "predicate": "near",
+        "object": "o2",
+        "spans": [
+          [
+            3.5,
+            7.8
+          ]
+        ],
+        "confidence": 0.9
+      },
+      {
+        "subject": "o1",
+        "predicate": "nudging",
+        "object": "o2",
+        "spans": [
+          [
+            3.5,
+            7.8
+          ]
+        ],
+        "confidence": 0.9
+      }
+    ]
+  },
+  "views": {
+    "objects_count_display": {
+      "orca": 1,
+      "surfboard": 1
+    }
+  }
+}

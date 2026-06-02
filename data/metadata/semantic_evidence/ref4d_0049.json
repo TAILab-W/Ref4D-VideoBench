@@ -1,0 +1,142 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0049.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "cv2",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "mouse",
+        "attributes": {
+          "color": [
+            "brown",
+            "gray"
+          ],
+          "texture": [
+            "furry"
+          ],
+          "size": [
+            "small"
+          ],
+          "state": [
+            "active",
+            "alive"
+          ],
+          "action": [
+            "eating",
+            "gnawing",
+            "holding"
+          ],
+          "pose": [
+            "bending",
+            "moving",
+            "standing"
+          ],
+          "orientation": [
+            "facing-down",
+            "facing-left",
+            "facing-right"
+          ],
+          "position": [
+            "near-snake",
+            "on-ground"
+          ],
+          "signature": [
+            "gray-brown-furred-small-mammal"
+          ]
+        },
+        "spans": [
+          [
+            0.1,
+            19.2
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "snake",
+        "attributes": {
+          "color": [
+            "dark-brown"
+          ],
+          "pattern": [
+            "striped"
+          ],
+          "texture": [
+            "scaled"
+          ],
+          "material": [
+            "living"
+          ],
+          "size": [
+            "long"
+          ],
+          "state": [
+            "alive",
+            "coiled"
+          ],
+          "action": [
+            "coiling",
+            "curled"
+          ],
+          "pose": [
+            "curled"
+          ],
+          "orientation": [
+            "curled-around-mouse"
+          ],
+          "position": [
+            "on-ground"
+          ],
+          "signature": [
+            "dark-brown-patterned-long-reptile"
+          ]
+        },
+        "spans": [
+          [
+            0.1,
+            19.2
+          ]
+        ]
+      }
+    ],
+    "relations": [
+      {
+        "subject": "o1",
+        "predicate": "eating",
+        "object": "o2",
+        "spans": [
+          [
+            0.3,
+            19.2
+          ]
+        ],
+        "confidence": 0.9
+      },
+      {
+        "subject": "o2",
+        "predicate": "curled",
+        "object": "o1",
+        "spans": [
+          [
+            0.1,
+            0.7
+          ]
+        ],
+        "confidence": 0.9
+      }
+    ]
+  },
+  "views": {
+    "objects_count_display": {
+      "mouse": 1,
+      "snake": 1
+    }
+  }
+}

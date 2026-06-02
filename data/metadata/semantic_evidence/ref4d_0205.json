@@ -1,0 +1,161 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0205.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "cv2",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "person",
+        "attributes": {
+          "signature": [
+            "person-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            5.2
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "steak",
+        "attributes": {
+          "signature": [
+            "steak-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            5.2
+          ]
+        ]
+      },
+      {
+        "id": "o3",
+        "name": "tomato",
+        "attributes": {
+          "signature": [
+            "tomato-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            5.2
+          ]
+        ]
+      },
+      {
+        "id": "o4",
+        "name": "tomato",
+        "attributes": {
+          "signature": [
+            "tomato-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            5.2
+          ]
+        ]
+      },
+      {
+        "id": "o5",
+        "name": "tomato",
+        "attributes": {
+          "signature": [
+            "tomato-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            5.2
+          ]
+        ]
+      },
+      {
+        "id": "o6",
+        "name": "tomato",
+        "attributes": {
+          "signature": [
+            "tomato-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            5.2
+          ]
+        ]
+      },
+      {
+        "id": "o7",
+        "name": "knife",
+        "attributes": {
+          "signature": [
+            "knife-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            5.2
+          ]
+        ]
+      },
+      {
+        "id": "o8",
+        "name": "glove",
+        "attributes": {
+          "signature": [
+            "glove-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            5.2
+          ]
+        ]
+      },
+      {
+        "id": "o9",
+        "name": "plate",
+        "attributes": {
+          "signature": [
+            "plate-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            5.2
+          ]
+        ]
+      }
+    ],
+    "relations": []
+  },
+  "views": {
+    "objects_count_display": {
+      "person": 1,
+      "steak": 1,
+      "tomato": 4,
+      "knife": 1,
+      "glove": 1,
+      "plate": 1
+    }
+  }
+}

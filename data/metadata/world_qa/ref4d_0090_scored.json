@@ -1,0 +1,207 @@
+{
+  "summary": {
+    "items": 10,
+    "enter_bank": 10,
+    "clip_range_sec": [
+      0.0,
+      9.23
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does the fox approach both food items on the floor?",
+      "signals": [
+        "biological_motion(fox)",
+        "support(apple,tile)",
+        "support(dog-food,tile)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "biological_motion(fox)": 38.3333,
+        "support(apple,tile)": 7.0,
+        "support(dog-food,tile)": 7.0
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Is the apple static relative to the ground throughout the clip?",
+      "signals": [
+        "continuity(apple)",
+        "continuity(dog-food)",
+        "support(oA,oB)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(apple)": 36.6667,
+        "continuity(dog-food)": 7.3333,
+        "support(oA,oB)": 7.0
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Does the meat stay in its position without disappearing?",
+      "signals": [
+        "continuity(apple)",
+        "continuity(dog-food)",
+        "frame_discontinuity(t)",
+        "continuity(oX)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "frame_discontinuity(t)": 40.0,
+        "continuity(apple)": 7.3333,
+        "continuity(dog-food)": 7.3333,
+        "continuity(oX)": 7.3333
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Does the fox choose between two food items presented on the floor?",
+      "signals": [
+        "biological_motion(fox)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 38.33,
+      "total_score_100": 93.33,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "biological_motion(fox)": 38.3333
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Is the fox's movement towards the food a natural biological motion?",
+      "signals": [
+        "biological_motion(oA)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 38.33,
+      "total_score_100": 93.33,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "biological_motion(oA)": 38.3333
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "The apple and dog-food remain static on the tiled floor.",
+      "signals": [
+        "support(apple,tile)",
+        "support(dog-food,tile)",
+        "continuity(apple)",
+        "continuity(dog-food)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(apple)": 36.6667,
+        "continuity(dog-food)": 7.3333,
+        "support(apple,tile)": 7.0,
+        "support(dog-food,tile)": 7.0
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "The fox approaches two food items placed on the floor.",
+      "signals": [
+        "biological_motion(fox)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 38.33,
+      "total_score_100": 93.33,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "biological_motion(fox)": 38.3333
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "The environment is safe for the fox to approach the food items.",
+      "signals": [
+        "friction_sliding(apple,on:tile)",
+        "friction_sliding(dog-food,on:tile)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 36.0,
+      "total_score_100": 91.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "friction_sliding(apple,on:tile)": 30.0,
+        "friction_sliding(dog-food,on:tile)": 6.0
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "The apple remains on the ground without moving unless acted upon.",
+      "signals": [
+        "support(oA,oB)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 35.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "support(oA,oB)": 35.0
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "The fox moves towards the food items in a natural manner.",
+      "signals": [
+        "biological_motion(oA)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 38.33,
+      "total_score_100": 93.33,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "biological_motion(oA)": 38.3333
+      },
+      "content_score_raw": "55"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "v5",
+    "a1",
+    "a2",
+    "a3",
+    "a4",
+    "a5"
+  ]
+}

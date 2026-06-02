@@ -1,0 +1,141 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0508.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "decord",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "person",
+        "attributes": {
+          "color": [
+            "black",
+            "red"
+          ],
+          "pattern": [
+            "striped"
+          ],
+          "size": [
+            "small"
+          ],
+          "sex": [
+            "female"
+          ],
+          "state": [
+            "active"
+          ],
+          "pose": [
+            "bending",
+            "running"
+          ],
+          "action": [
+            "dribbling",
+            "kicking"
+          ],
+          "orientation": [
+            "facing-forward"
+          ],
+          "facing-direction": [
+            "towards-camera"
+          ],
+          "position": [
+            "center",
+            "moving"
+          ],
+          "object-part": [
+            "arms",
+            "feet",
+            "legs"
+          ],
+          "tool-or-instrument": [
+            "soccer-ball"
+          ],
+          "equipment": [
+            "orange-cones",
+            "soccer-goal"
+          ],
+          "signature": [
+            "red-black-striped-shirt-number-21-short-hair"
+          ]
+        },
+        "spans": [
+          [
+            0.1,
+            1.9
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "soccer-ball",
+        "attributes": {
+          "color": [
+            "white"
+          ],
+          "pattern": [
+            "patterned"
+          ],
+          "size": [
+            "medium"
+          ],
+          "material": [
+            "leather"
+          ],
+          "number-or-id": [
+            "none"
+          ],
+          "signature": [
+            "white-ball-with-pattern"
+          ]
+        },
+        "spans": [
+          [
+            0.3,
+            1.8
+          ]
+        ]
+      },
+      {
+        "id": "o3",
+        "name": "cone",
+        "attributes": {
+          "color": [
+            "orange"
+          ],
+          "size": [
+            "small"
+          ],
+          "material": [
+            "plastic"
+          ],
+          "number-or-id": [
+            "none"
+          ],
+          "signature": [
+            "orange-cone"
+          ]
+        },
+        "spans": [
+          [
+            0.1,
+            1.9
+          ]
+        ]
+      }
+    ],
+    "relations": []
+  },
+  "views": {
+    "objects_count_display": {
+      "person": 1,
+      "soccer-ball": 1,
+      "cone": 1
+    }
+  }
+}

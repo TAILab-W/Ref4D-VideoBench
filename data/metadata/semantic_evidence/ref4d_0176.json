@@ -1,0 +1,122 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0176.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "decord",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "person",
+        "attributes": {
+          "color": [
+            "black",
+            "brown",
+            "tan"
+          ],
+          "pattern": [
+            "leopard"
+          ],
+          "texture": [
+            "soft"
+          ],
+          "material": [
+            "knit"
+          ],
+          "size": [
+            "large"
+          ],
+          "age": [
+            "adult"
+          ],
+          "sex": [
+            "female"
+          ],
+          "state": [
+            "standing"
+          ],
+          "pose": [
+            "front-facing",
+            "sideways"
+          ],
+          "action": [
+            "shaking-hands",
+            "shaking-head",
+            "smiling",
+            "speaking",
+            "turning",
+            "walking"
+          ],
+          "orientation": [
+            "facing-forward",
+            "facing-left",
+            "facing-right"
+          ],
+          "facing-direction": [
+            "forward",
+            "left",
+            "right"
+          ],
+          "position": [
+            "near-brick-wall",
+            "near-door",
+            "on-brick-floor",
+            "outside"
+          ],
+          "object-part": [
+            "arm",
+            "hair",
+            "hand",
+            "jeans",
+            "sweater"
+          ],
+          "signature": [
+            "leopard-print-sweater-blue-jeans-long-curly-hair"
+          ]
+        },
+        "spans": [
+          [
+            0.2,
+            6.9
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "text",
+        "attributes": {
+          "printed-text": [
+            "and-digital-media-agency",
+            "and-you'll-find-out-who-i-really-am",
+            "here-in-nashville,-tennessee",
+            "hi-i'm-sb",
+            "i'm-the-founder-of-digitally-sb",
+            "social-media-management",
+            "we're-a-full-service"
+          ],
+          "signature": [
+            "white-on-black"
+          ]
+        },
+        "spans": [
+          [
+            0.2,
+            6.9
+          ]
+        ]
+      }
+    ],
+    "relations": []
+  },
+  "views": {
+    "objects_count_display": {
+      "person": 1,
+      "text": 1
+    }
+  }
+}

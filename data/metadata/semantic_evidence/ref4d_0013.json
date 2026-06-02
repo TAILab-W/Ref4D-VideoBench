@@ -1,0 +1,163 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0013.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "cv2",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "hyena",
+        "attributes": {
+          "color": [
+            "dark-brown",
+            "light-brown",
+            "white"
+          ],
+          "pattern": [
+            "spotted"
+          ],
+          "action": [
+            "eating",
+            "sniffing",
+            "standing"
+          ],
+          "state": [
+            "alive"
+          ],
+          "pose": [
+            "bending",
+            "standing"
+          ],
+          "orientation": [
+            "facing-zebra"
+          ],
+          "position": [
+            "front",
+            "left",
+            "right"
+          ],
+          "signature": [
+            "light-brown-spotted-face"
+          ]
+        },
+        "spans": [
+          [
+            0.1,
+            1.0
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "zebra",
+        "attributes": {
+          "color": [
+            "black",
+            "white"
+          ],
+          "pattern": [
+            "striped"
+          ],
+          "texture": [
+            "smooth"
+          ],
+          "material": [
+            "skin"
+          ],
+          "size": [
+            "small"
+          ],
+          "age": [
+            "young"
+          ],
+          "sex": [
+            "male"
+          ],
+          "state": [
+            "dead"
+          ],
+          "pose": [
+            "lying"
+          ],
+          "orientation": [
+            "facing-up"
+          ],
+          "position": [
+            "ground"
+          ],
+          "signature": [
+            "black-white-stripe-body"
+          ]
+        },
+        "spans": [
+          [
+            0.1,
+            1.2
+          ]
+        ]
+      }
+    ],
+    "relations": [
+      {
+        "subject": "o1",
+        "predicate": "looking-at",
+        "object": "o2",
+        "spans": [
+          [
+            0.3,
+            0.6
+          ]
+        ],
+        "confidence": 0.9
+      },
+      {
+        "subject": "o1",
+        "predicate": "feeding",
+        "object": "o2",
+        "spans": [
+          [
+            0.7,
+            1.0
+          ]
+        ],
+        "confidence": 0.9
+      },
+      {
+        "subject": "o1",
+        "predicate": "standing-on",
+        "object": "o2",
+        "spans": [
+          [
+            0.1,
+            0.4
+          ]
+        ],
+        "confidence": 0.8
+      },
+      {
+        "subject": "o1",
+        "predicate": "bending-over",
+        "object": "o2",
+        "spans": [
+          [
+            0.5,
+            0.8
+          ]
+        ],
+        "confidence": 0.8
+      }
+    ]
+  },
+  "views": {
+    "objects_count_display": {
+      "hyena": 1,
+      "zebra": 1
+    }
+  }
+}

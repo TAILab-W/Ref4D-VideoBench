@@ -1,0 +1,210 @@
+{
+  "summary": {
+    "items": 10,
+    "enter_bank": 9,
+    "clip_range_sec": [
+      0.0,
+      17.33
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does the hand holding the piece of steak and the other hand pointing at it interact with the same object?",
+      "signals": [
+        "tool_contact(knife,steak)",
+        "grasp_stability(hand,steak)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 34.0,
+      "total_score_100": 94.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "tool_contact(knife,steak)": 28.3333,
+        "grasp_stability(hand,steak)": 5.6667
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Is the flame under the grill visible, indicating a hot surface for cooking without direct contact to raw beef-steak?",
+      "signals": [
+        "hot_surface_contact(oObj,oSurface)",
+        "hot_surface_contact"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "hot_surface_contact(oObj,oSurface)": 34.1667,
+        "hot_surface_contact": 6.8333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Does the large cut of beef-steak remain on the cutting board throughout the scene without floating or disappearing?",
+      "signals": [
+        "supportable",
+        "continuity",
+        "containment(oA,oB)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity": 36.6667,
+        "containment(oA,oB)": 5.8333,
+        "supportable": 5.3333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Do the person's fingers maintain clearance from the sharp edge of the knife during handling in this clip?",
+      "signals": [
+        "finger_clearance",
+        "finger_clearance(hand,knife)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "finger_clearance": 34.1667,
+        "finger_clearance(hand,knife)": 6.8333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Is the grill (nexgrill) providing a flat surface where the steaks are placed?",
+      "signals": [
+        "supportable(oObj,by:oSurface)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 26.67,
+      "total_score_100": 86.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "supportable(oObj,by:oSurface)": 26.6667
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "The steak is placed on the grill surface, supported by the grill grate.",
+      "signals": [
+        "tool_contact(knife,steak)",
+        "hot_surface_contact(steak,grill)",
+        "grasp_stability(hand,steak)",
+        "supportable",
+        "continuity"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity": 36.6667,
+        "hot_surface_contact(steak,grill)": 6.8333,
+        "tool_contact(knife,steak)": 5.6667,
+        "grasp_stability(hand,steak)": 5.6667,
+        "supportable": 5.3333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "Flames are visible under the grill; raw beef-steak does not touch the hot surface.",
+      "signals": [
+        "hot_surface_contact(oObj,oSurface)",
+        "hot_surface_contact"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "hot_surface_contact(oObj,oSurface)": 34.1667,
+        "hot_surface_contact": 6.8333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "One hand holds a piece of steak while another points at it without contact with the knife's sharp edge.",
+      "signals": [
+        "tool_contact(knife,steak)",
+        "grasp_stability(hand,steak)",
+        "finger_clearance"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "finger_clearance": 34.1667,
+        "tool_contact(knife,steak)": 5.6667,
+        "grasp_stability(hand,steak)": 5.6667
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "The steak remains on the cutting board throughout the scene.",
+      "signals": [
+        "supportable(oObj,by:oSurface)",
+        "containment(oA,oB)"
+      ],
+      "content_score_60": 0,
+      "signal_score_40": 34.5,
+      "total_score_100": 34.5,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "containment(oA,oB)": 29.1667,
+        "supportable(oObj,by:oSurface)": 5.3333
+      },
+      "content_score_raw": "0"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "The knife blade orientation keeps its edge away from the person's fingers.",
+      "signals": [
+        "blade_orientation_away(oTool,oHand)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 29.17,
+      "total_score_100": 89.17,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "blade_orientation_away(oTool,oHand)": 29.1667
+      },
+      "content_score_raw": "60"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "v5",
+    "a1",
+    "a2",
+    "a3",
+    "a5"
+  ]
+}

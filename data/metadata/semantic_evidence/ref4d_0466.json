@@ -1,0 +1,163 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0466.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "decord",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "person",
+        "attributes": {
+          "signature": [
+            "person-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            6.4
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "javelin",
+        "attributes": {
+          "signature": [
+            "javelin-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            6.4
+          ]
+        ]
+      },
+      {
+        "id": "o3",
+        "name": "text",
+        "attributes": {
+          "signature": [
+            "text-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            6.4
+          ]
+        ]
+      },
+      {
+        "id": "o4",
+        "name": "text",
+        "attributes": {
+          "signature": [
+            "text-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            6.4
+          ]
+        ]
+      },
+      {
+        "id": "o5",
+        "name": "camera",
+        "attributes": {
+          "signature": [
+            "camera-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            6.4
+          ]
+        ]
+      },
+      {
+        "id": "o6",
+        "name": "track",
+        "attributes": {
+          "signature": [
+            "track-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            6.4
+          ]
+        ]
+      },
+      {
+        "id": "o7",
+        "name": "cone",
+        "attributes": {
+          "signature": [
+            "cone-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            6.4
+          ]
+        ]
+      },
+      {
+        "id": "o8",
+        "name": "tent",
+        "attributes": {
+          "signature": [
+            "tent-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            6.4
+          ]
+        ]
+      },
+      {
+        "id": "o9",
+        "name": "bench",
+        "attributes": {
+          "signature": [
+            "bench-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            6.4
+          ]
+        ]
+      }
+    ],
+    "relations": []
+  },
+  "views": {
+    "objects_count_display": {
+      "person": 1,
+      "javelin": 1,
+      "text": 2,
+      "camera": 1,
+      "track": 1,
+      "cone": 1,
+      "tent": 1,
+      "bench": 1
+    }
+  }
+}

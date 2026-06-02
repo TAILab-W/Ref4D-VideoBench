@@ -1,0 +1,221 @@
+{
+  "summary": {
+    "items": 10,
+    "enter_bank": 8,
+    "clip_range_sec": [
+      0.0,
+      9.47
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does the hot metal stay within the round opening of the blue press machine, away from personnel?",
+      "signals": [
+        "flame_proximity(oObj,dist)",
+        "flame_proximity",
+        "hot_surface_contact"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "flame_proximity(oObj,dist)": 34.1667,
+        "flame_proximity": 6.8333,
+        "hot_surface_contact": 6.8333
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Is the pressing component's movement smooth and controlled during operation?",
+      "signals": [
+        "hot_surface_contact",
+        "falling_hazard",
+        "trajectory_dir",
+        "accel_sign"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir": 38.3333,
+        "accel_sign": 7.0,
+        "hot_surface_contact": 6.8333,
+        "falling_hazard": 6.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Does the person in the blue shirt on the right side keep a safe distance from the open flame area while operating near the large blue machine?",
+      "signals": [
+        "hot_surface_contact(oObj,oSurface)",
+        "tool_usage_correct(oTool,for:oTask)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "hot_surface_contact(oObj,oSurface)": 34.1667,
+        "tool_usage_correct(oTool,for:oTask)": 5.8333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Across the clip, does the molten metal maintain a consistent size relative to the furnace interior?",
+      "signals": [
+        "continuity",
+        "containment(oA,oB)",
+        "hot_surface_contact(oObj,oSurface)",
+        "friction_sliding(oA,on:oB)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity": 36.6667,
+        "hot_surface_contact(oObj,oSurface)": 6.8333,
+        "friction_sliding(oA,on:oB)": 6.0,
+        "containment(oA,oB)": 5.8333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Does the hot metal remain properly supported by the lower structure of the blue press machine to prevent falling?",
+      "signals": [
+        "containment(oA,oB)",
+        "hot_surface_contact(oObj,oSurface)",
+        "friction_sliding(oA,on:oB)",
+        "hot_surface_contact",
+        "falling_hazard"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "hot_surface_contact(oObj,oSurface)": 34.1667,
+        "hot_surface_contact": 6.8333,
+        "falling_hazard": 6.3333,
+        "friction_sliding(oA,on:oB)": 6.0,
+        "containment(oA,oB)": 5.8333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "The hot metal is contained within the round opening of the blue press machine.",
+      "signals": [
+        "containment(oA,oB)",
+        "hot_surface_contact(oObj,oSurface)",
+        "friction_sliding(oA,on:oB)",
+        "flame_proximity(oObj,dist)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "hot_surface_contact(oObj,oSurface)": 34.1667,
+        "flame_proximity(oObj,dist)": 6.8333,
+        "friction_sliding(oA,on:oB)": 6.0,
+        "containment(oA,oB)": 5.8333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "The person in the blue shirt on the right side stands away from the large blue machine.",
+      "signals": [
+        "hot_surface_contact(oObj,oSurface)"
+      ],
+      "content_score_60": 30,
+      "signal_score_40": 34.17,
+      "total_score_100": 64.17,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "hot_surface_contact(oObj,oSurface)": 34.1667
+      },
+      "content_score_raw": "30"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "The black-shirted person operates or monitors the process involving the heated material inside the blue press machine.",
+      "signals": [
+        "tool_usage_correct(oTool,for:oTask)",
+        "hot_surface_contact",
+        "falling_hazard"
+      ],
+      "content_score_60": 40,
+      "signal_score_40": 40.0,
+      "total_score_100": 80.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "hot_surface_contact": 34.1667,
+        "falling_hazard": 6.3333,
+        "tool_usage_correct(oTool,for:oTask)": 5.8333
+      },
+      "content_score_raw": "40"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "The flame and molten metal maintain consistent size and shape during the heating process.",
+      "signals": [
+        "continuity"
+      ],
+      "content_score_60": 40,
+      "signal_score_40": 36.67,
+      "total_score_100": 76.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity": 36.6667
+      },
+      "content_score_raw": "40"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "The hammer press operates with a stable trajectory and controlled force application.",
+      "signals": [
+        "trajectory_dir",
+        "accel_sign"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir": 38.3333,
+        "accel_sign": 7.0
+      },
+      "content_score_raw": "50"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "v5",
+    "a1",
+    "a3",
+    "a5"
+  ]
+}

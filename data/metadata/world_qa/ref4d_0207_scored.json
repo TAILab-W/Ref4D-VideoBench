@@ -1,0 +1,219 @@
+{
+  "summary": {
+    "items": 10,
+    "enter_bank": 10,
+    "clip_range_sec": [
+      0.0,
+      14.57
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Is the spatula white-handled?",
+      "signals": [
+        "tool_usage_correct(spatula,for:noodles)",
+        "containment(pot,noodles)",
+        "tool_contact(spatula,noodles)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "tool_usage_correct(spatula,for:noodles)": 29.1667,
+        "containment(pot,noodles)": 5.8333,
+        "tool_contact(spatula,noodles)": 5.6667
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Does a spatula stir noodles in a pot?",
+      "signals": [
+        "tool_contact(spatula,pot)",
+        "tool_usage_correct(spatula,for:stirring noodles)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 34.83,
+      "total_score_100": 84.83,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "tool_usage_correct(spatula,for:stirring noodles)": 29.1667,
+        "tool_contact(spatula,pot)": 5.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Do grated noodles fall into the pot and rest on the liquid?",
+      "signals": [
+        "containment(noodles,liquid)",
+        "tool_contact(spatula,noodles)",
+        "grasp_stability(spatula,noodles)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "containment(noodles,liquid)": 29.1667,
+        "tool_contact(spatula,noodles)": 5.6667,
+        "grasp_stability(spatula,noodles)": 5.6667
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Does pasta follow a continuous trajectory when poured into the liquid?",
+      "signals": [
+        "trajectory_dir(pasta,axis)",
+        "continuity(pasta)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(pasta,axis)": 38.3333,
+        "continuity(pasta)": 7.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Is the spatula correctly positioned for tool_contact with the contents?",
+      "signals": [
+        "tool_contact(spatula,mixture)",
+        "grasp_stability(spatula,mixture)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 34.0,
+      "total_score_100": 84.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "tool_contact(spatula,mixture)": 28.3333,
+        "grasp_stability(spatula,mixture)": 5.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "A white-handled spatula stirs yellow-oval-shaped noodles in dark-brown liquid inside a black-speckled pot.",
+      "signals": [
+        "tool_usage_correct(spatula,for:noodles)",
+        "containment(pot,noodles)",
+        "tool_contact(spatula,noodles)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "tool_usage_correct(spatula,for:noodles)": 29.1667,
+        "containment(pot,noodles)": 5.8333,
+        "tool_contact(spatula,noodles)": 5.6667
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "Grated noodles fall into the pot and are supported by the liquid.",
+      "signals": [
+        "containment(noodles,liquid)",
+        "tool_contact(spatula,noodles)",
+        "grasp_stability(spatula,noodles)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "containment(noodles,liquid)": 29.1667,
+        "tool_contact(spatula,noodles)": 5.6667,
+        "grasp_stability(spatula,noodles)": 5.6667
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "The spatula maintains grasp stability while stirring the mixture.",
+      "signals": [
+        "tool_contact(spatula,mixture)",
+        "grasp_stability(spatula,mixture)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 34.0,
+      "total_score_100": 84.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "tool_contact(spatula,mixture)": 28.3333,
+        "grasp_stability(spatula,mixture)": 5.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "The action of adding and stirring ingredients in the pot follows logical biological motion and task sequence.",
+      "signals": [
+        "tool_contact(spatula,pot)",
+        "tool_usage_correct(spatula,for:stirring noodles)",
+        "trajectory_dir(pasta,axis)",
+        "continuity(pasta)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(pasta,axis)": 38.3333,
+        "continuity(pasta)": 7.3333,
+        "tool_usage_correct(spatula,for:stirring noodles)": 5.8333,
+        "tool_contact(spatula,pot)": 5.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "During cooking, a spatula is used to stir noodles in a pot.",
+      "signals": [
+        "biological_motion(human)",
+        "action_phase(add_pasta,phase)",
+        "step_order(add_pasta,stir,prev:task,next:task)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "biological_motion(human)": 38.3333,
+        "action_phase(add_pasta,phase)": 5.3333,
+        "step_order(add_pasta,stir,prev:task,next:task)": 5.3333
+      },
+      "content_score_raw": "60"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "v5",
+    "a1",
+    "a2",
+    "a3",
+    "a4",
+    "a5"
+  ]
+}

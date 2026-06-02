@@ -1,0 +1,117 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0396.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "decord",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "person",
+        "attributes": {
+          "color": [
+            "black",
+            "blue",
+            "brown",
+            "pink"
+          ],
+          "pattern": [
+            "ripped",
+            "solid"
+          ],
+          "texture": [
+            "furry",
+            "soft"
+          ],
+          "material": [
+            "fabric",
+            "fur",
+            "leather"
+          ],
+          "size": [
+            "medium"
+          ],
+          "age": [
+            "teenager"
+          ],
+          "sex": [
+            "female"
+          ],
+          "state": [
+            "standing"
+          ],
+          "pose": [
+            "bending_forward",
+            "dancing",
+            "posing",
+            "standing_up"
+          ],
+          "action": [
+            "adjusting_bag",
+            "dancing",
+            "posing",
+            "swaying"
+          ],
+          "orientation": [
+            "facing_forward"
+          ],
+          "facing_direction": [
+            "front"
+          ],
+          "position": [
+            "center"
+          ],
+          "object_part": [
+            "arms",
+            "back",
+            "feet",
+            "head",
+            "legs",
+            "shoulders",
+            "torso"
+          ],
+          "equipment": [
+            "watch"
+          ],
+          "printed_text": [
+            "text_on_pink_shirt"
+          ],
+          "style": [
+            "casual",
+            "winter"
+          ],
+          "lighting": [
+            "warm"
+          ],
+          "scene": [
+            "home",
+            "indoor"
+          ],
+          "camera_view": [
+            "front_view"
+          ],
+          "signature": [
+            "black_hair_pink_shirt_blue_jeans_furry_boots_watch_on_left_wrist"
+          ]
+        },
+        "spans": [
+          [
+            0.2,
+            3.0
+          ]
+        ]
+      }
+    ],
+    "relations": []
+  },
+  "views": {
+    "objects_count_display": {
+      "person": 1
+    }
+  }
+}

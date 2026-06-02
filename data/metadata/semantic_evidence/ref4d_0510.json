@@ -1,0 +1,188 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0510.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "decord",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "player_7",
+        "attributes": {
+          "color": [
+            "blue",
+            "white"
+          ],
+          "action": [
+            "running",
+            "walking"
+          ],
+          "pose": [
+            "standing"
+          ],
+          "position": [
+            "mid-court",
+            "right-side"
+          ],
+          "signature": [
+            "white-blue-shirt-number-7-back-facing"
+          ]
+        },
+        "spans": [
+          [
+            0.2,
+            3.5
+          ],
+          [
+            4.6,
+            6.9
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "player_99",
+        "attributes": {
+          "color": [
+            "blue",
+            "white"
+          ],
+          "action": [
+            "passing",
+            "running"
+          ],
+          "pose": [
+            "standing"
+          ],
+          "position": [
+            "mid-court",
+            "right-side"
+          ],
+          "signature": [
+            "white-blue-shirt-number-99-back-facing"
+          ]
+        },
+        "spans": [
+          [
+            0.3,
+            3.5
+          ],
+          [
+            4.6,
+            6.9
+          ]
+        ]
+      },
+      {
+        "id": "o3",
+        "name": "player_5",
+        "attributes": {
+          "color": [
+            "red"
+          ],
+          "action": [
+            "crouching",
+            "defending"
+          ],
+          "pose": [
+            "crouching"
+          ],
+          "position": [
+            "left-side",
+            "mid-court"
+          ],
+          "signature": [
+            "red-shirt-number-5-front-facing"
+          ]
+        },
+        "spans": [
+          [
+            0.5,
+            6.9
+          ]
+        ]
+      },
+      {
+        "id": "o4",
+        "name": "player_19",
+        "attributes": {
+          "color": [
+            "blue",
+            "white"
+          ],
+          "action": [
+            "passing",
+            "running"
+          ],
+          "pose": [
+            "standing"
+          ],
+          "position": [
+            "mid-court",
+            "right-side"
+          ],
+          "signature": [
+            "white-blue-shirt-number-19-back-facing"
+          ]
+        },
+        "spans": [
+          [
+            0.6,
+            6.9
+          ]
+        ]
+      }
+    ],
+    "relations": [
+      {
+        "subject": "o1",
+        "predicate": "left-of",
+        "object": "o2",
+        "spans": [
+          [
+            0.3,
+            3.5
+          ]
+        ],
+        "confidence": 0.8
+      },
+      {
+        "subject": "o1",
+        "predicate": "right-of",
+        "object": "o3",
+        "spans": [
+          [
+            0.3,
+            3.5
+          ]
+        ],
+        "confidence": 0.8
+      },
+      {
+        "subject": "o1",
+        "predicate": "in-front-of",
+        "object": "o3",
+        "spans": [
+          [
+            0.3,
+            3.5
+          ]
+        ],
+        "confidence": 0.8
+      }
+    ]
+  },
+  "views": {
+    "objects_count_display": {
+      "player_7": 1,
+      "player_99": 1,
+      "player_5": 1,
+      "player_19": 1
+    }
+  }
+}

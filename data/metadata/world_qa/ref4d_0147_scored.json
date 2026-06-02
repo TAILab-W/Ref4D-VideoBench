@@ -1,0 +1,231 @@
+{
+  "summary": {
+    "items": 10,
+    "enter_bank": 10,
+    "clip_range_sec": [
+      0.0,
+      14.1
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Do the large trees show natural growth patterns without falling hazards?",
+      "signals": [
+        "continuity(tree)",
+        "shadow_consistency(foliage)",
+        "frame_discontinuity(t)",
+        "interpenetration(oA,oB)",
+        "falling_hazard(tree)",
+        "center_of_mass_over_base(tree)"
+      ],
+      "content_score_60": 45,
+      "signal_score_40": 40.0,
+      "total_score_100": 85.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "frame_discontinuity(t)": 40.0,
+        "continuity(tree)": 7.3333,
+        "shadow_consistency(foliage)": 7.3333,
+        "interpenetration(oA,oB)": 7.1667,
+        "center_of_mass_over_base(tree)": 6.5,
+        "falling_hazard(tree)": 6.3333
+      },
+      "content_score_raw": "45"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Does the building and its structure remain stable with no signs of material deformation or fracture?",
+      "signals": [
+        "continuity(building)",
+        "continuity(tree)",
+        "continuity(trees)",
+        "fracture(building)",
+        "deformation(trees)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "deformation(trees)": 40.0,
+        "continuity(building)": 7.3333,
+        "continuity(tree)": 7.3333,
+        "continuity(trees)": 7.3333,
+        "fracture(building)": 6.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Are the arched windows in their void state, surrounded by moss, throughout the clip?",
+      "signals": [
+        "material_optics(window)",
+        "support(window,building)",
+        "interpenetration(window)",
+        "frame_discontinuity(building)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "frame_discontinuity(building)": 40.0,
+        "material_optics(window)": 7.5,
+        "interpenetration(window)": 7.1667,
+        "support(window,building)": 7.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Does the tree on the right side maintain a consistent shadow that matches its position and orientation?",
+      "signals": [
+        "size_inconsistency(tree)",
+        "material_optics(building)",
+        "shadow_consistency(right_tree)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "size_inconsistency(tree)": 37.5,
+        "material_optics(building)": 7.5,
+        "shadow_consistency(right_tree)": 7.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Does the light trajectory across the scene stay stable without sudden shifts?",
+      "signals": [
+        "trajectory_dir(light,axis)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 38.33,
+      "total_score_100": 88.33,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(light,axis)": 38.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "Trees and the building remain stable with no sudden disappearance or merging.",
+      "signals": [
+        "continuity(tree)",
+        "shadow_consistency(foliage)",
+        "frame_discontinuity(t)",
+        "interpenetration(oA,oB)",
+        "continuity(building)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "frame_discontinuity(t)": 40.0,
+        "continuity(tree)": 7.3333,
+        "shadow_consistency(foliage)": 7.3333,
+        "continuity(building)": 7.3333,
+        "interpenetration(oA,oB)": 7.1667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "Large trees are securely rooted in the ground, showing natural growth patterns.",
+      "signals": [
+        "falling_hazard(tree)",
+        "center_of_mass_over_base(tree)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 38.83,
+      "total_score_100": 88.83,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "center_of_mass_over_base(tree)": 32.5,
+        "falling_hazard(tree)": 6.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "Arched windows on the ruined castle-like structure remain voids with moss around them.",
+      "signals": [
+        "interpenetration(window)",
+        "frame_discontinuity(building)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "frame_discontinuity(building)": 40.0,
+        "interpenetration(window)": 7.1667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "The building and trees maintain their structural integrity without material deformation or fracture.",
+      "signals": [
+        "continuity(building)",
+        "continuity(trees)",
+        "fracture(building)",
+        "deformation(trees)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "deformation(trees)": 40.0,
+        "continuity(building)": 7.3333,
+        "continuity(trees)": 7.3333,
+        "fracture(building)": 6.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "The shadow of the tree on the right side of the frame is consistent with its position and orientation.",
+      "signals": [
+        "shadow_consistency(right_tree)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 36.67,
+      "total_score_100": 86.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "shadow_consistency(right_tree)": 36.6667
+      },
+      "content_score_raw": "50"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "v5",
+    "a1",
+    "a2",
+    "a3",
+    "a4",
+    "a5"
+  ]
+}

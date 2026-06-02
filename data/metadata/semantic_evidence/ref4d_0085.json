@@ -1,0 +1,57 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0085.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "cv2",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "hummingbird",
+        "attributes": {
+          "color": [
+            "black",
+            "purple",
+            "white"
+          ],
+          "action": [
+            "drinking",
+            "hovering"
+          ],
+          "pose": [
+            "flying-away",
+            "perched-on-beak"
+          ],
+          "orientation": [
+            "facing-down",
+            "facing-up"
+          ],
+          "facing-direction": [
+            "down",
+            "up"
+          ],
+          "signature": [
+            "black-white-purple-neck-long-beak"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            2.0
+          ]
+        ]
+      }
+    ],
+    "relations": []
+  },
+  "views": {
+    "objects_count_display": {
+      "hummingbird": 1
+    }
+  }
+}

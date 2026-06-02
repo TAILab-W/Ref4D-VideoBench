@@ -1,0 +1,237 @@
+{
+  "summary": {
+    "items": 10,
+    "enter_bank": 10,
+    "clip_range_sec": [
+      0.0,
+      6.07
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does the bus display \"10 CITY POINT\" on its digital sign?",
+      "signals": [
+        "material_optics(oA)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 37.5,
+      "total_score_100": 97.5,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "material_optics(oA)": 37.5
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Is the bus moving forward in a lane without suddenly stopping or merging into another vehicle?",
+      "signals": [
+        "friction_sliding(oA,on:oB)",
+        "collision(bus,car)",
+        "interpenetration(bus,car)",
+        "friction_sliding(bus,on:road)",
+        "friction_sliding(car,on:road)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "interpenetration(bus,car)": 35.8333,
+        "collision(bus,car)": 6.3333,
+        "friction_sliding(oA,on:oB)": 6.0,
+        "friction_sliding(bus,on:road)": 6.0,
+        "friction_sliding(car,on:road)": 6.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Do the bus wheels roll consistently without sudden changes in direction?",
+      "signals": [
+        "wheel_rolling(oX)",
+        "trajectory_dir(oX,axis)",
+        "accel_sign(oX,axis)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(oX,axis)": 38.3333,
+        "accel_sign(oX,axis)": 7.0,
+        "wheel_rolling(oX)": 6.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Are the shadows of the bus and trees on the ground consistent with their positions and light source direction?",
+      "signals": [
+        "shadow_consistency(oX)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 36.67,
+      "total_score_100": 86.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "shadow_consistency(oX)": 36.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Is the white vehicle a car for private travel, not public transportation?",
+      "signals": [
+        "trajectory_dir(bus,axis)",
+        "trajectory_dir(car,axis)",
+        "accel_sign(bus,axis)",
+        "accel_sign(car,axis)",
+        "size_inconsistency(bus)",
+        "size_inconsistency(car)",
+        "support(road,bus)",
+        "support(road,car)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(bus,axis)": 38.3333,
+        "trajectory_dir(car,axis)": 7.6667,
+        "size_inconsistency(bus)": 7.5,
+        "size_inconsistency(car)": 7.5,
+        "accel_sign(bus,axis)": 7.0,
+        "accel_sign(car,axis)": 7.0,
+        "support(road,bus)": 7.0,
+        "support(road,car)": 7.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "A white bus with a digital display shows \"10 CITY POINT\" and moves forward on the road.",
+      "signals": [
+        "trajectory_dir(bus,axis)",
+        "trajectory_dir(car,axis)",
+        "accel_sign(bus,axis)",
+        "accel_sign(car,axis)",
+        "size_inconsistency(bus)",
+        "size_inconsistency(car)",
+        "support(road,bus)",
+        "support(road,car)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(bus,axis)": 38.3333,
+        "trajectory_dir(car,axis)": 7.6667,
+        "size_inconsistency(bus)": 7.5,
+        "size_inconsistency(car)": 7.5,
+        "accel_sign(bus,axis)": 7.0,
+        "accel_sign(car,axis)": 7.0,
+        "support(road,bus)": 7.0,
+        "support(road,car)": 7.0
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "The bus maintains a safe distance from surrounding vehicles, including parked cars near the curb.",
+      "signals": [
+        "collision(bus,car)",
+        "interpenetration(bus,car)",
+        "friction_sliding(bus,on:road)",
+        "friction_sliding(car,on:road)",
+        "friction_sliding(oA,on:oB)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "interpenetration(bus,car)": 35.8333,
+        "collision(bus,car)": 6.3333,
+        "friction_sliding(bus,on:road)": 6.0,
+        "friction_sliding(car,on:road)": 6.0,
+        "friction_sliding(oA,on:oB)": 6.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "The bus's wheels roll consistently as it travels straight down the lane.",
+      "signals": [
+        "wheel_rolling(oX)",
+        "trajectory_dir(oX,axis)",
+        "accel_sign(oX,axis)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(oX,axis)": 38.3333,
+        "accel_sign(oX,axis)": 7.0,
+        "wheel_rolling(oX)": 6.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "Shadows of the bus and trees are visible on the ground, matching their positions under sunlight.",
+      "signals": [
+        "shadow_consistency(oX)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 36.67,
+      "total_score_100": 86.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "shadow_consistency(oX)": 36.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "The route information \"10 CITY POINT\" is clearly displayed on the front electronic sign of the bus.",
+      "signals": [
+        "material_optics(oA)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 37.5,
+      "total_score_100": 97.5,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "material_optics(oA)": 37.5
+      },
+      "content_score_raw": "60"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "v5",
+    "a1",
+    "a2",
+    "a3",
+    "a4",
+    "a5"
+  ]
+}

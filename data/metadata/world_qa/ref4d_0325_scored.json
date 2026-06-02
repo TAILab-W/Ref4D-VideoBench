@@ -1,0 +1,225 @@
+{
+  "summary": {
+    "items": 10,
+    "enter_bank": 10,
+    "clip_range_sec": [
+      0.0,
+      8.1
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does the sun gradually descend below the mountain horizon during sunset?",
+      "signals": [
+        "trajectory_dir(sun,vertical_axis)",
+        "size_inconsistency(sun)",
+        "hue_histogram_jump(sun)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(sun,vertical_axis)": 38.3333,
+        "size_inconsistency(sun)": 7.5,
+        "hue_histogram_jump(sun)": 6.6667
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Is the water surface continuously glistening with sunlight reflections throughout the clip?",
+      "signals": [
+        "reflection_consistency(water)",
+        "frame_discontinuity(t)",
+        "continuity(water)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "frame_discontinuity(t)": 40.0,
+        "continuity(water)": 7.3333,
+        "reflection_consistency(water)": 7.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Do the mountains and trees in the background remain stable without deformation or rigid transformation?",
+      "signals": [
+        "deformation(mountain)",
+        "fracture(mountain)",
+        "rigid_transform(山丘)",
+        "deformation(树木)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "deformation(mountain)": 40.0,
+        "deformation(树木)": 8.0,
+        "rigid_transform(山丘)": 7.5,
+        "fracture(mountain)": 6.3333
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Are the mountain silhouettes on both sides of the frame non-deformable and supporting each other, while the sun's reflection follows a consistent trajectory on the water?",
+      "signals": [
+        "support(mountain,ground)",
+        "deformation(mountain)",
+        "interpenetration(mountain,mountain)",
+        "trajectory_dir(反射光,on:水,axis)",
+        "continuity(反射光)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "deformation(mountain)": 40.0,
+        "trajectory_dir(反射光,on:水,axis)": 7.6667,
+        "continuity(反射光)": 7.3333,
+        "interpenetration(mountain,mountain)": 7.1667,
+        "support(mountain,ground)": 7.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Does the sunlight dim gradually as it approaches the horizon?",
+      "signals": [
+        "hue_histogram_jump(天空)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 33.33,
+      "total_score_100": 83.33,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "hue_histogram_jump(天空)": 33.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "The sun gradually descends below the mountain horizon during sunset.",
+      "signals": [
+        "trajectory_dir(sun,vertical_axis)",
+        "size_inconsistency(sun)",
+        "hue_histogram_jump(sun)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(sun,vertical_axis)": 38.3333,
+        "size_inconsistency(sun)": 7.5,
+        "hue_histogram_jump(sun)": 6.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "The water surface reflects sunlight smoothly, showing continuous glistening reflections.",
+      "signals": [
+        "reflection_consistency(water)",
+        "frame_discontinuity(t)",
+        "continuity(water)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "frame_discontinuity(t)": 40.0,
+        "continuity(water)": 7.3333,
+        "reflection_consistency(water)": 7.0
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "The mountains maintain their green-vegetated silhouette with a rocky shoreline.",
+      "signals": [
+        "deformation(mountain)",
+        "fracture(mountain)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "deformation(mountain)": 40.0,
+        "fracture(mountain)": 6.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "The hills and trees in the background remain stable without deformation.",
+      "signals": [
+        "support(mountain,ground)",
+        "deformation(mountain)",
+        "interpenetration(mountain,mountain)",
+        "rigid_transform(山丘)",
+        "deformation(树木)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "deformation(mountain)": 40.0,
+        "deformation(树木)": 8.0,
+        "rigid_transform(山丘)": 7.5,
+        "interpenetration(mountain,mountain)": 7.1667,
+        "support(mountain,ground)": 7.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "The sunlight dimly approaches the horizon as it sets.",
+      "signals": [
+        "hue_histogram_jump(天空)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 33.33,
+      "total_score_100": 83.33,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "hue_histogram_jump(天空)": 33.3333
+      },
+      "content_score_raw": "50"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "v5",
+    "a1",
+    "a2",
+    "a3",
+    "a4",
+    "a5"
+  ]
+}

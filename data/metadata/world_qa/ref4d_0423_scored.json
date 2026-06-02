@@ -1,0 +1,223 @@
+{
+  "summary": {
+    "items": 10,
+    "enter_bank": 10,
+    "clip_range_sec": [
+      0.0,
+      8.73
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does the cake stay in the person's hand without floating or moving independently?",
+      "signals": [
+        "support(person, cake)",
+        "continuity(balloons)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(balloons)": 36.6667,
+        "support(person, cake)": 7.0
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Do the balloons and number '25' sign remain stationary on the wall throughout the scene?",
+      "signals": [
+        "support(person, cake)",
+        "continuity(cake)",
+        "balance(oX)",
+        "continuity(oX)",
+        "support(oA,oB)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(cake)": 36.6667,
+        "continuity(oX)": 7.3333,
+        "balance(oX)": 7.1667,
+        "support(person, cake)": 7.0,
+        "support(oA,oB)": 7.0
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Is the candle flame kept at a safe distance from flammable materials like hair, dress, and balloon clusters?",
+      "signals": [
+        "flame_proximity(candle, dist)",
+        "flame_proximity(oObj,dist)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "flame_proximity(candle, dist)": 34.1667,
+        "flame_proximity(oObj,dist)": 6.8333
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Is the lit candle near flammable items such as the cake and balloons?",
+      "signals": [
+        "flame_proximity(oObj,dist)",
+        "hot_surface_contact(oObj,oSurface)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "flame_proximity(oObj,dist)": 34.1667,
+        "hot_surface_contact(oObj,oSurface)": 6.8333
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Do the balloon clusters and large number '25' sign maintain balance and continuity without unexpected movement or collision?",
+      "signals": [
+        "continuity(balloons)",
+        "support(balloons, wall)",
+        "support(number-sign, wall)",
+        "friction_sliding(balloons, on: wall)",
+        "friction_sliding(number-sign, on: wall)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(balloons)": 36.6667,
+        "support(balloons, wall)": 7.0,
+        "support(number-sign, wall)": 7.0,
+        "friction_sliding(balloons, on: wall)": 6.0,
+        "friction_sliding(number-sign, on: wall)": 6.0
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "The person holds the cake in their hand without it floating or moving independently.",
+      "signals": [
+        "support(person, cake)",
+        "continuity(balloons)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(balloons)": 36.6667,
+        "support(person, cake)": 7.0
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "The candle flame is on the cake, which remains stationary and does not disappear.",
+      "signals": [
+        "support(person, cake)",
+        "continuity(cake)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(cake)": 36.6667,
+        "support(person, cake)": 7.0
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "The balloons and number '25' sign are static and do not show unexpected movement or collision.",
+      "signals": [
+        "support(balloons, wall)",
+        "support(number-sign, wall)",
+        "friction_sliding(balloons, on: wall)",
+        "friction_sliding(number-sign, on: wall)",
+        "balance(oX)",
+        "continuity(oX)",
+        "support(oA,oB)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(oX)": 36.6667,
+        "balance(oX)": 7.1667,
+        "support(balloons, wall)": 7.0,
+        "support(number-sign, wall)": 7.0,
+        "support(oA,oB)": 7.0,
+        "friction_sliding(balloons, on: wall)": 6.0,
+        "friction_sliding(number-sign, on: wall)": 6.0
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "The lit candle's flame is near the dress but not too close to cause harm.",
+      "signals": [
+        "flame_proximity(candle, dist)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 34.17,
+      "total_score_100": 89.17,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "flame_proximity(candle, dist)": 34.1667
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "The balloons in the background are static and do not show signs of sudden movement or disappearance.",
+      "signals": [
+        "continuity(balloons)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 36.67,
+      "total_score_100": 91.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(balloons)": 36.6667
+      },
+      "content_score_raw": "55"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "v5",
+    "a1",
+    "a2",
+    "a3",
+    "a4",
+    "a5"
+  ]
+}

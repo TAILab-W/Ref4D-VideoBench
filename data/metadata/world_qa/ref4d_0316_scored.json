@@ -1,0 +1,219 @@
+{
+  "summary": {
+    "items": 10,
+    "enter_bank": 8,
+    "clip_range_sec": [
+      0.0,
+      9.3
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Do the ocean waves continuously move towards the shore?",
+      "signals": [
+        "trajectory_dir(oX,axis)",
+        "continuity(oX)",
+        "trajectory_dir(ocean,axis)",
+        "continuity(ocean)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(oX,axis)": 38.3333,
+        "trajectory_dir(ocean,axis)": 7.6667,
+        "continuity(oX)": 7.3333,
+        "continuity(ocean)": 7.3333
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Does the sun gradually lower and shift toward the horizon as time progresses?",
+      "signals": [
+        "trajectory_dir(oX,axis)",
+        "state_change(oObj,from:state,to:state)",
+        "trajectory_dir(sun,axis)",
+        "state_change(sun,from:high天空,to:low天空)",
+        "size_inconsistency(sun)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(oX,axis)": 38.3333,
+        "trajectory_dir(sun,axis)": 7.6667,
+        "state_change(oObj,from:state,to:state)": 7.5,
+        "state_change(sun,from:high天空,to:low天空)": 7.5,
+        "size_inconsistency(sun)": 7.5
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Is the seashore environment safe for human presence with no hazardous elements or sudden changes?",
+      "signals": [
+        "falling_hazard(ocean)",
+        "prohibited_intersection(ocean,sand)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "prohibited_intersection(ocean,sand)": 36.6667,
+        "falling_hazard(ocean)": 6.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Does the shoreline sand remain stable throughout the video without signs of collapse or erosion?",
+      "signals": [
+        "balance(sand)",
+        "friction_sliding(sand,on:sand)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "balance(sand)": 35.8333,
+        "friction_sliding(sand,on:sand)": 6.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Does the seashore provide a stable support surface for objects placed on it?",
+      "signals": [
+        "support(sand,objects)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 35.0,
+      "total_score_100": 85.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "support(sand,objects)": 35.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "Ocean waves continuously move towards the shore, maintaining a natural trajectory.",
+      "signals": [
+        "trajectory_dir(oX,axis)",
+        "continuity(oX)",
+        "trajectory_dir(ocean,axis)",
+        "continuity(ocean)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(oX,axis)": 38.3333,
+        "trajectory_dir(ocean,axis)": 7.6667,
+        "continuity(oX)": 7.3333,
+        "continuity(ocean)": 7.3333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "The sun's position gradually lowers and shifts towards the horizon as time progresses.",
+      "signals": [
+        "trajectory_dir(oX,axis)",
+        "state_change(oObj,from:state,to:state)",
+        "trajectory_dir(sun,axis)",
+        "state_change(sun,from:high天空,to:low天空)",
+        "size_inconsistency(sun)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(oX,axis)": 38.3333,
+        "trajectory_dir(sun,axis)": 7.6667,
+        "state_change(oObj,from:state,to:state)": 7.5,
+        "state_change(sun,from:high天空,to:low天空)": 7.5,
+        "size_inconsistency(sun)": 7.5
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "The seashore environment is safe for human presence with no hazardous elements.",
+      "signals": [
+        "falling_hazard(ocean)",
+        "prohibited_intersection(ocean,sand)"
+      ],
+      "content_score_60": 18,
+      "signal_score_40": 40.0,
+      "total_score_100": 58.0,
+      "duplicate_penalized": true,
+      "signal_detail": {
+        "prohibited_intersection(ocean,sand)": 36.6667,
+        "falling_hazard(ocean)": 6.3333
+      },
+      "content_score_raw": "30"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "The shoreline sand remains stable throughout the video.",
+      "signals": [
+        "balance(sand)",
+        "friction_sliding(sand,on:sand)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "balance(sand)": 35.8333,
+        "friction_sliding(sand,on:sand)": 6.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "The seashore provides a stable support surface for objects placed on it.",
+      "signals": [
+        "support(sand,objects)"
+      ],
+      "content_score_60": 20,
+      "signal_score_40": 35.0,
+      "total_score_100": 55.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "support(sand,objects)": 35.0
+      },
+      "content_score_raw": "20"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "v5",
+    "a1",
+    "a2",
+    "a4"
+  ]
+}

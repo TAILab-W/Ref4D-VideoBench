@@ -1,0 +1,146 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0115.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "cv2",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "house",
+        "attributes": {
+          "color": [
+            "black",
+            "orange",
+            "white",
+            "yellow"
+          ],
+          "pattern": [
+            "decorative",
+            "geometric"
+          ],
+          "texture": [
+            "smooth",
+            "textured"
+          ],
+          "material": [
+            "concrete",
+            "glass",
+            "metal"
+          ],
+          "size": [
+            "large"
+          ],
+          "state": [
+            "closed"
+          ],
+          "orientation": [
+            "facing-front"
+          ],
+          "position": [
+            "center"
+          ],
+          "signature": [
+            "two-story-yellow-and-orange-with-black-and-white-gate"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            7.1
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "gate",
+        "attributes": {
+          "color": [
+            "black",
+            "white"
+          ],
+          "pattern": [
+            "rectangular"
+          ],
+          "material": [
+            "metal"
+          ],
+          "state": [
+            "closed"
+          ],
+          "position": [
+            "center"
+          ],
+          "signature": [
+            "black-metal-gate-with-white-rectangular-pattern"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            7.1
+          ]
+        ]
+      },
+      {
+        "id": "o3",
+        "name": "number",
+        "attributes": {
+          "color": [
+            "white"
+          ],
+          "position": [
+            "ground"
+          ],
+          "signature": [
+            "white-printed-text-phone-number-on-ground"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            7.1
+          ]
+        ]
+      }
+    ],
+    "relations": [
+      {
+        "subject": "o1",
+        "predicate": "has-part",
+        "object": "o2",
+        "spans": [
+          [
+            0.0,
+            7.1
+          ]
+        ],
+        "confidence": 0.9
+      },
+      {
+        "subject": "o1",
+        "predicate": "has-part",
+        "object": "o3",
+        "spans": [
+          [
+            0.0,
+            7.1
+          ]
+        ],
+        "confidence": 0.9
+      }
+    ]
+  },
+  "views": {
+    "objects_count_display": {
+      "house": 1,
+      "gate": 1,
+      "number": 1
+    }
+  }
+}

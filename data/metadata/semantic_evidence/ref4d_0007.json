@@ -1,0 +1,121 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0007.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "cv2",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "sheep",
+        "attributes": {
+          "color": [
+            "black",
+            "light-brown"
+          ],
+          "action": [
+            "grazing"
+          ],
+          "pose": [
+            "standing"
+          ],
+          "orientation": [
+            "facing-right"
+          ],
+          "signature": [
+            "light-brown-fur-black-face"
+          ]
+        },
+        "spans": [
+          [
+            0.2,
+            0.9
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "person",
+        "attributes": {
+          "color": [
+            "red"
+          ],
+          "action": [
+            "walking"
+          ],
+          "pose": [
+            "standing"
+          ],
+          "position": [
+            "background"
+          ],
+          "signature": [
+            "red-clothing"
+          ]
+        },
+        "spans": [
+          [
+            0.7,
+            0.8
+          ]
+        ]
+      },
+      {
+        "id": "o3",
+        "name": "sheep",
+        "attributes": {
+          "color": [
+            "white"
+          ],
+          "action": [
+            "walking"
+          ],
+          "pose": [
+            "standing"
+          ],
+          "orientation": [
+            "facing-away"
+          ],
+          "signature": [
+            "white-fur-alone-in-field"
+          ]
+        },
+        "spans": [
+          [
+            0.1,
+            0.2
+          ]
+        ]
+      }
+    ],
+    "relations": [
+      {
+        "subject": "o3",
+        "predicate": "looking-at",
+        "object": "o2",
+        "spans": [
+          [
+            0.1,
+            0.2
+          ],
+          [
+            0.7,
+            0.8
+          ]
+        ],
+        "confidence": 0.7
+      }
+    ]
+  },
+  "views": {
+    "objects_count_display": {
+      "sheep": 2,
+      "person": 1
+    }
+  }
+}

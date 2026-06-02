@@ -1,0 +1,261 @@
+{
+  "summary": {
+    "items": 10,
+    "enter_bank": 10,
+    "clip_range_sec": [
+      0.0,
+      9.5
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does the van move in a manner consistent with its size and mass, without sudden changes in trajectory or speed?",
+      "signals": [
+        "rigid_transform(cathedral)",
+        "rigid_transform(van)",
+        "deformation(cathedral)",
+        "deformation(van)",
+        "trajectory_dir(van,axis)",
+        "accel_sign(van,axis)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "deformation(cathedral)": 40.0,
+        "deformation(van)": 8.0,
+        "trajectory_dir(van,axis)": 7.6667,
+        "rigid_transform(cathedral)": 7.5,
+        "rigid_transform(van)": 7.5,
+        "accel_sign(van,axis)": 7.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Do people walk continuously near the cathedral without abrupt direction changes?",
+      "signals": [
+        "collision(person,person)",
+        "collision(person,van)",
+        "collision(person,cart)",
+        "trajectory_dir",
+        "continuity"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir": 38.3333,
+        "continuity": 7.3333,
+        "collision(person,person)": 6.3333,
+        "collision(person,van)": 6.3333,
+        "collision(person,cart)": 6.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Do shadows from the cathedral and van align consistently with the light source direction throughout the clip?",
+      "signals": [
+        "shadow_consistency(cathedral)",
+        "shadow_consistency(van)",
+        "continuity(cathedral)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "shadow_consistency(cathedral)": 36.6667,
+        "shadow_consistency(van)": 7.3333,
+        "continuity(cathedral)": 7.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Does the person push the green cart on a flat surface at a consistent pace?",
+      "signals": [
+        "grasp_stability(person,green-cart)",
+        "tool_contact(person,green-cart)",
+        "supportable(green-cart,by:ground)",
+        "trajectory_dir(person-with-cart,axis)",
+        "accel_sign(person-with-cart,axis)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(person-with-cart,axis)": 38.3333,
+        "accel_sign(person-with-cart,axis)": 7.0,
+        "grasp_stability(person,green-cart)": 5.6667,
+        "tool_contact(person,green-cart)": 5.6667,
+        "supportable(green-cart,by:ground)": 5.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Do pedestrians using shopping carts maintain safe distances from the moving van?",
+      "signals": [
+        "collision(van,cart)",
+        "friction_sliding(person,on:ground)",
+        "friction_sliding(jahn-van,on:ground)",
+        "biological_motion(person-with-cart)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "biological_motion(person-with-cart)": 38.3333,
+        "collision(van,cart)": 6.3333,
+        "friction_sliding(person,on:ground)": 6.0,
+        "friction_sliding(jahn-van,on:ground)": 6.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "The cathedral and van remain stationary with no unexpected movement or deformation.",
+      "signals": [
+        "rigid_transform(cathedral)",
+        "rigid_transform(van)",
+        "deformation(cathedral)",
+        "deformation(van)",
+        "trajectory_dir(van,axis)",
+        "accel_sign(van,axis)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "deformation(cathedral)": 40.0,
+        "deformation(van)": 8.0,
+        "trajectory_dir(van,axis)": 7.6667,
+        "rigid_transform(cathedral)": 7.5,
+        "rigid_transform(van)": 7.5,
+        "accel_sign(van,axis)": 7.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "The green cart is supported by its wheels on the ground, maintaining balance throughout the scene.",
+      "signals": [
+        "balance(cart)",
+        "support(cart,ground)",
+        "friction_sliding(cart,on:ground)",
+        "continuity(cathedral)",
+        "shadow_consistency(cathedral)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(cathedral)": 36.6667,
+        "shadow_consistency(cathedral)": 7.3333,
+        "balance(cart)": 7.1667,
+        "support(cart,ground)": 7.0,
+        "friction_sliding(cart,on:ground)": 6.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "People are walking in an open public space near the cathedral without any signs of collision or unsafe behavior.",
+      "signals": [
+        "collision(person,person)",
+        "collision(person,van)",
+        "collision(person,cart)",
+        "trajectory_dir",
+        "continuity"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir": 38.3333,
+        "continuity": 7.3333,
+        "collision(person,person)": 6.3333,
+        "collision(person,van)": 6.3333,
+        "collision(person,cart)": 6.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "Shadows cast by large structures like the cathedral align consistently with the light source direction.",
+      "signals": [
+        "shadow_consistency(cathedral)",
+        "shadow_consistency(van)",
+        "grasp_stability(person,green-cart)",
+        "tool_contact(person,green-cart)",
+        "supportable(green-cart,by:ground)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "shadow_consistency(cathedral)": 36.6667,
+        "shadow_consistency(van)": 7.3333,
+        "grasp_stability(person,green-cart)": 5.6667,
+        "tool_contact(person,green-cart)": 5.6667,
+        "supportable(green-cart,by:ground)": 5.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "Pedestrians using shopping carts near large vehicles like the van maintain safe distances to avoid collisions.",
+      "signals": [
+        "collision(van,cart)",
+        "friction_sliding(person,on:ground)",
+        "friction_sliding(jahn-van,on:ground)",
+        "biological_motion(person-with-cart)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "biological_motion(person-with-cart)": 38.3333,
+        "collision(van,cart)": 6.3333,
+        "friction_sliding(person,on:ground)": 6.0,
+        "friction_sliding(jahn-van,on:ground)": 6.0
+      },
+      "content_score_raw": "50"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "v5",
+    "a1",
+    "a2",
+    "a3",
+    "a4",
+    "a5"
+  ]
+}

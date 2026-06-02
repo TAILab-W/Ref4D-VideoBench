@@ -1,0 +1,228 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0290.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "cv2",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "person",
+        "attributes": {
+          "color": [
+            "blue"
+          ],
+          "text": [
+            "property-of",
+            "schoolcraft-college"
+          ],
+          "sex": [
+            "male"
+          ],
+          "action": [
+            "adjusting",
+            "grinding"
+          ],
+          "pose": [
+            "standing"
+          ],
+          "signature": [
+            "blue-shirt-property-of-schoolcraft-college-1958-glasses"
+          ]
+        },
+        "spans": [
+          [
+            0.2,
+            12.3
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "angle-grinder",
+        "attributes": {
+          "color": [
+            "black",
+            "green",
+            "silver"
+          ],
+          "material": [
+            "metal"
+          ],
+          "tool-or-instrument": [
+            "power-tool"
+          ],
+          "action": [
+            "grinding"
+          ],
+          "signature": [
+            "black-and-silver-with-green-handle"
+          ]
+        },
+        "spans": [
+          [
+            0.4,
+            12.3
+          ]
+        ]
+      },
+      {
+        "id": "o3",
+        "name": "metal-part-being-worked-on",
+        "attributes": {
+          "material": [
+            "metal"
+          ],
+          "state": [
+            "fixed-in-vise"
+          ],
+          "action": [
+            "being-ground"
+          ],
+          "signature": [
+            "vise-clamped-metal-piece"
+          ]
+        },
+        "spans": [
+          [
+            0.6,
+            12.3
+          ]
+        ]
+      },
+      {
+        "id": "o4",
+        "name": "workbench",
+        "attributes": {
+          "material": [
+            "metal"
+          ],
+          "color": [
+            "rusty"
+          ],
+          "equipment": [
+            "workbench"
+          ],
+          "signature": [
+            "rusty-metal-surface"
+          ]
+        },
+        "spans": [
+          [
+            0.7,
+            12.3
+          ]
+        ]
+      },
+      {
+        "id": "o5",
+        "name": "shelves",
+        "attributes": {
+          "content": [
+            "tools"
+          ],
+          "scene": [
+            "workshop"
+          ],
+          "signature": [
+            "background-shelves-with-various-tools"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            0.8
+          ]
+        ]
+      }
+    ],
+    "relations": [
+      {
+        "subject": "o1",
+        "predicate": "wearing",
+        "object": "o1",
+        "spans": [
+          [
+            0.2,
+            12.3
+          ]
+        ],
+        "confidence": 0.9
+      },
+      {
+        "subject": "o1",
+        "predicate": "holding",
+        "object": "o2",
+        "spans": [
+          [
+            11.8,
+            12.3
+          ]
+        ],
+        "confidence": 0.9
+      },
+      {
+        "subject": "o2",
+        "predicate": "touching",
+        "object": "o3",
+        "spans": [
+          [
+            11.5,
+            12.3
+          ]
+        ],
+        "confidence": 0.9
+      },
+      {
+        "subject": "o1",
+        "predicate": "looking-at",
+        "object": "o3",
+        "spans": [
+          [
+            0.2,
+            12.3
+          ]
+        ],
+        "confidence": 0.9
+      },
+      {
+        "subject": "o1",
+        "predicate": "standing-on",
+        "object": "o4",
+        "spans": [
+          [
+            0.7,
+            12.3
+          ]
+        ],
+        "confidence": 0.9
+      },
+      {
+        "subject": "o5",
+        "predicate": "behind",
+        "object": "o1",
+        "spans": [
+          [
+            0.0,
+            12.3
+          ]
+        ],
+        "confidence": 0.9
+      }
+    ]
+  },
+  "views": {
+    "objects_count_display": {
+      "person": 1,
+      "angle-grinder": 1,
+      "metal-part-being-worked-on": 1,
+      "workbench": 1,
+      "shelves": 1
+    }
+  }
+}

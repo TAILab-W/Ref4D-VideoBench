@@ -1,0 +1,191 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0385.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "decord",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "person",
+        "attributes": {
+          "color": [
+            "black",
+            "white"
+          ],
+          "pattern": [
+            "striped-sleeves"
+          ],
+          "texture": [
+            "smooth"
+          ],
+          "material": [
+            "cotton"
+          ],
+          "size": [
+            "medium"
+          ],
+          "age": [
+            "young"
+          ],
+          "sex": [
+            "male"
+          ],
+          "state": [
+            "active"
+          ],
+          "pose": [
+            "jumping",
+            "running",
+            "standing"
+          ],
+          "action": [
+            "dancing",
+            "gesturing",
+            "pointing"
+          ],
+          "orientation": [
+            "facing-front"
+          ],
+          "facing-direction": [
+            "forward"
+          ],
+          "position": [
+            "center"
+          ],
+          "signature": [
+            "black-shirt-black-shorts-necklace-watch-tattoo-on-left-arm"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            7.8
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "satellite-dish",
+        "attributes": {
+          "color": [
+            "black",
+            "yellow"
+          ],
+          "size": [
+            "small"
+          ],
+          "position": [
+            "left"
+          ],
+          "signature": [
+            "yellow-dish-with-black-cable"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            7.8
+          ]
+        ]
+      },
+      {
+        "id": "o3",
+        "name": "satellite-dish",
+        "attributes": {
+          "color": [
+            "black"
+          ],
+          "size": [
+            "small"
+          ],
+          "position": [
+            "left"
+          ],
+          "signature": [
+            "black-dish-with-wires"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            7.8
+          ]
+        ]
+      },
+      {
+        "id": "o4",
+        "name": "satellite-dish",
+        "attributes": {
+          "color": [
+            "gray"
+          ],
+          "size": [
+            "small"
+          ],
+          "position": [
+            "left"
+          ],
+          "signature": [
+            "gray-dish-with-wires"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            7.8
+          ]
+        ]
+      }
+    ],
+    "relations": [
+      {
+        "subject": "o1",
+        "predicate": "left-of",
+        "object": "o2",
+        "spans": [
+          [
+            0.0,
+            7.8
+          ]
+        ],
+        "confidence": 0.8
+      },
+      {
+        "subject": "o1",
+        "predicate": "left-of",
+        "object": "o3",
+        "spans": [
+          [
+            0.0,
+            7.8
+          ]
+        ],
+        "confidence": 0.8
+      },
+      {
+        "subject": "o1",
+        "predicate": "left-of",
+        "object": "o4",
+        "spans": [
+          [
+            0.0,
+            7.8
+          ]
+        ],
+        "confidence": 0.8
+      }
+    ]
+  },
+  "views": {
+    "objects_count_display": {
+      "person": 1,
+      "satellite-dish": 3
+    }
+  }
+}

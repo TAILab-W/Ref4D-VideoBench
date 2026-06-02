@@ -1,0 +1,118 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0097.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "cv2",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "male-lion",
+        "attributes": {
+          "color": [
+            "dark-brown-(mane)",
+            "light-brown"
+          ],
+          "pose": [
+            "standing",
+            "walking"
+          ],
+          "action": [
+            "fighting",
+            "roaring"
+          ],
+          "state": [
+            "aggressive"
+          ],
+          "signature": [
+            "large,-light-brown-coat,-dark-mane,-facing-left"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            9.7
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "female-lion",
+        "attributes": {
+          "color": [
+            "light-tan"
+          ],
+          "pose": [
+            "standing",
+            "walking"
+          ],
+          "action": [
+            "fighting",
+            "following"
+          ],
+          "state": [
+            "aggressive"
+          ],
+          "signature": [
+            "smaller,-lighter-coat,-no-mane,-following-male"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            9.7
+          ]
+        ]
+      }
+    ],
+    "relations": [
+      {
+        "subject": "o2",
+        "predicate": "following",
+        "object": "o1",
+        "spans": [
+          [
+            0.0,
+            9.7
+          ]
+        ],
+        "confidence": 0.9
+      },
+      {
+        "subject": "o2",
+        "predicate": "left-of",
+        "object": "o1",
+        "spans": [
+          [
+            0.0,
+            9.7
+          ]
+        ],
+        "confidence": 0.8
+      },
+      {
+        "subject": "o1",
+        "predicate": "facing",
+        "object": "o2",
+        "spans": [
+          [
+            0.0,
+            9.7
+          ]
+        ],
+        "confidence": 0.9
+      }
+    ]
+  },
+  "views": {
+    "objects_count_display": {
+      "male-lion": 1,
+      "female-lion": 1
+    }
+  }
+}

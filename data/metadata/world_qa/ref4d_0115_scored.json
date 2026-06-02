@@ -1,0 +1,239 @@
+{
+  "summary": {
+    "items": 10,
+    "enter_bank": 8,
+    "clip_range_sec": [
+      0.0,
+      7.1
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Is the number '9621212141' visible on the ground throughout the video?",
+      "signals": [
+        "continuity(number)",
+        "post_collision_change(number)",
+        "result_appearance(number)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(number)": 36.6667,
+        "post_collision_change(number)": 6.8333,
+        "result_appearance(number)": 5.6667
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Does the house structure remain balanced and not collapse or interpenetrate with other parts?",
+      "signals": [
+        "balance(gate)",
+        "support(gate,frame)",
+        "friction_sliding(gate,on:frame)",
+        "balance(house)",
+        "support(wall,ground)",
+        "containment(window,wall)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "balance(gate)": 35.8333,
+        "balance(house)": 7.1667,
+        "support(gate,frame)": 7.0,
+        "support(wall,ground)": 7.0,
+        "friction_sliding(gate,on:frame)": 6.0,
+        "containment(window,wall)": 5.8333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Is the black metal gate closed properly, casting a consistent shadow that matches its position?",
+      "signals": [
+        "friction_sliding(gate,on:ground)",
+        "friction_sliding(gate,on:wall)",
+        "falling_hazard(gate)",
+        "shadow_consistency(gate)"
+      ],
+      "content_score_60": 30,
+      "signal_score_40": 40.0,
+      "total_score_100": 70.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "shadow_consistency(gate)": 36.6667,
+        "falling_hazard(gate)": 6.3333,
+        "friction_sliding(gate,on:ground)": 6.0,
+        "friction_sliding(gate,on:wall)": 6.0
+      },
+      "content_score_raw": "30"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Are the house and gate stationary without unexpected movement during the clip?",
+      "signals": [
+        "rigid_transform(house)",
+        "rigid_transform(gate)",
+        "deformation(house)",
+        "deformation(gate)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "deformation(house)": 40.0,
+        "deformation(gate)": 8.0,
+        "rigid_transform(house)": 7.5,
+        "rigid_transform(gate)": 7.5
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Does the text of the number plate stay static in appearance?",
+      "signals": [
+        "continuity(number)",
+        "post_collision_change(number)",
+        "continuity(number_plate)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(number)": 36.6667,
+        "continuity(number_plate)": 7.3333,
+        "post_collision_change(number)": 6.8333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "The house and gate remain stationary throughout the video.",
+      "signals": [
+        "rigid_transform(house)",
+        "rigid_transform(gate)",
+        "deformation(house)",
+        "deformation(gate)",
+        "continuity(number)",
+        "post_collision_change(number)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "deformation(house)": 40.0,
+        "deformation(gate)": 8.0,
+        "rigid_transform(house)": 7.5,
+        "rigid_transform(gate)": 7.5,
+        "continuity(number)": 7.3333,
+        "post_collision_change(number)": 6.8333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "The black metal gate is closed properly and appears stable at all times.",
+      "signals": [
+        "balance(gate)",
+        "support(gate,frame)",
+        "friction_sliding(gate,on:frame)",
+        "friction_sliding(gate,on:ground)",
+        "friction_sliding(gate,on:wall)",
+        "falling_hazard(gate)"
+      ],
+      "content_score_60": 30,
+      "signal_score_40": 40.0,
+      "total_score_100": 70.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "balance(gate)": 35.8333,
+        "support(gate,frame)": 7.0,
+        "falling_hazard(gate)": 6.3333,
+        "friction_sliding(gate,on:frame)": 6.0,
+        "friction_sliding(gate,on:ground)": 6.0,
+        "friction_sliding(gate,on:wall)": 6.0
+      },
+      "content_score_raw": "30"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "The number '9621212141' is consistently visible on the ground in white text.",
+      "signals": [
+        "continuity(number)",
+        "result_appearance(number)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(number)": 36.6667,
+        "result_appearance(number)": 5.6667
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "The house structure maintains balance and support without collapse or interpenetration.",
+      "signals": [
+        "balance(house)",
+        "support(wall,ground)",
+        "containment(window,wall)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "balance(house)": 35.8333,
+        "support(wall,ground)": 7.0,
+        "containment(window,wall)": 5.8333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "The shadow of the gate is visible on the ground, matching its position.",
+      "signals": [
+        "shadow_consistency(gate)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 36.67,
+      "total_score_100": 96.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "shadow_consistency(gate)": 36.6667
+      },
+      "content_score_raw": "60"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v4",
+    "v5",
+    "a1",
+    "a3",
+    "a4",
+    "a5"
+  ]
+}

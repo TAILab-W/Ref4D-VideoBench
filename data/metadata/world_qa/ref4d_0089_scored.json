@@ -1,0 +1,204 @@
+{
+  "summary": {
+    "items": 10,
+    "enter_bank": 9,
+    "clip_range_sec": [
+      0.0,
+      8.33
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Do the bees maintain physical continuity without sudden frame discontinuity during their contact?",
+      "signals": [
+        "continuity(bee)",
+        "interpenetration(bee,bee)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(bee)": 36.6667,
+        "interpenetration(bee,bee)": 7.1667
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Does the trajectory direction and acceleration sign of each bee's legs remain consistent with its movement on the wooden surface, showing natural biological motion?",
+      "signals": [
+        "trajectory_dir(bee腿部,axis)",
+        "accel_sign(bee腿部,axis)",
+        "biological_motion(bee)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(bee腿部,axis)": 38.3333,
+        "biological_motion(bee)": 7.6667,
+        "accel_sign(bee腿部,axis)": 7.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "During their contact, do the two bees avoid interpenetration between their bodies while maintaining support on the wooden surface?",
+      "signals": [
+        "interpenetration",
+        "supportable"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "interpenetration": 35.8333,
+        "supportable": 5.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Does the shadow cast by the bees on the wooden surface remain consistent with their position and shape?",
+      "signals": [
+        "shadow_consistency"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 36.67,
+      "total_score_100": 86.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "shadow_consistency": 36.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Does the motion of the bees during collision exhibit biological motion characteristics?",
+      "signals": [
+        "biological_motion"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 38.33,
+      "total_score_100": 88.33,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "biological_motion": 38.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "Two bees maintain physical continuity during their interaction.",
+      "signals": [
+        "continuity(bee)",
+        "continuity"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(bee)": 36.6667,
+        "continuity": 7.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "The bodies of the two bees do not interpenetrate when they contact.",
+      "signals": [
+        "interpenetration(bee,bee)",
+        "interpenetration"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "interpenetration(bee,bee)": 35.8333,
+        "interpenetration": 7.1667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "Shadows on the wooden surface match the position and shape of the bees.",
+      "signals": [
+        "trajectory_dir(bee腿部,axis)",
+        "accel_sign(bee腿部,axis)",
+        "shadow_consistency"
+      ],
+      "content_score_60": 45,
+      "signal_score_40": 40.0,
+      "total_score_100": 85.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(bee腿部,axis)": 38.3333,
+        "shadow_consistency": 7.3333,
+        "accel_sign(bee腿部,axis)": 7.0
+      },
+      "content_score_raw": "45"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "The wooden surface supports the weight of the bees without deformation.",
+      "signals": [
+        "trajectory_dir(bee腿部,axis)",
+        "accel_sign(bee腿部,axis)",
+        "supportable"
+      ],
+      "content_score_60": 30,
+      "signal_score_40": 40.0,
+      "total_score_100": 70.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(bee腿部,axis)": 38.3333,
+        "accel_sign(bee腿部,axis)": 7.0,
+        "supportable": 5.3333
+      },
+      "content_score_raw": "30"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "The biological motion of the bees is natural and consistent with their species.",
+      "signals": [
+        "biological_motion(bee)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 38.33,
+      "total_score_100": 88.33,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "biological_motion(bee)": 38.3333
+      },
+      "content_score_raw": "50"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "v5",
+    "a1",
+    "a2",
+    "a3",
+    "a5"
+  ]
+}

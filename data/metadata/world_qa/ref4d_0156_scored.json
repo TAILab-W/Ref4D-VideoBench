@@ -1,0 +1,209 @@
+{
+  "summary": {
+    "items": 10,
+    "enter_bank": 8,
+    "clip_range_sec": [
+      0.0,
+      6.27
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Do the people walking on the stone paths maintain consistent trajectory directions and cast continuous shadows?",
+      "signals": [
+        "trajectory_dir(person,on:path,axis)",
+        "balance(person)",
+        "size_inconsistency(person)",
+        "biological_motion(person)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(person,on:path,axis)": 38.3333,
+        "biological_motion(person)": 7.6667,
+        "size_inconsistency(person)": 7.5,
+        "balance(person)": 7.1667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Are there no falling hazards for people near the steep terraces or edges of the ruins?",
+      "signals": [
+        "falling_hazard(person)"
+      ],
+      "content_score_60": 30,
+      "signal_score_40": 31.67,
+      "total_score_100": 61.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "falling_hazard(person)": 31.6667
+      },
+      "content_score_raw": "30"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Do the green grassy areas in the terraces maintain a consistent size relative to the surrounding structures?",
+      "signals": [
+        "size_inconsistency(terrace)",
+        "material_optics(vegetation)"
+      ],
+      "content_score_60": 40,
+      "signal_score_40": 40.0,
+      "total_score_100": 80.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "size_inconsistency(terrace)": 37.5,
+        "material_optics(vegetation)": 7.5
+      },
+      "content_score_raw": "40"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Do the houses with thatched roofs remain supported by their base surfaces without floating or sinking?",
+      "signals": [
+        "support(house,on:mountain)",
+        "containment(house,on:mountain)",
+        "material_optics(house)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "material_optics(house)": 37.5,
+        "support(house,on:mountain)": 7.0,
+        "containment(house,on:mountain)": 5.8333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Do the visitors exhibit biological motion appropriate for human movement while casting continuous shadows?",
+      "signals": [
+        "shadow_consistency(person)",
+        "biological_motion(person)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "biological_motion(person)": 38.3333,
+        "shadow_consistency(person)": 7.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "People walk on stone paths, maintaining consistent trajectory directions and balance.",
+      "signals": [
+        "trajectory_dir(person,on:path,axis)",
+        "balance(person)",
+        "size_inconsistency(person)",
+        "support(house,on:mountain)",
+        "containment(house,on:mountain)",
+        "material_optics(house)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(person,on:path,axis)": 38.3333,
+        "size_inconsistency(person)": 7.5,
+        "material_optics(house)": 7.5,
+        "balance(person)": 7.1667,
+        "support(house,on:mountain)": 7.0,
+        "containment(house,on:mountain)": 5.8333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "Terraced structures support vegetation without material optics inconsistencies.",
+      "signals": [
+        "size_inconsistency(terrace)",
+        "material_optics(vegetation)"
+      ],
+      "content_score_60": 40,
+      "signal_score_40": 40.0,
+      "total_score_100": 80.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "size_inconsistency(terrace)": 37.5,
+        "material_optics(vegetation)": 7.5
+      },
+      "content_score_raw": "40"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "Visitors exhibit biological motion appropriate for human movement along pathways.",
+      "signals": [
+        "biological_motion(person)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 38.33,
+      "total_score_100": 88.33,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "biological_motion(person)": 38.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "Shadows cast by people on stone paths are continuous and consistent with their positions.",
+      "signals": [
+        "shadow_consistency(person)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 36.67,
+      "total_score_100": 86.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "shadow_consistency(person)": 36.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "No falling hazards exist for people near steep terraces or edges.",
+      "signals": [
+        "falling_hazard(person)"
+      ],
+      "content_score_60": 30,
+      "signal_score_40": 31.67,
+      "total_score_100": 61.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "falling_hazard(person)": 31.6667
+      },
+      "content_score_raw": "30"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v3",
+    "v4",
+    "v5",
+    "a1",
+    "a2",
+    "a3",
+    "a4"
+  ]
+}

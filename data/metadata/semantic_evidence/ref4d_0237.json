@@ -1,0 +1,116 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0237.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "cv2",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "instant-pot",
+        "attributes": {
+          "signature": [
+            "instant-pot-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            6.9
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "water",
+        "attributes": {
+          "signature": [
+            "water-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            6.9
+          ]
+        ]
+      },
+      {
+        "id": "o3",
+        "name": "bouillon",
+        "attributes": {
+          "signature": [
+            "bouillon-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            6.9
+          ]
+        ]
+      },
+      {
+        "id": "o4",
+        "name": "seasonings",
+        "attributes": {
+          "signature": [
+            "seasonings-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            6.9
+          ]
+        ]
+      },
+      {
+        "id": "o5",
+        "name": "spoon",
+        "attributes": {
+          "signature": [
+            "spoon-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            6.9
+          ]
+        ]
+      },
+      {
+        "id": "o6",
+        "name": "spatula",
+        "attributes": {
+          "signature": [
+            "spatula-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            6.9
+          ]
+        ]
+      }
+    ],
+    "relations": []
+  },
+  "views": {
+    "objects_count_display": {
+      "instant-pot": 1,
+      "water": 1,
+      "bouillon": 1,
+      "seasonings": 1,
+      "spoon": 1,
+      "spatula": 1
+    }
+  }
+}

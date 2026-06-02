@@ -1,0 +1,192 @@
+{
+  "summary": {
+    "items": 10,
+    "enter_bank": 5,
+    "clip_range_sec": [
+      0.0,
+      7.93
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does the train on the track move forward without sudden changes in speed?",
+      "signals": [
+        "trajectory_dir(oX,axis)",
+        "accel_sign(oX,axis)",
+        "trajectory_dir(train,railway-track)",
+        "accel_sign(train,railway-track)"
+      ],
+      "content_score_60": 30,
+      "signal_score_40": 40.0,
+      "total_score_100": 70.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(oX,axis)": 38.3333,
+        "trajectory_dir(train,railway-track)": 7.6667,
+        "accel_sign(oX,axis)": 7.0,
+        "accel_sign(train,railway-track)": 7.0
+      },
+      "content_score_raw": "30"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Is the traffic light at the platform edge red throughout the clip?",
+      "signals": [
+        "state_change(oObj,from:state,to:state)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 37.5,
+      "total_score_100": 87.5,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "state_change(oObj,from:state,to:state)": 37.5
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Does the shadow of the traffic light pole point consistently towards the bottom left corner due to the sun's position?",
+      "signals": [
+        "shadow_consistency(oX)"
+      ],
+      "content_score_60": 40,
+      "signal_score_40": 36.67,
+      "total_score_100": 76.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "shadow_consistency(oX)": 36.6667
+      },
+      "content_score_raw": "40"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Are the yellow tactile paving lines visible along the platform edge for safety?",
+      "signals": [
+        "support(platform,train)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 35.0,
+      "total_score_100": 85.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "support(platform,train)": 35.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Do the trees' leaves show slight movement that suggests a gentle breeze?",
+      "signals": [
+        "tilt_angle_threshold(tree,deg)"
+      ],
+      "content_score_60": 30,
+      "signal_score_40": 35.83,
+      "total_score_100": 65.83,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "tilt_angle_threshold(tree,deg)": 35.8333
+      },
+      "content_score_raw": "30"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "The train on the railway track moves forward consistently.",
+      "signals": [
+        "trajectory_dir(oX,axis)",
+        "accel_sign(oX,axis)",
+        "trajectory_dir(train,railway-track)",
+        "accel_sign(train,railway-track)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(oX,axis)": 38.3333,
+        "trajectory_dir(train,railway-track)": 7.6667,
+        "accel_sign(oX,axis)": 7.0,
+        "accel_sign(train,railway-track)": 7.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "The traffic light at the platform edge shows a red light.",
+      "signals": [
+        "state_change(oObj,from:state,to:state)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 37.5,
+      "total_score_100": 97.5,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "state_change(oObj,from:state,to:state)": 37.5
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "The shadow of the traffic light pole is cast to the left side of the platform.",
+      "signals": [
+        "shadow_consistency(oX)"
+      ],
+      "content_score_60": 20,
+      "signal_score_40": 36.67,
+      "total_score_100": 56.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "shadow_consistency(oX)": 36.6667
+      },
+      "content_score_raw": "20"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "The platform's yellow tactile paving indicates its edge for safe use.",
+      "signals": [
+        "support(platform,train)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 35.0,
+      "total_score_100": 85.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "support(platform,train)": 35.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "The trees' leaves show slight movement, indicating wind presence.",
+      "signals": [
+        "tilt_angle_threshold(tree,deg)"
+      ],
+      "content_score_60": 30,
+      "signal_score_40": 35.83,
+      "total_score_100": 65.83,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "tilt_angle_threshold(tree,deg)": 35.8333
+      },
+      "content_score_raw": "30"
+    }
+  ],
+  "bank_ids": [
+    "v2",
+    "v4",
+    "a1",
+    "a2",
+    "a4"
+  ]
+}

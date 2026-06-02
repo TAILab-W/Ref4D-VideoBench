@@ -1,0 +1,208 @@
+{
+  "summary": {
+    "items": 10,
+    "enter_bank": 5,
+    "clip_range_sec": [
+      0.0,
+      5.2
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does the chef use black gloves to handle the hot food?",
+      "signals": [
+        "hot_surface_contact"
+      ],
+      "content_score_60": 5,
+      "signal_score_40": 34.17,
+      "total_score_100": 39.17,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "hot_surface_contact": 34.1667
+      },
+      "content_score_raw": "5"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Does the knife make a cuttable progress on the steak during cutting?",
+      "signals": [
+        "cuttable_progress(steak)",
+        "cuttable_progress"
+      ],
+      "content_score_60": 40,
+      "signal_score_40": 28.0,
+      "total_score_100": 68.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "cuttable_progress(steak)": 23.3333,
+        "cuttable_progress": 4.6667
+      },
+      "content_score_raw": "40"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Is the meat's internal color pink, indicating proper cooking?",
+      "signals": [
+        "result_appearance",
+        "supportable"
+      ],
+      "content_score_60": 40,
+      "signal_score_40": 33.67,
+      "total_score_100": 73.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "result_appearance": 28.3333,
+        "supportable": 5.3333
+      },
+      "content_score_raw": "40"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Does the plate support the steak and tomatoes without interpenetration?",
+      "signals": [
+        "support(plate,steak)",
+        "support(plate,tomato)",
+        "continuity(plate)",
+        "continuity(steak)",
+        "continuity(tomato)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(plate)": 36.6667,
+        "continuity(steak)": 7.3333,
+        "continuity(tomato)": 7.3333,
+        "support(plate,steak)": 7.0,
+        "support(plate,tomato)": 7.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Does the knife make tool contact with the steak for slicing?",
+      "signals": [
+        "tool_contact(knife,steak)",
+        "tool_usage_correct(knife,for:slicing)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 34.83,
+      "total_score_100": 84.83,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "tool_usage_correct(knife,for:slicing)": 29.1667,
+        "tool_contact(knife,steak)": 5.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "The white plate supports the steak and tomatoes without interpenetration or frame discontinuity.",
+      "signals": [
+        "support(plate,steak)",
+        "support(plate,tomato)",
+        "continuity(plate)",
+        "continuity(steak)",
+        "continuity(tomato)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(plate)": 36.6667,
+        "continuity(steak)": 7.3333,
+        "continuity(tomato)": 7.3333,
+        "support(plate,steak)": 7.0,
+        "support(plate,tomato)": 7.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "The knife makes tool contact with the steak, indicating correct tool usage for slicing during cutting.",
+      "signals": [
+        "tool_contact(knife,steak)",
+        "tool_usage_correct(knife,for:slicing)",
+        "cuttable_progress(steak)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 39.5,
+      "total_score_100": 89.5,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "tool_usage_correct(knife,for:slicing)": 29.1667,
+        "tool_contact(knife,steak)": 5.6667,
+        "cuttable_progress(steak)": 4.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "The chef uses black gloves to handle hot food.",
+      "signals": [
+        "hot_surface_contact"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 34.17,
+      "total_score_100": 84.17,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "hot_surface_contact": 34.1667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "The knife moves in a continuous cutting motion, showing cuttable progress on the steak.",
+      "signals": [
+        "cuttable_progress"
+      ],
+      "content_score_60": 40,
+      "signal_score_40": 23.33,
+      "total_score_100": 63.33,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "cuttable_progress": 23.3333
+      },
+      "content_score_raw": "40"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "The meat's internal color change indicates proper cooking.",
+      "signals": [
+        "result_appearance",
+        "supportable"
+      ],
+      "content_score_60": 40,
+      "signal_score_40": 33.67,
+      "total_score_100": 73.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "result_appearance": 28.3333,
+        "supportable": 5.3333
+      },
+      "content_score_raw": "40"
+    }
+  ],
+  "bank_ids": [
+    "v4",
+    "v5",
+    "a1",
+    "a2",
+    "a3"
+  ]
+}

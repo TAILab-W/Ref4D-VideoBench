@@ -1,0 +1,95 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0358.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "decord",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "clouds",
+        "attributes": {
+          "color": [
+            "dark-gray",
+            "light-orange"
+          ],
+          "pattern": [
+            "irregular",
+            "scattered"
+          ],
+          "signature": [
+            "dark-gray-to-light-orange-gradient-with-various-shapes"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            0.3
+          ],
+          [
+            0.6,
+            0.8
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "sea",
+        "attributes": {
+          "color": [
+            "deep-blue"
+          ],
+          "texture": [
+            "smooth-with-ripples"
+          ],
+          "signature": [
+            "deep-blue-waves-with-gentle-ripples"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            0.7
+          ]
+        ]
+      }
+    ],
+    "relations": [
+      {
+        "subject": "o2",
+        "predicate": "below",
+        "object": "o1",
+        "spans": [
+          [
+            0.0,
+            0.7
+          ]
+        ],
+        "confidence": 0.9
+      },
+      {
+        "subject": "o1",
+        "predicate": "above",
+        "object": "o2",
+        "spans": [
+          [
+            0.0,
+            0.8
+          ]
+        ],
+        "confidence": 0.9
+      }
+    ]
+  },
+  "views": {
+    "objects_count_display": {
+      "clouds": 1,
+      "sea": 1
+    }
+  }
+}

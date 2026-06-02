@@ -1,0 +1,195 @@
+{
+  "summary": {
+    "items": 10,
+    "enter_bank": 6,
+    "clip_range_sec": [
+      0.0,
+      8.7
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does the cake on the table remain stable without sudden movement?",
+      "signals": [
+        "balance(oX)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 35.83,
+      "total_score_100": 90.83,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "balance(oX)": 35.8333
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "When cutting the cake, does the person-in-black-habit maintain a continuous trajectory and keep fingers away from scissors blades?",
+      "signals": [
+        "trajectory_dir(oX,axis)",
+        "continuity(oX)",
+        "blade_orientation_away(oTool,oHand)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(oX,axis)": 38.3333,
+        "continuity(oX)": 7.3333,
+        "blade_orientation_away(oTool,oHand)": 5.8333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Is the white-robed person with a pink skullcap participating in a ceremonial task related to the cake presentation?",
+      "signals": [
+        "tool_usage_correct(oTool,for:oTask)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 29.17,
+      "total_score_100": 79.17,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "tool_usage_correct(oTool,for:oTask)": 29.1667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Does the person-in-black-habit maintain a stable grasp on the object during the handoff?",
+      "signals": [
+        "grasp_stability(person-in-black-habit,object)",
+        "handoff_between_hands(object)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 33.67,
+      "total_score_100": 83.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "grasp_stability(person-in-black-habit,object)": 28.3333,
+        "handoff_between_hands(object)": 5.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Are there any abrupt changes in direction or speed of the person-in-black-habit's arm while interacting with the cake?",
+      "signals": [
+        "_default"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 23.33,
+      "total_score_100": 73.33,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "_default": 23.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "The cake on the table remains stable and does not show signs of sudden movement or imbalance.",
+      "signals": [
+        "balance(oX)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 35.83,
+      "total_score_100": 95.83,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "balance(oX)": 35.8333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "The person-in-black-habit maintains a continuous trajectory when cutting the cake without abrupt changes in direction or speed, while maintaining a stable grasp on the object during the handoff.",
+      "signals": [
+        "trajectory_dir(oX,axis)",
+        "continuity(oX)",
+        "grasp_stability(person-in-black-habit,object)",
+        "handoff_between_hands(object)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(oX,axis)": 38.3333,
+        "continuity(oX)": 7.3333,
+        "grasp_stability(person-in-black-habit,object)": 5.6667,
+        "handoff_between_hands(object)": 5.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "The white-robed person with a pink skullcap is participating in a ceremonial task related to the presentation or blessing of the cake.",
+      "signals": [
+        "blade_orientation_away(oTool,oHand)"
+      ],
+      "content_score_60": 30,
+      "signal_score_40": 29.17,
+      "total_score_100": 59.17,
+      "duplicate_penalized": true,
+      "signal_detail": {
+        "blade_orientation_away(oTool,oHand)": 29.1667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "The person-in-black-habit cuts the cake with a continuous motion, showing no abrupt changes in direction or speed.",
+      "signals": [
+        "trajectory_dir(oX,axis)",
+        "continuity(oX)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(oX,axis)": 38.3333,
+        "continuity(oX)": 7.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "The fingers of the person-in-black-habit are positioned away from the blades of the scissors.",
+      "signals": [
+        "blade_orientation_away(oTool,oHand)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 29.17,
+      "total_score_100": 79.17,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "blade_orientation_away(oTool,oHand)": 29.1667
+      },
+      "content_score_raw": "50"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v4",
+    "a1",
+    "a2",
+    "a4"
+  ]
+}

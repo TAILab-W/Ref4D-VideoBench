@@ -1,0 +1,199 @@
+{
+  "summary": {
+    "items": 10,
+    "enter_bank": 10,
+    "clip_range_sec": [
+      0.0,
+      5.63
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does the bird stay supported by the blue-patterned pillow without floating or sinking?",
+      "signals": [
+        "continuity(bird)",
+        "interpenetration(bird,pillow)",
+        "support(bird,blue_surface),interpenetration(bird,blue_surface)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(bird)": 36.6667,
+        "interpenetration(bird,pillow)": 7.1667,
+        "support(bird,blue_surface),interpenetration(bird,blue_surface)": 7.0
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Does the bird's head suddenly disappear in any frame?",
+      "signals": [
+        "continuity(bird)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 36.67,
+      "total_score_100": 86.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(bird)": 36.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Does the bird's shadow on the blue surface match its position and shape throughout the clip?",
+      "signals": [
+        "shadow_consistency(bird)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 36.67,
+      "total_score_100": 86.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "shadow_consistency(bird)": 36.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Does the bird move its beak downward to peck at something below it?",
+      "signals": [
+        "biological_motion(bird)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 38.33,
+      "total_score_100": 93.33,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "biological_motion(bird)": 38.3333
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Does the bird maintain physical consistency with no interpenetration of body parts while interacting with the pillow?",
+      "signals": [
+        "continuity(bird)",
+        "interpenetration(bird,pillow)",
+        "support(bird,blue_surface),interpenetration(bird,blue_surface)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(bird)": 36.6667,
+        "interpenetration(bird,pillow)": 7.1667,
+        "support(bird,blue_surface),interpenetration(bird,blue_surface)": 7.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "The bird is on the blue-patterned pillow, and its body does not interpenetrate with the surface.",
+      "signals": [
+        "continuity(bird)",
+        "interpenetration(bird,pillow)",
+        "support(bird,blue_surface),interpenetration(bird,blue_surface)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(bird)": 36.6667,
+        "interpenetration(bird,pillow)": 7.1667,
+        "support(bird,blue_surface),interpenetration(bird,blue_surface)": 7.0
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "The bird's head remains visible throughout the video without merging with other objects.",
+      "signals": [
+        "continuity(bird)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 36.67,
+      "total_score_100": 96.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(bird)": 36.6667
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "The bird moves its beak towards its tail in a natural motion.",
+      "signals": [
+        "biological_motion(bird)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 38.33,
+      "total_score_100": 88.33,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "biological_motion(bird)": 38.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "The shadow of the bird appears consistently on the blue patterned surface.",
+      "signals": [
+        "shadow_consistency(bird)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 36.67,
+      "total_score_100": 86.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "shadow_consistency(bird)": 36.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "The bird's body maintains physical consistency without frame discontinuity on the blue-patterned pillow.",
+      "signals": [
+        "continuity(bird)",
+        "interpenetration(bird,pillow)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(bird)": 36.6667,
+        "interpenetration(bird,pillow)": 7.1667
+      },
+      "content_score_raw": "60"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "v5",
+    "a1",
+    "a2",
+    "a3",
+    "a4",
+    "a5"
+  ]
+}

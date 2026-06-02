@@ -1,0 +1,50 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0577.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "cv2",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "airplane",
+        "attributes": {
+          "color": [
+            "blue",
+            "white"
+          ],
+          "pattern": [
+            "striped-tail"
+          ],
+          "action": [
+            "ascending",
+            "taking-off"
+          ],
+          "position": [
+            "center"
+          ],
+          "signature": [
+            "a80-860,-white-blue-tail"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            1.0
+          ]
+        ]
+      }
+    ],
+    "relations": []
+  },
+  "views": {
+    "objects_count_display": {
+      "airplane": 1
+    }
+  }
+}

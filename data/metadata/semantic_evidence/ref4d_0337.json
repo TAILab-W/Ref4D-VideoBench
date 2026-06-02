@@ -1,0 +1,196 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0337.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "decord",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "waterfall",
+        "attributes": {
+          "color": [
+            "white"
+          ],
+          "material": [
+            "rock",
+            "water"
+          ],
+          "action": [
+            "falling",
+            "flowing"
+          ],
+          "state": [
+            "dynamic",
+            "liquid"
+          ],
+          "signature": [
+            "white-water-rocky-cliff-drop"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            7.7
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "river",
+        "attributes": {
+          "color": [
+            "brownish",
+            "clear"
+          ],
+          "material": [
+            "rock",
+            "water"
+          ],
+          "state": [
+            "calm",
+            "liquid"
+          ],
+          "signature": [
+            "clear-water-rocky-bed-stream"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            7.7
+          ]
+        ]
+      },
+      {
+        "id": "o3",
+        "name": "tree",
+        "attributes": {
+          "color": [
+            "green"
+          ],
+          "pattern": [
+            "dense",
+            "foliage"
+          ],
+          "texture": [
+            "leafy",
+            "smooth"
+          ],
+          "size": [
+            "large"
+          ],
+          "signature": [
+            "green-leaves-dense-canopy"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            7.7
+          ]
+        ]
+      },
+      {
+        "id": "o4",
+        "name": "rock",
+        "attributes": {
+          "color": [
+            "gray"
+          ],
+          "material": [
+            "rock"
+          ],
+          "texture": [
+            "rough",
+            "wet"
+          ],
+          "signature": [
+            "gray-surface-with-water-flow"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            7.7
+          ]
+        ]
+      }
+    ],
+    "relations": [
+      {
+        "subject": "o1",
+        "predicate": "above",
+        "object": "o2",
+        "spans": [
+          [
+            0.0,
+            7.7
+          ]
+        ],
+        "confidence": 0.9
+      },
+      {
+        "subject": "o3",
+        "predicate": "left-of",
+        "object": "o4",
+        "spans": [
+          [
+            0.0,
+            7.7
+          ]
+        ],
+        "confidence": 0.8
+      },
+      {
+        "subject": "o3",
+        "predicate": "right-of",
+        "object": "o4",
+        "spans": [
+          [
+            0.0,
+            7.7
+          ]
+        ],
+        "confidence": 0.8
+      },
+      {
+        "subject": "o1",
+        "predicate": "flowing-into",
+        "object": "o2",
+        "spans": [
+          [
+            0.0,
+            7.7
+          ]
+        ],
+        "confidence": 0.9
+      },
+      {
+        "subject": "o2",
+        "predicate": "reflecting",
+        "object": "o3",
+        "spans": [
+          [
+            0.0,
+            7.7
+          ]
+        ],
+        "confidence": 0.7
+      }
+    ]
+  },
+  "views": {
+    "objects_count_display": {
+      "waterfall": 1,
+      "river": 1,
+      "tree": 1,
+      "rock": 1
+    }
+  }
+}

@@ -1,0 +1,216 @@
+{
+  "summary": {
+    "items": 10,
+    "enter_bank": 7,
+    "clip_range_sec": [
+      0.0,
+      9.83
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does the liquid flow from the container into the glass without interpenetration or frame discontinuity?",
+      "signals": [
+        "continuity(liquid)",
+        "interpenetration(teapot,liquid)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(liquid)": 36.6667,
+        "interpenetration(teapot,liquid)": 7.1667
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Does the stream of liquid follow a continuous trajectory from the kettle to the tea glass, without sudden changes in direction or speed?",
+      "signals": [
+        "trajectory_dir(oV,axis)",
+        "continuity(oV)",
+        "trajectory_dir(liquid,axis)",
+        "continuity(liquid)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(oV,axis)": 38.3333,
+        "trajectory_dir(liquid,axis)": 7.6667,
+        "continuity(oV)": 7.3333,
+        "continuity(liquid)": 7.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Is there an action that poses a fire hazard near flammable objects outside?",
+      "signals": [
+        "flame_proximity(plant,dist)",
+        "hot_surface_contact(liquid,plant)"
+      ],
+      "content_score_60": 30,
+      "signal_score_40": 40.0,
+      "total_score_100": 70.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "flame_proximity(plant,dist)": 34.1667,
+        "hot_surface_contact(liquid,plant)": 6.8333
+      },
+      "content_score_raw": "30"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Does the knife maintain contact with the cake while moving in a direction consistent with slicing?",
+      "signals": [
+        "cuttable_progress(cake)",
+        "tool_contact(knife,cake)",
+        "trajectory_dir(knife,axis)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(knife,axis)": 38.3333,
+        "tool_contact(knife,cake)": 5.6667,
+        "cuttable_progress(cake)": 4.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Does the liquid flow from the container into the glass without interpenetration or frame discontinuity, and is there an action that poses a fire hazard near flammable objects outside?",
+      "signals": [
+        "continuity(liquid)",
+        "interpenetration(teapot,liquid)",
+        "flame_proximity(plant,dist)",
+        "hot_surface_contact(liquid,plant)"
+      ],
+      "content_score_60": 30,
+      "signal_score_40": 40.0,
+      "total_score_100": 70.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(liquid)": 36.6667,
+        "interpenetration(teapot,liquid)": 7.1667,
+        "flame_proximity(plant,dist)": 6.8333,
+        "hot_surface_contact(liquid,plant)": 6.8333
+      },
+      "content_score_raw": "30"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "A stream of liquid flows from the container into the glass.",
+      "signals": [
+        "continuity(liquid)",
+        "interpenetration(teapot,liquid)",
+        "trajectory_dir(oV,axis)",
+        "continuity(oV)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(oV,axis)": 38.3333,
+        "continuity(liquid)": 7.3333,
+        "continuity(oV)": 7.3333,
+        "interpenetration(teapot,liquid)": 7.1667
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "The pouring action shows a continuous trajectory without sudden changes.",
+      "signals": [
+        "trajectory_dir(liquid,axis)",
+        "continuity(liquid)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(liquid,axis)": 38.3333,
+        "continuity(liquid)": 7.3333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "Hot liquid is poured near outdoor plants, posing a fire risk.",
+      "signals": [
+        "flame_proximity(plant,dist)",
+        "hot_surface_contact(liquid,plant)"
+      ],
+      "content_score_60": 30,
+      "signal_score_40": 40.0,
+      "total_score_100": 70.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "flame_proximity(plant,dist)": 34.1667,
+        "hot_surface_contact(liquid,plant)": 6.8333
+      },
+      "content_score_raw": "30"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "The liquid flows smoothly from the container into the glass without interpenetration.",
+      "signals": [
+        "continuity(liquid)",
+        "interpenetration(teapot,liquid)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(liquid)": 36.6667,
+        "interpenetration(teapot,liquid)": 7.1667
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "Outdoor plants are visible in the background near the pouring action.",
+      "signals": [
+        "flame_proximity(plant,dist)",
+        "hot_surface_contact(liquid,plant)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "flame_proximity(plant,dist)": 34.1667,
+        "hot_surface_contact(liquid,plant)": 6.8333
+      },
+      "content_score_raw": "60"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v4",
+    "a1",
+    "a2",
+    "a4",
+    "a5"
+  ]
+}

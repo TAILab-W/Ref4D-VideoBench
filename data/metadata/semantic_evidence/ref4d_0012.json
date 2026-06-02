@@ -1,0 +1,178 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0012.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "cv2",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "koala",
+        "attributes": {
+          "color": [
+            "gray"
+          ],
+          "pattern": [
+            "furry"
+          ],
+          "texture": [
+            "soft"
+          ],
+          "size": [
+            "medium"
+          ],
+          "age": [
+            "adult"
+          ],
+          "sex": [
+            "male"
+          ],
+          "state": [
+            "resting"
+          ],
+          "pose": [
+            "hanging"
+          ],
+          "action": [
+            "eating"
+          ],
+          "orientation": [
+            "back-facing-left"
+          ],
+          "position": [
+            "left-side-of-tree"
+          ],
+          "signature": [
+            "gray-fur-back-facing-left"
+          ]
+        },
+        "spans": [
+          [
+            0.2,
+            6.1
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "koala",
+        "attributes": {
+          "color": [
+            "gray"
+          ],
+          "pattern": [
+            "furry"
+          ],
+          "texture": [
+            "soft"
+          ],
+          "size": [
+            "medium"
+          ],
+          "age": [
+            "adult"
+          ],
+          "sex": [
+            "female"
+          ],
+          "state": [
+            "resting"
+          ],
+          "pose": [
+            "sitting"
+          ],
+          "action": [
+            "grooming"
+          ],
+          "orientation": [
+            "front-facing-right"
+          ],
+          "position": [
+            "right-side-of-tree"
+          ],
+          "signature": [
+            "gray-fur-front-facing-right"
+          ]
+        },
+        "spans": [
+          [
+            0.5,
+            6.1
+          ]
+        ]
+      }
+    ],
+    "relations": [
+      {
+        "subject": "o1",
+        "predicate": "eating",
+        "object": "o1",
+        "spans": [
+          [
+            0.2,
+            6.1
+          ]
+        ],
+        "confidence": 0.8
+      },
+      {
+        "subject": "o2",
+        "predicate": "grooming",
+        "object": "o2",
+        "spans": [
+          [
+            0.5,
+            6.1
+          ]
+        ],
+        "confidence": 0.8
+      },
+      {
+        "subject": "o2",
+        "predicate": "touching",
+        "object": "o1",
+        "spans": [
+          [
+            0.3,
+            6.1
+          ]
+        ],
+        "confidence": 0.8
+      },
+      {
+        "subject": "o1",
+        "predicate": "left-of",
+        "object": "o2",
+        "spans": [
+          [
+            0.2,
+            6.1
+          ]
+        ],
+        "confidence": 0.8
+      },
+      {
+        "subject": "o2",
+        "predicate": "above",
+        "object": "o1",
+        "spans": [
+          [
+            0.4,
+            6.1
+          ]
+        ],
+        "confidence": 0.8
+      }
+    ]
+  },
+  "views": {
+    "objects_count_display": {
+      "koala": 2
+    }
+  }
+}

@@ -1,0 +1,225 @@
+{
+  "summary": {
+    "items": 10,
+    "enter_bank": 10,
+    "clip_range_sec": [
+      0.0,
+      5.3
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Across the clip, do the trees and mountains maintain consistent size and position relative to each other?",
+      "signals": [
+        "continuity(oX)",
+        "tilt_angle_threshold(oX,deg)",
+        "continuity(trees)",
+        "continuity(mountains)",
+        "size_inconsistency(trees)",
+        "size_inconsistency(mountains)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "size_inconsistency(trees)": 37.5,
+        "size_inconsistency(mountains)": 7.5,
+        "continuity(oX)": 7.3333,
+        "continuity(trees)": 7.3333,
+        "continuity(mountains)": 7.3333,
+        "tilt_angle_threshold(oX,deg)": 7.1667
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Does the train follow a safe trajectory along the railway track without collision with any objects?",
+      "signals": [
+        "interpenetration(oA,oB)",
+        "frame_discontinuity(t)",
+        "collision(oA,oB)",
+        "trajectory_dir(oX,axis)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "frame_discontinuity(t)": 40.0,
+        "trajectory_dir(oX,axis)": 7.6667,
+        "interpenetration(oA,oB)": 7.1667,
+        "collision(oA,oB)": 6.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Do the train cars exhibit smooth rolling without sudden acceleration or deceleration?",
+      "signals": [
+        "wheel_rolling(train)",
+        "accel_sign(train,axis:horizontal)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "accel_sign(train,axis:horizontal)": 35.0,
+        "wheel_rolling(train)": 6.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Are the shadows cast by the trees consistently aligned with the light source direction?",
+      "signals": [
+        "shadow_consistency(trees)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 36.67,
+      "total_score_100": 86.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "shadow_consistency(trees)": 36.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Is the train operating within a natural landscape without signs of collision or derailment?",
+      "signals": [
+        "collision(train,environment)",
+        "fracture(track)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 38.0,
+      "total_score_100": 88.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "collision(train,environment)": 31.6667,
+        "fracture(track)": 6.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "The train's wheels maintain consistent contact with the tracks without interpenetration.",
+      "signals": [
+        "interpenetration(oA,oB)",
+        "frame_discontinuity(t)",
+        "continuity(oX)",
+        "tilt_angle_threshold(oX,deg)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "frame_discontinuity(t)": 40.0,
+        "continuity(oX)": 7.3333,
+        "interpenetration(oA,oB)": 7.1667,
+        "tilt_angle_threshold(oX,deg)": 7.1667
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "The trees and mountains remain in a fixed position relative to each other as the train moves smoothly.",
+      "signals": [
+        "continuity(trees)",
+        "continuity(mountains)",
+        "size_inconsistency(trees)",
+        "size_inconsistency(mountains)",
+        "wheel_rolling(train)",
+        "accel_sign(train,axis:horizontal)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "size_inconsistency(trees)": 37.5,
+        "size_inconsistency(mountains)": 7.5,
+        "continuity(trees)": 7.3333,
+        "continuity(mountains)": 7.3333,
+        "accel_sign(train,axis:horizontal)": 7.0,
+        "wheel_rolling(train)": 6.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "The train follows the railway track, avoiding any collisions or unexpected direction changes.",
+      "signals": [
+        "collision(oA,oB)",
+        "trajectory_dir(oX,axis)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(oX,axis)": 38.3333,
+        "collision(oA,oB)": 6.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "The trees and mountains exhibit continuity, with no sudden size inconsistency or tilt angle violation.",
+      "signals": [
+        "continuity(oX)",
+        "tilt_angle_threshold(oX,deg)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(oX)": 36.6667,
+        "tilt_angle_threshold(oX,deg)": 7.1667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "The shadows of the trees align consistently with the light source direction.",
+      "signals": [
+        "shadow_consistency(trees)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 36.67,
+      "total_score_100": 86.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "shadow_consistency(trees)": 36.6667
+      },
+      "content_score_raw": "50"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "v5",
+    "a1",
+    "a2",
+    "a3",
+    "a4",
+    "a5"
+  ]
+}

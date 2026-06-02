@@ -1,0 +1,229 @@
+{
+  "summary": {
+    "items": 10,
+    "enter_bank": 10,
+    "clip_range_sec": [
+      0.0,
+      19.3
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does the duck float on the water with its body supported by buoyancy, showing normal aquatic behavior?",
+      "signals": [
+        "buoyancy_float(duck,in:water)",
+        "shadow_consistency(duck)",
+        "support(duck,by:water)",
+        "biological_motion(duck)",
+        "biological_motion(bird)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "biological_motion(duck)": 38.3333,
+        "biological_motion(bird)": 7.6667,
+        "shadow_consistency(duck)": 7.3333,
+        "support(duck,by:water)": 7.0,
+        "buoyancy_float(duck,in:water)": 6.8333
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Does the vegetation around the duck show natural continuity and consistent light reflection in the pond's water surface?",
+      "signals": [
+        "continuity(vegetation)",
+        "frame_discontinuity(t)",
+        "material_optics(water)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "frame_discontinuity(t)": 40.0,
+        "material_optics(water)": 7.5,
+        "continuity(vegetation)": 7.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Does the duck move smoothly on the water without colliding with any other objects or interpenetrating them?",
+      "signals": [
+        "collision(duck,log)",
+        "interpenetration(duck,log)",
+        "collision(oA,oB)",
+        "interpenetration(oA,oB)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "interpenetration(duck,log)": 35.8333,
+        "interpenetration(oA,oB)": 7.1667,
+        "collision(duck,log)": 6.3333,
+        "collision(oA,oB)": 6.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Does the bird perched on the log maintain continuous support without collision or disappearance throughout the clip?",
+      "signals": [
+        "support(bird,log)",
+        "containment(log,bird)",
+        "continuity(duck)",
+        "continuity(bird)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(duck)": 36.6667,
+        "continuity(bird)": 7.3333,
+        "support(bird,log)": 7.0,
+        "containment(log,bird)": 5.8333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Do the green plants in the foreground exhibit natural growth patterns and remain continuous across the scene?",
+      "signals": [
+        "continuity(plants)",
+        "size_inconsistency(plants)",
+        "frame_discontinuity(t)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "frame_discontinuity(t)": 40.0,
+        "size_inconsistency(plants)": 7.5,
+        "continuity(plants)": 7.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "Green plants in the foreground show natural growth and continuity without sudden size inconsistency.",
+      "signals": [
+        "continuity(plants)",
+        "size_inconsistency(plants)",
+        "frame_discontinuity(t)",
+        "continuity(vegetation)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "frame_discontinuity(t)": 40.0,
+        "size_inconsistency(plants)": 7.5,
+        "continuity(plants)": 7.3333,
+        "continuity(vegetation)": 7.3333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "The duck exhibits biological motion consistent with its species, showing normal aquatic behavior.",
+      "signals": [
+        "biological_motion(duck)",
+        "biological_motion(bird)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "biological_motion(duck)": 38.3333,
+        "biological_motion(bird)": 7.6667
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "The duck floats on water without collision or interpenetration with other objects.",
+      "signals": [
+        "collision(oA,oB)",
+        "interpenetration(oA,oB)",
+        "collision(duck,log)",
+        "interpenetration(duck,log)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "interpenetration(oA,oB)": 35.8333,
+        "interpenetration(duck,log)": 7.1667,
+        "collision(oA,oB)": 6.3333,
+        "collision(duck,log)": 6.3333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "The bird perched on the log shows continuous support without interpenetration or collision with the log.",
+      "signals": [
+        "support(bird,log)",
+        "containment(log,bird)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "support(bird,log)": 35.0,
+        "containment(log,bird)": 5.8333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "The water surface reflects light consistently, showing continuity in material optics.",
+      "signals": [
+        "material_optics(water)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 37.5,
+      "total_score_100": 97.5,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "material_optics(water)": 37.5
+      },
+      "content_score_raw": "60"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "v5",
+    "a1",
+    "a2",
+    "a3",
+    "a4",
+    "a5"
+  ]
+}

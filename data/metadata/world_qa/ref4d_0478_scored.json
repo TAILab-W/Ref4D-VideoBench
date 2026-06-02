@@ -1,0 +1,197 @@
+{
+  "summary": {
+    "items": 10,
+    "enter_bank": 8,
+    "clip_range_sec": [
+      0.0,
+      5.37
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does the mat provide traction for movement?",
+      "signals": [
+        "friction_sliding(foot,on:mat)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 30.0,
+      "total_score_100": 85.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "friction_sliding(foot,on:mat)": 30.0
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Do both participants maintain balance on the mat?",
+      "signals": [
+        "balance(participant)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 35.83,
+      "total_score_100": 85.83,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "balance(participant)": 35.8333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Does the kicking leg follow a continuous trajectory?",
+      "signals": [
+        "trajectory_dir(kicking_leg,axis)",
+        "continuity(kicking_leg)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(kicking_leg,axis)": 38.3333,
+        "continuity(kicking_leg)": 7.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Does one participant use their arm to block an opponent's kick?",
+      "signals": [
+        "tool_contact(blocking_arm,kicking_leg)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 28.33,
+      "total_score_100": 78.33,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "tool_contact(blocking_arm,kicking_leg)": 28.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Are gloves worn by any of the sparring individuals?",
+      "signals": [
+        "collision(gloves)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 31.67,
+      "total_score_100": 86.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "collision(gloves)": 31.6667
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "The person in the red belt is lifted off the mat, showing balance change.",
+      "signals": [
+        "deformation(lower_body)",
+        "balance(lower_body)",
+        "balance(participant)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "deformation(lower_body)": 40.0,
+        "balance(lower_body)": 7.1667,
+        "balance(participant)": 7.1667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "The kicking leg follows a continuous trajectory towards the opponent's body.",
+      "signals": [
+        "trajectory_dir(kicking_leg,axis)",
+        "continuity(kicking_leg)",
+        "collision(gloves)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(kicking_leg,axis)": 38.3333,
+        "continuity(kicking_leg)": 7.3333,
+        "collision(gloves)": 6.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "Both participants stand on a blue and red martial arts mat.",
+      "signals": [
+        "friction_sliding(foot,on:mat)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 30.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "friction_sliding(foot,on:mat)": 30.0
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "The opponent's body remains balanced on the mat during the kick.",
+      "signals": [
+        "trajectory_dir(kick,axis)",
+        "continuity(kick)",
+        "balance(participant)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(kick,axis)": 38.3333,
+        "continuity(kick)": 7.3333,
+        "balance(participant)": 7.1667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "The person in the blue belt uses their arm to block the kicking leg.",
+      "signals": [
+        "tool_contact(blocking_arm,kicking_leg)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 28.33,
+      "total_score_100": 78.33,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "tool_contact(blocking_arm,kicking_leg)": 28.3333
+      },
+      "content_score_raw": "50"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v5",
+    "a1",
+    "a2",
+    "a3",
+    "a4"
+  ]
+}

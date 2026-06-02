@@ -1,0 +1,200 @@
+{
+  "summary": {
+    "items": 10,
+    "enter_bank": 9,
+    "clip_range_sec": [
+      0.0,
+      5.63
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does the knife make a cuttable progress on the bread?",
+      "signals": [
+        "cuttable_progress(oObj)",
+        "grasp_stability"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 33.0,
+      "total_score_100": 88.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "grasp_stability": 28.3333,
+        "cuttable_progress(oObj)": 4.6667
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Is the person's hand holding the bread away from the moving knife blade?",
+      "signals": [
+        "blade_orientation_away",
+        "grasp_stability"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 34.83,
+      "total_score_100": 84.83,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "blade_orientation_away": 29.1667,
+        "grasp_stability": 5.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Do the cutting board and food have matching material optics where they contact each other?",
+      "signals": [
+        "material_optics",
+        "support"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "material_optics": 37.5,
+        "support": 7.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "As the slices fall, do their trajectories align with the expected downward motion of slicing?",
+      "signals": [
+        "trajectory_dir",
+        "cuttable_progress"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir": 38.3333,
+        "cuttable_progress": 4.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Does the cheese show progressive deformation as the knife cuts through it?",
+      "signals": [
+        "deformation",
+        "cuttable_progress"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "deformation": 40.0,
+        "cuttable_progress": 4.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "The knife makes a cuttable progress on the food.",
+      "signals": [
+        "cuttable_progress(oObj)",
+        "grasp_stability"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 33.0,
+      "total_score_100": 93.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "grasp_stability": 28.3333,
+        "cuttable_progress(oObj)": 4.6667
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "The blade orientation away from the hand is ensured.",
+      "signals": [
+        "blade_orientation_away"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 29.17,
+      "total_score_100": 79.17,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "blade_orientation_away": 29.1667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "The bread and cutting board match in material optics, providing stable support.",
+      "signals": [
+        "material_optics",
+        "support"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "material_optics": 37.5,
+        "support": 7.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "Sliced pieces move forward with expected cutting motion trajectory.",
+      "signals": [
+        "trajectory_dir"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 38.33,
+      "total_score_100": 88.33,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir": 38.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "The person's hand holding the bread maintains stability without contact with the moving knife blade.",
+      "signals": [
+        "grasp_stability",
+        "blade_orientation_away"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 34.83,
+      "total_score_100": 94.83,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "blade_orientation_away": 29.1667,
+        "grasp_stability": 5.6667
+      },
+      "content_score_raw": "60"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "v5",
+    "a1",
+    "a3",
+    "a4",
+    "a5"
+  ]
+}

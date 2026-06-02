@@ -1,0 +1,139 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0287.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "cv2",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "machine",
+        "attributes": {
+          "color": [
+            "blue",
+            "silver"
+          ],
+          "material": [
+            "metal"
+          ],
+          "equipment": [
+            "packaging-machine"
+          ],
+          "signature": [
+            "honetop-machinery-metallic-silver-and-blue-pipes"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            15.2
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "bag",
+        "attributes": {
+          "color": [
+            "silver"
+          ],
+          "material": [
+            "plastic"
+          ],
+          "texture": [
+            "smooth"
+          ],
+          "state": [
+            "being-processed"
+          ],
+          "action": [
+            "being-filled",
+            "being-sealed"
+          ],
+          "orientation": [
+            "vertical"
+          ],
+          "facing-direction": [
+            "downward"
+          ],
+          "position": [
+            "centered-under-machine-arm"
+          ],
+          "shape": [
+            "rectangular"
+          ],
+          "signature": [
+            "silver-plastic-bag-with-blue-hose-attached"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            15.2
+          ]
+        ]
+      }
+    ],
+    "relations": [
+      {
+        "subject": "o1",
+        "predicate": "left-of",
+        "object": "o2",
+        "spans": [
+          [
+            0.0,
+            15.2
+          ]
+        ],
+        "confidence": 0.8
+      },
+      {
+        "subject": "o1",
+        "predicate": "above",
+        "object": "o2",
+        "spans": [
+          [
+            0.0,
+            15.2
+          ]
+        ],
+        "confidence": 0.8
+      },
+      {
+        "subject": "o1",
+        "predicate": "touching",
+        "object": "o2",
+        "spans": [
+          [
+            0.0,
+            15.2
+          ]
+        ],
+        "confidence": 0.8
+      },
+      {
+        "subject": "o2",
+        "predicate": "part-of",
+        "object": "o1",
+        "spans": [
+          [
+            0.0,
+            15.2
+          ]
+        ],
+        "confidence": 0.7
+      }
+    ]
+  },
+  "views": {
+    "objects_count_display": {
+      "machine": 1,
+      "bag": 1
+    }
+  }
+}

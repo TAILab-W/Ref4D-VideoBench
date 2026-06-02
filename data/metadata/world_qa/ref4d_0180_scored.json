@@ -1,0 +1,199 @@
+{
+  "summary": {
+    "items": 10,
+    "enter_bank": 10,
+    "clip_range_sec": [
+      0.0,
+      9.0
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does the text 'INFO PEMESIAN: WhatsApp 0856-4036-7433' remain in its designated position above the person's head without size inconsistency or frame discontinuity?",
+      "signals": [
+        "size_inconsistency(oX)",
+        "frame_discontinuity(t)"
+      ],
+      "content_score_60": 58,
+      "signal_score_40": 40.0,
+      "total_score_100": 98.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "frame_discontinuity(t)": 40.0,
+        "size_inconsistency(oX)": 7.5
+      },
+      "content_score_raw": "58"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Does the gun stay supported by the person's hands without interpenetration or collision between the weapon and their grasp?",
+      "signals": [
+        "interpenetration(oA,oB)",
+        "collision(oA,oB)"
+      ],
+      "content_score_60": 58,
+      "signal_score_40": 40.0,
+      "total_score_100": 98.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "interpenetration(oA,oB)": 35.8333,
+        "collision(oA,oB)": 6.3333
+      },
+      "content_score_raw": "58"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Is the firearm pointed away from any people, including the holder themselves?",
+      "signals": [
+        "prohibited_intersection(unsafe direction,firearm)"
+      ],
+      "content_score_60": 58,
+      "signal_score_40": 36.67,
+      "total_score_100": 94.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "prohibited_intersection(unsafe direction,firearm)": 36.6667
+      },
+      "content_score_raw": "58"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Does the rifle appear as a single, continuous object without visible disintegration or frame discontinuity throughout the clip?",
+      "signals": [
+        "continuity(rifle)"
+      ],
+      "content_score_60": 58,
+      "signal_score_40": 36.67,
+      "total_score_100": 94.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(rifle)": 36.6667
+      },
+      "content_score_raw": "58"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Does the person maintain a safe grip on the rifle handle with no slip occurring between their hand and the gun?",
+      "signals": [
+        "slip(oA,on:oB)",
+        "grasp_stability(hand,rifle handle)"
+      ],
+      "content_score_60": 58,
+      "signal_score_40": 33.83,
+      "total_score_100": 91.83,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "grasp_stability(hand,rifle handle)": 28.3333,
+        "slip(oA,on:oB)": 5.5
+      },
+      "content_score_raw": "58"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "The text \"INFO PEMESIAN: WhatsApp 0856-4036-7433\" stays above the person's head.",
+      "signals": [
+        "frame_discontinuity(t)",
+        "size_inconsistency(oX)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "frame_discontinuity(t)": 40.0,
+        "size_inconsistency(oX)": 7.5
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "The red and black rifle is held by the person without hand collision or interpenetration.",
+      "signals": [
+        "interpenetration(oA,oB)",
+        "collision(oA,oB)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "interpenetration(oA,oB)": 35.8333,
+        "collision(oA,oB)": 6.3333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "The firearm does not point in an unsafe direction.",
+      "signals": [
+        "prohibited_intersection(unsafe direction,firearm)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 36.67,
+      "total_score_100": 96.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "prohibited_intersection(unsafe direction,firearm)": 36.6667
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "The person maintains a safe grip on the rifle, preventing any slip between hand and gun.",
+      "signals": [
+        "interpenetration(oA,oB)",
+        "collision(oA,oB)",
+        "slip(oA,on:oB)"
+      ],
+      "content_score_60": 58,
+      "signal_score_40": 40.0,
+      "total_score_100": 98.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "interpenetration(oA,oB)": 35.8333,
+        "collision(oA,oB)": 6.3333,
+        "slip(oA,on:oB)": 5.5
+      },
+      "content_score_raw": "58"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "The rifle remains a single continuous object without frame discontinuity.",
+      "signals": [
+        "continuity(rifle)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 36.67,
+      "total_score_100": 96.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(rifle)": 36.6667
+      },
+      "content_score_raw": "60"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "v5",
+    "a1",
+    "a2",
+    "a3",
+    "a4",
+    "a5"
+  ]
+}

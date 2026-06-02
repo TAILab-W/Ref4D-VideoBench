@@ -1,0 +1,217 @@
+{
+  "summary": {
+    "items": 10,
+    "enter_bank": 10,
+    "clip_range_sec": [
+      0.0,
+      6.1
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does Jaylen Green maintain balance while approaching the rim without falling?",
+      "signals": [
+        "trajectory_dir(jaylen-green,axis)",
+        "accel_sign(jaylen-green,axis)",
+        "collision(defender,jaylen-green)",
+        "balance(jaylen-green)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(jaylen-green,axis)": 38.3333,
+        "balance(jaylen-green)": 7.1667,
+        "accel_sign(jaylen-green,axis)": 7.0,
+        "collision(defender,jaylen-green)": 6.3333
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Does the basketball follow a smooth trajectory towards the basket during his jump?",
+      "signals": [
+        "trajectory_dir(oX,axis)",
+        "accel_sign(oX,axis)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(oX,axis)": 38.3333,
+        "accel_sign(oX,axis)": 7.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Does the defender in blue run at a speed consistent with typical human movement for reaching and blocking?",
+      "signals": [
+        "biological_motion(oA)"
+      ],
+      "content_score_60": 45,
+      "signal_score_40": 38.33,
+      "total_score_100": 83.33,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "biological_motion(oA)": 38.3333
+      },
+      "content_score_raw": "45"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Are all players within the court boundaries throughout the clip?",
+      "signals": [
+        "prohibited_intersection(oA,oB)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 36.67,
+      "total_score_100": 91.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "prohibited_intersection(oA,oB)": 36.6667
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Does Jaylen Green avoid contact with the defender while climbing to the rim?",
+      "signals": [
+        "trajectory_dir(jaylen-green,axis)",
+        "accel_sign(jaylen-green,axis)",
+        "collision(defender,jaylen-green)",
+        "prohibited_intersection(oA,oB)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(jaylen-green,axis)": 38.3333,
+        "prohibited_intersection(oA,oB)": 7.3333,
+        "accel_sign(jaylen-green,axis)": 7.0,
+        "collision(defender,jaylen-green)": 6.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "Jaylen Green jumps towards the basket while avoiding collision with a defender in red.",
+      "signals": [
+        "trajectory_dir(jaylen-green,axis)",
+        "accel_sign(jaylen-green,axis)",
+        "collision(defender,jaylen-green)",
+        "biological_motion(oA)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(jaylen-green,axis)": 38.3333,
+        "biological_motion(oA)": 7.6667,
+        "accel_sign(jaylen-green,axis)": 7.0,
+        "collision(defender,jaylen-green)": 6.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "Jaylen Green maintains balance during his jump, reaching for the ball mid-air.",
+      "signals": [
+        "trajectory_dir(jaylen-green,axis)",
+        "balance(jaylen-green)",
+        "biological_motion(oA)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(jaylen-green,axis)": 38.3333,
+        "biological_motion(oA)": 7.6667,
+        "balance(jaylen-green)": 7.1667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "The basketball follows a consistent trajectory as it is passed to Jaylen Green.",
+      "signals": [
+        "trajectory_dir(oX,axis)",
+        "accel_sign(oX,axis)"
+      ],
+      "content_score_60": 40,
+      "signal_score_40": 40.0,
+      "total_score_100": 80.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(oX,axis)": 38.3333,
+        "accel_sign(oX,axis)": 7.0
+      },
+      "content_score_raw": "40"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "All players and objects remain within the court boundaries.",
+      "signals": [
+        "prohibited_intersection(oA,oB)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 36.67,
+      "total_score_100": 86.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "prohibited_intersection(oA,oB)": 36.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "Jaylen Green's jump is consistent with typical basketball player biomechanics.",
+      "signals": [
+        "trajectory_dir(jaylen-green,axis)",
+        "accel_sign(jaylen-green,axis)",
+        "collision(defender,jaylen-green)",
+        "biological_motion(oA)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(jaylen-green,axis)": 38.3333,
+        "biological_motion(oA)": 7.6667,
+        "accel_sign(jaylen-green,axis)": 7.0,
+        "collision(defender,jaylen-green)": 6.3333
+      },
+      "content_score_raw": "50"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "v5",
+    "a1",
+    "a2",
+    "a3",
+    "a4",
+    "a5"
+  ]
+}

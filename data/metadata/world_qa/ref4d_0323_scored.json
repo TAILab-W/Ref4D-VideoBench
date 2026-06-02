@@ -1,0 +1,221 @@
+{
+  "summary": {
+    "items": 10,
+    "enter_bank": 10,
+    "clip_range_sec": [
+      0.0,
+      8.13
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Do boats on the lake float without falling into the water?",
+      "signals": [
+        "slosh_response(water,amp)",
+        "buoyancy_float(boat,in:water)",
+        "falling_hazard(boat)",
+        "falling_hazard(shore)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "slosh_response(water,amp)": 34.1667,
+        "buoyancy_float(boat,in:water)": 6.8333,
+        "falling_hazard(boat)": 6.3333,
+        "falling_hazard(shore)": 6.3333
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Are trees and mountains in the background stationary relative to each other?",
+      "signals": [
+        "rigid_transform(mountain)",
+        "material_optics(mountain)",
+        "continuity"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "rigid_transform(mountain)": 37.5,
+        "material_optics(mountain)": 7.5,
+        "continuity": 7.3333
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Does water exhibit natural slosh response due to wind or boat movement, keeping boats buoyant?",
+      "signals": [
+        "slosh_response",
+        "buoyancy_float"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "slosh_response": 34.1667,
+        "buoyancy_float": 6.8333
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Do clouds move consistently across the sky with a clear trajectory?",
+      "signals": [
+        "support(tree,by:land)",
+        "continuity(tree)",
+        "deformation(tree)",
+        "interpenetration(tree,tree)",
+        "trajectory_dir"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "deformation(tree)": 40.0,
+        "trajectory_dir": 7.6667,
+        "continuity(tree)": 7.3333,
+        "interpenetration(tree,tree)": 7.1667,
+        "support(tree,by:land)": 7.0
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Do clouds change shape while maintaining their general form?",
+      "signals": [
+        "trajectory_dir"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 38.33,
+      "total_score_100": 93.33,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir": 38.3333
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "The water shows natural slosh response to wind and boat movement.",
+      "signals": [
+        "slosh_response(water,amp)",
+        "buoyancy_float(boat,in:water)",
+        "slosh_response"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "slosh_response(water,amp)": 34.1667,
+        "buoyancy_float(boat,in:water)": 6.8333,
+        "slosh_response": 6.8333
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "Trees on land maintain support from their base and remain stationary relative to hills.",
+      "signals": [
+        "support(tree,by:land)",
+        "continuity(tree)",
+        "deformation(tree)",
+        "interpenetration(tree,tree)",
+        "continuity"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "deformation(tree)": 40.0,
+        "continuity(tree)": 7.3333,
+        "continuity": 7.3333,
+        "interpenetration(tree,tree)": 7.1667,
+        "support(tree,by:land)": 7.0
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "Mountains in the background remain static without material optics inconsistency.",
+      "signals": [
+        "rigid_transform(mountain)",
+        "material_optics(mountain)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "rigid_transform(mountain)": 37.5,
+        "material_optics(mountain)": 7.5
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "Clouds move naturally with consistent trajectory direction across the sky.",
+      "signals": [
+        "trajectory_dir"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 38.33,
+      "total_score_100": 93.33,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir": 38.3333
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "There is no falling hazard near the shore or boats visible in the scene.",
+      "signals": [
+        "falling_hazard(boat)",
+        "falling_hazard(shore)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 38.0,
+      "total_score_100": 93.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "falling_hazard(boat)": 31.6667,
+        "falling_hazard(shore)": 6.3333
+      },
+      "content_score_raw": "55"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "v5",
+    "a1",
+    "a2",
+    "a3",
+    "a4",
+    "a5"
+  ]
+}

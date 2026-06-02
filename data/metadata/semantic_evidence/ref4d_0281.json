@@ -1,0 +1,69 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0281.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "cv2",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "watermelon_popsicle",
+        "attributes": {
+          "color": [
+            "green",
+            "red"
+          ],
+          "signature": [
+            "red-green-top-bottom"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            11.5
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "machine_part",
+        "attributes": {
+          "signature": [
+            "blue_cable"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            11.5
+          ]
+        ]
+      }
+    ],
+    "relations": [
+      {
+        "subject": "o1",
+        "predicate": "on",
+        "object": "o2",
+        "spans": [
+          [
+            0.0,
+            11.5
+          ]
+        ],
+        "confidence": 0.9
+      }
+    ]
+  },
+  "views": {
+    "objects_count_display": {
+      "watermelon_popsicle": 1,
+      "machine_part": 1
+    }
+  }
+}

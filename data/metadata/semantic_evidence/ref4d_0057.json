@@ -1,0 +1,74 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0057.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "cv2",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "cat",
+        "attributes": {
+          "color": [
+            "beige",
+            "black"
+          ],
+          "pattern": [
+            "spotted"
+          ],
+          "texture": [
+            "short-furred"
+          ],
+          "action": [
+            "licking-mouth",
+            "looking-around"
+          ],
+          "signature": [
+            "large-eared-spotted-coat-front-facing"
+          ]
+        },
+        "spans": [
+          [
+            0.1,
+            2.9
+          ],
+          [
+            3.4,
+            6.5
+          ],
+          [
+            7.8,
+            13.0
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "tiger",
+        "attributes": {
+          "signature": [
+            "tiger-coarse"
+          ]
+        },
+        "spans": [
+          [
+            13.0,
+            14.4
+          ]
+        ]
+      }
+    ],
+    "relations": []
+  },
+  "views": {
+    "objects_count_display": {
+      "cat": 1,
+      "tiger": 1
+    }
+  }
+}

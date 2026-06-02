@@ -1,0 +1,162 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0008.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "cv2",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "monkey",
+        "attributes": {
+          "color": [
+            "brown",
+            "light-belly"
+          ],
+          "size": [
+            "medium"
+          ],
+          "age": [
+            "adult"
+          ],
+          "sex": [
+            "male"
+          ],
+          "state": [
+            "alert"
+          ],
+          "pose": [
+            "sitting"
+          ],
+          "action": [
+            "holding-branch",
+            "looking-around"
+          ],
+          "orientation": [
+            "facing-right"
+          ],
+          "facing-direction": [
+            "right"
+          ],
+          "position": [
+            "on-branch"
+          ],
+          "object-part": [
+            "arms",
+            "body",
+            "legs"
+          ],
+          "species-or-breed": [
+            "monkey"
+          ],
+          "signature": [
+            "brown-fur-light-belly"
+          ]
+        },
+        "spans": [
+          [
+            0.2,
+            5.8
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "monkey",
+        "attributes": {
+          "color": [
+            "brown"
+          ],
+          "size": [
+            "small"
+          ],
+          "age": [
+            "juvenile"
+          ],
+          "state": [
+            "attached"
+          ],
+          "pose": [
+            "clinging"
+          ],
+          "action": [
+            "resting"
+          ],
+          "orientation": [
+            "facing-left"
+          ],
+          "facing-direction": [
+            "left"
+          ],
+          "position": [
+            "behind-e1"
+          ],
+          "object-part": [
+            "arms",
+            "body"
+          ],
+          "species-or-breed": [
+            "monkey"
+          ],
+          "signature": [
+            "smaller-brown-fur"
+          ]
+        },
+        "spans": [
+          [
+            0.4,
+            5.8
+          ]
+        ]
+      }
+    ],
+    "relations": [
+      {
+        "subject": "o1",
+        "predicate": "looking-at",
+        "object": "o2",
+        "spans": [
+          [
+            0.3,
+            5.7
+          ]
+        ],
+        "confidence": 0.8
+      },
+      {
+        "subject": "o2",
+        "predicate": "attached-to",
+        "object": "o1",
+        "spans": [
+          [
+            0.4,
+            5.8
+          ]
+        ],
+        "confidence": 0.9
+      },
+      {
+        "subject": "o2",
+        "predicate": "resting-on",
+        "object": "o1",
+        "spans": [
+          [
+            0.4,
+            5.8
+          ]
+        ],
+        "confidence": 0.8
+      }
+    ]
+  },
+  "views": {
+    "objects_count_display": {
+      "monkey": 2
+    }
+  }
+}

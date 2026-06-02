@@ -1,0 +1,192 @@
+{
+  "summary": {
+    "items": 10,
+    "enter_bank": 9,
+    "clip_range_sec": [
+      0.0,
+      7.87
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does the road curve to the left?",
+      "signals": [
+        "trajectory_dir(oX,axis)",
+        "balance(oX)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(oX,axis)": 38.3333,
+        "balance(oX)": 7.1667
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Are the mountains green and covered with vegetation?",
+      "signals": [
+        "continuity(mountain slope)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 36.67,
+      "total_score_100": 86.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(mountain slope)": 36.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Is the guardrail along the edge of the cliff?",
+      "signals": [
+        "material_optics(road surface)",
+        "shadow_consistency(road surface)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "material_optics(road surface)": 37.5,
+        "shadow_consistency(road surface)": 7.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Do vehicles on the empty road follow a consistent trajectory direction?",
+      "signals": [
+        "support(guardrail,cliff edge)"
+      ],
+      "content_score_60": 0,
+      "signal_score_40": 35.0,
+      "total_score_100": 35.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "support(guardrail,cliff edge)": 35.0
+      },
+      "content_score_raw": "0"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Does the shadow under the guardrail match the lighting from above?",
+      "signals": [
+        "support(guardrail,cliff edge)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 35.0,
+      "total_score_100": 85.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "support(guardrail,cliff edge)": 35.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "The mountain slope and vegetation maintain continuity in their appearance.",
+      "signals": [
+        "continuity(mountain slope)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 36.67,
+      "total_score_100": 86.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(mountain slope)": 36.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "The road surface shows consistent material optics with no visible shadows on the guardrail.",
+      "signals": [
+        "material_optics(road surface)",
+        "shadow_consistency(road surface)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "material_optics(road surface)": 37.5,
+        "shadow_consistency(road surface)": 7.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "The guardrail is properly placed along the road edge to prevent vehicles from falling off the cliff.",
+      "signals": [
+        "support(guardrail,cliff edge)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 35.0,
+      "total_score_100": 85.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "support(guardrail,cliff edge)": 35.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "Vehicles on the road follow a consistent trajectory direction and maintain balance.",
+      "signals": [
+        "trajectory_dir(oX,axis)",
+        "balance(oX)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(oX,axis)": 38.3333,
+        "balance(oX)": 7.1667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "The guardrail is appropriately placed to prevent vehicles from falling off the cliff.",
+      "signals": [
+        "support(guardrail,cliff edge)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 35.0,
+      "total_score_100": 85.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "support(guardrail,cliff edge)": 35.0
+      },
+      "content_score_raw": "50"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v5",
+    "a1",
+    "a2",
+    "a3",
+    "a4",
+    "a5"
+  ]
+}

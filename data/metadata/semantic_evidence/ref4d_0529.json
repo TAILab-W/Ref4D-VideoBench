@@ -1,0 +1,158 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0529.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "cv2",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "car",
+        "attributes": {
+          "color": [
+            "black"
+          ],
+          "action": [
+            "driving"
+          ],
+          "position": [
+            "foreground"
+          ],
+          "signature": [
+            "black-color-front-left-corner"
+          ]
+        },
+        "spans": [
+          [
+            0.2,
+            0.4
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "car",
+        "attributes": {
+          "color": [
+            "white"
+          ],
+          "action": [
+            "parked"
+          ],
+          "position": [
+            "left"
+          ],
+          "signature": [
+            "white-color-parked-left-side"
+          ]
+        },
+        "spans": [
+          [
+            0.3,
+            0.5
+          ]
+        ]
+      },
+      {
+        "id": "o3",
+        "name": "trolleybus",
+        "attributes": {
+          "color": [
+            "brown",
+            "yellow"
+          ],
+          "action": [
+            "stationary"
+          ],
+          "position": [
+            "right"
+          ],
+          "signature": [
+            "yellow-and-brown-color-stationary"
+          ]
+        },
+        "spans": [
+          [
+            0.6,
+            0.8
+          ]
+        ]
+      },
+      {
+        "id": "o4",
+        "name": "pedestrian",
+        "attributes": {
+          "action": [
+            "walking"
+          ],
+          "position": [
+            "crosswalk"
+          ],
+          "signature": [
+            "person-walking-on-crosswalk"
+          ]
+        },
+        "spans": [
+          [
+            0.1,
+            0.2
+          ]
+        ]
+      }
+    ],
+    "relations": [
+      {
+        "subject": "o1",
+        "predicate": "in-front-of",
+        "object": "o2",
+        "spans": [
+          [
+            0.2,
+            0.5
+          ]
+        ],
+        "confidence": 0.9
+      },
+      {
+        "subject": "o2",
+        "predicate": "near",
+        "object": "o4",
+        "spans": [
+          [
+            0.1,
+            0.5
+          ]
+        ],
+        "confidence": 0.8
+      },
+      {
+        "subject": "o3",
+        "predicate": "near",
+        "object": "o4",
+        "spans": [
+          [
+            0.1,
+            0.2
+          ],
+          [
+            0.6,
+            0.8
+          ]
+        ],
+        "confidence": 0.7
+      }
+    ]
+  },
+  "views": {
+    "objects_count_display": {
+      "car": 2,
+      "trolleybus": 1,
+      "pedestrian": 1
+    }
+  }
+}

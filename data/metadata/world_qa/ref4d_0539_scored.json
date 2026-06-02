@@ -1,0 +1,194 @@
+{
+  "summary": {
+    "items": 10,
+    "enter_bank": 9,
+    "clip_range_sec": [
+      0.0,
+      6.17
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does the train follow the curved rail track?",
+      "signals": [
+        "trajectory_dir(train,rail,axis)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 38.33,
+      "total_score_100": 98.33,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(train,rail,axis)": 38.3333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Is the tree line in the background stationary relative to the moving train?",
+      "signals": [
+        "continuity(tree)"
+      ],
+      "content_score_60": 58,
+      "signal_score_40": 36.67,
+      "total_score_100": 94.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(tree)": 36.6667
+      },
+      "content_score_raw": "58"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Does the shadow of the train maintain consistency with its position and orientation on the ground?",
+      "signals": [
+        "shadow_consistency(oX)"
+      ],
+      "content_score_60": 59,
+      "signal_score_40": 36.67,
+      "total_score_100": 95.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "shadow_consistency(oX)": 36.6667
+      },
+      "content_score_raw": "59"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Do the wheels of the train roll continuously without sudden changes or interpenetration?",
+      "signals": [
+        "wheel_rolling(oX)",
+        "continuity(oX)"
+      ],
+      "content_score_60": 57,
+      "signal_score_40": 40.0,
+      "total_score_100": 97.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(oX)": 36.6667,
+        "wheel_rolling(oX)": 6.0
+      },
+      "content_score_raw": "57"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Are there no unexpected hazards such as falling objects or obstacles on the track?",
+      "signals": [
+        "falling_hazard(oObj)"
+      ],
+      "content_score_60": 56,
+      "signal_score_40": 31.67,
+      "total_score_100": 87.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "falling_hazard(oObj)": 31.6667
+      },
+      "content_score_raw": "56"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "The train follows the curved rail track, moving forward along its trajectory.",
+      "signals": [
+        "trajectory_dir(train,rail,axis)",
+        "trajectory_dir(oX,axis)",
+        "accel_sign(oX,axis)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(train,rail,axis)": 38.3333,
+        "trajectory_dir(oX,axis)": 7.6667,
+        "accel_sign(oX,axis)": 7.0
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "The tree line in the background remains stationary relative to the moving train.",
+      "signals": [
+        "continuity(tree)"
+      ],
+      "content_score_60": 35,
+      "signal_score_40": 36.67,
+      "total_score_100": 71.67,
+      "duplicate_penalized": true,
+      "signal_detail": {
+        "continuity(tree)": 36.6667
+      },
+      "content_score_raw": "58"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "The wheels of the train roll continuously on the tracks without sudden changes.",
+      "signals": [
+        "wheel_rolling(oX)",
+        "continuity(oX)"
+      ],
+      "content_score_60": 57,
+      "signal_score_40": 40.0,
+      "total_score_100": 97.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(oX)": 36.6667,
+        "wheel_rolling(oX)": 6.0
+      },
+      "content_score_raw": "57"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "Gravel surrounds the rail track, providing stability and no unexpected hazards are visible.",
+      "signals": [
+        "support(gravel,rail)",
+        "falling_hazard(oObj)"
+      ],
+      "content_score_60": 56,
+      "signal_score_40": 40.0,
+      "total_score_100": 96.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "support(gravel,rail)": 35.0,
+        "falling_hazard(oObj)": 6.3333
+      },
+      "content_score_raw": "56"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "The 'RailClinic' sign is displayed on the front of the train.",
+      "signals": [
+        "goal_placement(sign,railway)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 26.67,
+      "total_score_100": 86.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "goal_placement(sign,railway)": 26.6667
+      },
+      "content_score_raw": "60"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "v5",
+    "a1",
+    "a3",
+    "a4",
+    "a5"
+  ]
+}

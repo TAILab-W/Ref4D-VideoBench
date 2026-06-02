@@ -1,0 +1,109 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0288.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "cv2",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "tongs",
+        "attributes": {
+          "material": [
+            "metal"
+          ],
+          "color": [
+            "black"
+          ],
+          "size": [
+            "large"
+          ],
+          "signature": [
+            "metal-tongs-with-looped-handles"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            0.8
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "metal",
+        "attributes": {
+          "material": [
+            "metal"
+          ],
+          "color": [
+            "cooling-black",
+            "hot-orange",
+            "hot-yellow",
+            "orange",
+            "red"
+          ],
+          "state": [
+            "cooling",
+            "hot"
+          ],
+          "action": [
+            "being-cooled",
+            "being-hit",
+            "being-shaped"
+          ],
+          "orientation": [
+            "horizontal",
+            "vertical"
+          ],
+          "signature": [
+            "hot-orange-red-hot-yellow-orange-red-cooling-black"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            0.9
+          ]
+        ]
+      }
+    ],
+    "relations": [
+      {
+        "subject": "o1",
+        "predicate": "holding",
+        "object": "o1",
+        "spans": [
+          [
+            0.3,
+            0.4
+          ]
+        ],
+        "confidence": 0.9
+      },
+      {
+        "subject": "o2",
+        "predicate": "being-shaped-by",
+        "object": "o1",
+        "spans": [
+          [
+            0.0,
+            0.9
+          ]
+        ],
+        "confidence": 0.9
+      }
+    ]
+  },
+  "views": {
+    "objects_count_display": {
+      "tongs": 1,
+      "metal": 1
+    }
+  }
+}

@@ -1,0 +1,142 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0036.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "cv2",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "squirrel",
+        "attributes": {
+          "color": [
+            "brown"
+          ],
+          "pattern": [
+            "solid"
+          ],
+          "texture": [
+            "fluffy"
+          ],
+          "size": [
+            "small"
+          ],
+          "state": [
+            "active",
+            "alert"
+          ],
+          "pose": [
+            "climbing",
+            "perched"
+          ],
+          "action": [
+            "jumping",
+            "looking-around"
+          ],
+          "orientation": [
+            "upward"
+          ],
+          "facing-direction": [
+            "right"
+          ],
+          "signature": [
+            "brown-fur-tail-upward-facing-right"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            2.5
+          ],
+          [
+            3.8,
+            4.6
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "tree",
+        "attributes": {
+          "type": [
+            "tree"
+          ],
+          "part": [
+            "bark",
+            "branch"
+          ],
+          "signature": [
+            "bark-texture-branch"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            4.7
+          ]
+        ]
+      }
+    ],
+    "relations": [
+      {
+        "subject": "o1",
+        "predicate": "looking-at",
+        "object": "o1",
+        "spans": [
+          [
+            0.0,
+            2.5
+          ]
+        ],
+        "confidence": 0.8
+      },
+      {
+        "subject": "o1",
+        "predicate": "climbing-on",
+        "object": "o2",
+        "spans": [
+          [
+            3.4,
+            4.6
+          ]
+        ],
+        "confidence": 0.9
+      },
+      {
+        "subject": "o1",
+        "predicate": "position-relative-to",
+        "object": "o2",
+        "spans": [
+          [
+            0.0,
+            4.7
+          ]
+        ],
+        "confidence": 0.9
+      },
+      {
+        "subject": "o1",
+        "predicate": "on",
+        "object": "o2",
+        "spans": [
+          [
+            0.0,
+            4.7
+          ]
+        ],
+        "confidence": 0.9
+      }
+    ]
+  },
+  "views": {
+    "objects_count_display": {
+      "squirrel": 1,
+      "tree": 1
+    }
+  }
+}

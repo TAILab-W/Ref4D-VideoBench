@@ -1,0 +1,221 @@
+{
+  "summary": {
+    "items": 10,
+    "enter_bank": 10,
+    "clip_range_sec": [
+      0.0,
+      7.73
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does the water flow naturally towards the shore and reflect sunlight consistently?",
+      "signals": [
+        "continuity(water)",
+        "buoyancy_float(water,in:sea)",
+        "reflection_consistency(water)",
+        "buoyancy_float(water,in:ocean)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(water)": 36.6667,
+        "reflection_consistency(water)": 7.0,
+        "buoyancy_float(water,in:sea)": 6.8333,
+        "buoyancy_float(water,in:ocean)": 6.8333
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Do the footprints in the sand show continuity and natural deformation as they are stepped on, while maintaining a safe distance from sudden wave surges?",
+      "signals": [
+        "deformation(sand,from:footprint)",
+        "continuity(footprint)",
+        "falling_hazard(wave)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "deformation(sand,from:footprint)": 40.0,
+        "continuity(footprint)": 7.3333,
+        "falling_hazard(wave)": 6.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Does walking along the beach afford stable footing on wet sand?",
+      "signals": [
+        "support(foot,sand)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 35.0,
+      "total_score_100": 85.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "support(foot,sand)": 35.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Does the water reflect sunlight consistently as it flows towards the shore?",
+      "signals": [
+        "continuity(water)",
+        "buoyancy_float(water,in:sea)",
+        "reflection_consistency(water)",
+        "falling_hazard(wave)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(water)": 36.6667,
+        "reflection_consistency(water)": 7.0,
+        "buoyancy_float(water,in:sea)": 6.8333,
+        "falling_hazard(wave)": 6.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Do the footprints in the sand show natural deformation without sudden disappearance?",
+      "signals": [
+        "deformation(sand,from:footprint)",
+        "continuity(footprint)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "deformation(sand,from:footprint)": 40.0,
+        "continuity(footprint)": 7.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "Water flows towards the shore and reflects sunlight.",
+      "signals": [
+        "continuity(water)",
+        "buoyancy_float(water,in:sea)",
+        "reflection_consistency(water)",
+        "buoyancy_float(water,in:ocean)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(water)": 36.6667,
+        "reflection_consistency(water)": 7.0,
+        "buoyancy_float(water,in:sea)": 6.8333,
+        "buoyancy_float(water,in:ocean)": 6.8333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "Footprints in the sand show direction from top right to bottom left.",
+      "signals": [
+        "continuity(footprint)",
+        "friction_sliding(footprint,on:sand)",
+        "cast_shadow_contact(footprint,shadow)",
+        "deformation(sand,from:footprint)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "deformation(sand,from:footprint)": 40.0,
+        "cast_shadow_contact(footprint,shadow)": 7.5,
+        "continuity(footprint)": 7.3333,
+        "friction_sliding(footprint,on:sand)": 6.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "A person's feet are near ocean waves but maintain a safe distance from sudden surges.",
+      "signals": [
+        "falling_hazard(wave)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 31.67,
+      "total_score_100": 81.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "falling_hazard(wave)": 31.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "Walking along the beach provides stable footing on wet sand.",
+      "signals": [
+        "support(foot,sand)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 35.0,
+      "total_score_100": 85.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "support(foot,sand)": 35.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "The water's surface reflects sunlight consistently as it moves towards the shore.",
+      "signals": [
+        "continuity(water)",
+        "buoyancy_float(water,in:sea)",
+        "reflection_consistency(water)",
+        "buoyancy_float(water,in:ocean)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(water)": 36.6667,
+        "reflection_consistency(water)": 7.0,
+        "buoyancy_float(water,in:sea)": 6.8333,
+        "buoyancy_float(water,in:ocean)": 6.8333
+      },
+      "content_score_raw": "50"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "v5",
+    "a1",
+    "a2",
+    "a3",
+    "a4",
+    "a5"
+  ]
+}

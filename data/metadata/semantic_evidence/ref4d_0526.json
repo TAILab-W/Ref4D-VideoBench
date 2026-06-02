@@ -1,0 +1,84 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0526.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "cv2",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "cable_car",
+        "attributes": {
+          "signature": [
+            "red-and-black-gondola"
+          ]
+        },
+        "spans": [
+          [
+            0.1,
+            1.2
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "mountain",
+        "attributes": {
+          "signature": [
+            "green-forested-area"
+          ]
+        },
+        "spans": [
+          [
+            0.1,
+            1.2
+          ]
+        ]
+      },
+      {
+        "id": "o3",
+        "name": "cloud",
+        "attributes": {
+          "signature": [
+            "white-misty-layer"
+          ]
+        },
+        "spans": [
+          [
+            0.1,
+            1.2
+          ]
+        ]
+      },
+      {
+        "id": "o4",
+        "name": "sky",
+        "attributes": {
+          "signature": [
+            "blue-with-clouds"
+          ]
+        },
+        "spans": [
+          [
+            0.1,
+            1.2
+          ]
+        ]
+      }
+    ],
+    "relations": []
+  },
+  "views": {
+    "objects_count_display": {
+      "cable_car": 1,
+      "mountain": 1,
+      "cloud": 1,
+      "sky": 1
+    }
+  }
+}

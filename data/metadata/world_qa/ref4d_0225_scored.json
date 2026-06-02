@@ -1,0 +1,203 @@
+{
+  "summary": {
+    "items": 10,
+    "enter_bank": 8,
+    "clip_range_sec": [
+      0.0,
+      9.97
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does the person wear gloves while pouring liquid near an open flame?",
+      "signals": [
+        "hot_surface_contact(glove,surface)",
+        "grasp_stability(glove,pancake)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 39.83,
+      "total_score_100": 94.83,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "hot_surface_contact(glove,surface)": 34.1667,
+        "grasp_stability(glove,pancake)": 5.6667
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Is the fire kept at a safe distance from people in the background?",
+      "signals": [
+        "flame_proximity(person,dist)",
+        "hot_surface_contact(person,surface)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "flame_proximity(person,dist)": 34.1667,
+        "hot_surface_contact(person,surface)": 6.8333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Is the pancake placed on a plate that supports it above the fire?",
+      "signals": [
+        "support(plate,pancake)",
+        "placeable(pancake,at:plate)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "support(plate,pancake)": 35.0,
+        "placeable(pancake,at:plate)": 5.1667
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Is the spatula used to handle the pancake over the fire?",
+      "signals": [
+        "tool_usage_correct(spatula,for:pancake_task)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 29.17,
+      "total_score_100": 79.17,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "tool_usage_correct(spatula,for:pancake_task)": 29.1667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Does the stream of liquid follow a continuous trajectory when poured?",
+      "signals": [
+        "trajectory_dir(liquid,axis)",
+        "continuity(liquid)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(liquid,axis)": 38.3333,
+        "continuity(liquid)": 7.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "The person wears black gloves while pouring liquid near the open flame.",
+      "signals": [
+        "hot_surface_contact(glove,surface)",
+        "grasp_stability(glove,pancake)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 39.83,
+      "total_score_100": 99.83,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "hot_surface_contact(glove,surface)": 34.1667,
+        "grasp_stability(glove,pancake)": 5.6667
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "A pancake sits on a plate above the fire, supported by it.",
+      "signals": [
+        "support(plate,pancake)",
+        "placeable(pancake,at:plate)",
+        "tool_usage_correct(spatula,for:pancake_task)"
+      ],
+      "content_score_60": 35,
+      "signal_score_40": 40.0,
+      "total_score_100": 75.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "support(plate,pancake)": 35.0,
+        "tool_usage_correct(spatula,for:pancake_task)": 5.8333,
+        "placeable(pancake,at:plate)": 5.1667
+      },
+      "content_score_raw": "35"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "Liquid flows in a continuous stream from the container to the pan.",
+      "signals": [
+        "trajectory_dir(liquid,axis)",
+        "continuity(liquid)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(liquid,axis)": 38.3333,
+        "continuity(liquid)": 7.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "Flames are visible around the edge of the hot surface with oil.",
+      "signals": [
+        "flame_proximity(hand,dist)",
+        "hot_surface_contact(hand,surface)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "flame_proximity(hand,dist)": 34.1667,
+        "hot_surface_contact(hand,surface)": 6.8333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "People sit at a distance from the cooking area.",
+      "signals": [
+        "flame_proximity(person,dist)",
+        "hot_surface_contact(person,surface)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "flame_proximity(person,dist)": 34.1667,
+        "hot_surface_contact(person,surface)": 6.8333
+      },
+      "content_score_raw": "50"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v5",
+    "a1",
+    "a3",
+    "a4",
+    "a5"
+  ]
+}

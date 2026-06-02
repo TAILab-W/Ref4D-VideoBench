@@ -1,0 +1,227 @@
+{
+  "summary": {
+    "items": 10,
+    "enter_bank": 10,
+    "clip_range_sec": [
+      0.0,
+      9.7
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does the male lion maintain a consistent size relative to the female lion?",
+      "signals": [
+        "size_inconsistency(male-lion)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 37.5,
+      "total_score_100": 92.5,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "size_inconsistency(male-lion)": 37.5
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Do the lions' shadows and lighting consistency match their physical forms and positions?",
+      "signals": [
+        "shadow_consistency(male-lion)",
+        "shadow_consistency(female-lion)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "shadow_consistency(male-lion)": 36.6667,
+        "shadow_consistency(female-lion)": 7.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Does the biological motion of the lions during interaction maintain continuity and natural movement?",
+      "signals": [
+        "biological_motion(male-lion)",
+        "biological_motion(female-lion)",
+        "continuity(lion1)",
+        "biological_motion(lion2)"
+      ],
+      "content_score_60": 58,
+      "signal_score_40": 40.0,
+      "total_score_100": 98.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "biological_motion(male-lion)": 38.3333,
+        "biological_motion(female-lion)": 7.6667,
+        "biological_motion(lion2)": 7.6667,
+        "continuity(lion1)": 7.3333
+      },
+      "content_score_raw": "58"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Do the lions exhibit natural, appropriate behavior for wild animals in this environment with consistent relative positions?",
+      "signals": [
+        "biological_motion(male-lion)",
+        "biological_motion(female-lion)",
+        "trajectory_dir(male-lion,axis)",
+        "trajectory_dir(female-lion,axis)",
+        "continuity(male-lion)",
+        "continuity(female-lion)",
+        "support(female-lion,male-lion)"
+      ],
+      "content_score_60": 52,
+      "signal_score_40": 40.0,
+      "total_score_100": 92.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "biological_motion(male-lion)": 38.3333,
+        "biological_motion(female-lion)": 7.6667,
+        "trajectory_dir(male-lion,axis)": 7.6667,
+        "trajectory_dir(female-lion,axis)": 7.6667,
+        "continuity(male-lion)": 7.3333,
+        "continuity(female-lion)": 7.3333,
+        "support(female-lion,male-lion)": 7.0
+      },
+      "content_score_raw": "52"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Is there any sudden change in the spatial relationship between the male and female lion?",
+      "signals": [
+        "_default"
+      ],
+      "content_score_60": 57,
+      "signal_score_40": 23.33,
+      "total_score_100": 80.33,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "_default": 23.3333
+      },
+      "content_score_raw": "57"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "The male lion is larger than the female lion.",
+      "signals": [
+        "size_inconsistency(male-lion)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 37.5,
+      "total_score_100": 97.5,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "size_inconsistency(male-lion)": 37.5
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "Shadows of the lions are visible on the ground, matching their positions.",
+      "signals": [
+        "shadow_consistency(male-lion)",
+        "shadow_consistency(female-lion)"
+      ],
+      "content_score_60": 58,
+      "signal_score_40": 40.0,
+      "total_score_100": 98.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "shadow_consistency(male-lion)": 36.6667,
+        "shadow_consistency(female-lion)": 7.3333
+      },
+      "content_score_raw": "58"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "Lions move naturally with continuous biological motion.",
+      "signals": [
+        "biological_motion(male-lion)",
+        "biological_motion(female-lion)",
+        "continuity(lion1)",
+        "biological_motion(lion2)"
+      ],
+      "content_score_60": 59,
+      "signal_score_40": 40.0,
+      "total_score_100": 99.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "biological_motion(male-lion)": 38.3333,
+        "biological_motion(female-lion)": 7.6667,
+        "biological_motion(lion2)": 7.6667,
+        "continuity(lion1)": 7.3333
+      },
+      "content_score_raw": "59"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "The female lion follows the male lion without sudden changes in their relative positions.",
+      "signals": [
+        "biological_motion(male-lion)",
+        "biological_motion(female-lion)",
+        "trajectory_dir(male-lion,axis)",
+        "trajectory_dir(female-lion,axis)",
+        "continuity(male-lion)",
+        "continuity(female-lion)",
+        "support(female-lion,male-lion)"
+      ],
+      "content_score_60": 56,
+      "signal_score_40": 40.0,
+      "total_score_100": 96.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "biological_motion(male-lion)": 38.3333,
+        "biological_motion(female-lion)": 7.6667,
+        "trajectory_dir(male-lion,axis)": 7.6667,
+        "trajectory_dir(female-lion,axis)": 7.6667,
+        "continuity(male-lion)": 7.3333,
+        "continuity(female-lion)": 7.3333,
+        "support(female-lion,male-lion)": 7.0
+      },
+      "content_score_raw": "56"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "Lions' movements are appropriate for wild animals in this environment.",
+      "signals": [
+        "biological_motion(male-lion)",
+        "biological_motion(female-lion)"
+      ],
+      "content_score_60": 53,
+      "signal_score_40": 40.0,
+      "total_score_100": 93.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "biological_motion(male-lion)": 38.3333,
+        "biological_motion(female-lion)": 7.6667
+      },
+      "content_score_raw": "53"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "v5",
+    "a1",
+    "a2",
+    "a3",
+    "a4",
+    "a5"
+  ]
+}

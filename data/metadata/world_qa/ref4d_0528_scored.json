@@ -1,0 +1,221 @@
+{
+  "summary": {
+    "items": 10,
+    "enter_bank": 8,
+    "clip_range_sec": [
+      0.0,
+      8.87
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does the monorail move along a straight elevated track without sudden changes in direction?",
+      "signals": [
+        "trajectory_dir(train,axis)",
+        "accel_sign(train,axis)",
+        "tilt_angle_threshold(train,deg)",
+        "center_of_mass_over_base(train)",
+        "trajectory_dir(oX,axis)",
+        "tilt_angle_threshold(oX,deg)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(train,axis)": 38.3333,
+        "trajectory_dir(oX,axis)": 7.6667,
+        "tilt_angle_threshold(train,deg)": 7.1667,
+        "tilt_angle_threshold(oX,deg)": 7.1667,
+        "accel_sign(train,axis)": 7.0,
+        "center_of_mass_over_base(train)": 6.5
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Does the train's shadow on the ground match its position and movement above?",
+      "signals": [
+        "shadow_consistency(oX)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 36.67,
+      "total_score_100": 86.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "shadow_consistency(oX)": 36.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Is the supporting structure of the monorail stable and not bent or collapsing?",
+      "signals": [
+        "deformation(oX)",
+        "fracture(oX)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "deformation(oX)": 40.0,
+        "fracture(oX)": 6.3333
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Is the 'SOGO' sign clearly visible below the tracks?",
+      "signals": [
+        "placeable(oObj,at:oTarget)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 25.83,
+      "total_score_100": 80.83,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "placeable(oObj,at:oTarget)": 25.8333
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Does the monorail's trajectory align with its position relative to the 'SOGO' sign below?",
+      "signals": [
+        "trajectory_dir(train,axis)",
+        "accel_sign(train,axis)",
+        "tilt_angle_threshold(train,deg)",
+        "center_of_mass_over_base(train)",
+        "placeable(oObj,at:oTarget)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(train,axis)": 38.3333,
+        "tilt_angle_threshold(train,deg)": 7.1667,
+        "accel_sign(train,axis)": 7.0,
+        "center_of_mass_over_base(train)": 6.5,
+        "placeable(oObj,at:oTarget)": 5.1667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "The monorail moves along the elevated track with a consistent trajectory.",
+      "signals": [
+        "trajectory_dir(train,axis)",
+        "accel_sign(train,axis)",
+        "tilt_angle_threshold(train,deg)",
+        "center_of_mass_over_base(train)",
+        "trajectory_dir(oX,axis)",
+        "tilt_angle_threshold(oX,deg)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(train,axis)": 38.3333,
+        "trajectory_dir(oX,axis)": 7.6667,
+        "tilt_angle_threshold(train,deg)": 7.1667,
+        "tilt_angle_threshold(oX,deg)": 7.1667,
+        "accel_sign(train,axis)": 7.0,
+        "center_of_mass_over_base(train)": 6.5
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "The supporting structure for the monorail is stable and does not deform.",
+      "signals": [
+        "deformation(oX)",
+        "fracture(oX)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "deformation(oX)": 40.0,
+        "fracture(oX)": 6.3333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "The shadow of the monorail aligns with its position on the ground.",
+      "signals": [
+        "shadow_consistency(oX)"
+      ],
+      "content_score_60": 30,
+      "signal_score_40": 36.67,
+      "total_score_100": 66.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "shadow_consistency(oX)": 36.6667
+      },
+      "content_score_raw": "30"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "The 'SOGO' sign indicates an accessible area below the tracks.",
+      "signals": [
+        "placeable(oObj,at:oTarget)"
+      ],
+      "content_score_60": 30,
+      "signal_score_40": 25.83,
+      "total_score_100": 55.83,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "placeable(oObj,at:oTarget)": 25.8333
+      },
+      "content_score_raw": "30"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "The monorail maintains a stable path along the elevated track under gravity.",
+      "signals": [
+        "trajectory_dir(train,axis)",
+        "accel_sign(train,axis)",
+        "tilt_angle_threshold(train,deg)",
+        "center_of_mass_over_base(train)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(train,axis)": 38.3333,
+        "tilt_angle_threshold(train,deg)": 7.1667,
+        "accel_sign(train,axis)": 7.0,
+        "center_of_mass_over_base(train)": 6.5
+      },
+      "content_score_raw": "60"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "v5",
+    "a1",
+    "a2",
+    "a5"
+  ]
+}

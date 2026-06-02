@@ -1,0 +1,51 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0150.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "cv2",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "building",
+        "attributes": {
+          "color": [
+            "beige"
+          ],
+          "material": [
+            "stone"
+          ],
+          "size": [
+            "large"
+          ],
+          "style": [
+            "gothic"
+          ],
+          "weather": [
+            "overcast"
+          ],
+          "signature": [
+            "arched-windows-gabled-roof"
+          ]
+        },
+        "spans": [
+          [
+            0.1,
+            4.7
+          ]
+        ]
+      }
+    ],
+    "relations": []
+  },
+  "views": {
+    "objects_count_display": {
+      "building": 1
+    }
+  }
+}

@@ -1,0 +1,81 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0537.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "cv2",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "bus",
+        "attributes": {
+          "color": [
+            "beige",
+            "blue",
+            "red"
+          ],
+          "pattern": [
+            "striped-(rear-lights)",
+            "zigzag-(rear-lower)"
+          ],
+          "size": [
+            "large"
+          ],
+          "state": [
+            "parked"
+          ],
+          "action": [
+            "stationary"
+          ],
+          "orientation": [
+            "facing-away"
+          ],
+          "facing-direction": [
+            "back"
+          ],
+          "position": [
+            "at-bus-stop"
+          ],
+          "object-part": [
+            "rear",
+            "side"
+          ],
+          "vehicle-type": [
+            "city-bus"
+          ],
+          "brand-or-logo": [
+            "rapidkl"
+          ],
+          "printed-text": [
+            "pjh-4872",
+            "sea-lakian-kelayan-way",
+            "the-pioneer-bus-service-in-kuala-lumpur"
+          ],
+          "number-or-id": [
+            "pjh-4872"
+          ],
+          "signature": [
+            "rapidkl-beige-red-blue-80-90-route-number-pjh4872"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            8.9
+          ]
+        ]
+      }
+    ],
+    "relations": []
+  },
+  "views": {
+    "objects_count_display": {
+      "bus": 1
+    }
+  }
+}

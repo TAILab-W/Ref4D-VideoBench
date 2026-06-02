@@ -1,0 +1,132 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0457.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "decord",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "person",
+        "attributes": {
+          "signature": [
+            "person-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            7.0
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "camera",
+        "attributes": {
+          "signature": [
+            "camera-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            7.0
+          ]
+        ]
+      },
+      {
+        "id": "o3",
+        "name": "tent",
+        "attributes": {
+          "signature": [
+            "tent-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            7.0
+          ]
+        ]
+      },
+      {
+        "id": "o4",
+        "name": "track",
+        "attributes": {
+          "signature": [
+            "track-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            7.0
+          ]
+        ]
+      },
+      {
+        "id": "o5",
+        "name": "stick",
+        "attributes": {
+          "signature": [
+            "stick-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            7.0
+          ]
+        ]
+      },
+      {
+        "id": "o6",
+        "name": "chair",
+        "attributes": {
+          "signature": [
+            "chair-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            7.0
+          ]
+        ]
+      },
+      {
+        "id": "o7",
+        "name": "bench",
+        "attributes": {
+          "signature": [
+            "bench-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            7.0
+          ]
+        ]
+      }
+    ],
+    "relations": []
+  },
+  "views": {
+    "objects_count_display": {
+      "person": 1,
+      "camera": 1,
+      "tent": 1,
+      "track": 1,
+      "stick": 1,
+      "chair": 1,
+      "bench": 1
+    }
+  }
+}

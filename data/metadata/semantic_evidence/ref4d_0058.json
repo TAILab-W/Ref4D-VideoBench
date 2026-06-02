@@ -1,0 +1,36 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0058.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "cv2",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "penguin",
+        "attributes": {
+          "signature": [
+            "black-and-white,-standing-on-snow"
+          ]
+        },
+        "spans": [
+          [
+            0.2,
+            2.1
+          ]
+        ]
+      }
+    ],
+    "relations": []
+  },
+  "views": {
+    "objects_count_display": {
+      "penguin": 1
+    }
+  }
+}

@@ -1,0 +1,106 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0440.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "decord",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "woman-in-beige-sari",
+        "attributes": {
+          "color": [
+            "beige",
+            "dot"
+          ],
+          "pattern": [
+            "dot"
+          ],
+          "pose": [
+            "sitting"
+          ],
+          "action": [
+            "holding-drum-stick"
+          ],
+          "facing-direction": [
+            "towards-center"
+          ],
+          "signature": [
+            "beige-sari-with-dot-pattern,-seated-in-circle,-holding-drum-stick"
+          ]
+        },
+        "spans": [
+          [
+            0.2,
+            0.9
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "man-in-black-suit-with-glasses",
+        "attributes": {
+          "color": [
+            "black",
+            "white"
+          ],
+          "accessory": [
+            "glasses"
+          ],
+          "pose": [
+            "standing"
+          ],
+          "position": [
+            "left-of-man-in-blue-suit"
+          ],
+          "signature": [
+            "black-suit-white-shirt,-glasses,-standing-to-left-of-man-in-blue-suit"
+          ]
+        },
+        "spans": [
+          [
+            0.1,
+            0.2
+          ]
+        ]
+      }
+    ],
+    "relations": [
+      {
+        "subject": "o1",
+        "predicate": "left-of",
+        "object": "o2",
+        "spans": [
+          [
+            0.3,
+            0.4
+          ]
+        ],
+        "confidence": 0.8
+      },
+      {
+        "subject": "o2",
+        "predicate": "facing",
+        "object": "o1",
+        "spans": [
+          [
+            0.1,
+            0.3
+          ]
+        ],
+        "confidence": 0.9
+      }
+    ]
+  },
+  "views": {
+    "objects_count_display": {
+      "woman-in-beige-sari": 1,
+      "man-in-black-suit-with-glasses": 1
+    }
+  }
+}

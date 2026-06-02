@@ -1,0 +1,72 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0582.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "cv2",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "tram",
+        "attributes": {
+          "color": [
+            "green",
+            "yellow"
+          ],
+          "signature": [
+            "green-yellow-306"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            6.4
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "car",
+        "attributes": {
+          "color": [
+            "white"
+          ],
+          "signature": [
+            "white"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            6.4
+          ]
+        ]
+      }
+    ],
+    "relations": [
+      {
+        "subject": "o1",
+        "predicate": "left-of",
+        "object": "o2",
+        "spans": [
+          [
+            0.0,
+            6.4
+          ]
+        ],
+        "confidence": 0.8
+      }
+    ]
+  },
+  "views": {
+    "objects_count_display": {
+      "tram": 1,
+      "car": 1
+    }
+  }
+}

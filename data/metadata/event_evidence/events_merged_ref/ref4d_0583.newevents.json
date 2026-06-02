@@ -1,0 +1,105 @@
+{
+  "events": [
+    {
+      "id": "m0001",
+      "s": 0.0,
+      "e": 0.22178988326848248,
+      "dur": 0.22178988326848248,
+      "members": [
+        "e0001#1"
+      ],
+      "text": "truck drive on tracks",
+      "s_abs": 0.0,
+      "e_abs": 1.9,
+      "dur_abs": 1.9
+    },
+    {
+      "id": "m0002",
+      "s": 0.0,
+      "e": 0.8521400778210116,
+      "dur": 0.8521400778210116,
+      "members": [
+        "e0001#2",
+        "e0002#2",
+        "e0003#1",
+        "e0003#2",
+        "e0004#2"
+      ],
+      "text": "truck clean tracks",
+      "s_abs": 0.0,
+      "e_abs": 7.3,
+      "dur_abs": 7.3
+    },
+    {
+      "id": "m0003",
+      "s": 0.22178988326848248,
+      "e": 0.38521400778210113,
+      "dur": 0.16342412451361865,
+      "members": [
+        "e0002#1"
+      ],
+      "text": "train move along track",
+      "s_abs": 1.9,
+      "e_abs": 3.3,
+      "dur_abs": 1.4
+    },
+    {
+      "id": "m0004",
+      "s": 0.66147859922179,
+      "e": 0.8521400778210116,
+      "dur": 0.19066147859922167,
+      "members": [
+        "e0004#1"
+      ],
+      "text": "train car move along track",
+      "s_abs": 5.666666666666667,
+      "e_abs": 7.3,
+      "dur_abs": 1.6333333333333329
+    },
+    {
+      "id": "m0005",
+      "s": 0.8521400778210116,
+      "e": 1.0,
+      "dur": 0.14785992217898836,
+      "members": [
+        "e0005#1"
+      ],
+      "text": "truck move forward",
+      "s_abs": 7.3,
+      "e_abs": 8.566666666666666,
+      "dur_abs": 1.2666666666666666
+    },
+    {
+      "id": "m0006",
+      "s": 0.8521400778210116,
+      "e": 1.0,
+      "dur": 0.14785992217898836,
+      "members": [
+        "e0005#2"
+      ],
+      "text": "truck stop on tracks",
+      "s_abs": 7.3,
+      "e_abs": 8.566666666666666,
+      "dur_abs": 1.2666666666666666
+    }
+  ],
+  "meta": {
+    "lane": "ref",
+    "key": "ref4d_0583",
+    "mode": "micro",
+    "merge_config": {
+      "tau_sem": 0.96,
+      "gap_abs_sec": 1.01,
+      "gap_norm_fallback": 0.1,
+      "min_duration_norm": 0.0
+    },
+    "stats": {
+      "num_input_items": 10,
+      "num_kept_items": 10,
+      "num_clusters": 6
+    },
+    "provenance": {
+      "source_hash": "2d9a67255647"
+    }
+  }
+}

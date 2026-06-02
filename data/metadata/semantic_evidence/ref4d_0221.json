@@ -1,0 +1,132 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0221.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "cv2",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "mixer",
+        "attributes": {
+          "signature": [
+            "mixer-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            12.8
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "whisk",
+        "attributes": {
+          "signature": [
+            "whisk-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            12.8
+          ]
+        ]
+      },
+      {
+        "id": "o3",
+        "name": "bowl",
+        "attributes": {
+          "signature": [
+            "bowl-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            12.8
+          ]
+        ]
+      },
+      {
+        "id": "o4",
+        "name": "person",
+        "attributes": {
+          "signature": [
+            "person-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            12.8
+          ]
+        ]
+      },
+      {
+        "id": "o5",
+        "name": "mask",
+        "attributes": {
+          "signature": [
+            "mask-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            12.8
+          ]
+        ]
+      },
+      {
+        "id": "o6",
+        "name": "apron",
+        "attributes": {
+          "signature": [
+            "apron-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            12.8
+          ]
+        ]
+      },
+      {
+        "id": "o7",
+        "name": "spatula",
+        "attributes": {
+          "signature": [
+            "spatula-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            12.8
+          ]
+        ]
+      }
+    ],
+    "relations": []
+  },
+  "views": {
+    "objects_count_display": {
+      "mixer": 1,
+      "whisk": 1,
+      "bowl": 1,
+      "person": 1,
+      "mask": 1,
+      "apron": 1,
+      "spatula": 1
+    }
+  }
+}

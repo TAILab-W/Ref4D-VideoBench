@@ -1,0 +1,181 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0017.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "cv2",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "adult-snowy-owl",
+        "attributes": {
+          "color": [
+            "black",
+            "white"
+          ],
+          "pattern": [
+            "spotted"
+          ],
+          "texture": [
+            "feathery"
+          ],
+          "material": [
+            "feathers"
+          ],
+          "size": [
+            "large"
+          ],
+          "age": [
+            "adult"
+          ],
+          "sex": [
+            "female"
+          ],
+          "state": [
+            "alert",
+            "protective"
+          ],
+          "pose": [
+            "perched"
+          ],
+          "action": [
+            "guarding",
+            "resting"
+          ],
+          "orientation": [
+            "facing-forward"
+          ],
+          "facing-direction": [
+            "forward"
+          ],
+          "position": [
+            "center"
+          ],
+          "object-part": [
+            "beak",
+            "body",
+            "eyes",
+            "head"
+          ],
+          "signature": [
+            "white-spotted-black-eyes-yellow-irises"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            5.7
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "snowy-owl-chick",
+        "attributes": {
+          "color": [
+            "gray",
+            "white"
+          ],
+          "pattern": [
+            "fuzzy"
+          ],
+          "texture": [
+            "soft"
+          ],
+          "material": [
+            "down-feathers"
+          ],
+          "size": [
+            "small"
+          ],
+          "age": [
+            "juvenile"
+          ],
+          "state": [
+            "dependent",
+            "resting"
+          ],
+          "pose": [
+            "nestled"
+          ],
+          "action": [
+            "resting",
+            "snuggling"
+          ],
+          "orientation": [
+            "facing-forward"
+          ],
+          "facing-direction": [
+            "forward"
+          ],
+          "position": [
+            "left-of-adult"
+          ],
+          "object-part": [
+            "beak",
+            "body",
+            "head"
+          ],
+          "signature": [
+            "gray-fuzzy-yellow-beak"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            5.7
+          ]
+        ]
+      }
+    ],
+    "relations": [
+      {
+        "subject": "o2",
+        "predicate": "resting-on",
+        "object": "o1",
+        "spans": [
+          [
+            0.0,
+            5.7
+          ]
+        ],
+        "confidence": 0.9
+      },
+      {
+        "subject": "o1",
+        "predicate": "looking-at",
+        "object": "o2",
+        "spans": [
+          [
+            0.0,
+            5.7
+          ]
+        ],
+        "confidence": 0.8
+      },
+      {
+        "subject": "o1",
+        "predicate": "guarding",
+        "object": "o2",
+        "spans": [
+          [
+            0.0,
+            5.7
+          ]
+        ],
+        "confidence": 0.9
+      }
+    ]
+  },
+  "views": {
+    "objects_count_display": {
+      "adult-snowy-owl": 1,
+      "snowy-owl-chick": 1
+    }
+  }
+}

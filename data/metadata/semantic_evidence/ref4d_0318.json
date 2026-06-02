@@ -1,0 +1,201 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0318.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "decord",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "person",
+        "attributes": {
+          "color": [
+            "black",
+            "orange"
+          ],
+          "action": [
+            "gesturing",
+            "walking"
+          ],
+          "pose": [
+            "standing"
+          ],
+          "position": [
+            "right"
+          ],
+          "signature": [
+            "orange-jacket-black-skirt"
+          ]
+        },
+        "spans": [
+          [
+            2.0,
+            9.8
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "person",
+        "attributes": {
+          "color": [
+            "black",
+            "blue"
+          ],
+          "action": [
+            "guiding",
+            "walking"
+          ],
+          "pose": [
+            "standing"
+          ],
+          "position": [
+            "left"
+          ],
+          "signature": [
+            "blue-clothes-black-hat"
+          ]
+        },
+        "spans": [
+          [
+            2.0,
+            9.8
+          ]
+        ]
+      },
+      {
+        "id": "o3",
+        "name": "cow",
+        "attributes": {
+          "color": [
+            "black"
+          ],
+          "species-or-breed": [
+            "buffalo"
+          ],
+          "action": [
+            "crossing"
+          ],
+          "pose": [
+            "walking"
+          ],
+          "position": [
+            "middle"
+          ],
+          "signature": [
+            "black-buffalo-crossing-bridge"
+          ]
+        },
+        "spans": [
+          [
+            2.0,
+            9.8
+          ]
+        ]
+      },
+      {
+        "id": "o4",
+        "name": "cow",
+        "attributes": {
+          "color": [
+            "brown"
+          ],
+          "species-or-breed": [
+            "buffalo"
+          ],
+          "action": [
+            "following"
+          ],
+          "pose": [
+            "walking"
+          ],
+          "position": [
+            "left"
+          ],
+          "signature": [
+            "brown-buffalo-following-bridge"
+          ]
+        },
+        "spans": [
+          [
+            5.0,
+            9.8
+          ]
+        ]
+      }
+    ],
+    "relations": [
+      {
+        "subject": "o2",
+        "predicate": "guiding",
+        "object": "o3",
+        "spans": [
+          [
+            5.0,
+            9.8
+          ]
+        ],
+        "confidence": 0.8
+      },
+      {
+        "subject": "o1",
+        "predicate": "walking",
+        "object": "o2",
+        "spans": [
+          [
+            2.0,
+            9.8
+          ]
+        ],
+        "confidence": 0.9
+      },
+      {
+        "subject": "o2",
+        "predicate": "walking",
+        "object": "o3",
+        "spans": [
+          [
+            2.0,
+            9.8
+          ]
+        ],
+        "confidence": 0.9
+      },
+      {
+        "subject": "o4",
+        "predicate": "following",
+        "object": "o3",
+        "spans": [
+          [
+            5.0,
+            9.8
+          ]
+        ],
+        "confidence": 0.8
+      },
+      {
+        "subject": "o1",
+        "predicate": "gesturing",
+        "object": "o2",
+        "spans": [
+          [
+            5.0,
+            7.0
+          ]
+        ],
+        "confidence": 0.8
+      }
+    ]
+  },
+  "views": {
+    "objects_count_display": {
+      "person": 2,
+      "cow": 2
+    }
+  }
+}

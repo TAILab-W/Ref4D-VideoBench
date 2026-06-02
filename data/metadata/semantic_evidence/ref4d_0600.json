@@ -1,0 +1,151 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0600.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "cv2",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "red-pickup-truck",
+        "attributes": {
+          "color": [
+            "red"
+          ],
+          "size": [
+            "small"
+          ],
+          "position": [
+            "left-lane"
+          ],
+          "signature": [
+            "red,-small,-on-highway"
+          ]
+        },
+        "spans": [
+          [
+            0.2,
+            1.5
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "large-red-construction-vehicle",
+        "attributes": {
+          "color": [
+            "red"
+          ],
+          "size": [
+            "large"
+          ],
+          "material": [
+            "metal"
+          ],
+          "action": [
+            "driving"
+          ],
+          "position": [
+            "right-lane"
+          ],
+          "signature": [
+            "red,-large,-carrying-yellow-crates,-on-highway"
+          ]
+        },
+        "spans": [
+          [
+            0.3,
+            1.6
+          ]
+        ]
+      },
+      {
+        "id": "o3",
+        "name": "wooden-crate",
+        "attributes": {
+          "color": [
+            "black",
+            "yellow"
+          ],
+          "material": [
+            "wood"
+          ],
+          "printed-text": [
+            "craft",
+            "mank-4.5v-50-55"
+          ],
+          "state": [
+            "broken",
+            "falling"
+          ],
+          "action": [
+            "falling"
+          ],
+          "object-part": [
+            "side",
+            "top"
+          ],
+          "signature": [
+            "yellow,-with-black-text-'craft'-and-'mank-4.5v-50-55',-falling-from-the-back-of-e2"
+          ]
+        },
+        "spans": [
+          [
+            0.4,
+            0.7
+          ]
+        ]
+      }
+    ],
+    "relations": [
+      {
+        "subject": "o1",
+        "predicate": "left-of",
+        "object": "o2",
+        "spans": [
+          [
+            0.3,
+            1.5
+          ]
+        ],
+        "confidence": 0.9
+      },
+      {
+        "subject": "o2",
+        "predicate": "carrying",
+        "object": "o3",
+        "spans": [
+          [
+            0.4,
+            0.7
+          ]
+        ],
+        "confidence": 0.8
+      },
+      {
+        "subject": "o3",
+        "predicate": "falling-from",
+        "object": "o2",
+        "spans": [
+          [
+            0.4,
+            0.7
+          ]
+        ],
+        "confidence": 0.8
+      }
+    ]
+  },
+  "views": {
+    "objects_count_display": {
+      "red-pickup-truck": 1,
+      "large-red-construction-vehicle": 1,
+      "wooden-crate": 1
+    }
+  }
+}

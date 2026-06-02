@@ -1,0 +1,208 @@
+{
+  "summary": {
+    "items": 10,
+    "enter_bank": 9,
+    "clip_range_sec": [
+      0.0,
+      6.9
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does water pour into the pot to cover ingredients?",
+      "signals": [
+        "pour_direction(water,axis)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 28.33,
+      "total_score_100": 83.33,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "pour_direction(water,axis)": 28.3333
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Does the liquid in the bowl and pot show slosh response during pouring?",
+      "signals": [
+        "slosh_response(oV,amp)",
+        "slosh_response(liquid,amp)"
+      ],
+      "content_score_60": 45,
+      "signal_score_40": 40.0,
+      "total_score_100": 85.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "slosh_response(oV,amp)": 34.1667,
+        "slosh_response(liquid,amp)": 6.8333
+      },
+      "content_score_raw": "45"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Does the hand holding the bowl avoid contact with hot surfaces?",
+      "signals": [
+        "hot_surface_contact(oObj,oSurface)",
+        "hot_surface_contact(hand,pot)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "hot_surface_contact(oObj,oSurface)": 34.1667,
+        "hot_surface_contact(hand,pot)": 6.8333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Does the hand maintain grasp stability while adding contents?",
+      "signals": [
+        "grasp_stability(oHand,oObj)"
+      ],
+      "content_score_60": 40,
+      "signal_score_40": 28.33,
+      "total_score_100": 68.33,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "grasp_stability(oHand,oObj)": 28.3333
+      },
+      "content_score_raw": "40"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Is garlic being added as an ingredient?",
+      "signals": [
+        "pour_direction(liquid,axis)",
+        "tool_contact(tool,obj)",
+        "action_phase(task,phase)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 39.33,
+      "total_score_100": 94.33,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "pour_direction(liquid,axis)": 28.3333,
+        "tool_contact(tool,obj)": 5.6667,
+        "action_phase(task,phase)": 5.3333
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "Water is poured into the Instant Pot to cover chicken and vegetables.",
+      "signals": [
+        "pour_direction(water,axis)",
+        "pour_direction(liquid,axis)",
+        "tool_contact(tool,obj)",
+        "action_phase(task,phase)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "pour_direction(water,axis)": 28.3333,
+        "pour_direction(liquid,axis)": 5.6667,
+        "tool_contact(tool,obj)": 5.6667,
+        "action_phase(task,phase)": 5.3333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "Liquid in the pot shows slosh response as water is added.",
+      "signals": [
+        "slosh_response(oV,amp)",
+        "slosh_response(liquid,amp)"
+      ],
+      "content_score_60": 45,
+      "signal_score_40": 40.0,
+      "total_score_100": 85.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "slosh_response(oV,amp)": 34.1667,
+        "slosh_response(liquid,amp)": 6.8333
+      },
+      "content_score_raw": "45"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "The hand holding the bowl maintains grasp stability while pouring contents.",
+      "signals": [
+        "grasp_stability(oHand,oObj)",
+        "hot_surface_contact(hand,pot)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 39.83,
+      "total_score_100": 89.83,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "hot_surface_contact(hand,pot)": 34.1667,
+        "grasp_stability(oHand,oObj)": 5.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "The action of adding water follows proper culinary steps for cooking in an Instant Pot.",
+      "signals": [
+        "pour_direction(liquid,axis)",
+        "tool_contact(tool,obj)",
+        "action_phase(task,phase)",
+        "hot_surface_contact(oObj,oSurface)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "hot_surface_contact(oObj,oSurface)": 34.1667,
+        "pour_direction(liquid,axis)": 5.6667,
+        "tool_contact(tool,obj)": 5.6667,
+        "action_phase(task,phase)": 5.3333
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "The hand holding the bowl does not touch any hot surfaces.",
+      "signals": [
+        "hot_surface_contact(hand,pot)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 34.17,
+      "total_score_100": 84.17,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "hot_surface_contact(hand,pot)": 34.1667
+      },
+      "content_score_raw": "50"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v5",
+    "a1",
+    "a2",
+    "a3",
+    "a4",
+    "a5"
+  ]
+}

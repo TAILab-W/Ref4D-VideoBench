@@ -1,0 +1,235 @@
+{
+  "summary": {
+    "items": 10,
+    "enter_bank": 10,
+    "clip_range_sec": [
+      0.0,
+      6.47
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Do the corn packages in plastic remain supported by crates and not move unexpectedly?",
+      "signals": [
+        "support(oA,oB)",
+        "containment(oA,oB)",
+        "balance(oX)",
+        "continuity(vegetables)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(vegetables)": 36.6667,
+        "balance(oX)": 7.1667,
+        "support(oA,oB)": 7.0,
+        "containment(oA,oB)": 5.8333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Do the green chilies in the crate maintain their shape and position without sudden changes?",
+      "signals": [
+        "continuity(vegetables)",
+        "containment(crate,vegetables)",
+        "friction_sliding(vegetables,on:crate)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(vegetables)": 36.6667,
+        "friction_sliding(vegetables,on:crate)": 6.0,
+        "containment(crate,vegetables)": 5.8333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Do the fruits on the table stay supported by the surface without falling or colliding?",
+      "signals": [
+        "support(table,fruits)",
+        "balance(fruits)",
+        "support(fruits,containers)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "balance(fruits)": 35.8333,
+        "support(table,fruits)": 7.0,
+        "support(fruits,containers)": 7.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Is the market stall setup free of immediate hazards like unstable structures or exposed sharp objects?",
+      "signals": [
+        "friction_sliding(containers,on:ground)",
+        "hot_surface_contact(fruits,surfaces)",
+        "prohibited_intersection(containers,people)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "prohibited_intersection(containers,people)": 36.6667,
+        "hot_surface_contact(fruits,surfaces)": 6.8333,
+        "friction_sliding(containers,on:ground)": 6.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Are the produce items arranged for easy selection and purchase?",
+      "signals": [
+        "placeable(produce,in:crates)",
+        "openable(crates)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 31.0,
+      "total_score_100": 81.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "placeable(produce,in:crates)": 25.8333,
+        "openable(crates)": 5.1667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "Corn in plastic packaging remains supported by black crates and does not move unexpectedly.",
+      "signals": [
+        "support(oA,oB)",
+        "containment(oA,oB)",
+        "balance(oX)",
+        "continuity(vegetables)",
+        "containment(crate,vegetables)",
+        "friction_sliding(vegetables,on:crate)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(vegetables)": 36.6667,
+        "balance(oX)": 7.1667,
+        "support(oA,oB)": 7.0,
+        "friction_sliding(vegetables,on:crate)": 6.0,
+        "containment(oA,oB)": 5.8333,
+        "containment(crate,vegetables)": 5.8333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "Fruits on the table remain supported by the surface and do not fall or collide with other objects.",
+      "signals": [
+        "support(table,fruits)",
+        "balance(fruits)",
+        "support(fruits,containers)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "balance(fruits)": 35.8333,
+        "support(table,fruits)": 7.0,
+        "support(fruits,containers)": 7.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "Vegetables in the crates maintain their shape and position without sudden changes or interpenetration.",
+      "signals": [
+        "continuity(vegetables)",
+        "friction_sliding(containers,on:ground)",
+        "hot_surface_contact(fruits,surfaces)",
+        "prohibited_intersection(containers,people)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(vegetables)": 36.6667,
+        "prohibited_intersection(containers,people)": 7.3333,
+        "hot_surface_contact(fruits,surfaces)": 6.8333,
+        "friction_sliding(containers,on:ground)": 6.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "Produce is arranged for easy selection and purchase by customers.",
+      "signals": [
+        "placeable(produce,in:crates)",
+        "openable(crates)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 31.0,
+      "total_score_100": 81.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "placeable(produce,in:crates)": 25.8333,
+        "openable(crates)": 5.1667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "The market stall setup does not present any immediate hazards such as unstable structures or sharp objects exposed.",
+      "signals": [
+        "support(table,fruits)",
+        "balance(fruits)",
+        "friction_sliding(containers,on:ground)",
+        "hot_surface_contact(fruits,surfaces)",
+        "prohibited_intersection(containers,people)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "prohibited_intersection(containers,people)": 36.6667,
+        "balance(fruits)": 7.1667,
+        "support(table,fruits)": 7.0,
+        "hot_surface_contact(fruits,surfaces)": 6.8333,
+        "friction_sliding(containers,on:ground)": 6.0
+      },
+      "content_score_raw": "50"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "v5",
+    "a1",
+    "a2",
+    "a3",
+    "a4",
+    "a5"
+  ]
+}

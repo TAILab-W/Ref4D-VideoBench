@@ -1,0 +1,84 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0124.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "cv2",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "bridge",
+        "attributes": {
+          "signature": [
+            "white,-large,-left-facing,-spanning-river"
+          ]
+        },
+        "spans": [
+          [
+            0.1,
+            1.0
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "water",
+        "attributes": {
+          "signature": [
+            "reflective,-dark,-calm,-center"
+          ]
+        },
+        "spans": [
+          [
+            0.1,
+            1.0
+          ]
+        ]
+      },
+      {
+        "id": "o3",
+        "name": "cityscape",
+        "attributes": {
+          "signature": [
+            "dusk,-warm-cool-gradient,-concrete,-glass,-large,-background"
+          ]
+        },
+        "spans": [
+          [
+            0.1,
+            1.0
+          ]
+        ]
+      },
+      {
+        "id": "o4",
+        "name": "person",
+        "attributes": {
+          "signature": [
+            "various,-walking,-standing,-bridge,-shore"
+          ]
+        },
+        "spans": [
+          [
+            0.2,
+            1.0
+          ]
+        ]
+      }
+    ],
+    "relations": []
+  },
+  "views": {
+    "objects_count_display": {
+      "bridge": 1,
+      "water": 1,
+      "cityscape": 1,
+      "person": 1
+    }
+  }
+}

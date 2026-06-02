@@ -1,0 +1,215 @@
+{
+  "summary": {
+    "items": 10,
+    "enter_bank": 10,
+    "clip_range_sec": [
+      0.0,
+      10.43
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Are the ice floes fragmented and floating on water?",
+      "signals": [
+        "biological_motion(bear)",
+        "fracture(ice-floe)",
+        "buoyancy_float(ice-floe,in:water)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "biological_motion(bear)": 38.3333,
+        "buoyancy_float(ice-floe,in:water)": 6.8333,
+        "fracture(ice-floe)": 6.3333
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Does the polar bear walk naturally on the ice without unnatural motion?",
+      "signals": [
+        "buoyancy_float(ice_floe,in:water)",
+        "balance(polar_bear)",
+        "biological_motion(polar_bear)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "biological_motion(polar_bear)": 38.3333,
+        "balance(polar_bear)": 7.1667,
+        "buoyancy_float(ice_floe,in:water)": 6.8333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Do the text overlays remain visible throughout the clip?",
+      "signals": [
+        "continuity(ice-floe)",
+        "continuity(text_overlay)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(ice-floe)": 36.6667,
+        "continuity(text_overlay)": 7.3333
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Is the environment depicted a known habitat for marine mammals like polar bears?",
+      "signals": [
+        "buoyancy_float(ice-floe,in:water)",
+        "continuity(ice-floe)",
+        "fracture(ice-floe)",
+        "frame_discontinuity(t)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "frame_discontinuity(t)": 40.0,
+        "continuity(ice-floe)": 7.3333,
+        "buoyancy_float(ice-floe,in:water)": 6.8333,
+        "fracture(ice-floe)": 6.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Is the polar bear at risk of starvation in this environment?",
+      "signals": [
+        "biological_motion(polar_bear)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 38.33,
+      "total_score_100": 88.33,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "biological_motion(polar_bear)": 38.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "A polar bear walks on fragmented ice floes in an Arctic environment.",
+      "signals": [
+        "biological_motion(bear)",
+        "fracture(ice-floe)",
+        "buoyancy_float(ice-floe,in:water)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "biological_motion(bear)": 38.3333,
+        "buoyancy_float(ice-floe,in:water)": 6.8333,
+        "fracture(ice-floe)": 6.3333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "The polar bear exhibits natural walking motion on the ice floe.",
+      "signals": [
+        "biological_motion(bear)",
+        "biological_motion(polar_bear)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "biological_motion(bear)": 38.3333,
+        "biological_motion(polar_bear)": 7.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "Ice floes float on water, maintaining continuity and no interpenetration.",
+      "signals": [
+        "continuity(ice-floe)",
+        "buoyancy_float(ice-floe,in:water)",
+        "fracture(ice-floe)",
+        "frame_discontinuity(t)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "frame_discontinuity(t)": 40.0,
+        "continuity(ice-floe)": 7.3333,
+        "buoyancy_float(ice-floe,in:water)": 6.8333,
+        "fracture(ice-floe)": 6.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "Polar bears inhabit a known marine mammal habitat with floating ice.",
+      "signals": [
+        "buoyancy_float(ice-floe,in:water)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 34.17,
+      "total_score_100": 84.17,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "buoyancy_float(ice-floe,in:water)": 34.1667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "The polar bear maintains balance while walking on the floating ice floe.",
+      "signals": [
+        "buoyancy_float(ice_floe,in:water)",
+        "balance(polar_bear)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "balance(polar_bear)": 35.8333,
+        "buoyancy_float(ice_floe,in:water)": 6.8333
+      },
+      "content_score_raw": "50"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "v5",
+    "a1",
+    "a2",
+    "a3",
+    "a4",
+    "a5"
+  ]
+}

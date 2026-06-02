@@ -1,0 +1,85 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0367.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "decord",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "yellow-dandelion-flower",
+        "attributes": {
+          "color": [
+            "green",
+            "yellow"
+          ],
+          "state": [
+            "blooming",
+            "seed-head"
+          ],
+          "position": [
+            "foreground"
+          ],
+          "signature": [
+            "yellow-petals,-green-stem,-some-with-seed-head"
+          ]
+        },
+        "spans": [
+          [
+            0.1,
+            0.9
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "white-butterfly",
+        "attributes": {
+          "color": [
+            "white"
+          ],
+          "action": [
+            "perching"
+          ],
+          "position": [
+            "center-foreground"
+          ],
+          "signature": [
+            "white-wings,-perched-on-yellow-dandelion"
+          ]
+        },
+        "spans": [
+          [
+            0.5,
+            0.6
+          ]
+        ]
+      }
+    ],
+    "relations": [
+      {
+        "subject": "o2",
+        "predicate": "perching-on",
+        "object": "o1",
+        "spans": [
+          [
+            0.5,
+            0.6
+          ]
+        ],
+        "confidence": 0.9
+      }
+    ]
+  },
+  "views": {
+    "objects_count_display": {
+      "yellow-dandelion-flower": 1,
+      "white-butterfly": 1
+    }
+  }
+}

@@ -1,0 +1,100 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0220.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "cv2",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "knife",
+        "attributes": {
+          "signature": [
+            "metal-blade-cutting-through-meat"
+          ]
+        },
+        "spans": [
+          [
+            0.2,
+            1.3
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "tongs",
+        "attributes": {
+          "signature": [
+            "metal-tongs-holding-a-piece-of-steak"
+          ]
+        },
+        "spans": [
+          [
+            0.4,
+            1.5
+          ]
+        ]
+      },
+      {
+        "id": "o3",
+        "name": "steak-slices",
+        "attributes": {
+          "signature": [
+            "slices-of-pink-and-brown-cooked-steak"
+          ]
+        },
+        "spans": [
+          [
+            0.6,
+            1.7
+          ]
+        ]
+      },
+      {
+        "id": "o4",
+        "name": "cutting-board",
+        "attributes": {
+          "signature": [
+            "white-surface-under-steak-slices"
+          ]
+        },
+        "spans": [
+          [
+            0.1,
+            1.9
+          ]
+        ]
+      },
+      {
+        "id": "o5",
+        "name": "text",
+        "attributes": {
+          "signature": [
+            "white-text-overlay-on-the-video"
+          ]
+        },
+        "spans": [
+          [
+            0.1,
+            1.9
+          ]
+        ]
+      }
+    ],
+    "relations": []
+  },
+  "views": {
+    "objects_count_display": {
+      "knife": 1,
+      "tongs": 1,
+      "steak-slices": 1,
+      "cutting-board": 1,
+      "text": 1
+    }
+  }
+}

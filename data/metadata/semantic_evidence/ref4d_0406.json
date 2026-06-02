@@ -1,0 +1,157 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0406.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "decord",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "person-in-black-habit",
+        "attributes": {
+          "color": [
+            "black"
+          ],
+          "action": [
+            "reaching",
+            "receiving",
+            "standing"
+          ],
+          "pose": [
+            "bending",
+            "holding"
+          ],
+          "facing-direction": [
+            "right-facing"
+          ],
+          "signature": [
+            "black-habit,-nun"
+          ]
+        },
+        "spans": [
+          [
+            0.2,
+            0.7
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "person-in-white-robe-with-pink-skullcap",
+        "attributes": {
+          "color": [
+            "pink",
+            "white"
+          ],
+          "action": [
+            "receiving",
+            "standing"
+          ],
+          "pose": [
+            "bending",
+            "holding"
+          ],
+          "facing-direction": [
+            "left-facing"
+          ],
+          "signature": [
+            "white-robe,-pink-skullcap"
+          ]
+        },
+        "spans": [
+          [
+            0.4,
+            0.6
+          ]
+        ]
+      },
+      {
+        "id": "o3",
+        "name": "person-in-dark-suit",
+        "attributes": {
+          "color": [
+            "blue",
+            "dark"
+          ],
+          "action": [
+            "cutting",
+            "receiving",
+            "standing"
+          ],
+          "pose": [
+            "bending",
+            "holding"
+          ],
+          "facing-direction": [
+            "right-facing"
+          ],
+          "signature": [
+            "dark-suit,-blue-shirt"
+          ]
+        },
+        "spans": [
+          [
+            0.1,
+            0.5
+          ]
+        ]
+      },
+      {
+        "id": "o4",
+        "name": "person-in-black-attire",
+        "attributes": {
+          "color": [
+            "black"
+          ],
+          "action": [
+            "receiving",
+            "standing"
+          ],
+          "pose": [
+            "bending",
+            "holding"
+          ],
+          "facing-direction": [
+            "right-facing"
+          ],
+          "signature": [
+            "black-attire,-bald"
+          ]
+        },
+        "spans": [
+          [
+            0.4,
+            0.6
+          ]
+        ]
+      }
+    ],
+    "relations": [
+      {
+        "subject": "o1",
+        "predicate": "reaching",
+        "object": "o2",
+        "spans": [
+          [
+            0.3,
+            0.4
+          ]
+        ],
+        "confidence": 0.9
+      }
+    ]
+  },
+  "views": {
+    "objects_count_display": {
+      "person-in-black-habit": 1,
+      "person-in-white-robe-with-pink-skullcap": 1,
+      "person-in-dark-suit": 1,
+      "person-in-black-attire": 1
+    }
+  }
+}

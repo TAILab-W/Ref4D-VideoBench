@@ -1,0 +1,130 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0552.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "cv2",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "bus",
+        "attributes": {
+          "color": [
+            "black",
+            "yellow"
+          ],
+          "printed-text": [
+            "bergambar-causway-link,-anda-lebih-berprominen",
+            "bor-7051",
+            "causeway-link",
+            "jamal-ferdinand-riah"
+          ],
+          "number-or-id": [
+            "bor-7051"
+          ],
+          "signature": [
+            "yellow-black-bus-with-yellow-printed-text-and-number-bor-7051"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            8.7
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "person",
+        "attributes": {
+          "color": [
+            "black",
+            "pink"
+          ],
+          "sex": [
+            "female"
+          ],
+          "action": [
+            "boarding-bus",
+            "holding-white-bag"
+          ],
+          "pose": [
+            "leaning-forward",
+            "standing"
+          ],
+          "facing-direction": [
+            "towards-bus-interior"
+          ],
+          "signature": [
+            "woman-in-pink-dress-with-long-black-hair"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            8.7
+          ]
+        ]
+      },
+      {
+        "id": "o3",
+        "name": "car",
+        "attributes": {
+          "color": [
+            "red"
+          ],
+          "number-or-id": [
+            "bor-7051"
+          ],
+          "signature": [
+            "red-car-parked-next-to-bus"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            8.7
+          ]
+        ]
+      }
+    ],
+    "relations": [
+      {
+        "subject": "o2",
+        "predicate": "entering",
+        "object": "o1",
+        "spans": [
+          [
+            0.0,
+            8.7
+          ]
+        ],
+        "confidence": 0.8
+      },
+      {
+        "subject": "o3",
+        "predicate": "parked-next-to",
+        "object": "o1",
+        "spans": [
+          [
+            0.0,
+            8.7
+          ]
+        ],
+        "confidence": 0.8
+      }
+    ]
+  },
+  "views": {
+    "objects_count_display": {
+      "bus": 1,
+      "person": 1,
+      "car": 1
+    }
+  }
+}

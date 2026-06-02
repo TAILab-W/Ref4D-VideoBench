@@ -1,0 +1,84 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0114.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "cv2",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "cathedral",
+        "attributes": {
+          "signature": [
+            "cologne-cathedral"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            9.5
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "van",
+        "attributes": {
+          "signature": [
+            "jahn-van"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            9.5
+          ]
+        ]
+      },
+      {
+        "id": "o3",
+        "name": "person",
+        "attributes": {
+          "signature": [
+            "person-with-cart"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            9.5
+          ]
+        ]
+      },
+      {
+        "id": "o4",
+        "name": "cart",
+        "attributes": {
+          "signature": [
+            "green-cart"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            9.5
+          ]
+        ]
+      }
+    ],
+    "relations": []
+  },
+  "views": {
+    "objects_count_display": {
+      "cathedral": 1,
+      "van": 1,
+      "person": 1,
+      "cart": 1
+    }
+  }
+}

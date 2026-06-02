@@ -1,0 +1,202 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0408.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "decord",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "cape",
+        "attributes": {
+          "color": [
+            "multi-colored",
+            "purple",
+            "sheepskin",
+            "striped"
+          ],
+          "material": [
+            "fabric",
+            "sheepskin"
+          ],
+          "object-part": [
+            "shoulders"
+          ],
+          "signature": [
+            "purple-striped-sheepskin-shoulders-multi-colored-sleeves"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            10.8
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "necklace",
+        "attributes": {
+          "color": [
+            "orange"
+          ],
+          "material": [
+            "beads",
+            "metal"
+          ],
+          "size": [
+            "large"
+          ],
+          "signature": [
+            "orange-beads-layered-with-metal-pendants"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            10.8
+          ]
+        ]
+      },
+      {
+        "id": "o3",
+        "name": "jewelry",
+        "attributes": {
+          "color": [
+            "red",
+            "silver",
+            "turquoise"
+          ],
+          "material": [
+            "beads",
+            "metal"
+          ],
+          "size": [
+            "large"
+          ],
+          "signature": [
+            "turquoise-and-red-beaded-necklace-with-silver-pendants"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            10.8
+          ]
+        ]
+      },
+      {
+        "id": "o4",
+        "name": "hat",
+        "attributes": {
+          "color": [
+            "red",
+            "white"
+          ],
+          "material": [
+            "beads",
+            "fabric"
+          ],
+          "object-part": [
+            "headwear"
+          ],
+          "signature": [
+            "red-and-white-traditional-hat-with-beads-and-tassels"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            10.8
+          ]
+        ]
+      },
+      {
+        "id": "o5",
+        "name": "cape-sleeve",
+        "attributes": {
+          "color": [
+            "rainbow",
+            "striped"
+          ],
+          "object-part": [
+            "sleeve"
+          ],
+          "signature": [
+            "rainbow-striped-sleeve-on-left-arm"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            10.8
+          ]
+        ]
+      }
+    ],
+    "relations": [
+      {
+        "subject": "o1",
+        "predicate": "left-of",
+        "object": "o2",
+        "spans": [
+          [
+            0.0,
+            10.8
+          ]
+        ],
+        "confidence": 0.8
+      },
+      {
+        "subject": "o3",
+        "predicate": "left-of",
+        "object": "o2",
+        "spans": [
+          [
+            0.0,
+            10.8
+          ]
+        ],
+        "confidence": 0.8
+      },
+      {
+        "subject": "o5",
+        "predicate": "left-of",
+        "object": "o2",
+        "spans": [
+          [
+            0.0,
+            10.8
+          ]
+        ],
+        "confidence": 0.8
+      },
+      {
+        "subject": "o4",
+        "predicate": "above",
+        "object": "o3",
+        "spans": [
+          [
+            0.0,
+            10.8
+          ]
+        ],
+        "confidence": 0.8
+      }
+    ]
+  },
+  "views": {
+    "objects_count_display": {
+      "cape": 1,
+      "necklace": 1,
+      "jewelry": 1,
+      "hat": 1,
+      "cape-sleeve": 1
+    }
+  }
+}

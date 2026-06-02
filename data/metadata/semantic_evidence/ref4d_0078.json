@@ -1,0 +1,155 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0078.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "cv2",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "turtle",
+        "attributes": {
+          "color": [
+            "brown",
+            "dark"
+          ],
+          "pattern": [
+            "net-like",
+            "speckled"
+          ],
+          "texture": [
+            "rough",
+            "scaly"
+          ],
+          "material": [
+            "hard",
+            "shell"
+          ],
+          "size": [
+            "large"
+          ],
+          "age": [
+            "adult"
+          ],
+          "sex": [
+            "male"
+          ],
+          "state": [
+            "healthy"
+          ],
+          "pose": [
+            "swimming"
+          ],
+          "action": [
+            "gliding",
+            "paddling"
+          ],
+          "orientation": [
+            "left-facing"
+          ],
+          "facing-direction": [
+            "left"
+          ],
+          "position": [
+            "foreground",
+            "midground"
+          ],
+          "object-part": [
+            "flippers",
+            "head",
+            "legs",
+            "shell"
+          ],
+          "signature": [
+            "brown-shelled-marine-turtle-with-dark-patterned-head-and-flippers"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            9.5
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "coral-reef",
+        "attributes": {
+          "color": [
+            "blue",
+            "brown",
+            "green"
+          ],
+          "shape": [
+            "branching",
+            "irregular",
+            "massive"
+          ],
+          "texture": [
+            "porous",
+            "rough"
+          ],
+          "material": [
+            "calcium-carbonate"
+          ],
+          "size": [
+            "medium"
+          ],
+          "state": [
+            "healthy"
+          ],
+          "position": [
+            "background",
+            "substrate"
+          ],
+          "signature": [
+            "underwater-coral-reef-with-various-corals-and-rocks"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            9.5
+          ]
+        ]
+      }
+    ],
+    "relations": [
+      {
+        "subject": "o1",
+        "predicate": "swimming-in",
+        "object": "o2",
+        "spans": [
+          [
+            0.0,
+            9.5
+          ]
+        ],
+        "confidence": 0.9
+      },
+      {
+        "subject": "o1",
+        "predicate": "looking-at",
+        "object": "o2",
+        "spans": [
+          [
+            0.0,
+            9.5
+          ]
+        ],
+        "confidence": 0.8
+      }
+    ]
+  },
+  "views": {
+    "objects_count_display": {
+      "turtle": 1,
+      "coral-reef": 1
+    }
+  }
+}

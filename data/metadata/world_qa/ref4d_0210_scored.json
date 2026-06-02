@@ -1,0 +1,207 @@
+{
+  "summary": {
+    "items": 10,
+    "enter_bank": 8,
+    "clip_range_sec": [
+      0.0,
+      17.03
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does the fish remain stationary on the surface while being sprinkled with spices?",
+      "signals": [
+        "tool_contact(oTool,oObj)",
+        "support(fish, surface)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "support(fish, surface)": 35.0,
+        "tool_contact(oTool,oObj)": 5.6667
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Is the person wearing black gloves handling the food safely?",
+      "signals": [
+        "tool_contact(spice_container, hand), pour_direction(spice_container, downward), trajectory_dir(spice_container, downward)",
+        "grasp_stability(hand, fish), slip(hand, fish)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 34.0,
+      "total_score_100": 84.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "tool_contact(spice_container, hand), pour_direction(spice_container, downward), trajectory_dir(spice_container, downward)": 28.3333,
+        "grasp_stability(hand, fish), slip(hand, fish)": 5.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Is the air-fried fish handled using a fork during cooking?",
+      "signals": [
+        "tool_contact(air-fryer,fish)",
+        "action_phase(cook,phase)",
+        "tool_contact(fork,fish)",
+        "grasp_stability(fork,fish)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "tool_contact(air-fryer,fish)": 28.3333,
+        "tool_contact(fork,fish)": 5.6667,
+        "grasp_stability(fork,fish)": 5.6667,
+        "action_phase(cook,phase)": 5.3333
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Do seasoning particles fall from the container due to gravity onto the fish?",
+      "signals": [
+        "falling_hazard(oObj)",
+        "trajectory_dir(oX,axis)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(oX,axis)": 38.3333,
+        "falling_hazard(oObj)": 6.3333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Does the salmon stay on the plate throughout the scene?",
+      "signals": [
+        "containment(fish,plate)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 29.17,
+      "total_score_100": 79.17,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "containment(fish,plate)": 29.1667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "A person sprinkles spices onto a piece of fish on a white surface.",
+      "signals": [
+        "tool_contact(oTool,oObj)",
+        "support(fish, surface)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "support(fish, surface)": 35.0,
+        "tool_contact(oTool,oObj)": 5.6667
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "The person holds the spice container above the fish with black gloves.",
+      "signals": [
+        "tool_contact(spice_container, hand), pour_direction(spice_container, downward), trajectory_dir(spice_container, downward)",
+        "grasp_stability(hand, fish), slip(hand, fish)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 34.0,
+      "total_score_100": 84.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "tool_contact(spice_container, hand), pour_direction(spice_container, downward), trajectory_dir(spice_container, downward)": 28.3333,
+        "grasp_stability(hand, fish), slip(hand, fish)": 5.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "The air-fryer is used to cook and handle the seasoned fish with a fork.",
+      "signals": [
+        "tool_contact(air-fryer,fish)",
+        "action_phase(cook,phase)",
+        "tool_contact(fork,fish)",
+        "grasp_stability(fork,fish)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "tool_contact(air-fryer,fish)": 28.3333,
+        "tool_contact(fork,fish)": 5.6667,
+        "grasp_stability(fork,fish)": 5.6667,
+        "action_phase(cook,phase)": 5.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "Spices fall from the container due to gravity, following a downward trajectory.",
+      "signals": [
+        "falling_hazard(oObj)",
+        "trajectory_dir(oX,axis)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(oX,axis)": 38.3333,
+        "falling_hazard(oObj)": 6.3333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "The fish remains on the plate, indicating proper containment.",
+      "signals": [
+        "containment(fish,plate)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 29.17,
+      "total_score_100": 79.17,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "containment(fish,plate)": 29.1667
+      },
+      "content_score_raw": "50"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "a1",
+    "a2",
+    "a3",
+    "a4"
+  ]
+}

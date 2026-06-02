@@ -1,0 +1,213 @@
+{
+  "summary": {
+    "items": 10,
+    "enter_bank": 8,
+    "clip_range_sec": [
+      0.0,
+      9.63
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does the javelin follow a forward and upward trajectory after release?",
+      "signals": [
+        "trajectory_dir(javelin,axis)",
+        "accel_sign(person,axis)",
+        "continuity(person)",
+        "trajectory_dir(oX,axis)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(javelin,axis)": 38.3333,
+        "trajectory_dir(oX,axis)": 7.6667,
+        "continuity(person)": 7.3333,
+        "accel_sign(person,axis)": 7.0
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Is the javelin held properly by the person during warm-up without falling?",
+      "signals": [
+        "tool_contact(javelin,human)",
+        "balance(javelin)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "balance(javelin)": 35.8333,
+        "tool_contact(javelin,human)": 5.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Does the athlete maintain balance and proper posture throughout the throw?",
+      "signals": [
+        "balance(javelin)",
+        "trajectory_dir(javelin,axis)",
+        "accel_sign(javelin,axis)",
+        "balance(oX)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(javelin,axis)": 38.3333,
+        "balance(javelin)": 7.1667,
+        "balance(oX)": 7.1667,
+        "accel_sign(javelin,axis)": 7.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Is the javelin held correctly to allow precise control in the run-up phase?",
+      "signals": [
+        "tool_contact(oTool,oObj)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 28.33,
+      "total_score_100": 78.33,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "tool_contact(oTool,oObj)": 28.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Does the motion of the arm holding the javelin show consistent acceleration?",
+      "signals": [
+        "trajectory_dir(javelin,axis)",
+        "accel_sign(person,axis)",
+        "continuity(person)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(javelin,axis)": 38.3333,
+        "continuity(person)": 7.3333,
+        "accel_sign(person,axis)": 7.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "The javelin is held properly by the person during warm-up, not falling or colliding.",
+      "signals": [
+        "tool_contact(javelin,human)",
+        "balance(javelin)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "balance(javelin)": 35.8333,
+        "tool_contact(javelin,human)": 5.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "The person maintains balance and proper posture for a smooth javelin release.",
+      "signals": [
+        "balance(javelin)",
+        "trajectory_dir(javelin,axis)",
+        "accel_sign(javelin,axis)",
+        "balance(oX)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(javelin,axis)": 38.3333,
+        "balance(javelin)": 7.1667,
+        "balance(oX)": 7.1667,
+        "accel_sign(javelin,axis)": 7.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "The javelin is held correctly in the run-up phase for precise control and optimal launch angle.",
+      "signals": [
+        "tool_contact(oTool,oObj)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 28.33,
+      "total_score_100": 78.33,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "tool_contact(oTool,oObj)": 28.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "The person's motion follows physical laws with consistent acceleration during the throw.",
+      "signals": [
+        "trajectory_dir(javelin,axis)",
+        "accel_sign(person,axis)",
+        "continuity(person)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(javelin,axis)": 38.3333,
+        "continuity(person)": 7.3333,
+        "accel_sign(person,axis)": 7.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "The javelin moves forward and upward after being released.",
+      "signals": [
+        "trajectory_dir(oX,axis)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 38.33,
+      "total_score_100": 93.33,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(oX,axis)": 38.3333
+      },
+      "content_score_raw": "55"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v5",
+    "a1",
+    "a2",
+    "a4",
+    "a5"
+  ]
+}

@@ -1,0 +1,186 @@
+{
+  "summary": {
+    "items": 10,
+    "enter_bank": 7,
+    "clip_range_sec": [
+      0.0,
+      6.0
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does the skater's center of mass stay over their base to prevent falling?",
+      "signals": [
+        "center_of_mass_over_base(skater)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 32.5,
+      "total_score_100": 82.5,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "center_of_mass_over_base(skater)": 32.5
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Does the skater maintain balance and continuity in motion throughout the clip?",
+      "signals": [
+        "continuity(skater)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 36.67,
+      "total_score_100": 86.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(skater)": 36.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Does the shadow on the ice floor show consistency with the skater's position and light source?",
+      "signals": [
+        "shadow_consistency(skater)"
+      ],
+      "content_score_60": 40,
+      "signal_score_40": 36.67,
+      "total_score_100": 76.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "shadow_consistency(skater)": 36.6667
+      },
+      "content_score_raw": "40"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Does the trajectory of the skate blade match the forward movement direction across the rink surface?",
+      "signals": [
+        "trajectory_dir(skater,on:ice,axis:forward)",
+        "trajectory_dir(ice skate blade,on:rink,axis:forward)"
+      ],
+      "content_score_60": 40,
+      "signal_score_40": 40.0,
+      "total_score_100": 80.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(skater,on:ice,axis:forward)": 38.3333,
+        "trajectory_dir(ice skate blade,on:rink,axis:forward)": 7.6667
+      },
+      "content_score_raw": "40"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Does the skater keep a safe distance from potential hazards like chairs or railings?",
+      "signals": [
+        "falling_hazard(arena)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 31.67,
+      "total_score_100": 81.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "falling_hazard(arena)": 31.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "The skater's forward motion is consistent with the direction of their ice skate blade.",
+      "signals": [
+        "trajectory_dir(skater,on:ice,axis:forward)",
+        "trajectory_dir(ice skate blade,on:rink,axis:forward)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(skater,on:ice,axis:forward)": 38.3333,
+        "trajectory_dir(ice skate blade,on:rink,axis:forward)": 7.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "The skater maintains balance and continuity in figure skating performance.",
+      "signals": [
+        "continuity(skater)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 36.67,
+      "total_score_100": 86.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(skater)": 36.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "The skater's center of mass stays over their base to prevent falling.",
+      "signals": [
+        "center_of_mass_over_base(skater)"
+      ],
+      "content_score_60": 30,
+      "signal_score_40": 32.5,
+      "total_score_100": 62.5,
+      "duplicate_penalized": true,
+      "signal_detail": {
+        "center_of_mass_over_base(skater)": 32.5
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "The shadow on the ice floor matches the skater's position and light source.",
+      "signals": [
+        "shadow_consistency(skater)"
+      ],
+      "content_score_60": 40,
+      "signal_score_40": 36.67,
+      "total_score_100": 76.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "shadow_consistency(skater)": 36.6667
+      },
+      "content_score_raw": "40"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "The skater keeps a safe distance from potential falling hazards in the arena.",
+      "signals": [
+        "falling_hazard(arena)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 31.67,
+      "total_score_100": 81.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "falling_hazard(arena)": 31.6667
+      },
+      "content_score_raw": "50"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v4",
+    "v5",
+    "a1",
+    "a2",
+    "a5"
+  ]
+}

@@ -1,0 +1,213 @@
+{
+  "summary": {
+    "items": 10,
+    "enter_bank": 10,
+    "clip_range_sec": [
+      0.0,
+      5.6
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does the stone temple show any signs of structural collapse?",
+      "signals": [
+        "continuity(pillar)",
+        "continuity(temple)",
+        "fracture(pillar)",
+        "fracture(temple)",
+        "balance(structure)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(pillar)": 36.6667,
+        "continuity(temple)": 7.3333,
+        "balance(structure)": 7.1667,
+        "fracture(pillar)": 6.3333,
+        "fracture(temple)": 6.3333
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Is the person standing still without moving or changing position?",
+      "signals": [
+        "trajectory_dir(person,axis)",
+        "accel_sign(person,axis)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(person,axis)": 38.3333,
+        "accel_sign(person,axis)": 7.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Does the blue light on the pillar remain uniform in color and brightness throughout?",
+      "signals": [
+        "continuity(pillar)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 36.67,
+      "total_score_100": 86.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(pillar)": 36.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Do the shadows cast by the pillar align with the direction of the illumination source?",
+      "signals": [
+        "shadow_consistency(pillar)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 36.67,
+      "total_score_100": 86.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "shadow_consistency(pillar)": 36.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Does the pillar maintain its shape and support without any visible deformation?",
+      "signals": [
+        "continuity(pillar)",
+        "continuity(temple)",
+        "fracture(pillar)",
+        "fracture(temple)",
+        "balance(structure)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(pillar)": 36.6667,
+        "continuity(temple)": 7.3333,
+        "balance(structure)": 7.1667,
+        "fracture(pillar)": 6.3333,
+        "fracture(temple)": 6.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "The ancient stone temple and pillar maintain their structural integrity without deformation or fracture.",
+      "signals": [
+        "continuity(pillar)",
+        "continuity(temple)",
+        "fracture(pillar)",
+        "fracture(temple)",
+        "balance(structure)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(pillar)": 36.6667,
+        "continuity(temple)": 7.3333,
+        "balance(structure)": 7.1667,
+        "fracture(pillar)": 6.3333,
+        "fracture(temple)": 6.3333
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "The person stands in a static position with no sudden movement throughout the clip.",
+      "signals": [
+        "trajectory_dir(person,axis)",
+        "accel_sign(person,axis)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(person,axis)": 38.3333,
+        "accel_sign(person,axis)": 7.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "The blue illumination on the pillar remains consistent in color and intensity.",
+      "signals": [
+        "continuity(pillar)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 36.67,
+      "total_score_100": 86.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(pillar)": 36.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "The shadow cast by the pillar aligns with the light source direction and remains consistent in shape.",
+      "signals": [
+        "shadow_consistency(pillar)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 36.67,
+      "total_score_100": 86.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "shadow_consistency(pillar)": 36.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "The ancient stone structure shows no signs of collapse or structural failure under lighting.",
+      "signals": [
+        "balance(structure)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 35.83,
+      "total_score_100": 85.83,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "balance(structure)": 35.8333
+      },
+      "content_score_raw": "50"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "v5",
+    "a1",
+    "a2",
+    "a3",
+    "a4",
+    "a5"
+  ]
+}

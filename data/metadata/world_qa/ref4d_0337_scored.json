@@ -1,0 +1,215 @@
+{
+  "summary": {
+    "items": 10,
+    "enter_bank": 10,
+    "clip_range_sec": [
+      0.0,
+      7.7
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does water flow from the waterfall into the river below?",
+      "signals": [
+        "continuity(waterfall)",
+        "trajectory_dir(water, axis: downward)",
+        "trajectory_dir(water,axis)",
+        "accel_sign(water,axis)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(water, axis: downward)": 38.3333,
+        "trajectory_dir(water,axis)": 7.6667,
+        "continuity(waterfall)": 7.3333,
+        "accel_sign(water,axis)": 7.0
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Are the rocks in the foreground wet due to flowing water?",
+      "signals": [
+        "material_optics(rock)",
+        "interpenetration(water,rock)",
+        "collision(water,rock)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "material_optics(rock)": 37.5,
+        "interpenetration(water,rock)": 7.1667,
+        "collision(water,rock)": 6.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Do the trees surrounding the waterfall maintain stable support without signs of imbalance or collapse, and do their shadows match their position under consistent lighting?",
+      "signals": [
+        "balance(tree)",
+        "shadow_consistency(rock)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "shadow_consistency(rock)": 36.6667,
+        "balance(tree)": 7.1667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Does the waterfall and stream show continuous motion without sudden state changes across the clip?",
+      "signals": [
+        "continuity(waterfall)",
+        "frame_discontinuity(t)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "frame_discontinuity(t)": 40.0,
+        "continuity(waterfall)": 7.3333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Does water exhibit expected fluid behavior by flowing over rocks and creating splashes?",
+      "signals": [
+        "trajectory_dir(water,axis)",
+        "accel_sign(water,axis)",
+        "interpenetration(water,rock)",
+        "collision(water,rock)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(water,axis)": 38.3333,
+        "interpenetration(water,rock)": 7.1667,
+        "accel_sign(water,axis)": 7.0,
+        "collision(water,rock)": 6.3333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "Water flows from the waterfall into the river below, moving downward due to gravity.",
+      "signals": [
+        "continuity(waterfall)",
+        "trajectory_dir(water, axis: downward)",
+        "trajectory_dir(water,axis)",
+        "accel_sign(water,axis)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(water, axis: downward)": 38.3333,
+        "trajectory_dir(water,axis)": 7.6667,
+        "continuity(waterfall)": 7.3333,
+        "accel_sign(water,axis)": 7.0
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "The rocks in the foreground are wet and show proper material-optics interaction with flowing water.",
+      "signals": [
+        "material_optics(rock)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 37.5,
+      "total_score_100": 87.5,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "material_optics(rock)": 37.5
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "The waterfall and stream maintain continuous motion without frame discontinuity or sudden state changes.",
+      "signals": [
+        "continuity(waterfall)",
+        "frame_discontinuity(t)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "frame_discontinuity(t)": 40.0,
+        "continuity(waterfall)": 7.3333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "Water flows over rocks and creates splashes, exhibiting expected fluid behavior.",
+      "signals": [
+        "interpenetration(water,rock)",
+        "collision(water,rock)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "interpenetration(water,rock)": 35.8333,
+        "collision(water,rock)": 6.3333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "The trees surrounding the waterfall stand upright, providing stable support for their mass.",
+      "signals": [
+        "balance(tree)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 35.83,
+      "total_score_100": 85.83,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "balance(tree)": 35.8333
+      },
+      "content_score_raw": "50"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "v5",
+    "a1",
+    "a2",
+    "a3",
+    "a4",
+    "a5"
+  ]
+}

@@ -1,0 +1,215 @@
+{
+  "summary": {
+    "items": 10,
+    "enter_bank": 10,
+    "clip_range_sec": [
+      0.0,
+      8.33
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Do the trees remain rooted in the grassy landscape without floating?",
+      "signals": [
+        "support",
+        "continuity",
+        "support(mountain,ground)",
+        "balance(mountain)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity": 36.6667,
+        "balance(mountain)": 7.1667,
+        "support": 7.0,
+        "support(mountain,ground)": 7.0
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Does the snow on the mountain stay stationary and not change shape across the clip?",
+      "signals": [
+        "continuity(snow)",
+        "continuity(hillside)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(snow)": 36.6667,
+        "continuity(hillside)": 7.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Are the foreground trees static and does the sky remain clear throughout?",
+      "signals": [
+        "continuity(trees)",
+        "hue_histogram_jump(sky)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(trees)": 36.6667,
+        "hue_histogram_jump(sky)": 6.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Is there no falling hazard like loose rocks, and do all objects maintain consistent positions relative to each other?",
+      "signals": [
+        "falling_hazard",
+        "continuity(tree)",
+        "continuity(grass)",
+        "interpenetration(tree,grass)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(tree)": 36.6667,
+        "continuity(grass)": 7.3333,
+        "interpenetration(tree,grass)": 7.1667,
+        "falling_hazard": 6.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Does the grassy hillside maintain a consistent slope and the sky show no sudden color shifts?",
+      "signals": [
+        "continuity(hillside)",
+        "hue_histogram_jump(sky)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(hillside)": 36.6667,
+        "hue_histogram_jump(sky)": 6.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "Trees remain rooted in the grassy landscape, showing no signs of floating or moving.",
+      "signals": [
+        "support",
+        "continuity",
+        "continuity(tree)",
+        "continuity(grass)",
+        "interpenetration(tree,grass)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity": 36.6667,
+        "continuity(tree)": 7.3333,
+        "continuity(grass)": 7.3333,
+        "interpenetration(tree,grass)": 7.1667,
+        "support": 7.0
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "Snow on the mountain is stationary and does not exhibit sudden movement.",
+      "signals": [
+        "support(mountain,ground)",
+        "balance(mountain)",
+        "continuity(snow)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(snow)": 36.6667,
+        "balance(mountain)": 7.1667,
+        "support(mountain,ground)": 7.0
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "The trees in the foreground are static and do not show unexpected motion.",
+      "signals": [
+        "continuity(trees)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 36.67,
+      "total_score_100": 96.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(trees)": 36.6667
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "The grassy hillside maintains a consistent slope without abrupt changes.",
+      "signals": [
+        "continuity(hillside)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 36.67,
+      "total_score_100": 96.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(hillside)": 36.6667
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "The sky remains clear with no visible anomalies.",
+      "signals": [
+        "hue_histogram_jump(sky)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 33.33,
+      "total_score_100": 93.33,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "hue_histogram_jump(sky)": 33.3333
+      },
+      "content_score_raw": "60"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "v5",
+    "a1",
+    "a2",
+    "a3",
+    "a4",
+    "a5"
+  ]
+}

@@ -1,0 +1,112 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0014.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "cv2",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "turtle",
+        "attributes": {
+          "color": [
+            "beige",
+            "brown",
+            "dark-brown"
+          ],
+          "pattern": [
+            "hexagonal-shells",
+            "net-like-lines",
+            "spotted"
+          ],
+          "texture": [
+            "rough",
+            "scaly"
+          ],
+          "material": [
+            "hard-shell"
+          ],
+          "size": [
+            "large"
+          ],
+          "state": [
+            "alive",
+            "swimming"
+          ],
+          "pose": [
+            "flippers-moving",
+            "swimming"
+          ],
+          "action": [
+            "approaching-hand",
+            "swimming"
+          ],
+          "orientation": [
+            "top-view"
+          ],
+          "facing-direction": [
+            "forward"
+          ],
+          "position": [
+            "in-water",
+            "near-camera"
+          ],
+          "signature": [
+            "brown-and-beige-shell-patterned-flippers"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            6.1
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "hand",
+        "attributes": {
+          "color": [
+            "skin-tone"
+          ],
+          "texture": [
+            "smooth"
+          ],
+          "state": [
+            "dry",
+            "extended"
+          ],
+          "action": [
+            "offering",
+            "reaching-out"
+          ],
+          "position": [
+            "below-turtle",
+            "near-camera"
+          ],
+          "signature": [
+            "human-palm-facing-upward"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            6.1
+          ]
+        ]
+      }
+    ],
+    "relations": []
+  },
+  "views": {
+    "objects_count_display": {
+      "turtle": 1,
+      "hand": 1
+    }
+  }
+}

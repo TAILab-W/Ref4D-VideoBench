@@ -1,0 +1,152 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0092.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "cv2",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "person",
+        "attributes": {
+          "color": [
+            "blue",
+            "gray",
+            "purple"
+          ],
+          "action": [
+            "bending",
+            "petting"
+          ],
+          "pose": [
+            "bending-over"
+          ],
+          "equipment": [
+            "crossbody-bag",
+            "golf-club"
+          ],
+          "signature": [
+            "purple-shirt-gray-shorts-blue-cap-crossbody-bag"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            4.9
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "fawn",
+        "attributes": {
+          "color": [
+            "brown",
+            "white-spotted"
+          ],
+          "age": [
+            "young"
+          ],
+          "state": [
+            "alert"
+          ],
+          "pose": [
+            "standing"
+          ],
+          "facing-direction": [
+            "forward"
+          ],
+          "position": [
+            "grass"
+          ],
+          "signature": [
+            "brown-spotted-fawn"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            5.2
+          ]
+        ]
+      },
+      {
+        "id": "o3",
+        "name": "golf-club",
+        "attributes": {
+          "color": [
+            "black"
+          ],
+          "material": [
+            "metal"
+          ],
+          "size": [
+            "small"
+          ],
+          "object-part": [
+            "handle"
+          ],
+          "signature": [
+            "black-handled-golf-club"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            4.8
+          ]
+        ]
+      }
+    ],
+    "relations": [
+      {
+        "subject": "o1",
+        "predicate": "petting",
+        "object": "o2",
+        "spans": [
+          [
+            0.8,
+            4.9
+          ]
+        ],
+        "confidence": 0.9
+      },
+      {
+        "subject": "o1",
+        "predicate": "holding",
+        "object": "o3",
+        "spans": [
+          [
+            0.0,
+            4.7
+          ]
+        ],
+        "confidence": 0.9
+      },
+      {
+        "subject": "o2",
+        "predicate": "looking-at",
+        "object": "o1",
+        "spans": [
+          [
+            0.0,
+            5.2
+          ]
+        ],
+        "confidence": 0.9
+      }
+    ]
+  },
+  "views": {
+    "objects_count_display": {
+      "person": 1,
+      "fawn": 1,
+      "golf-club": 1
+    }
+  }
+}

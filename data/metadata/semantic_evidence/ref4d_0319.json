@@ -1,0 +1,65 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0319.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "decord",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "cloud",
+        "attributes": {
+          "signature": [
+            "fluffy,-white-to-golden-yellow"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            8.3
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "sun",
+        "attributes": {
+          "signature": [
+            "bright-light-source"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            8.3
+          ]
+        ]
+      }
+    ],
+    "relations": [
+      {
+        "subject": "o2",
+        "predicate": "illuminates",
+        "object": "o1",
+        "spans": [
+          [
+            0.0,
+            8.3
+          ]
+        ],
+        "confidence": 0.9
+      }
+    ]
+  },
+  "views": {
+    "objects_count_display": {
+      "cloud": 1,
+      "sun": 1
+    }
+  }
+}

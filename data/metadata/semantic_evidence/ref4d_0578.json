@@ -1,0 +1,76 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0578.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "cv2",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "train",
+        "attributes": {
+          "color": [
+            "dark-blue",
+            "yellow"
+          ],
+          "action": [
+            "approaching",
+            "passing"
+          ],
+          "position": [
+            "on-track"
+          ],
+          "printed-text": [
+            "arlington-fleet-services",
+            "gb-railfreight",
+            "www.arlington-fleet.com"
+          ],
+          "signature": [
+            "yellow-front,-dark-body,-gb-railfreight-logo,-arlington-fleet-services-text"
+          ]
+        },
+        "spans": [
+          [
+            0.5,
+            6.7
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "platform",
+        "attributes": {
+          "color": [
+            "gray",
+            "white"
+          ],
+          "material": [
+            "concrete",
+            "metal"
+          ],
+          "signature": [
+            "concrete,-bench,-lamp-post,-fence,-trees"
+          ]
+        },
+        "spans": [
+          [
+            0.9,
+            6.8
+          ]
+        ]
+      }
+    ],
+    "relations": []
+  },
+  "views": {
+    "objects_count_display": {
+      "train": 1,
+      "platform": 1
+    }
+  }
+}

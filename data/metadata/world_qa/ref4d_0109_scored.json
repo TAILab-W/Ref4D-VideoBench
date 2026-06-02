@@ -1,0 +1,219 @@
+{
+  "summary": {
+    "items": 10,
+    "enter_bank": 10,
+    "clip_range_sec": [
+      0.0,
+      9.8
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does the potted plant on the left side of the entrance remain stationary?",
+      "signals": [
+        "continuity(house)",
+        "continuity(potted-plant)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(house)": 36.6667,
+        "continuity(potted-plant)": 7.3333
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Are the glass doors to the living room transparent and free of sharp edges?",
+      "signals": [
+        "reflection_consistency(glass-doors)",
+        "cast_shadow_contact(glass-doors,shadow)",
+        "fracture(glass-doors)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "cast_shadow_contact(glass-doors,shadow)": 37.5,
+        "reflection_consistency(glass-doors)": 7.0,
+        "fracture(glass-doors)": 6.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Does the house's stone wall stay structurally stable without material deformation?",
+      "signals": [
+        "continuity(house)",
+        "fracture(house)",
+        "deformation(house)",
+        "material_optics(stone-wall-front-black-door)",
+        "continuity(stone-wall-front-black-door)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "deformation(house)": 40.0,
+        "material_optics(stone-wall-front-black-door)": 7.5,
+        "continuity(house)": 7.3333,
+        "continuity(stone-wall-front-black-door)": 7.3333,
+        "fracture(house)": 6.3333
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Does the balcony structure above the main floor maintain its support frame with no interpenetration between objects?",
+      "signals": [
+        "support(black-metal-railing-glass-roof, house)",
+        "rigid_transform(black-metal-railing-glass-roof)",
+        "interpenetration(oA,oB)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "rigid_transform(black-metal-railing-glass-roof)": 37.5,
+        "interpenetration(oA,oB)": 7.1667,
+        "support(black-metal-railing-glass-roof, house)": 7.0
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Does the shadow of the house align consistently with the light source direction?",
+      "signals": [
+        "shadow_consistency(oX)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 36.67,
+      "total_score_100": 86.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "shadow_consistency(oX)": 36.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "The house's stone wall and black door remain structurally stable.",
+      "signals": [
+        "continuity(house)",
+        "fracture(house)",
+        "deformation(house)",
+        "material_optics(stone-wall-front-black-door)",
+        "continuity(stone-wall-front-black-door)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "deformation(house)": 40.0,
+        "material_optics(stone-wall-front-black-door)": 7.5,
+        "continuity(house)": 7.3333,
+        "continuity(stone-wall-front-black-door)": 7.3333,
+        "fracture(house)": 6.3333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "The glass doors to the living room are transparent, allowing visibility into the interior.",
+      "signals": [
+        "reflection_consistency(glass-doors)",
+        "cast_shadow_contact(glass-doors,shadow)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "cast_shadow_contact(glass-doors,shadow)": 37.5,
+        "reflection_consistency(glass-doors)": 7.0
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "The balcony structure above the main floor is supported by a stable frame.",
+      "signals": [
+        "support(black-metal-railing-glass-roof, house)",
+        "rigid_transform(black-metal-railing-glass-roof)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "rigid_transform(black-metal-railing-glass-roof)": 37.5,
+        "support(black-metal-railing-glass-roof, house)": 7.0
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "The potted plant on the left side of the entrance remains in its position without displacement.",
+      "signals": [
+        "containment(brown-pot-white-flowers-left-side, ground)",
+        "frame_discontinuity(t)",
+        "interpenetration(potted-plant)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "frame_discontinuity(t)": 40.0,
+        "interpenetration(potted-plant)": 7.1667,
+        "containment(brown-pot-white-flowers-left-side, ground)": 5.8333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "The shadow of the house maintains consistency with the light source direction.",
+      "signals": [
+        "shadow_consistency(oX)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 36.67,
+      "total_score_100": 96.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "shadow_consistency(oX)": 36.6667
+      },
+      "content_score_raw": "60"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "v5",
+    "a1",
+    "a2",
+    "a3",
+    "a4",
+    "a5"
+  ]
+}

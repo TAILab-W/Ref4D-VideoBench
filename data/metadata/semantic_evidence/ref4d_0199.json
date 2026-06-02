@@ -1,0 +1,232 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0199.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "cv2",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "person",
+        "attributes": {
+          "color": [
+            "dark"
+          ],
+          "action": [
+            "movement"
+          ],
+          "state": [
+            "blurred"
+          ],
+          "signature": [
+            "dark-clothes-light-shirt-movement"
+          ]
+        },
+        "spans": [
+          [
+            0.5,
+            1.2
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "bowl",
+        "attributes": {
+          "color": [
+            "black"
+          ],
+          "material": [
+            "ceramic"
+          ],
+          "size": [
+            "small"
+          ],
+          "content": [
+            "egg",
+            "tofu"
+          ],
+          "signature": [
+            "black-round-contain-food"
+          ]
+        },
+        "spans": [
+          [
+            0.3,
+            1.4
+          ]
+        ]
+      },
+      {
+        "id": "o3",
+        "name": "tray",
+        "attributes": {
+          "material": [
+            "metal"
+          ],
+          "content": [
+            "potato"
+          ],
+          "signature": [
+            "metallic-rectangular-with-food"
+          ]
+        },
+        "spans": [
+          [
+            0.6,
+            1.7
+          ]
+        ]
+      },
+      {
+        "id": "o4",
+        "name": "potato",
+        "attributes": {
+          "color": [
+            "white"
+          ],
+          "shape": [
+            "cut-pieces"
+          ],
+          "position": [
+            "in-tray"
+          ],
+          "signature": [
+            "white-cut-pieces-in-tray"
+          ]
+        },
+        "spans": [
+          [
+            0.9,
+            1.8
+          ]
+        ]
+      },
+      {
+        "id": "o5",
+        "name": "egg",
+        "attributes": {
+          "color": [
+            "white"
+          ],
+          "state": [
+            "boiled"
+          ],
+          "position": [
+            "in-bowl"
+          ],
+          "signature": [
+            "boiled-in-bowl"
+          ]
+        },
+        "spans": [
+          [
+            0.7,
+            1.3
+          ]
+        ]
+      },
+      {
+        "id": "o6",
+        "name": "tofu",
+        "attributes": {
+          "color": [
+            "white"
+          ],
+          "shape": [
+            "block"
+          ],
+          "position": [
+            "in-bowl"
+          ],
+          "signature": [
+            "white-block-in-bowl"
+          ]
+        },
+        "spans": [
+          [
+            0.6,
+            1.2
+          ]
+        ]
+      }
+    ],
+    "relations": [
+      {
+        "subject": "o1",
+        "predicate": "behind",
+        "object": "o2",
+        "spans": [
+          [
+            0.5,
+            1.4
+          ]
+        ],
+        "confidence": 0.8
+      },
+      {
+        "subject": "o3",
+        "predicate": "left-of",
+        "object": "o2",
+        "spans": [
+          [
+            0.6,
+            1.7
+          ]
+        ],
+        "confidence": 0.9
+      },
+      {
+        "subject": "o4",
+        "predicate": "inside",
+        "object": "o3",
+        "spans": [
+          [
+            0.9,
+            1.8
+          ]
+        ],
+        "confidence": 0.9
+      },
+      {
+        "subject": "o5",
+        "predicate": "inside",
+        "object": "o2",
+        "spans": [
+          [
+            0.7,
+            1.3
+          ]
+        ],
+        "confidence": 0.9
+      },
+      {
+        "subject": "o6",
+        "predicate": "inside",
+        "object": "o2",
+        "spans": [
+          [
+            0.6,
+            1.2
+          ]
+        ],
+        "confidence": 0.9
+      }
+    ]
+  },
+  "views": {
+    "objects_count_display": {
+      "person": 1,
+      "bowl": 1,
+      "tray": 1,
+      "potato": 1,
+      "egg": 1,
+      "tofu": 1
+    }
+  }
+}

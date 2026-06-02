@@ -1,0 +1,205 @@
+{
+  "summary": {
+    "items": 10,
+    "enter_bank": 10,
+    "clip_range_sec": [
+      0.0,
+      6.9
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does the liquid flow smoothly from the dispenser into the glass?",
+      "signals": [
+        "pour_direction(oV,axis)",
+        "pour_direction(liquid,axis)",
+        "continuity(liquid)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(liquid)": 36.6667,
+        "pour_direction(oV,axis)": 5.6667,
+        "pour_direction(liquid,axis)": 5.6667
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Is the object being poured contained within a pourable container (glass)?",
+      "signals": [
+        "containment(oA,oB)",
+        "tool_contact(oTool,oObj)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 34.83,
+      "total_score_100": 84.83,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "containment(oA,oB)": 29.1667,
+        "tool_contact(oTool,oObj)": 5.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Does the cherry remain balanced on the toothpick without falling off?",
+      "signals": [
+        "balance(oX)",
+        "support(oA,oB)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "balance(oX)": 35.8333,
+        "support(oA,oB)": 7.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Is the hand holding the glass stable enough to support the drink and additional items?",
+      "signals": [
+        "grasp_stability(hand,glass)",
+        "supportable(glass,by:hand)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 33.67,
+      "total_score_100": 83.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "grasp_stability(hand,glass)": 28.3333,
+        "supportable(glass,by:hand)": 5.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Does the liquid make contact with the glass for dispensing?",
+      "signals": [
+        "pour_direction(oV,axis)",
+        "tool_contact(oTool,oObj)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 34.0,
+      "total_score_100": 94.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "pour_direction(oV,axis)": 28.3333,
+        "tool_contact(oTool,oObj)": 5.6667
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "The liquid flows from the dispenser into the glass due to gravity.",
+      "signals": [
+        "pour_direction(oV,axis)",
+        "containment(oA,oB)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 34.83,
+      "total_score_100": 94.83,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "containment(oA,oB)": 29.1667,
+        "pour_direction(oV,axis)": 5.6667
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "The white dispenser makes contact with the clear glass for dispensing.",
+      "signals": [
+        "tool_contact(oTool,oObj)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 28.33,
+      "total_score_100": 88.33,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "tool_contact(oTool,oObj)": 28.3333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "The cherry remains balanced on the toothpick above the glass.",
+      "signals": [
+        "balance(oX)",
+        "support(oA,oB)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "balance(oX)": 35.8333,
+        "support(oA,oB)": 7.0
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "The cream-colored liquid pours smoothly from the dispenser without sudden changes in direction or speed.",
+      "signals": [
+        "pour_direction(liquid,axis)",
+        "continuity(liquid)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(liquid)": 36.6667,
+        "pour_direction(liquid,axis)": 5.6667
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "The hand holding the glass is stable, supporting the weight of the drink.",
+      "signals": [
+        "grasp_stability(hand,glass)",
+        "supportable(glass,by:hand)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 33.67,
+      "total_score_100": 83.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "grasp_stability(hand,glass)": 28.3333,
+        "supportable(glass,by:hand)": 5.3333
+      },
+      "content_score_raw": "50"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "v5",
+    "a1",
+    "a2",
+    "a3",
+    "a4",
+    "a5"
+  ]
+}

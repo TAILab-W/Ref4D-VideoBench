@@ -1,0 +1,128 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0572.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "cv2",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "train_carriage",
+        "attributes": {
+          "color": [
+            "orange",
+            "red",
+            "white"
+          ],
+          "pattern": [
+            "striped"
+          ],
+          "texture": [
+            "smooth"
+          ],
+          "material": [
+            "metal"
+          ],
+          "size": [
+            "large"
+          ],
+          "state": [
+            "moving"
+          ],
+          "action": [
+            "traveling"
+          ],
+          "orientation": [
+            "side-facing"
+          ],
+          "facing-direction": [
+            "right"
+          ],
+          "position": [
+            "foreground-right"
+          ],
+          "signature": [
+            "white-orange-red-stripe-windowed-side"
+          ]
+        },
+        "spans": [
+          [
+            0.2,
+            6.8
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "train_engine",
+        "attributes": {
+          "color": [
+            "red",
+            "white"
+          ],
+          "pattern": [
+            "solid"
+          ],
+          "texture": [
+            "smooth"
+          ],
+          "material": [
+            "metal"
+          ],
+          "size": [
+            "large"
+          ],
+          "state": [
+            "moving"
+          ],
+          "action": [
+            "approaching"
+          ],
+          "orientation": [
+            "front-facing"
+          ],
+          "facing-direction": [
+            "towards-camera"
+          ],
+          "position": [
+            "background-left"
+          ],
+          "signature": [
+            "white-red-front-kai-logo"
+          ]
+        },
+        "spans": [
+          [
+            4.5,
+            6.8
+          ]
+        ]
+      }
+    ],
+    "relations": [
+      {
+        "subject": "o1",
+        "predicate": "left-of",
+        "object": "o2",
+        "spans": [
+          [
+            4.5,
+            6.8
+          ]
+        ],
+        "confidence": 0.9
+      }
+    ]
+  },
+  "views": {
+    "objects_count_display": {
+      "train_carriage": 1,
+      "train_engine": 1
+    }
+  }
+}

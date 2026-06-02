@@ -1,0 +1,162 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0009.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "cv2",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "koala",
+        "attributes": {
+          "color": [
+            "black",
+            "gray"
+          ],
+          "texture": [
+            "fluffy"
+          ],
+          "size": [
+            "large"
+          ],
+          "state": [
+            "alert",
+            "calm"
+          ],
+          "pose": [
+            "sitting"
+          ],
+          "action": [
+            "eating",
+            "looking"
+          ],
+          "orientation": [
+            "facing_right"
+          ],
+          "facing-direction": [
+            "right"
+          ],
+          "ear_color": [
+            "white"
+          ],
+          "eye_color": [
+            "dark"
+          ],
+          "nose_color": [
+            "black"
+          ],
+          "fur_condition": [
+            "clean"
+          ],
+          "signature": [
+            "gray_fur_black_nose_large_ears"
+          ]
+        },
+        "spans": [
+          [
+            0.1,
+            8.9
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "eucalyptus-leaves",
+        "attributes": {
+          "color": [
+            "green"
+          ],
+          "shape": [
+            "elongated"
+          ],
+          "location": [
+            "attached_to_tree_trunk"
+          ],
+          "signature": [
+            "green-elongated"
+          ]
+        },
+        "spans": [
+          [
+            0.1,
+            8.9
+          ]
+        ]
+      },
+      {
+        "id": "o3",
+        "name": "tree-trunk",
+        "attributes": {
+          "color": [
+            "brown"
+          ],
+          "texture": [
+            "rough"
+          ],
+          "material": [
+            "wood"
+          ],
+          "signature": [
+            "brown-rough-bark"
+          ]
+        },
+        "spans": [
+          [
+            0.1,
+            8.9
+          ]
+        ]
+      }
+    ],
+    "relations": [
+      {
+        "subject": "o1",
+        "predicate": "feeding",
+        "object": "o2",
+        "spans": [
+          [
+            0.1,
+            8.9
+          ]
+        ],
+        "confidence": 0.9
+      },
+      {
+        "subject": "o1",
+        "predicate": "looking_at",
+        "object": "o2",
+        "spans": [
+          [
+            0.2,
+            8.9
+          ]
+        ],
+        "confidence": 0.8
+      },
+      {
+        "subject": "o2",
+        "predicate": "attached_to",
+        "object": "o3",
+        "spans": [
+          [
+            0.3,
+            8.9
+          ]
+        ],
+        "confidence": 0.9
+      }
+    ]
+  },
+  "views": {
+    "objects_count_display": {
+      "koala": 1,
+      "eucalyptus-leaves": 1,
+      "tree-trunk": 1
+    }
+  }
+}

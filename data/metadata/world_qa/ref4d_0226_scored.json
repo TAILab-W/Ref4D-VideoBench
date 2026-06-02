@@ -1,0 +1,192 @@
+{
+  "summary": {
+    "items": 10,
+    "enter_bank": 7,
+    "clip_range_sec": [
+      0.0,
+      7.9
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Are pomegranate seeds seasoned with lime juice and Tajin?",
+      "signals": [
+        "action_phase(seasoning,phase)"
+      ],
+      "content_score_60": 30,
+      "signal_score_40": 26.67,
+      "total_score_100": 56.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "action_phase(seasoning,phase)": 26.6667
+      },
+      "content_score_raw": "30"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Does the spice pour in a continuous stream from above into the pomegranate seeds?",
+      "signals": [
+        "pour_direction",
+        "action_phase(add,tajin_to_pomegranate_seeds)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 33.67,
+      "total_score_100": 83.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "pour_direction": 28.3333,
+        "action_phase(add,tajin_to_pomegranate_seeds)": 5.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Is the bottle used to hold tajin seasoning made of glass or plastic?",
+      "signals": [
+        "material_optics"
+      ],
+      "content_score_60": 40,
+      "signal_score_40": 37.5,
+      "total_score_100": 77.5,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "material_optics": 37.5
+      },
+      "content_score_raw": "40"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Does the scene maintain continuity without frame discontinuity during the pouring action?",
+      "signals": [
+        "continuity"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 36.67,
+      "total_score_100": 86.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity": 36.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Does the movement of Tajin follow gravity when added to the pomegranate seeds?",
+      "signals": [
+        "trajectory_dir(tajin,gravity:down)",
+        "continuity(tajin_in_pomegranate_seeds)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(tajin,gravity:down)": 38.3333,
+        "continuity(tajin_in_pomegranate_seeds)": 7.3333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "Pomegranate seeds are seasoned with lime juice and Tajin.",
+      "signals": [
+        "action_phase(seasoning,phase)"
+      ],
+      "content_score_60": 36,
+      "signal_score_40": 26.67,
+      "total_score_100": 62.67,
+      "duplicate_penalized": true,
+      "signal_detail": {
+        "action_phase(seasoning,phase)": 26.6667
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "Tajin is poured in a continuous stream from above into the pomegranate seeds without frame discontinuity.",
+      "signals": [
+        "pour_direction",
+        "continuity"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity": 36.6667,
+        "pour_direction": 5.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "The spice container (bottle) holds orange Tajin seasoning, consistent with real-world materials.",
+      "signals": [
+        "material_optics"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 37.5,
+      "total_score_100": 87.5,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "material_optics": 37.5
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "A white bowl contains red pomegranate seeds during the action.",
+      "signals": [
+        "containment(pomegranate_seeds,container)",
+        "pour_direction(pomegranate_seeds,from:container)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 34.83,
+      "total_score_100": 94.83,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "containment(pomegranate_seeds,container)": 29.1667,
+        "pour_direction(pomegranate_seeds,from:container)": 5.6667
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "Tajin moves downward following gravity when added to the pomegranate seeds.",
+      "signals": [
+        "trajectory_dir(tajin,gravity:down)",
+        "continuity(tajin_in_pomegranate_seeds)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(tajin,gravity:down)": 38.3333,
+        "continuity(tajin_in_pomegranate_seeds)": 7.3333
+      },
+      "content_score_raw": "60"
+    }
+  ],
+  "bank_ids": [
+    "v2",
+    "v4",
+    "v5",
+    "a2",
+    "a3",
+    "a4",
+    "a5"
+  ]
+}

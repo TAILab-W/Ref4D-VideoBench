@@ -1,0 +1,84 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0151.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "cv2",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "building",
+        "attributes": {
+          "signature": [
+            "building-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            10.1
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "traffic-light",
+        "attributes": {
+          "signature": [
+            "traffic-light-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            10.1
+          ]
+        ]
+      },
+      {
+        "id": "o3",
+        "name": "tree",
+        "attributes": {
+          "signature": [
+            "tree-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            10.1
+          ]
+        ]
+      },
+      {
+        "id": "o4",
+        "name": "car",
+        "attributes": {
+          "signature": [
+            "car-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            10.1
+          ]
+        ]
+      }
+    ],
+    "relations": []
+  },
+  "views": {
+    "objects_count_display": {
+      "building": 1,
+      "traffic-light": 1,
+      "tree": 1,
+      "car": 1
+    }
+  }
+}

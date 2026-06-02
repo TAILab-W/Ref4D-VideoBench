@@ -1,0 +1,105 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0252.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "cv2",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "roadroller",
+        "attributes": {
+          "color": [
+            "gray",
+            "yellow"
+          ],
+          "size": [
+            "large"
+          ],
+          "action": [
+            "compacting",
+            "rolling"
+          ],
+          "facing-direction": [
+            "right"
+          ],
+          "position": [
+            "on-road"
+          ],
+          "tool-or-instrument": [
+            "roller"
+          ],
+          "equipment": [
+            "construction"
+          ],
+          "vehicle-type": [
+            "road-roller"
+          ],
+          "operator": [
+            "person-e2"
+          ],
+          "signature": [
+            "a-yellow-and-gray-road-roller-with-a-large-cylindrical-roller-at-the-front-and-back,-used-for-compacting-asphalt."
+          ]
+        },
+        "spans": [
+          [
+            0.2,
+            9.5
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "person",
+        "attributes": {
+          "color": [
+            "blue-shirt"
+          ],
+          "sex": [
+            "male"
+          ],
+          "action": [
+            "driving"
+          ],
+          "pose": [
+            "sitting"
+          ],
+          "facing-direction": [
+            "forward"
+          ],
+          "position": [
+            "inside-cabin"
+          ],
+          "species-or-breed": [
+            "human"
+          ],
+          "clothing": [
+            "blue-shirt"
+          ],
+          "signature": [
+            "an-individual-operating-machinery,-visible-inside-the-cabin-of-the-road-roller."
+          ]
+        },
+        "spans": [
+          [
+            0.2,
+            9.5
+          ]
+        ]
+      }
+    ],
+    "relations": []
+  },
+  "views": {
+    "objects_count_display": {
+      "roadroller": 1,
+      "person": 1
+    }
+  }
+}

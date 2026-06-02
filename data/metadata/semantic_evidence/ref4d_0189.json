@@ -1,0 +1,157 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0189.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "decord",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "mattress",
+        "attributes": {
+          "signature": [
+            "oxygen-plus"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            0.2
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "house",
+        "attributes": {
+          "signature": [
+            "house"
+          ]
+        },
+        "spans": [
+          [
+            1.5,
+            2.0
+          ]
+        ]
+      },
+      {
+        "id": "o3",
+        "name": "car",
+        "attributes": {
+          "signature": [
+            "car"
+          ]
+        },
+        "spans": [
+          [
+            1.8,
+            2.0
+          ]
+        ]
+      },
+      {
+        "id": "o4",
+        "name": "person",
+        "attributes": {
+          "signature": [
+            "person"
+          ]
+        },
+        "spans": [
+          [
+            3.0,
+            3.6
+          ]
+        ]
+      },
+      {
+        "id": "o5",
+        "name": "scissors",
+        "attributes": {
+          "signature": [
+            "scissors"
+          ]
+        },
+        "spans": [
+          [
+            3.0,
+            3.2
+          ]
+        ]
+      },
+      {
+        "id": "o6",
+        "name": "sewing-machine",
+        "attributes": {
+          "signature": [
+            "sewing-machine"
+          ]
+        },
+        "spans": [
+          [
+            3.2,
+            3.6
+          ]
+        ]
+      },
+      {
+        "id": "o7",
+        "name": "fabric",
+        "attributes": {
+          "signature": [
+            "fabric"
+          ]
+        },
+        "spans": [
+          [
+            3.2,
+            3.6
+          ]
+        ]
+      }
+    ],
+    "relations": [
+      {
+        "subject": "o4",
+        "predicate": "cutting",
+        "object": "o7",
+        "spans": [
+          [
+            3.0,
+            3.2
+          ]
+        ],
+        "confidence": 0.9
+      },
+      {
+        "subject": "o4",
+        "predicate": "sewing",
+        "object": "o7",
+        "spans": [
+          [
+            3.2,
+            3.6
+          ]
+        ],
+        "confidence": 0.9
+      }
+    ]
+  },
+  "views": {
+    "objects_count_display": {
+      "mattress": 1,
+      "house": 1,
+      "car": 1,
+      "person": 1,
+      "scissors": 1,
+      "sewing-machine": 1,
+      "fabric": 1
+    }
+  }
+}

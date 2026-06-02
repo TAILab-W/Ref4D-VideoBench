@@ -1,0 +1,236 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0347.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "decord",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "wave",
+        "attributes": {
+          "color": [
+            "blue",
+            "white"
+          ],
+          "texture": [
+            "crested",
+            "foamy"
+          ],
+          "material": [
+            "water"
+          ],
+          "signature": [
+            "foamy-white-cresting"
+          ]
+        },
+        "spans": [
+          [
+            0.2,
+            6.9
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "sand",
+        "attributes": {
+          "color": [
+            "light-brown",
+            "wet"
+          ],
+          "texture": [
+            "smooth",
+            "wet"
+          ],
+          "signature": [
+            "wet-light-brown"
+          ]
+        },
+        "spans": [
+          [
+            0.3,
+            6.9
+          ]
+        ]
+      },
+      {
+        "id": "o3",
+        "name": "sky",
+        "attributes": {
+          "color": [
+            "blue",
+            "white"
+          ],
+          "pattern": [
+            "cloudy"
+          ],
+          "signature": [
+            "blue-white-cloudy"
+          ]
+        },
+        "spans": [
+          [
+            0.1,
+            6.9
+          ]
+        ]
+      },
+      {
+        "id": "o4",
+        "name": "person-legs",
+        "attributes": {
+          "color": [
+            "black",
+            "skin"
+          ],
+          "object-part": [
+            "feet",
+            "legs"
+          ],
+          "action": [
+            "stepping",
+            "walking"
+          ],
+          "signature": [
+            "black-shoes-barefoot"
+          ]
+        },
+        "spans": [
+          [
+            5.7,
+            6.9
+          ]
+        ]
+      },
+      {
+        "id": "o5",
+        "name": "bird",
+        "attributes": {
+          "color": [
+            "dark"
+          ],
+          "species-or-breed": [
+            "bird"
+          ],
+          "signature": [
+            "small-dark-on-sand"
+          ]
+        },
+        "spans": [
+          [
+            5.8,
+            6.0
+          ]
+        ]
+      },
+      {
+        "id": "o6",
+        "name": "people-in-distance",
+        "attributes": {
+          "action": [
+            "walking"
+          ],
+          "signature": [
+            "two-figures-walking"
+          ]
+        },
+        "spans": [
+          [
+            6.0,
+            6.4
+          ]
+        ]
+      }
+    ],
+    "relations": [
+      {
+        "subject": "o1",
+        "predicate": "left-of",
+        "object": "o2",
+        "spans": [
+          [
+            0.3,
+            6.9
+          ]
+        ],
+        "confidence": 0.8
+      },
+      {
+        "subject": "o2",
+        "predicate": "below",
+        "object": "o3",
+        "spans": [
+          [
+            0.3,
+            6.9
+          ]
+        ],
+        "confidence": 0.8
+      },
+      {
+        "subject": "o4",
+        "predicate": "on",
+        "object": "o2",
+        "spans": [
+          [
+            5.7,
+            6.9
+          ]
+        ],
+        "confidence": 0.8
+      },
+      {
+        "subject": "o4",
+        "predicate": "touching",
+        "object": "o1",
+        "spans": [
+          [
+            5.7,
+            6.9
+          ]
+        ],
+        "confidence": 0.8
+      },
+      {
+        "subject": "o5",
+        "predicate": "on",
+        "object": "o2",
+        "spans": [
+          [
+            5.8,
+            6.0
+          ]
+        ],
+        "confidence": 0.8
+      },
+      {
+        "subject": "o6",
+        "predicate": "in",
+        "object": "o2",
+        "spans": [
+          [
+            6.0,
+            6.4
+          ]
+        ],
+        "confidence": 0.8
+      }
+    ]
+  },
+  "views": {
+    "objects_count_display": {
+      "wave": 1,
+      "sand": 1,
+      "sky": 1,
+      "person-legs": 1,
+      "bird": 1,
+      "people-in-distance": 1
+    }
+  }
+}

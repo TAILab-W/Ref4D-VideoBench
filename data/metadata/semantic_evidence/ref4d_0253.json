@@ -1,0 +1,71 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0253.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "cv2",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "wooden-plank",
+        "attributes": {
+          "color": [
+            "light"
+          ],
+          "material": [
+            "wood"
+          ],
+          "state": [
+            "moving"
+          ],
+          "signature": [
+            "light-color,-smooth-surface,-moving-under-press"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            1.0
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "press",
+        "attributes": {
+          "color": [
+            "black",
+            "yellow"
+          ],
+          "action": [
+            "pressing"
+          ],
+          "facing-direction": [
+            "down"
+          ],
+          "signature": [
+            "yellow-top,-black-bristles,-worn-spots"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            1.0
+          ]
+        ]
+      }
+    ],
+    "relations": []
+  },
+  "views": {
+    "objects_count_display": {
+      "wooden-plank": 1,
+      "press": 1
+    }
+  }
+}

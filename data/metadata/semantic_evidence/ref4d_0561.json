@@ -1,0 +1,100 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0561.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "cv2",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "train",
+        "attributes": {
+          "signature": [
+            "450016"
+          ]
+        },
+        "spans": [
+          [
+            2.8,
+            3.7
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "platform",
+        "attributes": {
+          "signature": [
+            "platform"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            4.0
+          ]
+        ]
+      },
+      {
+        "id": "o3",
+        "name": "railway",
+        "attributes": {
+          "signature": [
+            "railway"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            4.0
+          ]
+        ]
+      },
+      {
+        "id": "o4",
+        "name": "tree",
+        "attributes": {
+          "signature": [
+            "tree"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            4.0
+          ]
+        ]
+      },
+      {
+        "id": "o5",
+        "name": "sky",
+        "attributes": {
+          "signature": [
+            "sky"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            4.0
+          ]
+        ]
+      }
+    ],
+    "relations": []
+  },
+  "views": {
+    "objects_count_display": {
+      "train": 1,
+      "platform": 1,
+      "railway": 1,
+      "tree": 1,
+      "sky": 1
+    }
+  }
+}

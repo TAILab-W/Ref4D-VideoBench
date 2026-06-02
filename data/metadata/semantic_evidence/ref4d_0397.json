@@ -1,0 +1,254 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0397.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "decord",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "person",
+        "attributes": {
+          "signature": [
+            "person-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            14.9
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "book",
+        "attributes": {
+          "signature": [
+            "book-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            14.9
+          ]
+        ]
+      },
+      {
+        "id": "o3",
+        "name": "pen",
+        "attributes": {
+          "signature": [
+            "pen-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            14.9
+          ]
+        ]
+      },
+      {
+        "id": "o4",
+        "name": "apple",
+        "attributes": {
+          "signature": [
+            "apple-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            14.9
+          ]
+        ]
+      },
+      {
+        "id": "o5",
+        "name": "apple",
+        "attributes": {
+          "signature": [
+            "apple-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            14.9
+          ]
+        ]
+      },
+      {
+        "id": "o6",
+        "name": "apple",
+        "attributes": {
+          "signature": [
+            "apple-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            14.9
+          ]
+        ]
+      },
+      {
+        "id": "o7",
+        "name": "apple",
+        "attributes": {
+          "signature": [
+            "apple-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            14.9
+          ]
+        ]
+      },
+      {
+        "id": "o8",
+        "name": "apple",
+        "attributes": {
+          "signature": [
+            "apple-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            14.9
+          ]
+        ]
+      },
+      {
+        "id": "o9",
+        "name": "bowl",
+        "attributes": {
+          "signature": [
+            "bowl-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            14.9
+          ]
+        ]
+      },
+      {
+        "id": "o10",
+        "name": "laptop",
+        "attributes": {
+          "signature": [
+            "laptop-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            14.9
+          ]
+        ]
+      },
+      {
+        "id": "o11",
+        "name": "cup",
+        "attributes": {
+          "signature": [
+            "cup-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            14.9
+          ]
+        ]
+      },
+      {
+        "id": "o12",
+        "name": "straw",
+        "attributes": {
+          "signature": [
+            "straw-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            14.9
+          ]
+        ]
+      },
+      {
+        "id": "o13",
+        "name": "plastic-bag",
+        "attributes": {
+          "signature": [
+            "plastic-bag-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            14.9
+          ]
+        ]
+      },
+      {
+        "id": "o14",
+        "name": "person",
+        "attributes": {
+          "signature": [
+            "person-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            14.9
+          ]
+        ]
+      },
+      {
+        "id": "o15",
+        "name": "person",
+        "attributes": {
+          "signature": [
+            "person-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            14.9
+          ]
+        ]
+      }
+    ],
+    "relations": []
+  },
+  "views": {
+    "objects_count_display": {
+      "person": 3,
+      "book": 1,
+      "pen": 1,
+      "apple": 5,
+      "bowl": 1,
+      "laptop": 1,
+      "cup": 1,
+      "straw": 1,
+      "plastic-bag": 1
+    }
+  }
+}

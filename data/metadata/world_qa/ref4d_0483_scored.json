@@ -1,0 +1,222 @@
+{
+  "summary": {
+    "items": 10,
+    "enter_bank": 9,
+    "clip_range_sec": [
+      0.0,
+      5.03
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does the female skater maintain balance while being supported by the male skater's extended arm?",
+      "signals": [
+        "support(male_skater,female_skater)",
+        "balance(female_skater)",
+        "interpenetration(male_skater,female_skater)",
+        "collision(male_skater,female_skater)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "balance(female_skater)": 35.8333,
+        "interpenetration(male_skater,female_skater)": 7.1667,
+        "support(male_skater,female_skater)": 7.0,
+        "collision(male_skater,female_skater)": 6.3333
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Does the female skater follow a natural arc in mid-air without sudden changes in trajectory?",
+      "signals": [
+        "balance(oX)",
+        "center_of_mass_over_base(oX)",
+        "trajectory_dir(female_skater,axis)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(female_skater,axis)": 38.3333,
+        "balance(oX)": 7.1667,
+        "center_of_mass_over_base(oX)": 6.5
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Does the male skater hold the female skater continuously to prevent interpenetration between their bodies?",
+      "signals": [
+        "support(oA,oB)",
+        "continuity(oX)",
+        "interpenetration(male_skater,female_skater)",
+        "collision(male_skater,female_skater)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(oX)": 36.6667,
+        "interpenetration(male_skater,female_skater)": 7.1667,
+        "support(oA,oB)": 7.0,
+        "collision(male_skater,female_skater)": 6.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Does the ice surface provide sufficient friction for both skaters to control their movements and perform synchronized actions?",
+      "signals": [
+        "support(male-skater,female-skater)",
+        "balance(female-skater)",
+        "interpenetration(male-skater,female-skater)",
+        "friction_sliding(male_skater,on:ice)",
+        "friction_sliding(female_skater,on:ice)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "balance(female-skater)": 35.8333,
+        "interpenetration(male-skater,female-skater)": 7.1667,
+        "support(male-skater,female-skater)": 7.0,
+        "friction_sliding(male_skater,on:ice)": 6.0,
+        "friction_sliding(female_skater,on:ice)": 6.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Is there any collision or unsafe distance between the two skaters during the performance?",
+      "signals": [
+        "_default"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 23.33,
+      "total_score_100": 78.33,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "_default": 23.3333
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "The male skater supports the female skater in mid-air, maintaining her balance.",
+      "signals": [
+        "support(male-skater,female-skater)",
+        "balance(female-skater)",
+        "interpenetration(male-skater,female-skater)",
+        "support(oA,oB)",
+        "continuity(oX)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(oX)": 36.6667,
+        "balance(female-skater)": 7.1667,
+        "interpenetration(male-skater,female-skater)": 7.1667,
+        "support(male-skater,female-skater)": 7.0,
+        "support(oA,oB)": 7.0
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "The female skater is held by the male skater's extended arm and hand.",
+      "signals": [
+        "support(male_skater,female_skater)",
+        "balance(female_skater)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "balance(female_skater)": 35.8333,
+        "support(male_skater,female_skater)": 7.0
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "The female skater follows a natural arc trajectory while airborne.",
+      "signals": [
+        "trajectory_dir(female_skater,axis)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 38.33,
+      "total_score_100": 88.33,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(female_skater,axis)": 38.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "The two skaters maintain safe distances to prevent interpenetration.",
+      "signals": [
+        "interpenetration(male_skater,female_skater)",
+        "collision(male_skater,female_skater)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "interpenetration(male_skater,female_skater)": 35.8333,
+        "collision(male_skater,female_skater)": 6.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "The female skater maintains a stable center of mass and proper balance while airborne.",
+      "signals": [
+        "balance(oX)",
+        "center_of_mass_over_base(oX)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "balance(oX)": 35.8333,
+        "center_of_mass_over_base(oX)": 6.5
+      },
+      "content_score_raw": "50"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "a1",
+    "a2",
+    "a3",
+    "a4",
+    "a5"
+  ]
+}

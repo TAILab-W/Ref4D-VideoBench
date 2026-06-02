@@ -1,0 +1,129 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0235.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "cv2",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "person",
+        "attributes": {
+          "signature": [
+            "person-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            13.5
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "cup",
+        "attributes": {
+          "signature": [
+            "cup-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            13.5
+          ]
+        ]
+      },
+      {
+        "id": "o3",
+        "name": "cup",
+        "attributes": {
+          "signature": [
+            "cup-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            13.5
+          ]
+        ]
+      },
+      {
+        "id": "o4",
+        "name": "cup",
+        "attributes": {
+          "signature": [
+            "cup-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            13.5
+          ]
+        ]
+      },
+      {
+        "id": "o5",
+        "name": "cup",
+        "attributes": {
+          "signature": [
+            "cup-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            13.5
+          ]
+        ]
+      },
+      {
+        "id": "o6",
+        "name": "scissors",
+        "attributes": {
+          "signature": [
+            "scissors-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            13.5
+          ]
+        ]
+      },
+      {
+        "id": "o7",
+        "name": "vase",
+        "attributes": {
+          "signature": [
+            "vase-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            13.5
+          ]
+        ]
+      }
+    ],
+    "relations": []
+  },
+  "views": {
+    "objects_count_display": {
+      "person": 1,
+      "cup": 4,
+      "scissors": 1,
+      "vase": 1
+    }
+  }
+}

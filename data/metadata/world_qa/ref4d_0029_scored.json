@@ -1,0 +1,216 @@
+{
+  "summary": {
+    "items": 10,
+    "enter_bank": 9,
+    "clip_range_sec": [
+      0.0,
+      12.97
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Do the elephants' shadows point away from the water?",
+      "signals": [
+        "support(elephant,ground)",
+        "shadow_consistency(elephant)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "shadow_consistency(elephant)": 36.6667,
+        "support(elephant,ground)": 7.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Are all elephant legs in contact with the ground while drinking?",
+      "signals": [
+        "biological_motion(elephant)",
+        "buoyancy_float(elephant,in:water)"
+      ],
+      "content_score_60": 30,
+      "signal_score_40": 40.0,
+      "total_score_100": 70.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "biological_motion(elephant)": 38.3333,
+        "buoyancy_float(elephant,in:water)": 6.8333
+      },
+      "content_score_raw": "30"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Is the smallest elephant smaller than the largest one?",
+      "signals": [
+        "continuity(elephant)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 36.67,
+      "total_score_100": 96.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(elephant)": 36.6667
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Do larger elephants stand behind smaller ones near the water?",
+      "signals": [
+        "size_inconsistency(elephant)",
+        "support(elephant,elephant)",
+        "buoyancy_float(elephant,in:water)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "size_inconsistency(elephant)": 37.5,
+        "support(elephant,elephant)": 7.0,
+        "buoyancy_float(elephant,in:water)": 6.8333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Does the reflection of trees appear on the water surface?",
+      "signals": [
+        "reflection_consistency(water)",
+        "shadow_consistency(elephant)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "shadow_consistency(elephant)": 36.6667,
+        "reflection_consistency(water)": 7.0
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "Elephants of various sizes stand and interact near the water.",
+      "signals": [
+        "size_inconsistency(elephant)",
+        "support(elephant,elephant)",
+        "buoyancy_float(elephant,in:water)",
+        "continuity(elephant)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "size_inconsistency(elephant)": 37.5,
+        "continuity(elephant)": 7.3333,
+        "support(elephant,elephant)": 7.0,
+        "buoyancy_float(elephant,in:water)": 6.8333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "An elephant drinks water from the pond, with its shadow on the ground.",
+      "signals": [
+        "biological_motion(elephant)",
+        "buoyancy_float(elephant,in:water)",
+        "support(elephant,ground)",
+        "shadow_consistency(elephant)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "biological_motion(elephant)": 38.3333,
+        "shadow_consistency(elephant)": 7.3333,
+        "support(elephant,ground)": 7.0,
+        "buoyancy_float(elephant,in:water)": 6.8333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "The water reflects some trees in the background.",
+      "signals": [
+        "reflection_consistency(water)",
+        "shadow_consistency(elephant)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "shadow_consistency(elephant)": 36.6667,
+        "reflection_consistency(water)": 7.0
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "The elephants maintain their natural size and form without sudden changes.",
+      "signals": [
+        "size_inconsistency(elephant)",
+        "support(elephant,elephant)",
+        "buoyancy_float(elephant,in:water)",
+        "continuity(elephant)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "size_inconsistency(elephant)": 37.5,
+        "continuity(elephant)": 7.3333,
+        "support(elephant,elephant)": 7.0,
+        "buoyancy_float(elephant,in:water)": 6.8333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "An elephant's trunk dips into the water, showing normal drinking behavior.",
+      "signals": [
+        "biological_motion(elephant)",
+        "buoyancy_float(elephant,in:water)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "biological_motion(elephant)": 38.3333,
+        "buoyancy_float(elephant,in:water)": 6.8333
+      },
+      "content_score_raw": "60"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v3",
+    "v4",
+    "v5",
+    "a1",
+    "a2",
+    "a3",
+    "a4",
+    "a5"
+  ]
+}

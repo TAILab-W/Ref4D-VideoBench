@@ -1,0 +1,222 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0082.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "cv2",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "otter",
+        "attributes": {
+          "color": [
+            "light-brown"
+          ],
+          "texture": [
+            "smooth",
+            "wet"
+          ],
+          "pose": [
+            "curled-up",
+            "resting"
+          ],
+          "state": [
+            "relaxed"
+          ],
+          "position": [
+            "foreground",
+            "right-side"
+          ],
+          "signature": [
+            "light-brown-fur,-curled-tail,-resting-on-rock"
+          ]
+        },
+        "spans": [
+          [
+            0.2,
+            0.8
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "otter",
+        "attributes": {
+          "color": [
+            "dark-brown"
+          ],
+          "texture": [
+            "smooth",
+            "wet"
+          ],
+          "action": [
+            "exploring",
+            "walking"
+          ],
+          "pose": [
+            "active",
+            "curious"
+          ],
+          "position": [
+            "background",
+            "left-side"
+          ],
+          "signature": [
+            "dark-brown-fur,-moving-around-log,-tail-in-air"
+          ]
+        },
+        "spans": [
+          [
+            0.1,
+            0.3
+          ]
+        ]
+      },
+      {
+        "id": "o3",
+        "name": "otter",
+        "attributes": {
+          "color": [
+            "medium-brown"
+          ],
+          "texture": [
+            "smooth",
+            "wet"
+          ],
+          "action": [
+            "grooming",
+            "sniffing"
+          ],
+          "pose": [
+            "leaning",
+            "sitting"
+          ],
+          "state": [
+            "alert"
+          ],
+          "position": [
+            "center",
+            "middle-ground"
+          ],
+          "signature": [
+            "medium-brown-fur,-grooming-itself,-near-water"
+          ]
+        },
+        "spans": [
+          [
+            0.4,
+            0.7
+          ]
+        ]
+      }
+    ],
+    "relations": [
+      {
+        "subject": "o1",
+        "predicate": "right-of",
+        "object": "o2",
+        "spans": [
+          [
+            0.3,
+            0.8
+          ]
+        ],
+        "confidence": 0.0
+      },
+      {
+        "subject": "o3",
+        "predicate": "left-of",
+        "object": "o1",
+        "spans": [
+          [
+            0.4,
+            0.7
+          ]
+        ],
+        "confidence": 0.0
+      },
+      {
+        "subject": "o3",
+        "predicate": "right-of",
+        "object": "o2",
+        "spans": [
+          [
+            0.4,
+            0.7
+          ]
+        ],
+        "confidence": 0.0
+      },
+      {
+        "subject": "o2",
+        "predicate": "left-of",
+        "object": "o3",
+        "spans": [
+          [
+            0.1,
+            0.3
+          ]
+        ],
+        "confidence": 0.0
+      },
+      {
+        "subject": "o1",
+        "predicate": "below",
+        "object": "o3",
+        "spans": [
+          [
+            0.2,
+            0.8
+          ]
+        ],
+        "confidence": 0.0
+      },
+      {
+        "subject": "o2",
+        "predicate": "above",
+        "object": "o3",
+        "spans": [
+          [
+            0.1,
+            0.3
+          ]
+        ],
+        "confidence": 0.0
+      },
+      {
+        "subject": "o3",
+        "predicate": "above",
+        "object": "o1",
+        "spans": [
+          [
+            0.4,
+            0.7
+          ]
+        ],
+        "confidence": 0.0
+      },
+      {
+        "subject": "o3",
+        "predicate": "looking-at",
+        "object": "o1",
+        "spans": [
+          [
+            0.4,
+            0.7
+          ]
+        ],
+        "confidence": 0.0
+      }
+    ]
+  },
+  "views": {
+    "objects_count_display": {
+      "otter": 3
+    }
+  }
+}

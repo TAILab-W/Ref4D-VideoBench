@@ -1,0 +1,196 @@
+{
+  "summary": {
+    "items": 10,
+    "enter_bank": 9,
+    "clip_range_sec": [
+      0.0,
+      9.1
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Do the dolphins move continuously without sudden changes in motion?",
+      "signals": [
+        "buoyancy_float(dolphin,in:water)",
+        "continuity(dolphin)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(dolphin)": 36.6667,
+        "buoyancy_float(dolphin,in:water)": 6.8333
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Do the dolphin trajectories follow fluid dynamics of water movement?",
+      "signals": [
+        "trajectory_dir(dolphin,axis)",
+        "continuity(dolphin)"
+      ],
+      "content_score_60": 45,
+      "signal_score_40": 40.0,
+      "total_score_100": 85.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(dolphin,axis)": 38.3333,
+        "continuity(dolphin)": 7.3333
+      },
+      "content_score_raw": "45"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Is the text \"COUB by @gabichannel\" static at the bottom right corner?",
+      "signals": [
+        "rigid_transform(text)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 37.5,
+      "total_score_100": 92.5,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "rigid_transform(text)": 37.5
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Do the dolphins avoid interpenetration during their close contact?",
+      "signals": [
+        "collision(dolphin,dolphin)",
+        "interpenetration(dolphin,dolphin)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "interpenetration(dolphin,dolphin)": 35.8333,
+        "collision(dolphin,dolphin)": 6.3333
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Do the dolphins maintain buoyancy while swimming together?",
+      "signals": [
+        "buoyancy_float(dolphin,in:water)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 34.17,
+      "total_score_100": 89.17,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "buoyancy_float(dolphin,in:water)": 34.1667
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "Two dolphins swim in clear blue water, maintaining natural buoyancy and consistent motion.",
+      "signals": [
+        "buoyancy_float(dolphin,in:water)",
+        "continuity(dolphin)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(dolphin)": 36.6667,
+        "buoyancy_float(dolphin,in:water)": 6.8333
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "Text \"COUB by @gabichannel\" is static at the bottom right corner.",
+      "signals": [
+        "rigid_transform(text)"
+      ],
+      "content_score_60": 33,
+      "signal_score_40": 37.5,
+      "total_score_100": 70.5,
+      "duplicate_penalized": true,
+      "signal_detail": {
+        "rigid_transform(text)": 37.5
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "Dolphins follow continuous trajectories without frame discontinuity or sudden changes.",
+      "signals": [
+        "trajectory_dir(dolphin,axis)",
+        "continuity(dolphin)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(dolphin,axis)": 38.3333,
+        "continuity(dolphin)": 7.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "Dolphins do not show interpenetration or collision during their interaction.",
+      "signals": [
+        "collision(dolphin,dolphin)",
+        "interpenetration(dolphin,dolphin)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "interpenetration(dolphin,dolphin)": 35.8333,
+        "collision(dolphin,dolphin)": 6.3333
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "Dolphins maintain buoyancy in water and exhibit natural swimming behavior.",
+      "signals": [
+        "buoyancy_float(dolphin,in:water)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 34.17,
+      "total_score_100": 89.17,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "buoyancy_float(dolphin,in:water)": 34.1667
+      },
+      "content_score_raw": "55"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "v5",
+    "a1",
+    "a3",
+    "a4",
+    "a5"
+  ]
+}

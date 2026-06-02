@@ -1,0 +1,203 @@
+{
+  "summary": {
+    "items": 10,
+    "enter_bank": 8,
+    "clip_range_sec": [
+      0.0,
+      8.67
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Is the interaction taking place in an open grassy area with clear weather?",
+      "signals": [
+        "friction_sliding(kangaroo,on:grass)",
+        "falling_hazard(kangaroo)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 37.67,
+      "total_score_100": 97.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "falling_hazard(kangaroo)": 31.6667,
+        "friction_sliding(kangaroo,on:grass)": 6.0
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Does the person use their hands to gently hold the kangaroo's chest area for petting?",
+      "signals": [
+        "grasp_stability(person,kangaroo)",
+        "tool_contact(person,kangaroo)",
+        "biological_motion(kangaroo)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "biological_motion(kangaroo)": 38.3333,
+        "grasp_stability(person,kangaroo)": 5.6667,
+        "tool_contact(person,kangaroo)": 5.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Does the kangaroo maintain its posture and balance without sudden changes while being held?",
+      "signals": [
+        "balance(kangaroo)",
+        "continuity(kangaroo)",
+        "support(kangaroo,hand)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(kangaroo)": 36.6667,
+        "balance(kangaroo)": 7.1667,
+        "support(kangaroo,hand)": 7.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Do the shadows of the kangaroo and hand align consistently with the light source direction?",
+      "signals": [
+        "shadow_consistency(kangaroo)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 36.67,
+      "total_score_100": 86.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "shadow_consistency(kangaroo)": 36.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Is the human holding the kangaroo securely to prevent injury?",
+      "signals": [
+        "grasp_stability(hand,kangaroo)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 28.33,
+      "total_score_100": 78.33,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "grasp_stability(hand,kangaroo)": 28.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "The interaction occurs in an open grassy area under clear weather conditions.",
+      "signals": [
+        "friction_sliding(kangaroo,on:grass)",
+        "falling_hazard(kangaroo)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 37.67,
+      "total_score_100": 97.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "falling_hazard(kangaroo)": 31.6667,
+        "friction_sliding(kangaroo,on:grass)": 6.0
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "A person's hands gently hold the kangaroo's chest area, maintaining physical consistency.",
+      "signals": [
+        "grasp_stability(person,kangaroo)",
+        "tool_contact(person,kangaroo)",
+        "support(kangaroo,hand)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "support(kangaroo,hand)": 35.0,
+        "grasp_stability(person,kangaroo)": 5.6667,
+        "tool_contact(person,kangaroo)": 5.6667
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "The kangaroo maintains its posture and balance without sudden changes or distress.",
+      "signals": [
+        "balance(kangaroo)",
+        "continuity(kangaroo)",
+        "biological_motion(kangaroo)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "biological_motion(kangaroo)": 38.3333,
+        "continuity(kangaroo)": 7.3333,
+        "balance(kangaroo)": 7.1667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "The kangaroo's shadow on the ground aligns with its body and light source direction.",
+      "signals": [
+        "shadow_consistency(kangaroo)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 36.67,
+      "total_score_100": 86.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "shadow_consistency(kangaroo)": 36.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "The person holds the kangaroo securely to prevent injury.",
+      "signals": [
+        "grasp_stability(hand,kangaroo)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 28.33,
+      "total_score_100": 78.33,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "grasp_stability(hand,kangaroo)": 28.3333
+      },
+      "content_score_raw": "50"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "a1",
+    "a2",
+    "a3",
+    "a4"
+  ]
+}

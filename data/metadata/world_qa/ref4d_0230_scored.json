@@ -1,0 +1,207 @@
+{
+  "summary": {
+    "items": 10,
+    "enter_bank": 10,
+    "clip_range_sec": [
+      0.0,
+      5.9
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does the fish stay on the spatula while being cooked in the pan?",
+      "signals": [
+        "tool_contact(spatula,pan)",
+        "tool_contact(spatula,fish)",
+        "tool_usage_correct(spatula,for:cooking)",
+        "balance(fish)",
+        "continuity(fish)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(fish)": 36.6667,
+        "balance(fish)": 7.1667,
+        "tool_usage_correct(spatula,for:cooking)": 5.8333,
+        "tool_contact(spatula,pan)": 5.6667,
+        "tool_contact(spatula,fish)": 5.6667
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Is the seasoning container used to pour onto the food in the pan?",
+      "signals": [
+        "pour_direction(seasoning,axis:down)",
+        "action_phase(oAct,phase)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 33.67,
+      "total_score_100": 83.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "pour_direction(seasoning,axis:down)": 28.3333,
+        "action_phase(oAct,phase)": 5.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Is the flame kept at a safe distance from the edge of the pan?",
+      "signals": [
+        "flame_proximity(oObj,dist)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 34.17,
+      "total_score_100": 94.17,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "flame_proximity(oObj,dist)": 34.1667
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Do the shadow and hand orientation match their real positions?",
+      "signals": [
+        "cast_shadow_contact(oX,shadow)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 37.5,
+      "total_score_100": 97.5,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "cast_shadow_contact(oX,shadow)": 37.5
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Does the asparagus remain inside the boundaries of the pan?",
+      "signals": [
+        "containment(oA,oB)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 29.17,
+      "total_score_100": 89.17,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "containment(oA,oB)": 29.1667
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "A hand holds a spatula with fish over a pan on the fire.",
+      "signals": [
+        "tool_contact(spatula,pan)",
+        "tool_contact(spatula,fish)",
+        "tool_usage_correct(spatula,for:cooking)",
+        "balance(fish)",
+        "continuity(fish)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(fish)": 36.6667,
+        "balance(fish)": 7.1667,
+        "tool_usage_correct(spatula,for:cooking)": 5.8333,
+        "tool_contact(spatula,pan)": 5.6667,
+        "tool_contact(spatula,fish)": 5.6667
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "A seasoning container is held above the pan, ready to pour.",
+      "signals": [
+        "pour_direction(seasoning,axis:down)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 28.33,
+      "total_score_100": 88.33,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "pour_direction(seasoning,axis:down)": 28.3333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "The flame in the background does not touch the black cooking pan.",
+      "signals": [
+        "flame_proximity(oObj,dist)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 34.17,
+      "total_score_100": 94.17,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "flame_proximity(oObj,dist)": 34.1667
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "Green asparagus remains inside the frying pan.",
+      "signals": [
+        "containment(oA,oB)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 29.17,
+      "total_score_100": 89.17,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "containment(oA,oB)": 29.1667
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "The fire pit is surrounded by green vegetation, not flammable dry grass.",
+      "signals": [
+        "hot_surface_contact(pan,fire)",
+        "flame_proximity(fish,dist:close)",
+        "prohibited_intersection(pan,grass)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "prohibited_intersection(pan,grass)": 36.6667,
+        "hot_surface_contact(pan,fire)": 6.8333,
+        "flame_proximity(fish,dist:close)": 6.8333
+      },
+      "content_score_raw": "60"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "v5",
+    "a1",
+    "a2",
+    "a3",
+    "a4",
+    "a5"
+  ]
+}

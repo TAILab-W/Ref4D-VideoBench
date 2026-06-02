@@ -1,0 +1,77 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0245.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "cv2",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "rice",
+        "attributes": {
+          "signature": [
+            "yellow-fluffy-rice-on-plate"
+          ]
+        },
+        "spans": [
+          [
+            0.1,
+            0.9
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "meat",
+        "attributes": {
+          "signature": [
+            "charred-brown-meat-on-rice"
+          ]
+        },
+        "spans": [
+          [
+            0.4,
+            0.6
+          ]
+        ]
+      }
+    ],
+    "relations": [
+      {
+        "subject": "o1",
+        "predicate": "picking-up",
+        "object": "o1",
+        "spans": [
+          [
+            0.3,
+            0.4
+          ]
+        ],
+        "confidence": 0.9
+      },
+      {
+        "subject": "o1",
+        "predicate": "holding",
+        "object": "o1",
+        "spans": [
+          [
+            0.7,
+            0.8
+          ]
+        ],
+        "confidence": 0.9
+      }
+    ]
+  },
+  "views": {
+    "objects_count_display": {
+      "rice": 1,
+      "meat": 1
+    }
+  }
+}

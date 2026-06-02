@@ -1,0 +1,206 @@
+{
+  "summary": {
+    "items": 10,
+    "enter_bank": 7,
+    "clip_range_sec": [
+      0.0,
+      14.7
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Is the wooden spatula used to stir the food in the pan?",
+      "signals": [
+        "tool_contact(spatula,meat)",
+        "tool_contact"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 34.0,
+      "total_score_100": 89.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "tool_contact(spatula,meat)": 28.3333,
+        "tool_contact": 5.6667
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Does the hand holding the green container pour its contents into the pan without touching the hot surface directly?",
+      "signals": [
+        "tool_contact(spoon,tortilla)",
+        "action_phase(add,phase)",
+        "hot_surface_contact"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "hot_surface_contact": 34.1667,
+        "tool_contact(spoon,tortilla)": 5.6667,
+        "action_phase(add,phase)": 5.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Is the flame visible under the black pan on the gas stove?",
+      "signals": [
+        "flame_proximity(pan,dist)",
+        "hot_surface_contact(pan,stove)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "flame_proximity(pan,dist)": 34.1667,
+        "hot_surface_contact(pan,stove)": 6.8333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Are the ingredients from the green container being added onto the tortilla in the pan?",
+      "signals": [
+        "pour_direction"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 28.33,
+      "total_score_100": 78.33,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "pour_direction": 28.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Is the meat pressed down with the wooden spatula while cooking?",
+      "signals": [
+        "tool_contact(spatula,pan)",
+        "tool_contact(spatula,tortilla)",
+        "hot_surface_contact(tortilla,pan)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "hot_surface_contact(tortilla,pan)": 34.1667,
+        "tool_contact(spatula,pan)": 5.6667,
+        "tool_contact(spatula,tortilla)": 5.6667
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "A hand uses a wooden spoon to add ingredients onto a tortilla on a pan.",
+      "signals": [
+        "tool_contact(spoon,tortilla)",
+        "action_phase(add,phase)",
+        "hot_surface_contact"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "hot_surface_contact": 34.1667,
+        "tool_contact(spoon,tortilla)": 5.6667,
+        "action_phase(add,phase)": 5.3333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "Contents of the green container are being poured into the pan.",
+      "signals": [
+        "pour_direction"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 28.33,
+      "total_score_100": 78.33,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "pour_direction": 28.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "A wooden spatula is used to manipulate food in the pan.",
+      "signals": [
+        "tool_contact(spatula,meat)",
+        "tool_contact"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 34.0,
+      "total_score_100": 94.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "tool_contact(spatula,meat)": 28.3333,
+        "tool_contact": 5.6667
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "The flame on the gas stove is visible under the pan.",
+      "signals": [
+        "flame_proximity(pan,dist)",
+        "hot_surface_contact(pan,stove)"
+      ],
+      "content_score_60": 0,
+      "signal_score_40": 40.0,
+      "total_score_100": 40.0,
+      "duplicate_penalized": true,
+      "signal_detail": {
+        "flame_proximity(pan,dist)": 34.1667,
+        "hot_surface_contact(pan,stove)": 6.8333
+      },
+      "content_score_raw": "0"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "A spatula presses down on food in the pan.",
+      "signals": [
+        "tool_contact(spatula,pan)",
+        "tool_contact(spatula,tortilla)",
+        "hot_surface_contact(tortilla,pan)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "hot_surface_contact(tortilla,pan)": 34.1667,
+        "tool_contact(spatula,pan)": 5.6667,
+        "tool_contact(spatula,tortilla)": 5.6667
+      },
+      "content_score_raw": "50"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v5",
+    "a1",
+    "a3",
+    "a5"
+  ]
+}

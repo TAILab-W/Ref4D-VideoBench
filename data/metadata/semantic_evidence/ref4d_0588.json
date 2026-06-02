@@ -1,0 +1,225 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0588.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "cv2",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "person",
+        "attributes": {
+          "color": [
+            "gray"
+          ],
+          "hair-style": [
+            "curly"
+          ],
+          "hair-color": [
+            "dark"
+          ],
+          "pose": [
+            "sitting"
+          ],
+          "action": [
+            "looking-forward"
+          ],
+          "signature": [
+            "gray-shirt-back-view-curly-hair"
+          ]
+        },
+        "spans": [
+          [
+            0.2,
+            7.6
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "trolley",
+        "attributes": {
+          "color": [
+            "brown"
+          ],
+          "facing-direction": [
+            "forward"
+          ],
+          "position": [
+            "on-track"
+          ],
+          "signature": [
+            "brown-tram-number-58"
+          ]
+        },
+        "spans": [
+          [
+            2.1,
+            7.6
+          ]
+        ]
+      },
+      {
+        "id": "o3",
+        "name": "car",
+        "attributes": {
+          "color": [
+            "silver"
+          ],
+          "action": [
+            "moving"
+          ],
+          "position": [
+            "left-lane"
+          ],
+          "signature": [
+            "silver-car-moving-left"
+          ]
+        },
+        "spans": [
+          [
+            0.5,
+            1.1
+          ],
+          [
+            1.6,
+            2.7
+          ],
+          [
+            3.9,
+            4.4
+          ]
+        ]
+      },
+      {
+        "id": "o4",
+        "name": "building",
+        "attributes": {
+          "color": [
+            "red-brick"
+          ],
+          "material": [
+            "brick"
+          ],
+          "position": [
+            "left"
+          ],
+          "signature": [
+            "red-brick-building-left-side"
+          ]
+        },
+        "spans": [
+          [
+            0.1,
+            7.6
+          ]
+        ]
+      },
+      {
+        "id": "o5",
+        "name": "street-sign",
+        "attributes": {
+          "color": [
+            "green"
+          ],
+          "position": [
+            "left-side-of-road"
+          ],
+          "signature": [
+            "green-sign-on-pole"
+          ]
+        },
+        "spans": [
+          [
+            0.1,
+            7.6
+          ]
+        ]
+      }
+    ],
+    "relations": [
+      {
+        "subject": "o1",
+        "predicate": "looking-at",
+        "object": "o2",
+        "spans": [
+          [
+            0.3,
+            7.6
+          ]
+        ],
+        "confidence": 0.0
+      },
+      {
+        "subject": "o2",
+        "predicate": "on-track",
+        "object": "o1",
+        "spans": [
+          [
+            2.1,
+            7.6
+          ]
+        ],
+        "confidence": 0.0
+      },
+      {
+        "subject": "o3",
+        "predicate": "moving",
+        "object": "o1",
+        "spans": [
+          [
+            0.5,
+            1.1
+          ],
+          [
+            1.6,
+            2.7
+          ],
+          [
+            3.9,
+            4.4
+          ]
+        ],
+        "confidence": 0.0
+      },
+      {
+        "subject": "o4",
+        "predicate": "left-of",
+        "object": "o2",
+        "spans": [
+          [
+            0.1,
+            7.6
+          ]
+        ],
+        "confidence": 0.0
+      },
+      {
+        "subject": "o5",
+        "predicate": "left-of",
+        "object": "o2",
+        "spans": [
+          [
+            0.1,
+            7.6
+          ]
+        ],
+        "confidence": 0.0
+      }
+    ]
+  },
+  "views": {
+    "objects_count_display": {
+      "person": 1,
+      "trolley": 1,
+      "car": 1,
+      "building": 1,
+      "street-sign": 1
+    }
+  }
+}

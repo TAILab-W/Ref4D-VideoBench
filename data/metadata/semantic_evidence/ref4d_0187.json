@@ -1,0 +1,147 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0187.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "cv2",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "person",
+        "attributes": {
+          "signature": [
+            "person-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            7.4
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "ice-cream-bar",
+        "attributes": {
+          "signature": [
+            "ice-cream-bar-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            7.4
+          ]
+        ]
+      },
+      {
+        "id": "o3",
+        "name": "nestle-milo-drink",
+        "attributes": {
+          "signature": [
+            "nestle-milo-drink-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            7.4
+          ]
+        ]
+      },
+      {
+        "id": "o4",
+        "name": "ice-cream-bar",
+        "attributes": {
+          "signature": [
+            "ice-cream-bar-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            7.4
+          ]
+        ]
+      },
+      {
+        "id": "o5",
+        "name": "chocolate-coating",
+        "attributes": {
+          "signature": [
+            "chocolate-coating-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            7.4
+          ]
+        ]
+      },
+      {
+        "id": "o6",
+        "name": "soccer-ball",
+        "attributes": {
+          "signature": [
+            "soccer-ball-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            7.4
+          ]
+        ]
+      },
+      {
+        "id": "o7",
+        "name": "field",
+        "attributes": {
+          "signature": [
+            "field-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            7.4
+          ]
+        ]
+      },
+      {
+        "id": "o8",
+        "name": "goalkeeper",
+        "attributes": {
+          "signature": [
+            "goalkeeper-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            7.4
+          ]
+        ]
+      }
+    ],
+    "relations": []
+  },
+  "views": {
+    "objects_count_display": {
+      "person": 1,
+      "ice-cream-bar": 2,
+      "nestle-milo-drink": 1,
+      "chocolate-coating": 1,
+      "soccer-ball": 1,
+      "field": 1,
+      "goalkeeper": 1
+    }
+  }
+}

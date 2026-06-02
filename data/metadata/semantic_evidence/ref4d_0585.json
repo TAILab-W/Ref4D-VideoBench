@@ -1,0 +1,129 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0585.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "cv2",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "airplane",
+        "attributes": {
+          "color": [
+            "blue",
+            "white"
+          ],
+          "pattern": [
+            "striped"
+          ],
+          "printed-text": [
+            "aviation-corporation"
+          ],
+          "signature": [
+            "white-blue-tail-aviation-corporation-logo"
+          ]
+        },
+        "spans": [
+          [
+            0.2,
+            5.5
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "hangar",
+        "attributes": {
+          "color": [
+            "blue"
+          ],
+          "signature": [
+            "blue-roof"
+          ]
+        },
+        "spans": [
+          [
+            0.4,
+            5.5
+          ]
+        ]
+      },
+      {
+        "id": "o3",
+        "name": "lightpole",
+        "attributes": {
+          "color": [
+            "white"
+          ],
+          "signature": [
+            "tall-white"
+          ]
+        },
+        "spans": [
+          [
+            1.3,
+            5.5
+          ]
+        ]
+      },
+      {
+        "id": "o4",
+        "name": "wing",
+        "attributes": {
+          "color": [
+            "black",
+            "gray"
+          ],
+          "signature": [
+            "gray-with-black-tip"
+          ]
+        },
+        "spans": [
+          [
+            0.6,
+            5.5
+          ]
+        ]
+      }
+    ],
+    "relations": [
+      {
+        "subject": "o1",
+        "predicate": "left-of",
+        "object": "o2",
+        "spans": [
+          [
+            0.3,
+            5.5
+          ]
+        ],
+        "confidence": 0.9
+      },
+      {
+        "subject": "o4",
+        "predicate": "overlapping",
+        "object": "o1",
+        "spans": [
+          [
+            0.5,
+            5.5
+          ]
+        ],
+        "confidence": 0.9
+      }
+    ]
+  },
+  "views": {
+    "objects_count_display": {
+      "airplane": 1,
+      "hangar": 1,
+      "lightpole": 1,
+      "wing": 1
+    }
+  }
+}

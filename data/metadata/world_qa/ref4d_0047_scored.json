@@ -1,0 +1,216 @@
+{
+  "summary": {
+    "items": 10,
+    "enter_bank": 7,
+    "clip_range_sec": [
+      0.0,
+      14.63
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does the ant move forward on the surface without sudden changes in direction?",
+      "signals": [
+        "continuity(ant)",
+        "biological_motion(ant)",
+        "trajectory_dir(ant,axis)",
+        "accel_sign(ant,axis)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "biological_motion(ant)": 38.3333,
+        "trajectory_dir(ant,axis)": 7.6667,
+        "continuity(ant)": 7.3333,
+        "accel_sign(ant,axis)": 7.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Is the ant's movement safe and natural for a human skin-like surface?",
+      "signals": [
+        "friction_sliding(ant,on:skin)",
+        "continuity(ant)"
+      ],
+      "content_score_60": 40,
+      "signal_score_40": 40.0,
+      "total_score_100": 80.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(ant)": 36.6667,
+        "friction_sliding(ant,on:skin)": 6.0
+      },
+      "content_score_raw": "40"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Does the ant maintain its physical structure while interacting with the textured surface?",
+      "signals": [
+        "continuity(ant)",
+        "friction_sliding(ant,on:substrate)",
+        "deformation(ant)",
+        "fracture(ant)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "deformation(ant)": 40.0,
+        "continuity(ant)": 7.3333,
+        "fracture(ant)": 6.3333,
+        "friction_sliding(ant,on:substrate)": 6.0
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Does the ant's speed remain consistent throughout its motion on the ground?",
+      "signals": [
+        "biological_motion(ant)",
+        "continuity(ant)"
+      ],
+      "content_score_60": 30,
+      "signal_score_40": 40.0,
+      "total_score_100": 70.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "biological_motion(ant)": 38.3333,
+        "continuity(ant)": 7.3333
+      },
+      "content_score_raw": "30"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Is the shadow of the ant visible and aligned with its position?",
+      "signals": [
+        "shadow_consistency(ant)"
+      ],
+      "content_score_60": 20,
+      "signal_score_40": 36.67,
+      "total_score_100": 56.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "shadow_consistency(ant)": 36.6667
+      },
+      "content_score_raw": "20"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "The ant maintains its physical form and position without sudden changes or deformations.",
+      "signals": [
+        "continuity(ant)",
+        "frame_discontinuity(t)",
+        "interpenetration(ant)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "frame_discontinuity(t)": 40.0,
+        "continuity(ant)": 7.3333,
+        "interpenetration(ant)": 7.1667
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "The ant's movement follows natural biological motion with consistent trajectory direction and acceleration sign.",
+      "signals": [
+        "biological_motion(ant)",
+        "trajectory_dir(ant,axis)",
+        "accel_sign(ant,axis)",
+        "material_optics(ant)",
+        "size_inconsistency(ant)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "biological_motion(ant)": 38.3333,
+        "trajectory_dir(ant,axis)": 7.6667,
+        "material_optics(ant)": 7.5,
+        "size_inconsistency(ant)": 7.5,
+        "accel_sign(ant,axis)": 7.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "The ant exhibits continuous interaction with the surface, showing no unnatural deformations or fractures.",
+      "signals": [
+        "continuity(ant)",
+        "friction_sliding(ant,on:substrate)",
+        "deformation(ant)",
+        "fracture(ant)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "deformation(ant)": 40.0,
+        "continuity(ant)": 7.3333,
+        "fracture(ant)": 6.3333,
+        "friction_sliding(ant,on:substrate)": 6.0
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "The ant moves naturally on the ground surface without sudden changes in position or trajectory.",
+      "signals": [
+        "continuity(ant)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 36.67,
+      "total_score_100": 96.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(ant)": 36.6667
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "The shadow cast by the ant is consistent with its position and orientation throughout the scene.",
+      "signals": [
+        "shadow_consistency(ant)"
+      ],
+      "content_score_60": 20,
+      "signal_score_40": 36.67,
+      "total_score_100": 56.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "shadow_consistency(ant)": 36.6667
+      },
+      "content_score_raw": "20"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "a1",
+    "a2",
+    "a3",
+    "a4"
+  ]
+}

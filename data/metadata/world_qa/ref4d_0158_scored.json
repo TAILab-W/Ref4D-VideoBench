@@ -1,0 +1,215 @@
+{
+  "summary": {
+    "items": 10,
+    "enter_bank": 10,
+    "clip_range_sec": [
+      0.0,
+      7.83
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does the boat move parallel to the building on the water without interpenetrating any other object?",
+      "signals": [
+        "trajectory_dir(boat,axis)",
+        "interpenetration(boat,water)",
+        "collision(boat,building)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(boat,axis)": 38.3333,
+        "interpenetration(boat,water)": 7.1667,
+        "collision(boat,building)": 6.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Across the clip, does the boat maintain a consistent size relative to the building and stay supported by the water surface?",
+      "signals": [
+        "size_inconsistency(boat)",
+        "buoyancy_float(boat,in:water)"
+      ],
+      "content_score_60": 40,
+      "signal_score_40": 40.0,
+      "total_score_100": 80.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "size_inconsistency(boat)": 37.5,
+        "buoyancy_float(boat,in:water)": 6.8333
+      },
+      "content_score_raw": "40"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Does the building's structure remain intact with no material deformation or fracture while its reflection is continuous on the water?",
+      "signals": [
+        "deformation(building)",
+        "fracture(building)",
+        "reflection_consistency(water)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "deformation(building)": 40.0,
+        "reflection_consistency(water)": 7.0,
+        "fracture(building)": 6.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "During the video, does the boat show no sudden changes in trajectory or acceleration that would indicate loss of control but remains afloat on the water?",
+      "signals": [
+        "collision(boat,building)",
+        "accel_sign(boat,axis)",
+        "buoyancy_float"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "accel_sign(boat,axis)": 35.0,
+        "buoyancy_float": 6.8333,
+        "collision(boat,building)": 6.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Does the water surface reflect the buildings and boats consistently with shadow consistency aligning to the light source direction?",
+      "signals": [
+        "reflection_consistency(water)",
+        "shadow_consistency"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "shadow_consistency": 36.6667,
+        "reflection_consistency(water)": 7.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "The boat moves smoothly along the river parallel to the building.",
+      "signals": [
+        "trajectory_dir(boat,axis)",
+        "interpenetration(boat,water)",
+        "collision(boat,building)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(boat,axis)": 38.3333,
+        "interpenetration(boat,water)": 7.1667,
+        "collision(boat,building)": 6.3333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "The boat remains on the water surface with consistent buoyancy and size relative to the building.",
+      "signals": [
+        "size_inconsistency(boat)",
+        "buoyancy_float(boat,in:water)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "size_inconsistency(boat)": 37.5,
+        "buoyancy_float(boat,in:water)": 6.8333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "The building's structure maintains integrity, and its reflection is continuous on the water.",
+      "signals": [
+        "deformation(building)",
+        "fracture(building)",
+        "reflection_consistency(water)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "deformation(building)": 40.0,
+        "reflection_consistency(water)": 7.0,
+        "fracture(building)": 6.3333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "The boat shows no sudden changes in trajectory or loss of control while remaining afloat.",
+      "signals": [
+        "collision(boat,building)",
+        "accel_sign(boat,axis)",
+        "buoyancy_float"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "accel_sign(boat,axis)": 35.0,
+        "buoyancy_float": 6.8333,
+        "collision(boat,building)": 6.3333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "The water surface reflects the buildings and boats consistently.",
+      "signals": [
+        "reflection_consistency(water)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 35.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "reflection_consistency(water)": 35.0
+      },
+      "content_score_raw": "60"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "v5",
+    "a1",
+    "a2",
+    "a3",
+    "a4",
+    "a5"
+  ]
+}

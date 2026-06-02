@@ -1,0 +1,52 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0052.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "cv2",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "wolf",
+        "attributes": {
+          "color": [
+            "gray",
+            "white"
+          ],
+          "pose": [
+            "sitting",
+            "standing"
+          ],
+          "action": [
+            "howling",
+            "looking-around"
+          ],
+          "orientation": [
+            "facing-left",
+            "facing-right"
+          ],
+          "signature": [
+            "gray-white-coat,-sitting-standing,-howling-looking-around"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            12.6
+          ]
+        ]
+      }
+    ],
+    "relations": []
+  },
+  "views": {
+    "objects_count_display": {
+      "wolf": 1
+    }
+  }
+}

@@ -1,0 +1,189 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0326.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "decord",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "cup",
+        "attributes": {
+          "color": [
+            "black"
+          ],
+          "material": [
+            "titanium"
+          ],
+          "brand-or-logo": [
+            "snow-peak"
+          ],
+          "printed-text": [
+            "snow-peak",
+            "titanium"
+          ],
+          "action": [
+            "filling"
+          ],
+          "tool-or-instrument": [
+            "container"
+          ],
+          "signature": [
+            "snow-peak-titanium"
+          ]
+        },
+        "spans": [
+          [
+            1.4,
+            3.5
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "water",
+        "attributes": {
+          "state": [
+            "liquid"
+          ],
+          "action": [
+            "flowing"
+          ],
+          "texture": [
+            "smooth"
+          ],
+          "signature": [
+            "flowing-water-from-ice"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            4.9
+          ]
+        ]
+      },
+      {
+        "id": "o3",
+        "name": "ice",
+        "attributes": {
+          "color": [
+            "white"
+          ],
+          "state": [
+            "solid"
+          ],
+          "texture": [
+            "rough"
+          ],
+          "signature": [
+            "white-icy-surface"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            4.9
+          ]
+        ]
+      },
+      {
+        "id": "o4",
+        "name": "tree",
+        "attributes": {
+          "color": [
+            "brown",
+            "green"
+          ],
+          "species-or-breed": [
+            "coniferous"
+          ],
+          "signature": [
+            "green-leaves-bare-branches"
+          ]
+        },
+        "spans": [
+          [
+            0.6,
+            4.7
+          ]
+        ]
+      }
+    ],
+    "relations": [
+      {
+        "subject": "o1",
+        "predicate": "filling",
+        "object": "o2",
+        "spans": [
+          [
+            1.4,
+            3.5
+          ]
+        ],
+        "confidence": 0.9
+      },
+      {
+        "subject": "o1",
+        "predicate": "touching",
+        "object": "o2",
+        "spans": [
+          [
+            1.4,
+            3.5
+          ]
+        ],
+        "confidence": 0.9
+      },
+      {
+        "subject": "o2",
+        "predicate": "flowing",
+        "object": "o3",
+        "spans": [
+          [
+            0.0,
+            4.9
+          ]
+        ],
+        "confidence": 0.9
+      },
+      {
+        "subject": "o2",
+        "predicate": "overlapping",
+        "object": "o3",
+        "spans": [
+          [
+            0.0,
+            4.9
+          ]
+        ],
+        "confidence": 0.9
+      },
+      {
+        "subject": "o3",
+        "predicate": "on",
+        "object": "o4",
+        "spans": [
+          [
+            0.0,
+            4.9
+          ]
+        ],
+        "confidence": 0.8
+      }
+    ]
+  },
+  "views": {
+    "objects_count_display": {
+      "cup": 1,
+      "water": 1,
+      "ice": 1,
+      "tree": 1
+    }
+  }
+}

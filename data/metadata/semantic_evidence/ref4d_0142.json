@@ -1,0 +1,65 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0142.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "cv2",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "window",
+        "attributes": {
+          "signature": [
+            "multiple-small-openings-in-the-structure"
+          ]
+        },
+        "spans": [
+          [
+            0.1,
+            1.6
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "light",
+        "attributes": {
+          "signature": [
+            "bright-yellow-light"
+          ]
+        },
+        "spans": [
+          [
+            0.1,
+            0.2
+          ]
+        ]
+      }
+    ],
+    "relations": [
+      {
+        "subject": "o2",
+        "predicate": "emits_from",
+        "object": "o1",
+        "spans": [
+          [
+            0.1,
+            0.2
+          ]
+        ],
+        "confidence": 0.9
+      }
+    ]
+  },
+  "views": {
+    "objects_count_display": {
+      "window": 1,
+      "light": 1
+    }
+  }
+}

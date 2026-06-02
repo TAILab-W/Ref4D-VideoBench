@@ -1,0 +1,125 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0599.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "decord",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "driver",
+        "attributes": {
+          "clothing": [
+            "black-jacket"
+          ],
+          "action": [
+            "driving"
+          ],
+          "signature": [
+            "person-hands-on-wheel"
+          ]
+        },
+        "spans": [
+          [
+            0.4,
+            5.6
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "steering-wheel",
+        "attributes": {
+          "color": [
+            "black",
+            "yellow"
+          ],
+          "brand_or_logo": [
+            "ferrari"
+          ],
+          "signature": [
+            "black-yellow-logo"
+          ]
+        },
+        "spans": [
+          [
+            0.3,
+            5.7
+          ]
+        ]
+      },
+      {
+        "id": "o3",
+        "name": "car-interior",
+        "attributes": {
+          "color": [
+            "black",
+            "red"
+          ],
+          "material": [
+            "leather"
+          ],
+          "signature": [
+            "black-red-interior"
+          ]
+        },
+        "spans": [
+          [
+            0.1,
+            5.8
+          ]
+        ]
+      }
+    ],
+    "relations": [
+      {
+        "subject": "o1",
+        "predicate": "driving",
+        "object": "o2",
+        "spans": [
+          [
+            0.4,
+            5.6
+          ]
+        ],
+        "confidence": 0.9
+      },
+      {
+        "subject": "o1",
+        "predicate": "touching",
+        "object": "o2",
+        "spans": [
+          [
+            0.4,
+            5.6
+          ]
+        ],
+        "confidence": 0.9
+      },
+      {
+        "subject": "o3",
+        "predicate": "inside",
+        "object": "o2",
+        "spans": [
+          [
+            0.1,
+            5.8
+          ]
+        ],
+        "confidence": 0.9
+      }
+    ]
+  },
+  "views": {
+    "objects_count_display": {
+      "driver": 1,
+      "steering-wheel": 1,
+      "car-interior": 1
+    }
+  }
+}

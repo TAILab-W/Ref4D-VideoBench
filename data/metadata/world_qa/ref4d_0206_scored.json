@@ -1,0 +1,203 @@
+{
+  "summary": {
+    "items": 10,
+    "enter_bank": 6,
+    "clip_range_sec": [
+      0.0,
+      5.77
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Are the dishes placeable on the large white plate?",
+      "signals": [
+        "placeable(dish,plate)",
+        "supportable(plate,tray)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 31.83,
+      "total_score_100": 81.83,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "supportable(plate,tray)": 26.6667,
+        "placeable(dish,plate)": 5.1667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Does the spoon move continuously towards the bowl without sudden changes in direction?",
+      "signals": [
+        "trajectory_dir(hand,axis)",
+        "action_phase(scooping,phase)",
+        "continuity"
+      ],
+      "content_score_60": 30,
+      "signal_score_40": 40.0,
+      "total_score_100": 70.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(hand,axis)": 38.3333,
+        "continuity": 7.3333,
+        "action_phase(scooping,phase)": 5.3333
+      },
+      "content_score_raw": "30"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Is the hot surface contact between cooked food and serving utensils safe for nearby objects?",
+      "signals": [
+        "hot_surface_contact",
+        "falling_hazard"
+      ],
+      "content_score_60": 40,
+      "signal_score_40": 40.0,
+      "total_score_100": 80.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "hot_surface_contact": 34.1667,
+        "falling_hazard": 6.3333
+      },
+      "content_score_raw": "40"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Do the food items prevent accidental spillage or collision during handling?",
+      "signals": [
+        "containment(rice,bowl)",
+        "friction_sliding(rice,on:plate)"
+      ],
+      "content_score_60": 40,
+      "signal_score_40": 35.83,
+      "total_score_100": 75.83,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "friction_sliding(rice,on:plate)": 30.0,
+        "containment(rice,bowl)": 5.8333
+      },
+      "content_score_raw": "40"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Are a spoon and fork placed next to the dish?",
+      "signals": [
+        "tool_usage_correct(spoon,for:eating)",
+        "tool_usage_correct(fork,for:eating)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 35.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "tool_usage_correct(spoon,for:eating)": 29.1667,
+        "tool_usage_correct(fork,for:eating)": 5.8333
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "The large white plate holds various dishes and is supported by the black tray.",
+      "signals": [
+        "placeable(dish,plate)",
+        "supportable(plate,tray)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 31.83,
+      "total_score_100": 91.83,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "supportable(plate,tray)": 26.6667,
+        "placeable(dish,plate)": 5.1667
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "The hand holding the spoon moves towards the bowl in a continuous trajectory.",
+      "signals": [
+        "trajectory_dir(hand,axis)",
+        "action_phase(scooping,phase)",
+        "continuity"
+      ],
+      "content_score_60": 0,
+      "signal_score_40": 40.0,
+      "total_score_100": 40.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(hand,axis)": 38.3333,
+        "continuity": 7.3333,
+        "action_phase(scooping,phase)": 5.3333
+      },
+      "content_score_raw": "0"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "A spoon and fork are placed next to the dish on the blue plate, indicating their use.",
+      "signals": [
+        "tool_usage_correct(spoon,for:eating)",
+        "tool_usage_correct(fork,for:eating)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 35.0,
+      "total_score_100": 85.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "tool_usage_correct(spoon,for:eating)": 29.1667,
+        "tool_usage_correct(fork,for:eating)": 5.8333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "Food items on the tray are arranged without risk of spillage or collision during handling.",
+      "signals": [
+        "containment(rice,bowl)",
+        "friction_sliding(rice,on:plate)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 35.83,
+      "total_score_100": 85.83,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "friction_sliding(rice,on:plate)": 30.0,
+        "containment(rice,bowl)": 5.8333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "The hand maintains grasp stability on the plate while scooping rice with the spoon.",
+      "signals": [
+        "grasp_stability"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 28.33,
+      "total_score_100": 78.33,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "grasp_stability": 28.3333
+      },
+      "content_score_raw": "50"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v3",
+    "v5",
+    "a1",
+    "a3",
+    "a4"
+  ]
+}

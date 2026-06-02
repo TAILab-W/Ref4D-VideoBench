@@ -1,0 +1,138 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0405.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "decord",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "person",
+        "attributes": {
+          "color": [
+            "dark-gray"
+          ],
+          "material": [
+            "fabric"
+          ],
+          "pose": [
+            "sitting"
+          ],
+          "state": [
+            "relaxed"
+          ],
+          "clothing_type": [
+            "hoodie"
+          ],
+          "signature": [
+            "dark-gray-jacket-straight-back"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            7.9
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "couch",
+        "attributes": {
+          "color": [
+            "black"
+          ],
+          "material": [
+            "fabric"
+          ],
+          "position": [
+            "behind-person"
+          ],
+          "signature": [
+            "black-couch-back"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            7.9
+          ]
+        ]
+      },
+      {
+        "id": "o3",
+        "name": "wall",
+        "attributes": {
+          "color": [
+            "gray"
+          ],
+          "texture": [
+            "smooth"
+          ],
+          "lighting": [
+            "dim"
+          ],
+          "signature": [
+            "plain-gray-wall"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            7.9
+          ]
+        ]
+      }
+    ],
+    "relations": [
+      {
+        "subject": "o1",
+        "predicate": "sitting-on",
+        "object": "o2",
+        "spans": [
+          [
+            0.0,
+            7.9
+          ]
+        ],
+        "confidence": 0.8
+      },
+      {
+        "subject": "o1",
+        "predicate": "in-front-of",
+        "object": "o3",
+        "spans": [
+          [
+            0.0,
+            7.9
+          ]
+        ],
+        "confidence": 0.8
+      },
+      {
+        "subject": "o2",
+        "predicate": "against",
+        "object": "o3",
+        "spans": [
+          [
+            0.0,
+            7.9
+          ]
+        ],
+        "confidence": 0.7
+      }
+    ]
+  },
+  "views": {
+    "objects_count_display": {
+      "person": 1,
+      "couch": 1,
+      "wall": 1
+    }
+  }
+}

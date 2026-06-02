@@ -1,0 +1,122 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0357.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "decord",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "sky",
+        "attributes": {
+          "color": [
+            "orange",
+            "pink",
+            "purple"
+          ],
+          "signature": [
+            "orange-pink-purple-gradient"
+          ]
+        },
+        "spans": [
+          [
+            0.2,
+            0.8
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "water",
+        "attributes": {
+          "signature": [
+            "reflecting-sunset"
+          ]
+        },
+        "spans": [
+          [
+            0.3,
+            0.7
+          ]
+        ]
+      },
+      {
+        "id": "o3",
+        "name": "trees",
+        "attributes": {
+          "signature": [
+            "tall-dark-silhouettes"
+          ]
+        },
+        "spans": [
+          [
+            0.4,
+            0.6
+          ]
+        ]
+      }
+    ],
+    "relations": [
+      {
+        "subject": "o1",
+        "predicate": "overlapping",
+        "object": "o2",
+        "spans": [
+          [
+            0.2,
+            0.8
+          ]
+        ],
+        "confidence": 0.9
+      },
+      {
+        "subject": "o3",
+        "predicate": "overlapping",
+        "object": "o2",
+        "spans": [
+          [
+            0.4,
+            0.6
+          ]
+        ],
+        "confidence": 0.9
+      },
+      {
+        "subject": "o2",
+        "predicate": "below",
+        "object": "o1",
+        "spans": [
+          [
+            0.3,
+            0.7
+          ]
+        ],
+        "confidence": 0.9
+      },
+      {
+        "subject": "o3",
+        "predicate": "behind",
+        "object": "o2",
+        "spans": [
+          [
+            0.4,
+            0.6
+          ]
+        ],
+        "confidence": 0.9
+      }
+    ]
+  },
+  "views": {
+    "objects_count_display": {
+      "sky": 1,
+      "water": 1,
+      "trees": 1
+    }
+  }
+}

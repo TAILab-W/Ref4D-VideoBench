@@ -1,0 +1,191 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0196.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "cv2",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "taco",
+        "attributes": {
+          "signature": [
+            "taco-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            7.1
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "taco",
+        "attributes": {
+          "signature": [
+            "taco-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            7.1
+          ]
+        ]
+      },
+      {
+        "id": "o3",
+        "name": "taco",
+        "attributes": {
+          "signature": [
+            "taco-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            7.1
+          ]
+        ]
+      },
+      {
+        "id": "o4",
+        "name": "lime-wedge",
+        "attributes": {
+          "signature": [
+            "lime-wedge-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            7.1
+          ]
+        ]
+      },
+      {
+        "id": "o5",
+        "name": "lime-wedge",
+        "attributes": {
+          "signature": [
+            "lime-wedge-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            7.1
+          ]
+        ]
+      },
+      {
+        "id": "o6",
+        "name": "lime-wedge",
+        "attributes": {
+          "signature": [
+            "lime-wedge-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            7.1
+          ]
+        ]
+      },
+      {
+        "id": "o7",
+        "name": "foil",
+        "attributes": {
+          "signature": [
+            "foil-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            7.1
+          ]
+        ]
+      },
+      {
+        "id": "o8",
+        "name": "person",
+        "attributes": {
+          "signature": [
+            "person-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            7.1
+          ]
+        ]
+      },
+      {
+        "id": "o9",
+        "name": "cup",
+        "attributes": {
+          "signature": [
+            "cup-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            7.1
+          ]
+        ]
+      },
+      {
+        "id": "o10",
+        "name": "cup",
+        "attributes": {
+          "signature": [
+            "cup-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            7.1
+          ]
+        ]
+      },
+      {
+        "id": "o11",
+        "name": "bowl",
+        "attributes": {
+          "signature": [
+            "bowl-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            7.1
+          ]
+        ]
+      }
+    ],
+    "relations": []
+  },
+  "views": {
+    "objects_count_display": {
+      "taco": 3,
+      "lime-wedge": 3,
+      "foil": 1,
+      "person": 1,
+      "cup": 2,
+      "bowl": 1
+    }
+  }
+}

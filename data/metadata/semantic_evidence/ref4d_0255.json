@@ -1,0 +1,159 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0255.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "cv2",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "crane",
+        "attributes": {
+          "color": [
+            "orange",
+            "yellow"
+          ],
+          "size": [
+            "large"
+          ],
+          "material": [
+            "metal"
+          ],
+          "action": [
+            "hovering",
+            "suspended"
+          ],
+          "position": [
+            "top-center"
+          ],
+          "signature": [
+            "yellow-orange-top-heavy-structure"
+          ]
+        },
+        "spans": [
+          [
+            0.1,
+            3.9
+          ],
+          [
+            4.5,
+            6.8
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "worker",
+        "attributes": {
+          "color": [
+            "black",
+            "red",
+            "yellow"
+          ],
+          "sex": [
+            "male"
+          ],
+          "action": [
+            "welding",
+            "working"
+          ],
+          "pose": [
+            "crouched"
+          ],
+          "equipment": [
+            "helmet",
+            "jacket",
+            "shirt",
+            "welding-tool"
+          ],
+          "object-part": [
+            "metal-frame",
+            "pipe"
+          ],
+          "signature": [
+            "yellow-helmet-black-jacket-yellow-shirt"
+          ]
+        },
+        "spans": [
+          [
+            1.2,
+            2.7
+          ],
+          [
+            4.5,
+            5.8
+          ]
+        ]
+      },
+      {
+        "id": "o3",
+        "name": "bridge",
+        "attributes": {
+          "color": [
+            "orange",
+            "white"
+          ],
+          "size": [
+            "large"
+          ],
+          "material": [
+            "metal"
+          ],
+          "action": [
+            "spanning-valley"
+          ],
+          "position": [
+            "mountain-top"
+          ],
+          "signature": [
+            "white-tower-orange-deck-suspension-structure"
+          ]
+        },
+        "spans": [
+          [
+            4.5,
+            10.0
+          ]
+        ]
+      }
+    ],
+    "relations": [
+      {
+        "subject": "o2",
+        "predicate": "welding",
+        "object": "o3",
+        "spans": [
+          [
+            1.4,
+            2.5
+          ]
+        ],
+        "confidence": 0.9
+      },
+      {
+        "subject": "o1",
+        "predicate": "suspended",
+        "object": "o3",
+        "spans": [
+          [
+            0.8,
+            6.7
+          ]
+        ],
+        "confidence": 0.8
+      }
+    ]
+  },
+  "views": {
+    "objects_count_display": {
+      "crane": 1,
+      "worker": 1,
+      "bridge": 1
+    }
+  }
+}

@@ -1,0 +1,220 @@
+{
+  "summary": {
+    "items": 10,
+    "enter_bank": 9,
+    "clip_range_sec": [
+      0.0,
+      8.7
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does the white butterfly on the yellow dandelion flower move its wings slightly?",
+      "signals": [
+        "continuity(dandelion-flower)",
+        "continuity(butterfly)",
+        "biological_motion(butterfly)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "biological_motion(butterfly)": 38.3333,
+        "continuity(dandelion-flower)": 7.3333,
+        "continuity(butterfly)": 7.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Are the green stems of the dandelions firmly planted in the ground?",
+      "signals": [
+        "support(dandelion-flower,stem)",
+        "balance(dandelion-flower)",
+        "friction_sliding(dandelion-flower,on:ground)",
+        "friction_sliding(butterfly,on:dandelion-flower)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "balance(dandelion-flower)": 35.8333,
+        "support(dandelion-flower,stem)": 7.0,
+        "friction_sliding(dandelion-flower,on:ground)": 6.0,
+        "friction_sliding(butterfly,on:dandelion-flower)": 6.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Do the shadows of the flowers and butterfly match their positions under sunlight?",
+      "signals": [
+        "continuity(dandelion-flower)",
+        "support(butterfly,dandelion-flower)",
+        "trajectory_dir(dandelion_seed,axis)",
+        "size_inconsistency(dandelion_seed)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(dandelion_seed,axis)": 38.3333,
+        "size_inconsistency(dandelion_seed)": 7.5,
+        "continuity(dandelion-flower)": 7.3333,
+        "support(butterfly,dandelion-flower)": 7.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Is the grass background continuous without sudden changes or frame shifts?",
+      "signals": [
+        "continuity(grass)",
+        "frame_discontinuity(t)",
+        "shadow_consistency(butterfly)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "frame_discontinuity(t)": 40.0,
+        "continuity(grass)": 7.3333,
+        "shadow_consistency(butterfly)": 7.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Does the scene show a natural interaction between the butterfly and the dandelion?",
+      "signals": [
+        "biological_motion(butterfly)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 38.33,
+      "total_score_100": 88.33,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "biological_motion(butterfly)": 38.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "A white butterfly perches on a yellow dandelion flower.",
+      "signals": [
+        "continuity(dandelion-flower)",
+        "continuity(butterfly)",
+        "support(butterfly,dandelion-flower)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(dandelion-flower)": 36.6667,
+        "continuity(butterfly)": 7.3333,
+        "support(butterfly,dandelion-flower)": 7.0
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "The butterfly exhibits slight wing movement and shifts position naturally.",
+      "signals": [
+        "biological_motion(butterfly)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 38.33,
+      "total_score_100": 98.33,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "biological_motion(butterfly)": 38.3333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "Yellow dandelion flowers stand upright, supported by green stems and ground.",
+      "signals": [
+        "support(dandelion-flower,stem)",
+        "balance(dandelion-flower)",
+        "friction_sliding(dandelion-flower,on:ground)",
+        "friction_sliding(butterfly,on:dandelion-flower)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "balance(dandelion-flower)": 35.8333,
+        "support(dandelion-flower,stem)": 7.0,
+        "friction_sliding(dandelion-flower,on:ground)": 6.0,
+        "friction_sliding(butterfly,on:dandelion-flower)": 6.0
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "Dandelion seeds disperse gradually with wind; grass and flowers show natural continuity.",
+      "signals": [
+        "trajectory_dir(dandelion_seed,axis)",
+        "size_inconsistency(dandelion_seed)",
+        "continuity(grass)",
+        "frame_discontinuity(t)"
+      ],
+      "content_score_60": 30,
+      "signal_score_40": 40.0,
+      "total_score_100": 70.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "frame_discontinuity(t)": 40.0,
+        "trajectory_dir(dandelion_seed,axis)": 7.6667,
+        "size_inconsistency(dandelion_seed)": 7.5,
+        "continuity(grass)": 7.3333
+      },
+      "content_score_raw": "30"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "Shadows of the butterfly fall consistently on nearby plants.",
+      "signals": [
+        "shadow_consistency(butterfly)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 36.67,
+      "total_score_100": 86.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "shadow_consistency(butterfly)": 36.6667
+      },
+      "content_score_raw": "50"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "v5",
+    "a1",
+    "a2",
+    "a3",
+    "a5"
+  ]
+}

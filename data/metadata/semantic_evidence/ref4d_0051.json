@@ -1,0 +1,85 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0051.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "cv2",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "lizard",
+        "attributes": {
+          "color": [
+            "gray",
+            "green"
+          ],
+          "pattern": [
+            "scaled",
+            "speckled"
+          ],
+          "texture": [
+            "rough"
+          ],
+          "size": [
+            "large"
+          ],
+          "state": [
+            "alert",
+            "calm"
+          ],
+          "pose": [
+            "clinging",
+            "perched"
+          ],
+          "action": [
+            "tongue-in",
+            "tongue-out"
+          ],
+          "orientation": [
+            "facing-forward"
+          ],
+          "position": [
+            "on-branch"
+          ],
+          "object-part": [
+            "body",
+            "head",
+            "limbs"
+          ],
+          "environment": [
+            "enclosure",
+            "naturalistic"
+          ],
+          "lighting": [
+            "indirect",
+            "soft"
+          ],
+          "camera-angle": [
+            "close-up",
+            "frontal"
+          ],
+          "signature": [
+            "gray-green-speckled-scaled-head-facing-forward"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            7.1
+          ]
+        ]
+      }
+    ],
+    "relations": []
+  },
+  "views": {
+    "objects_count_display": {
+      "lizard": 1
+    }
+  }
+}

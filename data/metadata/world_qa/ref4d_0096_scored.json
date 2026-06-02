@@ -1,0 +1,205 @@
+{
+  "summary": {
+    "items": 10,
+    "enter_bank": 10,
+    "clip_range_sec": [
+      0.0,
+      11.23
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does the green railing provide a boundary for human interaction with the elephant?",
+      "signals": [
+        "trajectory_dir(elephant_trunk,axis)",
+        "accel_sign(elephant_trunk,axis)",
+        "containment(person,railing)",
+        "support(railing,ground)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(elephant_trunk,axis)": 38.3333,
+        "accel_sign(elephant_trunk,axis)": 7.0,
+        "support(railing,ground)": 7.0,
+        "containment(person,railing)": 5.8333
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Is the shadow of the elephant on the ground consistent with its position?",
+      "signals": [
+        "shadow_consistency(elephant,shadow)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 36.67,
+      "total_score_100": 86.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "shadow_consistency(elephant,shadow)": 36.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Does the sign 'BHAMA LILIT' remain visible and stationary on the railing?",
+      "signals": [
+        "continuity(sign)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 36.67,
+      "total_score_100": 86.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(sign)": 36.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Does the man use his hand to guide the elephant's trunk towards an object he holds?",
+      "signals": [
+        "tool_contact(elephant_trunk,object)",
+        "biological_motion(elephant)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "biological_motion(elephant)": 38.3333,
+        "tool_contact(elephant_trunk,object)": 5.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Is the contact between the elephant's trunk and the man's hand gentle and controlled?",
+      "signals": [
+        "biological_motion(oA)",
+        "grasp_stability(oHand,oObj)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "biological_motion(oA)": 38.3333,
+        "grasp_stability(oHand,oObj)": 5.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "The green railing and sign remain stationary relative to the ground.",
+      "signals": [
+        "rigid_transform(oX)",
+        "support(oA,oB)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "rigid_transform(oX)": 37.5,
+        "support(oA,oB)": 7.0
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "The man uses his hand to guide the elephant's trunk, indicating communication or training.",
+      "signals": [
+        "continuity(sign)",
+        "tool_contact(oTool,oObj)",
+        "action_phase(oAct,phase)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(sign)": 36.6667,
+        "tool_contact(oTool,oObj)": 5.6667,
+        "action_phase(oAct,phase)": 5.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "The green railing serves as a boundary for human interaction with the elephant.",
+      "signals": [
+        "containment(person,railing)",
+        "support(railing,ground)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "support(railing,ground)": 35.0,
+        "containment(person,railing)": 5.8333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "The shadow cast by the elephant on the ground is consistent with its position and orientation.",
+      "signals": [
+        "shadow_consistency(elephant,shadow)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 36.67,
+      "total_score_100": 86.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "shadow_consistency(elephant,shadow)": 36.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "The elephant uses its trunk as a tool to interact with the object held by the person.",
+      "signals": [
+        "tool_contact(elephant_trunk,object)",
+        "biological_motion(elephant)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "biological_motion(elephant)": 38.3333,
+        "tool_contact(elephant_trunk,object)": 5.6667
+      },
+      "content_score_raw": "50"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "v5",
+    "a1",
+    "a2",
+    "a3",
+    "a4",
+    "a5"
+  ]
+}

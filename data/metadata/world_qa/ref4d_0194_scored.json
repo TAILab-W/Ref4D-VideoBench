@@ -1,0 +1,200 @@
+{
+  "summary": {
+    "items": 10,
+    "enter_bank": 5,
+    "clip_range_sec": [
+      0.0,
+      6.3
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does the spoon maintain contact with both rice and meat while scooping?",
+      "signals": [
+        "tool_contact(spoon,rice)",
+        "tool_contact(spoon,meat)",
+        "continuity(spoon)",
+        "interpenetration(spoon,rice)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(spoon)": 36.6667,
+        "interpenetration(spoon,rice)": 7.1667,
+        "tool_contact(spoon,rice)": 5.6667,
+        "tool_contact(spoon,meat)": 5.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Does the green liquid in the bowl show sloshing when disturbed?",
+      "signals": [
+        "slosh_response(liquid,amp)"
+      ],
+      "content_score_60": 40,
+      "signal_score_40": 34.17,
+      "total_score_100": 74.17,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "slosh_response(liquid,amp)": 34.1667
+      },
+      "content_score_raw": "40"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Is the red chili sauce placed correctly on its container?",
+      "signals": [
+        "placeable(food,plate)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 25.83,
+      "total_score_100": 75.83,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "placeable(food,plate)": 25.8333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Are there visible burn marks or steam from hot surfaces?",
+      "signals": [
+        "hot_surface_contact(rice,surface)"
+      ],
+      "content_score_60": 30,
+      "signal_score_40": 34.17,
+      "total_score_100": 64.17,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "hot_surface_contact(rice,surface)": 34.1667
+      },
+      "content_score_raw": "30"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Does the hand keep contact with the spoon during food scooping?",
+      "signals": [
+        "tool_contact(spoon,rice)",
+        "tool_contact(spoon,hand)",
+        "grasp_stability(hand,spoon)"
+      ],
+      "content_score_60": 40,
+      "signal_score_40": 39.67,
+      "total_score_100": 79.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "tool_contact(spoon,rice)": 28.3333,
+        "tool_contact(spoon,hand)": 5.6667,
+        "grasp_stability(hand,spoon)": 5.6667
+      },
+      "content_score_raw": "40"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "The spoon maintains contact with both rice and meat without interpenetration.",
+      "signals": [
+        "tool_contact(spoon,rice)",
+        "tool_contact(spoon,meat)",
+        "continuity(spoon)",
+        "interpenetration(spoon,rice)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(spoon)": 36.6667,
+        "interpenetration(spoon,rice)": 7.1667,
+        "tool_contact(spoon,rice)": 5.6667,
+        "tool_contact(spoon,meat)": 5.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "The spoon makes contact with the hand during scooping.",
+      "signals": [
+        "tool_contact(spoon,rice)",
+        "tool_contact(spoon,hand)",
+        "grasp_stability(hand,spoon)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 39.67,
+      "total_score_100": 99.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "tool_contact(spoon,rice)": 28.3333,
+        "tool_contact(spoon,hand)": 5.6667,
+        "grasp_stability(hand,spoon)": 5.6667
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "The green liquid in the bowl shows slosh response when disturbed.",
+      "signals": [
+        "slosh_response(liquid,amp)"
+      ],
+      "content_score_60": 30,
+      "signal_score_40": 34.17,
+      "total_score_100": 64.17,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "slosh_response(liquid,amp)": 34.1667
+      },
+      "content_score_raw": "30"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "A portion of food is placed on an orange plate.",
+      "signals": [
+        "placeable(food,plate)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 25.83,
+      "total_score_100": 85.83,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "placeable(food,plate)": 25.8333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "The food is placed on a blue table.",
+      "signals": [
+        "placeable(food,plate)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 25.83,
+      "total_score_100": 85.83,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "placeable(food,plate)": 25.8333
+      },
+      "content_score_raw": "60"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "a1",
+    "a2",
+    "a4",
+    "a5"
+  ]
+}

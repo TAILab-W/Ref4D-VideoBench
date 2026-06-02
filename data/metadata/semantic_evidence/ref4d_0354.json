@@ -1,0 +1,178 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0354.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "decord",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "mountain",
+        "attributes": {
+          "color": [
+            "green",
+            "white"
+          ],
+          "pattern": [
+            "snow-patches",
+            "vegetation"
+          ],
+          "texture": [
+            "dense",
+            "rough"
+          ],
+          "material": [
+            "rock",
+            "snow",
+            "vegetation"
+          ],
+          "size": [
+            "large"
+          ],
+          "state": [
+            "partially-snow-covered"
+          ],
+          "signature": [
+            "snowy-peak-green-slope"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            9.3
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "lake",
+        "attributes": {
+          "color": [
+            "blue"
+          ],
+          "texture": [
+            "smooth"
+          ],
+          "material": [
+            "water"
+          ],
+          "state": [
+            "calm"
+          ],
+          "signature": [
+            "calm-blue-water"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            9.3
+          ]
+        ]
+      },
+      {
+        "id": "o3",
+        "name": "tree",
+        "attributes": {
+          "color": [
+            "green",
+            "white"
+          ],
+          "pattern": [
+            "conical",
+            "snow-laden"
+          ],
+          "texture": [
+            "foliage",
+            "snow"
+          ],
+          "material": [
+            "snow",
+            "wood"
+          ],
+          "size": [
+            "medium-to-large"
+          ],
+          "state": [
+            "snow-covered"
+          ],
+          "signature": [
+            "evergreen-tree-with-snow"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            9.3
+          ]
+        ]
+      },
+      {
+        "id": "o4",
+        "name": "snow",
+        "attributes": {
+          "color": [
+            "white"
+          ],
+          "texture": [
+            "powdery"
+          ],
+          "material": [
+            "snow"
+          ],
+          "state": [
+            "fresh"
+          ],
+          "signature": [
+            "white-snow-on-mountainside-and-trees"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            9.3
+          ]
+        ]
+      }
+    ],
+    "relations": [
+      {
+        "subject": "o1",
+        "predicate": "above",
+        "object": "o2",
+        "spans": [
+          [
+            0.0,
+            9.3
+          ]
+        ],
+        "confidence": 0.9
+      },
+      {
+        "subject": "o3",
+        "predicate": "covered-by",
+        "object": "o4",
+        "spans": [
+          [
+            0.0,
+            9.3
+          ]
+        ],
+        "confidence": 0.8
+      }
+    ]
+  },
+  "views": {
+    "objects_count_display": {
+      "mountain": 1,
+      "lake": 1,
+      "tree": 1,
+      "snow": 1
+    }
+  }
+}

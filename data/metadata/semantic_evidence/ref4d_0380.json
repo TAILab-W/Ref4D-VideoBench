@@ -1,0 +1,140 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0380.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "decord",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "deer",
+        "attributes": {
+          "color": [
+            "brown"
+          ],
+          "size": [
+            "medium"
+          ],
+          "sex": [
+            "female"
+          ],
+          "state": [
+            "alert",
+            "calm"
+          ],
+          "pose": [
+            "lying",
+            "standing"
+          ],
+          "action": [
+            "nursing",
+            "resting"
+          ],
+          "orientation": [
+            "facing-right"
+          ],
+          "position": [
+            "center-right"
+          ],
+          "signature": [
+            "brown-medium-size-antlers-facing-right"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            7.5
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "fawn",
+        "attributes": {
+          "color": [
+            "brown"
+          ],
+          "size": [
+            "small"
+          ],
+          "age": [
+            "juvenile"
+          ],
+          "state": [
+            "resting"
+          ],
+          "pose": [
+            "lying"
+          ],
+          "action": [
+            "nursing"
+          ],
+          "orientation": [
+            "facing-left"
+          ],
+          "position": [
+            "left-of-e1"
+          ],
+          "signature": [
+            "small-brown-lie-under-mother"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            7.5
+          ]
+        ]
+      }
+    ],
+    "relations": [
+      {
+        "subject": "o1",
+        "predicate": "looking-at",
+        "object": "o2",
+        "spans": [
+          [
+            0.0,
+            7.5
+          ]
+        ],
+        "confidence": 0.8
+      },
+      {
+        "subject": "o2",
+        "predicate": "nursing",
+        "object": "o1",
+        "spans": [
+          [
+            0.0,
+            7.5
+          ]
+        ],
+        "confidence": 0.9
+      },
+      {
+        "subject": "o1",
+        "predicate": "standing-on",
+        "object": "o2",
+        "spans": [
+          [
+            0.0,
+            7.5
+          ]
+        ],
+        "confidence": 0.7
+      }
+    ]
+  },
+  "views": {
+    "objects_count_display": {
+      "deer": 1,
+      "fawn": 1
+    }
+  }
+}

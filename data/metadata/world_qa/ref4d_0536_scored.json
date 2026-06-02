@@ -1,0 +1,231 @@
+{
+  "summary": {
+    "items": 10,
+    "enter_bank": 10,
+    "clip_range_sec": [
+      0.0,
+      5.23
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does the motorcycle on the left side of the frame remain stationary and not move?",
+      "signals": [
+        "balance(oX)",
+        "support(oA,oB)",
+        "friction_sliding(oA,on:oB)",
+        "center_of_mass_over_base(oX)",
+        "shadow_consistency(oX)",
+        "cast_shadow_contact(oX,shadow)",
+        "continuity(oX)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "cast_shadow_contact(oX,shadow)": 37.5,
+        "shadow_consistency(oX)": 7.3333,
+        "continuity(oX)": 7.3333,
+        "balance(oX)": 7.1667,
+        "support(oA,oB)": 7.0,
+        "center_of_mass_over_base(oX)": 6.5,
+        "friction_sliding(oA,on:oB)": 6.0
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Does the bus maintain a consistent forward trajectory along the road without reversing?",
+      "signals": [
+        "trajectory_dir(oX,axis)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 38.33,
+      "total_score_100": 88.33,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(oX,axis)": 38.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Is the text on the signboard attached to the bus clear and legible throughout the clip?",
+      "signals": [
+        "material_optics(oA)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 37.5,
+      "total_score_100": 92.5,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "material_optics(oA)": 37.5
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Are the motorcycles parked near the bus in positions that do not show any signs of collision or unsafe interaction with the bus?",
+      "signals": [
+        "collision(oA,oB)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 31.67,
+      "total_score_100": 91.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "collision(oA,oB)": 31.6667
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Does the grassy area next to the sidewalk support vehicles like motorbikes without them sinking?",
+      "signals": [
+        "balance(oX)",
+        "support(oA,oB)",
+        "friction_sliding(oA,on:oB)",
+        "center_of_mass_over_base(oX)",
+        "shadow_consistency(oX)",
+        "cast_shadow_contact(oX,shadow)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "cast_shadow_contact(oX,shadow)": 37.5,
+        "shadow_consistency(oX)": 7.3333,
+        "balance(oX)": 7.1667,
+        "support(oA,oB)": 7.0,
+        "center_of_mass_over_base(oX)": 6.5,
+        "friction_sliding(oA,on:oB)": 6.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "The motorcycle on the left side of the frame is stationary.",
+      "signals": [
+        "balance(oX)",
+        "support(oA,oB)",
+        "friction_sliding(oA,on:oB)",
+        "center_of_mass_over_base(oX)",
+        "shadow_consistency(oX)",
+        "cast_shadow_contact(oX,shadow)",
+        "continuity(oX)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "cast_shadow_contact(oX,shadow)": 37.5,
+        "shadow_consistency(oX)": 7.3333,
+        "continuity(oX)": 7.3333,
+        "balance(oX)": 7.1667,
+        "support(oA,oB)": 7.0,
+        "center_of_mass_over_base(oX)": 6.5,
+        "friction_sliding(oA,on:oB)": 6.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "The bus remains parked near motorcycles without immediate signs of collision.",
+      "signals": [
+        "trajectory_dir(oX,axis)",
+        "collision(oA,oB)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(oX,axis)": 38.3333,
+        "collision(oA,oB)": 6.3333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "The signboard attached to the bus displays text clearly.",
+      "signals": [
+        "material_optics(oA)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 37.5,
+      "total_score_100": 97.5,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "material_optics(oA)": 37.5
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "The bus maintains a consistent position on the road.",
+      "signals": [
+        "balance(oX)",
+        "support(oA,oB)",
+        "friction_sliding(oA,on:oB)",
+        "center_of_mass_over_base(oX)",
+        "shadow_consistency(oX)",
+        "cast_shadow_contact(oX,shadow)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "cast_shadow_contact(oX,shadow)": 37.5,
+        "shadow_consistency(oX)": 7.3333,
+        "balance(oX)": 7.1667,
+        "support(oA,oB)": 7.0,
+        "center_of_mass_over_base(oX)": 6.5,
+        "friction_sliding(oA,on:oB)": 6.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "No vehicles or objects show signs of unsafe interaction.",
+      "signals": [
+        "collision(oA,oB)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 31.67,
+      "total_score_100": 91.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "collision(oA,oB)": 31.6667
+      },
+      "content_score_raw": "60"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "v5",
+    "a1",
+    "a2",
+    "a3",
+    "a4",
+    "a5"
+  ]
+}

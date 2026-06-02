@@ -1,0 +1,183 @@
+{
+  "summary": {
+    "items": 10,
+    "enter_bank": 4,
+    "clip_range_sec": [
+      0.0,
+      15.5
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Is the elephant lying down in muddy water?",
+      "signals": [
+        "biological_motion(elephant)"
+      ],
+      "content_score_60": 5,
+      "signal_score_40": 38.33,
+      "total_score_100": 43.33,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "biological_motion(elephant)": 38.3333
+      },
+      "content_score_raw": "5"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Do the shadows of elephants on the ground match their positions and shapes with light from above?",
+      "signals": [
+        "shadow_consistency(elephant)"
+      ],
+      "content_score_60": 40,
+      "signal_score_40": 36.67,
+      "total_score_100": 76.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "shadow_consistency(elephant)": 36.6667
+      },
+      "content_score_raw": "40"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Are there any intersections between elephants and other objects that would cause harm?",
+      "signals": [
+        "prohibited_intersection(elephant,deer)"
+      ],
+      "content_score_60": 30,
+      "signal_score_40": 36.67,
+      "total_score_100": 66.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "prohibited_intersection(elephant,deer)": 36.6667
+      },
+      "content_score_raw": "30"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Do the tusks of standing elephants show consistent material optics without unnatural shine?",
+      "signals": [
+        "material_optics(elephant_tusk)"
+      ],
+      "content_score_60": 40,
+      "signal_score_40": 37.5,
+      "total_score_100": 77.5,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "material_optics(elephant_tusk)": 37.5
+      },
+      "content_score_raw": "40"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Does the environment, including mud and vegetation, maintain continuity throughout the clip?",
+      "signals": [
+        "continuity(elephant)",
+        "continuity(deer)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(elephant)": 36.6667,
+        "continuity(deer)": 7.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "An elephant is lying down in muddy water, demonstrating biological motion.",
+      "signals": [
+        "biological_motion(elephant)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 38.33,
+      "total_score_100": 88.33,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "biological_motion(elephant)": 38.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "Shadows of elephants on the ground maintain consistency with their positions and shapes near water.",
+      "signals": [
+        "shadow_consistency(elephant)"
+      ],
+      "content_score_60": 40,
+      "signal_score_40": 36.67,
+      "total_score_100": 76.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "shadow_consistency(elephant)": 36.6667
+      },
+      "content_score_raw": "40"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "Continuity of object appearance and state change for all visible elements (elephants, deer, environment) is maintained.",
+      "signals": [
+        "continuity(elephant)",
+        "continuity(deer)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(elephant)": 36.6667,
+        "continuity(deer)": 7.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "Elephants and antelopes exhibit natural biological motion consistent with their species.",
+      "signals": [
+        "biological_motion"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 38.33,
+      "total_score_100": 88.33,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "biological_motion": 38.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "Animals like elephants and deer are not placed in prohibited intersections causing harm.",
+      "signals": [
+        "prohibited_intersection(elephant,deer)"
+      ],
+      "content_score_60": 30,
+      "signal_score_40": 36.67,
+      "total_score_100": 66.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "prohibited_intersection(elephant,deer)": 36.6667
+      },
+      "content_score_raw": "30"
+    }
+  ],
+  "bank_ids": [
+    "v5",
+    "a1",
+    "a3",
+    "a4"
+  ]
+}

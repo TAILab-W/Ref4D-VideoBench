@@ -1,0 +1,134 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0362.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "decord",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "road",
+        "attributes": {
+          "color": [
+            "blue"
+          ],
+          "pattern": [
+            "dashed"
+          ],
+          "material": [
+            "paved"
+          ],
+          "signature": [
+            "yellow-dashed-line-center"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            1.0
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "guardrail",
+        "attributes": {
+          "color": [
+            "silver"
+          ],
+          "material": [
+            "metal"
+          ],
+          "signature": [
+            "metal-barrier-right-side"
+          ]
+        },
+        "spans": [
+          [
+            0.3,
+            1.0
+          ]
+        ]
+      },
+      {
+        "id": "o3",
+        "name": "mountains",
+        "attributes": {
+          "color": [
+            "brown",
+            "gray"
+          ],
+          "shape": [
+            "steep"
+          ],
+          "signature": [
+            "tall-rocky-structures"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            1.0
+          ]
+        ]
+      },
+      {
+        "id": "o4",
+        "name": "buildings",
+        "attributes": {
+          "color": [
+            "white"
+          ],
+          "position": [
+            "right-side"
+          ],
+          "signature": [
+            "white-roofed-structures"
+          ]
+        },
+        "spans": [
+          [
+            0.6,
+            1.0
+          ]
+        ]
+      },
+      {
+        "id": "o5",
+        "name": "fence",
+        "attributes": {
+          "color": [
+            "green"
+          ],
+          "position": [
+            "left-side"
+          ],
+          "signature": [
+            "green-netting-left-side"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            0.7
+          ]
+        ]
+      }
+    ],
+    "relations": []
+  },
+  "views": {
+    "objects_count_display": {
+      "road": 1,
+      "guardrail": 1,
+      "mountains": 1,
+      "buildings": 1,
+      "fence": 1
+    }
+  }
+}

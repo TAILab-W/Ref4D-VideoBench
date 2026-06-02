@@ -1,0 +1,223 @@
+{
+  "summary": {
+    "items": 10,
+    "enter_bank": 8,
+    "clip_range_sec": [
+      0.0,
+      8.23
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does a fork interact with and lift pasta?",
+      "signals": [
+        "tool_contact(fork,pasta)",
+        "grasp_stability(fork,pasta)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 34.0,
+      "total_score_100": 89.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "tool_contact(fork,pasta)": 28.3333,
+        "grasp_stability(fork,pasta)": 5.6667
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Does the spaghetti maintain continuity without sudden frame discontinuity or interpenetration during the fork's movement?",
+      "signals": [
+        "continuity(spaghetti)",
+        "frame_discontinuity(t)",
+        "interpenetration(fork,spaghetti)",
+        "continuity(pasta)",
+        "interpenetration(pasta,spaghetti)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "frame_discontinuity(t)": 40.0,
+        "continuity(spaghetti)": 7.3333,
+        "continuity(pasta)": 7.3333,
+        "interpenetration(fork,spaghetti)": 7.1667,
+        "interpenetration(pasta,spaghetti)": 7.1667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Does the fork cut or lift the spaghetti in a way that avoids interpenetration or collision inconsistencies?",
+      "signals": [
+        "tool_contact(fork,spaghetti)",
+        "cuttable_progress(spaghetti)",
+        "friction_sliding(fork,on:spaghetti)",
+        "support(fork,spaghetti)",
+        "deformation(spaghetti)",
+        "interpenetration(fork,spaghetti)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "deformation(spaghetti)": 40.0,
+        "interpenetration(fork,spaghetti)": 7.1667,
+        "support(fork,spaghetti)": 7.0,
+        "friction_sliding(fork,on:spaghetti)": 6.0,
+        "tool_contact(fork,spaghetti)": 5.6667,
+        "cuttable_progress(spaghetti)": 4.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Does the lighting and shadow on the plate match the scene's illumination?",
+      "signals": [
+        "shadow_consistency(plate,pasta)"
+      ],
+      "content_score_60": 40,
+      "signal_score_40": 36.67,
+      "total_score_100": 76.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "shadow_consistency(plate,pasta)": 36.6667
+      },
+      "content_score_raw": "40"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Does the fork demonstrate tool usage for cutting or lifting food?",
+      "signals": [
+        "tool_contact(fork,spaghetti)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 28.33,
+      "total_score_100": 78.33,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "tool_contact(fork,spaghetti)": 28.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "A fork is used to lift spaghetti and vegetables.",
+      "signals": [
+        "tool_contact(fork,pasta)",
+        "grasp_stability(fork,pasta)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 34.0,
+      "total_score_100": 94.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "tool_contact(fork,pasta)": 28.3333,
+        "grasp_stability(fork,pasta)": 5.6667
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "Spaghetti and sauce maintain physical continuity without sudden frame discontinuity.",
+      "signals": [
+        "continuity(spaghetti)",
+        "frame_discontinuity(t)",
+        "interpenetration(fork,spaghetti)",
+        "continuity(pasta)",
+        "interpenetration(pasta,spaghetti)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "frame_discontinuity(t)": 40.0,
+        "continuity(spaghetti)": 7.3333,
+        "continuity(pasta)": 7.3333,
+        "interpenetration(fork,spaghetti)": 7.1667,
+        "interpenetration(pasta,spaghetti)": 7.1667
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "The fork interacts with the spaghetti, showing cutting or lifting action.",
+      "signals": [
+        "tool_contact(fork,spaghetti)",
+        "cuttable_progress(spaghetti)",
+        "friction_sliding(fork,on:spaghetti)",
+        "support(fork,spaghetti)",
+        "deformation(spaghetti)",
+        "interpenetration(fork,spaghetti)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "deformation(spaghetti)": 40.0,
+        "interpenetration(fork,spaghetti)": 7.1667,
+        "support(fork,spaghetti)": 7.0,
+        "friction_sliding(fork,on:spaghetti)": 6.0,
+        "tool_contact(fork,spaghetti)": 5.6667,
+        "cuttable_progress(spaghetti)": 4.6667
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "Lighting and shadows on the plate are consistent with scene illumination.",
+      "signals": [
+        "shadow_consistency(plate,pasta)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 36.67,
+      "total_score_100": 86.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "shadow_consistency(plate,pasta)": 36.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "The fork demonstrates tool usage for cutting or lifting food.",
+      "signals": [
+        "tool_contact(fork,spaghetti)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 28.33,
+      "total_score_100": 88.33,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "tool_contact(fork,spaghetti)": 28.3333
+      },
+      "content_score_raw": "60"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "a1",
+    "a2",
+    "a3",
+    "a4",
+    "a5"
+  ]
+}

@@ -1,0 +1,132 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0499.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "cv2",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "person",
+        "attributes": {
+          "signature": [
+            "person-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            6.8
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "gymnast",
+        "attributes": {
+          "signature": [
+            "gymnast-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            6.8
+          ]
+        ]
+      },
+      {
+        "id": "o3",
+        "name": "leotard",
+        "attributes": {
+          "signature": [
+            "leotard-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            6.8
+          ]
+        ]
+      },
+      {
+        "id": "o4",
+        "name": "mat",
+        "attributes": {
+          "signature": [
+            "mat-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            6.8
+          ]
+        ]
+      },
+      {
+        "id": "o5",
+        "name": "beam",
+        "attributes": {
+          "signature": [
+            "beam-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            6.8
+          ]
+        ]
+      },
+      {
+        "id": "o6",
+        "name": "wall",
+        "attributes": {
+          "signature": [
+            "wall-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            6.8
+          ]
+        ]
+      },
+      {
+        "id": "o7",
+        "name": "light",
+        "attributes": {
+          "signature": [
+            "light-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            6.8
+          ]
+        ]
+      }
+    ],
+    "relations": []
+  },
+  "views": {
+    "objects_count_display": {
+      "person": 1,
+      "gymnast": 1,
+      "leotard": 1,
+      "mat": 1,
+      "beam": 1,
+      "wall": 1,
+      "light": 1
+    }
+  }
+}

@@ -1,0 +1,127 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0464.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "decord",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "person-1",
+        "attributes": {
+          "color": [
+            "black",
+            "tan",
+            "white"
+          ],
+          "sex": [
+            "male"
+          ],
+          "action": [
+            "dribbling",
+            "kicking",
+            "running"
+          ],
+          "pose": [
+            "bending",
+            "jumping"
+          ],
+          "facing-direction": [
+            "right-facing"
+          ],
+          "signature": [
+            "tan-shirt-black-shorts-white-shoes"
+          ]
+        },
+        "spans": [
+          [
+            0.2,
+            9.2
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "person-2",
+        "attributes": {
+          "color": [
+            "black"
+          ],
+          "sex": [
+            "male"
+          ],
+          "action": [
+            "chasing",
+            "defending",
+            "running"
+          ],
+          "pose": [
+            "bending",
+            "jumping"
+          ],
+          "facing-direction": [
+            "left-facing"
+          ],
+          "signature": [
+            "black-outfit-number-7"
+          ]
+        },
+        "spans": [
+          [
+            0.6,
+            9.2
+          ]
+        ]
+      }
+    ],
+    "relations": [
+      {
+        "subject": "o1",
+        "predicate": "looking-at",
+        "object": "o2",
+        "spans": [
+          [
+            0.2,
+            9.2
+          ]
+        ],
+        "confidence": 0.9
+      },
+      {
+        "subject": "o2",
+        "predicate": "defending",
+        "object": "o1",
+        "spans": [
+          [
+            0.6,
+            9.2
+          ]
+        ],
+        "confidence": 0.9
+      },
+      {
+        "subject": "o2",
+        "predicate": "looking-at",
+        "object": "o1",
+        "spans": [
+          [
+            0.6,
+            9.2
+          ]
+        ],
+        "confidence": 0.9
+      }
+    ]
+  },
+  "views": {
+    "objects_count_display": {
+      "person-1": 1,
+      "person-2": 1
+    }
+  }
+}

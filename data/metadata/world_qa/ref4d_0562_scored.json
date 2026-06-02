@@ -1,0 +1,214 @@
+{
+  "summary": {
+    "items": 10,
+    "enter_bank": 9,
+    "clip_range_sec": [
+      0.0,
+      7.5
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Do the dark ribbons between the bus sections show any deformation or material inconsistency?",
+      "signals": [
+        "continuity(bus)",
+        "deformation(bus)",
+        "interpenetration(bus)",
+        "rigid_transform(bus)",
+        "material_optics(bus)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "deformation(bus)": 40.0,
+        "rigid_transform(bus)": 7.5,
+        "material_optics(bus)": 7.5,
+        "continuity(bus)": 7.3333,
+        "interpenetration(bus)": 7.1667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Is the bicycle parked safely to the left of the street, not encroaching onto the roadway?",
+      "signals": [
+        "friction_sliding(bicycle,on:road)",
+        "prohibited_intersection(bicycle,road)",
+        "containment(bicycle,area:left-side-of-road)",
+        "collision(bicycle,vehicle)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "prohibited_intersection(bicycle,road)": 36.6667,
+        "collision(bicycle,vehicle)": 6.3333,
+        "friction_sliding(bicycle,on:road)": 6.0,
+        "containment(bicycle,area:left-side-of-road)": 5.8333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Does the articulated bus maintain a continuous and consistent trajectory along the road without sudden changes in size or shape while stationary?",
+      "signals": [
+        "continuity(bus)",
+        "friction_sliding(bus_sections)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(bus)": 36.6667,
+        "friction_sliding(bus_sections)": 6.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Are the trolleybus poles connected to both sections of the vehicle throughout the scene?",
+      "signals": [
+        "rigid_transform(trolleybus_poles)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 37.5,
+      "total_score_100": 97.5,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "rigid_transform(trolleybus_poles)": 37.5
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Do the shadows cast by the buses on the road surface match the position and orientation of the vehicles?",
+      "signals": [
+        "shadow_consistency(buses)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 36.67,
+      "total_score_100": 96.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "shadow_consistency(buses)": 36.6667
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "The articulated bus remains stationary on the road, and its dark ribbons between sections are consistently visible.",
+      "signals": [
+        "continuity(bus)",
+        "deformation(bus)",
+        "interpenetration(bus)",
+        "rigid_transform(bus)",
+        "material_optics(bus)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "deformation(bus)": 40.0,
+        "rigid_transform(bus)": 7.5,
+        "material_optics(bus)": 7.5,
+        "continuity(bus)": 7.3333,
+        "interpenetration(bus)": 7.1667
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "The bicycle is parked safely to the left of the street, not obstructing traffic flow.",
+      "signals": [
+        "friction_sliding(bicycle,on:road)",
+        "prohibited_intersection(bicycle,road)",
+        "containment(bicycle,area:left-side-of-road)",
+        "collision(bicycle,vehicle)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "prohibited_intersection(bicycle,road)": 36.6667,
+        "collision(bicycle,vehicle)": 6.3333,
+        "friction_sliding(bicycle,on:road)": 6.0,
+        "containment(bicycle,area:left-side-of-road)": 5.8333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "The trolleybus poles remain connected to both sections of the vehicle throughout the scene.",
+      "signals": [
+        "rigid_transform(trolleybus_poles)"
+      ],
+      "content_score_60": 36,
+      "signal_score_40": 37.5,
+      "total_score_100": 73.5,
+      "duplicate_penalized": true,
+      "signal_detail": {
+        "rigid_transform(trolleybus_poles)": 37.5
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "The connecting mechanism between the two parts of the bus does not show signs of instability while stationary.",
+      "signals": [
+        "friction_sliding(bus_sections)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 30.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "friction_sliding(bus_sections)": 30.0
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "The shadow cast by the buses onto the road surface is consistent with their position.",
+      "signals": [
+        "shadow_consistency(buses)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 36.67,
+      "total_score_100": 96.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "shadow_consistency(buses)": 36.6667
+      },
+      "content_score_raw": "60"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "v5",
+    "a1",
+    "a2",
+    "a4",
+    "a5"
+  ]
+}

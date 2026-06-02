@@ -1,0 +1,166 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0144.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "cv2",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "building",
+        "attributes": {
+          "color": [
+            "blue-reflection",
+            "silver"
+          ],
+          "pattern": [
+            "grid-like"
+          ],
+          "texture": [
+            "smooth"
+          ],
+          "material": [
+            "glass"
+          ],
+          "size": [
+            "large"
+          ],
+          "state": [
+            "reflective"
+          ],
+          "signature": [
+            "large-spherical-reflective-glass-structure"
+          ]
+        },
+        "spans": [
+          [
+            0.1,
+            0.9
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "tree",
+        "attributes": {
+          "color": [
+            "brown"
+          ],
+          "pattern": [
+            "sparse-branched"
+          ],
+          "texture": [
+            "rough"
+          ],
+          "material": [
+            "wood"
+          ],
+          "size": [
+            "tall"
+          ],
+          "position": [
+            "left"
+          ],
+          "signature": [
+            "tall-bare-branched-tree-left-side"
+          ]
+        },
+        "spans": [
+          [
+            0.1,
+            0.3
+          ]
+        ]
+      },
+      {
+        "id": "o3",
+        "name": "path",
+        "attributes": {
+          "color": [
+            "gray"
+          ],
+          "material": [
+            "concrete"
+          ],
+          "size": [
+            "wide"
+          ],
+          "position": [
+            "center"
+          ],
+          "signature": [
+            "paved-path-leading-to-building"
+          ]
+        },
+        "spans": [
+          [
+            0.2,
+            0.7
+          ]
+        ]
+      }
+    ],
+    "relations": [
+      {
+        "subject": "o1",
+        "predicate": "reflecting",
+        "object": "o2",
+        "spans": [
+          [
+            0.1,
+            0.9
+          ]
+        ],
+        "confidence": 0.9
+      },
+      {
+        "subject": "o1",
+        "predicate": "reflecting",
+        "object": "o3",
+        "spans": [
+          [
+            0.1,
+            0.9
+          ]
+        ],
+        "confidence": 0.8
+      },
+      {
+        "subject": "o1",
+        "predicate": "reflecting",
+        "object": "o3",
+        "spans": [
+          [
+            0.1,
+            0.9
+          ]
+        ],
+        "confidence": 0.8
+      },
+      {
+        "subject": "o2",
+        "predicate": "left-of",
+        "object": "o1",
+        "spans": [
+          [
+            0.1,
+            0.3
+          ]
+        ],
+        "confidence": 0.9
+      }
+    ]
+  },
+  "views": {
+    "objects_count_display": {
+      "building": 1,
+      "tree": 1,
+      "path": 1
+    }
+  }
+}

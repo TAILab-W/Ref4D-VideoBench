@@ -1,0 +1,168 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0067.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "cv2",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "cheetah",
+        "attributes": {
+          "color": [
+            "dark-spots",
+            "light-yellow"
+          ],
+          "action": [
+            "observing",
+            "resting"
+          ],
+          "signature": [
+            "light-yellow-spots,-sitting-right-side"
+          ]
+        },
+        "spans": [
+          [
+            0.7,
+            0.9
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "ocelot",
+        "attributes": {
+          "color": [
+            "dark-spots",
+            "light-belly"
+          ],
+          "action": [
+            "biting",
+            "carrying",
+            "chasing",
+            "pawing",
+            "playing"
+          ],
+          "signature": [
+            "dark-spots-light-belly,-playing-left-side"
+          ]
+        },
+        "spans": [
+          [
+            0.1,
+            0.8
+          ]
+        ]
+      },
+      {
+        "id": "o3",
+        "name": "cheetah",
+        "attributes": {
+          "color": [
+            "dark-spots",
+            "light-yellow"
+          ],
+          "action": [
+            "approaching",
+            "observing",
+            "pouncing"
+          ],
+          "signature": [
+            "light-yellow-spots,-moving-around"
+          ]
+        },
+        "spans": [
+          [
+            0.8,
+            0.9
+          ]
+        ]
+      }
+    ],
+    "relations": [
+      {
+        "subject": "o2",
+        "predicate": "left-of",
+        "object": "o1",
+        "spans": [
+          [
+            0.1,
+            0.3
+          ]
+        ],
+        "confidence": 0.0
+      },
+      {
+        "subject": "o3",
+        "predicate": "right-of",
+        "object": "o1",
+        "spans": [
+          [
+            0.8,
+            0.9
+          ]
+        ],
+        "confidence": 0.0
+      },
+      {
+        "subject": "o3",
+        "predicate": "approaching",
+        "object": "o1",
+        "spans": [
+          [
+            0.8,
+            0.9
+          ]
+        ],
+        "confidence": 0.0
+      },
+      {
+        "subject": "o3",
+        "predicate": "pouncing",
+        "object": "o1",
+        "spans": [
+          [
+            0.8,
+            0.9
+          ]
+        ],
+        "confidence": 0.0
+      },
+      {
+        "subject": "o1",
+        "predicate": "observing",
+        "object": "o2",
+        "spans": [
+          [
+            0.7,
+            0.9
+          ]
+        ],
+        "confidence": 0.0
+      },
+      {
+        "subject": "o1",
+        "predicate": "resting",
+        "object": "o2",
+        "spans": [
+          [
+            0.7,
+            0.9
+          ]
+        ],
+        "confidence": 0.0
+      }
+    ]
+  },
+  "views": {
+    "objects_count_display": {
+      "cheetah": 2,
+      "ocelot": 1
+    }
+  }
+}

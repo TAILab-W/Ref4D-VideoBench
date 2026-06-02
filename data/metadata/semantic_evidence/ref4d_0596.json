@@ -1,0 +1,115 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0596.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "cv2",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "train-engine-196",
+        "attributes": {
+          "color": [
+            "blue",
+            "red"
+          ],
+          "pattern": [
+            "striped"
+          ],
+          "signature": [
+            "red-and-blue-front,-amtrak-logo,-number-196"
+          ]
+        },
+        "spans": [
+          [
+            0.2,
+            0.5
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "train-engine-345",
+        "attributes": {
+          "color": [
+            "blue",
+            "red"
+          ],
+          "pattern": [
+            "striped"
+          ],
+          "signature": [
+            "blue-and-red-front,-amtrak-logo,-number-345"
+          ]
+        },
+        "spans": [
+          [
+            0.4,
+            0.7
+          ]
+        ]
+      },
+      {
+        "id": "o3",
+        "name": "silver-passenger-car",
+        "attributes": {
+          "color": [
+            "blue",
+            "red",
+            "silver"
+          ],
+          "pattern": [
+            "striped"
+          ],
+          "signature": [
+            "silver-body,-red-and-blue-stripes,-amtrak-logo"
+          ]
+        },
+        "spans": [
+          [
+            0.8,
+            3.8
+          ]
+        ]
+      }
+    ],
+    "relations": [
+      {
+        "subject": "o1",
+        "predicate": "left-of",
+        "object": "o2",
+        "spans": [
+          [
+            0.3,
+            0.4
+          ]
+        ],
+        "confidence": 0.8
+      },
+      {
+        "subject": "o2",
+        "predicate": "pushing",
+        "object": "o3",
+        "spans": [
+          [
+            0.7,
+            0.8
+          ]
+        ],
+        "confidence": 0.9
+      }
+    ]
+  },
+  "views": {
+    "objects_count_display": {
+      "train-engine-196": 1,
+      "train-engine-345": 1,
+      "silver-passenger-car": 1
+    }
+  }
+}

@@ -1,0 +1,120 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0477.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "decord",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "person",
+        "attributes": {
+          "color": [
+            "black",
+            "red"
+          ],
+          "pattern": [
+            "checkered"
+          ],
+          "action": [
+            "snowboarding"
+          ],
+          "pose": [
+            "bending-forward",
+            "leaning-back"
+          ],
+          "facing-direction": [
+            "right-facing"
+          ],
+          "position": [
+            "center"
+          ],
+          "signature": [
+            "red-black-checkered-sleeve-brown-pants-snowboarder"
+          ]
+        },
+        "spans": [
+          [
+            0.2,
+            0.9
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "snowboard",
+        "attributes": {
+          "color": [
+            "black",
+            "green"
+          ],
+          "material": [
+            "wood"
+          ],
+          "tool-or-instrument": [
+            "snowboarding"
+          ],
+          "signature": [
+            "black-green-patterned-bottom"
+          ]
+        },
+        "spans": [
+          [
+            0.7,
+            1.0
+          ]
+        ]
+      },
+      {
+        "id": "o3",
+        "name": "ski-lift",
+        "attributes": {
+          "color": [
+            "red"
+          ],
+          "object-part": [
+            "carrier"
+          ],
+          "equipment": [
+            "ski-lift"
+          ],
+          "signature": [
+            "red-carrier-with-cable"
+          ]
+        },
+        "spans": [
+          [
+            0.1,
+            0.4
+          ]
+        ]
+      }
+    ],
+    "relations": [
+      {
+        "subject": "o1",
+        "predicate": "riding",
+        "object": "o2",
+        "spans": [
+          [
+            0.3,
+            0.9
+          ]
+        ],
+        "confidence": 0.9
+      }
+    ]
+  },
+  "views": {
+    "objects_count_display": {
+      "person": 1,
+      "snowboard": 1,
+      "ski-lift": 1
+    }
+  }
+}

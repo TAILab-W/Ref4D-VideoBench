@@ -1,0 +1,205 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0502.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "decord",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "athlete",
+        "attributes": {
+          "color": [
+            "blue",
+            "orange"
+          ],
+          "pattern": [
+            "striped"
+          ],
+          "sex": [
+            "female"
+          ],
+          "action": [
+            "jumping",
+            "landing",
+            "running"
+          ],
+          "pose": [
+            "crouched",
+            "mid-air"
+          ],
+          "facing-direction": [
+            "forward"
+          ],
+          "position": [
+            "center",
+            "leading"
+          ],
+          "signature": [
+            "number-4-blue-sleeve-orange-shoes"
+          ]
+        },
+        "spans": [
+          [
+            0.3,
+            0.7
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "athlete",
+        "attributes": {
+          "color": [
+            "black"
+          ],
+          "sex": [
+            "female"
+          ],
+          "action": [
+            "running"
+          ],
+          "facing-direction": [
+            "forward"
+          ],
+          "position": [
+            "following",
+            "left"
+          ],
+          "signature": [
+            "number-2-black-shorts"
+          ]
+        },
+        "spans": [
+          [
+            0.1,
+            0.5
+          ]
+        ]
+      },
+      {
+        "id": "o3",
+        "name": "banner",
+        "attributes": {
+          "color": [
+            "black",
+            "blue"
+          ],
+          "printed-text": [
+            "finish",
+            "halle",
+            "vinco"
+          ],
+          "signature": [
+            "black-blue-text"
+          ]
+        },
+        "spans": [
+          [
+            0.6,
+            0.8
+          ]
+        ]
+      },
+      {
+        "id": "o4",
+        "name": "chair",
+        "attributes": {
+          "color": [
+            "blue"
+          ],
+          "signature": [
+            "blue"
+          ]
+        },
+        "spans": [
+          [
+            0.1,
+            0.7
+          ]
+        ]
+      },
+      {
+        "id": "o5",
+        "name": "tent",
+        "attributes": {
+          "color": [
+            "blue"
+          ],
+          "signature": [
+            "blue"
+          ]
+        },
+        "spans": [
+          [
+            0.5,
+            0.7
+          ]
+        ]
+      }
+    ],
+    "relations": [
+      {
+        "subject": "o1",
+        "predicate": "left-of",
+        "object": "o2",
+        "spans": [
+          [
+            0.3,
+            0.5
+          ]
+        ],
+        "confidence": 0.8
+      },
+      {
+        "subject": "o1",
+        "predicate": "over",
+        "object": "o3",
+        "spans": [
+          [
+            0.4,
+            0.6
+          ]
+        ],
+        "confidence": 0.9
+      },
+      {
+        "subject": "o1",
+        "predicate": "over",
+        "object": "o4",
+        "spans": [
+          [
+            0.4,
+            0.7
+          ]
+        ],
+        "confidence": 0.9
+      },
+      {
+        "subject": "o1",
+        "predicate": "overlapping",
+        "object": "o5",
+        "spans": [
+          [
+            0.5,
+            0.7
+          ]
+        ],
+        "confidence": 0.8
+      }
+    ]
+  },
+  "views": {
+    "objects_count_display": {
+      "athlete": 2,
+      "banner": 1,
+      "chair": 1,
+      "tent": 1
+    }
+  }
+}

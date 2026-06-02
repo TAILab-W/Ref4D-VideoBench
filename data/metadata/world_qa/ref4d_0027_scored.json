@@ -1,0 +1,198 @@
+{
+  "summary": {
+    "items": 10,
+    "enter_bank": 9,
+    "clip_range_sec": [
+      0.0,
+      8.2
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Do the antelopes' leg directions match their body orientations?",
+      "signals": [
+        "trajectory_dir",
+        "biological_motion",
+        "trajectory_dir(leg,axis)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir": 38.3333,
+        "biological_motion": 7.6667,
+        "trajectory_dir(leg,axis)": 7.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Are the antelopes walking on grass with natural horn positions?",
+      "signals": [
+        "biological_motion(antelope)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 38.33,
+      "total_score_100": 88.33,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "biological_motion(antelope)": 38.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Do both antelopes move continuously without sudden changes in direction?",
+      "signals": [
+        "continuity(antelope)",
+        "continuity"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(antelope)": 36.6667,
+        "continuity": 7.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Do the antelopes' legs and horns overlap unrealistically during motion?",
+      "signals": [
+        "interpenetration(antelope,part)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 35.83,
+      "total_score_100": 95.83,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "interpenetration(antelope,part)": 35.8333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Is the larger antelope smaller than its signature size?",
+      "signals": [
+        "size_inconsistency(antelope)"
+      ],
+      "content_score_60": 0,
+      "signal_score_40": 37.5,
+      "total_score_100": 37.5,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "size_inconsistency(antelope)": 37.5
+      },
+      "content_score_raw": "0"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "The larger antelope's legs move forward, matching its body orientation.",
+      "signals": [
+        "trajectory_dir",
+        "biological_motion",
+        "trajectory_dir(leg,axis)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir": 38.3333,
+        "biological_motion": 7.6667,
+        "trajectory_dir(leg,axis)": 7.6667
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "Both antelopes follow continuous trajectories without abrupt changes in direction.",
+      "signals": [
+        "trajectory_dir(antelope,axis)",
+        "continuity(antelope)",
+        "continuity"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(antelope,axis)": 38.3333,
+        "continuity(antelope)": 7.3333,
+        "continuity": 7.3333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "The smaller antelope walks on grass with natural leg and horn positions.",
+      "signals": [
+        "biological_motion(antelope)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 38.33,
+      "total_score_100": 98.33,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "biological_motion(antelope)": 38.3333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "Both antelopes maintain consistent physical behavior throughout the video.",
+      "signals": [
+        "continuity(antelope)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 36.67,
+      "total_score_100": 96.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(antelope)": 36.6667
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "Antelope horns do not overlap unrealistically during their movement.",
+      "signals": [
+        "interpenetration(antelope,part)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 35.83,
+      "total_score_100": 95.83,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "interpenetration(antelope,part)": 35.8333
+      },
+      "content_score_raw": "60"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "a1",
+    "a2",
+    "a3",
+    "a4",
+    "a5"
+  ]
+}

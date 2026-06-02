@@ -1,0 +1,105 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0302.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "decord",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "wave",
+        "attributes": {
+          "color": [
+            "cream",
+            "white"
+          ],
+          "material": [
+            "water"
+          ],
+          "state": [
+            "explosive",
+            "foamy"
+          ],
+          "action": [
+            "bursting",
+            "crashing"
+          ],
+          "orientation": [
+            "vertical"
+          ],
+          "facing-direction": [
+            "left"
+          ],
+          "lighting-effect": [
+            "backlit",
+            "sunlit"
+          ],
+          "signature": [
+            "a-large,-explosive-burst-of-water"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            13.0
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "rock",
+        "attributes": {
+          "color": [
+            "brown",
+            "gray"
+          ],
+          "pattern": [
+            "columnar",
+            "jagged"
+          ],
+          "texture": [
+            "layered",
+            "rough"
+          ],
+          "material": [
+            "stone"
+          ],
+          "size": [
+            "large"
+          ],
+          "position": [
+            "foreground",
+            "left"
+          ],
+          "object-part": [
+            "cliff"
+          ],
+          "surface-detail": [
+            "vertical-columns"
+          ],
+          "signature": [
+            "a-columnar-and-jagged-cliff-face"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            13.0
+          ]
+        ]
+      }
+    ],
+    "relations": []
+  },
+  "views": {
+    "objects_count_display": {
+      "wave": 1,
+      "rock": 1
+    }
+  }
+}

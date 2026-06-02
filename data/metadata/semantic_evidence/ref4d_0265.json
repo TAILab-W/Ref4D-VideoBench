@@ -1,0 +1,100 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0265.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "cv2",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "conveyor-belt",
+        "attributes": {
+          "color": [
+            "black",
+            "green"
+          ],
+          "material": [
+            "metal",
+            "plastic"
+          ],
+          "texture": [
+            "punctured",
+            "smooth"
+          ],
+          "object-part": [
+            "rollers",
+            "surface"
+          ],
+          "signature": [
+            "green-surface-with-black-dots-and-metallic-rollers"
+          ]
+        },
+        "spans": [
+          [
+            0.2,
+            6.4
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "machine",
+        "attributes": {
+          "brand-or-logo": [
+            "mosun"
+          ],
+          "color": [
+            "gold",
+            "silver",
+            "white"
+          ],
+          "material": [
+            "metal"
+          ],
+          "equipment": [
+            "automatic-gluing-machine"
+          ],
+          "contact-info": [
+            "email-address",
+            "phone-number",
+            "website-url"
+          ],
+          "signature": [
+            "mosun-branded-machine-with-golden-and-silver-parts"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            6.4
+          ]
+        ]
+      }
+    ],
+    "relations": [
+      {
+        "subject": "o1",
+        "predicate": "left-of",
+        "object": "o2",
+        "spans": [
+          [
+            0.2,
+            6.4
+          ]
+        ],
+        "confidence": 0.8
+      }
+    ]
+  },
+  "views": {
+    "objects_count_display": {
+      "conveyor-belt": 1,
+      "machine": 1
+    }
+  }
+}

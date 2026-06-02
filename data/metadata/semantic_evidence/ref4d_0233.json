@@ -1,0 +1,52 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0233.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "cv2",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "cow",
+        "attributes": {
+          "signature": [
+            "beef-steak"
+          ]
+        },
+        "spans": [
+          [
+            0.2,
+            0.9
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "grill",
+        "attributes": {
+          "signature": [
+            "nexgrill"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            0.7
+          ]
+        ]
+      }
+    ],
+    "relations": []
+  },
+  "views": {
+    "objects_count_display": {
+      "cow": 1,
+      "grill": 1
+    }
+  }
+}

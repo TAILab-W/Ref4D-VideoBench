@@ -1,0 +1,155 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0364.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "decord",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "waterfall",
+        "attributes": {
+          "color": [
+            "green",
+            "white"
+          ],
+          "texture": [
+            "mossy",
+            "smooth"
+          ],
+          "material": [
+            "rock",
+            "water"
+          ],
+          "size": [
+            "large"
+          ],
+          "state": [
+            "flowing"
+          ],
+          "orientation": [
+            "vertical"
+          ],
+          "signature": [
+            "two-streams-mossy-rock-backdrop"
+          ]
+        },
+        "spans": [
+          [
+            0.1,
+            8.7
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "person",
+        "attributes": {
+          "color": [
+            "blue",
+            "gray"
+          ],
+          "sex": [
+            "male"
+          ],
+          "pose": [
+            "standing"
+          ],
+          "action": [
+            "looking-at-waterfall"
+          ],
+          "facing-direction": [
+            "left"
+          ],
+          "equipment": [
+            "backpack",
+            "hat"
+          ],
+          "signature": [
+            "blue-hat-gray-shirt-backpack"
+          ]
+        },
+        "spans": [
+          [
+            3.6,
+            8.7
+          ]
+        ]
+      },
+      {
+        "id": "o3",
+        "name": "bridge",
+        "attributes": {
+          "material": [
+            "metal"
+          ],
+          "color": [
+            "brown"
+          ],
+          "position": [
+            "foreground"
+          ],
+          "signature": [
+            "metal-railing-with-person-holding-on"
+          ]
+        },
+        "spans": [
+          [
+            3.6,
+            8.7
+          ]
+        ]
+      }
+    ],
+    "relations": [
+      {
+        "subject": "o2",
+        "predicate": "looking-at",
+        "object": "o1",
+        "spans": [
+          [
+            4.7,
+            8.7
+          ]
+        ],
+        "confidence": 0.0
+      },
+      {
+        "subject": "o2",
+        "predicate": "holding",
+        "object": "o3",
+        "spans": [
+          [
+            4.7,
+            8.7
+          ]
+        ],
+        "confidence": 0.0
+      },
+      {
+        "subject": "o3",
+        "predicate": "in-front-of",
+        "object": "o1",
+        "spans": [
+          [
+            3.6,
+            8.7
+          ]
+        ],
+        "confidence": 0.0
+      }
+    ]
+  },
+  "views": {
+    "objects_count_display": {
+      "waterfall": 1,
+      "person": 1,
+      "bridge": 1
+    }
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0023.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "cv2",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "penguin",
+        "attributes": {
+          "color": [
+            "black",
+            "white"
+          ],
+          "action": [
+            "jumping",
+            "swimming"
+          ],
+          "pose": [
+            "flapping-wings"
+          ],
+          "orientation": [
+            "facing-downward"
+          ],
+          "position": [
+            "edge-of-iceberg",
+            "in-air",
+            "in-water"
+          ],
+          "signature": [
+            "black-white-body"
+          ]
+        },
+        "spans": [
+          [
+            0.2,
+            1.0
+          ]
+        ]
+      }
+    ],
+    "relations": []
+  },
+  "views": {
+    "objects_count_display": {
+      "penguin": 1
+    }
+  }
+}

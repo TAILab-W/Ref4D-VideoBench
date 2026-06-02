@@ -1,0 +1,201 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0260.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "cv2",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "person",
+        "attributes": {
+          "color": [
+            "blue"
+          ],
+          "sex": [
+            "male"
+          ],
+          "age": [
+            "young"
+          ],
+          "action": [
+            "adjusting",
+            "inspecting",
+            "lifting",
+            "pointing"
+          ],
+          "pose": [
+            "standing"
+          ],
+          "facing-direction": [
+            "right"
+          ],
+          "signature": [
+            "blue-jacket-white-gloves-short-brown-hair"
+          ]
+        },
+        "spans": [
+          [
+            0.2,
+            0.9
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "person",
+        "attributes": {
+          "color": [
+            "blue"
+          ],
+          "sex": [
+            "female"
+          ],
+          "age": [
+            "young"
+          ],
+          "action": [
+            "adjusting",
+            "cutting"
+          ],
+          "pose": [
+            "standing"
+          ],
+          "facing-direction": [
+            "left"
+          ],
+          "signature": [
+            "blue-jacket-white-gloves-long-black-hair"
+          ]
+        },
+        "spans": [
+          [
+            0.5,
+            1.0
+          ]
+        ]
+      },
+      {
+        "id": "o3",
+        "name": "tool",
+        "attributes": {
+          "color": [
+            "red"
+          ],
+          "material": [
+            "metal"
+          ],
+          "object-part": [
+            "handle"
+          ],
+          "signature": [
+            "red-handled-tool"
+          ]
+        },
+        "spans": [
+          [
+            0.7,
+            0.8
+          ]
+        ]
+      },
+      {
+        "id": "o4",
+        "name": "plastic",
+        "attributes": {
+          "color": [
+            "green"
+          ],
+          "pattern": [
+            "elongated",
+            "with-holes"
+          ],
+          "material": [
+            "plastic"
+          ],
+          "size": [
+            "large"
+          ],
+          "state": [
+            "deflated",
+            "inflated"
+          ],
+          "texture": [
+            "smooth"
+          ],
+          "signature": [
+            "green-elongated-shape-with-holes"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            1.2
+          ]
+        ]
+      }
+    ],
+    "relations": [
+      {
+        "subject": "o1",
+        "predicate": "lifting",
+        "object": "o4",
+        "spans": [
+          [
+            0.7,
+            0.9
+          ]
+        ],
+        "confidence": 0.8
+      },
+      {
+        "subject": "o2",
+        "predicate": "adjusting",
+        "object": "o4",
+        "spans": [
+          [
+            0.5,
+            0.7
+          ]
+        ],
+        "confidence": 0.8
+      },
+      {
+        "subject": "o2",
+        "predicate": "cutting",
+        "object": "o4",
+        "spans": [
+          [
+            0.7,
+            0.8
+          ]
+        ],
+        "confidence": 0.8
+      },
+      {
+        "subject": "o2",
+        "predicate": "holding",
+        "object": "o3",
+        "spans": [
+          [
+            0.7,
+            0.8
+          ]
+        ],
+        "confidence": 0.8
+      }
+    ]
+  },
+  "views": {
+    "objects_count_display": {
+      "person": 2,
+      "tool": 1,
+      "plastic": 1
+    }
+  }
+}

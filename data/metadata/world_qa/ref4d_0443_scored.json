@@ -1,0 +1,199 @@
+{
+  "summary": {
+    "items": 10,
+    "enter_bank": 8,
+    "clip_range_sec": [
+      0.0,
+      8.3
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does the red chair support the child without collapsing?",
+      "signals": [
+        "containment(lollipop,hand)",
+        "support(chair,ground)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "support(chair,ground)": 35.0,
+        "containment(lollipop,hand)": 5.8333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Is the child sitting in the red chair with a safe posture?",
+      "signals": [
+        "center_of_mass_over_base(person)",
+        "placeable(person,at:chair)"
+      ],
+      "content_score_60": 40,
+      "signal_score_40": 37.67,
+      "total_score_100": 77.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "center_of_mass_over_base(person)": 32.5,
+        "placeable(person,at:chair)": 5.1667
+      },
+      "content_score_raw": "40"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Does the lollipop remain visible in the child's hand throughout the clip?",
+      "signals": [
+        "continuity(lollipop)",
+        "continuity(oX)"
+      ],
+      "content_score_60": 30,
+      "signal_score_40": 40.0,
+      "total_score_100": 70.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(lollipop)": 36.6667,
+        "continuity(oX)": 7.3333
+      },
+      "content_score_raw": "30"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Do the background chairs and tables stay stable under people?",
+      "signals": [
+        "support(chair,ground)",
+        "support(table,ground)",
+        "support(oA,oB)"
+      ],
+      "content_score_60": 40,
+      "signal_score_40": 40.0,
+      "total_score_100": 80.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "support(chair,ground)": 35.0,
+        "support(table,ground)": 7.0,
+        "support(oA,oB)": 7.0
+      },
+      "content_score_raw": "40"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Are there any sharp objects visible near the child in the red chair?",
+      "signals": [
+        "prohibited_intersection(sharp_objects,child)",
+        "falling_hazard(oObj)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "prohibited_intersection(sharp_objects,child)": 36.6667,
+        "falling_hazard(oObj)": 6.3333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "The red chair is used for seating the child.",
+      "signals": [
+        "placeable(person,at:chair)",
+        "placeable(child,chair)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 31.0,
+      "total_score_100": 91.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "placeable(person,at:chair)": 25.8333,
+        "placeable(child,chair)": 5.1667
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "The table and chairs in the background are stable.",
+      "signals": [
+        "support(chair,ground)",
+        "support(oA,oB)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "support(chair,ground)": 35.0,
+        "support(oA,oB)": 7.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "The child maintains a safe posture while sitting in the chair.",
+      "signals": [
+        "center_of_mass_over_base(person)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 32.5,
+      "total_score_100": 82.5,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "center_of_mass_over_base(person)": 32.5
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "The lollipop remains in the child's hand without sudden disappearance.",
+      "signals": [
+        "continuity(lollipop)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 36.67,
+      "total_score_100": 86.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(lollipop)": 36.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "There are no visible sharp objects or hazardous materials within reach of the seated child.",
+      "signals": [
+        "prohibited_intersection(sharp_objects,child)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 36.67,
+      "total_score_100": 96.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "prohibited_intersection(sharp_objects,child)": 36.6667
+      },
+      "content_score_raw": "60"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v4",
+    "v5",
+    "a1",
+    "a2",
+    "a3",
+    "a4",
+    "a5"
+  ]
+}

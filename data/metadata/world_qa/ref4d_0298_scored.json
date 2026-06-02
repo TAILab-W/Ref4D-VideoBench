@@ -1,0 +1,218 @@
+{
+  "summary": {
+    "items": 10,
+    "enter_bank": 9,
+    "clip_range_sec": [
+      0.0,
+      7.6
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Do clouds move and change shape while the sun descends?",
+      "signals": [
+        "continuity(cloud)",
+        "hue_histogram_jump(sun)",
+        "trajectory_dir(sun,vertical_axis)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(sun,vertical_axis)": 38.3333,
+        "continuity(cloud)": 7.3333,
+        "hue_histogram_jump(sun)": 6.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Does the sun's light source maintain a bright orange-yellow hue as it lowers toward the horizon?",
+      "signals": [
+        "continuity(cloud)",
+        "continuity(sun)",
+        "hue_histogram_jump(cloud)",
+        "size_inconsistency(sun)",
+        "trajectory_dir(sun,axis)",
+        "accel_sign(sun,axis)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(sun,axis)": 38.3333,
+        "size_inconsistency(sun)": 7.5,
+        "continuity(cloud)": 7.3333,
+        "continuity(sun)": 7.3333,
+        "accel_sign(sun,axis)": 7.0,
+        "hue_histogram_jump(cloud)": 6.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Do cloud colors smoothly transition between orange and blue with changing lighting?",
+      "signals": [
+        "hue_histogram_jump(clouds)",
+        "hue_histogram_jump(sky)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "hue_histogram_jump(clouds)": 33.3333,
+        "hue_histogram_jump(sky)": 6.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Are there no prohibited intersections or falling hazards in the scene?",
+      "signals": [
+        "falling_hazard(cloud)",
+        "prohibited_intersection(cloud,sun)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "prohibited_intersection(cloud,sun)": 36.6667,
+        "falling_hazard(cloud)": 6.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Do shadows on the mountains align correctly with their positions?",
+      "signals": [
+        "shadow_consistency(mountain)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 36.67,
+      "total_score_100": 86.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "shadow_consistency(mountain)": 36.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "Clouds move and change shape, displaying orange-and-blue hues during the sunset.",
+      "signals": [
+        "continuity(cloud)",
+        "continuity(sun)",
+        "hue_histogram_jump(cloud)",
+        "size_inconsistency(sun)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "size_inconsistency(sun)": 37.5,
+        "continuity(cloud)": 7.3333,
+        "continuity(sun)": 7.3333,
+        "hue_histogram_jump(cloud)": 6.6667
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "The sun gradually descends below the horizon, emitting bright orange-yellow light that fades.",
+      "signals": [
+        "hue_histogram_jump(sun)",
+        "trajectory_dir(sun,vertical_axis)",
+        "trajectory_dir(sun,axis)",
+        "accel_sign(sun,axis)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(sun,vertical_axis)": 38.3333,
+        "trajectory_dir(sun,axis)": 7.6667,
+        "accel_sign(sun,axis)": 7.0,
+        "hue_histogram_jump(sun)": 6.6667
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "Sky colors smoothly transition from blue to warm oranges as clouds shift.",
+      "signals": [
+        "hue_histogram_jump(clouds)",
+        "hue_histogram_jump(sky)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "hue_histogram_jump(clouds)": 33.3333,
+        "hue_histogram_jump(sky)": 6.6667
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "No falling hazards or prohibited intersections are visible in the scene.",
+      "signals": [
+        "falling_hazard(cloud)",
+        "prohibited_intersection(cloud,sun)"
+      ],
+      "content_score_60": 30,
+      "signal_score_40": 40.0,
+      "total_score_100": 70.0,
+      "duplicate_penalized": true,
+      "signal_detail": {
+        "prohibited_intersection(cloud,sun)": 36.6667,
+        "falling_hazard(cloud)": 6.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "Shadows on the ground align with mountain positions as the sun sets.",
+      "signals": [
+        "shadow_consistency(mountain)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 36.67,
+      "total_score_100": 86.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "shadow_consistency(mountain)": 36.6667
+      },
+      "content_score_raw": "50"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "v5",
+    "a1",
+    "a2",
+    "a3",
+    "a5"
+  ]
+}

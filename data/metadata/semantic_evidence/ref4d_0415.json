@@ -1,0 +1,52 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0415.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "decord",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "plant",
+        "attributes": {
+          "signature": [
+            "plant-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            12.6
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "tree",
+        "attributes": {
+          "signature": [
+            "tree-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            12.6
+          ]
+        ]
+      }
+    ],
+    "relations": []
+  },
+  "views": {
+    "objects_count_display": {
+      "plant": 1,
+      "tree": 1
+    }
+  }
+}

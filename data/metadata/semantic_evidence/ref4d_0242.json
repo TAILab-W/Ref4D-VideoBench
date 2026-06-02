@@ -1,0 +1,80 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0242.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "cv2",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "corn",
+        "attributes": {
+          "signature": [
+            "yellow-corn-in-plastic-packaging"
+          ]
+        },
+        "spans": [
+          [
+            0.1,
+            2.9
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "person",
+        "attributes": {
+          "signature": [
+            "man-in-dark-blue-shirt"
+          ]
+        },
+        "spans": [
+          [
+            0.3,
+            4.0
+          ]
+        ]
+      },
+      {
+        "id": "o3",
+        "name": "person",
+        "attributes": {
+          "signature": [
+            "person-with-white-cap-and-light-colored-clothing"
+          ]
+        },
+        "spans": [
+          [
+            1.5,
+            3.6
+          ]
+        ]
+      }
+    ],
+    "relations": [
+      {
+        "subject": "o1",
+        "predicate": "left-of",
+        "object": "o2",
+        "spans": [
+          [
+            0.3,
+            0.6
+          ]
+        ],
+        "confidence": 0.8
+      }
+    ]
+  },
+  "views": {
+    "objects_count_display": {
+      "corn": 1,
+      "person": 2
+    }
+  }
+}

@@ -1,0 +1,118 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0575.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "cv2",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "red-car",
+        "attributes": {
+          "color": [
+            "red"
+          ],
+          "action": [
+            "parked"
+          ],
+          "position": [
+            "left"
+          ],
+          "signature": [
+            "red,-parked-on-left-side-of-road,-near-blue-fence"
+          ]
+        },
+        "spans": [
+          [
+            0.1,
+            0.3
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "green-motorcycle",
+        "attributes": {
+          "color": [
+            "green"
+          ],
+          "action": [
+            "moving-forward"
+          ],
+          "facing-direction": [
+            "forward"
+          ],
+          "signature": [
+            "green-body,-rider-in-green-shirt,-moving-forward"
+          ]
+        },
+        "spans": [
+          [
+            0.1,
+            0.3
+          ]
+        ]
+      },
+      {
+        "id": "o3",
+        "name": "black-suv",
+        "attributes": {
+          "color": [
+            "black"
+          ],
+          "action": [
+            "moving"
+          ],
+          "facing-direction": [
+            "left"
+          ],
+          "signature": [
+            "black-color,-moving-from-right-to-left,-near-mydin-sign"
+          ]
+        },
+        "spans": [
+          [
+            0.4,
+            0.6
+          ]
+        ]
+      },
+      {
+        "id": "o4",
+        "name": "bus",
+        "attributes": {
+          "color": [
+            "red",
+            "white"
+          ],
+          "action": [
+            "stationary"
+          ],
+          "signature": [
+            "large-vehicle-with-red-and-white-stripes,-behind-barrier-at-distance"
+          ]
+        },
+        "spans": [
+          [
+            0.7,
+            0.8
+          ]
+        ]
+      }
+    ],
+    "relations": []
+  },
+  "views": {
+    "objects_count_display": {
+      "red-car": 1,
+      "green-motorcycle": 1,
+      "black-suv": 1,
+      "bus": 1
+    }
+  }
+}

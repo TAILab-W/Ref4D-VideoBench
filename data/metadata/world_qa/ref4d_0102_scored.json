@@ -1,0 +1,232 @@
+{
+  "summary": {
+    "items": 10,
+    "enter_bank": 9,
+    "clip_range_sec": [
+      0.0,
+      19.03
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does the car follow a continuous trajectory on the roundabout without sudden changes in direction?",
+      "signals": [
+        "trajectory_dir(car,axis)",
+        "accel_sign(car,axis)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(car,axis)": 38.3333,
+        "accel_sign(car,axis)": 7.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Are the trees stationary relative to each other and show natural continuity in shape and position?",
+      "signals": [
+        "continuity(tree)",
+        "deformation(tree)",
+        "friction_sliding(tree,on:ground)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "deformation(tree)": 40.0,
+        "continuity(tree)": 7.3333,
+        "friction_sliding(tree,on:ground)": 6.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Does the building remain a stable structure with its center of mass over its base, and do shadows consistently align with the light source?",
+      "signals": [
+        "balance(building)",
+        "continuity(building)",
+        "shadow_consistency(tree)",
+        "shadow_consistency(building)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(building)": 36.6667,
+        "shadow_consistency(tree)": 7.3333,
+        "shadow_consistency(building)": 7.3333,
+        "balance(building)": 7.1667
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Does the car's trajectory around the roundabout avoid collisions with buildings or trees while maintaining safe distances?",
+      "signals": [
+        "collision(car,tree)",
+        "collision(car,building)",
+        "trajectory_dir(oX,axis)",
+        "continuity(oX)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(oX,axis)": 38.3333,
+        "continuity(oX)": 7.3333,
+        "collision(car,tree)": 6.3333,
+        "collision(car,building)": 6.3333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Does the road provide support for the car to move along it without unexpected changes in trajectory direction?",
+      "signals": [
+        "support(car,road)",
+        "trajectory_dir(car,axis)",
+        "continuity(building)",
+        "continuity(tree)",
+        "continuity(car)",
+        "continuity(road)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(car,axis)": 38.3333,
+        "continuity(building)": 7.3333,
+        "continuity(tree)": 7.3333,
+        "continuity(car)": 7.3333,
+        "continuity(road)": 7.3333,
+        "support(car,road)": 7.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "A car moves along a paved road in a roundabout.",
+      "signals": [
+        "trajectory_dir(car,axis)",
+        "accel_sign(car,axis)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(car,axis)": 38.3333,
+        "accel_sign(car,axis)": 7.0
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "Trees remain stationary and show natural continuity in shape and position.",
+      "signals": [
+        "continuity(tree)",
+        "deformation(tree)",
+        "friction_sliding(tree,on:ground)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "deformation(tree)": 40.0,
+        "continuity(tree)": 7.3333,
+        "friction_sliding(tree,on:ground)": 6.0
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "The building is a stable structure with consistent shadows aligning with the light source.",
+      "signals": [
+        "balance(building)",
+        "continuity(building)",
+        "shadow_consistency(tree)",
+        "shadow_consistency(building)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(building)": 36.6667,
+        "shadow_consistency(tree)": 7.3333,
+        "shadow_consistency(building)": 7.3333,
+        "balance(building)": 7.1667
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "The car maintains a continuous trajectory on the roundabout without sudden changes in direction.",
+      "signals": [
+        "collision(car,tree)",
+        "collision(car,building)",
+        "trajectory_dir(oX,axis)",
+        "continuity(oX)"
+      ],
+      "content_score_60": 36,
+      "signal_score_40": 40.0,
+      "total_score_100": 76.0,
+      "duplicate_penalized": true,
+      "signal_detail": {
+        "trajectory_dir(oX,axis)": 38.3333,
+        "continuity(oX)": 7.3333,
+        "collision(car,tree)": 6.3333,
+        "collision(car,building)": 6.3333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "The road provides support for the car to move along it without unexpected changes in trajectory.",
+      "signals": [
+        "support(car,road)",
+        "trajectory_dir(car,axis)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(car,axis)": 38.3333,
+        "support(car,road)": 7.0
+      },
+      "content_score_raw": "50"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "v5",
+    "a1",
+    "a2",
+    "a3",
+    "a5"
+  ]
+}

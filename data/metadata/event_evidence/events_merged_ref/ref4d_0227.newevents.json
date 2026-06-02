@@ -1,0 +1,77 @@
+{
+  "events": [
+    {
+      "id": "m0001",
+      "s": 0.0,
+      "e": 0.2413793103448276,
+      "dur": 0.2413793103448276,
+      "members": [
+        "e0001#2"
+      ],
+      "text": "steam rises",
+      "s_abs": 0.0,
+      "e_abs": 1.8666666666666667,
+      "dur_abs": 1.8666666666666667
+    },
+    {
+      "id": "m0002",
+      "s": 0.0,
+      "e": 1.0,
+      "dur": 1.0,
+      "members": [
+        "e0001#1",
+        "e0002#1",
+        "e0003#1"
+      ],
+      "text": "noodles stir",
+      "s_abs": 0.0,
+      "e_abs": 7.733333333333333,
+      "dur_abs": 7.733333333333333
+    },
+    {
+      "id": "m0003",
+      "s": 0.2413793103448276,
+      "e": 0.6939655172413792,
+      "dur": 0.4525862068965516,
+      "members": [
+        "e0002#2"
+      ],
+      "text": "noodles steam",
+      "s_abs": 1.8666666666666667,
+      "e_abs": 5.366666666666666,
+      "dur_abs": 3.4999999999999996
+    },
+    {
+      "id": "m0004",
+      "s": 0.6939655172413792,
+      "e": 1.0,
+      "dur": 0.3060344827586208,
+      "members": [
+        "e0003#2"
+      ],
+      "text": "steam rises",
+      "s_abs": 5.366666666666666,
+      "e_abs": 7.733333333333333,
+      "dur_abs": 2.366666666666667
+    }
+  ],
+  "meta": {
+    "lane": "ref",
+    "key": "ref4d_0227",
+    "mode": "micro",
+    "merge_config": {
+      "tau_sem": 0.96,
+      "gap_abs_sec": 1.01,
+      "gap_norm_fallback": 0.1,
+      "min_duration_norm": 0.0
+    },
+    "stats": {
+      "num_input_items": 6,
+      "num_kept_items": 6,
+      "num_clusters": 4
+    },
+    "provenance": {
+      "source_hash": "80aecdf5fab2"
+    }
+  }
+}

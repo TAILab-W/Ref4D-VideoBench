@@ -1,0 +1,148 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0193.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "cv2",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "garlic",
+        "attributes": {
+          "signature": [
+            "garlic-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            8.8
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "chili",
+        "attributes": {
+          "signature": [
+            "chili-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            8.8
+          ]
+        ]
+      },
+      {
+        "id": "o3",
+        "name": "soy_sauce",
+        "attributes": {
+          "signature": [
+            "soy_sauce-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            8.8
+          ]
+        ]
+      },
+      {
+        "id": "o4",
+        "name": "water",
+        "attributes": {
+          "signature": [
+            "water-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            8.8
+          ]
+        ]
+      },
+      {
+        "id": "o5",
+        "name": "bean_sprouts",
+        "attributes": {
+          "signature": [
+            "bean_sprouts-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            8.8
+          ]
+        ]
+      },
+      {
+        "id": "o6",
+        "name": "salt",
+        "attributes": {
+          "signature": [
+            "salt-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            8.8
+          ]
+        ]
+      },
+      {
+        "id": "o7",
+        "name": "chicken_powder",
+        "attributes": {
+          "signature": [
+            "chicken_powder-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            8.8
+          ]
+        ]
+      },
+      {
+        "id": "o8",
+        "name": "oyster_sauce",
+        "attributes": {
+          "signature": [
+            "oyster_sauce-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            8.8
+          ]
+        ]
+      }
+    ],
+    "relations": []
+  },
+  "views": {
+    "objects_count_display": {
+      "garlic": 1,
+      "chili": 1,
+      "soy_sauce": 1,
+      "water": 1,
+      "bean_sprouts": 1,
+      "salt": 1,
+      "chicken_powder": 1,
+      "oyster_sauce": 1
+    }
+  }
+}

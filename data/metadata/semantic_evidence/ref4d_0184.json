@@ -1,0 +1,171 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0184.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "decord",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "person",
+        "attributes": {
+          "color": [
+            "black",
+            "gray"
+          ],
+          "sex": [
+            "female"
+          ],
+          "action": [
+            "holding-container",
+            "opening-box",
+            "standing"
+          ],
+          "pose": [
+            "upright"
+          ],
+          "facing-direction": [
+            "forward"
+          ],
+          "signature": [
+            "long-brown-hair-black-shirt-gray-pants"
+          ]
+        },
+        "spans": [
+          [
+            0.2,
+            9.7
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "box",
+        "attributes": {
+          "color": [
+            "brown"
+          ],
+          "material": [
+            "cardboard"
+          ],
+          "size": [
+            "large"
+          ],
+          "state": [
+            "closed",
+            "opened"
+          ],
+          "position": [
+            "on-table"
+          ],
+          "signature": [
+            "brown-carton-with-dog-logo-and-text-saint-rocco's-treats-fresh-local-quality"
+          ]
+        },
+        "spans": [
+          [
+            0.3,
+            9.7
+          ]
+        ]
+      },
+      {
+        "id": "o3",
+        "name": "container",
+        "attributes": {
+          "color": [
+            "black",
+            "white"
+          ],
+          "material": [
+            "plastic"
+          ],
+          "size": [
+            "medium"
+          ],
+          "state": [
+            "closed"
+          ],
+          "position": [
+            "in-box",
+            "on-table"
+          ],
+          "brand-or-logo": [
+            "dog-images"
+          ],
+          "signature": [
+            "cylindrical-white-container-with-label-and-images-of-dogs"
+          ]
+        },
+        "spans": [
+          [
+            0.7,
+            9.7
+          ]
+        ]
+      }
+    ],
+    "relations": [
+      {
+        "subject": "o1",
+        "predicate": "holding",
+        "object": "o2",
+        "spans": [
+          [
+            4.5,
+            6.8
+          ]
+        ],
+        "confidence": 0.9
+      },
+      {
+        "subject": "o1",
+        "predicate": "opening",
+        "object": "o2",
+        "spans": [
+          [
+            6.3,
+            7.0
+          ]
+        ],
+        "confidence": 0.9
+      },
+      {
+        "subject": "o1",
+        "predicate": "taking-out",
+        "object": "o3",
+        "spans": [
+          [
+            7.2,
+            8.5
+          ]
+        ],
+        "confidence": 0.9
+      },
+      {
+        "subject": "o1",
+        "predicate": "showing",
+        "object": "o3",
+        "spans": [
+          [
+            8.7,
+            9.7
+          ]
+        ],
+        "confidence": 0.9
+      }
+    ]
+  },
+  "views": {
+    "objects_count_display": {
+      "person": 1,
+      "box": 1,
+      "container": 1
+    }
+  }
+}

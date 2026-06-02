@@ -1,0 +1,59 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0110.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "cv2",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "chair",
+        "attributes": {
+          "color": [
+            "blue",
+            "white",
+            "yellow"
+          ],
+          "pattern": [
+            "striped"
+          ],
+          "material": [
+            "plastic"
+          ],
+          "size": [
+            "large"
+          ],
+          "state": [
+            "empty"
+          ],
+          "position": [
+            "arranged-in-rows"
+          ],
+          "design": [
+            "uniform"
+          ],
+          "signature": [
+            "chair"
+          ]
+        },
+        "spans": [
+          [
+            0.1,
+            1.0
+          ]
+        ]
+      }
+    ],
+    "relations": []
+  },
+  "views": {
+    "objects_count_display": {
+      "chair": 1
+    }
+  }
+}

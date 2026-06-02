@@ -1,0 +1,90 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0153.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "cv2",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "person",
+        "attributes": {
+          "color": [
+            "red",
+            "white",
+            "yellow"
+          ],
+          "action": [
+            "bending",
+            "walking"
+          ],
+          "signature": [
+            "white-shirt-red-pants-yellow-hat"
+          ]
+        },
+        "spans": [
+          [
+            2.0,
+            8.0
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "person",
+        "attributes": {
+          "color": [
+            "black",
+            "red",
+            "white"
+          ],
+          "action": [
+            "digging"
+          ],
+          "signature": [
+            "red-shirt-black-pants-white-cap"
+          ]
+        },
+        "spans": [
+          [
+            5.0,
+            6.0
+          ]
+        ]
+      },
+      {
+        "id": "o3",
+        "name": "person",
+        "attributes": {
+          "color": [
+            "blue",
+            "white"
+          ],
+          "action": [
+            "standing"
+          ],
+          "signature": [
+            "blue-shirt-white-shorts"
+          ]
+        },
+        "spans": [
+          [
+            1.0,
+            8.0
+          ]
+        ]
+      }
+    ],
+    "relations": []
+  },
+  "views": {
+    "objects_count_display": {
+      "person": 3
+    }
+  }
+}

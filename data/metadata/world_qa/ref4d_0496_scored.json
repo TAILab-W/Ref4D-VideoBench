@@ -1,0 +1,215 @@
+{
+  "summary": {
+    "items": 10,
+    "enter_bank": 8,
+    "clip_range_sec": [
+      0.0,
+      12.83
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does the fishing rod stay supported by the person's hand and arm during push-ups?",
+      "signals": [
+        "support(oA,oB)",
+        "balance(oX)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "balance(oX)": 35.8333,
+        "support(oA,oB)": 7.0
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Does the person maintain a straight line from head to heels with hands supporting their weight on the ground?",
+      "signals": [
+        "support(person,ground)",
+        "balance(person)",
+        "center_of_mass_over_base(person)",
+        "biological_motion(person)"
+      ],
+      "content_score_60": 30,
+      "signal_score_40": 40.0,
+      "total_score_100": 70.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "biological_motion(person)": 38.3333,
+        "balance(person)": 7.1667,
+        "support(person,ground)": 7.0,
+        "center_of_mass_over_base(person)": 6.5
+      },
+      "content_score_raw": "30"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Does the shadow of the person align with their position while performing push-ups?",
+      "signals": [
+        "shadow_consistency(oX)"
+      ],
+      "content_score_60": 40,
+      "signal_score_40": 36.67,
+      "total_score_100": 76.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "shadow_consistency(oX)": 36.6667
+      },
+      "content_score_raw": "40"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Is the grassy area clear of immediate hazards around the fence for balance?",
+      "signals": [
+        "balance(person)",
+        "friction_sliding(person,on:grass)",
+        "center_of_mass_over_base(person)"
+      ],
+      "content_score_60": 40,
+      "signal_score_40": 40.0,
+      "total_score_100": 80.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "balance(person)": 35.8333,
+        "center_of_mass_over_base(person)": 6.5,
+        "friction_sliding(person,on:grass)": 6.0
+      },
+      "content_score_raw": "40"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Does the fishing rod stand upright in front of the basketball hoop without posing a falling hazard?",
+      "signals": [
+        "falling_hazard(fishing-rod)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 31.67,
+      "total_score_100": 81.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "falling_hazard(fishing-rod)": 31.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "The basketball hoop and goalpost are stationary in the background.",
+      "signals": [
+        "support(basketball-hoop,ground)",
+        "support(goalpost,ground)",
+        "continuity(basketball-hoop)",
+        "continuity(goalpost)",
+        "tool_usage_correct(fishing-rod,for:push-up)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(basketball-hoop)": 36.6667,
+        "continuity(goalpost)": 7.3333,
+        "support(basketball-hoop,ground)": 7.0,
+        "support(goalpost,ground)": 7.0,
+        "tool_usage_correct(fishing-rod,for:push-up)": 5.8333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "The person stands on grass, holding a fishing rod with no immediate hazards nearby.",
+      "signals": [
+        "balance(person)",
+        "friction_sliding(person,on:grass)",
+        "center_of_mass_over_base(person)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "balance(person)": 35.8333,
+        "center_of_mass_over_base(person)": 6.5,
+        "friction_sliding(person,on:grass)": 6.0
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "The fishing rod is upright in front of the basketball hoop during push-ups.",
+      "signals": [
+        "falling_hazard(fishing-rod)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 31.67,
+      "total_score_100": 91.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "falling_hazard(fishing-rod)": 31.6667
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "The person's body maintains a straight line from head to heels while performing push-ups.",
+      "signals": [
+        "support(person,ground)",
+        "center_of_mass_over_base(person)",
+        "biological_motion(person)",
+        "continuity(person)",
+        "balance(person)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "biological_motion(person)": 38.3333,
+        "continuity(person)": 7.3333,
+        "balance(person)": 7.1667,
+        "support(person,ground)": 7.0,
+        "center_of_mass_over_base(person)": 6.5
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "The shadow of the person aligns with their position on the ground.",
+      "signals": [
+        "shadow_consistency(oX)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 36.67,
+      "total_score_100": 96.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "shadow_consistency(oX)": 36.6667
+      },
+      "content_score_raw": "60"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v4",
+    "v5",
+    "a1",
+    "a2",
+    "a3",
+    "a4",
+    "a5"
+  ]
+}

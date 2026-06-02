@@ -1,0 +1,221 @@
+{
+  "summary": {
+    "items": 10,
+    "enter_bank": 10,
+    "clip_range_sec": [
+      0.0,
+      15.83
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Do the fish fins move consistently to support swimming?",
+      "signals": [
+        "continuity(oX)",
+        "rigid_transform(oX)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "rigid_transform(oX)": 37.5,
+        "continuity(oX)": 7.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Does the turtle float naturally in water without sudden changes in position?",
+      "signals": [
+        "buoyancy_float(fish,in:water)",
+        "buoyancy_float(turtle,in:water)",
+        "continuity(fish)",
+        "continuity(turtle)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(fish)": 36.6667,
+        "continuity(turtle)": 7.3333,
+        "buoyancy_float(fish,in:water)": 6.8333,
+        "buoyancy_float(turtle,in:water)": 6.8333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Do the fish and turtle avoid interpenetration or collision with each other?",
+      "signals": [
+        "interpenetration(fish,turtle)",
+        "collision(fish,turtle)",
+        "biological_motion(fish)",
+        "biological_motion(turtle)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "biological_motion(fish)": 38.3333,
+        "biological_motion(turtle)": 7.6667,
+        "interpenetration(fish,turtle)": 7.1667,
+        "collision(fish,turtle)": 6.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Do the fish exhibit natural biological motion consistent with their aquatic environment?",
+      "signals": [
+        "biological_motion(fish)",
+        "biological_motion(turtle)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "biological_motion(fish)": 38.3333,
+        "biological_motion(turtle)": 7.6667
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Are the light and shadow on the underwater objects consistent with their material properties?",
+      "signals": [
+        "material_optics(oA)",
+        "shadow_consistency(oX)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "material_optics(oA)": 37.5,
+        "shadow_consistency(oX)": 7.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "Fish and turtle maintain continuity in appearance and motion without frame discontinuity.",
+      "signals": [
+        "continuity(fish)",
+        "frame_discontinuity(t)",
+        "continuity(turtle)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "frame_discontinuity(t)": 40.0,
+        "continuity(fish)": 7.3333,
+        "continuity(turtle)": 7.3333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "Yellow and black striped fish swim naturally, consistent with aquatic behavior.",
+      "signals": [
+        "biological_motion(fish)",
+        "biological_motion(turtle)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "biological_motion(fish)": 38.3333,
+        "biological_motion(turtle)": 7.6667
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "Blue and yellow fish exhibit natural buoyancy while floating underwater.",
+      "signals": [
+        "buoyancy_float(fish,in:water)",
+        "buoyancy_float(turtle,in:water)",
+        "biological_motion(fish)",
+        "biological_motion(turtle)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "biological_motion(fish)": 38.3333,
+        "biological_motion(turtle)": 7.6667,
+        "buoyancy_float(fish,in:water)": 6.8333,
+        "buoyancy_float(turtle,in:water)": 6.8333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "Light on the blue and yellow fish is consistent with their material properties.",
+      "signals": [
+        "rigid_transform(oX)",
+        "material_optics(oA)",
+        "shadow_consistency(oX)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "rigid_transform(oX)": 37.5,
+        "material_optics(oA)": 7.5,
+        "shadow_consistency(oX)": 7.3333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "No interpenetration occurs between different species (fish and turtle).",
+      "signals": [
+        "interpenetration(fish,turtle)",
+        "collision(fish,turtle)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "interpenetration(fish,turtle)": 35.8333,
+        "collision(fish,turtle)": 6.3333
+      },
+      "content_score_raw": "60"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "v5",
+    "a1",
+    "a2",
+    "a3",
+    "a4",
+    "a5"
+  ]
+}

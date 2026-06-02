@@ -1,0 +1,105 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0038.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "cv2",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "panda",
+        "attributes": {
+          "color": [
+            "black",
+            "white"
+          ],
+          "pattern": [
+            "ears-on-top-of-head",
+            "round-face"
+          ],
+          "action": [
+            "eating",
+            "holding"
+          ],
+          "state": [
+            "sitting"
+          ],
+          "pose": [
+            "sitting"
+          ],
+          "facing-direction": [
+            "forward"
+          ],
+          "fur-pattern": [
+            "black-and-white"
+          ],
+          "signature": [
+            "black-white-round-face-ears-on-top-of-head"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            7.0
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "bamboo",
+        "attributes": {
+          "color": [
+            "green"
+          ],
+          "material": [
+            "plant"
+          ],
+          "size": [
+            "medium"
+          ],
+          "object-part": [
+            "cut-end",
+            "stalk"
+          ],
+          "food-type": [
+            "bamboo"
+          ],
+          "signature": [
+            "green-cylindrical-stalk-with-cut-end"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            7.0
+          ]
+        ]
+      }
+    ],
+    "relations": [
+      {
+        "subject": "o1",
+        "predicate": "holding",
+        "object": "o2",
+        "spans": [
+          [
+            0.0,
+            7.0
+          ]
+        ],
+        "confidence": 0.0
+      }
+    ]
+  },
+  "views": {
+    "objects_count_display": {
+      "panda": 1,
+      "bamboo": 1
+    }
+  }
+}

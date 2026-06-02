@@ -1,0 +1,177 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0264.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "cv2",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "forklift",
+        "attributes": {
+          "color": [
+            "black",
+            "red"
+          ],
+          "brand-or-logo": [
+            "flexi"
+          ],
+          "vehicle-type": [
+            "forklift"
+          ],
+          "signature": [
+            "red-flexi-logo-black-metal-frame"
+          ]
+        },
+        "spans": [
+          [
+            0.2,
+            0.8
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "operator",
+        "attributes": {
+          "color": [
+            "black",
+            "orange"
+          ],
+          "sex": [
+            "male"
+          ],
+          "action": [
+            "driving"
+          ],
+          "pose": [
+            "sitting"
+          ],
+          "facing-direction": [
+            "right-facing"
+          ],
+          "signature": [
+            "orange-vest-black-shirt-mask"
+          ]
+        },
+        "spans": [
+          [
+            0.6,
+            0.9
+          ]
+        ]
+      },
+      {
+        "id": "o3",
+        "name": "package",
+        "attributes": {
+          "color": [
+            "white"
+          ],
+          "material": [
+            "wrapped"
+          ],
+          "size": [
+            "large"
+          ],
+          "signature": [
+            "white-wrapped-on-pallet"
+          ]
+        },
+        "spans": [
+          [
+            0.2,
+            0.4
+          ]
+        ]
+      },
+      {
+        "id": "o4",
+        "name": "shelf",
+        "attributes": {
+          "material": [
+            "metal"
+          ],
+          "color": [
+            "gray"
+          ],
+          "content": [
+            "packages"
+          ],
+          "signature": [
+            "metal-frame-with-white-packages"
+          ]
+        },
+        "spans": [
+          [
+            0.2,
+            0.8
+          ]
+        ]
+      }
+    ],
+    "relations": [
+      {
+        "subject": "o1",
+        "predicate": "carrying",
+        "object": "o3",
+        "spans": [
+          [
+            0.2,
+            0.8
+          ]
+        ],
+        "confidence": 0.9
+      },
+      {
+        "subject": "o2",
+        "predicate": "riding",
+        "object": "o1",
+        "spans": [
+          [
+            0.2,
+            0.8
+          ]
+        ],
+        "confidence": 0.9
+      },
+      {
+        "subject": "o1",
+        "predicate": "left-of",
+        "object": "o4",
+        "spans": [
+          [
+            0.2,
+            0.8
+          ]
+        ],
+        "confidence": 0.8
+      },
+      {
+        "subject": "o2",
+        "predicate": "looking-at",
+        "object": "o4",
+        "spans": [
+          [
+            0.5,
+            0.8
+          ]
+        ],
+        "confidence": 0.8
+      }
+    ]
+  },
+  "views": {
+    "objects_count_display": {
+      "forklift": 1,
+      "operator": 1,
+      "package": 1,
+      "shelf": 1
+    }
+  }
+}

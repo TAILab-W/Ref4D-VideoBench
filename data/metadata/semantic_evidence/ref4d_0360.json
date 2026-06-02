@@ -1,0 +1,194 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0360.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "decord",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "waterfall",
+        "attributes": {
+          "color": [
+            "white"
+          ],
+          "action": [
+            "flowing"
+          ],
+          "orientation": [
+            "downward"
+          ],
+          "facing-direction": [
+            "down"
+          ],
+          "signature": [
+            "two-streams-flowing-through-rock-gorge"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            9.4
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "snow",
+        "attributes": {
+          "color": [
+            "white"
+          ],
+          "state": [
+            "partially-melted"
+          ],
+          "position": [
+            "on-rocks"
+          ],
+          "signature": [
+            "patches-on-rock-surface"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            9.4
+          ]
+        ]
+      },
+      {
+        "id": "o3",
+        "name": "rock",
+        "attributes": {
+          "color": [
+            "brown",
+            "gray"
+          ],
+          "texture": [
+            "rough"
+          ],
+          "material": [
+            "stone"
+          ],
+          "signature": [
+            "rough-textured-brown-gray"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            9.4
+          ]
+        ]
+      },
+      {
+        "id": "o4",
+        "name": "grass",
+        "attributes": {
+          "color": [
+            "green"
+          ],
+          "state": [
+            "sparse"
+          ],
+          "signature": [
+            "green-vegetation-between-rocks"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            9.4
+          ]
+        ]
+      }
+    ],
+    "relations": [
+      {
+        "subject": "o1",
+        "predicate": "flowing-through",
+        "object": "o3",
+        "spans": [
+          [
+            0.0,
+            9.4
+          ]
+        ],
+        "confidence": 0.9
+      },
+      {
+        "subject": "o2",
+        "predicate": "on",
+        "object": "o3",
+        "spans": [
+          [
+            0.0,
+            9.4
+          ]
+        ],
+        "confidence": 0.8
+      },
+      {
+        "subject": "o4",
+        "predicate": "on",
+        "object": "o3",
+        "spans": [
+          [
+            0.0,
+            9.4
+          ]
+        ],
+        "confidence": 0.7
+      },
+      {
+        "subject": "o1",
+        "predicate": "surrounded-by",
+        "object": "o3",
+        "spans": [
+          [
+            0.0,
+            9.4
+          ]
+        ],
+        "confidence": 0.6
+      },
+      {
+        "subject": "o2",
+        "predicate": "mixed-with",
+        "object": "o3",
+        "spans": [
+          [
+            0.0,
+            9.4
+          ]
+        ],
+        "confidence": 0.5
+      },
+      {
+        "subject": "o4",
+        "predicate": "growing-among",
+        "object": "o3",
+        "spans": [
+          [
+            0.0,
+            9.4
+          ]
+        ],
+        "confidence": 0.4
+      }
+    ]
+  },
+  "views": {
+    "objects_count_display": {
+      "waterfall": 1,
+      "snow": 1,
+      "rock": 1,
+      "grass": 1
+    }
+  }
+}

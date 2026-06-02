@@ -1,0 +1,194 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0382.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "cv2",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "water",
+        "attributes": {
+          "color": [
+            "clear",
+            "white"
+          ],
+          "state": [
+            "rapid"
+          ],
+          "movement": [
+            "continuous"
+          ],
+          "signature": [
+            "flowing"
+          ]
+        },
+        "spans": [
+          [
+            0.2,
+            3.8
+          ],
+          [
+            4.5,
+            5.6
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "rock",
+        "attributes": {
+          "material": [
+            "stone"
+          ],
+          "size": [
+            "large"
+          ],
+          "pattern": [
+            "rough"
+          ],
+          "texture": [
+            "wet"
+          ],
+          "facing-direction": [
+            "downstream"
+          ],
+          "signature": [
+            "large"
+          ]
+        },
+        "spans": [
+          [
+            0.1,
+            2.9
+          ],
+          [
+            3.4,
+            5.6
+          ]
+        ]
+      },
+      {
+        "id": "o3",
+        "name": "moss",
+        "attributes": {
+          "color": [
+            "bright-green"
+          ],
+          "pattern": [
+            "dense"
+          ],
+          "texture": [
+            "soft"
+          ],
+          "coverage": [
+            "partial"
+          ],
+          "signature": [
+            "bright-green"
+          ]
+        },
+        "spans": [
+          [
+            0.6,
+            2.2
+          ],
+          [
+            3.1,
+            5.3
+          ]
+        ]
+      },
+      {
+        "id": "o4",
+        "name": "tree",
+        "attributes": {
+          "color": [
+            "green"
+          ],
+          "size": [
+            "large"
+          ],
+          "position": [
+            "background"
+          ],
+          "leaf-pattern": [
+            "foliage"
+          ],
+          "signature": [
+            "green"
+          ]
+        },
+        "spans": [
+          [
+            0.1,
+            2.9
+          ],
+          [
+            3.4,
+            5.6
+          ]
+        ]
+      }
+    ],
+    "relations": [
+      {
+        "subject": "o1",
+        "predicate": "flowing-through",
+        "object": "o2",
+        "spans": [
+          [
+            0.0,
+            5.6
+          ]
+        ],
+        "confidence": 0.9
+      },
+      {
+        "subject": "o2",
+        "predicate": "covered-by",
+        "object": "o3",
+        "spans": [
+          [
+            0.1,
+            2.9
+          ],
+          [
+            3.4,
+            5.6
+          ]
+        ],
+        "confidence": 0.9
+      },
+      {
+        "subject": "o4",
+        "predicate": "surrounding",
+        "object": "o2",
+        "spans": [
+          [
+            0.1,
+            2.9
+          ],
+          [
+            3.4,
+            5.6
+          ]
+        ],
+        "confidence": 0.8
+      }
+    ]
+  },
+  "views": {
+    "objects_count_display": {
+      "water": 1,
+      "rock": 1,
+      "moss": 1,
+      "tree": 1
+    }
+  }
+}

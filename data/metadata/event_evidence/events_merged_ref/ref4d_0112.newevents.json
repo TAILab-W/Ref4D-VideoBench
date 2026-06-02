@@ -1,0 +1,64 @@
+{
+  "events": [
+    {
+      "id": "m0001",
+      "s": 0.0,
+      "e": 0.3392857142857143,
+      "dur": 0.3392857142857143,
+      "members": [
+        "e0001#1"
+      ],
+      "text": "person stand",
+      "s_abs": 0.0,
+      "e_abs": 1.9,
+      "dur_abs": 1.9
+    },
+    {
+      "id": "m0002",
+      "s": 0.3392857142857143,
+      "e": 0.6071428571428572,
+      "dur": 0.2678571428571429,
+      "members": [
+        "e0002#2"
+      ],
+      "text": "light illuminate structure",
+      "s_abs": 1.9,
+      "e_abs": 3.4,
+      "dur_abs": 1.5
+    },
+    {
+      "id": "m0003",
+      "s": 0.3392857142857143,
+      "e": 1.0,
+      "dur": 0.6607142857142857,
+      "members": [
+        "e0002#1",
+        "e0003#1",
+        "e0004#1"
+      ],
+      "text": "temple remain still",
+      "s_abs": 1.9,
+      "e_abs": 5.6,
+      "dur_abs": 3.6999999999999997
+    }
+  ],
+  "meta": {
+    "lane": "ref",
+    "key": "ref4d_0112",
+    "mode": "micro",
+    "merge_config": {
+      "tau_sem": 0.96,
+      "gap_abs_sec": 1.01,
+      "gap_norm_fallback": 0.1,
+      "min_duration_norm": 0.0
+    },
+    "stats": {
+      "num_input_items": 5,
+      "num_kept_items": 5,
+      "num_clusters": 3
+    },
+    "provenance": {
+      "source_hash": "b5294749bd2b"
+    }
+  }
+}

@@ -1,0 +1,208 @@
+{
+  "summary": {
+    "items": 10,
+    "enter_bank": 9,
+    "clip_range_sec": [
+      0.0,
+      11.03
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does the person in front stay balanced on the jet ski without falling into the water?",
+      "signals": [
+        "balance(person_1)",
+        "friction_sliding(person_1,on:jet_ski)",
+        "balance(person_2)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "balance(person_1)": 35.8333,
+        "balance(person_2)": 7.1667,
+        "friction_sliding(person_1,on:jet_ski)": 6.0
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Are splashes created by the movement of the jet ski's skis through the water?",
+      "signals": [
+        "slosh_response(water,amp)",
+        "buoyancy_float(jet_ski,in:water)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "slosh_response(water,amp)": 34.1667,
+        "buoyancy_float(jet_ski,in:water)": 6.8333
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Does the jet ski maintain a consistent trajectory and speed as it moves forward across the clip?",
+      "signals": [
+        "trajectory_dir(jet_ski,axis)",
+        "accel_sign(jet_ski,axis)",
+        "trajectory_dir(jet_ski,axis:forward)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(jet_ski,axis)": 38.3333,
+        "trajectory_dir(jet_ski,axis:forward)": 7.6667,
+        "accel_sign(jet_ski,axis)": 7.0
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Does the jet ski float consistently on the water surface, generating wake during its motion?",
+      "signals": [
+        "buoyancy_float(jet_ski,in:water)",
+        "deformation(water)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "deformation(water)": 40.0,
+        "buoyancy_float(jet_ski,in:water)": 6.8333
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Is the individual at the back holding onto the one steering for support?",
+      "signals": [
+        "tool_usage_correct(jet_ski,for:steering)",
+        "support(person_2,person_1)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "support(person_2,person_1)": 35.0,
+        "tool_usage_correct(jet_ski,for:steering)": 5.8333
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "The jet ski creates splashes as it moves through the water.",
+      "signals": [
+        "slosh_response(water,amp)",
+        "buoyancy_float(jet_ski,in:water)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "slosh_response(water,amp)": 34.1667,
+        "buoyancy_float(jet_ski,in:water)": 6.8333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "The person in front steers the jet ski, while the other holds on for support.",
+      "signals": [
+        "tool_usage_correct(jet_ski,for:steering)",
+        "support(person_2,person_1)",
+        "balance(person_1)",
+        "friction_sliding(person_1,on:jet_ski)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "balance(person_1)": 35.8333,
+        "support(person_2,person_1)": 7.0,
+        "friction_sliding(person_1,on:jet_ski)": 6.0,
+        "tool_usage_correct(jet_ski,for:steering)": 5.8333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "The jet ski floats consistently on the water surface.",
+      "signals": [
+        "buoyancy_float(jet_ski,in:water)"
+      ],
+      "content_score_60": 35,
+      "signal_score_40": 34.17,
+      "total_score_100": 69.17,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "buoyancy_float(jet_ski,in:water)": 34.1667
+      },
+      "content_score_raw": "35"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "The trajectory direction of the jet ski is consistent with its axis of travel.",
+      "signals": [
+        "trajectory_dir(jet_ski,axis:forward)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 38.33,
+      "total_score_100": 98.33,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(jet_ski,axis:forward)": 38.3333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "The jet ski maintains a consistent speed on the water surface.",
+      "signals": [
+        "trajectory_dir(jet_ski,axis)",
+        "accel_sign(jet_ski,axis)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(jet_ski,axis)": 38.3333,
+        "accel_sign(jet_ski,axis)": 7.0
+      },
+      "content_score_raw": "50"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "v5",
+    "a1",
+    "a2",
+    "a4",
+    "a5"
+  ]
+}

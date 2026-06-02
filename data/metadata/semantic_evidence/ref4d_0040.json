@@ -1,0 +1,232 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0040.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "cv2",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "penguin",
+        "attributes": {
+          "color": [
+            "black",
+            "white",
+            "yellow"
+          ],
+          "pattern": [
+            "smooth"
+          ],
+          "size": [
+            "large"
+          ],
+          "sex": [
+            "male"
+          ],
+          "state": [
+            "sliding",
+            "standing",
+            "walking"
+          ],
+          "pose": [
+            "flapping",
+            "lying",
+            "upright"
+          ],
+          "action": [
+            "flapping-wings",
+            "looking-around",
+            "sliding",
+            "walking"
+          ],
+          "orientation": [
+            "facing-away",
+            "facing-left",
+            "facing-right"
+          ],
+          "facing-direction": [
+            "forward",
+            "left",
+            "right"
+          ],
+          "position": [
+            "background",
+            "foreground"
+          ],
+          "signature": [
+            "black-white-yellow-neck-tail"
+          ]
+        },
+        "spans": [
+          [
+            0.2,
+            3.8
+          ],
+          [
+            4.6,
+            6.5
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "penguin",
+        "attributes": {
+          "color": [
+            "black",
+            "white",
+            "yellow"
+          ],
+          "pattern": [
+            "smooth"
+          ],
+          "size": [
+            "large"
+          ],
+          "sex": [
+            "male"
+          ],
+          "state": [
+            "sliding",
+            "standing",
+            "walking"
+          ],
+          "pose": [
+            "flapping",
+            "lying",
+            "upright"
+          ],
+          "action": [
+            "flapping-wings",
+            "looking-around",
+            "sliding",
+            "walking"
+          ],
+          "orientation": [
+            "facing-away",
+            "facing-left",
+            "facing-right"
+          ],
+          "facing-direction": [
+            "forward",
+            "left",
+            "right"
+          ],
+          "position": [
+            "background",
+            "foreground"
+          ],
+          "signature": [
+            "black-white-yellow-neck-tail"
+          ]
+        },
+        "spans": [
+          [
+            0.2,
+            3.8
+          ],
+          [
+            4.6,
+            6.5
+          ]
+        ]
+      }
+    ],
+    "relations": [
+      {
+        "subject": "o1",
+        "predicate": "left-of",
+        "object": "o2",
+        "spans": [
+          [
+            0.3,
+            4.5
+          ]
+        ],
+        "confidence": 0.8
+      },
+      {
+        "subject": "o1",
+        "predicate": "sliding-on",
+        "object": "o2",
+        "spans": [
+          [
+            0.6,
+            1.7
+          ]
+        ],
+        "confidence": 0.9
+      },
+      {
+        "subject": "o1",
+        "predicate": "riding-on",
+        "object": "o2",
+        "spans": [
+          [
+            0.6,
+            1.7
+          ]
+        ],
+        "confidence": 0.9
+      },
+      {
+        "subject": "o1",
+        "predicate": "looking-at",
+        "object": "o2",
+        "spans": [
+          [
+            0.2,
+            3.8
+          ]
+        ],
+        "confidence": 0.7
+      },
+      {
+        "subject": "o2",
+        "predicate": "looking-at",
+        "object": "o1",
+        "spans": [
+          [
+            0.2,
+            3.8
+          ]
+        ],
+        "confidence": 0.7
+      },
+      {
+        "subject": "o1",
+        "predicate": "walking-with",
+        "object": "o2",
+        "spans": [
+          [
+            0.2,
+            4.5
+          ]
+        ],
+        "confidence": 0.8
+      },
+      {
+        "subject": "o2",
+        "predicate": "walking-with",
+        "object": "o1",
+        "spans": [
+          [
+            0.2,
+            4.5
+          ]
+        ],
+        "confidence": 0.8
+      }
+    ]
+  },
+  "views": {
+    "objects_count_display": {
+      "penguin": 2
+    }
+  }
+}

@@ -1,0 +1,235 @@
+{
+  "summary": {
+    "items": 10,
+    "enter_bank": 10,
+    "clip_range_sec": [
+      0.0,
+      11.9
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does the high-rise building show any signs of structural deformation or fracture?",
+      "signals": [
+        "continuity(building)",
+        "deformation(building)",
+        "fracture(building)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "deformation(building)": 40.0,
+        "continuity(building)": 7.3333,
+        "fracture(building)": 6.3333
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Do vehicles on the road maintain a continuous trajectory without sudden changes in direction or speed?",
+      "signals": [
+        "trajectory_dir(vehicles,axis)",
+        "continuity(vehicles)",
+        "trajectory_dir(oX,axis)",
+        "continuity(oX)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(vehicles,axis)": 38.3333,
+        "trajectory_dir(oX,axis)": 7.6667,
+        "continuity(vehicles)": 7.3333,
+        "continuity(oX)": 7.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Does the water body adjacent to the left side of the frame exhibit natural continuity and consistent volume throughout the clip?",
+      "signals": [
+        "continuity(river)",
+        "size_inconsistency(river)",
+        "leakage(oV,from:oContainer)",
+        "spillage(oV)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "size_inconsistency(river)": 37.5,
+        "continuity(river)": 7.3333,
+        "leakage(oV,from:oContainer)": 5.8333,
+        "spillage(oV)": 5.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Do plants on the terrace cast shadows that are consistently aligned with the light source direction?",
+      "signals": [
+        "shadow_consistency(plants)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 36.67,
+      "total_score_100": 86.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "shadow_consistency(plants)": 36.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Does the bridge over the water remain structurally sound, supporting vehicular traffic without visible interpenetration?",
+      "signals": [
+        "rigid_transform(building)",
+        "deformation(building)",
+        "fracture(building)",
+        "material_optics(building)",
+        "deformation(oX)",
+        "fracture(oX)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "deformation(building)": 40.0,
+        "deformation(oX)": 8.0,
+        "rigid_transform(building)": 7.5,
+        "material_optics(building)": 7.5,
+        "fracture(building)": 6.3333,
+        "fracture(oX)": 6.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "The building's structure is rigid and stable, showing no signs of deformation or fracture.",
+      "signals": [
+        "rigid_transform(building)",
+        "deformation(building)",
+        "fracture(building)",
+        "material_optics(building)",
+        "deformation(oX)",
+        "fracture(oX)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "deformation(building)": 40.0,
+        "deformation(oX)": 8.0,
+        "rigid_transform(building)": 7.5,
+        "material_optics(building)": 7.5,
+        "fracture(building)": 6.3333,
+        "fracture(oX)": 6.3333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "The bridge over the water body supports vehicular traffic without interpenetration.",
+      "signals": [
+        "support(bridge,water)",
+        "interpenetration(bridge,vehicles)",
+        "collision(bridge,vehicles)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "interpenetration(bridge,vehicles)": 35.8333,
+        "support(bridge,water)": 7.0,
+        "collision(bridge,vehicles)": 6.3333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "Vehicles on the road follow a consistent trajectory direction and maintain continuous motion.",
+      "signals": [
+        "trajectory_dir(vehicles,axis)",
+        "continuity(vehicles)",
+        "trajectory_dir(oX,axis)",
+        "continuity(oX)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(vehicles,axis)": 38.3333,
+        "trajectory_dir(oX,axis)": 7.6667,
+        "continuity(vehicles)": 7.3333,
+        "continuity(oX)": 7.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "Water in the river exhibits natural continuity with no sudden size inconsistencies.",
+      "signals": [
+        "continuity(river)",
+        "size_inconsistency(river)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "size_inconsistency(river)": 37.5,
+        "continuity(river)": 7.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "Greenery on the building's terrace remains intact without interpenetration.",
+      "signals": [
+        "containment(oA,oB)",
+        "interpenetration(oA,oB)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "interpenetration(oA,oB)": 35.8333,
+        "containment(oA,oB)": 5.8333
+      },
+      "content_score_raw": "60"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "v5",
+    "a1",
+    "a2",
+    "a3",
+    "a4",
+    "a5"
+  ]
+}

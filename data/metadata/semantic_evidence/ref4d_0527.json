@@ -1,0 +1,192 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0527.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "cv2",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "bus",
+        "attributes": {
+          "color": [
+            "blue",
+            "red",
+            "white"
+          ],
+          "brand-or-logo": [
+            "rapidkl"
+          ],
+          "vehicle-type": [
+            "bus"
+          ],
+          "signature": [
+            "rapidkl-red-top-blue-bottom-white-body"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            14.8
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "person",
+        "attributes": {
+          "color": [
+            "black"
+          ],
+          "accessory": [
+            "backpack"
+          ],
+          "action": [
+            "waiting"
+          ],
+          "pose": [
+            "standing"
+          ],
+          "signature": [
+            "black-shirt-backpack-waiting-at-bus-stop"
+          ]
+        },
+        "spans": [
+          [
+            14.5,
+            14.8
+          ]
+        ]
+      },
+      {
+        "id": "o3",
+        "name": "cone",
+        "attributes": {
+          "color": [
+            "orange",
+            "white"
+          ],
+          "shape": [
+            "cone"
+          ],
+          "signature": [
+            "orange-and-white-cone"
+          ]
+        },
+        "spans": [
+          [
+            1.0,
+            14.8
+          ]
+        ]
+      },
+      {
+        "id": "o4",
+        "name": "barrier",
+        "attributes": {
+          "material": [
+            "metal"
+          ],
+          "color": [
+            "silver"
+          ],
+          "signature": [
+            "metal-barrier-with-sign"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            14.8
+          ]
+        ]
+      },
+      {
+        "id": "o5",
+        "name": "signboard",
+        "attributes": {
+          "color": [
+            "black",
+            "white"
+          ],
+          "shape": [
+            "rectangular"
+          ],
+          "signature": [
+            "small-black-framed-board"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            14.8
+          ]
+        ]
+      }
+    ],
+    "relations": [
+      {
+        "subject": "o1",
+        "predicate": "parked-at",
+        "object": "o4",
+        "spans": [
+          [
+            0.0,
+            14.8
+          ]
+        ],
+        "confidence": 0.9
+      },
+      {
+        "subject": "o3",
+        "predicate": "in-front-of",
+        "object": "o4",
+        "spans": [
+          [
+            0.0,
+            14.8
+          ]
+        ],
+        "confidence": 0.8
+      },
+      {
+        "subject": "o5",
+        "predicate": "next-to",
+        "object": "o4",
+        "spans": [
+          [
+            0.0,
+            14.8
+          ]
+        ],
+        "confidence": 0.7
+      },
+      {
+        "subject": "o2",
+        "predicate": "waiting-at",
+        "object": "o1",
+        "spans": [
+          [
+            0.0,
+            14.8
+          ]
+        ],
+        "confidence": 0.8
+      }
+    ]
+  },
+  "views": {
+    "objects_count_display": {
+      "bus": 1,
+      "person": 1,
+      "cone": 1,
+      "barrier": 1,
+      "signboard": 1
+    }
+  }
+}

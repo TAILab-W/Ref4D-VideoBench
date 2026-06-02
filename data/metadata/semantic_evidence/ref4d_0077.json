@@ -1,0 +1,204 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0077.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "cv2",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "bird",
+        "attributes": {
+          "color": [
+            "orange",
+            "white",
+            "yellow"
+          ],
+          "pattern": [
+            "solid"
+          ],
+          "texture": [
+            "feathery"
+          ],
+          "material": [
+            "feathers"
+          ],
+          "size": [
+            "small"
+          ],
+          "age": [
+            "adult"
+          ],
+          "sex": [
+            "female"
+          ],
+          "state": [
+            "alive",
+            "perched"
+          ],
+          "pose": [
+            "looking-around",
+            "standing"
+          ],
+          "action": [
+            "looking-at-camera",
+            "perching"
+          ],
+          "orientation": [
+            "upright"
+          ],
+          "facing-direction": [
+            "forward"
+          ],
+          "signature": [
+            "yellow-orange-face-white-body-perched-on-box"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            7.1
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "cage",
+        "attributes": {
+          "color": [
+            "gold"
+          ],
+          "material": [
+            "metal"
+          ],
+          "structure": [
+            "wire"
+          ],
+          "size": [
+            "medium"
+          ],
+          "state": [
+            "closed"
+          ],
+          "signature": [
+            "golden-metal-wire-cage-with-patterned-backdrop"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            7.1
+          ]
+        ]
+      },
+      {
+        "id": "o3",
+        "name": "box",
+        "attributes": {
+          "color": [
+            "brown"
+          ],
+          "material": [
+            "cardboard"
+          ],
+          "texture": [
+            "rough"
+          ],
+          "size": [
+            "small"
+          ],
+          "state": [
+            "empty"
+          ],
+          "signature": [
+            "brown-cardboard-box-under-perch"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            7.1
+          ]
+        ]
+      },
+      {
+        "id": "o4",
+        "name": "perch",
+        "attributes": {
+          "color": [
+            "white"
+          ],
+          "material": [
+            "plastic"
+          ],
+          "design": [
+            "loop"
+          ],
+          "size": [
+            "small"
+          ],
+          "signature": [
+            "white-plastic-perch-with-loop-design"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            7.1
+          ]
+        ]
+      }
+    ],
+    "relations": [
+      {
+        "subject": "o1",
+        "predicate": "perching_on",
+        "object": "o4",
+        "spans": [
+          [
+            0.0,
+            7.1
+          ]
+        ],
+        "confidence": 0.9
+      },
+      {
+        "subject": "o1",
+        "predicate": "inside",
+        "object": "o2",
+        "spans": [
+          [
+            0.0,
+            7.1
+          ]
+        ],
+        "confidence": 0.8
+      },
+      {
+        "subject": "o3",
+        "predicate": "under",
+        "object": "o4",
+        "spans": [
+          [
+            0.0,
+            7.1
+          ]
+        ],
+        "confidence": 0.7
+      }
+    ]
+  },
+  "views": {
+    "objects_count_display": {
+      "bird": 1,
+      "cage": 1,
+      "box": 1,
+      "perch": 1
+    }
+  }
+}

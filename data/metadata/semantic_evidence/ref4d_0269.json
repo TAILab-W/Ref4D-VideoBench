@@ -1,0 +1,185 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0269.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "cv2",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "person-in-brown",
+        "attributes": {
+          "color": [
+            "brown"
+          ],
+          "action": [
+            "adjusting",
+            "cleaning",
+            "working"
+          ],
+          "position": [
+            "left"
+          ],
+          "signature": [
+            "brown-shirt,-green-gloves"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            0.7
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "person-in-black",
+        "attributes": {
+          "color": [
+            "black",
+            "red"
+          ],
+          "action": [
+            "adjusting",
+            "cleaning",
+            "operating-lathe"
+          ],
+          "position": [
+            "right"
+          ],
+          "signature": [
+            "black-shirt-with-red-stripes,-green-gloves"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            0.8
+          ]
+        ]
+      },
+      {
+        "id": "o3",
+        "name": "lathe-machine",
+        "attributes": {
+          "material": [
+            "metal"
+          ],
+          "action": [
+            "rotating"
+          ],
+          "facing-direction": [
+            "front"
+          ],
+          "signature": [
+            "rotating-metal-part,-tool-in-hand"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            1.0
+          ]
+        ]
+      }
+    ],
+    "relations": [
+      {
+        "subject": "o1",
+        "predicate": "left-of",
+        "object": "o2",
+        "spans": [
+          [
+            0.0,
+            0.5
+          ]
+        ],
+        "confidence": 0.8
+      },
+      {
+        "subject": "o1",
+        "predicate": "right-of",
+        "object": "o2",
+        "spans": [
+          [
+            0.4,
+            0.9
+          ]
+        ],
+        "confidence": 0.7
+      },
+      {
+        "subject": "o1",
+        "predicate": "in-front-of",
+        "object": "o2",
+        "spans": [
+          [
+            0.3,
+            0.6
+          ]
+        ],
+        "confidence": 0.8
+      },
+      {
+        "subject": "o2",
+        "predicate": "in-front-of",
+        "object": "o1",
+        "spans": [
+          [
+            0.5,
+            0.8
+          ]
+        ],
+        "confidence": 0.7
+      },
+      {
+        "subject": "o1",
+        "predicate": "collaborating-with",
+        "object": "o2",
+        "spans": [
+          [
+            0.0,
+            0.8
+          ]
+        ],
+        "confidence": 0.9
+      },
+      {
+        "subject": "o1",
+        "predicate": "cleaning",
+        "object": "o3",
+        "spans": [
+          [
+            0.4,
+            0.7
+          ]
+        ],
+        "confidence": 0.8
+      },
+      {
+        "subject": "o2",
+        "predicate": "operating",
+        "object": "o3",
+        "spans": [
+          [
+            0.0,
+            0.8
+          ]
+        ],
+        "confidence": 0.9
+      }
+    ]
+  },
+  "views": {
+    "objects_count_display": {
+      "person-in-brown": 1,
+      "person-in-black": 1,
+      "lathe-machine": 1
+    }
+  }
+}

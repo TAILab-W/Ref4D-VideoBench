@@ -1,0 +1,157 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0366.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "decord",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "water",
+        "attributes": {
+          "signature": [
+            "flowing"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            8.4
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "rock",
+        "attributes": {
+          "signature": [
+            "large"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            8.4
+          ]
+        ]
+      },
+      {
+        "id": "o3",
+        "name": "bush",
+        "attributes": {
+          "signature": [
+            "green"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            8.4
+          ]
+        ]
+      },
+      {
+        "id": "o4",
+        "name": "tree",
+        "attributes": {
+          "signature": [
+            "tall"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            8.4
+          ]
+        ]
+      }
+    ],
+    "relations": [
+      {
+        "subject": "o1",
+        "predicate": "flows_through",
+        "object": "o2",
+        "spans": [
+          [
+            0.0,
+            8.4
+          ]
+        ],
+        "confidence": 0.9
+      },
+      {
+        "subject": "o1",
+        "predicate": "surrounded_by",
+        "object": "o3",
+        "spans": [
+          [
+            0.0,
+            8.4
+          ]
+        ],
+        "confidence": 0.8
+      },
+      {
+        "subject": "o1",
+        "predicate": "flanked_by",
+        "object": "o4",
+        "spans": [
+          [
+            0.0,
+            8.4
+          ]
+        ],
+        "confidence": 0.7
+      },
+      {
+        "subject": "o2",
+        "predicate": "is_part_of",
+        "object": "o1",
+        "spans": [
+          [
+            0.0,
+            8.4
+          ]
+        ],
+        "confidence": 0.5
+      },
+      {
+        "subject": "o3",
+        "predicate": "is_part_of",
+        "object": "o1",
+        "spans": [
+          [
+            0.0,
+            8.4
+          ]
+        ],
+        "confidence": 0.4
+      },
+      {
+        "subject": "o4",
+        "predicate": "is_part_of",
+        "object": "o1",
+        "spans": [
+          [
+            0.0,
+            8.4
+          ]
+        ],
+        "confidence": 0.3
+      }
+    ]
+  },
+  "views": {
+    "objects_count_display": {
+      "water": 1,
+      "rock": 1,
+      "bush": 1,
+      "tree": 1
+    }
+  }
+}

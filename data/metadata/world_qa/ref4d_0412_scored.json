@@ -1,0 +1,202 @@
+{
+  "summary": {
+    "items": 10,
+    "enter_bank": 7,
+    "clip_range_sec": [
+      0.0,
+      18.23
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does water flow from the showerhead and is a hand holding a metal cup visible to pour water onto the person's head?",
+      "signals": [
+        "pour_direction(water,axis)",
+        "hot_surface_contact(showerhead,water)"
+      ],
+      "content_score_60": 30,
+      "signal_score_40": 39.83,
+      "total_score_100": 69.83,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "hot_surface_contact(showerhead,water)": 34.1667,
+        "pour_direction(water,axis)": 5.6667
+      },
+      "content_score_raw": "30"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Is the man receiving a haircut seated and stable throughout the clip?",
+      "signals": [
+        "support(oA,oB)",
+        "continuity(person)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(person)": 36.6667,
+        "support(oA,oB)": 7.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Does the hair dryer remain held with one hand, directed towards the other person's head for drying their hair without contact with water or loose clothing?",
+      "signals": [
+        "hot_surface_contact(oObj,oSurface)",
+        "tool_usage_correct(hair_dryer,for:drying_hair)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "hot_surface_contact(oObj,oSurface)": 34.1667,
+        "tool_usage_correct(hair_dryer,for:drying_hair)": 5.8333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Across the clip, does the phone maintain consistent size and position relative to the person's hand in the mirror reflection?",
+      "signals": [
+        "size_inconsistency(oX)",
+        "frame_discontinuity(t)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "frame_discontinuity(t)": 40.0,
+        "size_inconsistency(oX)": 7.5
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Does the person’s body show sudden or unnatural changes in position during the video?",
+      "signals": [
+        "continuity(person)",
+        "continuity(phone)"
+      ],
+      "content_score_60": 30,
+      "signal_score_40": 40.0,
+      "total_score_100": 70.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(person)": 36.6667,
+        "continuity(phone)": 7.3333
+      },
+      "content_score_raw": "30"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "The man receiving a haircut remains seated and stable.",
+      "signals": [
+        "support(oA,oB)",
+        "continuity(person)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(person)": 36.6667,
+        "support(oA,oB)": 7.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "Water flows from the showerhead towards the man's head, visible in the mirror.",
+      "signals": [
+        "pour_direction(water,axis)",
+        "hot_surface_contact(showerhead,water)"
+      ],
+      "content_score_60": 30,
+      "signal_score_40": 39.83,
+      "total_score_100": 69.83,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "hot_surface_contact(showerhead,water)": 34.1667,
+        "pour_direction(water,axis)": 5.6667
+      },
+      "content_score_raw": "30"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "The person holds the hair dryer with one hand and directs it towards the other person's head.",
+      "signals": [
+        "tool_usage_correct(hair_dryer,for:drying_hair)",
+        "tool_usage_correct"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 35.0,
+      "total_score_100": 85.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "tool_usage_correct(hair_dryer,for:drying_hair)": 29.1667,
+        "tool_usage_correct": 5.8333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "The blow dryer is held correctly without contact with water or loose clothing; its size relative to the phone is consistent.",
+      "signals": [
+        "hot_surface_contact(oObj,oSurface)",
+        "size_inconsistency(oX)"
+      ],
+      "content_score_60": 40,
+      "signal_score_40": 40.0,
+      "total_score_100": 80.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "size_inconsistency(oX)": 37.5,
+        "hot_surface_contact(oObj,oSurface)": 6.8333
+      },
+      "content_score_raw": "40"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "The mirror reflection shows a continuous image of the scene behind the person.",
+      "signals": [
+        "frame_discontinuity(t)",
+        "frame_discontinuity"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "frame_discontinuity(t)": 40.0,
+        "frame_discontinuity": 8.0
+      },
+      "content_score_raw": "50"
+    }
+  ],
+  "bank_ids": [
+    "v2",
+    "v3",
+    "v4",
+    "a1",
+    "a3",
+    "a4",
+    "a5"
+  ]
+}

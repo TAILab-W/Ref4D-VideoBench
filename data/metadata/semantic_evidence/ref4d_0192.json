@@ -1,0 +1,270 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0192.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "cv2",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "shrimp",
+        "attributes": {
+          "signature": [
+            "shrimp-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            8.9
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "shrimp",
+        "attributes": {
+          "signature": [
+            "shrimp-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            8.9
+          ]
+        ]
+      },
+      {
+        "id": "o3",
+        "name": "shrimp",
+        "attributes": {
+          "signature": [
+            "shrimp-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            8.9
+          ]
+        ]
+      },
+      {
+        "id": "o4",
+        "name": "mussel",
+        "attributes": {
+          "signature": [
+            "mussel-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            8.9
+          ]
+        ]
+      },
+      {
+        "id": "o5",
+        "name": "mussel",
+        "attributes": {
+          "signature": [
+            "mussel-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            8.9
+          ]
+        ]
+      },
+      {
+        "id": "o6",
+        "name": "mussel",
+        "attributes": {
+          "signature": [
+            "mussel-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            8.9
+          ]
+        ]
+      },
+      {
+        "id": "o7",
+        "name": "mussel",
+        "attributes": {
+          "signature": [
+            "mussel-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            8.9
+          ]
+        ]
+      },
+      {
+        "id": "o8",
+        "name": "seafood",
+        "attributes": {
+          "signature": [
+            "seafood-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            8.9
+          ]
+        ]
+      },
+      {
+        "id": "o9",
+        "name": "herb",
+        "attributes": {
+          "signature": [
+            "herb-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            8.9
+          ]
+        ]
+      },
+      {
+        "id": "o10",
+        "name": "sauce",
+        "attributes": {
+          "signature": [
+            "sauce-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            8.9
+          ]
+        ]
+      },
+      {
+        "id": "o11",
+        "name": "pizza",
+        "attributes": {
+          "signature": [
+            "pizza-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            8.9
+          ]
+        ]
+      },
+      {
+        "id": "o12",
+        "name": "pizza",
+        "attributes": {
+          "signature": [
+            "pizza-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            8.9
+          ]
+        ]
+      },
+      {
+        "id": "o13",
+        "name": "ham",
+        "attributes": {
+          "signature": [
+            "ham-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            8.9
+          ]
+        ]
+      },
+      {
+        "id": "o14",
+        "name": "dip",
+        "attributes": {
+          "signature": [
+            "dip-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            8.9
+          ]
+        ]
+      },
+      {
+        "id": "o15",
+        "name": "spatula",
+        "attributes": {
+          "signature": [
+            "spatula-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            8.9
+          ]
+        ]
+      },
+      {
+        "id": "o16",
+        "name": "table",
+        "attributes": {
+          "signature": [
+            "table-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            8.9
+          ]
+        ]
+      }
+    ],
+    "relations": []
+  },
+  "views": {
+    "objects_count_display": {
+      "shrimp": 3,
+      "mussel": 4,
+      "seafood": 1,
+      "herb": 1,
+      "sauce": 1,
+      "pizza": 2,
+      "ham": 1,
+      "dip": 1,
+      "spatula": 1,
+      "table": 1
+    }
+  }
+}

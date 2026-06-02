@@ -1,0 +1,129 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0179.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "decord",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "headphones",
+        "attributes": {
+          "color": [
+            "black"
+          ],
+          "brand-or-logo": [
+            "sony"
+          ],
+          "type": [
+            "over-ear"
+          ],
+          "state": [
+            "new",
+            "unpacked"
+          ],
+          "signature": [
+            "black-sony-branded-over-ear-headphones-with-cable"
+          ]
+        },
+        "spans": [
+          [
+            0.4,
+            0.6
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "case",
+        "attributes": {
+          "color": [
+            "dark-gray"
+          ],
+          "material": [
+            "suede-like"
+          ],
+          "state": [
+            "open"
+          ],
+          "signature": [
+            "dark-gray-suede-like-material-with-zipper-and-handle"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            0.7
+          ]
+        ]
+      },
+      {
+        "id": "o3",
+        "name": "cable_2",
+        "attributes": {
+          "color": [
+            "black"
+          ],
+          "type": [
+            "usb"
+          ],
+          "connector": [
+            "standard-usb",
+            "usb-c"
+          ],
+          "signature": [
+            "black-usb-cable-with-standard-usb-end"
+          ]
+        },
+        "spans": [
+          [
+            1.0,
+            1.1
+          ]
+        ]
+      },
+      {
+        "id": "o4",
+        "name": "person",
+        "attributes": {
+          "sex": [
+            "male"
+          ],
+          "action": [
+            "holding",
+            "rotating",
+            "showing",
+            "unzipping"
+          ],
+          "pose": [
+            "left-hand-visible",
+            "right-hand-visible"
+          ],
+          "signature": [
+            "left-hand-wearing-watch-with-metal-band"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            0.2
+          ]
+        ]
+      }
+    ],
+    "relations": []
+  },
+  "views": {
+    "objects_count_display": {
+      "headphones": 1,
+      "case": 1,
+      "cable_2": 1,
+      "person": 1
+    }
+  }
+}

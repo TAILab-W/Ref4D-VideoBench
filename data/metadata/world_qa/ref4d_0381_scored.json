@@ -1,0 +1,212 @@
+{
+  "summary": {
+    "items": 10,
+    "enter_bank": 9,
+    "clip_range_sec": [
+      0.0,
+      8.7
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Do waves move towards the shore?",
+      "signals": [
+        "trajectory_dir(wave,axis)",
+        "buoyancy_float(wave,in:water)",
+        "accel_sign(wave,axis)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(wave,axis)": 38.3333,
+        "accel_sign(wave,axis)": 7.0,
+        "buoyancy_float(wave,in:water)": 6.8333
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Does foam form at the water's edge on the beach?",
+      "signals": [
+        "deformation(wave)",
+        "buoyancy_float(wave,in:water)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "deformation(wave)": 40.0,
+        "buoyancy_float(wave,in:water)": 6.8333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Is the horizon line in the sky consistent throughout the scene?",
+      "signals": [
+        "frame_discontinuity(t)",
+        "continuity(sky)"
+      ],
+      "content_score_60": 58,
+      "signal_score_40": 40.0,
+      "total_score_100": 98.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "frame_discontinuity(t)": 40.0,
+        "continuity(sky)": 7.3333
+      },
+      "content_score_raw": "58"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Does the distant object exhibit natural floating motion?",
+      "signals": [
+        "buoyancy_float(object,in:sea)",
+        "biological_motion(object)"
+      ],
+      "content_score_60": 52,
+      "signal_score_40": 40.0,
+      "total_score_100": 92.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "biological_motion(object)": 38.3333,
+        "buoyancy_float(object,in:sea)": 6.8333
+      },
+      "content_score_raw": "52"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Do water waves maintain natural motion without sudden size inconsistency?",
+      "signals": [
+        "continuity(water)",
+        "frame_discontinuity(t)",
+        "size_inconsistency(water)"
+      ],
+      "content_score_60": 59,
+      "signal_score_40": 40.0,
+      "total_score_100": 99.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "frame_discontinuity(t)": 40.0,
+        "size_inconsistency(water)": 7.5,
+        "continuity(water)": 7.3333
+      },
+      "content_score_raw": "59"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "Waves consistently move towards the shore and create foam at the water's edge.",
+      "signals": [
+        "trajectory_dir(wave,axis)",
+        "buoyancy_float(wave,in:water)",
+        "accel_sign(wave,axis)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "trajectory_dir(wave,axis)": 38.3333,
+        "accel_sign(wave,axis)": 7.0,
+        "buoyancy_float(wave,in:water)": 6.8333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "Foam continuously forms and dissipates at the shoreline as waves interact with the beach.",
+      "signals": [
+        "deformation(wave)",
+        "buoyancy_float(wave,in:water)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "deformation(wave)": 40.0,
+        "buoyancy_float(wave,in:water)": 6.8333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "The horizon line in the sky remains consistent throughout the scene.",
+      "signals": [
+        "frame_discontinuity(t)",
+        "continuity(sky)"
+      ],
+      "content_score_60": 35,
+      "signal_score_40": 40.0,
+      "total_score_100": 75.0,
+      "duplicate_penalized": true,
+      "signal_detail": {
+        "frame_discontinuity(t)": 40.0,
+        "continuity(sky)": 7.3333
+      },
+      "content_score_raw": "58"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "A distant object on the sea surface exhibits motion consistent with floating or swimming.",
+      "signals": [
+        "buoyancy_float(object,in:sea)",
+        "biological_motion(object)"
+      ],
+      "content_score_60": 52,
+      "signal_score_40": 40.0,
+      "total_score_100": 92.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "biological_motion(object)": 38.3333,
+        "buoyancy_float(object,in:sea)": 6.8333
+      },
+      "content_score_raw": "52"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "Water waves maintain continuity and natural motion without sudden frame discontinuity or abrupt size inconsistency.",
+      "signals": [
+        "continuity(water)",
+        "frame_discontinuity(t)",
+        "size_inconsistency(water)"
+      ],
+      "content_score_60": 59,
+      "signal_score_40": 40.0,
+      "total_score_100": 99.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "frame_discontinuity(t)": 40.0,
+        "size_inconsistency(water)": 7.5,
+        "continuity(water)": 7.3333
+      },
+      "content_score_raw": "59"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "v5",
+    "a1",
+    "a2",
+    "a4",
+    "a5"
+  ]
+}

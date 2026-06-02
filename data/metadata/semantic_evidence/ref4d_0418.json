@@ -1,0 +1,100 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0418.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "decord",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "person",
+        "attributes": {
+          "signature": [
+            "person-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            6.2
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "banner",
+        "attributes": {
+          "signature": [
+            "banner-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            6.2
+          ]
+        ]
+      },
+      {
+        "id": "o3",
+        "name": "basket",
+        "attributes": {
+          "signature": [
+            "basket-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            6.2
+          ]
+        ]
+      },
+      {
+        "id": "o4",
+        "name": "tribal_outfit",
+        "attributes": {
+          "signature": [
+            "tribal_outfit-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            6.2
+          ]
+        ]
+      },
+      {
+        "id": "o5",
+        "name": "tribal_wooden_structure",
+        "attributes": {
+          "signature": [
+            "tribal_wooden_structure-coarse"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            6.2
+          ]
+        ]
+      }
+    ],
+    "relations": []
+  },
+  "views": {
+    "objects_count_display": {
+      "person": 1,
+      "banner": 1,
+      "basket": 1,
+      "tribal_outfit": 1,
+      "tribal_wooden_structure": 1
+    }
+  }
+}

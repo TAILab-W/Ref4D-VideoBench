@@ -1,0 +1,208 @@
+{
+  "summary": {
+    "items": 10,
+    "enter_bank": 9,
+    "clip_range_sec": [
+      0.0,
+      15.03
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does the person maintain balance on the rock wall while interacting with the holds?",
+      "signals": [
+        "balance(oX)",
+        "support(oA,oB)",
+        "friction_sliding(oA,on:oB)",
+        "continuity(person)",
+        "balance(person)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(person)": 36.6667,
+        "balance(oX)": 7.1667,
+        "balance(person)": 7.1667,
+        "support(oA,oB)": 7.0,
+        "friction_sliding(oA,on:oB)": 6.0
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Are the handholds securely attached to the rock wall and provide support for the hands?",
+      "signals": [
+        "support(rock-holds,rock-wall)",
+        "grasp_stability(person-hand,rock-hold)",
+        "support(oA,oB)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "support(rock-holds,rock-wall)": 35.0,
+        "support(oA,oB)": 7.0,
+        "grasp_stability(person-hand,rock-hold)": 5.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Is the person wearing gray shoes that provide grip on the climbing surface?",
+      "signals": [
+        "friction_sliding(person-foot,climbing-surface)",
+        "friction_sliding(oA,on:oB)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 36.0,
+      "total_score_100": 86.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "friction_sliding(person-foot,climbing-surface)": 30.0,
+        "friction_sliding(oA,on:oB)": 6.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Does the person's body maintain balance during the climb without falling?",
+      "signals": [
+        "balance(oX)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 35.83,
+      "total_score_100": 85.83,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "balance(oX)": 35.8333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Are the triangular holds placed at appropriate heights and angles for effective use?",
+      "signals": [
+        "grasp_stability(oHand,oObj)",
+        "tool_usage_correct(oTool,for:oTask)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 34.83,
+      "total_score_100": 89.83,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "tool_usage_correct(oTool,for:oTask)": 29.1667,
+        "grasp_stability(oHand,oObj)": 5.6667
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "The person maintains balance on the rock wall while interacting with the holds.",
+      "signals": [
+        "balance(oX)",
+        "support(oA,oB)",
+        "friction_sliding(oA,on:oB)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "balance(oX)": 35.8333,
+        "support(oA,oB)": 7.0,
+        "friction_sliding(oA,on:oB)": 6.0
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "The triangular blue and orange handholds are securely attached to the rock wall, providing support for the hands.",
+      "signals": [
+        "support(rock-holds,rock-wall)",
+        "grasp_stability(person-hand,rock-hold)",
+        "support(oA,oB)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "support(rock-holds,rock-wall)": 35.0,
+        "support(oA,oB)": 7.0,
+        "grasp_stability(person-hand,rock-hold)": 5.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "The person is wearing gray shoes that provide grip on the indoor climbing surface.",
+      "signals": [
+        "friction_sliding(person-foot,climbing-surface)"
+      ],
+      "content_score_60": 30,
+      "signal_score_40": 30.0,
+      "total_score_100": 60.0,
+      "duplicate_penalized": true,
+      "signal_detail": {
+        "friction_sliding(person-foot,climbing-surface)": 30.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "The person's body maintains balance during the climbing activity.",
+      "signals": [
+        "balance(oX)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 35.83,
+      "total_score_100": 85.83,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "balance(oX)": 35.8333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "The large white triangular hold provides different grips and footholds.",
+      "signals": [
+        "tool_usage_correct(oTool,for:oTask)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 29.17,
+      "total_score_100": 84.17,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "tool_usage_correct(oTool,for:oTask)": 29.1667
+      },
+      "content_score_raw": "55"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "v5",
+    "a1",
+    "a2",
+    "a4",
+    "a5"
+  ]
+}

@@ -1,0 +1,158 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0152.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "cv2",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "building",
+        "attributes": {
+          "color": [
+            "pink"
+          ],
+          "pattern": [
+            "arched-windows",
+            "dome",
+            "minaret"
+          ],
+          "size": [
+            "large"
+          ],
+          "material": [
+            "stone"
+          ],
+          "state": [
+            "standing"
+          ],
+          "orientation": [
+            "facing-right"
+          ],
+          "position": [
+            "center"
+          ],
+          "signature": [
+            "a-large-pink-stone-mosque-with-a-dome-and-minarets"
+          ]
+        },
+        "spans": [
+          [
+            0.1,
+            7.8
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "water",
+        "attributes": {
+          "color": [
+            "reflective"
+          ],
+          "state": [
+            "calm"
+          ],
+          "position": [
+            "below-building"
+          ],
+          "signature": [
+            "calm-reflective-water-body"
+          ]
+        },
+        "spans": [
+          [
+            0.1,
+            7.8
+          ]
+        ]
+      },
+      {
+        "id": "o3",
+        "name": "grass",
+        "attributes": {
+          "color": [
+            "green"
+          ],
+          "position": [
+            "left-bottom"
+          ],
+          "signature": [
+            "green-grassy-area"
+          ]
+        },
+        "spans": [
+          [
+            0.1,
+            7.8
+          ]
+        ]
+      },
+      {
+        "id": "o4",
+        "name": "sky",
+        "attributes": {
+          "color": [
+            "blue",
+            "orange",
+            "pink"
+          ],
+          "weather": [
+            "sunset"
+          ],
+          "lighting": [
+            "warm"
+          ],
+          "signature": [
+            "sunset-sky"
+          ]
+        },
+        "spans": [
+          [
+            0.1,
+            7.8
+          ]
+        ]
+      },
+      {
+        "id": "o5",
+        "name": "text_box",
+        "attributes": {
+          "color": [
+            "blue"
+          ],
+          "printed-text": [
+            "download-link-provided-in-the-description"
+          ],
+          "position": [
+            "bottom-center"
+          ],
+          "signature": [
+            "blue-text-box-with-white-text"
+          ]
+        },
+        "spans": [
+          [
+            3.5,
+            7.8
+          ]
+        ]
+      }
+    ],
+    "relations": []
+  },
+  "views": {
+    "objects_count_display": {
+      "building": 1,
+      "water": 1,
+      "grass": 1,
+      "sky": 1,
+      "text_box": 1
+    }
+  }
+}

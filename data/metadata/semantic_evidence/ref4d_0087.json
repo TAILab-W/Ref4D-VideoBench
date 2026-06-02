@@ -1,0 +1,166 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0087.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "cv2",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "elephant",
+        "attributes": {
+          "color": [
+            "gray"
+          ],
+          "action": [
+            "standing",
+            "trunk-over-bar"
+          ],
+          "position": [
+            "left-center"
+          ],
+          "signature": [
+            "large-gray-animal-with-tusks-and-ornate-headgear"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            1.0
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "person",
+        "attributes": {
+          "color": [
+            "brown"
+          ],
+          "action": [
+            "reaching-out-to-elephant",
+            "standing"
+          ],
+          "position": [
+            "right-center"
+          ],
+          "signature": [
+            "bearded-man-in-brown-uniform-with-badge"
+          ]
+        },
+        "spans": [
+          [
+            0.3,
+            1.0
+          ]
+        ]
+      },
+      {
+        "id": "o3",
+        "name": "gate",
+        "attributes": {
+          "color": [
+            "green",
+            "yellow"
+          ],
+          "material": [
+            "metal"
+          ],
+          "position": [
+            "foreground"
+          ],
+          "signature": [
+            "green-and-yellow-barrier-with-sign"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            1.0
+          ]
+        ]
+      },
+      {
+        "id": "o4",
+        "name": "sign",
+        "attributes": {
+          "printed-text": [
+            "bhama-liladi"
+          ],
+          "signature": [
+            "green-background-with-white-text"
+          ]
+        },
+        "spans": [
+          [
+            0.5,
+            0.7
+          ]
+        ]
+      }
+    ],
+    "relations": [
+      {
+        "subject": "o1",
+        "predicate": "near",
+        "object": "o2",
+        "spans": [
+          [
+            0.3,
+            1.0
+          ]
+        ],
+        "confidence": 0.0
+      },
+      {
+        "subject": "o1",
+        "predicate": "on",
+        "object": "o3",
+        "spans": [
+          [
+            0.6,
+            0.8
+          ]
+        ],
+        "confidence": 0.0
+      },
+      {
+        "subject": "o2",
+        "predicate": "on",
+        "object": "o3",
+        "spans": [
+          [
+            0.6,
+            0.8
+          ]
+        ],
+        "confidence": 0.0
+      },
+      {
+        "subject": "o2",
+        "predicate": "reaching-to",
+        "object": "o1",
+        "spans": [
+          [
+            0.6,
+            0.9
+          ]
+        ],
+        "confidence": 0.0
+      }
+    ]
+  },
+  "views": {
+    "objects_count_display": {
+      "elephant": 1,
+      "person": 1,
+      "gate": 1,
+      "sign": 1
+    }
+  }
+}

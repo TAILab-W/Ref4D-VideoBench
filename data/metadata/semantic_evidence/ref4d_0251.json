@@ -1,0 +1,80 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0251.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "cv2",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "mixer",
+        "attributes": {
+          "color": [
+            "stainless-steel"
+          ],
+          "material": [
+            "metal"
+          ],
+          "size": [
+            "large"
+          ],
+          "state": [
+            "operational"
+          ],
+          "action": [
+            "mixing"
+          ],
+          "orientation": [
+            "vertical"
+          ],
+          "facing-direction": [
+            "front-facing"
+          ],
+          "position": [
+            "central"
+          ],
+          "object-part": [
+            "control-panel",
+            "mixer-blades",
+            "scrapers",
+            "tank",
+            "temperature-rod",
+            "wheels"
+          ],
+          "tool-or-instrument": [
+            "industrial-vacuum-planetary-mixer"
+          ],
+          "equipment": [
+            "industrial-mixing-equipment"
+          ],
+          "brand": [
+            "maxwell"
+          ],
+          "contact": [
+            "email:sales@mautotech.com"
+          ],
+          "signature": [
+            "stainless-steel-cylindrical-tank-with-mixer-blades-and-control-panel-with-green-red-lights"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            5.2
+          ]
+        ]
+      }
+    ],
+    "relations": []
+  },
+  "views": {
+    "objects_count_display": {
+      "mixer": 1
+    }
+  }
+}

@@ -1,0 +1,225 @@
+{
+  "summary": {
+    "items": 10,
+    "enter_bank": 10,
+    "clip_range_sec": [
+      0.0,
+      11.97
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Do the soldiers' shadows change direction or length suddenly?",
+      "signals": [
+        "continuity(person)",
+        "continuity(flag)",
+        "size_inconsistency(person)",
+        "frame_discontinuity(t)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "frame_discontinuity(t)": 40.0,
+        "size_inconsistency(person)": 7.5,
+        "continuity(person)": 7.3333,
+        "continuity(flag)": 7.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Does the flag held by the soldier remain taut and properly supported throughout?",
+      "signals": [
+        "shadow_consistency(person)",
+        "friction_sliding(person,on:ground)",
+        "biological_motion(person)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "biological_motion(person)": 38.3333,
+        "shadow_consistency(person)": 7.3333,
+        "friction_sliding(person,on:ground)": 6.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Are the marching soldiers maintaining a consistent formation without sudden changes in position?",
+      "signals": [
+        "continuity(person)",
+        "balance(person)",
+        "size_inconsistency(flag)",
+        "interpenetration(person,flag)",
+        "continuity(soldiers' positions)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "size_inconsistency(flag)": 37.5,
+        "continuity(person)": 7.3333,
+        "continuity(soldiers' positions)": 7.3333,
+        "balance(person)": 7.1667,
+        "interpenetration(person,flag)": 7.1667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Is the American flag being carried with its staff correctly positioned under the arm?",
+      "signals": [
+        "support(flag,arm)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 35.0,
+      "total_score_100": 85.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "support(flag,arm)": 35.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Do the soldiers handle their ceremonial items without any visible signs of improper grip or control?",
+      "signals": [
+        "continuity(person)",
+        "continuity(flag)",
+        "friction_sliding(person,on:ground)",
+        "biological_motion(person)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "biological_motion(person)": 38.3333,
+        "continuity(person)": 7.3333,
+        "continuity(flag)": 7.3333,
+        "friction_sliding(person,on:ground)": 6.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "The soldiers and flags maintain physical continuity without size inconsistency or frame discontinuity.",
+      "signals": [
+        "continuity(person)",
+        "continuity(flag)",
+        "size_inconsistency(person)",
+        "frame_discontinuity(t)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "frame_discontinuity(t)": 40.0,
+        "size_inconsistency(person)": 7.5,
+        "continuity(person)": 7.3333,
+        "continuity(flag)": 7.3333
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "Shadows cast by the people are consistent with their positions and lighting.",
+      "signals": [
+        "shadow_consistency(person)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 36.67,
+      "total_score_100": 96.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "shadow_consistency(person)": 36.6667
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "The flag held by the soldier is taut and properly supported, showing correct handling of equipment.",
+      "signals": [
+        "friction_sliding(person,on:ground)",
+        "biological_motion(person)",
+        "support(flag,arm)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "biological_motion(person)": 38.3333,
+        "support(flag,arm)": 7.0,
+        "friction_sliding(person,on:ground)": 6.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "Soldiers maintain a consistent formation and posture during the march.",
+      "signals": [
+        "continuity(soldiers' positions)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 36.67,
+      "total_score_100": 86.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(soldiers' positions)": 36.6667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "Individuals and flags exhibit balance without sudden interpenetration.",
+      "signals": [
+        "continuity(person)",
+        "balance(person)",
+        "size_inconsistency(flag)",
+        "interpenetration(person,flag)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "size_inconsistency(flag)": 37.5,
+        "continuity(person)": 7.3333,
+        "balance(person)": 7.1667,
+        "interpenetration(person,flag)": 7.1667
+      },
+      "content_score_raw": "50"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "v5",
+    "a1",
+    "a2",
+    "a3",
+    "a4",
+    "a5"
+  ]
+}

@@ -1,0 +1,194 @@
+{
+  "summary": {
+    "items": 10,
+    "enter_bank": 9,
+    "clip_range_sec": [
+      0.0,
+      7.93
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does the cathedral structure maintain its form without sudden changes?",
+      "signals": [
+        "continuity(cathedral)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 36.67,
+      "total_score_100": 91.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(cathedral)": 36.6667
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Is the text overlay consistently positioned relative to the architectural elements?",
+      "signals": [
+        "size_inconsistency(text overlay)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 37.5,
+      "total_score_100": 87.5,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "size_inconsistency(text overlay)": 37.5
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Do the snowflakes continuously fall and not interpenetrate with the architecture?",
+      "signals": [
+        "continuity(snowflakes)",
+        "interpenetration(snowflakes,architecture)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(snowflakes)": 36.6667,
+        "interpenetration(snowflakes,architecture)": 7.1667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Is the lighting on the gothic architecture consistent with realistic stone material optics?",
+      "signals": [
+        "material_optics(architecture)",
+        "reflection_consistency(architecture)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "material_optics(architecture)": 37.5,
+        "reflection_consistency(architecture)": 7.0
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Across the clip, does the size of the text remain constant?",
+      "signals": [
+        "_default"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 23.33,
+      "total_score_100": 78.33,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "_default": 23.3333
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "The cathedral structure maintains its form and position throughout the video.",
+      "signals": [
+        "continuity(cathedral)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 36.67,
+      "total_score_100": 96.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(cathedral)": 36.6667
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "The text overlay is centered on the gothic architecture, consistent in size and position.",
+      "signals": [
+        "size_inconsistency(text overlay)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 37.5,
+      "total_score_100": 87.5,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "size_inconsistency(text overlay)": 37.5
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "Snowflakes fall continuously from the top of the frame without sudden disappearance.",
+      "signals": [
+        "continuity(snowflakes)",
+        "interpenetration(snowflakes,architecture)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(snowflakes)": 36.6667,
+        "interpenetration(snowflakes,architecture)": 7.1667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "Indoor lighting illuminates the stone surfaces of the gothic architecture consistently.",
+      "signals": [
+        "material_optics(architecture)",
+        "reflection_consistency(architecture)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "material_optics(architecture)": 37.5,
+        "reflection_consistency(architecture)": 7.0
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "The lighting on the gothic architecture reflects realistic material optics for stone surfaces.",
+      "signals": [
+        "material_optics(architecture)",
+        "reflection_consistency(architecture)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "material_optics(architecture)": 37.5,
+        "reflection_consistency(architecture)": 7.0
+      },
+      "content_score_raw": "60"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "a1",
+    "a2",
+    "a3",
+    "a4",
+    "a5"
+  ]
+}

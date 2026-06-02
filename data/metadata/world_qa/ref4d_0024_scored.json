@@ -1,0 +1,209 @@
+{
+  "summary": {
+    "items": 10,
+    "enter_bank": 8,
+    "clip_range_sec": [
+      0.0,
+      5.33
+    ],
+    "mode": "multi-turn"
+  },
+  "items": [
+    {
+      "id": "v1",
+      "type": "VQA",
+      "name": "Does the baby gorilla remain in the adult gorilla's arm without falling?",
+      "signals": [
+        "containment(baby_gorilla, gorilla)",
+        "continuity(baby_gorilla)",
+        "support(gorilla, baby_gorilla)"
+      ],
+      "content_score_60": 55,
+      "signal_score_40": 40.0,
+      "total_score_100": 95.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(baby_gorilla)": 36.6667,
+        "support(gorilla, baby_gorilla)": 7.0,
+        "containment(baby_gorilla, gorilla)": 5.8333
+      },
+      "content_score_raw": "55"
+    },
+    {
+      "id": "v2",
+      "type": "VQA",
+      "name": "Do the gorillas show natural biological motion for their species?",
+      "signals": [
+        "biological_motion(gorilla)",
+        "biological_motion(baby_gorilla)"
+      ],
+      "content_score_60": 45,
+      "signal_score_40": 40.0,
+      "total_score_100": 85.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "biological_motion(gorilla)": 38.3333,
+        "biological_motion(baby_gorilla)": 7.6667
+      },
+      "content_score_raw": "45"
+    },
+    {
+      "id": "v3",
+      "type": "VQA",
+      "name": "Is the size of the baby gorilla consistent with its position relative to the adult gorilla, and do they avoid interpenetration?",
+      "signals": [
+        "size_inconsistency(gorilla)",
+        "interpenetration(gorilla,baby)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "size_inconsistency(gorilla)": 37.5,
+        "interpenetration(gorilla,baby)": 7.1667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "v4",
+      "type": "VQA",
+      "name": "Are the shadows cast by the gorilla and baby consistent with their positions under a light source?",
+      "signals": [
+        "shadow_consistency(gorilla)"
+      ],
+      "content_score_60": 40,
+      "signal_score_40": 36.67,
+      "total_score_100": 76.67,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "shadow_consistency(gorilla)": 36.6667
+      },
+      "content_score_raw": "40"
+    },
+    {
+      "id": "v5",
+      "type": "VQA",
+      "name": "Does the adult gorilla hold the baby securely to prevent it from falling?",
+      "signals": [
+        "containment(baby_gorilla, gorilla)",
+        "continuity(baby_gorilla)",
+        "support(gorilla, baby_gorilla)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(baby_gorilla)": 36.6667,
+        "support(gorilla, baby_gorilla)": 7.0,
+        "containment(baby_gorilla, gorilla)": 5.8333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a1",
+      "type": "assertion",
+      "name": "The baby gorilla remains nestled in the adult gorilla's arm without displacement.",
+      "signals": [
+        "containment(baby_gorilla, gorilla)",
+        "continuity(baby_gorilla)",
+        "support(gorilla, baby_gorilla)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "continuity(baby_gorilla)": 36.6667,
+        "support(gorilla, baby_gorilla)": 7.0,
+        "containment(baby_gorilla, gorilla)": 5.8333
+      },
+      "content_score_raw": "60"
+    },
+    {
+      "id": "a2",
+      "type": "assertion",
+      "name": "The large gorilla and small baby gorilla exhibit natural biological motion.",
+      "signals": [
+        "biological_motion(gorilla)",
+        "biological_motion(baby_gorilla)"
+      ],
+      "content_score_60": 40,
+      "signal_score_40": 40.0,
+      "total_score_100": 80.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "biological_motion(gorilla)": 38.3333,
+        "biological_motion(baby_gorilla)": 7.6667
+      },
+      "content_score_raw": "40"
+    },
+    {
+      "id": "a3",
+      "type": "assertion",
+      "name": "The size and proportions of the gorilla and baby remain consistent, with no interpenetration.",
+      "signals": [
+        "size_inconsistency(gorilla)",
+        "interpenetration(gorilla,baby)"
+      ],
+      "content_score_60": 50,
+      "signal_score_40": 40.0,
+      "total_score_100": 90.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "size_inconsistency(gorilla)": 37.5,
+        "interpenetration(gorilla,baby)": 7.1667
+      },
+      "content_score_raw": "50"
+    },
+    {
+      "id": "a4",
+      "type": "assertion",
+      "name": "Shadows cast by the gorilla and baby align with their positions and light sources.",
+      "signals": [
+        "biological_motion(gorilla)",
+        "biological_motion(baby_gorilla)",
+        "shadow_consistency(gorilla)"
+      ],
+      "content_score_60": 30,
+      "signal_score_40": 40.0,
+      "total_score_100": 70.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "biological_motion(gorilla)": 38.3333,
+        "biological_motion(baby_gorilla)": 7.6667,
+        "shadow_consistency(gorilla)": 7.3333
+      },
+      "content_score_raw": "30"
+    },
+    {
+      "id": "a5",
+      "type": "assertion",
+      "name": "The adult gorilla holds the baby securely, preventing any risk of falling.",
+      "signals": [
+        "containment(baby_gorilla, gorilla)",
+        "support(gorilla, baby_gorilla)"
+      ],
+      "content_score_60": 60,
+      "signal_score_40": 40.0,
+      "total_score_100": 100.0,
+      "duplicate_penalized": false,
+      "signal_detail": {
+        "support(gorilla, baby_gorilla)": 35.0,
+        "containment(baby_gorilla, gorilla)": 5.8333
+      },
+      "content_score_raw": "60"
+    }
+  ],
+  "bank_ids": [
+    "v1",
+    "v2",
+    "v3",
+    "v5",
+    "a1",
+    "a2",
+    "a3",
+    "a5"
+  ]
+}

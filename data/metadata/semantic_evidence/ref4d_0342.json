@@ -1,0 +1,151 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0342.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "decord",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "person",
+        "attributes": {
+          "color": [
+            "red",
+            "yellow"
+          ],
+          "object_part": [
+            "foot",
+            "leg"
+          ],
+          "equipment": [
+            "ice-axe"
+          ],
+          "clothing": [
+            "red-pants"
+          ],
+          "signature": [
+            "red-pants-yellow-ice-axe"
+          ]
+        },
+        "spans": [
+          [
+            0.2,
+            0.9
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "cloud",
+        "attributes": {
+          "color": [
+            "white"
+          ],
+          "texture": [
+            "fluffy"
+          ],
+          "position": [
+            "valley"
+          ],
+          "signature": [
+            "white-fluffy-cloud"
+          ]
+        },
+        "spans": [
+          [
+            0.5,
+            9.8
+          ]
+        ]
+      },
+      {
+        "id": "o3",
+        "name": "mountain",
+        "attributes": {
+          "material": [
+            "rock",
+            "snow"
+          ],
+          "scene": [
+            "valley"
+          ],
+          "topography": [
+            "mountain-peak",
+            "snow-covered-slope"
+          ],
+          "signature": [
+            "snowy-mountains-with-valley"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            9.8
+          ]
+        ]
+      }
+    ],
+    "relations": [
+      {
+        "subject": "o1",
+        "predicate": "looking-at",
+        "object": "o3",
+        "spans": [
+          [
+            0.2,
+            9.8
+          ]
+        ],
+        "confidence": 0.9
+      },
+      {
+        "subject": "o1",
+        "predicate": "standing-on",
+        "object": "o3",
+        "spans": [
+          [
+            0.2,
+            9.8
+          ]
+        ],
+        "confidence": 0.9
+      },
+      {
+        "subject": "o1",
+        "predicate": "left-of",
+        "object": "o2",
+        "spans": [
+          [
+            0.5,
+            9.8
+          ]
+        ],
+        "confidence": 0.8
+      },
+      {
+        "subject": "o3",
+        "predicate": "has-feature",
+        "object": "o2",
+        "spans": [
+          [
+            0.5,
+            9.8
+          ]
+        ],
+        "confidence": 0.9
+      }
+    ]
+  },
+  "views": {
+    "objects_count_display": {
+      "person": 1,
+      "cloud": 1,
+      "mountain": 1
+    }
+  }
+}

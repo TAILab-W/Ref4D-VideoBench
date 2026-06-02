@@ -1,0 +1,84 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0487.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "decord",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "runner",
+        "attributes": {
+          "color": [
+            "green",
+            "pink",
+            "white"
+          ],
+          "pattern": [
+            "solid"
+          ],
+          "size": [
+            "medium"
+          ],
+          "sex": [
+            "female"
+          ],
+          "state": [
+            "running",
+            "walking"
+          ],
+          "pose": [
+            "arms-down",
+            "arms-raised",
+            "legs-moving"
+          ],
+          "action": [
+            "finishing",
+            "running",
+            "walking"
+          ],
+          "orientation": [
+            "facing-forward",
+            "facing-right"
+          ],
+          "position": [
+            "background",
+            "center",
+            "foreground"
+          ],
+          "object-part": [
+            "feet",
+            "head",
+            "legs",
+            "torso"
+          ],
+          "equipment": [
+            "bib-number-68234",
+            "earphones",
+            "water-bottle"
+          ],
+          "signature": [
+            "pink-outfit-number-68234"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            9.7
+          ]
+        ]
+      }
+    ],
+    "relations": []
+  },
+  "views": {
+    "objects_count_display": {
+      "runner": 1
+    }
+  }
+}

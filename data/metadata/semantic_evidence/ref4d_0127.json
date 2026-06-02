@@ -1,0 +1,169 @@
+{
+  "meta": {
+    "video_basename": "ref4d_0127.mp4",
+    "fps_per_window": 6,
+    "resize_short": 448,
+    "model": "openbmb/MiniCPM-V-4_5",
+    "backend": "cv2",
+    "dtype": "bf16",
+    "min_span_sec": 0.1
+  },
+  "fine": {
+    "entities": [
+      {
+        "id": "o1",
+        "name": "door",
+        "attributes": {
+          "color": [
+            "brown",
+            "red"
+          ],
+          "pattern": [
+            "floral",
+            "geometric"
+          ],
+          "texture": [
+            "carved"
+          ],
+          "material": [
+            "wood"
+          ],
+          "size": [
+            "large"
+          ],
+          "state": [
+            "closed"
+          ],
+          "signature": [
+            "carved-patterns,-red-and-brown-colors"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            2.5
+          ]
+        ]
+      },
+      {
+        "id": "o2",
+        "name": "ceiling",
+        "attributes": {
+          "color": [
+            "brown",
+            "cream",
+            "white"
+          ],
+          "pattern": [
+            "arabesque",
+            "geometric"
+          ],
+          "texture": [
+            "carved"
+          ],
+          "material": [
+            "tile",
+            "wood"
+          ],
+          "style": [
+            "traditional"
+          ],
+          "signature": [
+            "intricate-designs,-cream-and-white-colors"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            4.8
+          ]
+        ]
+      },
+      {
+        "id": "o3",
+        "name": "wall",
+        "attributes": {
+          "color": [
+            "white"
+          ],
+          "pattern": [
+            "plain"
+          ],
+          "texture": [
+            "smooth"
+          ],
+          "material": [
+            "plaster"
+          ],
+          "signature": [
+            "plain-white-surface"
+          ]
+        },
+        "spans": [
+          [
+            0.0,
+            4.8
+          ]
+        ]
+      },
+      {
+        "id": "o4",
+        "name": "light-fixture",
+        "attributes": {
+          "color": [
+            "white"
+          ],
+          "shape": [
+            "rectangular"
+          ],
+          "state": [
+            "lit"
+          ],
+          "signature": [
+            "rectangular-shape,-mounted-on-wall"
+          ]
+        },
+        "spans": [
+          [
+            0.6,
+            3.2
+          ]
+        ]
+      }
+    ],
+    "relations": [
+      {
+        "subject": "o1",
+        "predicate": "below",
+        "object": "o2",
+        "spans": [
+          [
+            0.0,
+            0.3
+          ]
+        ],
+        "confidence": 0.9
+      },
+      {
+        "subject": "o1",
+        "predicate": "left-of",
+        "object": "o2",
+        "spans": [
+          [
+            0.4,
+            0.6
+          ]
+        ],
+        "confidence": 0.8
+      }
+    ]
+  },
+  "views": {
+    "objects_count_display": {
+      "door": 1,
+      "ceiling": 1,
+      "wall": 1,
+      "light-fixture": 1
+    }
+  }
+}
